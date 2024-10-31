@@ -1,0 +1,150 @@
+I"J!<h1 id="i-blocks-scripts-and-sprites">I. Blocks, Scripts, and Sprites</h1>
+<h3 id="hat-blocks-and-command-blocks">Hat Blocks and Command Blocks</h3>
+<h2 id="a-sprites-and-parallelism">A. Sprites and Parallelism</h2>
+<h3 id="costumes-and-sounds">Costumes and Sounds</h3>
+<h3 id="inter-sprite-communication-with-broadcast">Inter-Sprite Communication with Broadcast</h3>
+<h2 id="b-nesting-sprites-anchors-and-parts">B. Nesting Sprites: Anchors and Parts</h2>
+<h2 id="c-reporter-blocks-and-expressions">C. Reporter Blocks and Expressions</h2>
+<h2 id="d-predicates-and-conditional-evaluation">D. Predicates and Conditional Evaluation</h2>
+<h2 id="e-variables">E. Variables</h2>
+<h3 id="global-variables">Global Variables</h3>
+<h3 id="script-variables">Script Variables</h3>
+<h3 id="renaming-variables">Renaming variables</h3>
+<h3 id="transient-variables">Transient variables</h3>
+<h2 id="f-debugging">F. Debugging</h2>
+<h3 id="the-pause-button">The pause button</h3>
+<h3 id="breakpoints-the-pause-all-block">Breakpoints: the pause all block</h3>
+<h3 id="visible-stepping">Visible stepping</h3>
+<h2 id="g-etcetera">G. Etcetera</h2>
+<h2 id="h-libraries">H. Libraries</h2>
+
+<h1 id="saving-and-loading-projects-and-media">Saving and Loading Projects and Media</h1>
+<h2 id="a-local-storage">A. Local Storage</h2>
+<h2 id="b-creating-a-cloud-account">B. Creating a Cloud Account</h2>
+<h2 id="c-saving-to-the-cloud">C. Saving to the Cloud</h2>
+<h2 id="d-loading-saved-projects">D. Loading Saved Projects</h2>
+<h2 id="e-if-you-lose-your-project-do-this-first">E. If you lose your project, do this first!</h2>
+<h3 id="private-and-public-projects">Private and Public Projects</h3>
+
+<h1 id="building-a-block">Building a Block</h1>
+<h2 id="a-simple-blocks">A. Simple Blocks</h2>
+<h3 id="custom-blocks-with-inputs">Custom Blocks with Inputs</h3>
+<h3 id="editing-block-properties">Editing Block Properties</h3>
+<h2 id="b-recursion">B. Recursion</h2>
+<h2 id="c-block-libraries">C. Block Libraries</h2>
+<h2 id="d-custom-blocks-and-visible-stepping">D. Custom blocks and Visible Stepping</h2>
+
+<h1 id="first-class-lists">First Class Lists</h1>
+<h2 id="a-the-list-block">A. The List Block</h2>
+<h2 id="b-lists-of-lists">B. Lists of Lists</h2>
+<h2 id="c-functional-and-imperative-list-programming">C. Functional and Imperative List Programming</h2>
+<h2 id="d-higher-order-list-operations-and-rings">D. Higher Order List Operations and Rings</h2>
+<h2 id="e-table-view-vs-list-view">E. Table View vs List View</h2>
+<h3 id="comma-separated-values">Comma-Separated Values</h3>
+<h3 id="multi-dimensional-lists-and-json">Multi-dimensional Lists and JSON</h3>
+<h2 id="f-hyperblocks">F. Hyperblocks</h2>
+
+<h1 id="typed-inputs">Typed Inputs</h1>
+<h2 id="a-scratchs-type-notation">A. Scratch’s Type Notation</h2>
+<h2 id="b-the-snap-input-type-dialog">B. The Snap! Input Type Dialog</h2>
+<h3 id="procedure-types">Procedure Types</h3>
+<h3 id="pulldown-inputs">Pulldown Inputs</h3>
+<h3 id="input-variants">Input Variants</h3>
+<h3 id="prototype-hints">Prototype Hints</h3>
+<h3 id="title-text-and-symbols">Title Text and Symbols</h3>
+
+<h1 id="procedures-as-data">Procedures as Data</h1>
+<h2 id="a-call-and-run">A. Call and Run</h2>
+<h3 id="callrun-with-inputs">Call/Run with Inputs</h3>
+<h3 id="variables-in-ring-slots">Variables in Ring Slots</h3>
+<h2 id="b-writing-higher-order-procedures">B. Writing Higher Order Procedures</h2>
+<h3 id="recursive-calls-to-multiple-input-blocks">Recursive Calls to Multiple-Input Blocks</h3>
+<h2 id="c-formal-parameters">C. Formal Parameters</h2>
+<h2 id="d-procedures-as-data">D. Procedures as Data</h2>
+<h2 id="e-special-forms">E. Special Forms</h2>
+<h3 id="special-forms-in-scratch">Special Forms in Scratch</h3>
+
+<h1 id="object-oriented-programming-with-sprites">Object Oriented Programming with Sprites</h1>
+<h2 id="a-first-class-sprites">A. First Class Sprites</h2>
+<h2 id="b-permanent-and-temporary-clones">B. Permanent and Temporary Clones</h2>
+<h2 id="c-sending-messages-to-sprites">C. Sending Messages to Sprites</h2>
+<h3 id="polymorphism">Polymorphism</h3>
+<h2 id="d-local-state-in-sprites-variables-and-attributes">D. Local State in Sprites: Variables and Attributes</h2>
+<h2 id="e-prototyping-parents-and-children">E. Prototyping: Parents and Children</h2>
+<h2 id="f-inheritance-by-delegation">F. Inheritance by Delegation</h2>
+<h2 id="g-list-of-attributes">G. List of Attributes</h2>
+<h2 id="h-first-class-costumes-and-sounds">H. First Class Costumes and Sounds</h2>
+<h3 id="media-computation-with-costumes">Media Computation with Costumes</h3>
+<h3 id="media-computation-with-sounds">Media Computation with Sounds</h3>
+
+<h1 id="oop-with-procedures">OOP with Procedures</h1>
+<h2 id="a-local-state-with-script-variables">A. Local State with Script Variables</h2>
+<h2 id="b-messages-and-dispatch-procedures">B. Messages and Dispatch Procedures</h2>
+<h2 id="c-inheritance-via-delegation">C. Inheritance via Delegation</h2>
+<h2 id="d-an-implementation-of-prototyping-oop">D. An Implementation of Prototyping OOP</h2>
+
+<h1 id="the-outside-world">The Outside World</h1>
+<h2 id="a-the-world-wide-web">A. The World Wide Web</h2>
+<h2 id="b-hardware-devices">B. Hardware Devices</h2>
+<h2 id="c-date-and-time">C. Date and Time</h2>
+
+<h1 id="continuations">Continuations</h1>
+<h2 id="a-continuation-passing-style">A. Continuation Passing Style</h2>
+<h2 id="b-callrun-with-continuation">B. Call/Run with Continuation</h2>
+<h3 id="nonlocal-exit">Nonlocal Exit</h3>
+
+<h1 id="metaprogramming">Metaprogramming</h1>
+<h2 id="a-reading-a-block">A. Reading a Block</h2>
+<h2 id="b-writing-a-block">B. Writing a Block</h2>
+<h2 id="c-macros">C. Macros</h2>
+
+<h1 id="user-interface-elements">User Interface Elements</h1>
+<h2 id="a-tool-bar-features">A. Tool Bar Features</h2>
+<h3 id="the-snap-logo-menu">The Snap! Logo Menu</h3>
+<h3 id="the-file-menu">The File Menu</h3>
+<h3 id="the-cloud-menu">The Cloud Menu</h3>
+<h3 id="the-settings-menu">The Settings Menu</h3>
+<h3 id="visible-stepping-controls">Visible Stepping Controls</h3>
+<h3 id="stage-resizing-buttons">Stage Resizing Buttons</h3>
+<h3 id="project-control-buttons">Project Control Buttons</h3>
+<h2 id="b-the-palette-area">B. The Palette Area</h2>
+<h3 id="buttons-in-the-palette">Buttons in the Palette</h3>
+<h3 id="context-menus-for-palette-blocks">Context Menus for Palette Blocks</h3>
+<h3 id="context-menu-for-the-palette-background">Context Menu for the Palette Background</h3>
+<h2 id="c-the-scripting-area">C. The Scripting Area</h2>
+<h3 id="sprite-appearance-and-behavior-controls">Sprite Appearance and Behavior Controls</h3>
+<h3 id="scripting-area-tabs">Scripting Area Tabs</h3>
+<h3 id="scripts-and-blocks-within-scripts">Scripts and Blocks Within Scripts</h3>
+<h3 id="controls-in-the-costumes-tab">Controls in the Costumes Tab</h3>
+<h3 id="the-paint-editor">The Paint Editor</h3>
+<h3 id="controls-in-the-sounds-tab">Controls in the Sounds Tab</h3>
+<h2 id="d-keyboard-editing">D. Keyboard Editing</h2>
+<h3 id="starting-and-stopping-the-keyboard-editor">Starting and Stopping the Keyboard Editor</h3>
+<h3 id="navigating-in-the-keyboard-editor">Navigating in the Keyboard Editor</h3>
+<h3 id="editing-a-script">Editing a Script</h3>
+<h3 id="running-the-selected-script">Running the Selected Script</h3>
+<h2 id="e-controls-on-the-stage">E. Controls on the Stage</h2>
+<h3 id="sprites">Sprites</h3>
+<h3 id="variable-watchers">Variable Watchers</h3>
+<h3 id="the-stage-itself">The Stage Itself</h3>
+<h2 id="f-the-sprite-corral-and-sprite-creation-buttons">F. The Sprite Corral and Sprite Creation Buttons</h2>
+<h2 id="g-preloading-a-project-when-starting-snap">G. Preloading a Project when Starting Snap!</h2>
+<h2 id="h-mirror-sites">H. Mirror Sites</h2>
+
+<h1 id="appendix-a-snap-color-library">Appendix A. Snap! Color Library</h1>
+<h3 id="introduction-to-color">Introduction to Color</h3>
+<h3 id="crayons-and-color-numbers">Crayons and Color Numbers</h3>
+<h3 id="perceptual-spaces-hsv-and-hsl">Perceptual Spaces: HSV and HSL</h3>
+<h3 id="mixing-colors">Mixing Colors</h3>
+<h3 id="tldr">tl;dr</h3>
+<h4 id="subappendix-geeky-details-on-fair-hue">Subappendix: Geeky Details on Fair Hue</h4>
+<h4 id="subappendix-geeky-details-on-color-numbers">Subappendix: Geeky Details on Color Numbers</h4>
+
+<h1 id="appendix-b-apl-features">Appendix B. APL Features</h1>
+<h3 id="boolean-values">Boolean Values</h3>
+<h3 id="scalar-functions">Scalar Functions</h3>
+<h3 id="mixed-functions">Mixed Functions</h3>
+<h3 id="higher-order-functions">Higher Order Functions</h3>
+
+<h1 id="index">Index</h1>
+:ET
