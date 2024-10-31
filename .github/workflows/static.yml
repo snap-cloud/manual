@@ -1,19 +1,13 @@
-# Simple workflow for deploying static content to GitHub Pages
-name: Deploy static content to Pages
+name: deploy-book
 
 on:
-  # Runs on pushes targeting the default branch
+  # Trigger the workflow on push to main branch
   push:
-    branches: ["jupyterbook"]
+    branches:
+      - jupyterbook
 
-  # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
-
-# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
-permissions:
-  contents: read
-  pages: write
-  id-token: write
+env:
+  BASE_URL: /${{ github.event.repository.name }}
 
 # Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
 # However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
@@ -22,22 +16,37 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  # Single deploy job since we're just deploying
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+  deploy-book:
     runs-on: ubuntu-latest
+    # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
+    permissions:
+      pages: write
+      id-token: write
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+      - uses: actions/checkout@v3
+
+      # Install dependencies
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v4
         with:
-          # Upload entire repository
-          path: '.'
+          python-version: 3.11
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+
+      # Build the book
+      - name: Build the book
+        run: |
+          jupyter-book build snap_manual
+
+      # Upload the book's HTML as an artifact
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v2
+        with:
+          path: "_build/html"
+
+      # Deploy the book's HTML to GitHub Pages
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v2
