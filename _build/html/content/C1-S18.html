@@ -1,0 +1,1011 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Libraries &#8212; My sample book</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!-- 
+    this give us a css class that will be invisible only if js is disabled 
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'content/C1-S18';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Saving and Loading Projects and Media" href="Chapter2.html" />
+    <link rel="prev" title="Etcetera" href="C1-S17.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/logo.png" class="logo__image only-light" alt="My sample book - Home"/>
+    <img src="../_static/logo.png" class="logo__image only-dark pst-js-only" alt="My sample book - Home"/>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Snap! Reference Manual
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="Chapter1.html">Blocks, Scripts, and Sprites</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="C1-S1.html">Sprites and Parallelism</a></li>
+<li class="toctree-l2"><a class="reference internal" href="C1-S2.html">Nesting Sprites: Anchors and Parts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="C1-S3.html">Reporter Blocks and Expressions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="C1-S4.html">Predicates and Conditional Evaluation</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="C1-S5.html">Variables</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="C1-S6.html">Global Variables</a></li>
+<li class="toctree-l3"><a class="reference internal" href="C1-S7.html">Script Variables</a></li>
+<li class="toctree-l3"><a class="reference internal" href="C1-S8.html">Transient variables</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="C1-S12.html">Debugging</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="C1-S13.html">The pause button</a></li>
+<li class="toctree-l3"><a class="reference internal" href="C1-S15.html">Breakpoints: the pause all block</a></li>
+<li class="toctree-l3"><a class="reference internal" href="C1-S16.html">Visible stepping</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2"><a class="reference internal" href="C1-S17.html">Etcetera</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Libraries</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="Chapter2.html">Saving and Loading Projects and Media</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/jedi-force/snap-manual" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/jedi-force/snap-manual/issues/new?title=Issue%20on%20page%20%2Fcontent/C1-S18.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/content/C1-S18.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Libraries</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1"></a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="libraries">
+<h1>Libraries<a class="headerlink" href="#libraries" title="Link to this heading">#</a></h1>
+<img src="/content/assets/images/image384.png" style="width:31px; height:17px">
+<img src="/content/assets/images/image385.png" style="width:711px; height:311px">
+There are several collections of useful
+procedures that aren't Snap*!* primitives, but are provided as
+libraries. To include a library in your project, choose the Libraries...
+option in the file ( ) menu.
+<p>When you click on the one-line description of a library, you are shown
+the actual blocks in the library and a longer explanation of its
+purpose. You can browse the libraries to find one that will satisfy your
+needs.</p>
+<p>The libraries and their contents may change, but as of this writing the
+list library has these blocks:</p>
+<img src="/content/assets/images/image387.png" style="width:177px; height:239px">
+ (The lightning bolt before the name in
+several of these blocks means that they use compiled HOFs or JavaScript
+primitives to achieve optimal speed. They are officially considered
+experimental.) Remove duplicates from reports a list in which no two
+items are equal. The sort block takes a list and a two-input comparison
+predicate, such as \<, and reports a list with the items sorted
+according to that comparison. The assoc block is for looking up a key in
+an *association list:* a list of two-item lists. In each two-item list,
+the first is a *key* and the second is a *value.* The inputs are a key
+and an association list; the block reports the first key-value pair
+whose key is equal to the input key.
+<p>For each item is a variant of the primitive version that provides a #
+variable containing the position in the input list of the currently
+considered item. Multimap is a version of map that allows multiple list
+inputs, in which case the mapping function must take as many inputs as
+there are lists; it will be called with all the first items, all the
+second items, and so on. Zip takes any number of lists as inputs; it
+reports a list of lists: all the first items, all the second items, and
+so on. The no-name identity function reports its input.</p>
+<p>Sentence and sentence➔list are borrowed from the word and sentence
+library (page 27) to serve as a variant of append that accepts non-lists
+as inputs. Printable takes a list structure of any depth as input and
+reports a compact representation of the list as a text string.</p>
+<p>The iteration, composition library has these blocks:</p>
+<img src="/content/assets/images/image388.png" style="width:162px; height:456px">
+Catch and throw provide a nonlocal exit facility. You
+can drag the tag from a catch block to a throw inside its C-slot, and
+the throw will then jump directly out to the matching catch without
+doing anything in between.
+<p>If do and pause all is for setting a breakpoint while debugging code.
+The idea is to put show variable blocks for local variables in the
+C-slot; the watchers will be deleted when the user continues from the
+pause.</p>
+<p>Ignore is used when you need to call a reporter but you don’t care about
+the value it reports. (For example, you are writing a script to time how
+long the reporter takes.)</p>
+<p>The cascade blocks take an initial value and call a function repeatedly
+on that value, <em>f</em>(<em>f</em>(<em>f</em>(<em>f</em>…(<em>x</em>)))).</p>
+<p>The compose block takes two functions and reports the function
+<em>f</em>(<em>g</em>(<em>x</em>)).</p>
+<img src="/content/assets/images/image389.png" style="width:100px; height:15px">
+<img src="/content/assets/images/image390.png" style="width:303px; height:29px">
+The first three repeat blocks are variants
+of the primitive repeat until block, giving all four combinations of
+whether the first test happens before or after the first repetition, and
+whether the condition must be true or false to continue repeating. The
+last repeat block is like the repeat primitive, but makes the number of
+repetitions so far available to the repeated script. The next two blocks
+are variations on for: the first allows an explicit step instead of
+using ±1, and the second allows any values, not just numbers; inside the
+script you say
+<img src="/content/assets/images/image391.png" style="width:330px; height:131px">
+<img src="/content/assets/images/image392.png" style="width:356px; height:112px">
+replacing the grey block in the picture
+with an expression to give the next desired value for the loop index.
+Pipe allows reordering a nested composition with a left-to-right one:
+<p>The stream library has these blocks:</p>
+<img src="/content/assets/images/image393.png" style="width:303px; height:207px">
+*Streams* are a special kind of list whose
+items are not computed until they are needed. This makes certain
+computations more efficient, and also allows the creation of lists with
+infinitely many items, such as a list of all the positive integers. The
+first five blocks are stream versions of the list blocks in front of,
+item 1 of, all but first of, map, and keep. Show stream takes a stream
+and a number as inputs, and reports an ordinary list of the first *n*
+items of the stream. Stream is like the primitive list; it makes a
+finite stream from explicit items. Sieve is an example block that takes
+as input the stream of integers starting with 2 and reports the stream
+of all the prime numbers. Stream with numbers from is like the numbers
+from block for lists, except that there is no endpoint; it reports an
+infinite stream of numbers.
+<p>The word and sentence library has these blocks:</p>
+<img src="/content/assets/images/image394.png" style="width:161px; height:350px">
+This library has the goal of recreating
+the Logo approach to handling text: A text isn't best viewed as a string
+of characters, but rather as a *sentence*, made of *words,* each of
+which is a string of *letters.* With a few specialized exceptions, this
+is why people put text into computers: The text is sentences of natural
+(i.e., human) language, and the emphasis is on words as constitutive of
+sentences. You barely notice the letters of the words, and you don't
+notice the spaces between them at all, unless you're proof-reading.
+(Even then: Proofreading is *diffciult,* because you see what you expect
+to see, what will make the snetence make sense, rather than the
+misspelling in front of of your eyes.) Internally, Logo stores a
+sentence as a list of words, and a word as a string of letters.
+<p>Inexplicably, the designers of Scratch chose to abandon that tradition,
+and to focus on the representation of text as a string of characters.
+The one vestige of the Logo tradition from which Scratch developed is
+the block named letter (1) of (world), rather than character (1) of
+(world). Snap*!* inherits its text handling from Scratch.</p>
+<p>In Logo, the visual representation of a sentence (a list of words) looks
+like a natural language sentence: a string of words with spaces between
+them. In Snap*!*, the visual representation of a list looks nothing at
+all like natural language. On the other hand, representing a sentence as
+a string means that the program must continually re-parse the text on
+every operation, looking for spaces, treating multiple consecutive
+spaces as one, and so on. Also, it’s more convenient to treat a sentence
+as a list of words rather than a string of words because in the former
+case you can use the higher order functions map, keep, and combine on
+them. This library attempts to be agnostic as to the internal
+representation of sentences. The sentence selectors accept any
+combination of lists and strings; there are two sentence constructors,
+one to make a string (join words) and one to make a list (sentence).</p>
+<p>The selector names come from Logo, and should be self-explanatory.
+However, because in a block language you don’t have to type the block
+name, instead of the terse butfirst or the cryptic bf we spell out “all
+but first of” and include “word” or “sentence” to indicate the intended
+domain. There’s no first letter of block because letter 1 of serves that
+need. Join words (the sentence-as-string constructor) is like the
+primitive join except that it puts a space in the reported value between
+each of the inputs. Sentence (the List-colored sentence-as-list
+constructor) accepts any number of inputs, which can be words,
+sentences-as-lists, or sentences-as-strings. (If inputs are lists of
+lists, only one level of flattening is done.) Sentence reports a list of
+words; there will be no empty words or words containing spaces. The four
+blocks with right-arrows in their names convert back and forth between
+text strings (words or sentences) and lists. (Splitting a word into a
+list of letters is unusual unless you’re a linguist investigating
+orthography.) Printable takes a list (including a deep list) of words as
+input and reports a text string in which parentheses are used to show
+the structure, as in Lisp/Scheme.</p>
+<p>The pixels library has one block:</p>
+<img src="/content/assets/images/image395.png" style="width:75px; height:60px">
+Costumes are first class data in Snap*!*.
+Most of the processing of costume data is done by primitive blocks in
+the Looks category. (See page 79.) This library provides snap, which
+takes a picture using your computer's camera and reports it as a
+costume.
+<p>The bar charts library has these blocks:</p>
+<img src="/content/assets/images/image396.png" style="width:329px; height:184px">
+Bar chart takes a table (typically from a
+CSV data set) as input and reports a summary of the table grouped by the
+field in the specified column number. The remaining three inputs are
+used only if the field values are numbers, in which case they can be
+grouped into buckets (e.g., decades, centuries, etc.). Those inputs
+specify the smallest and largest values of interest and, most
+importantly, the width of a bucket (10 for decades, 100 for centuries).
+If the field isn\'t numeric, leave these three inputs empty or set them
+to zero. Each string value of the field is its own bucket, and they
+appear sorted alphabetically.
+<p>Bar chart reports a new table with three columns. The first column
+contains the bucket name or smallest number. The second column contains
+a nonnegative integer that says how many records in the input table fall
+into this bucket. The third column is a subtable containing the actual
+records from the original table that fall into the bucket. Plot bar
+chart takes the table reported by bar chart and graphs it on the stage,
+with axes labelled appropriately. The remaining blocks are helpers for
+those.</p>
+<p>If your buckets aren’t of constant width, or you want to group by some
+function of more than one field, load the “Frequency Distribution
+Analysis” library instead.</p>
+<p>The multi-branched conditional library has these blocks:</p>
+<img src="/content/assets/images/image397.png" style="width:178px; height:238px">
+The catch and throw blocks duplicate ones
+in the iteration library, and are included because they are used to
+implement the others. The cases block sets up a multi-branch
+conditional, similar to cond in Lisp or switch in C-family languages.
+The first branch is built into the cases block; it consists of a Boolean
+test in the first hexagonal slot and an action script, in the C-slot, to
+be run if the test reports true. The remaining branches go in the
+variadic hexagonal input at the end; each branch consists of an else if
+block, which includes the Boolean test and the corresponding action
+script, except possibly for the last branch, which can use the
+unconditional else block. As in other languages, once a branch succeeds,
+no other branches are tested.
+<section id="id1">
+<h2><a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
+<p>The variadic library has these blocks:</p>
+<img src="/content/assets/images/image398.png" style="width:115px; height:40px">
+These are versions of the associative
+operators and, and or that take any number of inputs instead of exactly
+two inputs. As with any variadic input, you can also drop a list of
+values onto the arrowheads instead of providing the inputs one at a time
+As of version 8.0, the arithmetic operators sum, product, minimum, and
+maximum are no longer included, because the primitive operators +. ×,
+min, and max are themselves variadic.
+<img src="/content/assets/images/image399.png" style="width:699px; height:106px">
+The colors and crayons library has these
+blocks:
+<p>It is intended as a more powerful replacement for the primitive set pen
+block, including <em>first class color</em> support; HSL color specification as
+a better alternative to the HSV that Snap*!* inherits from JavaScript; a
+“fair hue” scale that compensates for the eye’s grouping a wide range of
+light frequencies as green while labelling mere slivers as orange or
+yellow; the X11/W3C standard color names; RGB in hexadecimal; a linear
+color scale (as in the old days, but better) based on fair hues and
+including shades (darker colors) and grayscale. Another linear scale is
+a curated set of 100 “crayons,” explained further on the next page.</p>
+<img src="/content/assets/images/image409.png" style="width:294px; height:219px">
+<img src="/content/assets/images/image413.png" style="width:109px; height:22px">
+<img src="/content/assets/images/image414.png" style="width:91px; height:22px">
+Colors are created by the block (for direct user
+selection), the color from block to specify a color numerically, or by ,
+which reports the color currently in use by the pen. The from color
+block reports names or numbers associated with a color:
+<img src="/content/assets/images/image415.png" style="width:464px; height:41px">
+Colors can be created from other colors:
+<p>The three blocks with pen in their names are improved versions of
+primitive Pen blocks. In principle set pen, for example, could be
+implemented using a (hypothetical) set pen to color composed with the
+color from block, but in fact set pen benefits from knowing how the pen
+color was set in its previous invocation, so it’s implemented separately
+from color from. Details in Appendix A.</p>
+<img src="/content/assets/images/image416.png" style="width:720px; height:24px">
+The recommended way to choose a color is from one of two
+linear scales: the continuous *color numbers* and the discrete
+*crayons:*
+<img src="/content/assets/images/image417.png" style="width:720px; height:24px">
+<img src="/content/assets/images/image418.png" style="width:384px; height:20px">
+Color numbers are based on *fair hues,* a
+modification of the spectrum (rainbow) hue scale that devotes less space
+to green and more to orange and yellow, as well as promoting brown to a
+real color. Here is the normal hue scale, for reference:
+<img src="/content/assets/images/image419.png" style="width:384px; height:20px">
+Here is the fair hue scale:
+<img src="/content/assets/images/image416.png" style="width:480px; height:20px">
+Here is the color number scale:
+<p>(The picture is wider so that pure spectral colors line up with the fair
+hue scale.)</p>
+<img src="/content/assets/images/image417.png" style="width:480px; height:20px">
+And here are the 100 crayons:
+<p>The color from block, for example, provides different pulldown menus
+depending on which scale you choose:</p>
+<img src="/content/assets/images/image420.png" style="width:232px; height:33px">
+<img src="/content/assets/images/image421.png" style="width:679px; height:275px">
+You can also type the crayon name: There
+are many scales:
+<img src="/content/assets/images/image427.png" style="width:412px; height:183px">
+<img src="/content/assets/images/image428.png" style="width:590px; height:51px">
+ The white slot at the end of some of the
+blocks has two purposes. It can be used to add a transparency to a color
+(0=opaque, 100=transparent):
+<img src="/content/assets/images/image432.png" style="width:675px; height:41px">
+or it can be expanded to enter three or
+four numbers for a vector directly into the block, so these are
+equivalent:
+<img src="/content/assets/images/image436.png" style="width:719px; height:41px">
+But note that a transparency number in a
+four-number RGBA vector is on the scale 255=opaque, 0=transparent, so
+the following are *not* equivalent:
+<p>Set pen crayon to provides the equivalent of a box of 100 crayons. They
+are divided into color groups, so the menu in the set pen crayon to
+input slot has submenus. The colors are chosen so that starting
+<img src="/content/assets/images/image440.png" style="width:419px; height:49px">
+from crayon 0, change pen crayon by 10
+rotates through an interesting, basic set of ten colors:</p>
+<img src="/content/assets/images/image441.png" style="width:418px; height:27px">
+Using change pen crayon by 5 instead
+gives ten more colors, for a total of 20:
+<p>(Why didn’t we use the colors of the 100-crayon Crayola™ box? A few
+reasons, one of which is that some Crayola colors aren’t representable
+on RGB screens. Some year when you have nothing else to do, look up
+“color space” on Wikipedia. Also “crayon.” Oh, it’s deliberate that
+change pen crayon by 5 doesn’t include white, since that’s the usual
+stage background color. White is crayon 14.) Note that crayon 43 is</p>
+<p>“Variables”; all the standard block colors are included.</p>
+<p>See Appendix A (page 139) for more information.</p>
+<img src="/content/assets/images/image442.png" style="width:145px; height:86px">
+The **crayon library** has only the crayon features,
+without the rest of the colors package.
+<p>The catch errors library has these blocks:</p>
+<img src="/content/assets/images/image443.png" style="width:41px; height:15px">
+<img src="/content/assets/images/image444.png" style="width:292px; height:134px">
+The safely try block allows you to handle
+errors that happen when your program is run within the program, instead
+of stopping the script with a red halo and an obscure error message. The
+block runs the script in its first C-slot. If it finishes without an
+error, nothing else happens. But if an error happens, the code in the
+second C-slot is run. While that second script is running, the variable
+contains the text of the error message that would have been displayed if
+you weren't catching the error. The error block is sort of the opposite:
+it lets your program *generate* an error message, which will be
+displayed with a red halo unless it is caught by safely try. Safely try
+reporting is the reporter version of safely try.
+<p>The text costumes library has only two blocks:</p>
+<img src="/content/assets/images/image445.png" style="width:51px; height:20px">
+<img src="/content/assets/images/image446.png" style="width:184px; height:43px">
+Costume from text reports a costume that
+can be used with the switch to
+<img src="/content/assets/images/image447.png" style="width:313px; height:18px">
+costume block to make a button:
+<p>Costume with background reports a costume made from another costume by
+coloring its background, taking a color input like the set pen color to
+RGB(A) block and a number of turtle steps of padding around the original
+costume. These two blocks work together to make even better buttons:</p>
+<img src="/content/assets/images/image448.png" style="width:529px; height:65px">
+<p>The text to speech library has these blocks:</p>
+<img src="/content/assets/images/image449.png" style="width:218px; height:77px">
+This library interfaces with a capability in up-to-date
+browsers, so it might not work for you. It works best if the accent
+matches the text!
+<p>The parallelization library contains these blocks:</p>
+<img src="/content/assets/images/image450.png" style="width:113px; height:121px">
+The two do in parallel blocks take any
+number of scripts as inputs. Those scripts will be run in parallel, like
+ordinary independent scripts in the scripting area. The and wait version
+waits until all of those scripts have finished before continuing the
+script below the block.
+<img src="/content/assets/images/image451.png" style="width:132px; height:142px">
+The create variables library has these
+blocks:
+<p>These blocks allow a program to perform the same operation as the</p>
+<p>button, making global, sprite local, or script variables, but allowing
+the program to compute the variable name(s). It can also set and find
+the values of these variables, show and hide their stage watchers,
+delete them, and find out if they already exist.</p>
+<p>The getters and setters library has these blocks:</p>
+<img src="/content/assets/images/image452.png" style="width:180px; height:101px">
+<img src="/content/assets/images/image453.png" style="width:28px; height:16px">
+The purpose of this library is to allow
+program access to the settings controlled by user interface elements,
+such as the settings menu. The setting block reports a setting; the set
+flag block sets yes-or-no options that have checkboxes in the user
+interface, while the set value block controls settings with numeric or
+text values, such as project name.
+<p>Certain settings are ordinarily remembered on a per-user basis, such as
+the “zoom blocks” value. But when these settings are changed by this
+library, the change is in effect only while the project using the
+library is loaded. No permanent changes are made. Note: this library has
+not been converted for version 7.0, so you’ll have to enable Javascript
+extensions to use it.</p>
+<p>The bignums, rationals, complex #s library has these blocks:</p>
+<img src="/content/assets/images/image454.png" style="width:180px; height:149px">
+The USE BIGNUMS block takes a Boolean input, to turn the
+infinite precision feature on or off. When on, all of the arithmetic
+operators are redefined to accept and report integers of any number of
+digits (limited only by the memory of your computer) and, in fact, the
+entire Scheme numeric tower, with exact rationals and with complex
+numbers. The Scheme number block has a list of functions applicable to
+Scheme numbers, including subtype predicates such as rational? and
+infinite?, and selectors such as numerator and real-part.
+<img src="/content/assets/images/image455.png" style="width:464px; height:40px">
+The ! block computes the factorial
+function, useful to test whether bignums are turned on. Without bignums:
+<p>With bignums:</p>
+<img src="/content/assets/images/image459.png" style="width:723px; height:35px">
+The 375-digit value of 200! isn't
+readable on this page, but if you right-click on the block and choose
+"result pic," you can open the resulting picture in a browser window and
+scroll through it. (These values end with a bunch of zero digits. That's
+not roundoff error; the prime factors of 100! and 200! include many
+copies of 2 and 5.) The block with no name is a way to enter things like
+3/4 and 4+7i into numeric input slots by converting the slot to Any
+type.
+<p>The strings, multi-line input library provides these blocks:</p>
+<img src="/content/assets/images/image463.png" style="width:378px; height:196px">
+All of these could be written in Snap*!*
+itself, but these are implemented using the corresponding JavaScript
+library functions directly, so they run fast. They can be used, for
+example, in scraping data from a web site. The command use
+case-independent comparisons applies only to this library. The multiline
+block accepts and reports a text input that can include newline
+characters.
+<p>The animation library has these blocks:</p>
+<img src="/content/assets/images/image464.png" style="width:385px; height:224px">
+Despite the name, this isn't only about graphics; you
+can animate the values of a variable, or anything else that's expressed
+numerically.
+<img src="/content/assets/images/image465.png" style="width:93px; height:19px">
+The central idea of this library is an
+*easing function,* a reporter whose domain and range are real numbers
+between 0 and 1 inclusive. The function represents what fraction of the
+"distance" (in quotes because it might be any numeric value, such as
+temperature in a simulation of weather) from here to there should be
+covered in what fraction of the time. A linear easing function means
+steady progression. A quadratic easing function means starting slowly
+and accelerating. (Note that, since it's a requirement that *f*(0)=0 and
+*f*(1)=1, there is only one linear easing function, *f*(*x*)=*x*, and
+similarly for other categories.) The block reports some of the common
+easing functions.
+<img src="/content/assets/images/image466.png" style="width:445px; height:61px">
+The two Motion blocks in this library
+animate a sprite. Glide always animates the sprite's motion. Animate's
+first pulldown menu input allows you to animate horizontal or vertical
+motion, but will also animate the sprite's direction or size. The
+animate block in Control lets you animate any numeric quantity with any
+easing function. The getter and setter inputs are best explained by
+example:
+<img src="/content/assets/images/image467.png" style="width:327px; height:25px">
+is equivalent to
+<p>The other blocks in the library are helpers for these four.</p>
+<p>The serial ports library contains these blocks:</p>
+<img src="/content/assets/images/image468.png" style="width:166px; height:99px">
+It is used to allow hardware developers to
+control devices such as robots that are
+<p>connected to your computer via a serial port.</p>
+<p>The frequency distribution analysis library has these blocks:</p>
+<img src="/content/assets/images/image469.png" style="width:387px; height:230px">
+<p>This is a collection of tools for analyzing large data sets and plotting
+histograms of how often some value is found in some column of the table
+holding the data.</p>
+<p>For more information go here:</p>
+<p><a class="reference external" href="http://tinyurl.com/jens-data">http://tinyurl.com/jens-data</a></p>
+<p>The audio comp library includes these blocks:</p>
+<img src="/content/assets/images/image470.png" style="width:340px; height:286px">
+This library takes a sound, one that you record or
+one from our collection of sounds, and manipulates it by systematically
+changing the intensity of the samples in the sound and by changing the
+sampling rate at which the sound is reproduced. Many of the blocks are
+helpers for the plot sound block, used to plot the waveform of a sound.
+The play sound (primitive) block plays a sound. \_\_ Hz for reports a
+sine wave as a list of samples.
+<p>The web services library has these blocks:</p>
+<img src="/content/assets/images/image471.png" style="width:327px; height:106px">
+The first block is a generalization of the
+primitive url block, allowing more control over the various options in
+web requests: GET, POST, PUT, and DELETE, and fine control over the
+content of the message sent to the server. Current location reports your
+latitude and longitude. Listify takes some text in JSON format (see page
+54) and converts it to a structured list. Value at key looks up a
+key-value pair in a (listified) JSON dictionary. The key:value: block is
+just a constructor for an abstract data type used with the other blocks
+<p>The database library contains these blocks:</p>
+<img src="/content/assets/images/image472.png" style="width:217px; height:117px">
+It is used to keep data that persist from
+one Snap*!* session to the next, if you use the same browser and the
+same login.
+<p>The world map library has these blocks:</p>
+<img src="/content/assets/images/image473.png" style="width:234px; height:327px">
+Using any of the command blocks puts a map
+on the screen, in a layer in front of the stage's background but behind
+the pen trails layer (which is in turn behind all the sprites). The
+first block asks your browser for your current physical location, for
+which you may be asked to give permission. The next two blocks get and
+set the map's zoom amount; the default zoom of 10 ﬁts from San Francisco
+not quite down to Palo Alto on the screen. A zoom of 1 ﬁts almost the
+entire world. A zoom of 3 fits the United States; a zoom of 5 ﬁts
+Germany. The zoom can be changed in half steps, i.e., 5.5 is different
+from 5, but 5.25 isn't.
+<p>The next five blocks convert between stage coordinates (pixels) and
+Earth coordinates (latitude and longitude). The change by x: y: block
+shifts the map relative to the stage. The distance to block measures the
+map distance (in meters) between two sprites. The three reporters with
+current in their names find <em>your</em> actual location, again supposing that
+geolocation is enabled on your device. Update redraws the map; as
+costume reports the visible section of the map as a costume. Set style
+allows things like satellite pictures.</p>
+<p>The APL primitives library contains these blocks:</p>
+<img src="/content/assets/images/image474.png" style="width:550px; height:107px">
+<img src="/content/assets/images/image475.png" style="width:620px; height:196px">
+<p>For more information about APL, see Appendix B (page 148).</p>
+<p>The <img src="/content/assets/images/image476.png" style="width:115px; height:47px">
+<strong>list comprehension library</strong> has one
+block, zip. Its first input is a function of two inputs. The two
+Any-type inputs are deep lists (lists of lists of…) interpreted as
+trees, and the function is called with every possible combination of a
+leaf node of the first tree and a leaf node of the second tree. But
+instead of taking atoms (non-lists) as the leaves, zip allows the leaves
+of each tree to be vectors (one-dimensional lists), matrices
+(two-dimensional lists), etc. The Number-type inputs specify the leaf
+dimension for each tree, so the function input might be called with a
+vector from the first tree and an atom from the second tree.</p>
+<img src="/content/assets/images/image477.png" style="width:85px; height:145px">
+The **bitwise library** provides bitwise logic
+functions; each bit of the reported value is the result of applying the
+corresponding Boolean function to the corresponding bits of the
+input(s). The Boolean functions are not for ¬, and for ∧, or for ∨, and
+xor (exclusive or) for ⊻. The remaining functions shift their first
+input left or right by the number of bits given by the second input.
+\<\< is left shift, \>\> is arithmetic right shift (shifting in one bits
+from the left), and \>\>\> is logical right shift (shifting in zero bits
+from the left). If you don't already know what these mean, find a
+tutorial online.
+<img src="/content/assets/images/image478.png" style="width:627px; height:155px">
+<p>The <strong>MQTT library</strong> supports the Message Queuing Telemetry Transport
+protocol, for connecting with IOT devices. See <a class="reference external" href="https://mqtt.org/">https://mqtt.org/</a> for
+more information.</p>
+<img src="/content/assets/images/image482.png" style="width:479px; height:277px">
+The **Signada library** allows you to
+control a microBit or similar device that works with the Signada
+MicroBlocks project.
+<img src="/content/assets/images/image486.png" style="width:325px; height:182px">
+<p>The <strong>menus library</strong> provides the ability to display hierarchical menus
+on the stage, using the ask block’s ability to take lists as inputs. See
+page 24.</p>
+<p>The <em><em>SciSnap</em>!</em> library** and the <strong>TuneScope library</strong> are too big to
+discuss here and are documented separately at
+<a class="reference external" href="http://emu-online.de/ProgrammingWithSciSnap.pdf">http://emu-online.de/ProgrammingWithSciSnap.pdf</a> and
+<a class="reference external" href="https://maketolearn.org/creating-art-animations-and-music/">https://maketolearn.org/creating-art-animations-and-music/</a>
+respectively.</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./content"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="C1-S17.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Etcetera</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="Chapter2.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Saving and Loading Projects and Media</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1"></a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By The Jupyter Book Community
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
