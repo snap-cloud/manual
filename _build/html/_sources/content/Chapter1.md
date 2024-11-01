@@ -1,6 +1,6 @@
 # Blocks, Scripts, and Sprites
 
-This chapter describes the Snap*!* features inherited from Scratch;
+This chapter describes the Snap<em>!</em> features inherited from Scratch;
 experienced Scratch users can skip to Section B.
 
 Snap<em>!</em> is a programming language---a notation in which you can tell a
