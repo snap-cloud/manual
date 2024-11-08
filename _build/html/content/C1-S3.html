@@ -180,12 +180,7 @@
 <li class="toctree-l3"><a class="reference internal" href="C1-S8.html">Transient variables</a></li>
 </ul>
 </details></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="C1-S12.html">Debugging</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l3"><a class="reference internal" href="C1-S13.html">The pause button</a></li>
-<li class="toctree-l3"><a class="reference internal" href="C1-S15.html">Breakpoints: the pause all block</a></li>
-<li class="toctree-l3"><a class="reference internal" href="C1-S16.html">Visible stepping</a></li>
-</ul>
-</details></li>
+<li class="toctree-l2"><a class="reference internal" href="C1-S12.html">Debugging</a></li>
 <li class="toctree-l2"><a class="reference internal" href="C1-S17.html">Etcetera</a></li>
 <li class="toctree-l2"><a class="reference internal" href="C1-S18.html">Libraries</a></li>
 </ul>
@@ -382,44 +377,23 @@
                   
   <section class="tex2jax_ignore mathjax_ignore" id="reporter-blocks-and-expressions">
 <h1>Reporter Blocks and Expressions<a class="headerlink" href="#reporter-blocks-and-expressions" title="Link to this heading">#</a></h1>
+<p>So far, we’ve used two kinds of blocks: hat blocks and command blocks. Another kind is the <em>reporter</em> block, which has an oval shape: <img src="/content/assets/images/image66.png" style="width:70px; height:15px">. It’s called a “reporter” because when it’s run, instead of carrying out an action, it reports a value that can be used as an input to another block. If you drag a reporter into the scripting area by itself and click on it, the value it reports will appear in a speech balloon next to the block:</p>
 <img src="/content/assets/images/image65.png" style="width:141px; height:50px">
-<img src="/content/assets/images/image66.png" style="width:70px; height:15px">
-So far, we've used two kinds of blocks: hat blocks
-and command blocks. Another kind is the *reporter* block, which has an
-oval shape: . It's called a "reporter" because when it's run, instead of
-carrying out an action, it reports a value that can be used as an input
-to another block. If you drag a reporter into the scripting area by
-itself and click on it, the value it reports will appear in a speech
-balloon next to the block:
-<img src="/content/assets/images/image67.png" style="width:510px; height:92px">
-When you drag a reporter block over
-another block's input slot, a white "halo" appears around that input
-slot, analogous to the white line that appears when snapping command
-blocks together:
-<img src="/content/assets/images/image71.png" style="width:203px; height:59px">
-Don't drop the input over a *red* halo:
+<p>When you drag a reporter block over another block’s input slot, a white “halo” appears around that input slot, analogous to the white line that appears when snapping command blocks together:</p>
+<img src="/content/assets/images/image67.png" style="width:250px; height:92px">
+<img src="/content/assets/images/image68.png" style="width:250px; height:92px">
+<p>Don’t drop the input over a <em>red</em> halo:
+<img src="/content/assets/images/image71.png" style="width:203px; height:59px"></p>
 <p>That’s used for a purpose explained on page 68.</p>
-<p>Here’s a simple script that uses a reporter block:</p>
-<img src="/content/assets/images/image72.png" style="width:511px; height:131px">
-Here the x position reporter provides the
-first input to the say block. (The sprite's X position is its horizontal
-position, how far left (negative values) or right (positive values) it
-is compared to the center of the stage. Similarly, the Y position is
-measured vertically, in steps above (positive) or below (negative) the
-center.)
+<p>Here’s a simple script that uses a reporter block:
+<img src="/content/assets/images/image73.png" style="width:250px; height:131px">
+<img src="/content/assets/images/image72.png" style="width:250px; height:131px"></p>
+<p>Here the x position reporter provides the first input to the say block. (The sprite’s X position is its horizontal position, how far left (negative values) or right (positive values) it is compared to the center of the stage. Similarly, the Y position is measured vertically, in steps above (positive) or below (negative) the center.)</p>
 <p>You can do arithmetic using reporters in the Operators palette:</p>
 <img src="/content/assets/images/image76.png" style="width:601px; height:139px">
-The round block rounds 35.3905... to 35,
-and the + block adds 100 to that. (By the way, the round block is in the
-Operators palette, just like +, but in this script it's a lighter color
-with black lettering because Snap*!* alternates light and dark versions
-of the palette colors when a block is nested inside another block from
-the same palette:
+<p>The round block rounds 35.3905… to 35, and the + block adds 100 to that. (By the way, the round block is in the Operators palette, just like +, but in this script it’s a lighter color with black lettering because Snap<em>!</em> alternates light and dark versions of the palette colors when a block is nested inside another block from the same palette:</p>
 <img src="/content/assets/images/image80.png" style="width:466px; height:183px">
-<img src="/content/assets/images/image81.png" style="width:184px; height:23px">
-This aid to readability is called *zebra
-coloring.*) A reporter block with its inputs, maybe including other
-reporter blocks, such as , is called an *expression.*
+<p>This aid to readability is called <em>zebra coloring.</em>) A reporter block with its inputs, maybe including other reporter blocks, such as <img src="/content/assets/images/image81.png" style="width:184px; height:23px">, is called an <em>expression.</em></p>
 </section>
 
     <script type="text/x-thebe-config">

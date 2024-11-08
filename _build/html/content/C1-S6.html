@@ -180,12 +180,7 @@
 <li class="toctree-l3"><a class="reference internal" href="C1-S8.html">Transient variables</a></li>
 </ul>
 </details></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="C1-S12.html">Debugging</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l3"><a class="reference internal" href="C1-S13.html">The pause button</a></li>
-<li class="toctree-l3"><a class="reference internal" href="C1-S15.html">Breakpoints: the pause all block</a></li>
-<li class="toctree-l3"><a class="reference internal" href="C1-S16.html">Visible stepping</a></li>
-</ul>
-</details></li>
+<li class="toctree-l2"><a class="reference internal" href="C1-S12.html">Debugging</a></li>
 <li class="toctree-l2"><a class="reference internal" href="C1-S17.html">Etcetera</a></li>
 <li class="toctree-l2"><a class="reference internal" href="C1-S18.html">Libraries</a></li>
 </ul>
@@ -384,10 +379,9 @@
 <h1>Global Variables<a class="headerlink" href="#global-variables" title="Link to this heading">#</a></h1>
 <p>You can create variables “by hand” that aren’t limited to being used within a single block. At the top of the Variables palette, click the
 “Make a variable” button:</p>
-<img src="/content/assets/images/image96.png" style="width:306px; height:177px">
 <img src="/content/assets/images/image97.png" style="width:197px; height:218px">
-This will bring up a dialog window in
-which you can give your variable a name:
+<p>This will bring up a dialog window in which you can give your variable a name:</p>
+<img src="/content/assets/images/image96.png" style="width:306px; height:177px">
 <p>The dialog also gives you a choice to make the variable available to all
 sprites (which is almost always what you want) or to make it visible
 only in the current sprite. You’d do that if you’re going to give
@@ -397,27 +391,21 @@ sprite’s scripting area to the picture of another sprite in the sprite
 corral), and the different sprites will do slightly different things
 when running that script because each has a different value for that
 variable name.</p>
+<p>If you give your variable the name “name” then the Variables palette will look like this:</p>
 <img src="/content/assets/images/image98.png" style="width:159px; height:220px">
-If you give your variable the name "name" then the Variables palette will look like this:
+<p>There’s now a “Delete a variable” button, and there’s an orange oval with the variable name in it, just like the orange oval in the for block. You can drag the variable into any script in the scripting area. Next to the oval is a checkbox, initially checked. When it’s checked, you’ll also see a <em>variable watcher</em> on the stage:</p>
 <img src="/content/assets/images/image99.png" style="width:100px; height:39px">
-There's now a "Delete a variable" button, and there's
-an orange oval with the variable name in it, just like the orange oval
-in the for block. You can drag the variable into any script in the
-scripting area. Next to the oval is a checkbox, initially checked. When
-it's checked, you'll also see a *variable watcher* on the stage:
 <p>When you give the variable a value, the orange box in its watcher will
 display the value.</p>
+<p>How <em>do</em> you give it a value? You use the set block:</p>
 <img src="/content/assets/images/image100.png" style="width:185px; height:46px">
-How *do* you give it a value? You use the
-set block:
 <p>Note that you <em>don’t</em> drag the variable’s oval into the set block! You
 click on the downarrow in the first input slot, and you get a menu of
 all the available variable names.</p>
 <p>If you do choose “For this sprite only” when creating a variable, its
 block in the palette looks like this:</p>
-<p><img alt="MacintoshHD:Users:bh:Desktop:local-var.png" src="content/image101.png" />{width=”0.6583333333333333in” height=”0.14166666666666666in”}
-The <em>location</em>-pin icon is a bit of a
-pun on a sprite-<em>local</em> variable. It’s shown only in the palette.</p>
+<img src="/content/assets/images/image101.png" style="width:100px; height:40px">
+<p>The <em>location</em>-pin icon is a bit of a pun on a sprite-<em>local</em> variable. It’s shown only in the palette.</p>
 </section>
 
     <script type="text/x-thebe-config">

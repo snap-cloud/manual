@@ -180,12 +180,7 @@
 <li class="toctree-l3"><a class="reference internal" href="C1-S8.html">Transient variables</a></li>
 </ul>
 </details></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="C1-S12.html">Debugging</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l3"><a class="reference internal" href="C1-S13.html">The pause button</a></li>
-<li class="toctree-l3"><a class="reference internal" href="C1-S15.html">Breakpoints: the pause all block</a></li>
-<li class="toctree-l3"><a class="reference internal" href="C1-S16.html">Visible stepping</a></li>
-</ul>
-</details></li>
+<li class="toctree-l2"><a class="reference internal" href="C1-S12.html">Debugging</a></li>
 <li class="toctree-l2"><a class="reference internal" href="C1-S17.html">Etcetera</a></li>
 <li class="toctree-l2"><a class="reference internal" href="C1-S18.html">Libraries</a></li>
 </ul>
@@ -382,39 +377,22 @@
                   
   <section class="tex2jax_ignore mathjax_ignore" id="predicates-and-conditional-evaluation">
 <h1>Predicates and Conditional Evaluation<a class="headerlink" href="#predicates-and-conditional-evaluation" title="Link to this heading">#</a></h1>
-<img src="/content/assets/images/image82.png" style="width:64px; height:18px">
-<img src="/content/assets/images/image83.png" style="width:116px; height:18px">
-Most reporters report either a number, like , or a
-text string, like . A *predicate* is a special kind of reporter that
-always reports true or false. Predicates have a hexagonal shape:
-<img src="/content/assets/images/image84.png" style="width:187px; height:25px">
-<img src="/content/assets/images/image85.png" style="width:103px; height:15px">
-The special shape is a reminder that predicates don't
+<p>Most reporters report either a number, like <img src="/content/assets/images/image82.png" style="width:64px; height:18px">, or a text string, like <img src="/content/assets/images/image83.png" style="width:116px; height:18px">. A <em>predicate</em> is a special kind of reporter thatalways reports true or false. Predicates have a hexagonal shape: <img src="/content/assets/images/image85.png" style="width:103px; height:15px"></p>
+<p>The special shape is a reminder that predicates don’t
 generally make sense in an input slot of blocks that are expecting a
-number or text. You wouldn't say , although (as you can see from the
-picture) Snap*!* lets you do it if you really want. Instead, you
-normally use predicates in special hexagonal input slots like this one:
+number or text. You wouldn’t say <img src="/content/assets/images/image84.png" style="width:187px; height:25px">, although (as you can see from the
+picture) Snap<em>!</em> lets you do it if you really want. Instead, you
+normally use predicates in special hexagonal input slots like this one:</p>
 <img src="/content/assets/images/image86.png" style="width:64px; height:55px">
-The C-shaped if block runs its input
-script if (and only if) the expression in its hexagonal input reports
-true.
+<p>The C-shaped if block runs its input script if (and only if) the expression in its hexagonal input reports true.</p>
 <img src="/content/assets/images/image87.png" style="width:153px; height:59px">
-A really useful block in animations runs
-its input script *repeatedly* until a predicate is satisfied:
-<img src="/content/assets/images/image88.png" style="width:219px; height:141px">
+<p>A really useful block in animations runs its input script <em>repeatedly</em> until a predicate is satisfied:</p>
 <img src="/content/assets/images/image89.png" style="width:220px; height:81px">
-If, while working on a project, you want to omit
-temporarily some commands in a script, but you don't want to forget
-where they belong, you can say
-<p>Sometimes you want to take the same action whether some condition is
-true or false, but with a different input value. For this purpose you
-can use the <em>reporter</em> if block:</p>
+<p>If, while working on a project, you want to omit temporarily some commands in a script, but you don’t want to forget where they belong, you can say:</p>
+<img src="/content/assets/images/image88.png" style="width:219px; height:141px">
+<p>Sometimes you want to take the same action whether some condition is true or false, but with a different input value. For this purpose you can use the <em>reporter</em> if block:</p>
 <img src="/content/assets/images/image90.png" style="width:404px; height:37px">
-The technical term for a true or false
-value is a "Boolean" value; it has a capital B because it's named after
-a person, George Boole, who developed the mathematical theory of Boolean
-values. Don't get confused; a hexagonal block is a *predicate,* but the
-value it reports is a *Boolean.*
+<p>The technical term for a true or false value is a “Boolean” value; it has a capital B because it’s named after a person, George Boole, who developed the mathematical theory of Boolean values. Don’t get confused; a hexagonal block is a <em>predicate,</em> but the value it reports is a <em>Boolean.</em></p>
 <p>Another quibble about vocabulary: Many programming languages reserve the
 name “procedure” for Commands (that carry out an action) and use the
 name “function” for Reporters and Predicates. In this manual, a
@@ -422,11 +400,9 @@ name “function” for Reporters and Predicates. In this manual, a
 values and those that don’t. Commands, Reporters, and Predicates are all
 procedures. The words “a Procedure type” are shorthand for “Command
 type, Reporter type, or Predicate type.”</p>
-<img src="/content/assets/images/image91.png" style="width:132px; height:23px">
+<p>If you want to put a <em>constant</em> Boolean value in a hexagonal slot instead of a predicate-based expression, hover the mouse over the block and click on the control that appears:</p>
 <img src="/content/assets/images/image92.png" style="width:132px; height:23px">
-If you want to put a *constant* Boolean
-value in a hexagonal slot instead of a predicate-based expression, hover
-the mouse over the block and click on the control that appears:
+<img src="/content/assets/images/image91.png" style="width:132px; height:23px">
 </section>
 
     <script type="text/x-thebe-config">

@@ -180,12 +180,7 @@
 <li class="toctree-l3"><a class="reference internal" href="C1-S8.html">Transient variables</a></li>
 </ul>
 </details></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="C1-S12.html">Debugging</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l3"><a class="reference internal" href="C1-S13.html">The pause button</a></li>
-<li class="toctree-l3"><a class="reference internal" href="C1-S15.html">Breakpoints: the pause all block</a></li>
-<li class="toctree-l3"><a class="reference internal" href="C1-S16.html">Visible stepping</a></li>
-</ul>
-</details></li>
+<li class="toctree-l2"><a class="reference internal" href="C1-S12.html">Debugging</a></li>
 <li class="toctree-l2"><a class="reference internal" href="C1-S17.html">Etcetera</a></li>
 <li class="toctree-l2"><a class="reference internal" href="C1-S18.html">Libraries</a></li>
 </ul>
@@ -392,56 +387,31 @@
                   
   <section class="tex2jax_ignore mathjax_ignore" id="script-variables">
 <h1>Script Variables<a class="headerlink" href="#script-variables" title="Link to this heading">#</a></h1>
-<img src="/content/assets/images/image102.png" style="width:528px; height:222px">
-In the name example above, our project is going to
-carry on an interaction with the user, and we want to remember their
-name throughout the project. That's a good example of a situation in
-which a *global* variable (the kind you make with the "Make a variable"
-button) is appropriate. Another common example is a variable called
-"score" in a game project. But sometimes you only need a variable
+<p>In the name example above, our project is going to carry on an interaction with the user, and we want to remember their name throughout the project. That’s a good example of a situation in which a <em>global</em> variable (the kind you make with the “Make a variable” button) is appropriate. Another common example is a variable called “score” in a game project. But sometimes you only need a variable
 temporarily, during the running of a particular script. In that case you
-can use the script variables block to make the variable:
-<p>As in the for block, you can click on an orange oval in the script
-variables block without dragging to change its name. You can also make
-more than one temporary variable by clicking on the right arrow at the
-end of the block to add another variable oval:</p>
+can use the script variables block to make the variable:</p>
+<img src="/content/assets/images/image102.png" style="width:528px; height:222px">
+<p>As in the for block, you can click on an orange oval in the script variables block without dragging to change its name. You can also make more than one temporary variable by clicking on the right arrow at the end of the block to add another variable oval:</p>
 <img src="/content/assets/images/image106.png" style="width:200px; height:29px">
 <section id="renaming-variables">
 <h2>Renaming variables<a class="headerlink" href="#renaming-variables" title="Link to this heading">#</a></h2>
-<p>There are several reasons why you might want to change the name of a
-variable:</p>
+<p>There are several reasons why you might want to change the name of a variable:</p>
 <ol class="arabic simple">
-<li><p>It has a default name, such as the “a” in script variables or the
-“i” in for.</p></li>
-<li><p>It conflicts with another name, such as a global variable, that you
-want to use in the same script.</p></li>
+<li><p>It has a default name, such as the “a” in script variables or the “i” in for.</p></li>
+<li><p>It conflicts with another name, such as a global variable, that you want to use in the same script.</p></li>
 <li><p>You just decide a different name would be more self-documenting.</p></li>
 </ol>
-<p>In the first and third case, you probably want to change the name
-everywhere it appears in that script, or even in all scripts. In the
-second case, if you’ve already used both variables in the script before
-realizing that they have the same name, you’ll want to look at each
-instance separately to decide which ones to rename. Both of these
-operations are possible by right-clicking or control-clicking on a
-variable oval.</p>
+<p>In the first and third case, you probably want to change the name everywhere it appears in that script, or even in all scripts. In the second case, if you’ve already used both variables in the script before realizing that they have the same name, you’ll want to look at each instance separately to decide which ones to rename. Both of these operations are possible by right-clicking or control-clicking on a variable oval.</p>
+<p>If you right-click on an orange oval in a context in which the variable is <em>used,</em> then you are able to rename just that one orange oval:</p>
 <img src="/content/assets/images/image107.png" style="width:155px; height:145px">
 <img src="/content/assets/images/image108.png" style="width:271px; height:121px">
 <img src="/content/assets/images/image109.png" style="width:133px; height:71px">
-If you right-click on an orange oval in a
-context in which the variable is *used,* then you are able to rename
-just that one orange oval:
+<p>If you right-click on the place where the variable is <em>defined</em> (a script variables block, the orange oval for a global variable in the Variables palette, or an orange oval that’s built into a block such as the “i” in for), then you are given two renaming options, “rename” and “rename all.” If you choose “rename,” then the name is changed only in that one orange oval, as in the previous case:</p>
 <img src="/content/assets/images/image110.png" style="width:164px; height:80px">
 <img src="/content/assets/images/image111.png" style="width:143px; height:71px">
-If you right-click on the place where the
-variable is *defined* (a script variables block, the orange oval for a global variable in the Variables palette, or an orange oval that's built
-into a block such as the "i" in for), then you are given two renaming
-options, "rename" and "rename all." If you choose "rename," then the
-name is changed only in that one orange oval, as in the previous case:
+<p>But if you choose “rename all,” then the name will be changed throughout the scope of the variable (the script for a script variable, or everywhere for a global variable):</p>
 <img src="/content/assets/images/image112.png" style="width:143px; height:71px">
 <img src="/content/assets/images/image113.png" style="width:164px; height:80px">
-But if you choose "rename all," then the
-name will be changed throughout the scope of the variable (the script
-for a script variable, or everywhere for a global variable):
 </section>
 </section>
 
