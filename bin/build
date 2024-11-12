@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+
+function open-book() {
+  if  which open >/dev/null 2>&1; then
+    open http://localhost:8000/;
+  fi
+}
+
+source env/bin/activate;
+# Wait a few seconds before opeing a book in the backgorund.
+(sleep 5 && open-book) &
+# Start an autobuild server.
+mkdir -p _build/html;
+sphinx-autobuild -b html . _build/html
+
+echo;
+echo 'Build done, deactivating env...'
+deactivate;
