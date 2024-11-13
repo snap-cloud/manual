@@ -1,31 +1,59 @@
 # Snap! Manual
 
-The reference manual for the Snap! programming language
+<!-- TODO: Icon... -->
+## [Read the Manual][webiste] ([PDF][pdf])
 
-## Usage
+[webiste]:
+[pdf]:
+
+The reference manual for the [Snap<em>!</em> programming language][sbe]. ([GitHub][snap_gh])
+
+[sbe]: https://snap.berkeley.edu
+[snap_gh]: https://github.com/jmoenig/snap/
+
+## Authors
+Brian Harvey & Jens Mönig
+
+## Quarto
+
+This version of the Snap! manual is built using [Quarto][quarto].
+
+[quarto]: https://quarto.org/docs/
+
+### Brief installation guide
+
+You need:
+* Quarto
+* LaTeX
+
+macOS:
+```shell
+brew install quarto
+brew install mactex-no-gui
+```
 
 ### Building the book
 
-If you'd like to develop and/or build the Snap! Manual book, you should:
+**While writing content:**
 
-1. Clone this repository
-2. Run `pip install -r requirements.txt` (it is recommended you do this within a virtual environment)
-3. (Optional) Edit the books source files located in the `snap_manual/` directory
-4. Run `jupyter-book clean snap_manual/` to remove any existing builds
-5. Run `jupyter-book build snap_manual/`
+```shell
+quarto render
+```
 
-A fully-rendered HTML version of the book will be built in `snap_manual/_build/html/`.
+This will automatically build the web version and display it in the browser.
+Your webpage will automatically refresh as you save changes to files.
+
+**To compile the PDF and final version:**
+
+```shell
+quarto render
+```
 
 ### Hosting the book
 
-Please see the [Jupyter Book documentation](https://jupyterbook.org/publish/web.html) to discover options for deploying a book online using services such as GitHub, GitLab, or Netlify.
-
-For GitHub and GitLab deployment specifically, the [cookiecutter-jupyter-book](https://github.com/executablebooks/cookiecutter-jupyter-book) includes templates for, and information about, optional continuous integration (CI) workflow files to help easily and automatically deploy books online with GitHub or GitLab. For example, if you chose `github` for the `include_ci` cookiecutter option, your book template was created with a GitHub actions workflow file that, once pushed to GitHub, automatically renders and pushes your book to the `gh-pages` branch of your repo and hosts it on GitHub Pages when a push or pull request is made to the main branch.
-
-## Contributors
-
-We welcome and recognize all contributions. You can see a list of current contributors in the [contributors tab](https://github.com/jedi-force/snap_manual/graphs/contributors).
+The website is hosted on GitHub pages, compiled by the `quarto.yml` workflow.
+The PDF is... TBD.
 
 ## Credits
 
-This project is created using the excellent open source [Jupyter Book project](https://jupyterbook.org/) and the [executablebooks/cookiecutter-jupyter-book template](https://github.com/executablebooks/cookiecutter-jupyter-book).
+## License

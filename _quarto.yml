@@ -1,16 +1,52 @@
 project:
   type: book
+  output-dir: _book
+  # resources:
+  preview:
+    port: 8081
+    browser: true
+  # pre-render:
+  # post-render:
 
 book:
-  title: "snap-manual"
-  author: Brian Harvey
+  title: Snap! Reference Manual
+  author: Brian Harvey & Jens Mönig
   date: 11/12/2024
+  description: A manual for Snap! TODO
+  references: references.bib
+  cover-image: cover.png
+  cover-image-alt: Snap! Manual Cover Image TODO
+  # Book Metadata
+  language: en
+  edition: 10
+  license: CC-BY-NC-SA 4.0
+  url: https://manual.snap.berkeley.edu/
+  public-url: https://manual.snap.berkeley.edu/
+  # TODO: Should we auto-commit this to the snap repo?
+  pdf-url: https://snap.berkeley.edu/snap/help/SnapManual.pdf
+  # doi:
+  # abstract:
+  #
+  # Book site display
   page-navigation: true
+  search: true
+  navbar:
+    pinned: true
+    logo: logo.png
+    logo-alt: TODO
+    logo-href: https://snap.berkeley.edu/
+    tools:
+  # sidebar:
+    # style: "docked"
+    # search: true
+  # TODO: fix this from showing the GitHub icon in the navbar.
+  repo-url: https://github.com/jedi-force/snap-manual/
+  repo-actions: [edit]
   chapters:
     - index.qmd
     - part: content/Chapter1.md
       chapters:
-      - content/C1-S1.md
+      - content/C1-S1.q md
       - content/C1-S2.md
       - content/C1-S3.md
       - content/C1-S4.md
@@ -28,10 +64,35 @@ book:
     - content/Chapter2.md
 
 
-# bibliography: references.bib
+bibliography: references.bib
 
 format:
   html:
     theme: cosmo
+    strip-comment: true
+    navbar:
+      logo: logo.png
+  # epub:
+  #   cover-image: cover.png
   pdf:
-    documentclass: scrreprt
+    # https://quarto.org/docs/reference/formats/pdf.html
+    output-file: snap-manual-latex
+    cover-image: cover.png
+    # Do not use pdflatex since we have unicode chars
+    pdf-engine: xelatex # or lualatex
+    # pdf-engine: wkhtmltopdf
+    toc: true
+    number-sections: true
+    # documentclass: scrreprt
+    documentclass: book
+    papersize: letter
+    resource-path:
+      - ./
+      - content/assets/
+      - content/assets/images/
+
+website:
+  navbar:
+    logo: logo.png
+    background: primary
+    search: true

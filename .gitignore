@@ -7,3 +7,9 @@ _build/
 /env/
 /.quarto/
 _book/
+
+# LaTex Complication Messes
+*.aux
+*.log
+*.tex
+*.toc
