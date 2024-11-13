@@ -1,2 +1,9 @@
+# Basic Python-y things
 env/
+# JupyterBook
 _build/
+
+# Quarto
+/env/
+/.quarto/
+_book/
