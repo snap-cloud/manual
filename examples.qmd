@@ -1,5 +1,7 @@
 ---
-
+title: Example Test Title
+aliases:
+  - /examples/
 ---
 
 # Quarto Book Examples and Tests
@@ -24,9 +26,9 @@ This will only appear in HTML.
 This will only appear in PDFs.
 :::
 
-<!-- ## References \index{referencekey} -->
+## References {#referencekey}
 
-<!-- You can link to @referencekey. -->
+You can link to [references @referencekey].
 
 ::: {#refs}
 :::
