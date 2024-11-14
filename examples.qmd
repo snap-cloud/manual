@@ -26,9 +26,9 @@ This will only appear in HTML.
 This will only appear in PDFs.
 :::
 
-## References {#referencekey}
+## References {#sec-test-referencekey}
 
-You can link to [references @referencekey].
+You can link to [references @sec-test-referencekey].
 
 ::: {#refs}
 :::
