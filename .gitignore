@@ -11,5 +11,8 @@ _book/
 # LaTex Complication Messes
 *.aux
 *.log
-*.tex
+content/*.tex
 *.toc
+*.idx
+content/*.pdf
+content/*_files/**

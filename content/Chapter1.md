@@ -9,19 +9,19 @@ though, Snap<em>!</em> is a *visual* language; instead of writing a program
 using the keyboard, the Snap*!* programmer uses the same drag-and-drop
 interface familiar to computer users.
 
-<img src="assets/images/image5.png" style="width:415px; height:258px">
+![](assets/images/image5.png){width="415px" height="258px"}
 Start Snap*!*[.]{.smallcaps} You should see
 the following arrangement of regions in the window:
 
 (The proportions of these areas may be different, depending on the size
 and shape of your browser window.)
 
-<img src="assets/images/image6.png" style="width:142px; height:130px">
+![](assets/images/image6.png){width="142px" height="130px"}
 A Snap*!* program consists of one or more
 *scripts,* each of which is made of *blocks.* Here's a typical script:
 
-<img src="assets/images/image7.png" style="width:216px; height:141px">
-<img src="assets/images/image8.png" style="width:212px; height:109px">
+![](assets/images/image7.png){width="216px" height="141px"}
+![](assets/images/image8.png){width="212px" height="109px"}
 The five blocks that make up this script
 have three different colors, corresponding to three of the eight
 *palettes* in which blocks can be found. The palette area at the left
@@ -50,7 +50,7 @@ only if the user clicks on the script itself. A script can't have more
 than one hat block, and the hat block can be used only at the top of the
 script; its distinctive shape is meant to remind you of that.[^1]
 
-<img src="assets/images/image9.png" style="width:112px; height:24px">
+![](assets/images/image9.png){width="112px" height="24px"}
 The other blocks in our example script are *command*
 blocks. Each command block corresponds to an action that Snap*!* already
 knows how to carry out. For example, the block tells the sprite (the
@@ -64,7 +64,7 @@ Lego™ brick; a script is a stack of blocks. (The word "block" denotes
 both the graphical shape on the screen and the procedure, the action,
 that the block carries out.)
 
-<img src="assets/images/image10.png" style="width:105px; height:34px">
+![](assets/images/image10.png){width="105px" height="34px"}
 The number 10 in the move block above is
 called an *input* to the block. By clicking on the white oval, you can
 type any number in place of the 10. The sample script on the previous
@@ -80,22 +80,22 @@ block in the sample script, are *C‑shaped.* Most C-shaped blocks are
 found in the Control palette. The slot inside the C shape is a special
 kind of input slot that accepts a *script* as the input.
 
-<img src="assets/images/image6.png" style="width:142px; height:130px">
+![](assets/images/image6.png){width="142px" height="130px"}
 
 
-<img src="assets/images/image11.png" style="width:135px; height:47px">
+![](assets/images/image11.png){width="135px" height="47px"}
 In the sample script
 
-<img src="assets/images/image12.png" style="width:547px; height:139px">
+![](assets/images/image12.png){width="547px" height="139px"}
 C-shaped blocks can be put in a script in
 two ways. If you see a white line and let go, the block will be inserted
 into the script like any command block:
 
-<img src="assets/images/image16.png" style="width:528px; height:123px">
+![](assets/images/image16.png){width="528px" height="123px"}
 But if you see an orange halo and let go,
 the block will *wrap* around the haloed blocks:
 
-<img src="assets/images/image20.png" style="width:557px; height:124px">
+![](assets/images/image20.png){width="557px" height="124px"}
 The halo will always extend from the
 cursor position to the bottom of the script:
 
@@ -103,10 +103,10 @@ If you want only some of those blocks, after wrapping you can grab the
 first block you don't want wrapped, pull it down, and snap it under the
 C-shaped block.
 
-<img src="assets/images/image24.png" style="width:222px; height:131px">
+![](assets/images/image24.png){width="222px" height="131px"}
 For "E-shaped" blocks with more than one
 C-shaped slot, only the first slot will wrap around existing blocks in a
 script, and only if that C-shaped slot is empty before wrapping. (You
 can fill the other slots by dragging blocks into the desired slot.)
 
- <img src="assets/images/image25.png" style="width:33px; height:23px">
+ ![](assets/images/image25.png){width="33px" height="23px"}

@@ -20,8 +20,8 @@ book:
   language: en
   edition: 10
   license: CC-BY-NC-SA 4.0
-  url: https://manual.snap.berkeley.edu/
-  public-url: https://manual.snap.berkeley.edu/
+  # url: https://manual.snap.berkeley.edu/
+  # public-url: https://manual.snap.berkeley.edu/
   # TODO: Should we auto-commit this to the snap repo?
   pdf-url: https://snap.berkeley.edu/snap/help/SnapManual.pdf
   # doi:
@@ -46,7 +46,7 @@ book:
     - index.qmd
     - part: content/Chapter1.md
       chapters:
-      - content/C1-S1.q md
+      - content/C1-S1.qmd
       - content/C1-S2.md
       - content/C1-S3.md
       - content/C1-S4.md
@@ -62,17 +62,19 @@ book:
       - content/C1-S17.md
       - content/C1-S18.md
     - content/Chapter2.md
+    - examples.qmd
 
 
 bibliography: references.bib
 
 format:
   html:
-    theme: cosmo
+    theme: [cosmo, styles/snap-manual.scss]
     strip-comment: true
     navbar:
       logo: logo.png
   # epub:
+  #   css: styles/epub.css
   #   cover-image: cover.png
   pdf:
     # https://quarto.org/docs/reference/formats/pdf.html
@@ -80,11 +82,16 @@ format:
     cover-image: cover.png
     # Do not use pdflatex since we have unicode chars
     pdf-engine: xelatex # or lualatex
+    keep-tex: true
+    # This are necessary to make an index.
+    include-in-header: styles/latex-preamble.tex
+    include-after-body:
+      text: |
+        \printindex
     # pdf-engine: wkhtmltopdf
     toc: true
     number-sections: true
-    # documentclass: scrreprt
-    documentclass: book
+    documentclass: scrreprt
     papersize: letter
     resource-path:
       - ./
