@@ -10,9 +10,11 @@ sprite in the scripting area, click on the picture of that sprite in the
 *sprite corral* in the bottom right corner of the window. Try putting
 one of the following scripts in each sprite's scripting area:
 
-![](assets/images/image26.png){width="149px" height="95px"}
+![](assets/images/image26.png)
+<!--{width="149px" height="95px"} -->
 
-![](assets/images/image27.png){width="148px" height="112px"}
+![](assets/images/image27.png)
+<!--{width="148px" height="112px"} -->
 
 
 When you click the green flag, you should see one sprite rotate while
@@ -21,9 +23,11 @@ different scripts can run in parallel. The turning and the moving happen
 together. Parallelism can be seen with multiple scripts of a single
 sprite also. Try this example:
 
-![](assets/images/image28.png){width="166px" height="84px"}
+![](assets/images/image28.png)
+<!--{width="166px" height="84px"} -->
 
-![](assets/images/image29.png){width="166px" height="86px"}
+![](assets/images/image29.png)
+<!--{width="166px" height="86px"} -->
 
 
 When you press the space key, the sprite should move forever in a
@@ -32,9 +36,12 @@ the program, click the red stop sign at the right end of the tool bar.)
 
 ## Costumes and Sounds
 
-![](assets/images/image30.png){width="31px" height="21px"}
-![](assets/images/image31.png){width="170px" height="180px"}
-![](assets/images/image32.png){width="28px" height="16px"}
+![](assets/images/image30.png)
+<!--{width="31px" height="21px"} -->
+![](assets/images/image31.png)
+<!--{width="170px" height="180px"} -->
+![](assets/images/image32.png)
+<!--{width="28px" height="16px"} -->
 To change the appearance of a sprite,
 paint or import a new *costume* for it. To paint a costume, click on the
 Costumes tab above the scripting area, and click the paint button . The
@@ -66,10 +73,14 @@ costume.) The Turtle costume is the only one that changes color to match
 a change in the sprite's pen color. Protip: switches to the *previous*
 costume, wrapping like next costume.
 
-![](assets/images/image33.png){width="173px" height="27px"}
-![](assets/images/image34.png){width="283px" height="25px"}
-![](assets/images/image38.png){width="182px" height="25px"}
-![](assets/images/image39.png){width="119px" height="25px"}
+![](assets/images/image33.png)
+<!--{width="173px" height="27px"} -->
+![](assets/images/image34.png)
+<!--{width="283px" height="25px"} -->
+![](assets/images/image38.png)
+<!--{width="182px" height="25px"} -->
+![](assets/images/image39.png)
+<!--{width="119px" height="25px"} -->
 In addition to its costumes, a sprite can
 have *sounds;* the equivalent for sounds of the sprite's wardrobe is
 called its *jukebox.* Sound files can be imported in any format (WAV,
@@ -86,18 +97,25 @@ more interesting program, though, the sprites on stage will *interact*
 to tell a story, play a game, etc. Often one sprite will have to tell
 another sprite to run a script. Here's a simple example:
 
-![](assets/images/image40.png){width="165px" height="24px"}
-![](assets/images/image41.png){width="55px" height="107px"}
+![](assets/images/image40.png)
+<!--{width="165px" height="24px"} -->
+![](assets/images/image41.png)
+<!--{width="55px" height="107px"} -->
 
-![](assets/images/image42.png){width="267px" height="145px"}
+![](assets/images/image42.png)
+<!--{width="267px" height="145px"} -->
 
-![](assets/images/image43.png){width="119px" height="83px"}
+![](assets/images/image43.png)
+<!--{width="119px" height="83px"} -->
 
-![](assets/images/image44.png){width="146px" height="58px"}
+![](assets/images/image44.png)
+<!--{width="146px" height="58px"} -->
 
 
-![](assets/images/image45.png){width="172px" height="19px"}
-![](assets/images/image46.png){width="173px" height="18px"}
+![](assets/images/image45.png)
+<!--{width="172px" height="19px"} -->
+![](assets/images/image46.png)
+<!--{width="173px" height="18px"} -->
 In the block, the word "bark" is just an
 arbitrary name I made up. When you click on the downward arrowhead in
 that input slot, one of the choices (the only choice, the first time) is
