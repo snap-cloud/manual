@@ -67,23 +67,23 @@ kind of input slot that accepts a *script* as the input.
 
 In the sample script
 
-<img src="/content/assets/images/image6.png" style="width:600px; height:130px">
+![](assets/images/image6.png) <!-- {width="600px" height="130px"} -->
 
 C-shaped blocks can be put in a script in
 two ways. If you see a white line and let go, the block will be inserted
 into the script like any command block:
 
-<img src="/content/assets/images/image12.png" style="width:547px; height:139px">
+![](assets/images/image12.png) <!-- {width="547px" height="139px"} -->
 
 But if you see an orange halo and let go,
 the block will *wrap* around the haloed blocks:
 
-<img src="/content/assets/images/image16.png" style="width:550px; height:123px">
+![](assets/images/image16.png) <!-- {width="550px" height="123px"} -->
 
 The halo will always extend from the
 cursor position to the bottom of the script:
 
-<img src="/content/assets/images/image20.png" style="width:550px; height:124px">
+![](assets/images/image20.png) <!-- {width="550px" height="124px"} -->
 
 If you want only some of those blocks, after wrapping you can grab the
 first block you don't want wrapped, pull it down, and snap it under the
@@ -94,9 +94,9 @@ C-shaped slot, only the first slot will wrap around existing blocks in a
 script, and only if that C-shaped slot is empty before wrapping. (You
 can fill the other slots by dragging blocks into the desired slot.)
 
-<img src="/content/assets/images/image24.png" style="width:222px; height:131px">
+![](assets/images/image24.png) <!-- {width="222px" height="131px"} -->
 
-<!--<img src="/content/assets/images/image25.png" style="width:33px; height:23px">
+<!--![](assets/images/image25.png) <!-- {width="33px" height="23px"} -->
 -->
 
-<em>One of the hat blocks, the generic “when anything” <img src="/content/assets/images/image10.png" style="width:105px; height:34px">block, is subtly different from the others. When the stop sign is clicked, or when a project or sprite is loaded, this block doesn’t test whether the condition in its hexagonal input slot is true, so the script beneath it will not run, until some other script in the project runs (because, for example, you click the green flag). When generic when blocks are disabled, the stop sign will be square instead of octagonal.</em>
+<em>One of the hat blocks, the generic “when anything” ![](assets/images/image10.png) <!-- {width="105px" height="34px"} -->block, is subtly different from the others. When the stop sign is clicked, or when a project or sprite is loaded, this block doesn’t test whether the condition in its hexagonal input slot is true, so the script beneath it will not run, until some other script in the project runs (because, for example, you click the green flag). When generic when blocks are disabled, the stop sign will be square instead of octagonal.</em>
