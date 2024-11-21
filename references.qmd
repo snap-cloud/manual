@@ -1,4 +1,6 @@
-# References {.unnumbered}
+## References {#sec-test-referencekey}
+
+You can link to [references @sec-test-referencekey].
 
 ::: {#refs}
 :::

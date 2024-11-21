@@ -25,10 +25,3 @@ This will only appear in HTML.
 ::: {.content-visible when-format="pdf"}
 This will only appear in PDFs.
 :::
-
-## References {#sec-test-referencekey}
-
-You can link to [references @sec-test-referencekey].
-
-::: {#refs}
-:::

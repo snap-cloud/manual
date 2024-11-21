@@ -10,6 +10,7 @@ project:
 
 book:
   title: Snap! Reference Manual
+  output-file: snap-manual
   author: Brian Harvey & Jens Mönig
   date: 11/12/2024
   description: A manual for Snap! TODO
@@ -23,7 +24,7 @@ book:
   # url: https://manual.snap.berkeley.edu/
   # public-url: https://manual.snap.berkeley.edu/
   # TODO: Should we auto-commit this to the snap repo?
-  pdf-url: https://snap.berkeley.edu/snap/help/SnapManual.pdf
+  # pdf-url: https://snap.berkeley.edu/snap/help/SnapManual.pdf
   # doi:
   # abstract:
   #
@@ -64,12 +65,14 @@ book:
       - content/C1-S18.md
     - content/Chapter2.md
     - examples.qmd
+    # - references.qmd
 
 
 bibliography: references.bib
 
 format:
   html:
+    output-file: snap-manual
     theme: [cosmo, styles/snap-manual.scss]
     strip-comment: true
     navbar:
@@ -79,7 +82,7 @@ format:
   #   cover-image: cover.png
   pdf:
     # https://quarto.org/docs/reference/formats/pdf.html
-    output-file: snap-manual-latex
+    output-file: snap-manual
     cover-image: cover.png
     # Do not use pdflatex since we have unicode chars
     pdf-engine: xelatex # or lualatex
