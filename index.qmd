@@ -1,4 +1,3 @@
 # Test Snap Reference Manual
 
-<!-- ```{tableofcontents}
-``` -->
+This is the main index page...
