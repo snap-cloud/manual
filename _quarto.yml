@@ -64,6 +64,7 @@ book:
       - content/C1-S17.md
       - content/C1-S18.md
     - content/Chapter2.md
+  appendices:
     - examples.qmd
     # - references.qmd
 
