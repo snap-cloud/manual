@@ -16,3 +16,5 @@ content/*.tex
 *.idx
 content/*.pdf
 content/*_files/**
+
+/.luarc.json
