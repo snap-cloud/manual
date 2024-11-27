@@ -3,43 +3,55 @@
 
 local logging = require('logging')
 local index_entries = {}
+-- Helper function to print the type and content of elements for debugging
+function dump(elem)
+    print("Element type: " .. elem.t)
+    if elem.text then
+        print("Text content: " .. elem.text)
+    end
+end
 
--- Handle both block and inline raw elements
 function RawInline(elem)
-    logging.output('RAW INLINE: ' .. elem.text)
-    print('RAW INLINE: ' .. elem.text)
+    -- Print raw elements we find
+    print("Found RawInline:")
+    dump(elem)
+
     if elem.format == "openxml" then
-        print('\t OXML')
-        -- Look for index entry markers in the Word XML
-        local xe = elem.text:match('instrText[^>]*>%s*XE%s*"([^"]+)"')
+        -- Look for w:r elements containing w:instrText
+        local xe = elem.text:match('w:instrText[^>]*>%s*XE%s*"([^"]+)"')
         if xe then
+            print("Found index entry: " .. xe)
             table.insert(index_entries, xe)
         end
     end
 end
 
 function RawBlock(elem)
-    print('RAW: ' .. elem.text)
+    -- Print raw elements we find
+    print("Found RawBlock:")
+    dump(elem)
+
     if elem.format == "openxml" then
-        print('\t OXML')
-        -- Look for index entry markers in the Word XML
-        for xe in elem.text:gmatch('instrText[^>]*>%s*XE%s*"([^"]+)"') do
-            table.insert(index_entries, xe)
+        -- Look for w:r elements containing w:instrText
+        for text in elem.text:gmatch('<w:r.-<w:instrText.-XE%s*"([^"]+)".-</w:instrText>') do
+            print("Found index entry: " .. text)
+            table.insert(index_entries, text)
         end
     end
 end
 
 -- Final processing
 function Pandoc(doc)
+    print("Total index entries found: " .. #index_entries)
+
     -- Remove duplicates while preserving order
     local seen = {}
     local unique_entries = {}
 
     for _, entry in ipairs(index_entries) do
-        print(entry)
-        table.insert(unique_entries, entry)
         if not seen[entry] then
             seen[entry] = true
+            table.insert(unique_entries, entry)
         end
     end
 
@@ -50,7 +62,6 @@ function Pandoc(doc)
     local blocks = {}
     table.insert(blocks, pandoc.Header(1, pandoc.Str("Index Entries")))
 
-    -- Add each entry as a paragraph
     for _, entry in ipairs(unique_entries) do
         table.insert(blocks, pandoc.Para(pandoc.Str(entry)))
     end
