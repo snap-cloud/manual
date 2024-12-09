@@ -34,3 +34,7 @@ See this:
 
 Index entries are stored next to the place where the index should point to, with the format `XE "Index Entry text name"`.
 Some entries seem to be spread across multiple XML entries...
+
+```sh
+pandoc --from docx SnapManual.docx --to md --lua-filter index-extractor.lua -o snap-manual-with-index.md
+```

@@ -21,14 +21,7 @@ function list_contains(list, item)
     return false
 end
 
-function Span(elem, text)
-    -- print(elem.attr.attributes)
-    -- logging.output("SPAN:")
-    -- logging.output(elem.attr.attributes)
-    -- logging.output("ATTR:")
-    -- logging.output(elem.attr.attributes['entry'])
-    -- logging.output("HAS INDEX")
-    -- logging.output(list_contains(elem.attr.classes))
+function Span(elem, _text)
     if (elem.attr and list_contains(elem.attr.classes, "indexref")) then
         return " \\" .. 'index{' .. elem.attributes['entry'] .. "}"
     else
