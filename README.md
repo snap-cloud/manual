@@ -1,10 +1,12 @@
-# Snap! Manual
+# The Snap_!_ Reference Manual
+> by Brian Harvey, Jens Mönig
 
-<!-- TODO: Icon... -->
-## [Read the Manual][webiste] ([PDF][pdf])
+![Snap! Logo](./images/snap-logo.png)
 
-[webiste]:
-[pdf]:
+## [Read the Manual][webiste] ([PDF - coming soon][pdf])
+
+[webiste]: https://snap-cloud.github.io/snap-manual/
+[pdf]: https://snap-cloud.github.io/snap-manual/snap-manual.pdf
 
 The reference manual for the [Snap<em>!</em> programming language][sbe]. ([GitHub][snap_gh])
 
@@ -32,12 +34,15 @@ brew install quarto
 brew install mactex-no-gui
 ```
 
+It is also recommended to install the [Quarto VSCode extension][quarto_vscode].
+[quarto_vscode]: https://marketplace.visualstudio.com/items?itemName=quarto.quarto
+
 ### Building the book
 
 **While writing content:**
 
 ```shell
-quarto render
+quarto preview
 ```
 
 This will automatically build the web version and display it in the browser.

@@ -11,10 +11,10 @@ sprite in the scripting area, click on the picture of that sprite in the
 one of the following scripts in each sprite's scripting area:
 
 ![](assets/images/image26.png)
-<!--{width="149px" height="95px"} -->
+<!-- {width="149px" height="95px"} -->
 
 ![](assets/images/image27.png)
-<!--{width="148px" height="112px"} -->
+<!-- {width="148px" height="112px"} -->
 
 
 When you click the green flag, you should see one sprite rotate while
@@ -24,10 +24,10 @@ together. Parallelism can be seen with multiple scripts of a single
 sprite also. Try this example:
 
 ![](assets/images/image28.png)
-<!--{width="166px" height="84px"} -->
+<!-- {width="166px" height="84px"} -->
 
 ![](assets/images/image29.png)
-<!--{width="166px" height="86px"} -->
+<!-- {width="166px" height="86px"} -->
 
 
 When you press the space key, the sprite should move forever in a
@@ -85,7 +85,7 @@ another sprite to run a script. Here's a simple example:
 ![](assets/images/image41.png) <!-- {width="55px" height="107px"} -->
 
 ![](assets/images/image42.png)
-<!--{width="267px" height="145px"} -->
+<!-- {width="267px" height="145px"} -->
 
 
 ![](assets/images/image43.png) <!-- {width="119px" height="83px"} -->

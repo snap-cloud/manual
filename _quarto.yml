@@ -21,20 +21,22 @@ book:
   language: en
   edition: 10
   license: CC-BY-NC-SA 4.0
-  # url: https://manual.snap.berkeley.edu/
-  # public-url: https://manual.snap.berkeley.edu/
+  url: https://manual.snap.berkeley.edu/
+  public-url: https://manual.snap.berkeley.edu/
   # TODO: Should we auto-commit this to the snap repo?
-  # pdf-url: https://snap.berkeley.edu/snap/help/SnapManual.pdf
+  pdf-url: https://snap.berkeley.edu/snap/help/SnapManual.pdf
   # doi:
   # abstract:
   #
   # Book site display
-  downloads: [pdf, epub]
+  downloads:
+    - pdf
+    # - epub
   page-navigation: true
   search: true
   navbar:
     pinned: true
-    logo: logo.png
+    logo: images/snap-logo.png
     logo-alt: TODO
     logo-href: https://snap.berkeley.edu/
     tools:
@@ -64,20 +66,35 @@ book:
       - content/C1-S17.md
       - content/C1-S18.md
     - content/Chapter2.md
+    - content/03-acknowledgements-acknowledgements-toc-heading.md
+    - content/04-blocks-scripts-and-sprites.md
+    - content/05-saving-and-loading-projects-and-media.md
+    - content/06-building-a-block.md
+    - content/07-first-class-lists.md
+    - content/08-typed-inputs.md
+    - content/09-procedures-as-data.md
+    - content/10-object-oriented-programming-with-sprites.md
+    - content/11-oop-with-procedures.md
+    - content/12-the-outside-world.md
+    - content/13-continuations.md
+    - content/14-metaprogramming.md
+    - content/15-user-interface-elements-index-user-interface-elements-user-interface-elements.md
   appendices:
+    - content/16-appendix-a-snap-color-library.md
+    - content/17-appendix-b-apl-features.md
     - examples.qmd
-    # - references.qmd
+    - references.qmd
 
 
 bibliography: references.bib
 
 format:
   html:
-    output-file: snap-manual
-    theme: [cosmo, styles/snap-manual.scss]
+    # output-file: snap-manual
+    theme: [default, styles/snap-manual.scss]
     strip-comment: true
     navbar:
-      logo: logo.png
+      logo: images/snap-logo.png
   # epub:
   #   css: styles/epub.css
   #   cover-image: cover.png
@@ -104,8 +121,8 @@ format:
       - content/assets/images/
 
 website:
-  favicon: logo.png
+  favicon: images/snap-logo.png
   navbar:
-    logo: logo.png
+    logo: images/snap-logo.png
     background: primary
     search: true

@@ -10,7 +10,7 @@ using the keyboard, the Snap<em>!</em> programmer uses the same drag-and-drop
 interface familiar to computer users.
 
 ![](assets/images/image5.png)
-<!--{width="415px" height="258px"} -->
+<!-- {width="415px" height="258px"} -->
 Start Snap*!*[.]{.smallcaps} You should see
 the following arrangement of regions in the window:
 
@@ -20,15 +20,15 @@ and shape of your browser window.)
 A Snap<em>!</em> program consists of one or more *scripts,* each of which is made of *blocks.* Here's a typical script:
 
 ![](assets/images/image6.png)
-<!--{width="142px" height="130px"} -->
+<!-- {width="142px" height="130px"} -->
 
 The five blocks that make up this script have three different colors, corresponding to three of the eight *palettes* in which blocks can be found. The palette area at the left edge of the window shows one palette at a time, chosen with the eight buttons just above the palette area. In this script, the gold blocks are from the Control palette; the green block is from the Pen palette; and
 the blue blocks are from the Motion palette. A script is assembled by dragging blocks from a palette into the *scripting area* in the middle part of the window. Blocks snap together (hence the name Snap<em>!</em> for the language) when you drag a block so that its indentation is near the tab of the one above it:
 
 ![](assets/images/image7.png)
-<!--{width="216px" height="141px"} -->
+<!-- {width="216px" height="141px"} -->
 ![](assets/images/image8.png)
-<!--{width="212px" height="109px"} -->
+<!-- {width="212px" height="109px"} -->
 
 
 The white horizontal line is a signal that if you let go of the green
@@ -48,7 +48,7 @@ than one hat block, and the hat block can be used only at the top of the
 script; its distinctive shape is meant to remind you of that.[^1]
 
 The other blocks in our example script are *command* blocks. Each command block corresponds to an action that Snap<em>!</em> already knows how to carry out. For example, the ![](assets/images/image9.png)
-<!--{width="112px" height="24px"} --> block tells the sprite (the arrowhead shape on the *stage* at the right end of the window) to move ten steps (a step is a very small unit of distance) in the direction in which the arrowhead is pointing. We'll see shortly that there can be more than one sprite, and that each sprite has its own scripts. Also, a sprite doesn't have to look like an arrowhead, but can have any picture as a *costume.* The shape of the move block is meant to remind you of a
+<!-- {width="112px" height="24px"} --> block tells the sprite (the arrowhead shape on the *stage* at the right end of the window) to move ten steps (a step is a very small unit of distance) in the direction in which the arrowhead is pointing. We'll see shortly that there can be more than one sprite, and that each sprite has its own scripts. Also, a sprite doesn't have to look like an arrowhead, but can have any picture as a *costume.* The shape of the move block is meant to remind you of a
 Lego™ brick; a script is a stack of blocks. (The word "block" denotes
 both the graphical shape on the screen and the procedure, the action,
 that the block carries out.)
@@ -57,7 +57,7 @@ that the block carries out.)
 The number 10 in the move block above is called an *input* to the block. By clicking on the white oval, you can type any number in place of the 10. The sample script on the previous page uses 100 as the input value. We'll see later that inputs can have non-oval shapes that accept values other than numbers. We'll also see that you can compute input values, instead of typing a particular value into the oval. A block can have more than one input slot. For example, the glide block located about halfway down the Motion palette has three inputs.
 
 ![](assets/images/image10.png)
-<!--{width="105px" height="34px"} -->
+<!-- {width="105px" height="34px"} -->
 
 Most command blocks have that brick shape, but some, like the repeat
 block in the sample script, are *C‑shaped.* Most C-shaped blocks are

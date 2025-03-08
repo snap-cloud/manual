@@ -12,7 +12,7 @@ are limited in size, but you can have all the costumes and sounds you
 like if you save locally. This is why we have multiple ways to save.
 
 ![](assets/images/image487.png)
-<!--{width="341px" height="247px"} -->
+<!-- {width="341px" height="247px"} -->
 In either case, if you choose "Save as..."
 from the File menu. You'll see something like this:
 
