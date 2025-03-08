@@ -2,14 +2,13 @@
 
 Blocks are usually used within a script. The *continuation* of a block
 within a particular script is the part of the computation that remains
-to be completed after the block does its job. A continuation
-\\index{continuation} can be represented as a ringed script.
-Continuations are always part of the interpretation of any program in
-any language, but usually these continuations are implicit in the data
-structures of the language interpreter or compiler. Making continuations
-explicit is an advanced but versatile programming technique that allows
-users to create control structures such as nonlocal exit and
-multithreading.
+to be completed after the block does its job. A continuation \[\]{.index
+#continuation} can be represented as a ringed script. Continuations are
+always part of the interpretation of any program in any language, but
+usually these continuations are implicit in the data structures of the
+language interpreter or compiler. Making continuations explicit is an
+advanced but versatile programming technique that allows users to create
+control structures such as nonlocal exit and multithreading.
 
 ![](assets/chp-13-image874.png) <!-- width="1.40625in" height="1.5416666666666667in" -->In the simplest case, the continuation of
 a command block may just be the part of the script after the block. For
@@ -67,7 +66,7 @@ empty-slot notation for input substitution.
 
 ## Continuation Passing Style
 
-Like all \\index{continuation passing style} programming languages,
+Like all \[\]{.index #continuation-passing-style} programming languages,
 Snap*!* evaluates compositions of nested reporters from the inside out.
 For example, in the expression ![](assets/chp-13-image884.png) <!-- width="1.3125in" height="0.22916666666666666in" -->Snap*!* first adds 4 and 5, then
 multiplies 3 by that sum. This often means that the order in which the
@@ -108,8 +107,8 @@ subtle virtues. One of them is that each script is just one block long
 block), so each block doesn't have to remember what else to do---in the
 vocabulary of this section, the (implicit) continuation of each block is
 empty. Instead of the usual picture of recursion, with a bunch of little
-people \\index{little people} all waiting for each other, with CPS
-\\index{CPS} what happens is that each little person hands off the
+people \[\]{.index #little-people} all waiting for each other, with CPS
+\[\]{.index #CPS} what happens is that each little person hands off the
 problem to the next one and goes to the beach, so there's only one
 active little person at a time. In this example, we start with Alfred,
 an add specialist, who computes the value 4 and then hands off the rest
@@ -164,8 +163,8 @@ zero, we're going to do three unnecessary multiplications while
 unwinding the recursive calls.
 
 ![](assets/chp-13-image913.png) <!-- width="4.038194444444445in" height="1.9256944444444444in" -->![](assets/chp-13-image914.png) <!-- width="3.9451388888888888in" height="1.0979166666666667in" -->We can improve upon this by capturing the
-continuation \\index{call w/continuation block } of the top-level call
-to product:
+continuation \[\]{.index #call-w/continuation-block-} of the top-level
+call to product:
 
 ![](assets/chp-13-image915.png) <!-- width="2.7083333333333335in" height="0.2916666666666667in" -->The
 ![](assets/chp-13-image916.png) <!-- width="1.59125in" height="0.18611111111111112in" --> block takes as its input a one-input
@@ -200,18 +199,19 @@ w/continuation is an input.
 
 ###  Nonlocal exit
 
-Many programming \\index{nonlocal exit} languages have a break command
-\\index{break command} that can be used inside a looping construct such
-as repeat to end the repetition early. Using first class continuations,
-we can generalize this mechanism to allow nonlocal exit even within a
-block called from inside a loop, or through several levels of nested
-loops:
+Many programming \[\]{.index #nonlocal-exit} languages have a break
+command \[\]{.index #break-command} that can be used inside a looping
+construct such as repeat to end the repetition early. Using first class
+continuations, we can generalize this mechanism to allow nonlocal exit
+even within a block called from inside a loop, or through several levels
+of nested loops:
 
 ![](assets/chp-13-image923.png) <!-- width="1.8541666666666667in" height="2.6534722222222222in" -->The upvar break has as its value a
-continuation \\index{run w/continuation} that can be called from
+continuation \[\]{.index #run-w/continuation} that can be called from
 anywhere in the program to jump immediately to whatever comes after the
 catch block in its script. Here's an example with two nested invocations
-of catch \\index{catch block}, with the upvar renamed in the outer one:
+of catch \[\]{.index #catch-block} , with the upvar renamed in the outer
+one:
 
 As shown, this will say 1, then 2, then 3, then exit both nested catches
 and think "Hmm." If in the run block the variable break is used instead
@@ -240,7 +240,7 @@ another frequently. At the bottom of every looping block (repeat, repeat
 until, forever), there is an implicit "yield" command, which remembers
 where the current script is up to, and switches to some other script,
 each in turn. At the end of every script is an implicit "end thread
-\\index{thread}" command (a *thread* is the technical term for the
+\[\]{.index #thread} " command (a *thread* is the technical term for the
 process of running a script), which switches to another script without
 remembering the old one.
 
@@ -249,12 +249,12 @@ is generally no need for the user to think about threads. But, just to
 show that this, too, is not magic, here is an implementation of a simple
 thread system. It uses a global variable named tasks that initially
 contains an empty list. Each use of the C-shaped thread block
-\\index{thread block} adds a continuation (the ringed script) to the
-list. The yield block \\index{yield block} uses run w/continuation to
-create a continuation for a partly done thread, adds it to the task
-list, and then runs the first waiting task. The end** **thread block
-(which is automatically added at the end of every thread's script by the
-thread block) just runs the next waiting task.
+\[\]{.index #thread-block} adds a continuation (the ringed script) to
+the list. The yield block \[\]{.index #yield-block} uses run
+w/continuation to create a continuation for a partly done thread, adds
+it to the task list, and then runs the first waiting task. The
+end** **thread block (which is automatically added at the end of every
+thread's script by the thread block) just runs the next waiting task.
 
 Here is a sample script using the thread system. One thread says
 numbers; the other says letters. The number thread yields after every

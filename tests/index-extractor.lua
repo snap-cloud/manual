@@ -23,7 +23,13 @@ end
 
 function Span(elem, _text)
     if (elem.attr and list_contains(elem.attr.classes, "indexref")) then
-        return " \\" .. 'index{' .. elem.attributes['entry'] .. "}"
+        -- return "{#sec-" .. elem.attributes['entry'] .. "} "
+        index_name = elem.attributes['entry']
+        -- replace spaces in index-name with a -
+        index_name = string.gsub(index_name, " ", "-")
+        index_name = string.gsub(index_name, ",", "")
+        return " []{.index #" .. index_name .. "} "
+        -- \\" .. 'index{' .. elem.attributes['entry'] .. "}"
     else
         if (not list_contains(elem.attr.classes, "anchor") and
             not list_contains(elem.attr.classes, "mark")) then

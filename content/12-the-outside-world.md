@@ -3,27 +3,27 @@
 ![](assets/chp-04-image148.png) <!-- width="1.6201388888888888in" height="0.25in" -->The
 facilities discussed so far are fine for projects that take place
 entirely on your computer's screen. But you may want to write programs
-that interact with physical devices \\index{devices} (sensors
-\\index{sensors} or robots \\index{robots}) or with the World Wide Web
-\\index{World Wide Web}. For these purposes Snap*!* provides a []{#url
-.anchor}single primitive block:
+that interact with physical devices \[\]{.index #devices} (sensors
+\[\]{.index #sensors} or robots \[\]{.index #robots} ) or with the World
+Wide Web \[\]{.index #World-Wide-Web} . For these purposes Snap*!*
+provides a []{#url .anchor}single primitive block:
 
 This might not seem like enough, but in fact it can be used to build the
 desired capabilities.
 
 ## The World Wide Web
 
-The input to the url block \\index{url block} is the URL (Uniform
-Resource Locator \\index{Uniform Resource Locator}) of a web page. The
-block reports the body of the Web server's response (minus HTTP header),
-*without interpretation.* This means that in most cases the response is
-a description of the page in HTML (HyperText Markup Language)
-\\index{HTML (HyperText Markup Language)} notation. Often, especially
-for commercial web sites, the actual information you're trying to find
-on the page is actually at another URL included in the reported HTML.
-The Web page is typically a very long text string, and so the primitive
-split block \\index{split block} is useful to get the text in a
-manageable form, namely, as a list of lines:
+The input to the url block \[\]{.index #url-block} is the URL (Uniform
+Resource Locator \[\]{.index #Uniform-Resource-Locator} ) of a web page.
+The block reports the body of the Web server's response (minus HTTP
+header), *without interpretation.* This means that in most cases the
+response is a description of the page in HTML (HyperText Markup
+Language) \[\]{.index #HTML-(HyperText-Markup-Language)} notation.
+Often, especially for commercial web sites, the actual information
+you're trying to find on the page is actually at another URL included in
+the reported HTML. The Web page is typically a very long text string,
+and so the primitive split block \[\]{.index #split-block} is useful to
+get the text in a manageable form, namely, as a list of lines:
 
 ![](assets/chp-12-image871.png) <!-- width="6.520833333333333in" height="4.277777777777778in" -->
 
@@ -40,25 +40,26 @@ Snap*!* much faster.) In table view, the entire list is included.
 
 If you include a protocol name in the input to the url block (such as
 http:// or https://), that protocol will be used. If not, the block
-first tries HTTPS \\index{HTTPS} and then, if that fails, HTTP
-\\index{HTTP}.
+first tries HTTPS \[\]{.index #HTTPS} and then, if that fails, HTTP
+\[\]{.index #HTTP} .
 
 A security restriction in JavaScript limits the ability of one web site
 to initiate communication with another site. There is an official
-workaround for this limitation called the CORS \\index{CORS} protocol
-(Cross-Origin Resource Sharing \\index{Cross-Origin Resource Sharing}),
-but the target site has to allow snap.berkeley.edu explicitly, and of
-course most don't. To get around this problem, you can use third-party
-sites ("cors proxies \\index{cors proxies}") that are not limited by
-JavaScript and that forward your requests.
+workaround for this limitation called the CORS \[\]{.index #CORS}
+protocol (Cross-Origin Resource Sharing \[\]{.index
+#Cross-Origin-Resource-Sharing} ), but the target site has to allow
+snap.berkeley.edu explicitly, and of course most don't. To get around
+this problem, you can use third-party sites ("cors proxies \[\]{.index
+#cors-proxies} ") that are not limited by JavaScript and that forward
+your requests.
 
 ## Hardware Devices
 
 Another JavaScript security restriction prevents Snap*!* from having
-direct access to devices \\index{devices} connected to your computer,
-such as sensors and robots \\index{robots}. (Mobile devices such as
-smartphones may also have useful devices built in, such as
-accelerometers and GPS receivers.) The url block is also used to
+direct access to devices \[\]{.index #devices} connected to your
+computer, such as sensors and robots \[\]{.index #robots} . (Mobile
+devices such as smartphones may also have useful devices built in, such
+as accelerometers and GPS receivers.) The url block is also used to
 interface Snap*!* with these external capabilities.
 
 The idea is that you run a separate program that both interfaces with
@@ -67,14 +68,15 @@ requests to the device. *Unlike* Snap*!* *itself, these programs have
 access to anything on your computer, so you have to trust the author of
 the software!* Our web site, snap.berkeley.edu, provides links to
 drivers for several devices, including, at this writing, the Lego NXT
-\\index{Lego NXT}, Finch \\index{Finch}, Hummingbird
-\\index{Hummingbird}, and Parallax S2 \\index{Parallax S2} robots; the
-Nintendo \\index{Nintendo} Wiimote \\index{Wiimote} and Leap Motion
-\\index{Leap Motion} sensors, the Arduino \\index{Arduino}
-microcomputer, and Super-Awesome Sylvia \\index{Super-Awesome Sylvia}'s
-Water Color Bot \\index{Water Color Bot}. The same server technique can
-be used for access to third party software libraries, such as the speech
-synthesis package linked on our web site.
+\[\]{.index #Lego-NXT} , Finch \[\]{.index #Finch} , Hummingbird
+\[\]{.index #Hummingbird} , and Parallax S2 \[\]{.index #Parallax-S2}
+robots; the Nintendo \[\]{.index #Nintendo} Wiimote \[\]{.index
+#Wiimote} and Leap Motion \[\]{.index #Leap-Motion} sensors, the Arduino
+\[\]{.index #Arduino} microcomputer, and Super-Awesome Sylvia
+\[\]{.index #Super-Awesome-Sylvia} 's Water Color Bot \[\]{.index
+#Water-Color-Bot} . The same server technique can be used for access to
+third party software libraries, such as the speech synthesis package
+linked on our web site.
 
 Most of these packages require some expertise to install; the links are
 to source code repositories. This situation will improve with time.
@@ -82,11 +84,11 @@ to source code repositories. This situation will improve with time.
 ## Date and Time
 
 ![Macintosh
-HD:Users:bh:Desktop:date.png](media/image872.png) <!-- width="5.305555555555555in" height="0.3194444444444444in" -->The current \\index{current block} block
-in the Sensing palette can be used to find out the current date or time
-\\index{current date or time}. Each call to this block reports one
-component of the date \\index{date} or time \\index{time}, so you will
-probably combine several calls, like this:
+HD:Users:bh:Desktop:date.png](media/image872.png) <!-- width="5.305555555555555in" height="0.3194444444444444in" -->The current \[\]{.index #current-block}
+block in the Sensing palette can be used to find out the current date or
+time \[\]{.index #current-date-or-time} . Each call to this block
+reports one component of the date \[\]{.index #date} or time \[\]{.index
+#time} , so you will probably combine several calls, like this:
 
 ![Macintosh
 HD:Users:bh:Desktop:European-date.png](media/image873.png) <!-- width="5.305555555555555in" height="0.3194444444444444in" -->for Americans, or like this:

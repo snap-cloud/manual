@@ -5,14 +5,14 @@ created by the program itself.
 
 ## Reading a block
 
-The definition of block \\index{definition of block} takes a custom
+The definition of block \[\]{.index #definition-of-block} takes a custom
 block (in a ring, since it's the block itself that's the input, not the
 result of calling the block) as input and reports the block's
 definition, i.e., its inputs and body, in the form of a ring with named
 inputs corresponding to the block's input names, so that those input
 names are bound in the body.
 
-The split by blocks block \\index{split by blocks block} takes any
+The split by blocks block \[\]{.index #split-by-blocks-block} takes any
 expression or script as input (ringed) and reports a list representing a
 *syntax tree* for the script or expression, in which the first item is a
 block with no inputs and the remaining items are the input values, which
@@ -21,23 +21,23 @@ may themselves be syntax trees.
 Using split by blocks to select custom blocks whose definitions contain
 another block gives us this debugging aid:
 
-Note in passing the my blocks block \\index{my blocks block}, which
-reports a list of all visible blocks, primitive and custom. (There's
-also a my categories block \\index{my categories block}, which reports a
-list of the names of the palette categories.) Also note custom? of block
-\\index{custom? of block block}, which reports True if its input is a
-custom block.
+Note in passing the my blocks block \[\]{.index #my-blocks-block} ,
+which reports a list of all visible blocks, primitive and custom.
+(There's also a my categories block \[\]{.index #my-categories-block} ,
+which reports a list of the names of the palette categories.) Also note
+custom? of block \[\]{.index #custom?-of-block-block} , which reports
+True if its input is a custom block.
 
 ## Writing a block
 
 The inverse function to split by blocks is provided by the join block
-\\index{join block}, which when given a syntax tree as input reports the
-corresponding expression or script.
+\[\]{.index #join-block} , which when given a syntax tree as input
+reports the corresponding expression or script.
 
 Here we are taking the definition of square, modifying the repetition
 count (to 6), modifying the turning angle (to 60), using join to turn
 the result back into a ringed definition, and using the define block
-\\index{define block} to create a new hexagon block.
+\[\]{.index #define-block} to create a new hexagon block.
 
 The define block has three "input" slots. The quotation marks are there
 because the first slot is an upvar, i.e., a way for define to provide
@@ -46,7 +46,7 @@ case, the value of block is the new block itself (the hexagon block, in
 this example). The second slot is where you give the *label* for the new
 block. In this example, the label is "hexagon \_" in which the
 underscore represents an input slot. So, here are a few examples of
-block label \\index{block label}s:
+block label \[\]{.index #block-label} s:
 
 set pen \_ to \_
 
@@ -65,13 +65,13 @@ Description automatically generated](media/image376.png) <!-- width="1.15in" hei
 
 \_ of \_. The label does not give the input slots names (that's done in
 the body, coming next) or types (that's done in the set \_ of block \_
-to \_ block \\index{set \_ of block \_ to \_ block}, coming in two
+to \_ block \[\]{.index #set-\_-of-block-\_-to-\_-block} , coming in two
 paragraphs).
 
-The third slot is for the *definition* \\index{definition (of block)} of
-the new block. This is a (ringed) script whose input names (formal
-parameters) will become the formal parameters of the new block. And the
-script is its script.
+The third slot is for the *definition* \[\]{.index
+#definition-(of-block)} of the new block. This is a (ringed) script
+whose input names (formal parameters) will become the formal parameters
+of the new block. And the script is its script.
 
 So far we know the block's label, parameters, and script. There are
 other things to specify about the block, and one purpose of the block
@@ -140,7 +140,7 @@ Description automatically generated](media/image971.png) <!-- width="3.11in" hei
 
 Returning to the define block, there's another reason for the block
 upvar: It's helpful in defining a recursive procedure using define
-\\index{recursive procedure using define}. For a procedure to call
+\[\]{.index #recursive-procedure-using-define} . For a procedure to call
 itself, it needs a name for itself. But in the definition input to the
 define block, define itself hasn't been called yet, so the new block
 isn't in the palette yet. So you do this:
@@ -177,7 +177,7 @@ with the result that you can only use the foo macro after an open
 parenthesis.
 
 In the Lisp family of languages we have a different tradition, in which
-macros \\index{macros} are syntactically just like procedure calls,
+macros \[\]{.index #macros} are syntactically just like procedure calls,
 except that the "procedure" is a macro, with different evaluation rules
 from ordinary procedures. Two things make a macro different: its input
 expressions are not evaluated, so a macro can establish its own syntax
@@ -189,14 +189,14 @@ the caller's variables and, implicitly, its continuation.
 Snap*!* has long had the first part of this, the ability to make inputs
 unevaluated. In version 8.0 we add the ability to run code in the
 context of another procedure, just as we can run code in the context of
-another sprite, using the same mechanism: the of block \\index{of block
-(sensing)}. In the example on the previous page, the if \_ report \_
-caller \_ block runs a report block, but not in its own context; it
-causes *the fizzbuzz block* to report "fizz" or "buzz" as appropriate.
-(Yes, we know that the rules implemented here are simplified compared to
-the real game.) It doesn't just report out of the entire toplevel
-script; you can see that map is able to prepend "The answer is" to each
-reported value.
+another sprite, using the same mechanism: the of block \[\]{.index
+#of-block-(sensing)} . In the example on the previous page, the if \_
+report \_ caller \_ block runs a report block, but not in its own
+context; it causes *the fizzbuzz block* to report "fizz" or "buzz" as
+appropriate. (Yes, we know that the rules implemented here are
+simplified compared to the real game.) It doesn't just report out of the
+entire toplevel script; you can see that map is able to prepend "The
+answer is" to each reported value.
 
 This macro capability isn't fully implemented. First, we shouldn't have
 to use the calling script as an explicit input to the macro. In a later

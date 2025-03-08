@@ -1,32 +1,32 @@
 #  Object Oriented Programming with Sprites
 
-Object oriented programming \\index{object oriented programming} is a
-style based around the abstraction *object:* a collection of *data* and
-\\index{method}*methods* (procedures, which from our point of view are
-just more data) that you interact with by sending it a
-\\index{message}*message* (just a name, maybe in the form of a text
-string, and perhaps additional inputs). The object responds to the
+Object oriented programming \[\]{.index #object-oriented-programming} is
+a style based around the abstraction *object:* a collection of *data*
+and \[\]{.index #method} *methods* (procedures, which from our point of
+view are just more data) that you interact with by sending it a
+\[\]{.index #message} *message* (just a name, maybe in the form of a
+text string, and perhaps additional inputs). The object responds to the
 message by carrying out a method, which may or may not report a value
-back to the asker. Some people emphasize the \\index{data hiding}*data
-hiding* aspect of OOP (because each object has local variables that
-other objects can access only by sending request messages to the owning
-object) while others emphasize the *simulation* aspect (in which each
-object abstractly represents something in the world, and the
+back to the asker. Some people emphasize the \[\]{.index #data-hiding}
+*data hiding* aspect of OOP (because each object has local variables
+that other objects can access only by sending request messages to the
+owning object) while others emphasize the *simulation* aspect (in which
+each object abstractly represents something in the world, and the
 interactions of objects in the program model real interactions of real
 people or things). Data hiding is important for large multi-programmer
 industrial projects, but for Snap*!* users it's the simulation
-\\index{simulation} aspect that's important. Our approach is therefore
-less restrictive than that of some other OOP languages; we give objects
-easy access to each others' data and methods.
+\[\]{.index #simulation} aspect that's important. Our approach is
+therefore less restrictive than that of some other OOP languages; we
+give objects easy access to each others' data and methods.
 
 Technically, object oriented programming rests on three legs: (1)
-\\index{message passing}*Message passing:* There is a notation by which
-any object can send a message to another object. (2) \\index{local
-state}*Local state:* Each object can remember the important past history
-of the computation it has performed. ("Important" means that it need not
-remember every message it has handled, but only the lasting effects of
-those messages that will affect later computation.) (3)
-\\index{inheritance}*Inheritance:* It would be impractical if each
+\[\]{.index #message-passing} *Message passing:* There is a notation by
+which any object can send a message to another object. (2) \[\]{.index
+#local-state} *Local state:* Each object can remember the important past
+history of the computation it has performed. ("Important" means that it
+need not remember every message it has handled, but only the lasting
+effects of those messages that will affect later computation.) (3)
+\[\]{.index #inheritance} *Inheritance:* It would be impractical if each
 individual object had to contain methods, many of them identical to
 those of other objects, for all of the messages it can accept. Instead,
 we need a way to say that this new object is just like that old object
@@ -36,34 +36,34 @@ programmed explicitly.
 ##  First Class Sprites
 
 Like Scratch, Snap*!* comes with things that are natural objects: its
-sprites \\index{sprite}. Each sprite can own local variables; each
+sprites \[\]{.index #sprite} . Each sprite can own local variables; each
 sprite has its own scripts (methods). A Scratch animation is plainly a
 simulation of the interaction of characters in a play. There are two
 ways in which Scratch sprites are less versatile than the objects of an
 OOP language. First, Scratch message passing is weak in three respects:
-Messages can only be broadcast \\index{broadcast block}, not addressed
-to an individual sprite; messages can't take inputs; and methods can't
-return values to their caller. Second, and more basic, in the OOP
-paradigm objects are *data;* they can be the value of a variable, an
-element of a list, and so on, but that's not the case for Scratch
-sprites.
+Messages can only be broadcast \[\]{.index #broadcast-block} , not
+addressed to an individual sprite; messages can't take inputs; and
+methods can't return values to their caller. Second, and more basic, in
+the OOP paradigm objects are *data;* they can be the value of a
+variable, an element of a list, and so on, but that's not the case for
+Scratch sprites.
 
-Snap*!* sprites are ﬁrst class \\index{ﬁrst class sprites} data. They
-can be created and deleted by a script, stored in a variable or list,
-and sent messages individually. The children of a sprite can inherit
-sprite-local variables, methods (sprite-local procedures), and other
-attributes (e.g., x position).
+Snap*!* sprites are ﬁrst class \[\]{.index #ﬁrst-class-sprites} data.
+They can be created and deleted by a script, stored in a variable or
+list, and sent messages individually. The children of a sprite can
+inherit sprite-local variables, methods (sprite-local procedures), and
+other attributes (e.g., x position).
 
 ![](assets/chp-10-image743.png) <!-- width="0.9652777777777778in" height="0.19444444444444445in" -->![](assets/chp-10-image744.png) <!-- width="1.0833333333333333in" height="0.19444444444444445in" -->![](assets/chp-10-image745.png) <!-- width="0.6666666666666666in" height="0.19444444444444445in" -->The fundamental means by which programs
-get access to sprites is the my reporter block \\index{my block}. It has
-a dropdown-menu input slot that, when clicked, gives access to all the
-sprites, plus the stage \\index{stage}. reports a single sprite, the one
-asking the question. reports a list of all sprites other than the one
-asking the question. reports a list of all sprites that are *near* the
-one asking---the ones that are candidates for having collided with this
-one, for example. The my block \\index{my block} has many other options,
-discussed below. If you know the name of a particular sprite, the object
-reporter will report the sprite itself.
+get access to sprites is the my reporter block \[\]{.index #my-block} .
+It has a dropdown-menu input slot that, when clicked, gives access to
+all the sprites, plus the stage \[\]{.index #stage} . reports a single
+sprite, the one asking the question. reports a list of all sprites other
+than the one asking the question. reports a list of all sprites that are
+*near* the one asking---the ones that are candidates for having collided
+with this one, for example. The my block \[\]{.index #my-block} has many
+other options, discussed below. If you know the name of a particular
+sprite, the object reporter will report the sprite itself.
 
 ![](assets/chp-10-image746.png) <!-- width="3.5520833333333335in" height="0.5104166666666666in" -->![C:\\Documents and
 Settings\\bh\\Desktop\\Scratch002.png](media/image747.png) <!-- width="2.691434820647419in" height="1.25in" -->An object or list of objects reported by my or object
@@ -86,10 +86,10 @@ we'll call the example sprite the "parent" and the others the
 copies any more. (As we'll see, "copies" is the wrong word because the
 parent and the children *share* a lot of properties. That's why we use
 the word "clones" to describe the children rather than "copies.") These
-are *temporary* clones \\index{temporary clone}. They are automatically
-deleted when the user presses either the green flag or the red stop
-sign. In Scratch 2.0 and later, all clones \\index{clone:temporary} are
-temporary.
+are *temporary* clones \[\]{.index #temporary-clone} . They are
+automatically deleted when the user presses either the green flag or the
+red stop sign. In Scratch 2.0 and later, all clones \[\]{.index
+#clone:temporary} are temporary.
 
 The other kind of situation is what happens when you want
 specializations of sprites. For example, let's say you have a sprite
@@ -105,8 +105,8 @@ of Cocker Spaniel (so there are four altogether) and two clones of
 Rottweiler. Maybe you hide the Dog sprite after all this, since it's no
 breed in particular. Each dog has its own position, special behaviors,
 and so on. You want to save all of these dogs in the project. These are
-*permanent* clones \\index{permanent clone}. In BYOB 3.1, the
-predecessor to Snap*!,* all clones \\index{clone:permanent} are
+*permanent* clones \[\]{.index #permanent-clone} . In BYOB 3.1, the
+predecessor to Snap*!,* all clones \[\]{.index #clone:permanent} are
 permanent.
 
 ![Macintosh
@@ -168,17 +168,17 @@ allowed us to write ask and tell as tool procedures in Snap*!* itself.
 That technique still works, but is deprecated, because nobody understood
 it, and now we have the more straightforward primitives.
 
-### Polymorphism \\index{polymorphism} {#polymorphism}
+### Polymorphism \[\]{.index #polymorphism}  {#polymorphism}
 
 ![](assets/chp-10-image763.png) <!-- width="1.6736111111111112in" height="1.4020833333333333in" -->Suppose you have a Dog sprite with two
 clones CockerSpaniel and PitBull. In the Dog sprite you define this
-method \\index{method} ("For this sprite only" block
-\\index{block:sprite-local}):
+method \[\]{.index #method} ("For this sprite only" block \[\]{.index
+#block:sprite-local} ):
 
-Note the *loca*tion (map-pin) symbol \\index{map-pin symbol} before the
-block's name. The symbol is not part of the block title; it's a visual
-reminder that this is a sprite-*loca*l block. Sprite-local variables are
-similarly marked.
+Note the *loca*tion (map-pin) symbol \[\]{.index #map-pin-symbol} before
+the block's name. The symbol is not part of the block title; it's a
+visual reminder that this is a sprite-*loca*l block. Sprite-local
+variables are similarly marked.
 
 But you don't define greet as friend or greet as enemy in Dog. Each kind
 of dog has a different behavior. Here's what a CockerSpaniel does:
@@ -200,11 +200,11 @@ all share the same script.
 
 A sprite's memory of its own past history takes two main forms. It has
 *variables,* created explicitly by the user with the "Make a variable
-\\index{variable}" button; it also has *attributes,* the qualities every
-sprite has automatically, such as position, direction, and pen color.
-Each variable can be examined using its own orange oval block; there is
-one set block to modify all variables. Attributes, however, have a less
-uniform programming interface in Scratch:
+\[\]{.index #variable} " button; it also has *attributes,* the qualities
+every sprite has automatically, such as position, direction, and pen
+color. Each variable can be examined using its own orange oval block;
+there is one set block to modify all variables. Attributes, however,
+have a less uniform programming interface in Scratch:
 
 -   A sprite's *direction* can be examined with the direction block, and
     modified with the point in direction block. It can also be modified
@@ -219,18 +219,18 @@ uniform programming interface in Scratch:
     it can be modified by typing a new name directly into the box that
     displays the name, above the scripting area.
 
-The block, if any, that examines a variable or attribute
-\\index{attribute} is called its \\index{getter}*getter;* a block (there
+The block, if any, that examines a variable or attribute \[\]{.index
+#attribute} is called its \[\]{.index #getter} *getter;* a block (there
 may be more than one, as in the direction example above) that modifies a
-variable or attribute is called a \\index{setter}*setter.*
+variable or attribute is called a \[\]{.index #setter} *setter.*
 
 In Snap*!* we allow virtually all attributes to be examined. But instead
 of adding dozens of reporters, we use a more uniform interface for
-attributes: The my block \\index{my block}'s menu (in Sensing; see page
-[78](#attrib.pnglist-of-attributes)) includes many of the attributes of
-a sprite. It serves as a general getter for those attributes, e.g., my
-\[anchor\] to find the sprite, if any, to which this sprite is attached
-in a nesting arrangement (see page
+attributes: The my block \[\]{.index #my-block} 's menu (in Sensing; see
+page [78](#attrib.pnglist-of-attributes)) includes many of the
+attributes of a sprite. It serves as a general getter for those
+attributes, e.g., my \[anchor\] to find the sprite, if any, to which
+this sprite is attached in a nesting arrangement (see page
 [10](#nesting-sprites-anchors-and-parts)). Similarly, the same set block
 used to set variable values allows setting some sprite attributes.
 
@@ -244,31 +244,31 @@ specifies the methods shared by all dogs (RollOver, SitUpAndBeg, Fetch,
 and so on), and the instances contain data such as species, color, and
 friendliness. Snap*!* uses a different approach called *prototyping,* in
 which there is no distinction between classes and instances. Prototyping
-\\index{prototyping} is better suited to an experimental, tinkering
+\[\]{.index #prototyping} is better suited to an experimental, tinkering
 style of work: You make a single dog sprite, with both methods (blocks)
 and data (variables); you can actually watch it and interact with it on
 the stage; and when you like it, you use it as the prototype from which
 to clone other dogs. If you later discover a bug in the behavior of
 dogs, you can edit a method in the parent, and all of the children will
 automatically share the new version of the method block. Experienced
-class/instance \\index{class/instance} programmers may find prototyping
-\\index{prototyping} strange at first, but it is actually a more
-expressive system, because you can easily simulate a class/instance
-hierarchy by hiding the prototype sprite! Prototyping is also a better
-fit with the Scratch design principle \\index{design principle} that
-everything in a project should be concrete and visible on the stage; in
-class/instance OOP the programming process begins with an abstract,
-invisible entity, the class, that must be designed before any concrete
-objects can be made.[^7]
+class/instance \[\]{.index #class/instance} programmers may find
+prototyping \[\]{.index #prototyping} strange at first, but it is
+actually a more expressive system, because you can easily simulate a
+class/instance hierarchy by hiding the prototype sprite! Prototyping is
+also a better fit with the Scratch design principle \[\]{.index
+#design-principle} that everything in a project should be concrete and
+visible on the stage; in class/instance OOP the programming process
+begins with an abstract, invisible entity, the class, that must be
+designed before any concrete objects can be made.[^7]
 
 There are three ways to make a child sprite. If you control-click or
 right-click on a sprite in the "sprite corral" at the bottom right
 corner of the window, you get a menu that includes "clone" as one of the
-choices. There is an a new clone of block \\index{a new clone of block}
-in the Control palette that creates and reports a child sprite. And
-sprites have a "parent" attribute \\index{parent attribute} that can be
-set, like any attribute, thereby *changing* the parent of an existing
-sprite.
+choices. There is an a new clone of block \[\]{.index
+#a-new-clone-of-block} in the Control palette that creates and reports a
+child sprite. And sprites have a "parent" attribute \[\]{.index
+#parent-attribute} that can be set, like any attribute, thereby
+*changing* the parent of an existing sprite.
 
 ##  Inheritance by Delegation
 
@@ -299,9 +299,9 @@ the traditional colors.
 > the block lists all the things this sprite can inherit from its parent
 > (which might be nothing, if this sprite has no parent) and is not
 > already inheriting. But that would prevent telling a child to inherit,
-> so if the inherit block \\index{inherit block} is inside a ring, its
-> pulldown menu includes all the things a child could inherit from this
-> sprite. Right-clicking on the scripting area of a permanent clone
+> so if the inherit block \[\]{.index #inherit-block} is inside a ring,
+> its pulldown menu includes all the things a child could inherit from
+> this sprite. Right-clicking on the scripting area of a permanent clone
 > gives a menu option to share the entire collection of scripts from its
 > parent, as a temporary clone does.
 
@@ -325,58 +325,59 @@ originally sent, not the parent to which the message was delegated.
 ## ![attrib.png](assets/chp-10-image780.png) <!-- width="0.7895833333333333in" height="3.4680555555555554in" -->List of attributes
 
 ![](assets/chp-10-image781.png) <!-- width="1.19in" height="0.25in" -->![](assets/chp-10-image782.png) <!-- width="1.1756944444444444in" height="6.116666666666666in" -->At the right is a picture of the dropdown
-menu of attributes \\index{attributes, list of} in the my block.
+menu of attributes \[\]{.index #attributes-list-of} in the my block.
 
 Several of these are not real attributes, but things related to
 attributes:
 
--   self \\index{self (in my block)}: this sprite
+-   self \[\]{.index #self-(in-my-block)} : this sprite
 
--   neighbors \\index{neighbors (in my block)}: a list of *nearby*
+-   neighbors \[\]{.index #neighbors-(in-my-block)} : a list of *nearby*
     sprites[^8]
 
--   other sprites \\index{other sprites (in my block)}: a list of all
-    sprites except myself
+-   other sprites \[\]{.index #other-sprites-(in-my-block)} : a list of
+    all sprites except myself
 
--   stage \\index{stage (in my block)}: the stage, which is first-class,
-    like a sprite
+-   stage \[\]{.index #stage-(in-my-block)} : the stage, which is
+    first-class, like a sprite
 
--   clones \\index{clones (in my block)}: a list of my *temporary*
+-   clones \[\]{.index #clones-(in-my-block)} : a list of my *temporary*
     clones
 
--   other clones \\index{other clones (in my block)}: a list of my
+-   other clones \[\]{.index #other-clones-(in-my-block)} : a list of my
     *temporary* siblings
 
--   parts \\index{parts (in my block)}: a list of sprites whose anchor
-    attribute is this sprite
+-   parts \[\]{.index #parts-(in-my-block)} : a list of sprites whose
+    anchor attribute is this sprite
 
--   children \\index{children (in my block)}: a list of all my clones,
-    temporary and permanent
+-   children \[\]{.index #children-(in-my-block)} : a list of all my
+    clones, temporary and permanent
 
 The others are individual attributes:
 
--   anchor \\index{anchor (in my block)}: the sprite of which I am a
-    (nested) part
+-   anchor \[\]{.index #anchor-(in-my-block)} : the sprite of which I am
+    a (nested) part
 
--   parent \\index{parent (in my block)}: the sprite of which I am a
-    clone
+-   parent \[\]{.index #parent-(in-my-block)} : the sprite of which I am
+    a clone
 
 -   temporary?: am I a temporary clone?
 
--   name \\index{name (in my block)}: my name (same as parent's name if
-    I'm temporary)
+-   name \[\]{.index #name-(in-my-block)} : my name (same as parent's
+    name if I'm temporary)
 
--   costumes \\index{costumes (in my block)}: a list of the sprite's
-    costumes
+-   costumes \[\]{.index #costumes-(in-my-block)} : a list of the
+    sprite's costumes
 
--   sounds \\index{sounds (in my block)}: a list of the sprite's sounds
+-   sounds \[\]{.index #sounds-(in-my-block)} : a list of the sprite's
+    sounds
 
 -   blocks: a list of the blocks visible in this sprite
 
 -   categories: a list of all the block category names
 
--   dangling? \\index{dangling? (in my block)}: True if I am a part and
-    not in synchronous orbit
+-   dangling? \[\]{.index #dangling?-(in-my-block)} : True if I am a
+    part and not in synchronous orbit
 
 -   draggable?: True if the user can move me with the mouse
 
@@ -384,60 +385,60 @@ The others are individual attributes:
     costume *as seen right now,* or the left, etc., edge of my bounding
     box, taking rotation into account.
 
--   rotation x \\index{rotation x (in my block)}, rotation y
-    \\index{rotation y (in my block)}: when reading with my, the same as
-    x position, y position. When set, changes the sprite's rotation
-    center *without moving the sprite,* like dragging the rotation
-    center in the paint editor.
+-   rotation x \[\]{.index #rotation-x-(in-my-block)} , rotation y
+    \[\]{.index #rotation-y-(in-my-block)} : when reading with my, the
+    same as x position, y position. When set, changes the sprite's
+    rotation center *without moving the sprite,* like dragging the
+    rotation center in the paint editor.
 
--   center x \\index{center x (in my block)}, center y \\index{center y
-    (in my block)}: the x and y position of the center of my
+-   center x \[\]{.index #center-x-(in-my-block)} , center y \[\]{.index
+    #center-y-(in-my-block)} : the x and y position of the center of my
 
 > bounding box, rounded oﬀ--the geometric center of the costume.
 
 ## First Class Costumes and Sounds
 
 Costumes and sounds don't have methods, as sprites do; you can't ask
-them to do things. But they *are* first class: \\index{costumes, first
-class} you can make a list of them, put them in variables, use them as
-input to a procedure, and so on. My \[costumes\] and my \[sounds\]
-report lists of them.
+them to do things. But they *are* first class: \[\]{.index
+#costumes-first-class} you can make a list of them, put them in
+variables, use them as input to a procedure, and so on. My \[costumes\]
+and my \[sounds\] report lists of them.
 
 ### Media Computation with Costumes
 
 ![Macintosh
 HD:Users:bh:Desktop:ofcostume.png](media/image783.png) <!-- width="1.6319444444444444in" height="0.1875in" -->The components of a costume are its name, width,
 height, and pixels. The block gives access to these components
-\\index{of costume block}using its left menu. From its right menu you
-can choose the current costume, the Turtle costume, or any costume in
-the sprite's wardrobe. Since costumes are first class, you can also drop
-an expression whose value is a costume, or a list of costumes, on that
-second input slot. (Due to a misfeature, even though you can select
+\[\]{.index #of-costume-block} using its left menu. From its right menu
+you can choose the current costume, the Turtle costume, or any costume
+in the sprite's wardrobe. Since costumes are first class, you can also
+drop an expression whose value is a costume, or a list of costumes, on
+that second input slot. (Due to a misfeature, even though you can select
 Turtle in the right menu, the block reports 0 for its width and height,
 and an empty string for the other components.) The costume's width and
 height are in its standard orientation, regardless of the sprite's
 current direction. (This is different from the *sprite's* width and
 height, reported by the my block.)
 
-But the really interesting part of a costume is its bitmap
-\\index{bitmap}, a list of *pixels*. (A pixel \\index{pixel}, short for
+But the really interesting part of a costume is its bitmap \[\]{.index
+#bitmap} , a list of *pixels*. (A pixel \[\]{.index #pixel} , short for
 "picture element," represents one dot on your display.) Each pixel is
 itself a list of four items, the red, green, and blue components of its
 color (in the range 0-255) and what is standardly called its
-"transparency \\index{transparency}" but should be called its opacity,
-also in the range 0-255, in which 0 means that the pixel is invisible
-and 255 means that it's fully opaque: you can't see anything from a
-rearward layer at that point on the stage. (Costume pixels typically
-have an opacity of 0 only for points inside the bounding box of the
-costume but not actually part of the costume; points in the interior of
-a costume typically have an opacity of 255. Intermediate values appear
-mainly at the edge of a costume, or at sharp boundaries between colors
-inside the costume, where they are used to reduce "jaggies
-\\index{jaggies}": the stairstep-like shape of a diagonal line displayed
-on an array of discrete rectangular screen coordinates. Note that the
-opacity of a *sprite* pixel is determined by combining the costume's
-opacity with the sprite's ghost effect. (The latter really is a measure
-of transparency: 0 means opaque and 100 means invisible.)
+"transparency \[\]{.index #transparency} " but should be called its
+opacity, also in the range 0-255, in which 0 means that the pixel is
+invisible and 255 means that it's fully opaque: you can't see anything
+from a rearward layer at that point on the stage. (Costume pixels
+typically have an opacity of 0 only for points inside the bounding box
+of the costume but not actually part of the costume; points in the
+interior of a costume typically have an opacity of 255. Intermediate
+values appear mainly at the edge of a costume, or at sharp boundaries
+between colors inside the costume, where they are used to reduce
+"jaggies \[\]{.index #jaggies} ": the stairstep-like shape of a diagonal
+line displayed on an array of discrete rectangular screen coordinates.
+Note that the opacity of a *sprite* pixel is determined by combining the
+costume's opacity with the sprite's ghost effect. (The latter really is
+a measure of transparency: 0 means opaque and 100 means invisible.)
 
 The bitmap is a one-dimensional list of pixels, not an array of *height*
 rows of *width* pixels each. That's why the pixel list has to be
@@ -462,7 +463,7 @@ the corner of its picture), it will be converted to pixels first.
 ![Macintosh
 HD:Users:bh:Desktop:add-to-wardrobe.png](media/image790.png) <!-- width="2.2569444444444446in" height="0.2847222222222222in" -->One important point to see here is that a
 bitmap (list of pixels) is not, by itself, a costume. The new costume
-block \\index{new costume block} creates a costume by combining a
+block \[\]{.index #new-costume-block} creates a costume by combining a
 bitmap, a width, and a height. But, as in the example above, switch to
 costume will accept a bitmap as input and will automatically use the
 width and height of the current costume. Note that there's no name
@@ -489,11 +490,12 @@ latter is always a red apple, so this little program would get stuck
 turning it green, instead of alternating colors.
 
 ![Macintosh
-HD:Users:bh:Desktop:a-costume.png](media/image809.png) <!-- width="1.7222222222222223in" height="0.22916666666666666in" -->The stretch block \\index{stretch block}
-takes a costume as its first input, either by selecting a costume from
-the menu or by dropping a costume-valued expression such as onto it. The
-other two inputs are percents of the original width and height, as
-advertised, so you can make fun house mirror versions of costumes:
+HD:Users:bh:Desktop:a-costume.png](media/image809.png) <!-- width="1.7222222222222223in" height="0.22916666666666666in" -->The stretch block \[\]{.index
+#stretch-block} takes a costume as its first input, either by selecting
+a costume from the menu or by dropping a costume-valued expression such
+as onto it. The other two inputs are percents of the original width and
+height, as advertised, so you can make fun house mirror versions of
+costumes:
 
 The resulting costumes can be used with switch to costume and so on.
 
@@ -501,16 +503,17 @@ Finally, you can use pictures from your computer's camera in your
 projects using these blocks:
 
 ![Macintosh HD:Users:bh:Desktop:Jump! script
-pic.png](media/image813.png) <!-- width="1.4722222222222223in" height="0.24305555555555555in" -->Using the video on block \\index{video on
-block} turns on the camera and displays what it sees on the stage,
-regardless of the inputs given. The camera remains on until you click
-the red stop button, your program runs the stop all block, or you turn
-it off explicitly with the block. The video image on the stage is partly
-ghosted, to an extent determined by the set video transparency block,
-whose input really is transparency and not opacity. (Small numbers make
-the video more visible.) By default, the video image is mirrored, like
-the selfie camera on your cell phone: When you raise your left hand,
-your image raises its right hand. You can control this ![Macintosh
+pic.png](media/image813.png) <!-- width="1.4722222222222223in" height="0.24305555555555555in" -->Using the video on block \[\]{.index
+#video-on-block} turns on the camera and displays what it sees on the
+stage, regardless of the inputs given. The camera remains on until you
+click the red stop button, your program runs the stop all block, or you
+turn it off explicitly with the block. The video image on the stage is
+partly ghosted, to an extent determined by the set video transparency
+block, whose input really is transparency and not opacity. (Small
+numbers make the video more visible.) By default, the video image is
+mirrored, like the selfie camera on your cell phone: When you raise your
+left hand, your image raises its right hand. You can control this
+![Macintosh
 HD:Users:bh:Desktop:mirror-video.png](media/image814.png) <!-- width="1.4027777777777777in" height="0.24305555555555555in" -->mirroring with the block.
 
 ![](assets/chp-10-image815.png) <!-- width="1.2041666666666666in" height="1.6125in" -->The video snap on block then takes a still picture
@@ -556,18 +559,18 @@ stage.
 
 ### Media Computation with Sounds
 
-The starting point for computation with sound \\index{sound} is the
-microphone block \\index{microphone block}. It starts by recording a
-brief burst of sound from your microphone \\index{microphone}. (How
-brief? On my computer, 0.010667 seconds, but you'll see shortly how to
-ﬁnd out or control the sample size on your computer.)
+The starting point for computation with sound \[\]{.index #sound} is the
+microphone block \[\]{.index #microphone-block} . It starts by recording
+a brief burst of sound from your microphone \[\]{.index #microphone} .
+(How brief? On my computer, 0.010667 seconds, but you'll see shortly how
+to ﬁnd out or control the sample size on your computer.)
 
 ![Macintosh
 HD:Users:bh:Desktop:sample-rate.png](media/image826.png) <!-- width="1.9652777777777777in" height="0.2569444444444444in" -->![Macintosh
 HD:Users:bh:Desktop:samples.png](media/image827.png) <!-- width="5.999305555555556in" height="2.620138888888889in" -->Just as the *pixel* is the smallest piece
 of a picture, the *sample* is the smallest piece of a sound. It says
 here: that on my computer, 48,000 samples are recorded per second, so
-each sample \\index{sample} is 1/48,000 of a second. The value of a
+each sample \[\]{.index #sample} is 1/48,000 of a second. The value of a
 sample is between -1 and 1, and represents the sound pressure on the
 microphone---how hard the air is pushing---at that instant. (You can
 skip the next page or so if you know about Fourier analysis.) Here's a
@@ -580,7 +583,7 @@ downs. The most basic up-and-down function is the *sine wave:*
 
 Every periodic function (more or less, any sample that sounds like music
 rather than sounding like static) is composed of a sum of sine wave
-\\index{sine wave}s of different frequencies.
+\[\]{.index #sine-wave} s of different frequencies.
 
 Look back at the graph of our sampled sound. There is a green dot every
 seven samples. There's nothing magic about the number seven; I tried
@@ -665,7 +668,7 @@ HD:Users:bh:Desktop:new-sound.png](media/image258.png) <!-- width="2.91666666666
 collected (typically 512, must be a power of 2)
 
 The block for sounds that corresponds to new picture for pictures is
-\\index{new sound block}
+\[\]{.index #new-sound-block}
 
 Its first input is a list of samples, and its second input specifies how
 many samples occupy one second.

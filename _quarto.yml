@@ -91,7 +91,7 @@ bibliography: references.bib
 format:
   html:
     # output-file: snap-manual
-    theme: [default, styles/snap-manual.scss]
+    theme: [none, styles/snap-manual.scss]
     strip-comment: true
     navbar:
       logo: images/snap-logo.png
@@ -120,9 +120,9 @@ format:
       - content/assets/
       - content/assets/images/
 
-website:
-  favicon: images/snap-logo.png
-  navbar:
-    logo: images/snap-logo.png
-    background: primary
-    search: true
+# website:
+#   favicon: images/snap-logo.png
+#   navbar:
+#     logo: images/snap-logo.png
+#     background: primary
+#     search: true

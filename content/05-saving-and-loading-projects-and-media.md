@@ -27,22 +27,22 @@ project has a name, that name will be the default filename if you don't
 give a different name. Another, equivalent way to save to disk is to
 choose "Export project" from the File menu.
 
-## ![](assets/chp-05-image488.png) <!-- width="1.2340277777777777in" height="2.329861111111111in" -->Creating a Cloud Account \\index{cloud storage} {#creating-a-cloud-account}
+## ![](assets/chp-05-image488.png) <!-- width="1.2340277777777777in" height="2.329861111111111in" -->Creating a Cloud Account \[\]{.index #cloud-storage}  {#creating-a-cloud-account}
 
 ![](assets/chp-05-image489.png) <!-- width="0.2916666666666667in" height="0.16666666666666666in" -->The other possibility is to save your
-project "in the cloud," \\index{save your project in the cloud} at the
-Snap*!* web site. In order to do this, you need an account with us.
-Click on the Cloud button \\index{Cloud button} ( ) in the Tool Bar.
-Choose the "Signup..." option. This will show you a window that looks
-like the picture at the right.
+project "in the cloud," \[\]{.index #save-your-project-in-the-cloud} at
+the Snap*!* web site. In order to do this, you need an account with us.
+Click on the Cloud button \[\]{.index #Cloud-button} ( ) in the Tool
+Bar. Choose the "Signup..." option. This will show you a window that
+looks like the picture at the right.
 
-You must choose a user name \\index{user name} that will identify you on
-the web site, such as Jens or bh. If you're a Scratch user, you can use
-your Scratch name for Snap*!* too. If you're a kid, don't pick a user
-name that includes your family name, but first names or initials are
-okay. Don't pick something you'd be embarrassed to have other users (or
-your parents) see! If the name you want is already taken, you'll have to
-choose another one. You must also supply a password.
+You must choose a user name \[\]{.index #user-name} that will identify
+you on the web site, such as Jens or bh. If you're a Scratch user, you
+can use your Scratch name for Snap*!* too. If you're a kid, don't pick a
+user name that includes your family name, but first names or initials
+are okay. Don't pick something you'd be embarrassed to have other users
+(or your parents) see! If the name you want is already taken, you'll
+have to choose another one. You must also supply a password.
 
 We ask for your month and year of birth; we use this information only to
 decide whether to ask for your own email address or your parent's email
@@ -63,14 +63,14 @@ marketing emails of any kind through this site, neither from us nor from
 third parties. If, nevertheless, you are worried about providing this
 information, do a web search for "temporary email."
 
-Finally, you must read and agree to the Terms of Service \\index{Terms
-of Service}. A quick summary: Don't interfere with anyone else's use of
-the web site, and don't put copyrighted media or personally identifiable
-information in projects that you share with other users. And we're not
-responsible if something goes wrong. (Not that we *expect* anything to
-go wrong; since Snap*!* runs in JavaScript in your browser, it is
-strongly isolated from the rest of your computer. But the lawyers make
-us say this.)
+Finally, you must read and agree to the Terms of Service \[\]{.index
+#Terms-of-Service} . A quick summary: Don't interfere with anyone else's
+use of the web site, and don't put copyrighted media or personally
+identifiable information in projects that you share with other users.
+And we're not responsible if something goes wrong. (Not that we *expect*
+anything to go wrong; since Snap*!* runs in JavaScript in your browser,
+it is strongly isolated from the rest of your computer. But the lawyers
+make us say this.)
 
 ## Saving to the Cloud
 
@@ -90,7 +90,7 @@ optionally project notes; your project will be saved online and can be
 loaded from anywhere with net access. The project notes will be visible
 to other users if you publish your project.
 
-## Loading Saved Projects \\index{loading saved projects} {#loading-saved-projects}
+## Loading Saved Projects \[\]{.index #loading-saved-projects}  {#loading-saved-projects}
 
 Once you've saved a project, you want to be able to load it back into
 Snap*!*. There are two ways to do this:
@@ -129,8 +129,8 @@ the Computer and Cloud options.
 (1):filebutton.png](media/image384.png) <!-- width="0.3194444444444444in" height="0.18055555555555555in" -->If you are still in **Snap*!*** and
 realize that you've loaded another project without saving the one you
 were working on: ***Don't edit the new project.*** From the File menu
-choose the Restore unsaved project option \\index{Restore unsaved
-project option}.
+choose the Restore unsaved project option \[\]{.index
+#Restore-unsaved-project-option} .
 
 Restore unsaved project will also work if you log out of Snap*!* and
 later log back in, as long as you don't edit another project meanwhile.
@@ -140,12 +140,13 @@ just opened, but actually changed in the project editor).
 If your project on the cloud is missing, empty, or otherwise broken and
 isn't the one you edited most recently, or if Restore unsaved project
 fails: ***Don't edit the broken project.*** In the Open... box, enter
-your project name, then push the Recover button \\index{recover button}.
-*Do this right away,* because we save only the version before the most
-recent, and the latest before today. So don't keep saving bad versions;
-Recover right away. The Recover feature works only on a project version
-that you actually saved, so Restore unsaved project is your first choice
-if you switch away from a project without saving it.
+your project name, then push the Recover button \[\]{.index
+#recover-button} . *Do this right away,* because we save only the
+version before the most recent, and the latest before today. So don't
+keep saving bad versions; Recover right away. The Recover feature works
+only on a project version that you actually saved, so Restore unsaved
+project is your first choice if you switch away from a project without
+saving it.
 
 To help you remember to save your projects, when you've edited the
 project and haven't yet saved it, Snap*!* displays a pencil icon to the
