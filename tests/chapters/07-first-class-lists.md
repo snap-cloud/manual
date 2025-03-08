@@ -31,7 +31,7 @@ language, then we should be able to use it fully and freely. We believe
 that this principle avoids the need for many special-case tools, which
 can instead be written by Snap*!* users themselves.
 
-![](assets/image523.png) <!-- width="2.839583333333333in" height="0.41597222222222224in" -->Note that it's a data *type* that's ﬁrst
+![](assets/chp-07-image523.png) <!-- width="2.839583333333333in" height="0.41597222222222224in" -->Note that it's a data *type* that's ﬁrst
 class, not an individual value. Don't think, for example, that some
 lists are ﬁrst class, while others aren't. In Snap*!*, lists are ﬁrst
 class, period.
@@ -48,17 +48,17 @@ At the right end of the block are two left-and-right arrowheads
 list, i.e., the number of elements in the list you are building.
 Shift-clicking changes by three at a time.
 
-![](assets/image534.png) <!-- width="1.5034722222222223in" height="1.8125in" -->![](assets/image535.png) <!-- width="2.24375in" height="0.3215277777777778in" -->You can use this block as input to many
+![](assets/chp-07-image534.png) <!-- width="1.5034722222222223in" height="1.8125in" -->![](assets/chp-07-image535.png) <!-- width="2.24375in" height="0.3215277777777778in" -->You can use this block as input to many
 other blocks:
 
-![](assets/image536.png) <!-- width="3.09375in" height="0.7708333333333334in" -->![](assets/image537.png) <!-- width="1.8229166666666667in" height="0.2916666666666667in" -->Snap*!* does not have a "Make a list"
+![](assets/chp-07-image536.png) <!-- width="3.09375in" height="0.7708333333333334in" -->![](assets/chp-07-image537.png) <!-- width="1.8229166666666667in" height="0.2916666666666667in" -->Snap*!* does not have a "Make a list"
 button like the one in Scratch \\index{Scratch}. If you want a global
 "named list," make a global variable and use the set block to put a list
 into the variable.
 
 ## Lists of Lists
 
-![](assets/image538.png) <!-- width="5.888888888888889in" height="1.0486111111111112in" -->Lists can be inserted as elements in
+![](assets/chp-07-image538.png) <!-- width="5.888888888888889in" height="1.0486111111111112in" -->Lists can be inserted as elements in
 larger lists. We can easily create ad hoc structures as needed:
 
 Notice that this list is presented in a different format from the "She
@@ -115,7 +115,7 @@ by dividing it into its first item (item 1 of \\index{item 1 of block})
 and all the rest of the items (all but first of \\index{all but first of
 block}), which are handled through a recursive call:
 
-![](assets/image555.png) <!-- width="4.75in" height="2.240972222222222in" -->Snap*!* uses two different internal
+![](assets/chp-07-image555.png) <!-- width="4.75in" height="2.240972222222222in" -->Snap*!* uses two different internal
 representations of lists, one (dynamic \\index{array, dynamic} array
 \\index{dynamic array}) for imperative programming and the other (linked
 \\index{list, linked} list \\index{linked list}) for functional
@@ -128,11 +128,11 @@ block doesn't change the representation.) You don't have to know the
 details of the internal representations, but it's worthwhile to use each
 list in a consistent way.
 
-## ![](assets/image556.png) <!-- width="5.864583333333333in" height="1.0715277777777779in" -->Higher Order List Operations and Rings
+## ![](assets/chp-07-image556.png) <!-- width="5.864583333333333in" height="1.0715277777777779in" -->Higher Order List Operations and Rings
 
 There's an even easier way to select the even numbers from a list:
 
-![](assets/image557.png) <!-- width="2.375in" height="0.2777777777777778in" -->The keep block takes a Predicate
+![](assets/chp-07-image557.png) <!-- width="2.375in" height="0.2777777777777778in" -->The keep block takes a Predicate
 expression as its first input, and a list as its second input. It
 reports a list containing those elements of the input list for which the
 predicate returns true. Notice two things about the predicate input:
@@ -154,10 +154,10 @@ that takes another block as input is called a *higher order* block (or
 higher order procedure, or higher order function \\index{higher order
 function}).
 
-![](assets/image562.png) <!-- width="2.39in" height="0.22in" --> Snap*!* provides
+![](assets/chp-07-image562.png) <!-- width="2.39in" height="0.22in" --> Snap*!* provides
 four higher order function blocks for operating on lists:
 
-![](assets/image571.emf) <!-- width="7.5in" height="1.7138888888888888in" -->[]{#map .anchor}You've already seen keep.
+![](assets/chp-07-image571.emf) <!-- width="7.5in" height="1.7138888888888888in" -->[]{#map .anchor}You've already seen keep.
 Find first is \\index{find first} similar, but it reports just the first
 item that satisfies the predicate, not a list of all the matching items.
 It's equivalent to but faster because it
@@ -186,7 +186,7 @@ lists, the result is a new toplevel list whose items are the same
 \\index{deep copy of a list} (that is, one in which all the sublists,
 sublists of sublists, etc. are copied), use the list as input to the
 ![Macintosh
-HD:Users:bh:Desktop:id.png](assets/image576.png) <!-- width="0.7430555555555556in" height="0.19444444444444445in" --> block (one of the variants of the sqrt
+HD:Users:bh:Desktop:id.png](media/image576.png) <!-- width="0.7430555555555556in" height="0.19444444444444445in" --> block (one of the variants of the sqrt
 of block). This works because id of is a hyperblock (page
 [55](#hyperblocks)).
 
@@ -201,13 +201,13 @@ items), see if all items of a list of Booleans are true, see if any of
 the items is true, find the smallest, or find the largest.
 
 ![Macintosh
-HD:Users:bh:Desktop:comma-list.png](assets/image585.png) <!-- width="6.279166666666667in" height="0.37569444444444444in" -->![](assets/image586.png) <!-- width="3.8680555555555554in" height="0.3451388888888889in" -->Why + but not −? It only makes sense to
+HD:Users:bh:Desktop:comma-list.png](media/image585.png) <!-- width="6.279166666666667in" height="0.37569444444444444in" -->![](assets/chp-07-image586.png) <!-- width="3.8680555555555554in" height="0.3451388888888889in" -->Why + but not −? It only makes sense to
 combine list items using an *associative* \\index{function, associative}
 function \\index{associative function}: one that doesn't care in what
 order the items are combined (left to right or right to left). (2+3)+4 =
 2+(3+4), but (2−3)−4 ≠ 2−(3−4).
 
-![](assets/image587.png) <!-- width="5.808333333333334in" height="1.1909722222222223in" -->The functions map, keep, and find first
+![](assets/chp-07-image587.png) <!-- width="5.808333333333334in" height="1.1909722222222223in" -->The functions map, keep, and find first
 have an advanced mode with rarely-used features: If their function input
 is given explicit input names (by clicking the arrowhead at the right
 end of the gray ring; see page [69](#formal-parameters)), then it will
@@ -254,7 +254,7 @@ make *another* offstage watcher, which is useful if you want to watch
 two parts of the list at once by having each watcher scrolled to a
 different place.
 
-![](assets/image538.png) <!-- width="5.888888888888889in" height="1.0486111111111112in" -->Table view is the default if the list has
+![](assets/chp-07-image538.png) <!-- width="5.888888888888889in" height="1.0486111111111112in" -->Table view is the default if the list has
 more than 100 items, or if any of the first ten items of the list are
 lists, in which case it makes a very different-looking two-dimensional
 picture:
@@ -306,14 +306,14 @@ to say the row first or the column first. ("Cell B4" is the same as
 program, you have to say item 2 of, not item B of. So it's useful to be
 able to find out a column number by hovering over its letter.
 
-![](assets/image596.png) <!-- width="3.817361111111111in" height="0.8111111111111111in" -->Any value that can appear in a program can
+![](assets/chp-07-image596.png) <!-- width="3.817361111111111in" height="0.8111111111111111in" -->Any value that can appear in a program can
 be displayed in a table cell:
 
 This display shows that the standard cell dimensions may not be enough
 for large value images. By expanding the entire speech balloon and then
 the second column and all the rows, we can make the result fit:
 
-![](assets/image601.png) <!-- width="3.3409722222222222in" height="0.5770833333333333in" -->But we make an exception for cases in
+![](assets/chp-07-image601.png) <!-- width="3.3409722222222222in" height="0.5770833333333333in" -->But we make an exception for cases in
 which the value in a cell is a list (so that the entire table is
 three-dimensional). Because lists are visually very big, we don't try to
 fit the entire value in a cell:
@@ -324,7 +324,7 @@ inner sublists: You can switch to list view, or you can double-click on
 a list icon in the table to open a dialog box showing just that
 sub-sub-list in table view.
 
-![](assets/image602.png) <!-- width="3.3541666666666665in" height="0.6944444444444444in" -->One last detail: If the first item of a
+![](assets/chp-07-image602.png) <!-- width="3.3541666666666665in" height="0.6944444444444444in" -->One last detail: If the first item of a
 list is a list (so table view is used), but a later item *isn't* a list,
 that later item will be displayed on a red background, like an item of a
 single-column list:
@@ -360,7 +360,7 @@ Here's what the corresponding table looks like:
 Here's how to read a spreadsheet into Snap*!*:
 
 ![Macintosh
-HD:Users:bh:Desktop:pix:watcher.png](assets/image607.png) <!-- width="1.2083333333333333in" height="0.2708333333333333in" -->1. Make a variable with a watcher on
+HD:Users:bh:Desktop:pix:watcher.png](media/image607.png) <!-- width="1.2083333333333333in" height="0.2708333333333333in" -->1. Make a variable with a watcher on
 stage:
 
 2\. Right-click on the watcher and choose the "import" option. (If the
@@ -391,7 +391,7 @@ lists. If you have a list of lists of lists, Snap*!* will instead export
 your list as a JSON (JavaScript Object Notation) file \\index{JSON
 (JavaScript Object Notation) file}. I modified my list:
 
-![](assets/image608.png) <!-- width="6.333333333333333in" height="0.4479166666666667in" -->and then exported again, getting this
+![](assets/chp-07-image608.png) <!-- width="6.333333333333333in" height="0.4479166666666667in" -->and then exported again, getting this
 file:
 
 \[\[\"John\",\"Lennon\",\"rhythm
@@ -418,14 +418,14 @@ most scalar function blocks is extended to multi-dimensional
 function applied termwise:
 
 ![Macintosh
-HD:Users:bh:Desktop:vector-monadic.png](assets/image609.png) <!-- width="2.5625in" height="0.9166666666666666in" -->![Macintosh
-HD:Users:bh:Desktop:vector-vector.png](assets/image610.png) <!-- width="3.3402777777777777in" height="0.9166666666666666in" -->
+HD:Users:bh:Desktop:vector-monadic.png](media/image609.png) <!-- width="2.5625in" height="0.9166666666666666in" -->![Macintosh
+HD:Users:bh:Desktop:vector-vector.png](media/image610.png) <!-- width="3.3402777777777777in" height="0.9166666666666666in" -->
 
 ![Macintosh
-HD:Users:bh:Desktop:matrix-matrix.png](assets/image611.png) <!-- width="4.944444444444445in" height="0.6944444444444444in" -->
+HD:Users:bh:Desktop:matrix-matrix.png](media/image611.png) <!-- width="4.944444444444445in" height="0.6944444444444444in" -->
 
 ![Macintosh
-HD:Users:bh:Desktop:matrix-ragged.png](assets/image612.png) <!-- width="5.743055555555555in" height="0.6944444444444444in" -->Mathematicians, note in the last example
+HD:Users:bh:Desktop:matrix-ragged.png](media/image612.png) <!-- width="5.743055555555555in" height="0.6944444444444444in" -->Mathematicians, note in the last example
 above that the result is just a termwise application of the underlying
 function (7×3, 8×5, etc.), *not* matrix multiplication. See Appendix B
 for that. For a dyadic (two-input) function, if the lengths don't agree,
@@ -433,7 +433,7 @@ the length of the result (in each dimension) is the length of the
 shorter input:
 
 ![Macintosh
-HD:Users:bh:Desktop:missing-dimension.png](assets/image613.png) <!-- width="6.791666666666667in" height="0.8680555555555556in" -->However, if the *number of dimensions*
+HD:Users:bh:Desktop:missing-dimension.png](media/image613.png) <!-- width="6.791666666666667in" height="0.8680555555555556in" -->However, if the *number of dimensions*
 differs in the two inputs, then the number of dimensions in the result
 agrees with the *higher-*dimensional input; the lower-dimensional one is
 used repeatedly in the missing dimension(s):
@@ -442,20 +442,20 @@ used repeatedly in the missing dimension(s):
 input is paired with every scalar in the other input:
 
 ![Macintosh
-HD:Users:bh:Desktop:vector-alonzo.png](assets/image614.png) <!-- width="7.483333333333333in" height="0.63125in" -->One important motivation for this feature is how it
+HD:Users:bh:Desktop:vector-alonzo.png](media/image614.png) <!-- width="7.483333333333333in" height="0.63125in" -->One important motivation for this feature is how it
 simplifies and speeds up media computation \\index{media computation},
 as in this shifting of the Alonzo \\index{Alonzo} costume to be bluer:
 
 ![Macintosh HD:Users:bh:Desktop:Screen Shot 2020-06-13 at 9.25.32
-PM.png](assets/image619.png) <!-- width="1.6875in" height="1.0486111111111112in" -->![Graphical user interface, application
+PM.png](media/image619.png) <!-- width="1.6875in" height="1.0486111111111112in" -->![Graphical user interface, application
 Description automatically
-generated](assets/image620.png) <!-- width="5.194444444444445in" height="1.0486111111111112in" -->Each pixel of the result has ¾ of its
+generated](media/image620.png) <!-- width="5.194444444444445in" height="1.0486111111111112in" -->Each pixel of the result has ¾ of its
 original red and green, and three times its original blue (with its
 transparency unchanged). By putting some sliders on the stage, you can
 play with colors dynamically:
 
 ![Macintosh
-HD:Users:bh:Desktop:in-front-of.png](assets/image621.png) <!-- width="1.0298611111111111in" height="0.18958333333333333in" -->![](assets/image193.png) <!-- width="0.8895833333333333in" height="0.2in" -->There are a few naturally scalar functions that have
+HD:Users:bh:Desktop:in-front-of.png](media/image621.png) <!-- width="1.0298611111111111in" height="0.18958333333333333in" -->![](assets/chp-07-image193.png) <!-- width="0.8895833333333333in" height="0.2in" -->There are a few naturally scalar functions that have
 already had specific meanings when applied to lists and therefore are
 not hyperblocks: = and identical to (because they compare entire
 structures, not just scalars, always reporting a single Boolean result),
@@ -466,9 +466,9 @@ first input determines the result), join (because it converts non-scalar
 "natively" lists, such as and , are never hyperblocks.
 
 ![Graphical user interface, text, application Description automatically
-generated](assets/image622.png) <!-- width="5.239583333333333in" height="1.679861111111111in" -->![Application Description automatically
+generated](media/image622.png) <!-- width="5.239583333333333in" height="1.679861111111111in" -->![Application Description automatically
 generated with low
-confidence](assets/image205.png) <!-- width="2.0991666666666666in" height="0.2475in" -->The reshape block \\index{reshape block} takes a list
+confidence](media/image205.png) <!-- width="2.0991666666666666in" height="0.2475in" -->The reshape block \\index{reshape block} takes a list
 (of any depth) as its first input, and then takes zero or more sizes
 along the dimensions of an array. In the example it will report a table
 (a matrix) of four rows and three columns. If no sizes are given, the
@@ -478,7 +478,7 @@ needed than provided, the block starts again at the head of the list,
 using values more than once. If more values are provided than needed,
 the extras are ignored; this isn't an error.
 
-![](assets/image203.png) <!-- width="1.76in" height="0.2in" --> The combinations
+![](assets/chp-07-image203.png) <!-- width="1.76in" height="0.2in" --> The combinations
 block takes any number of lists as input; it reports a list in which
 each item is a list whose length is the number of inputs; item *i* of a
 sublist is an item of input *i.* Every possible combination of items of
@@ -486,7 +486,7 @@ the inputs is included, so the length of the reported list is the
 product of the lengths of the inputs.
 
 ![Icon Description automatically
-generated](assets/image204.png) <!-- width="1.34in" height="0.25in" --> The item
+generated](media/image204.png) <!-- width="1.34in" height="0.25in" --> The item
 of block \\index{item of block} has a special set of rules, designed to
 preserve its pre-hyperblock meaning and also provide a useful behavior
 when given a list as its first (index) input:
@@ -495,24 +495,24 @@ when given a list as its first (index) input:
     top-level item of the list input; that item may be a sublist, in
     which case the entire sublist is reported (the original meaning of
     item of):![Macintosh
-    HD:Users:bh:Desktop:item-scalar.png](assets/image623.png) <!-- width="5.506944444444445in"     height="0.9166666666666666in" -->
+    HD:Users:bh:Desktop:item-scalar.png](media/image623.png) <!-- width="5.506944444444445in"     height="0.9166666666666666in" -->
 
 2.  If the index is a list of numbers (no sublists), then item of
     reports a list of the indicated top-level items (rows, in a matrix;
     a straightforward hyperization): ![Macintosh
-    HD:Users:bh:Desktop:item-vector.png](assets/image624.png) <!-- width="6.006944444444445in"     height="0.8680555555555556in" -->
+    HD:Users:bh:Desktop:item-vector.png](media/image624.png) <!-- width="6.006944444444445in"     height="0.8680555555555556in" -->
 
 3.  If the index is a list of lists of numbers, then item of reports an
     array of only those scalars whose position in the list input matches
     the index input in all dimensions (changed in Snap*!*
-    6.6!):![](assets/image625.png) <!-- width="6.006944444444445in"     height="0.6875in" -->
+    6.6!):![](assets/chp-07-image625.png) <!-- width="6.006944444444445in"     height="0.6875in" -->
 
 4.  If a list of list of numbers includes an empty sublist, then all
     items are chosen along that
-    dimension:![](assets/image626.png) <!-- width="6.006944444444445in"     height="0.6875in" -->
+    dimension:![](assets/chp-07-image626.png) <!-- width="6.006944444444445in"     height="0.6875in" -->
 
 ![Graphical user interface, application, website Description
-automatically generated](assets/image627.png) <!-- width="6.604166666666667in" height="1.0486111111111112in" -->To get a column or columns of a
+automatically generated](media/image627.png) <!-- width="6.604166666666667in" height="1.0486111111111112in" -->To get a column or columns of a
 spreadsheet, use an empty list in the row selector (changed in Snap*!*
 6.6!):
 

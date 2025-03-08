@@ -54,7 +54,7 @@ and sent messages individually. The children of a sprite can inherit
 sprite-local variables, methods (sprite-local procedures), and other
 attributes (e.g., x position).
 
-![](assets/image743.png) <!-- width="0.9652777777777778in" height="0.19444444444444445in" -->![](assets/image744.png) <!-- width="1.0833333333333333in" height="0.19444444444444445in" -->![](assets/image745.png) <!-- width="0.6666666666666666in" height="0.19444444444444445in" -->The fundamental means by which programs
+![](assets/chp-10-image743.png) <!-- width="0.9652777777777778in" height="0.19444444444444445in" -->![](assets/chp-10-image744.png) <!-- width="1.0833333333333333in" height="0.19444444444444445in" -->![](assets/chp-10-image745.png) <!-- width="0.6666666666666666in" height="0.19444444444444445in" -->The fundamental means by which programs
 get access to sprites is the my reporter block \\index{my block}. It has
 a dropdown-menu input slot that, when clicked, gives access to all the
 sprites, plus the stage \\index{stage}. reports a single sprite, the one
@@ -65,8 +65,8 @@ one, for example. The my block \\index{my block} has many other options,
 discussed below. If you know the name of a particular sprite, the object
 reporter will report the sprite itself.
 
-![](assets/image746.png) <!-- width="3.5520833333333335in" height="0.5104166666666666in" -->![C:\\Documents and
-Settings\\bh\\Desktop\\Scratch002.png](assets/image747.png) <!-- width="2.691434820647419in" height="1.25in" -->An object or list of objects reported by my or object
+![](assets/chp-10-image746.png) <!-- width="3.5520833333333335in" height="0.5104166666666666in" -->![C:\\Documents and
+Settings\\bh\\Desktop\\Scratch002.png](media/image747.png) <!-- width="2.691434820647419in" height="1.25in" -->An object or list of objects reported by my or object
 can be used as input to any block that accepts any input type, such as
 set's second input. If you say an object, the resulting speech balloon
 will contain a smaller image of the object's costume or (for the stage)
@@ -75,7 +75,7 @@ background.
 ##  Permanent and Temporary Clones
 
 ![Macintosh
-HD:Users:bh:Desktop:pix:clone-block.png](assets/image748.png) <!-- width="1.5138888888888888in" height="0.19444444444444445in" -->The block is used to create and report an
+HD:Users:bh:Desktop:pix:clone-block.png](media/image748.png) <!-- width="1.5138888888888888in" height="0.19444444444444445in" -->The block is used to create and report an
 instance (a clone) of any sprite. (There is also a command version, for
 historical reasons.) There are two different kinds of situations in
 which clones are used. One is that you've made an example sprite and,
@@ -110,7 +110,7 @@ predecessor to Snap*!,* all clones \\index{clone:permanent} are
 permanent.
 
 ![Macintosh
-HD:Users:bh:Desktop:pix:clone-block.png](assets/image748.png) <!-- width="1.5138888888888888in" height="0.19444444444444445in" -->One advantage of temporary clones is that
+HD:Users:bh:Desktop:pix:clone-block.png](media/image748.png) <!-- width="1.5138888888888888in" height="0.19444444444444445in" -->One advantage of temporary clones is that
 they don't slow down Snap*!* even when you have a lot of them. (If
 you're curious, one reason is that permanent clones appear in the sprite
 corral, where their pictures have to be updated to reflect the clone's
@@ -125,7 +125,7 @@ running, it might create 100 rottweilers, and those will be identical
 unless you change them in the program.
 
 ![Macintosh
-HD:Users:bh:Desktop:set-my-temp.png](assets/image749.png) <!-- width="1.5138888888888888in" height="0.2569444444444444in" -->You can change a temporary sprite to
+HD:Users:bh:Desktop:set-my-temp.png](media/image749.png) <!-- width="1.5138888888888888in" height="0.2569444444444444in" -->You can change a temporary sprite to
 permanent by right-clicking it and choosing "edit." (It's called "edit"
 rather than, say, "permanent" because it also shifts the scripting area
 to reflect that sprite, as if you'd pressed its button in the sprite
@@ -151,7 +151,7 @@ neighbors or my other sprites is used to fill the blank space in turn.
 By the way, if you want a list of *all* the sprites, including this
 sprite, you can use either of these:
 
-![](assets/image762.png) <!-- width="3.545138888888889in" height="0.8263888888888888in" -->Tell and ask wait until the other sprite
+![](assets/chp-10-image762.png) <!-- width="3.545138888888889in" height="0.8263888888888888in" -->Tell and ask wait until the other sprite
 has carried out its method before this sprite's script continues. (That
 has to be the case for ask, since we want to do something with the value
 it reports.) So tell is analogous to broadcast and wait. Sometimes the
@@ -170,7 +170,7 @@ it, and now we have the more straightforward primitives.
 
 ### Polymorphism \\index{polymorphism} {#polymorphism}
 
-![](assets/image763.png) <!-- width="1.6736111111111112in" height="1.4020833333333333in" -->Suppose you have a Dog sprite with two
+![](assets/chp-10-image763.png) <!-- width="1.6736111111111112in" height="1.4020833333333333in" -->Suppose you have a Dog sprite with two
 clones CockerSpaniel and PitBull. In the Dog sprite you define this
 method \\index{method} ("For this sprite only" block
 \\index{block:sprite-local}):
@@ -315,16 +315,16 @@ in the parent (and therefore in itself and all its siblings)? Remember
 that in this system any object can tell any other object to do
 something:
 
-![](assets/image779.png) <!-- width="5.072916666666667in" height="0.5833333333333334in" -->When a sprite gets a message for which it
+![](assets/chp-10-image779.png) <!-- width="5.072916666666667in" height="0.5833333333333334in" -->When a sprite gets a message for which it
 doesn't have a corresponding block, the message is *delegated* to that
 sprite's parent. When a sprite does have the corresponding block, then
 the message is not delegated. If the script that implements a delegated
 message refers to my (self), it means the child to which the message was
 originally sent, not the parent to which the message was delegated.
 
-## ![attrib.png](assets/image780.png) <!-- width="0.7895833333333333in" height="3.4680555555555554in" -->List of attributes
+## ![attrib.png](assets/chp-10-image780.png) <!-- width="0.7895833333333333in" height="3.4680555555555554in" -->List of attributes
 
-![](assets/image781.png) <!-- width="1.19in" height="0.25in" -->![](assets/image782.png) <!-- width="1.1756944444444444in" height="6.116666666666666in" -->At the right is a picture of the dropdown
+![](assets/chp-10-image781.png) <!-- width="1.19in" height="0.25in" -->![](assets/chp-10-image782.png) <!-- width="1.1756944444444444in" height="6.116666666666666in" -->At the right is a picture of the dropdown
 menu of attributes \\index{attributes, list of} in the my block.
 
 Several of these are not real attributes, but things related to
@@ -406,7 +406,7 @@ report lists of them.
 ### Media Computation with Costumes
 
 ![Macintosh
-HD:Users:bh:Desktop:ofcostume.png](assets/image783.png) <!-- width="1.6319444444444444in" height="0.1875in" -->The components of a costume are its name, width,
+HD:Users:bh:Desktop:ofcostume.png](media/image783.png) <!-- width="1.6319444444444444in" height="0.1875in" -->The components of a costume are its name, width,
 height, and pixels. The block gives access to these components
 \\index{of costume block}using its left menu. From its right menu you
 can choose the current costume, the Turtle costume, or any costume in
@@ -460,7 +460,7 @@ costumes; if you call pixels of on a vector costume (one with "svg" in
 the corner of its picture), it will be converted to pixels first.
 
 ![Macintosh
-HD:Users:bh:Desktop:add-to-wardrobe.png](assets/image790.png) <!-- width="2.2569444444444446in" height="0.2847222222222222in" -->One important point to see here is that a
+HD:Users:bh:Desktop:add-to-wardrobe.png](media/image790.png) <!-- width="2.2569444444444446in" height="0.2847222222222222in" -->One important point to see here is that a
 bitmap (list of pixels) is not, by itself, a costume. The new costume
 block \\index{new costume block} creates a costume by combining a
 bitmap, a width, and a height. But, as in the example above, switch to
@@ -472,7 +472,7 @@ the sprite's wardrobe; to do that, say
 
 Here's a more interesting example of color manipulation:
 
-![](assets/image797.png) <!-- width="4.5625in" height="0.40694444444444444in" -->Each color value is constrained to be 0,
+![](assets/chp-10-image797.png) <!-- width="4.5625in" height="0.40694444444444444in" -->Each color value is constrained to be 0,
 80, 160, or 240. This gives the picture a more cartoonish look.
 Alternatively, you can do the computation taking advantage of
 hyperblocks:
@@ -480,7 +480,7 @@ hyperblocks:
 Here's one way to exchange red and green values:
 
 ![Macintosh
-HD:Users:bh:Desktop:2-1-3-4.png](assets/image804.png) <!-- width="0.9583333333333334in" height="0.18055555555555555in" -->It's the list that determines the
+HD:Users:bh:Desktop:2-1-3-4.png](media/image804.png) <!-- width="0.9583333333333334in" height="0.18055555555555555in" -->It's the list that determines the
 rearrangement of colors: green➔red, red➔green, and the other two
 unchanged. That list is inside another list because otherwise it would
 be selecting *rows* of the pixel array, and we want to select columns.
@@ -489,7 +489,7 @@ latter is always a red apple, so this little program would get stuck
 turning it green, instead of alternating colors.
 
 ![Macintosh
-HD:Users:bh:Desktop:a-costume.png](assets/image809.png) <!-- width="1.7222222222222223in" height="0.22916666666666666in" -->The stretch block \\index{stretch block}
+HD:Users:bh:Desktop:a-costume.png](media/image809.png) <!-- width="1.7222222222222223in" height="0.22916666666666666in" -->The stretch block \\index{stretch block}
 takes a costume as its first input, either by selecting a costume from
 the menu or by dropping a costume-valued expression such as onto it. The
 other two inputs are percents of the original width and height, as
@@ -501,7 +501,7 @@ Finally, you can use pictures from your computer's camera in your
 projects using these blocks:
 
 ![Macintosh HD:Users:bh:Desktop:Jump! script
-pic.png](assets/image813.png) <!-- width="1.4722222222222223in" height="0.24305555555555555in" -->Using the video on block \\index{video on
+pic.png](media/image813.png) <!-- width="1.4722222222222223in" height="0.24305555555555555in" -->Using the video on block \\index{video on
 block} turns on the camera and displays what it sees on the stage,
 regardless of the inputs given. The camera remains on until you click
 the red stop button, your program runs the stop all block, or you turn
@@ -511,22 +511,22 @@ whose input really is transparency and not opacity. (Small numbers make
 the video more visible.) By default, the video image is mirrored, like
 the selfie camera on your cell phone: When you raise your left hand,
 your image raises its right hand. You can control this ![Macintosh
-HD:Users:bh:Desktop:mirror-video.png](assets/image814.png) <!-- width="1.4027777777777777in" height="0.24305555555555555in" -->mirroring with the block.
+HD:Users:bh:Desktop:mirror-video.png](media/image814.png) <!-- width="1.4027777777777777in" height="0.24305555555555555in" -->mirroring with the block.
 
-![](assets/image815.png) <!-- width="1.2041666666666666in" height="1.6125in" -->The video snap on block then takes a still picture
+![](assets/chp-10-image815.png) <!-- width="1.2041666666666666in" height="1.6125in" -->The video snap on block then takes a still picture
 from the camera, and trims it to fit on the selected sprite. (Video snap
 on stage means to use the entire stage-sized rectangle.) For example,
 here's a camera snapshot trimmed to fit Alonzo:
 
 ![Macintosh HD:Users:bh:Desktop:Video Capture script
-1.png](assets/image816.png) <!-- width="2.670138888888889in" height="1.2986111111111112in" -->The "Video Capture" project in the
+1.png](media/image816.png) <!-- width="2.670138888888889in" height="1.2986111111111112in" -->The "Video Capture" project in the
 Examples collection repeatedly takes such trimmed snapshots and has the
 Alonzo sprite use the current snapshot as its costume, so it looks like
 this:
 
 ![Macintosh
-HD:Users:bh:Desktop:offset-video.png](assets/image817.png) <!-- width="2.6666666666666665in" height="2.0in" -->![Macintosh
-HD:Users:bh:Desktop:video.png](assets/image818.png) <!-- width="3.3333333333333335in" height="2.5in" -->(The picture above was actually taken with transparency
+HD:Users:bh:Desktop:offset-video.png](media/image817.png) <!-- width="2.6666666666666665in" height="2.0in" -->![Macintosh
+HD:Users:bh:Desktop:video.png](media/image818.png) <!-- width="3.3333333333333335in" height="2.5in" -->(The picture above was actually taken with transparency
 set to 50, to make the background more visible for printing.) Because
 the sprite is always still in the place where the snapshot was taken,
 its costume exactly fits in with the rest of the full-stage video. If
@@ -540,7 +540,7 @@ to do this, but perhaps it's helpful for explanatory purposes.)
 What you *would* want to do is push the sprite around the stage:
 
 ![Macintosh
-HD:Users:bh:Desktop:microphone.png](assets/image825.png) <!-- width="3.0902777777777777in" height="1.9236111111111112in" -->(Really these should be Jens's picture;
+HD:Users:bh:Desktop:microphone.png](media/image825.png) <!-- width="3.0902777777777777in" height="1.9236111111111112in" -->(Really these should be Jens's picture;
 it's his project. But he's vacationing. ☺) Video motion compares two
 snapshots a moment apart, looking only at the part within the given trim
 (here myself, meaning the current sprite, not the person looking into
@@ -563,8 +563,8 @@ brief? On my computer, 0.010667 seconds, but you'll see shortly how to
 ﬁnd out or control the sample size on your computer.)
 
 ![Macintosh
-HD:Users:bh:Desktop:sample-rate.png](assets/image826.png) <!-- width="1.9652777777777777in" height="0.2569444444444444in" -->![Macintosh
-HD:Users:bh:Desktop:samples.png](assets/image827.png) <!-- width="5.999305555555556in" height="2.620138888888889in" -->Just as the *pixel* is the smallest piece
+HD:Users:bh:Desktop:sample-rate.png](media/image826.png) <!-- width="1.9652777777777777in" height="0.2569444444444444in" -->![Macintosh
+HD:Users:bh:Desktop:samples.png](media/image827.png) <!-- width="5.999305555555556in" height="2.620138888888889in" -->Just as the *pixel* is the smallest piece
 of a picture, the *sample* is the smallest piece of a sound. It says
 here: that on my computer, 48,000 samples are recorded per second, so
 each sample \\index{sample} is 1/48,000 of a second. The value of a
@@ -616,8 +616,8 @@ multiple sine waves at different frequency. Here's a different
 up-and-down regularity:
 
 ![Macintosh
-HD:Users:bh:Desktop:red-sine.png](assets/image828.png) <!-- width="2.795138888888889in" height="1.2222222222222223in" -->![Macintosh
-HD:Users:bh:Desktop:sine.png](assets/image829.png) <!-- width="2.7847222222222223in" height="1.0486111111111112in" -->It's not obvious, but in the left part of
+HD:Users:bh:Desktop:red-sine.png](media/image828.png) <!-- width="2.795138888888889in" height="1.2222222222222223in" -->![Macintosh
+HD:Users:bh:Desktop:sine.png](media/image829.png) <!-- width="2.7847222222222223in" height="1.0486111111111112in" -->It's not obvious, but in the left part of
 the graph, the signal is more above the *x* axis than below it. Toward
 the right, it seems to be more below than above the axis. At the very
 right it looks like it might be climbing again.
@@ -661,7 +661,7 @@ frequency the frequency in Hz of the main note heard
 sample rate the number of samples being collected per second
 
 ![Macintosh
-HD:Users:bh:Desktop:new-sound.png](assets/image258.png) <!-- width="2.9166666666666665in" height="0.28125in" -->resolution the size of the array in which data are
+HD:Users:bh:Desktop:new-sound.png](media/image258.png) <!-- width="2.9166666666666665in" height="0.28125in" -->resolution the size of the array in which data are
 collected (typically 512, must be a power of 2)
 
 The block for sounds that corresponds to new picture for pictures is

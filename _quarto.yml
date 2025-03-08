@@ -65,7 +65,7 @@ book:
       - content/C1-S16.md
       - content/C1-S17.md
       - content/C1-S18.md
-    - content/Chapter2.md
+    # - content/Chapter2.md
     - content/03-acknowledgements-acknowledgements-toc-heading.md
     - content/04-blocks-scripts-and-sprites.md
     - content/05-saving-and-loading-projects-and-media.md

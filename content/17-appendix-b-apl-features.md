@@ -95,7 +95,7 @@ wildly popular, we may decide later to include APL2 features.
 
 Here are some of the guiding ideas in the design of the APL library:
 
-![](assets/image1263.png) <!-- width="4.451388888888889in" height="0.5208333333333334in" -->Goal:  Enable interested **Snap*!*** users
+![](assets/chp-17-image1263.png) <!-- width="4.451388888888889in" height="0.5208333333333334in" -->Goal:  Enable interested **Snap*!*** users
 to learn the feel and style of APL programming. It's really worth the
 effort. For example, we didn't hyperize the = block because Snap*!*
 users expect it to give a single yes-or-no answer about the equality of
@@ -110,7 +110,7 @@ vector; and **∧**/ means "reduce with and"; "reduce" is our combine
 function. That six-character program is much less effort than the
 equivalent
 
-![](assets/image1264.png) <!-- width="0.9930555555555556in" height="0.20833333333333334in" -->in Snap*!*. Note in passing that if you
+![](assets/chp-17-image1264.png) <!-- width="0.9930555555555556in" height="0.20833333333333334in" -->in Snap*!*. Note in passing that if you
 wanted to know *how many* corresponding elements of the two arrays are
 equal, you'd just use +/ instead of **∧**/. Note also that our APLish
 blocks are a little verbose, because they include up to three notations
@@ -189,10 +189,10 @@ other numbers. Snap*!* *arithmetic* functions treat false as 0 and true
 as 1, so our APL library tries to report Snap*!* Boolean values from
 predicate functions.
 
-### ![](assets/image1265.png) <!-- width="5.733333333333333in" height="1.1066666666666667in" -->Scalar functions
+### ![](assets/chp-17-image1265.png) <!-- width="5.733333333333333in" height="1.1066666666666667in" -->Scalar functions
 
 ![Macintosh
-HD:Users:bh:Desktop:roll-8-dice.png](assets/image1266.png) <!-- width="2.566666666666667in" height="0.21666666666666667in" -->These are the scalar functions
+HD:Users:bh:Desktop:roll-8-dice.png](media/image1266.png) <!-- width="2.566666666666667in" height="0.21666666666666667in" -->These are the scalar functions
 \\index{scalar function} in the APL library. Most of them are
 straightforward to figure out. The scalar = block \\index{scalar =
 block} provides an APL-style version of = (and other exceptions) as a
@@ -218,8 +218,8 @@ This means you have to learn the rule for each mixed function
 \\index{function, mixed} individually.
 
 ![Macintosh
-HD:Users:bh:Desktop:shape-example.png](assets/image1267.png) <!-- width="4.275in" height="1.1in" -->![Macintosh
-HD:Users:bh:Desktop:shape-of.png](assets/image1268.png) <!-- width="1.0666666666666667in" height="0.18333333333333332in" -->The shape of function \\index{shape of
+HD:Users:bh:Desktop:shape-example.png](media/image1267.png) <!-- width="4.275in" height="1.1in" -->![Macintosh
+HD:Users:bh:Desktop:shape-of.png](media/image1268.png) <!-- width="1.0666666666666667in" height="0.18333333333333332in" -->The shape of function \\index{shape of
 block} takes any input and reports a vector of the maximum size of the
 structure along each dimension. For a vector, it returns a list of
 length 1 containing the length of the input. For a matrix, it returns a
@@ -230,8 +230,8 @@ it has zero dimensions, and shape of reports an empty vector.
 Equivalent to the dimensions of primitive, as of 6.6.
 
 ![Macintosh
-HD:Users:bh:Desktop:rank.png](assets/image1269.png) <!-- width="1.0416666666666667in" height="0.18333333333333332in" -->![Macintosh
-HD:Users:bh:Desktop:reshape.png](assets/image1270.png) <!-- width="2.033333333333333in" height="0.18333333333333332in" -->Rank of isn \\index{rank of block}'t an
+HD:Users:bh:Desktop:rank.png](media/image1269.png) <!-- width="1.0416666666666667in" height="0.18333333333333332in" -->![Macintosh
+HD:Users:bh:Desktop:reshape.png](media/image1270.png) <!-- width="2.033333333333333in" height="0.18333333333333332in" -->Rank of isn \\index{rank of block}'t an
 actual APL primitive, but the composition ⍴⍴ (shape of shape of a
 structure), which reports the number of dimensions of the structure (the
 length of its shape vector), is too useful to omit. (It's very easy to
@@ -239,7 +239,7 @@ type the same character twice on the APL keyboard, but less easy to drag
 blocks together.) Equivalent to the rank of primitive, as of 6.6.
 
 ![Macintosh
-HD:Users:bh:Desktop:reshape-ex.png](assets/image1271.png) <!-- width="7.325in" height="0.8333333333333334in" -->Reshape \\index{reshape block} takes a
+HD:Users:bh:Desktop:reshape-ex.png](media/image1271.png) <!-- width="7.325in" height="0.8333333333333334in" -->Reshape \\index{reshape block} takes a
 shape vector (such as shape might report) on the left and any structure
 on the right. It ignores the shape of the right input, stringing the
 atomic elements into a vector in row-major order (that is, all of the
@@ -249,7 +249,7 @@ an array with the shape specified by the first input containing the
 items of the second:
 
 ![Macintosh
-HD:Users:bh:Desktop:identity-matrix.png](assets/image1272.png) <!-- width="6.575in" height="1.0416666666666667in" -->If the right input has more atomic
+HD:Users:bh:Desktop:identity-matrix.png](media/image1272.png) <!-- width="6.575in" height="1.0416666666666667in" -->If the right input has more atomic
 elements than are required by the left-input shape vector, the excess
 are ignored without reporting an error. If the right input has too *few*
 atomic elements, the process of filling the reported array starts again
@@ -259,7 +259,7 @@ whose atomic elements are equal. But other cases are sometimes useful
 too:
 
 ![Macintosh
-HD:Users:bh:Desktop:ravel.png](assets/image1275.png) <!-- width="1.4333333333333333in" height="0.18333333333333332in" -->Flatten \\index{flatten block} takes an
+HD:Users:bh:Desktop:ravel.png](media/image1275.png) <!-- width="1.4333333333333333in" height="0.18333333333333332in" -->Flatten \\index{flatten block} takes an
 arbitrary structure as input and reports a vector of its atomic elements
 in row-major order. Lispians call this flattening the structure, but
 APLers call it "ravel" because of the metaphor of pulling on a ball of
@@ -273,18 +273,18 @@ input slot. Equivalent to the primitive flatten of block.
 ID ← {(⍵,⍵)⍴1,⍵⍴0}
 
 ![Macintosh
-HD:Users:bh:Desktop:catenate-ex.png](assets/image1280.png) <!-- width="7.204166666666667in" height="0.5833333333333334in" -->Catenate \\index{catenate block} is like
+HD:Users:bh:Desktop:catenate-ex.png](media/image1280.png) <!-- width="7.204166666666667in" height="0.5833333333333334in" -->Catenate \\index{catenate block} is like
 our primitive append, with two differences: First, if either input is a
 scalar, it is treated like a one-item vector. Second, if the two inputs
 are of different rank, the catenate function is recursively mapped over
 the higher-rank input:
 
 ![Macintosh
-HD:Users:bh:Desktop:iota.png](assets/image1281.png) <!-- width="0.5333333333333333in" height="0.25in" -->Catenate vertically \\index{catenate vertically block}
+HD:Users:bh:Desktop:iota.png](media/image1281.png) <!-- width="0.5333333333333333in" height="0.25in" -->Catenate vertically \\index{catenate vertically block}
 is similar, but it adds new rows instead of adding new columns.
 
 ![Macintosh
-HD:Users:bh:Desktop:numbers-ex.png](assets/image1282.png) <!-- width="6.341666666666667in" height="1.0416666666666667in" -->Integers \\index{integers block} (I think
+HD:Users:bh:Desktop:numbers-ex.png](media/image1282.png) <!-- width="6.341666666666667in" height="1.0416666666666667in" -->Integers \\index{integers block} (I think
 that's what it stands for, although APLers just say "iota") takes a
 positive integer input and reports a vector of the integers from 1 to
 the input. This is an example of a function classed as "mixed" not
@@ -294,7 +294,7 @@ lists as inputs. Numbers from is a hyperblock, applying itself to each
 item of its input list:
 
 ![Macintosh
-HD:Users:bh:Desktop:iota-list-ex.png](assets/image1283.png) <!-- width="6.025in" height="0.8333333333333334in" -->Iota \\index{iota block} has a special
+HD:Users:bh:Desktop:iota-list-ex.png](media/image1283.png) <!-- width="6.025in" height="0.8333333333333334in" -->Iota \\index{iota block} has a special
 meaning for list inputs: The input must be a shape vector; the result is
 an array with that shape in which each item is a list of the indices of
 the cell along each dimension. A picture is worth 10^3^ words, but
@@ -302,10 +302,10 @@ Snap*!* isn't so good at displaying arrays with more than two
 dimensions, so here we reduce each cell's index list to a string:
 
 ![Macintosh
-HD:Users:bh:Desktop:dyadic-iota.png](assets/image1284.png) <!-- width="1.475in" height="0.25in" -->
+HD:Users:bh:Desktop:dyadic-iota.png](media/image1284.png) <!-- width="1.475in" height="0.25in" -->
 
 ![Macintosh
-HD:Users:bh:Desktop:dy-iota-ex.png](assets/image1285.png) <!-- width="5.95in" height="1.1in" -->Dyadic iota is like the index of \\index{index of block
+HD:Users:bh:Desktop:dy-iota-ex.png](media/image1285.png) <!-- width="5.95in" height="1.1in" -->Dyadic iota is like the index of \\index{index of block
 (APL)} primitive except for its handling of multi-dimensional arrays. It
 looks only for atomic elements, so a vector in the second input doesn't
 mean to search for that vector as a row of a matrix, which is what it
@@ -319,13 +319,13 @@ actually an extension of APL iota, which is more like a hyperized index
 of.) Generalizing, if the rank of the second input is less than the rank
 of the first input by two or more, then iota looks for the entire second
 input in the first input. The reported position is a vector ![Macintosh
-HD:Users:bh:Desktop:dy-iota-ex2.png](assets/image1286.png) <!-- width="5.841666666666667in" height="0.35in" -->whose length is equal to the difference between the two
+HD:Users:bh:Desktop:dy-iota-ex2.png](media/image1286.png) <!-- width="5.841666666666667in" height="0.35in" -->whose length is equal to the difference between the two
 ranks. If the rank of the second input is one less than the rank of the
 first, the reported value is a scalar, the index of the entire second
 input in the first.
 
 ![Macintosh
-HD:Users:bh:Desktop:dy-iota-ex3.png](assets/image1287.png) <!-- width="5.383333333333334in" height="1.1in" -->
+HD:Users:bh:Desktop:dy-iota-ex3.png](media/image1287.png) <!-- width="5.383333333333334in" height="1.1in" -->
 
 However, if the two ranks are equal, then the block is hyperized; each
 item of the second input is located in the first input. As the next
@@ -339,7 +339,7 @@ found, instead of a more obvious flag value such as 0 or false? Here's
 why:
 
 ![Macintosh
-HD:Users:bh:Desktop:contained.png](assets/image1292.png) <!-- width="2.175in" height="0.225in" -->Note that code has 27 items, not 26. The asterisk at
+HD:Users:bh:Desktop:contained.png](media/image1292.png) <!-- width="2.175in" height="0.225in" -->Note that code has 27 items, not 26. The asterisk at
 the end is the ciphertext is the translation of all non-alphabet
 characters (spaces and the apostrophe in "doesn't"). This is a silly
 example, because it makes up a random cipher every time it's called, and
@@ -349,7 +349,7 @@ obvious. But despite being silly, the example shows the benefit of
 reporting length+1 as the position of items not found.
 
 ![Macintosh
-HD:Users:bh:Desktop:contained-ex.png](assets/image1293.png) <!-- width="7.485416666666667in" height="0.6597222222222222in" -->The contained in block \\index{contained
+HD:Users:bh:Desktop:contained-ex.png](media/image1293.png) <!-- width="7.485416666666667in" height="0.6597222222222222in" -->The contained in block \\index{contained
 in block} is like a hyperized contains with the input order reversed. It
 reports an array of Booleans the same shape as the left input. The shape
 of the right input doesn't matter; the block looks only for atomic
@@ -377,22 +377,22 @@ This is the list of employees of a small company. (Taken from *Structure
 and Interpretation of Computer Programs* by Abelson and Sussman.
 Creative Commons licensed.) Each of the smaller lists contains a
 person\'s name, job title, and yearly salary. ![Macintosh
-HD:Users:bh:Desktop:database.png](assets/image1304.png) <!-- width="5.483333333333333in" height="2.2in" -->We would like to sort the employees' names in
+HD:Users:bh:Desktop:database.png](media/image1304.png) <!-- width="5.483333333333333in" height="2.2in" -->We would like to sort the employees' names in
 big-to-small order of salary. First we extract column 3 of the database,
 the salaries:
 
-![](assets/image1305.png) <!-- width="3.5590277777777777in" height="1.976388888888889in" -->\
+![](assets/chp-17-image1305.png) <!-- width="3.5590277777777777in" height="1.976388888888889in" -->\
 Then we use grade down to get the reordering indices:
 
-![](assets/image1306.png) <!-- width="5.333333333333333in" height="2.3733333333333335in" -->![](assets/image1307.png) <!-- width="4.978472222222222in" height="2.2333333333333334in" -->At this point we *could* use the index
+![](assets/chp-17-image1306.png) <!-- width="5.333333333333333in" height="2.3733333333333335in" -->![](assets/chp-17-image1307.png) <!-- width="4.978472222222222in" height="2.2333333333333334in" -->At this point we *could* use the index
 vector to sort the salaries:
 
-![](assets/image1308.png) <!-- width="5.593333333333334in" height="2.3in" -->But
+![](assets/chp-17-image1308.png) <!-- width="5.593333333333334in" height="2.3in" -->But
 what we actually want is a list of *names,* sorted by salary:
 
 ![Macintosh
-HD:Users:bh:Desktop:row-select.png](assets/image1309.png) <!-- width="2.308333333333333in" height="0.275in" -->![Macintosh
-HD:Users:bh:Desktop:column-select.png](assets/image1310.png) <!-- width="2.9166666666666665in" height="0.325in" -->By taking the index vector from grade down of column 3
+HD:Users:bh:Desktop:row-select.png](media/image1309.png) <!-- width="2.308333333333333in" height="0.275in" -->![Macintosh
+HD:Users:bh:Desktop:column-select.png](media/image1310.png) <!-- width="2.9166666666666665in" height="0.325in" -->By taking the index vector from grade down of column 3
 and telling item to apply it to column 1, we get what we set out to
 find. As usual the code is more elegant in APL:
 database\[⍒database\[;3\];1\].
@@ -429,8 +429,8 @@ columns), while **⌿** is described as operating on rows. We were more
 than a month into this project before I understood all this. You get
 long block names so it won't take you a month!
 
-![](assets/image1319.png) <!-- width="3.175in" height="0.18333333333333332in" -->![](assets/image1320.png) <!-- width="2.9944444444444445in" height="0.23333333333333334in" -->![Macintosh
-HD:Users:bh:Desktop:transpose.png](assets/image1321.png) <!-- width="1.1118055555555555in" height="0.23333333333333334in" -->Don't confuse this block with the reduce
+![](assets/chp-17-image1319.png) <!-- width="3.175in" height="0.18333333333333332in" -->![](assets/chp-17-image1320.png) <!-- width="2.9944444444444445in" height="0.23333333333333334in" -->![Macintosh
+HD:Users:bh:Desktop:transpose.png](media/image1321.png) <!-- width="1.1118055555555555in" height="0.23333333333333334in" -->Don't confuse this block with the reduce
 block \\index{reduce block}, whose APL symbol is also a slash. In that
 block, what comes to the left of the slash is a dyadic combining
 function; it's the APL equivalent of combine. This block is more nearly
@@ -475,7 +475,7 @@ applying the function to the array you want to compress.
 But APL does have a higher order version of combine:
 
 ![Macintosh
-HD:Users:bh:Desktop:matrix.png](assets/image1332.png) <!-- width="6.683333333333334in" height="1.0416666666666667in" -->The reduce block \\index{reduce block}
+HD:Users:bh:Desktop:matrix.png](media/image1332.png) <!-- width="6.683333333333334in" height="1.0416666666666667in" -->The reduce block \\index{reduce block}
 works just like combine, taking a dyadic function and a list. The /
 version translates each row to a single value; the **⌿** version
 translates each column to a single value. That's the only way to think
@@ -487,10 +487,10 @@ what these blocks do as adding vectors, rather than adding individual
 numbers, it's clear that in
 
 ![Macintosh
-HD:Users:bh:Desktop:add-matrix.png](assets/image1333.png) <!-- width="5.833333333333333in" height="1.1in" -->
+HD:Users:bh:Desktop:add-matrix.png](media/image1333.png) <!-- width="5.833333333333333in" height="1.1in" -->
 
 ![Macintosh
-HD:Users:bh:Desktop:non-apl-combine.png](assets/image1334.png) <!-- width="4.808333333333334in" height="1.1in" -->the *vector* (10, 26, 42) is the sum of *column vectors*
+HD:Users:bh:Desktop:non-apl-combine.png](media/image1334.png) <!-- width="4.808333333333334in" height="1.1in" -->the *vector* (10, 26, 42) is the sum of *column vectors*
 (1, 5, 9)+(2, 6, 10)+(3, 7, 11)+(4, 8, 12). In pre-6.0 Snap*!*, we'd get
 the same result this way:
 
@@ -507,16 +507,16 @@ symbol ◦. is pronounced "jot dot.") The way to think about this block is
 "multiplication table \\index{table}" from elementary school:
 
 ![Macintosh
-HD:Users:bh:Desktop:outer-ex.png](assets/image1335.png) <!-- width="7.24in" height="1.52in" -->
+HD:Users:bh:Desktop:outer-ex.png](media/image1335.png) <!-- width="7.24in" height="1.52in" -->
 
 ![Macintosh
-HD:Users:bh:Desktop:outer.png](assets/image1336.png) <!-- width="2.1666666666666665in" height="0.24166666666666667in" -->
+HD:Users:bh:Desktop:outer.png](media/image1336.png) <!-- width="2.1666666666666665in" height="0.24166666666666667in" -->
 
 ![Macintosh
-HD:Users:bh:Desktop:inner.png](assets/image1337.png) <!-- width="2.6166666666666667in" height="0.24166666666666667in" -->
+HD:Users:bh:Desktop:inner.png](media/image1337.png) <!-- width="2.6166666666666667in" height="0.24166666666666667in" -->
 
 ![Macintosh
-HD:Users:bh:Desktop:inner-ex.png](assets/image1338.png) <!-- width="7.338611111111111in" height="1.0069444444444444in" -->The inner product block \\index{inner
+HD:Users:bh:Desktop:inner-ex.png](media/image1338.png) <!-- width="7.338611111111111in" height="1.0069444444444444in" -->The inner product block \\index{inner
 product block} takes two matrices and two operations as input. The
 number of columns in the left matrix must equal the number of rows in
 the right matrix. When the two operations are + and ×, this is the
@@ -528,13 +528,13 @@ dot and") applied to Boolean matrices, to find rows and columns that
 have corresponding items in common.
 
 ![Macintosh
-HD:Users:bh:Desktop:printable.png](assets/image1339.png) <!-- width="0.9583333333333334in" height="0.18333333333333332in" -->The printable block \\index{printable
+HD:Users:bh:Desktop:printable.png](media/image1339.png) <!-- width="0.9583333333333334in" height="0.18333333333333332in" -->The printable block \\index{printable
 block} isn't an APL function; it's an aid to exploring APL-in-Snap*!*.
 It transforms arrays to a compact representation that still makes the
 structure clear:
 
 ![Macintosh
-HD:Users:bh:Desktop:printable-ex.png](assets/image1340.png) <!-- width="5.997916666666667in" height="0.3333333333333333in" -->Experts will recognize this as the Lisp
+HD:Users:bh:Desktop:printable-ex.png](media/image1340.png) <!-- width="5.997916666666667in" height="0.3333333333333333in" -->Experts will recognize this as the Lisp
 representation of list structure,
 
 Index
@@ -2564,7 +2564,7 @@ Zoom blocks\... option · 114
     show primitives \\index{hide and show primitives} in the palette.
     The pulldown menu doesn't include primitive blocks, but there's a
     generally useful technique to give a block input values it wasn't
-    expecting using run or call:![](assets/image120.png) <!-- width="3.9375in"     height="0.3888888888888889in" -->
+    expecting using run or call:![](assets/chp-17-image120.png) <!-- width="3.9375in"     height="0.3888888888888889in" -->
 
     In order to use a block as an input this way, you must explicitly
     put a ring around it, by right-clicking on it and choosing ringify.

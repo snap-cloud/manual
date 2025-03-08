@@ -1,6 +1,6 @@
 #  The Outside World
 
-![](assets/image148.png) <!-- width="1.6201388888888888in" height="0.25in" -->The
+![](assets/chp-04-image148.png) <!-- width="1.6201388888888888in" height="0.25in" -->The
 facilities discussed so far are fine for projects that take place
 entirely on your computer's screen. But you may want to write programs
 that interact with physical devices \\index{devices} (sensors
@@ -25,7 +25,7 @@ The Web page is typically a very long text string, and so the primitive
 split block \\index{split block} is useful to get the text in a
 manageable form, namely, as a list of lines:
 
-![](assets/image871.png) <!-- width="6.520833333333333in" height="4.277777777777778in" -->
+![](assets/chp-12-image871.png) <!-- width="6.520833333333333in" height="4.277777777777778in" -->
 
 The second input to split is the character to be used to separate the
 text string into a list of lines, or one of a set of common cases (such
@@ -82,14 +82,14 @@ to source code repositories. This situation will improve with time.
 ## Date and Time
 
 ![Macintosh
-HD:Users:bh:Desktop:date.png](assets/image872.png) <!-- width="5.305555555555555in" height="0.3194444444444444in" -->The current \\index{current block} block
+HD:Users:bh:Desktop:date.png](media/image872.png) <!-- width="5.305555555555555in" height="0.3194444444444444in" -->The current \\index{current block} block
 in the Sensing palette can be used to find out the current date or time
 \\index{current date or time}. Each call to this block reports one
 component of the date \\index{date} or time \\index{time}, so you will
 probably combine several calls, like this:
 
 ![Macintosh
-HD:Users:bh:Desktop:European-date.png](assets/image873.png) <!-- width="5.305555555555555in" height="0.3194444444444444in" -->for Americans, or like this:
+HD:Users:bh:Desktop:European-date.png](media/image873.png) <!-- width="5.305555555555555in" height="0.3194444444444444in" -->for Americans, or like this:
 
 for Europeans.
 

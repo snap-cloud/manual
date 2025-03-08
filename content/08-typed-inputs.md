@@ -2,7 +2,7 @@
 
 ##  Scratch's Type Notation
 
-![](assets/image654.png) <!-- width="1.375in" height="0.2125in" -->Prior to
+![](assets/chp-08-image654.png) <!-- width="1.375in" height="0.2125in" -->Prior to
 version 3, Scratch \\index{Scratch} block inputs came in two types
 \\index{data type}: Text-or-number type and Number type. The former is
 indicated by a rectangular box, the latter by a rounded box: . A third
@@ -23,7 +23,7 @@ In the Block Editor \\index{Block Editor} input name dialog
 Clicking that arrowhead opens the "long" input name dialog \\index{long
 input name dialog}:
 
-![](assets/image657.png) <!-- width="5.170833333333333in" height="4.135416666666667in" -->![](assets/image658.png) <!-- width="0.19791666666666666in" height="0.19791666666666666in" -->There are twelve input type shapes
+![](assets/chp-08-image657.png) <!-- width="5.170833333333333in" height="4.135416666666667in" -->![](assets/chp-08-image658.png) <!-- width="0.19791666666666666in" height="0.19791666666666666in" -->There are twelve input type shapes
 \\index{input-type shapes}, plus three mutually exclusive modifiers,
 listed in addition to the basic choice between title text and an input
 name. The default type, the one you get if you don't choose anything
@@ -32,13 +32,13 @@ value of any type \\index{Any type}. If the size input in your block
 should be an oval-shaped numeric slot rather than a generic rectangle,
 click "Number."
 
-![](assets/image659.png) <!-- width="6.822222222222222in" height="2.7569444444444446in" -->The arrangement of the input types is
+![](assets/chp-08-image659.png) <!-- width="6.822222222222222in" height="2.7569444444444446in" -->The arrangement of the input types is
 systematic. As the pictures on this and the next page show, each row of
 types is a category, and parts of each column form a category.
 Understanding the arrangement will make it a little easier to find the
 type you want.
 
-![](assets/image658.png) <!-- width="0.13194444444444445in" height="0.13194444444444445in" -->The second row of input types contains
+![](assets/chp-08-image658.png) <!-- width="0.13194444444444445in" height="0.13194444444444445in" -->The second row of input types contains
 the ones found in Scratch: Number, Any, and Boolean. (The reason these
 are in the second row rather than the ﬁrst will become clear when we
 look at the column arrangement.) The ﬁrst row contains the new Snap*!*
@@ -76,16 +76,16 @@ the fourth row are explained in Section VI.E below. In one handwavy
 sentence, they combine the *meaning* of the procedure types with the
 *appearance* of the reported value types two rows higher. (Of course,
 this isn't quite right for the C-shaped command input type, since
-commands don't ![](assets/image660.png) <!-- width="3.6458333333333335in" height="3.113888888888889in" -->report values. But you'll see later that
+commands don't ![](assets/chp-08-image660.png) <!-- width="3.6458333333333335in" height="3.113888888888889in" -->report values. But you'll see later that
 it's true in spirit.)
 
-### ![Macintosh HD:Users:bh:Desktop:gear-part.png](assets/image658.png) <!-- width="0.13194444444444445in" height="0.13194444444444445in" -->Pulldown inputs
+### ![Macintosh HD:Users:bh:Desktop:gear-part.png](assets/chp-08-image658.png) <!-- width="0.13194444444444445in" height="0.13194444444444445in" -->Pulldown inputs
 
-![](assets/image661.png) <!-- width="1.6805555555555556in" height="0.9409722222222222in" -->Certain primitive blocks have *pulldown*
+![](assets/chp-08-image661.png) <!-- width="1.6805555555555556in" height="0.9409722222222222in" -->Certain primitive blocks have *pulldown*
 inputs \\index{pulldown input}, either *read-only* \\index{read-only
 pulldown input}*,* like the input to the touching block:
 
-![](assets/image662.png) <!-- width="1.9020833333333333in" height="1.3229166666666667in" -->(indicated by the input slot being the
+![](assets/chp-08-image662.png) <!-- width="1.9020833333333333in" height="1.3229166666666667in" -->(indicated by the input slot being the
 same (cyan, in this case) color as the body of the block), or
 *writeable* \\index{writeable pulldown inputs}*,* like the input to the
 point in direction block:
@@ -93,13 +93,13 @@ point in direction block:
 (indicated by the white input slot), which means that the user can type
 in an arbitrary input instead of using the pulldown menu.
 
-![](assets/image663.png) <!-- width="0.8326388888888889in" height="0.6527777777777778in" -->![Macintosh
-HD:Users:bh:Desktop:gear-part.png](assets/image658.png) <!-- width="0.13194444444444445in" height="0.13194444444444445in" -->Custom blocks can also have such inputs.
+![](assets/chp-08-image663.png) <!-- width="0.8326388888888889in" height="0.6527777777777778in" -->![Macintosh
+HD:Users:bh:Desktop:gear-part.png](assets/chp-08-image658.png) <!-- width="0.13194444444444445in" height="0.13194444444444445in" -->Custom blocks can also have such inputs.
 To make a pulldown input, open the long form input dialog, choose a text
 type (Any, Text, or Number) and click the icon in the bottom right
 corner, or control/right-click in the dialog. You will see this menu:
 
-![](assets/image664.png) <!-- width="3.076388888888889in" height="1.875in" -->Click the read-only checkbox if you want a read-only
+![](assets/chp-08-image664.png) <!-- width="3.076388888888889in" height="1.875in" -->Click the read-only checkbox if you want a read-only
 pulldown input. Then from the same menu, choose options... to get this
 dialog box:
 
@@ -139,12 +139,12 @@ the play note piano keyboard, or the point in direction 360° dial.
 Finally, you can make the input box accept more than one line of text
 (that is, text including a newline character) from the special submenu,
 either "multi-line" for regular ![Macintosh
-HD:Users:bh:Desktop:little-options.png](assets/image669.png) <!-- width="0.6041666666666666in" height="0.3194444444444444in" -->text or "code" for monospace-font computer
+HD:Users:bh:Desktop:little-options.png](media/image669.png) <!-- width="0.6041666666666666in" height="0.3194444444444444in" -->text or "code" for monospace-font computer
 code.
 
 ![Macintosh
-HD:Users:bh:Desktop:quarter-gear.png](assets/image670.png) <!-- width="0.13055555555555556in" height="0.1375in" -->![Macintosh HD:Users:bh:Desktop:Untitled script pic
-(1).png](assets/image671.png) <!-- width="1.6805555555555556in" height="0.2569444444444444in" -->If the input type is something other than
+HD:Users:bh:Desktop:quarter-gear.png](media/image670.png) <!-- width="0.13055555555555556in" height="0.1375in" -->![Macintosh HD:Users:bh:Desktop:Untitled script pic
+(1).png](media/image671.png) <!-- width="1.6805555555555556in" height="0.2569444444444444in" -->If the input type is something other than
 text, then clicking the button will instead show this menu:
 
 As an example, we want to make this block: The second input must be a
@@ -167,9 +167,9 @@ We now turn to the three mutually exclusive options that come below the
 type array.
 
 ![Macintosh
-HD:Users:bh:Desktop:default-value.png](assets/image678.png) <!-- width="1.6388888888888888in" height="0.5208333333333334in" -->
+HD:Users:bh:Desktop:default-value.png](media/image678.png) <!-- width="1.6388888888888888in" height="0.5208333333333334in" -->
 
-![](assets/image679.png) <!-- width="1.7638888888888888in" height="0.9305555555555556in" -->![](assets/image680.png) <!-- width="3.5694444444444446in" height="1.2944444444444445in" -->The "Multiple inputs" option: The list
+![](assets/chp-08-image679.png) <!-- width="1.7638888888888888in" height="0.9305555555555556in" -->![](assets/chp-08-image680.png) <!-- width="3.5694444444444446in" height="1.2944444444444445in" -->The "Multiple inputs" option: The list
 block introduced earlier accepts any number of inputs to specify the
 items of the new list. To allow this, Snap*!* introduces the arrowhead
 notation (⏴⏵) that expands and contracts the block, adding and removing
@@ -215,22 +215,22 @@ We have mentioned three notations that can appear in an input slot in
 the prototype to remind you of what kind of input this is. Here is the
 complete list of such notations:
 
-![](assets/image685.png) <!-- width="0.7347222222222223in" height="6.118055555555555in" -->= default value ... multiple input ↑ upvar
+![](assets/chp-08-image685.png) <!-- width="0.7347222222222223in" height="6.118055555555555in" -->= default value ... multiple input ↑ upvar
 \# number
 
-![](assets/image686.png) <!-- width="0.16319444444444445in" height="0.13541666666666666in" -->λ procedure types ⫶ list ? Boolean object
+![](assets/chp-08-image686.png) <!-- width="0.16319444444444445in" height="0.13541666666666666in" -->λ procedure types ⫶ list ? Boolean object
 ¶ multi-line text
 
 ### Title Text and Symbols
 
-![](assets/image687.png) <!-- width="1.21875in" height="0.23472222222222222in" -->Some primitive blocks have symbols
+![](assets/chp-08-image687.png) <!-- width="1.21875in" height="0.23472222222222222in" -->Some primitive blocks have symbols
 \\index{icons in title text} as part of the block name: . Custom blocks
 can use symbols too. In the Block Editor, click the plus sign in the
 prototype at the point where you want to insert the symbol. Then click
 the title text picture below the text box that's expecting an input slot
 name. The dialog will then change to look like this:
 
-![](assets/image688.png) <!-- width="1.2444444444444445in" height="0.26666666666666666in" -->![](assets/image689.png) <!-- width="2.0347222222222223in" height="1.2638888888888888in" -->The important part to notice is the
+![](assets/chp-08-image688.png) <!-- width="1.2444444444444445in" height="0.26666666666666666in" -->![](assets/chp-08-image689.png) <!-- width="2.0347222222222223in" height="1.2638888888888888in" -->The important part to notice is the
 arrowhead that has appeared at the right end of the text box. Click it
 to see the menu shown here at the left.
 
@@ -238,10 +238,10 @@ Choose one of the symbols. The result will have the symbol you want: The
 available symbols are, pretty much, the ones that are used in Snap*!*
 icons.
 
-![](assets/image690.png) <!-- width="2.0347222222222223in" height="1.2638888888888888in" -->But I'd like the arrow symbol bigger, and
+![](assets/chp-08-image690.png) <!-- width="2.0347222222222223in" height="1.2638888888888888in" -->But I'd like the arrow symbol bigger, and
 yellow, so I edit its name:
 
-![](assets/image691.png) <!-- width="1.1979166666666667in" height="0.2708333333333333in" -->This makes the symbol 1.5 times as big as
+![](assets/chp-08-image691.png) <!-- width="1.1979166666666667in" height="0.2708333333333333in" -->This makes the symbol 1.5 times as big as
 the letters in the block text, using a color with red-green-blue values
 of 255-255-150 (each between 0 and 255). Here's the result:
 

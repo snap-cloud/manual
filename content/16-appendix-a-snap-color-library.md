@@ -6,7 +6,7 @@ is controlling a sprite's pen color, it also establishes colors as a
 first class data type:
 
 ![Macintosh
-HD:Users:bh:Desktop:crayon-Pen.png](assets/image1135.png) <!-- width="3.1333333333333333in" height="0.5166666666666667in" -->For people who just want colors in their
+HD:Users:bh:Desktop:crayon-Pen.png](media/image1135.png) <!-- width="3.1333333333333333in" height="0.5166666666666667in" -->For people who just want colors in their
 projects without having to be color experts, we provide two simple
 mechanisms: a *color number* \\index{color numbers} scale with a broad
 range of continuous color variation and a set of 100 *crayons* organized
@@ -14,14 +14,14 @@ by color family (ten reds, ten oranges, etc.) The crayons
 \\index{crayons} include the block colors:
 
 ![Macintosh
-HD:Users:bh:Desktop:hsl-from-x11.png](assets/image1136.png) <!-- width="7.166666666666667in" height="1.1in" -->For experts, we provide color selection by RGB, HSL, HSV,
+HD:Users:bh:Desktop:hsl-from-x11.png](media/image1136.png) <!-- width="7.166666666666667in" height="1.1in" -->For experts, we provide color selection by RGB, HSL, HSV,
 X11/W3C names, and variants on those scales.
 
 ### Introduction to Color
 
 ![Macintosh HD:Users:bh:Desktop:Google
-Chrome002.png](assets/image1137.png) <!-- width="0.2361111111111111in" height="0.2361111111111111in" -->![Macintosh HD:Users:bh:Desktop:Google
-Chrome001.png](assets/image1138.png) <!-- width="0.2361111111111111in" height="0.2361111111111111in" -->Your computer monitor can display millions
+Chrome002.png](media/image1137.png) <!-- width="0.2361111111111111in" height="0.2361111111111111in" -->![Macintosh HD:Users:bh:Desktop:Google
+Chrome001.png](media/image1138.png) <!-- width="0.2361111111111111in" height="0.2361111111111111in" -->Your computer monitor can display millions
 of colors, but you probably can't distinguish that many. For example,
 here's red 57, green 180, blue 200: And here's red 57, green *182,* blue
 200: You might be able to tell them apart if you see them side by side:
@@ -57,9 +57,9 @@ one-dimensional subset of the available colors. Two subsets, actually:
 *crayons* and *color numbers.* Here's the difference:
 
 ![Macintosh HD:Users:bh:Desktop:Google
-Chrome005.png](assets/image1144.png) <!-- width="0.2361111111111111in" height="0.2361111111111111in" -->![Macintosh HD:Users:bh:Desktop:Google
-Chrome003.png](assets/image1145.png) <!-- width="0.2361111111111111in" height="0.2361111111111111in" -->![Macintosh HD:Users:bh:Desktop:Google
-Chrome004.png](assets/image1146.png) <!-- width="0.2361111111111111in" height="0.2361111111111111in" -->The first row shows 100 distinct colors.
+Chrome005.png](media/image1144.png) <!-- width="0.2361111111111111in" height="0.2361111111111111in" -->![Macintosh HD:Users:bh:Desktop:Google
+Chrome003.png](media/image1145.png) <!-- width="0.2361111111111111in" height="0.2361111111111111in" -->![Macintosh HD:Users:bh:Desktop:Google
+Chrome004.png](media/image1146.png) <!-- width="0.2361111111111111in" height="0.2361111111111111in" -->The first row shows 100 distinct colors.
 They have names; this is pumpkin \\index{pumpkin}, and this is denim
 \\index{denim}. You're supposed to think of them as a big box of 100
 crayons \\index{crayons}. They're arranged in families: grays, pinks,
@@ -72,16 +72,16 @@ numbers! You can find them in a menu with a submenu for each family.
 \\index{set pen block}
 
 ![Macintosh
-HD:Users:bh:Desktop:set-crayon-name.png](assets/image1147.png) <!-- width="2.1597222222222223in" height="0.2569444444444444in" -->Or, if you know the crayon name, just .
+HD:Users:bh:Desktop:set-crayon-name.png](media/image1147.png) <!-- width="2.1597222222222223in" height="0.2569444444444444in" -->Or, if you know the crayon name, just .
 
-![](assets/image1154.png) <!-- width="5.793055555555555in" height="0.3in" -->The
+![](assets/chp-16-image1154.png) <!-- width="5.793055555555555in" height="0.3in" -->The
 crayon numbers are chosen so that skipping by 10 gives a sensible box of
 ten crayons \\index{box of ten crayons}:
 
 Alternatively, skipping by 5 gives a still-sensible set of twenty
 crayons \\index{box of twenty crayons}:
 
-![](assets/image1155.png) <!-- width="5.8in" height="0.3in" -->
+![](assets/chp-16-image1155.png) <!-- width="5.8in" height="0.3in" -->
 
 The set of *color numbers* is arranged so that each color number is
 visually near each of its neighbors. Bright and dark colors alternate
@@ -139,7 +139,7 @@ The library also includes two constructors and a selector for colors as
 a data type:
 
 ![Macintosh
-HD:Users:bh:Desktop:color-from-and.png](assets/image402.png) <!-- width="1.8055555555555556in" height="0.19444444444444445in" -->The latter two are inverses of each
+HD:Users:bh:Desktop:color-from-and.png](media/image402.png) <!-- width="1.8055555555555556in" height="0.19444444444444445in" -->The latter two are inverses of each
 other, translating between colors and their attributes. The color from
 block's \\index{color from block} attribute menu has fewer choices than
 the similar set pen block because you can, for example, set the Red
@@ -170,7 +170,7 @@ of "hue \\index{hue}," which more or less means where a color would
 appear in a rainbow \\index{rainbow} (magenta \\index{magenta}, near the
 right, is [a long story](https://en.wikipedia.org/wiki/Magenta)):
 
-![](assets/image1189.png) <!-- width="5.806666666666667in" height="0.30666666666666664in" -->
+![](assets/chp-16-image1189.png) <!-- width="5.806666666666667in" height="0.30666666666666664in" -->
 
 These are called "spectral \\index{spectral colors}" colors, after the
 *spectrum* of rainbow colors. But these colors aren't equally
@@ -192,12 +192,12 @@ different human cultures give names to different color ranges.
 Nevertheless, in old Scratch projects, you'd say change pen color by 1
 and it'd take forever to reach a color that wasn't green.
 
-![](assets/image1190.png) <!-- width="5.9944444444444445in" height="0.29930555555555555in" -->For color professionals, there are good
+![](assets/chp-16-image1190.png) <!-- width="5.9944444444444445in" height="0.29930555555555555in" -->For color professionals, there are good
 reasons to want to work with the physical rainbow hue layout. But for
 amateurs using a simplified, one-dimensional color model, there's no
 reason not to use a more programmer-friendly hue scale:
 
-![](assets/image1191.png) <!-- width="1.4597222222222221in" height="1.3583333333333334in" -->In this scale, each of the seven rainbow
+![](assets/chp-16-image1191.png) <!-- width="1.4597222222222221in" height="1.3583333333333334in" -->In this scale, each of the seven rainbow
 colors and brown get an equal share. (Red's looks too small, but that's
 because it's split between the two ends: hue 0 is pure red, brownish
 reds are to its right, and purplish reds are wrapped around to the right
@@ -210,10 +210,10 @@ while his "indigo" is more like modern blue. See Wikipedia
 [Indigo](https://en.wikipedia.org/wiki/Indigo).)
 
 ![Macintosh
-HD:Users:bh:Desktop:pink.png](assets/image1192.png) <!-- width="0.2361111111111111in" height="0.2361111111111111in" -->![Macintosh
-HD:Users:bh:Desktop:maroon.png](assets/image1193.png) <!-- width="0.2361111111111111in" height="0.2361111111111111in" -->![Macintosh
-HD:Users:bh:Desktop:candy.png](assets/image1194.png) <!-- width="0.2361111111111111in" height="0.2361111111111111in" -->![Macintosh
-HD:Users:bh:Desktop:red.png](assets/image1195.png) <!-- width="0.2361111111111111in" height="0.2361111111111111in" -->Our *color number* scale is based on fair
+HD:Users:bh:Desktop:pink.png](media/image1192.png) <!-- width="0.2361111111111111in" height="0.2361111111111111in" -->![Macintosh
+HD:Users:bh:Desktop:maroon.png](media/image1193.png) <!-- width="0.2361111111111111in" height="0.2361111111111111in" -->![Macintosh
+HD:Users:bh:Desktop:candy.png](media/image1194.png) <!-- width="0.2361111111111111in" height="0.2361111111111111in" -->![Macintosh
+HD:Users:bh:Desktop:red.png](media/image1195.png) <!-- width="0.2361111111111111in" height="0.2361111111111111in" -->Our *color number* scale is based on fair
 hues, adding a range of grays from black (color number 0) to white
 (color number14) and also adding *shades* of the spectral colors. (In
 color terminology, a *shade* is a darker version of a color; a lighter
@@ -251,7 +251,7 @@ grays at the left. Since there are eight color families, the pure, named
 fair hues are at multiples of 100/8=12.5, starting with red=0.)
 
 ![Macintosh
-HD:Users:bh:Desktop:Prism_compare_rainbow_01.png](assets/image1198.png) <!-- width="1.85in" height="1.0798611111111112in" -->White is crayon 14 and color number 14.
+HD:Users:bh:Desktop:Prism_compare_rainbow_01.png](media/image1198.png) <!-- width="1.85in" height="1.0798611111111112in" -->White is crayon 14 and color number 14.
 This value was deliberately chosen *not* to be a multiple of 5 so that
 the every-fifth-crayon and every-tenth-crayon selections don't include
 it, so that all of the crayons in those smaller boxes are visible
@@ -303,7 +303,7 @@ animate the sprite.
 ### Perceptual Spaces: HSV and HSL
 
 ![Macintosh
-HD:Users:bh:Desktop:blues.png](assets/image1199.png) <!-- width="0.7361111111111112in" height="0.7222222222222222in" -->RGB is the right way to think about colors
+HD:Users:bh:Desktop:blues.png](media/image1199.png) <!-- width="0.7361111111111112in" height="0.7222222222222222in" -->RGB is the right way to think about colors
 if you're building or programming a display monitor; CMYK is the right
 way if you're building or programming a color printer. But neither of
 those coordinate systems is very intuitive if you're trying to
@@ -316,7 +316,7 @@ top right corner. Although no other point in the square is pure blue,
 you can tell at a glance that no other spectral color is mixed with the
 blue.
 
-![](assets/image1200.png) <!-- width="2.691666666666667in" height="1.1902777777777778in" -->Aside from hue, the other two dimensions
+![](assets/chp-16-image1200.png) <!-- width="2.691666666666667in" height="1.1902777777777778in" -->Aside from hue, the other two dimensions
 of a color space have to represent how much white and/or black is mixed
 with the spectral color. (Bear in mind that "mixing black" is a metaphor
 when it comes to monitors. There really is black paint, but there's no
@@ -340,8 +340,8 @@ they made it harder to control tinting.)
 
 attribution: Wikipedia user SharkD, CC BY-SA 3.0
 
-![](assets/image1201.png) <!-- width="1.5638888888888889in" height="0.29305555555555557in" -->![](assets/image1202.png) <!-- width="1.5555555555555556in" height="0.2659722222222222in" -->![Macintosh
-HD:Users:bh:Desktop:HSL-blue.png](assets/image1203.png) <!-- width="0.7638888888888888in" height="0.7638888888888888in" -->But if you're looking at colors on a
+![](assets/chp-16-image1201.png) <!-- width="1.5638888888888889in" height="0.29305555555555557in" -->![](assets/chp-16-image1202.png) <!-- width="1.5555555555555556in" height="0.2659722222222222in" -->![Macintosh
+HD:Users:bh:Desktop:HSL-blue.png](media/image1203.png) <!-- width="0.7638888888888888in" height="0.7638888888888888in" -->But if you're looking at colors on a
 computer display, HSV isn't really a good match for human perception.
 Intuitively, black and white should be treated symmetrically. This is
 the HSL \\index{HSL} (hue-saturation-lightness \\index{lightness}) color
@@ -380,7 +380,7 @@ standardization committee. I learned all this from [this
 tutorial](http://www.huevaluechroma.com/011.php), which you might find
 more coherent than jumping around Wikipedia if you're interested.
 
-![](assets/image1204.png) <!-- width="1.64375in" height="0.8416666666666667in" -->Although traditional Scratch and Snap*!*
+![](assets/chp-16-image1204.png) <!-- width="1.64375in" height="0.8416666666666667in" -->Although traditional Scratch and Snap*!*
 use HSV in programs, they use HSL in the color picker \\index{color
 picker}. The horizontal axis is hue (fair hue \\index{fair hue}, in this
 version) and the vertical axis is *lightness,* the scale with black at
@@ -392,8 +392,8 @@ keep at 100%. (In this fair-hue picker, some colors appear twice:
 "spectral" (50% lightness) browns as shades (≈33% lightness) of red or
 orange, and shades of those browns.)
 
-![](assets/image1205.png) <!-- width="0.20277777777777778in" height="0.20277777777777778in" -->![Macintosh
-HD:Users:bh:Desktop:yellow.png](assets/image1206.png) <!-- width="0.18888888888888888in" height="0.18888888888888888in" -->Software that isn't primarily about
+![](assets/chp-16-image1205.png) <!-- width="0.20277777777777778in" height="0.20277777777777778in" -->![Macintosh
+HD:Users:bh:Desktop:yellow.png](media/image1206.png) <!-- width="0.18888888888888888in" height="0.18888888888888888in" -->Software that isn't primarily about
 colors (so, *not* including Photoshop, for example) typically use HSV or
 HSL, with web-based software more likely to use HSV because that's
 what's built into the JavaScript \\index{JavaScript} programming
@@ -487,13 +487,13 @@ three more mixing options, but these three are the ones that correspond
 to real-world color mixing.
 
 ![Macintosh
-HD:Users:bh:Desktop:5R-3G-paint.png](assets/image1231.png) <!-- width="4.340277777777778in" height="0.6527777777777778in" -->The mix block will accept any number of
+HD:Users:bh:Desktop:5R-3G-paint.png](media/image1231.png) <!-- width="4.340277777777778in" height="0.6527777777777778in" -->The mix block will accept any number of
 colors, and will mix them in equal proportion. If (for any kind of
 mixing) you want more of one color than another, use the color at weight
 block \\index{color at weight block} to make a "weighted color":
 
 ![Macintosh
-HD:Users:bh:Desktop:4R-1G-paint.png](assets/image1232.png) <!-- width="5.166666666666667in" height="0.4305555555555556in" -->This mixes four parts red paint to one
+HD:Users:bh:Desktop:4R-1G-paint.png](media/image1232.png) <!-- width="5.166666666666667in" height="0.4305555555555556in" -->This mixes four parts red paint to one
 part green paint. All colors in a mixture can be weighted:
 
 (Thanks to [Scott Burns \\index{Burns,
@@ -514,7 +514,7 @@ variants of the latter two. []{#spirals .anchor}We recommend "fair HSL
 \\index{fair HSL}" for zeroing in on a desired color.
 
 ![Macintosh
-HD:Users:bh:Desktop:squiral-script.png](assets/image1241.png) <!-- width="1.5347222222222223in" height="1.8472222222222223in" -->
+HD:Users:bh:Desktop:squiral-script.png](media/image1241.png) <!-- width="1.5347222222222223in" height="1.8472222222222223in" -->
 
 ###  Subappendix: Geeky details on fair hue
 
@@ -573,15 +573,15 @@ to us directly from the JavaScript color management implementation.)
 This is why the set pen block includes options for "fair saturation" and
 so on.
 
-![](assets/image1258.png) <!-- width="5.9875in" height="0.3784722222222222in" -->For the extra-geeky, here are the exact
+![](assets/chp-16-image1258.png) <!-- width="5.9875in" height="0.3784722222222222in" -->For the extra-geeky, here are the exact
 table lookup points (fair hue \\index{fair hue table}, \[0,100\]):
 
 and here are the RGB settings at those points:
 
-### ![](assets/image1259.png) <!-- width="5.9840277777777775in" height="1.3736111111111111in" --> Subappendix: Geeky details on color numbers
+### ![](assets/chp-16-image1259.png) <!-- width="5.9840277777777775in" height="1.3736111111111111in" --> Subappendix: Geeky details on color numbers
 
 ![Macintosh
-HD:Users:bh:Desktop:integers.png](assets/image1260.png) <!-- width="2.0833333333333335in" height="2.2916666666666665in" -->Here is a picture of integer color
+HD:Users:bh:Desktop:integers.png](media/image1260.png) <!-- width="2.0833333333333335in" height="2.2916666666666665in" -->Here is a picture of integer color
 numbers, but remember that color numbers are continuous. (As usual,
 "continuous" values are ultimately converted to integer RGB values, so
 there's really some granularity.) Color numbers 0-14 are continuously
@@ -621,7 +621,7 @@ numbers look a lot like black, but they're quite different. Here are the
 darkest colors in each color number family.
 
 ![Macintosh
-HD:Users:bh:Desktop:darkest.png](assets/image1261.png) <!-- width="1.3888888888888888in" height="1.3888888888888888in" -->Darkest yellow doesn't look entirely
+HD:Users:bh:Desktop:darkest.png](media/image1261.png) <!-- width="1.3888888888888888in" height="1.3888888888888888in" -->Darkest yellow doesn't look entirely
 yellow. You might see it as greenish or brownish. As it turns out, the
 darkest color that really looks yellow is hardly dark at all. This color
 was hand-tweaked to look neither green nor brown to me, but ymmv.
@@ -656,7 +656,7 @@ color number 87.5 is the darkest one that's still unambiguously purple.
 Here are the reference points for color numbers that are multiples of
 five, except for item 4, which is used for color 14, not color 15:
 
-![](assets/image1262.png) <!-- width="4.583333333333333in" height="1.2777777777777777in" -->
+![](assets/chp-16-image1262.png) <!-- width="4.583333333333333in" height="1.2777777777777777in" -->
 
 The very pale three-input list blocks are for color numbers that are odd
 multiples of five, generally the "darkest" members of each color family.

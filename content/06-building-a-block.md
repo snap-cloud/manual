@@ -14,7 +14,7 @@ block \\index{Make a block}." Also, floating near the top of the palette
 is a plus sign. Also, the menu you get by right-clicking on the
 background of the scripting area has a "make a block" option.
 
-![](assets/image501.png) <!-- width="2.2708333333333335in" height="2.3472222222222223in" -->Clicking any of these will display a
+![](assets/chp-06-image501.png) <!-- width="2.2708333333333335in" height="2.3472222222222223in" -->Clicking any of these will display a
 dialog window in which you choose the block's name, shape, and
 palette/color. You also decide whether the block will be available to
 all sprites, or only to the current sprite and its children.
@@ -45,9 +45,9 @@ hat block \\index{hat block} is called the *prototype*
 \\index{prototype} of your custom block.[^3] You drag blocks under the
 hat to program your custom block, then click OK:
 
-![](assets/image502.png) <!-- width="4.210937226596675in" height="1.3364041994750657in" -->
+![](assets/chp-06-image502.png) <!-- width="4.210937226596675in" height="1.3364041994750657in" -->
 
-![](assets/image503.png) <!-- width="4.615555555555556in" height="3.647777777777778in" -->
+![](assets/chp-06-image503.png) <!-- width="4.615555555555556in" height="3.647777777777778in" -->
 
 Your block appears at the bottom of the Motion palette. Here's the block
 and the result of using it:
@@ -60,9 +60,9 @@ Editor \\index{Block Editor} will open. Notice the plus signs before and
 after the word square in the prototype block. If you hover the mouse
 over one, it lights up:
 
-![](assets/image508.png) <!-- width="3.4444444444444446in" height="2.7222222222222223in" -->
+![](assets/chp-06-image508.png) <!-- width="3.4444444444444446in" height="2.7222222222222223in" -->
 
-![](assets/image509.png) <!-- width="2.5833333333333335in" height="1.6041666666666667in" -->Click on the plus on the right. You will
+![](assets/chp-06-image509.png) <!-- width="2.5833333333333335in" height="1.6041666666666667in" -->Click on the plus on the right. You will
 then see the "input name" dialog \\index{input name dialog}:
 
 Type in the name "size" and click OK. There are other options in this
@@ -73,19 +73,19 @@ dialog with a lot of options about your input name. But we'll leave that
 for later. When you click OK, the new input appears in the block
 prototype:
 
-![](assets/image510.png) <!-- width="1.4791666666666667in" height="1.4895833333333333in" -->You can now drag the orange variable down
+![](assets/chp-06-image510.png) <!-- width="1.4791666666666667in" height="1.4895833333333333in" -->You can now drag the orange variable down
 into the script, then click okay:
 
-![](assets/image511.png) <!-- width="1.474724409448819in" height="1.495495406824147in" -->
+![](assets/chp-06-image511.png) <!-- width="1.474724409448819in" height="1.495495406824147in" -->
 
-![](assets/image512.png) <!-- width="0.6979166666666666in" height="0.25in" -->Your block now appears in the Motion palette with an
+![](assets/chp-06-image512.png) <!-- width="0.6979166666666666in" height="0.25in" -->Your block now appears in the Motion palette with an
 input box: You can draw any size square by entering the length of its
 side in the box and running the block as usual, by clicking it or by
 putting it in a script.
 
 ### Editing Block Properties
 
-![](assets/image513.png) <!-- width="0.9993055555555556in" height="0.7604166666666666in" -->What if you change your mind about a
+![](assets/chp-06-image513.png) <!-- width="0.9993055555555556in" height="0.7604166666666666in" -->What if you change your mind about a
 block's color (palette) or shape (command, reporter, predicate)? If you
 click in the hat block at the top that holds the prototype, but not in
 the prototype itself, you'll see a window in which you can change the
@@ -121,7 +121,7 @@ same thing as regular clicking, as described earlier.
 
 ## Recursion
 
-![](assets/image514.png) <!-- width="2.9652777777777777in" height="2.3631944444444444in" -->![](assets/image515.png) <!-- width="1.9583333333333333in" height="2.3541666666666665in" -->![](assets/image516.png) <!-- width="1.4236111111111112in" height="0.9118055555555555in" -->Since the new custom \\index{recursion}
+![](assets/chp-06-image514.png) <!-- width="2.9652777777777777in" height="2.3631944444444444in" -->![](assets/chp-06-image515.png) <!-- width="1.9583333333333333in" height="2.3541666666666665in" -->![](assets/chp-06-image516.png) <!-- width="1.4236111111111112in" height="0.9118055555555555in" -->Since the new custom \\index{recursion}
 block appears in its palette as soon as you *start* editing it, you can
 write recursive blocks (blocks that call themselves) by dragging the
 block into its own definition:
@@ -163,7 +163,7 @@ command blocks. (By contrast, the stop this script block \\index{stop
 script block} stops not only the current block invocation, but also the
 entire toplevel script that called it.)
 
-![](assets/image521.png) <!-- width="4.291666666666667in" height="0.8645833333333334in" -->Here's a slightly more compact way to
+![](assets/chp-06-image521.png) <!-- width="4.291666666666667in" height="0.8645833333333334in" -->Here's a slightly more compact way to
 write the factorial function:
 
 For more on recursion, see *Thinking Recursively* \\index{Thinking
@@ -184,7 +184,7 @@ game. Such a collection of blocks is called a *block library.*
 *To create a block library, \\index{library:block} choose "Export
 blocks..." from the File menu. You then see a window like this:
 
-![](assets/image522.png) <!-- width="2.0215277777777776in" height="2.7222222222222223in" -->The window shows all of your global custom
+![](assets/chp-06-image522.png) <!-- width="2.0215277777777776in" height="2.7222222222222223in" -->The window shows all of your global custom
 blocks. You can uncheck some of the checkboxes to select exactly which
 blocks you want to include in your library. (You can right-click or
 control-click on the export window for a menu that lets you check or
@@ -204,7 +204,7 @@ custom block as a single step. If you want to see stepping inside a
 custom block you must take these steps *in order:*
 
 1.  ![Macintosh
-    HD:Users:bh:Desktop:pix:footprint-lit.png](assets/image123.png) <!-- width="0.2916666666666667in"     height="0.16666666666666666in" -->Turn on Visible Stepping.
+    HD:Users:bh:Desktop:pix:footprint-lit.png](media/image123.png) <!-- width="0.2916666666666667in"     height="0.16666666666666666in" -->Turn on Visible Stepping.
 
 2.  Select "Edit" in the context menu(s) of the block(s) you want to
     examine.

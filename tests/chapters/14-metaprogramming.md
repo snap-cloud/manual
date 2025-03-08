@@ -60,8 +60,8 @@ Note that the underscores are separated from the block text by spaces.
 Note in the case of the for block's label that the upvar (the i) and the
 C-slot both count as inputs. Note also that the label is not meant to be
 a unique symbol that represents only this block. For example,
-![](assets/image628.png) <!-- width="0.8611111111111112in" height="0.19444444444444445in" --> and ![A picture containing text, hitting
-Description automatically generated](assets/image376.png) <!-- width="1.15in" height="0.19in" --> both have the label
+![](assets/chp-14-image628.png) <!-- width="0.8611111111111112in" height="0.19444444444444445in" --> and ![A picture containing text, hitting
+Description automatically generated](media/image376.png) <!-- width="1.15in" height="0.19in" --> both have the label
 
 \_ of \_. The label does not give the input slots names (that's done in
 the body, coming next) or types (that's done in the set \_ of block \_
@@ -79,7 +79,7 @@ upvar is to allow that. In the example on the previous page, there are
 four
 
 ![Graphical user interface, website Description automatically
-generated](assets/image951.png) <!-- width="2.83in" height="0.97in" -->set \_ of
+generated](media/image951.png) <!-- width="2.83in" height="0.97in" -->set \_ of
 block \_ to \_ blocks, reproduced below for your convenience:
 
 The category of the block can be set to any primitive or custom
@@ -94,14 +94,14 @@ can use just the name instead of putting it in a list. An empty or
 missing list item means type Any.
 
 ![Graphical user interface, text, application, chat or text message
-Description automatically generated](assets/image952.png) <!-- width="4.31in" height="0.83in" -->It\'s very important that these set blocks appear in the
+Description automatically generated](media/image952.png) <!-- width="4.31in" height="0.83in" -->It\'s very important that these set blocks appear in the
 same script as the define that creates the block, because the block
 upvar is local to that script. You can't later say, for example,
 
 because the copy of the hexagon block in this instruction counts as
 "using" it.
 
-![](assets/image953.png) <!-- width="2.6in" height="0.32in" -->The of block
+![](assets/chp-14-image953.png) <!-- width="2.6in" height="0.32in" -->The of block
 reporter is useful to copy attributes from one block to another, as we
 copied the definition of square, modified it, and used it to define
 hexagon. Some of the values this block reports are a little unfriendly:
@@ -114,21 +114,21 @@ program using this block to another language, the numeric outputs won't
 change, simplifying comparisons in your code. The set block accepts
 these numbers as an alternative to the names.
 
-![](assets/image954.png) <!-- width="3.379861111111111in" height="0.3798611111111111in" -->![A picture containing text, clipart
-Description automatically generated](assets/image955.png) <!-- width="1.02in" height="0.25in" -->There are a few more attributes of a block, less
+![](assets/chp-14-image954.png) <!-- width="3.379861111111111in" height="0.3798611111111111in" -->![A picture containing text, clipart
+Description automatically generated](media/image955.png) <!-- width="1.02in" height="0.25in" -->There are a few more attributes of a block, less
 commonly used.
 
 ![Graphical user interface, text, website Description automatically
-generated](assets/image956.png) <!-- width="3.5194444444444444in" height="0.6194444444444445in" -->![](assets/image961.png) <!-- width="3.2909722222222224in" height="0.6097222222222223in" -->![Graphical user interface, application
-Description automatically generated](assets/image962.png) <!-- width="2.35in" height="2.56in" -->![Graphical user interface, text, application
+generated](media/image956.png) <!-- width="3.5194444444444444in" height="0.6194444444444445in" -->![](assets/chp-14-image961.png) <!-- width="3.2909722222222224in" height="0.6097222222222223in" -->![Graphical user interface, application
+Description automatically generated](media/image962.png) <!-- width="2.35in" height="2.56in" -->![Graphical user interface, text, application
 Description automatically
-generated](assets/image963.png) <!-- width="1.6694444444444445in" height="0.25in" -->The list input is just like the one for set slots except
+generated](media/image963.png) <!-- width="1.6694444444444445in" height="0.25in" -->The list input is just like the one for set slots except
 for default values instead of types. Now for a block with a menu input:
 
 Prefer a read-only menu?
 
 ![Graphical user interface, website Description automatically
-generated](assets/image964.png) <!-- width="4.169444444444444in" height="1.2694444444444444in" -->We passed too quickly over how the script
+generated](media/image964.png) <!-- width="4.169444444444444in" height="1.2694444444444444in" -->We passed too quickly over how the script
 turned the square block into a hexagon block:
 
 Those replace item blocks aren't very elegant. I had to look at foo by
@@ -136,7 +136,7 @@ hand to figure out where the numbers I wanted to change are. This
 situation can be improved with a little programming:
 
 Exercise for the reader: Implement this:![Graphical user interface
-Description automatically generated](assets/image971.png) <!-- width="3.11in" height="0.57in" -->
+Description automatically generated](media/image971.png) <!-- width="3.11in" height="0.57in" -->
 
 Returning to the define block, there's another reason for the block
 upvar: It's helpful in defining a recursive procedure using define
@@ -156,7 +156,7 @@ variable to hold the outer environment.
 It's analogous to using explicit formal parameters when you nest calls
 to higher order functions.
 
-![](assets/image992.png) <!-- width="3.0395833333333333in" height="0.23958333333333334in" -->Note: Ordinarily, when you call a
+![](assets/chp-14-image992.png) <!-- width="3.0395833333333333in" height="0.23958333333333334in" -->Note: Ordinarily, when you call a
 function that reports a (ringed) procedure, that procedure was created
 in some specific environment, and has access to that environment's
 variables. This is how instance variables (fields) work in object

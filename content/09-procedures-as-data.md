@@ -2,7 +2,7 @@
 
 ## Call and Run
 
-![](assets/image692.png) <!-- width="3.6729166666666666in" height="1.5833333333333333in" -->In the for block \\index{for block}
+![](assets/chp-09-image692.png) <!-- width="3.6729166666666666in" height="1.5833333333333333in" -->In the for block \\index{for block}
 example above, the input named action has been declared as type "Command
 (C-shaped)"; that's why the finished block is C-shaped. But how does the
 block actually tell Snap*!* to carry out the commands inside the C-slot?
@@ -13,7 +13,7 @@ value is greater than the starting value; if not, the block should
 (depending on the designer's purposes) either not run at all, or change
 the variable by −1 for each repetition instead of by 1.
 
-![](assets/image693.png) <!-- width="0.5in" height="0.15625in" -->The important
+![](assets/chp-09-image693.png) <!-- width="0.5in" height="0.15625in" -->The important
 part of this script is the run block \\index{run block} near the end.
 This is a Snap*!* built-in command block that takes a Command-type value
 (a script) as its input, and carries out its instructions. (In this
@@ -40,7 +40,7 @@ is of type List.
 
 ### Call/Run with inputs
 
-![](assets/image698.png) <!-- width="1.8125in" height="0.20833333333333334in" -->The call block (like the run block) has a
+![](assets/chp-09-image698.png) <!-- width="1.8125in" height="0.20833333333333334in" -->The call block (like the run block) has a
 right arrowhead at the end; clicking on it adds the phrase "with inputs"
 and then a slot into which an input can be inserted:
 
@@ -49,7 +49,7 @@ inputs \\index{with inputs}" disappears also. The right arrowhead can be
 clicked as many times as needed for the number of inputs required by the
 reporter block being called.
 
-![](assets/image699.png) <!-- width="2.7291666666666665in" height="0.31805555555555554in" -->If the number of inputs given to call
+![](assets/chp-09-image699.png) <!-- width="2.7291666666666665in" height="0.31805555555555554in" -->If the number of inputs given to call
 (not counting the Reporter-type input that comes first) is the same as
 the number of empty input slots \\index{empty input slots, filling},
 then the empty slots are filled from left to right with the given input
@@ -119,7 +119,7 @@ automatically ring the input as described above. So the declaration of
 Procedure-type inputs makes the use of your custom higher order block
 much more convenient.
 
-![](assets/image708.png) <!-- width="2.375in" height="1.3541666666666667in" -->Why would you want a block to take a
+![](assets/chp-09-image708.png) <!-- width="2.375in" height="1.3541666666666667in" -->Why would you want a block to take a
 procedure as input? This is actually not an obscure thing to do; the
 primitive conditional and looping blocks (the C-shaped ones in the
 Control palette) take a script as input. Users just don't usually think
@@ -132,7 +132,7 @@ the C when the block is used is the input named action in the body of
 the script. The only way to make sense of the variable action is to
 understand that its value is a script.
 
-![](assets/image509.png) <!-- width="2.5833333333333335in" height="1.6041666666666667in" -->To declare an input to be Procedure-type,
+![](assets/chp-06-image509.png) <!-- width="2.5833333333333335in" height="1.6041666666666667in" -->To declare an input to be Procedure-type,
 open the input name dialog as usual, and click on the arrowhead:
 
 Then, in the long dialog, choose the appropriate Procedure type. The
@@ -150,10 +150,10 @@ recursive call above. (Other built-in Reporters can't report scripts, so
 they aren't accepted in a C-shaped slot.)
 
 ![Macintosh
-HD:Users:bh:Desktop:gear-part.png](assets/image658.png) <!-- width="0.19791666666666666in" height="0.19791666666666666in" -->![](assets/image709.png) <!-- width="3.6527777777777777in" height="2.75455271216098in" -->\
+HD:Users:bh:Desktop:gear-part.png](media/image658.png) <!-- width="0.19791666666666666in" height="0.19791666666666666in" -->![](assets/chp-09-image709.png) <!-- width="3.6527777777777777in" height="2.75455271216098in" -->\
 Why would you ever choose an inline Command slot rather than a C shape?
 Other than the run block
-![](assets/image710.png) <!-- width="2.1145833333333335in" height="0.46875in" -->discussed below, the only case I can think of is
+![](assets/chp-09-image710.png) <!-- width="2.1145833333333335in" height="0.46875in" -->discussed below, the only case I can think of is
 something like the C \\index{C programming language}/C++/Java
 \\index{Java programming language} for loop, which actually has *three*
 command script inputs (and one predicate input), only one of which is
@@ -172,14 +172,14 @@ where to use those inputs? If the called procedure (block or script) has
 empty input slots, Snap*!* "does the right thing." This has several
 possible meanings:
 
-![](assets/image711.png) <!-- width="3.4479166666666665in" height="0.34405949256342955in" -->1. If the number of empty slots
+![](assets/chp-09-image711.png) <!-- width="3.4479166666666665in" height="0.34405949256342955in" -->1. If the number of empty slots
 \\index{empty input slots, filling} is exactly equal to the number of
 inputs provided, then Snap*!* fills the empty slots from left to right:
 
 2\. If exactly one input is provided, Snap*!* will fill any number of
 empty slots with it:
 
-![](assets/image712.png) <!-- width="2.8020833333333335in" height="0.30694444444444446in" -->
+![](assets/chp-09-image712.png) <!-- width="2.8020833333333335in" height="0.30694444444444446in" -->
 
 3\. Otherwise, Snap*!* won't fill any slots, because the user's
 intention is unclear.
@@ -205,7 +205,7 @@ variable-input slot \\index{variable-input slot}, rather than onto the
 input slot:
 
 ![Macintosh
-HD:Users:bh:Desktop:gear-part.png](assets/image658.png) <!-- width="0.13194444444444445in" height="0.13194444444444445in" -->![](assets/image713.png) <!-- width="2.501388888888889in" height="1.9444444444444444in" -->![](assets/image714.png) <!-- width="2.225in" height="1.1708333333333334in" -->![](assets/image715.png) <!-- width="2.2756944444444445in" height="1.5972222222222223in" -->\
+HD:Users:bh:Desktop:gear-part.png](media/image658.png) <!-- width="0.13194444444444445in" height="0.13194444444444445in" -->![](assets/chp-09-image713.png) <!-- width="2.501388888888889in" height="1.9444444444444444in" -->![](assets/chp-09-image714.png) <!-- width="2.225in" height="1.1708333333333334in" -->![](assets/chp-09-image715.png) <!-- width="2.2756944444444445in" height="1.5972222222222223in" -->\
 Note that the halo \\index{halo:red} you see while dragging onto the
 arrowheads \\index{arrowheads} is red \\index{red halo} instead of
 white, and covers the input slot as well as the arrowheads. And when you
@@ -218,7 +218,7 @@ Since numbers is a list of numbers, each individual item is a number,
 just what sizes wants. This block will take any number of numbers as
 inputs, and will make the sprite grow and shrink accordingly:
 
-![](assets/image722.png) <!-- width="2.9583333333333335in" height="0.6875in" -->The user of this block calls it with any number of
+![](assets/chp-09-image722.png) <!-- width="2.9583333333333335in" height="0.6875in" -->The user of this block calls it with any number of
 *individual numbers* as inputs. But inside the definition of the block,
 all of those numbers form *a* *list* that has a single input name,
 numbers. This recursive definition ﬁrst checks to make sure there are
@@ -241,7 +241,7 @@ input inside the ring. The names of the input variables are called the
 *formal parameters* \\index{formal parameters} of the encapsulated
 procedure.
 
-![](assets/image731.png) <!-- width="4.322916666666667in" height="0.45416666666666666in" -->Here's a simple but contrived example
+![](assets/chp-09-image731.png) <!-- width="4.322916666666667in" height="0.45416666666666666in" -->Here's a simple but contrived example
 using explicit names to control which input goes where inside the ring:
 
 Here we just want to put one of the inputs into two different slots. If
@@ -249,10 +249,10 @@ we left all three slots empty, Snap*!* would not fill any of them,
 because the number of inputs provided (2) would not match the number of
 empty slots (3).
 
-![](assets/image732.png) <!-- width="4.679861111111111in" height="3.0180555555555557in" -->Here is a more realistic, much more
+![](assets/chp-09-image732.png) <!-- width="4.679861111111111in" height="3.0180555555555557in" -->Here is a more realistic, much more
 advanced example \\index{crossproduct}:
 
-![](assets/image733.png) <!-- width="4.347222222222222in" height="1.4027777777777777in" -->
+![](assets/chp-09-image733.png) <!-- width="4.347222222222222in" height="1.4027777777777777in" -->
 
 This is the definition of a block that takes any number of lists, and
 reports the list of all possible combinations of one item from each
@@ -276,7 +276,7 @@ Snap*!* from filling a slot that should really remain empty.
 
 ## Procedures as Data
 
-![](assets/image734.png) <!-- width="5.1875in" height="1.65625in" -->Here's an
+![](assets/chp-09-image734.png) <!-- width="5.1875in" height="1.65625in" -->Here's an
 example of a situation in which a procedure must be explicitly marked as
 data by pulling a ring from the Operators palette and putting the
 procedure (block or script) inside it:
@@ -287,7 +287,7 @@ not ringed. We must say explicitly that we want the block *itself* as
 the input, rather than whatever value would result from evaluating the
 block.
 
-![](assets/image735.png) <!-- width="3.8333333333333335in" height="0.84375in" -->Besides the list block in the example above, other
+![](assets/chp-09-image735.png) <!-- width="3.8333333333333335in" height="0.84375in" -->Besides the list block in the example above, other
 blocks into which you may want to put procedures are set (to set the
 value of a variable to a procedure), say and think (to display a
 procedure to the user), and report (for a reporter that reports a
@@ -295,14 +295,14 @@ procedure):
 
 ## Special Forms
 
-![](assets/image736.png) <!-- width="2.4993055555555554in" height="0.27847222222222223in" -->![](assets/image737.png) <!-- width="2.402083333333333in" height="1.4270833333333333in" -->The primitive if else \\index{if else
+![](assets/chp-09-image736.png) <!-- width="2.4993055555555554in" height="0.27847222222222223in" -->![](assets/chp-09-image737.png) <!-- width="2.402083333333333in" height="1.4270833333333333in" -->The primitive if else \\index{if else
 block } block has two C-shaped command slots and chooses one or the
 other depending on a Boolean test. Because Scratch doesn't emphasize
 functional programming, it lacks a corresponding reporter block to
 choose between two expressions. Snap*!* has one, but we could write our
 own:
 
-![](assets/image738.png) <!-- width="4.291666666666667in" height="0.8486111111111111in" -->![](assets/image739.png) <!-- width="3.818985126859143in" height="0.27433070866141734in" -->Our block works for these simple
+![](assets/chp-09-image738.png) <!-- width="4.291666666666667in" height="0.8486111111111111in" -->![](assets/chp-09-image739.png) <!-- width="3.818985126859143in" height="0.27433070866141734in" -->Our block works for these simple
 examples, but if we try to use it in writing a recursive operator
 \\index{recursive operator}, it'll fail:
 
@@ -320,7 +320,7 @@ be of type Reporter rather than type Any. Then, when calling the block,
 those inputs will be enclosed in a ring so that the expressions
 themselves, rather than their values, become the inputs:
 
-![](assets/image740.png) <!-- width="1.1145833333333333in" height="0.6979166666666666in" -->![](assets/image741.png) <!-- width="4.520833333333333in" height="1.0229166666666667in" -->![](assets/image742.png) <!-- width="2.6173611111111112in" height="1.5104166666666667in" -->
+![](assets/chp-09-image740.png) <!-- width="1.1145833333333333in" height="0.6979166666666666in" -->![](assets/chp-09-image741.png) <!-- width="4.520833333333333in" height="1.0229166666666667in" -->![](assets/chp-09-image742.png) <!-- width="2.6173611111111112in" height="1.5104166666666667in" -->
 
 In this version, the program works, with no infinite loop. But we've
 paid a heavy price: this reporter-if is no longer as intuitively obvious

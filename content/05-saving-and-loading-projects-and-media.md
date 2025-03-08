@@ -11,7 +11,7 @@ while on an airplane or otherwise not on the net. Also, cloud projects
 are limited in size, but you can have all the costumes and sounds you
 like if you save locally. This is why we have multiple ways to save.
 
-[]{#saveas .anchor}![](assets/image487.png) <!-- width="3.548611111111111in" height="2.576388888888889in" -->In either case, if you choose "Save as..."
+[]{#saveas .anchor}![](assets/chp-05-image487.png) <!-- width="3.548611111111111in" height="2.576388888888889in" -->In either case, if you choose "Save as..."
 from the File menu. You'll see something like this:
 
 (If you are not logged in to your Snap*!* cloud account, Computer will
@@ -27,9 +27,9 @@ project has a name, that name will be the default filename if you don't
 give a different name. Another, equivalent way to save to disk is to
 choose "Export project" from the File menu.
 
-## ![](assets/image488.png) <!-- width="1.2340277777777777in" height="2.329861111111111in" -->Creating a Cloud Account \\index{cloud storage} {#creating-a-cloud-account}
+## ![](assets/chp-05-image488.png) <!-- width="1.2340277777777777in" height="2.329861111111111in" -->Creating a Cloud Account \\index{cloud storage} {#creating-a-cloud-account}
 
-![](assets/image489.png) <!-- width="0.2916666666666667in" height="0.16666666666666666in" -->The other possibility is to save your
+![](assets/chp-05-image489.png) <!-- width="0.2916666666666667in" height="0.16666666666666666in" -->The other possibility is to save your
 project "in the cloud," \\index{save your project in the cloud} at the
 Snap*!* web site. In order to do this, you need an account with us.
 Click on the Cloud button \\index{Cloud button} ( ) in the Tool Bar.
@@ -77,7 +77,7 @@ us say this.)
 Once you've created your account, you can log into it using the
 "Login..." option from the Cloud menu:
 
-![](assets/image490.png) <!-- width="1.6875in" height="2.0277777777777777in" -->Use the user name and password that you
+![](assets/chp-05-image490.png) <!-- width="1.6875in" height="2.0277777777777777in" -->Use the user name and password that you
 set up earlier. If you check the "Stay signed in" box, then you will be
 logged in automatically the next time you run Snap*!* from the same
 browser on the same computer. Check the box if you're using your own
@@ -126,7 +126,7 @@ the Computer and Cloud options.
 ## If you lose your project, do this first!
 
 ![Macintosh HD:Users:bh:Desktop:Dropbox:manual
-(1):filebutton.png](assets/image384.png) <!-- width="0.3194444444444444in" height="0.18055555555555555in" -->If you are still in **Snap*!*** and
+(1):filebutton.png](media/image384.png) <!-- width="0.3194444444444444in" height="0.18055555555555555in" -->If you are still in **Snap*!*** and
 realize that you've loaded another project without saving the one you
 were working on: ***Don't edit the new project.*** From the File menu
 choose the Restore unsaved project option \\index{Restore unsaved

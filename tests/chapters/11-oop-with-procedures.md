@@ -15,7 +15,7 @@ build up to full implementations of class/instance and prototyping OOP.
 
 ## Local State with Script Variables
 
-![](assets/image852.png) <!-- width="2.2395833333333335in" height="1.5104166666666667in" -->This script implements an object *class*,
+![](assets/chp-11-image852.png) <!-- width="2.2395833333333335in" height="1.5104166666666667in" -->This script implements an object *class*,
 a type of object, namely the counter class \\index{counter class}. In
 this ﬁrst simplified version there is only one method, so no explicit
 message passing is necessary. When the make a counter block is called,
@@ -45,7 +45,7 @@ to a particular counter.
 
 ## Messages and Dispatch Procedures
 
-![](assets/image853.png) <!-- width="4.416666666666667in" height="3.1666666666666665in" -->In the simplified class above, there is
+![](assets/chp-11-image853.png) <!-- width="4.416666666666667in" height="3.1666666666666665in" -->In the simplified class above, there is
 only one method, and so there are no messages; you just call the
 instance to carry out its one method. Here is a more refined version
 that uses message passing \\index{message passing}:
@@ -63,7 +63,7 @@ version, calling the instance gives access to a method \\index{method},
 which must then be called to finish the job. We can provide a block to
 do both procedure calls in one:
 
-![](assets/image854.png) <!-- width="4.010416666666667in" height="0.7077198162729659in" -->
+![](assets/chp-11-image854.png) <!-- width="4.010416666666667in" height="0.7077198162729659in" -->
 
 The ask block \\index{ask block} has two required inputs: an object and
 a message. It also accepts optional additional inputs, which Snap*!*
@@ -86,7 +86,7 @@ of the child class \\index{child class} contains an instance of the
 parent class \\index{parent class}, and simply passes on the messages it
 doesn't want to specialize:
 
-![](assets/image857.png) <!-- width="3.8125in" height="3.5833333333333335in" -->
+![](assets/chp-11-image857.png) <!-- width="3.8125in" height="3.5833333333333335in" -->
 
 This script implements the buzzer class, which is a child of counter.
 Instead of having a count (a number) as a local state variable, each
@@ -127,15 +127,15 @@ corresponding *value.* We provide a lookup procedure to locate the
 key-value pair \\index{key-value pair} corresponding to a given key in a
 given table.
 
-![](assets/image858.png) <!-- width="3.2152777777777777in" height="2.361111111111111in" -->
+![](assets/chp-11-image858.png) <!-- width="3.2152777777777777in" height="2.361111111111111in" -->
 
-![](assets/image859.png) <!-- width="2.625in" height="0.78125in" -->
+![](assets/chp-11-image859.png) <!-- width="2.625in" height="0.78125in" -->
 
-![](assets/image860.png) <!-- width="5.604166666666667in" height="1.15625in" -->![](assets/image861.png) <!-- width="5.604166666666667in" height="1.15625in" -->
+![](assets/chp-11-image860.png) <!-- width="5.604166666666667in" height="1.15625in" -->![](assets/chp-11-image861.png) <!-- width="5.604166666666667in" height="1.15625in" -->
 
 There are also commands to insert and delete entries:
 
-![](assets/image862.png) <!-- width="3.71875in" height="1.8263888888888888in" -->![](assets/image863.png) <!-- width="3.2291666666666665in" height="2.1283136482939633in" -->
+![](assets/chp-11-image862.png) <!-- width="3.71875in" height="1.8263888888888888in" -->![](assets/chp-11-image863.png) <!-- width="3.2291666666666665in" height="2.1283136482939633in" -->
 
 As in the class/instance version, an object is represented as a dispatch
 procedure \\index{dispatch procedure} that takes a message as its input
@@ -162,13 +162,13 @@ grandparent, etc.) of the original recipient, and that method refers to
 a variable or method, it will use the child's variable or method if the
 child has its own version.
 
-![](assets/image864.png) <!-- width="4.375in" height="7.469444444444444in" -->The
+![](assets/chp-11-image864.png) <!-- width="4.375in" height="7.469444444444444in" -->The
 clone of block \\index{clone of block} below takes an object as its
 input and makes a child object. It should be considered as an internal
 part of the implementation; the preferred way to make a child of an
 object is to send that object a clone message.
 
-![](assets/image865.png) <!-- width="1.5729166666666667in" height="0.6875in" -->Every object is created with predefined methods for
+![](assets/chp-11-image865.png) <!-- width="1.5729166666666667in" height="0.6875in" -->Every object is created with predefined methods for
 set, method, delete-var, delete-method, and clone. It has one predefined
 variable, parent. Objects without a parent are created by calling new
 object:
@@ -190,6 +190,6 @@ method always sets counter1's total variable, which therefore keeps
 count of the total number of times that *any* counter is incremented.
 Running this script should \[say\] and (think) the following lists:
 
-![](assets/image870.png) <!-- width="4.208333333333333in" height="4.395833333333333in" -->\[1 1\] \[2 2\] \[3 3\] \[4 4\] (1 5) (2 6)
+![](assets/chp-11-image870.png) <!-- width="4.208333333333333in" height="4.395833333333333in" -->\[1 1\] \[2 2\] \[3 3\] \[4 4\] (1 5) (2 6)
 (3 7) \[5 8\] \[6 9\] \[7 10\] \[8 11\]
 

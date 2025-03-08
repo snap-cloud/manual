@@ -11,18 +11,18 @@ explicit is an advanced but versatile programming technique that allows
 users to create control structures such as nonlocal exit and
 multithreading.
 
-![](assets/image874.png) <!-- width="1.40625in" height="1.5416666666666667in" -->In the simplest case, the continuation of
+![](assets/chp-13-image874.png) <!-- width="1.40625in" height="1.5416666666666667in" -->In the simplest case, the continuation of
 a command block may just be the part of the script after the block. For
 example, in the script
 
-![](assets/image875.png) <!-- width="1.59375in" height="0.7083333333333334in" -->the continuation of the move 100 steps
+![](assets/chp-13-image875.png) <!-- width="1.59375in" height="0.7083333333333334in" -->the continuation of the move 100 steps
 block is
 
-![](assets/image876.png) <!-- width="1.4784722222222222in" height="0.8020833333333334in" -->But some situations are more complicated.
+![](assets/chp-13-image876.png) <!-- width="1.4784722222222222in" height="0.8020833333333334in" -->But some situations are more complicated.
 For example, what is the continuation of move 100 steps in the following
 script?
 
-![](assets/image877.png) <!-- width="1.6666666666666667in" height="1.0729166666666667in" -->That's a trick question; the move block is
+![](assets/chp-13-image877.png) <!-- width="1.6666666666666667in" height="1.0729166666666667in" -->That's a trick question; the move block is
 run four times, and it has a different continuation each time. The first
 time, its continuation is
 
@@ -30,7 +30,7 @@ Note that there is no repeat 3 block in the actual script, but the
 continuation has to represent the fact that there are three more times
 through the loop to go. The fourth time, the continuation is just
 
-![](assets/image878.png) <!-- width="1.59375in" height="0.29791666666666666in" -->What counts is not what's physically
+![](assets/chp-13-image878.png) <!-- width="1.59375in" height="0.29791666666666666in" -->What counts is not what's physically
 below the block in the script, but what computational work remains to be
 done.
 
@@ -40,28 +40,28 @@ but the actual continuation is made from the evaluator's internal
 bookkeeping of where it's up to in a script. So it's really the original
 script plus some extra information. But the pictures here do correctly
 represent what work the process still has left to do.)\
-![](assets/image879.png) <!-- width="1.4791666666666667in" height="1.25in" -->When a block is used inside a custom block, its
+![](assets/chp-13-image879.png) <!-- width="1.4791666666666667in" height="1.25in" -->When a block is used inside a custom block, its
 continuation may include parts of more than one script. For example, if
 we make a custom square block
 
 and then use that block in a script:
 
-![](assets/image880.png) <!-- width="0.7291666666666666in" height="0.59375in" -->then the continuation of the first use of move 100
+![](assets/chp-13-image880.png) <!-- width="0.7291666666666666in" height="0.59375in" -->then the continuation of the first use of move 100
 steps is
 
-![](assets/image881.png) <!-- width="1.6666666666666667in" height="1.2604166666666667in" -->in which part comes from inside the square
+![](assets/chp-13-image881.png) <!-- width="1.6666666666666667in" height="1.2604166666666667in" -->in which part comes from inside the square
 block and part comes from the call to square. Nevertheless, ordinarily
 when we *display* a continuation we show only the part within the
 current script.
 
-![](assets/image882.png) <!-- width="2.1875in" height="0.5729166666666666in" -->The continuation of a command block, as
+![](assets/chp-13-image882.png) <!-- width="2.1875in" height="0.5729166666666666in" -->The continuation of a command block, as
 we've seen, is a simple script with no input slots. But the continuation
 of a *reporter* block has to do something with the value reported by the
 block, so it takes that value as input. For example, in the script
 
 the continuation of the 3+4 block is
 
-![](assets/image883.png) <!-- width="3.5729166666666665in" height="0.5729166666666666in" -->Of course the name result in that picture
+![](assets/chp-13-image883.png) <!-- width="3.5729166666666665in" height="0.5729166666666666in" -->Of course the name result in that picture
 is arbitrary; any name could be used, or no name at all by using the
 empty-slot notation for input substitution.
 
@@ -69,7 +69,7 @@ empty-slot notation for input substitution.
 
 Like all \\index{continuation passing style} programming languages,
 Snap*!* evaluates compositions of nested reporters from the inside out.
-For example, in the expression ![](assets/image884.png) <!-- width="1.3125in" height="0.22916666666666666in" -->Snap*!* first adds 4 and 5, then
+For example, in the expression ![](assets/chp-13-image884.png) <!-- width="1.3125in" height="0.22916666666666666in" -->Snap*!* first adds 4 and 5, then
 multiplies 3 by that sum. This often means that the order in which the
 operations are done is backwards from the order in which they appear in
 the expression: When reading the above expression you say "times" before
@@ -79,7 +79,7 @@ say, "take the sum of four and five, and then take the product of three
 and that sum." This sounds more awkward, but it has the virtue of
 putting the operations in the order in which they're actually performed.
 
-![](assets/image885.png) <!-- width="3.1875in" height="0.3541666666666667in" -->That may seem like overkill in a simple
+![](assets/chp-13-image885.png) <!-- width="3.1875in" height="0.3541666666666667in" -->That may seem like overkill in a simple
 expression, but suppose you're trying to convey the expression
 
 to a friend over the phone. If you say "factorial of three times
@@ -94,10 +94,10 @@ blocks are *commands*, not reporters.
 
 We can check that these blocks give the results we want:
 
-![](assets/image908.png) <!-- width="5.533333333333333in" height="2.3180555555555555in" -->The original expression can now be
+![](assets/chp-13-image908.png) <!-- width="5.533333333333333in" height="2.3180555555555555in" -->The original expression can now be
 represented as
 
-![](assets/image909.png) <!-- width="2.1930555555555555in" height="1.0527777777777778in" -->If you read this top to bottom, don't you
+![](assets/chp-13-image909.png) <!-- width="2.1930555555555555in" height="1.0527777777777778in" -->If you read this top to bottom, don't you
 get "Add two and two, take the factorial of that, add five to that,
 multiply three by that, and take the factorial of the result"? Just what
 we wanted! This way of working, in which every block is a command that
@@ -150,7 +150,7 @@ Here's the classic example. We want to write a recursive block that
 takes a list of numbers as input, and reports the product of all the
 numbers:
 
-![](assets/image910.png) <!-- width="3.8958333333333335in" height="1.9375in" -->![](assets/image911.png) <!-- width="3.8958333333333335in" height="1.3416666666666666in" -->But we can improve the efficiency of this
+![](assets/chp-13-image910.png) <!-- width="3.8958333333333335in" height="1.9375in" -->![](assets/chp-13-image911.png) <!-- width="3.8958333333333335in" height="1.3416666666666666in" -->But we can improve the efficiency of this
 block, in the case of a list that includes a zero; as soon as we see the
 zero, we know that the entire product is zero.
 
@@ -159,21 +159,21 @@ the list 1,2,3,0,4,5. We find the zero on the third recursive call (the
 fourth call altogether), as the first item of the sublist 0,4,5. What is
 the continuation of the report 0 block? It's
 
-![](assets/image912.png) <!-- width="4.333333333333333in" height="0.4166666666666667in" -->Even though we already know that result is
+![](assets/chp-13-image912.png) <!-- width="4.333333333333333in" height="0.4166666666666667in" -->Even though we already know that result is
 zero, we're going to do three unnecessary multiplications while
 unwinding the recursive calls.
 
-![](assets/image913.png) <!-- width="4.038194444444445in" height="1.9256944444444444in" -->![](assets/image914.png) <!-- width="3.9451388888888888in" height="1.0979166666666667in" -->We can improve upon this by capturing the
+![](assets/chp-13-image913.png) <!-- width="4.038194444444445in" height="1.9256944444444444in" -->![](assets/chp-13-image914.png) <!-- width="3.9451388888888888in" height="1.0979166666666667in" -->We can improve upon this by capturing the
 continuation \\index{call w/continuation block } of the top-level call
 to product:
 
-![](assets/image915.png) <!-- width="2.7083333333333335in" height="0.2916666666666667in" -->The
-![](assets/image916.png) <!-- width="1.59125in" height="0.18611111111111112in" --> block takes as its input a one-input
+![](assets/chp-13-image915.png) <!-- width="2.7083333333333335in" height="0.2916666666666667in" -->The
+![](assets/chp-13-image916.png) <!-- width="1.59125in" height="0.18611111111111112in" --> block takes as its input a one-input
 script, as shown in the product example. It calls that script with *the
 continuation of the* call-with-continuation *block itself* as its input.
 In this case, that continuation is
 
-![](assets/image917.png) <!-- width="4.40625in" height="1.15625in" -->reporting
+![](assets/chp-13-image917.png) <!-- width="4.40625in" height="1.15625in" -->reporting
 to whichever script called product. If the input list doesn't include a
 zero, then nothing is ever done with that continuation, and this version
 works just like the original product. But if the input list is
@@ -183,7 +183,7 @@ continuation immediately reports that 0 to the caller of product,
 *without* unwinding all the recursive calls and without the unnecessary
 multiplications.
 
-![](assets/image918.png) <!-- width="4.385416666666667in" height="0.5104166666666666in" -->I could have written product a little more
+![](assets/chp-13-image918.png) <!-- width="4.385416666666667in" height="0.5104166666666666in" -->I could have written product a little more
 simply using a Reporter ring instead of a Command ring:
 
 but it's customary to use a script to represent the input to
@@ -207,7 +207,7 @@ we can generalize this mechanism to allow nonlocal exit even within a
 block called from inside a loop, or through several levels of nested
 loops:
 
-![](assets/image923.png) <!-- width="1.8541666666666667in" height="2.6534722222222222in" -->The upvar break has as its value a
+![](assets/chp-13-image923.png) <!-- width="1.8541666666666667in" height="2.6534722222222222in" -->The upvar break has as its value a
 continuation \\index{run w/continuation} that can be called from
 anywhere in the program to jump immediately to whatever comes after the
 catch block in its script. Here's an example with two nested invocations
@@ -244,7 +244,7 @@ each in turn. At the end of every script is an implicit "end thread
 process of running a script), which switches to another script without
 remembering the old one.
 
-![](assets/image928.png) <!-- width="2.9479166666666665in" height="4.254166666666666in" -->Since this all happens automatically, there
+![](assets/chp-13-image928.png) <!-- width="2.9479166666666665in" height="4.254166666666666in" -->Since this all happens automatically, there
 is generally no need for the user to think about threads. But, just to
 show that this, too, is not magic, here is an implementation of a simple
 thread system. It uses a global variable named tasks that initially
