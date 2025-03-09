@@ -1,0 +1,58 @@
+---
+title: "Index"
+---
+
+```{python}
+#| echo: false
+#| output: asis
+
+# Read the index entries
+entries = {}
+try:
+    with open('_index_entries.txt', 'r') as f:
+        for line in f:
+            parts = line.strip().split('|')
+            if len(parts) >= 3:
+                term = parts[0]
+                file_path = parts[1]
+                title = parts[2]
+
+                if term not in entries:
+                    entries[term] = []
+
+                # Avoid duplicates
+                entry = {"file": file_path, "title": title}
+                if entry not in entries[term]:
+                    entries[term].append(entry)
+except FileNotFoundError:
+    print("No index entries found.")
+
+# Sort terms alphabetically
+sorted_terms = sorted(entries.keys())
+
+# Group by first letter
+current_letter = None
+for term in sorted_terms:
+    first_letter = term[0].upper()
+
+    # Add letter heading when changing letter
+    if first_letter != current_letter:
+        current_letter = first_letter
+        print(f"\n## {current_letter}\n")
+
+    # Format term (replace hyphens with commas)
+    formatted_term = term.replace('-', ', ')
+
+    # Create links to pages
+    page_links = []
+    for entry in entries[term]:
+        file_path = entry.get("file", "")
+        page_title = entry.get("title", file_path)
+
+        if file_path and page_title:
+            # Create link to the page
+            page_links.append(f"[{page_title}]({file_path})")
+
+    # Output the index entry
+    print(f"**{formatted_term}** — {', '.join(set(page_links))}\n")
+```

@@ -48,48 +48,50 @@ book:
   repo-actions: [edit]
   chapters:
     - index.qmd
-    - part: content/Chapter1.md
-      chapters:
-      - content/C1-S1.qmd
-      - content/C1-S2.md
-      - content/C1-S3.md
-      - content/C1-S4.md
-      - content/C1-S5.md
-      - content/C1-S6.md
-      - content/C1-S7.md
-      - content/C1-S8.md
-      - content/C1-S12.md
-      - content/C1-S13.md
-      # - content/C1-S14.md
-      - content/C1-S15.md
-      - content/C1-S16.md
-      - content/C1-S17.md
-      - content/C1-S18.md
-    # - content/Chapter2.md
-    - content/03-acknowledgements-acknowledgements-toc-heading.md
-    - content/04-blocks-scripts-and-sprites.md
-    - content/05-saving-and-loading-projects-and-media.md
-    - content/06-building-a-block.md
-    - content/07-first-class-lists.md
-    - content/08-typed-inputs.md
-    - content/09-procedures-as-data.md
-    - content/10-object-oriented-programming-with-sprites.md
-    - content/11-oop-with-procedures.md
-    - content/12-the-outside-world.md
-    - content/13-continuations.md
-    - content/14-metaprogramming.md
-    - content/15-user-interface-elements-index-user-interface-elements-user-interface-elements.md
+    # - part: content/Chapter1.md
+    #   chapters:
+    #   - content/C1-S1.qmd
+    #   - content/C1-S2.md
+    #   - content/C1-S3.md
+    #   - content/C1-S4.md
+    #   - content/C1-S5.md
+    #   - content/C1-S6.md
+    #   - content/C1-S7.md
+    #   - content/C1-S8.md
+    #   - content/C1-S12.md
+    #   - content/C1-S13.md
+    #   # - content/C1-S14.md
+    #   - content/C1-S15.md
+    #   - content/C1-S16.md
+    #   - content/C1-S17.md
+    #   - content/C1-S18.md
+    - content/01-acknowledgements.md
+    - content/02-blocks-scripts-and-sprites.md
+    - content/03-saving-and-loading-projects-and.md
+    - content/04-building-a-block.md
+    - content/05-first-class-lists.md
+    - content/06-typed-inputs.md
+    - content/07-procedures-as-data.md
+    - content/08-object-oriented-programming-with-sprites.md
+    - content/09-oop-with-procedures.md
+    - content/10-the-outside-world.md
+    - content/11-continuations.md
+    - content/12-metaprogramming.md
+    - content/13-user-interface-elements.md
   appendices:
-    - content/16-appendix-a-snap-color-library.md
-    - content/17-appendix-b-apl-features.md
+    - content/14-appendix-a-snap-color-library.md
+    - content/15-appendix-b-apl-features.md
     - examples.qmd
     - references.qmd
+    - content/index-list.qmd
 
 
 bibliography: references.bib
 
 format:
   html:
+    filters:
+      - scripts/collect-index.lua
     # output-file: snap-manual
     theme: [none, styles/snap-manual.scss]
     strip-comment: true
@@ -113,7 +115,7 @@ format:
     # pdf-engine: wkhtmltopdf
     toc: true
     number-sections: true
-    documentclass: scrreprt
+    documentclass: book
     papersize: letter
     resource-path:
       - ./

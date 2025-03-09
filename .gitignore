@@ -1,5 +1,10 @@
+.DS_Store
+Thumbs.db
+~*
+
 # Basic Python-y things
 env/
+
 # JupyterBook
 _build/
 
