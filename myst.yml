@@ -1,0 +1,41 @@
+# See docs at: https://mystmd.org/guide/frontmatter
+version: 1
+project:
+  id: 4e235233-a81f-4feb-b272-e195a1f0d203
+  title: Snap! Manual
+  description: A manual for snap!
+  # keywords: []
+  abstract: |
+    Something goes here...
+  authors: |
+    Brian Harvey, Jens Mönig, Michael Ball, Victoria Phelps, Jadga Hügle, Bernat Romagosa
+  github: https://github.com/snap-cloud/snap-manual
+  # To autogenerate a Table of Contents, run "jupyter book init --write-toc"
+  toc:
+    # TODO: Need an cover page
+    - file: content/01-acknowledgements.md
+    - file: content/02-blocks-scripts-and-sprites.md
+    - file: content/03-saving-and-loading-projects-and.md
+    - file: content/04-building-a-block.md
+    - file: content/05-first-class-lists.md
+    - file: content/06-typed-inputs.md
+    - file: content/07-procedures-as-data.md
+    - file: content/08-object-oriented-programming-with-sprites.md
+    - file: content/09-oop-with-procedures.md
+    - file: content/10-the-outside-world.md
+    - file: content/11-continuations.md
+    - file: content/12-metaprogramming.md
+    - file: content/13-user-interface-elements.md
+    - file: content/14-appendix-a-snap-color-library.md
+    - file: content/15-appendix-b-apl-features.md
+  exports:
+    - format: pdf
+      template: lapreprint
+    - format: pdf
+      template: plain_latex_book
+      # articles: intro.md
+site:
+  template: book-theme
+  options:
+    favicon: images/snap-logo.png
+    logo: images/snap-logo.png
