@@ -7,6 +7,8 @@ env/
 
 # JupyterBook
 _build/
+# MyST build outputs
+_build
 
 # Quarto
 /env/
@@ -22,7 +24,11 @@ content/*.tex
 content/*.pdf
 content/*_files/**
 
+# Conversion
+conversion/chapters/*
+!conversion/figures/.gitkeep
+
 /.luarc.json
 
-# MyST build outputs
-_build
+# Utils while building...
+ _index_entries.txt

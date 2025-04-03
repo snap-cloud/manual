@@ -16,8 +16,11 @@ The reference manual for the [Snap<em>!</em> programming language][sbe]. ([GitHu
 ## Authors
 Brian Harvey & Jens Mönig
 
-## Quarto
+## 2025 Rewrite
 
+There are 3 compoents, for the most part, you should focus on working the Quarto to render the Snap! manual.also
+
+## Quarto
 This version of the Snap! manual is built using [Quarto][quarto].
 
 [quarto]: https://quarto.org/docs/
@@ -26,11 +29,13 @@ This version of the Snap! manual is built using [Quarto][quarto].
 
 You need:
 * Quarto
+* Pandoc
 * LaTeX
 
 macOS:
 ```shell
 brew install quarto
+brew install pandoc
 brew install mactex-no-gui
 ```
 
@@ -54,7 +59,23 @@ Your webpage will automatically refresh as you save changes to files.
 quarto render
 ```
 
-### Hosting the book
+## JupyterBook
+
+You can use JuypterBook 2 (alpha) to also build the book.
+
+Instructions coming soon.
+
+## Document Conversion
+If you are making large updates to the md structure, it may be worth working on the script to convert the Word document to markdown.
+The script assumes you have `pandoc` installed and available in your path.
+
+```
+cd conversion
+ruby convert-word-doc.rb
+```
+This conversion script dumps content into `conversion/chapters/` and then copies it into the `content/` folder.
+
+## Hosting the book
 
 The website is hosted on GitHub pages, compiled by the `quarto.yml` workflow.
 The PDF is... TBD.

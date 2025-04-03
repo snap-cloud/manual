@@ -36,7 +36,10 @@ def chapter_file_name(heading, index)
   # Sanitize the heading to create a filename
   sanitized_heading = heading.downcase.gsub(/[^a-z0-9]+/, '-').gsub(/^-|-$/, '')
   sanitized_heading = sanitized_heading.split('-')[0..4].join('-')
-  "#{OUTPUT_DIR}/#{format('%02d', index)}-#{sanitized_heading}.md"
+  chapter_directoory = "#{format('%02d', index)}-#{sanitized_heading}"
+  # Create the directory for the chapter
+  `mkdir -p #{OUTPUT_DIR}/#{chapter_directoory}`
+  "#{OUTPUT_DIR}/#{chapter_directoory}/index.md"
 end
 
 
@@ -56,7 +59,8 @@ def split_chapters
     next if index < 3
     next if chapter.strip.empty?
 
-    index -= 2
+    # Index - 3 so that chapter 0 is "acknowledgements"
+    index -= 3
     heading = chapter.lines.first.strip
     filename = chapter_file_name(heading, index)
     puts "Processing: #{index} - #{filename}"
