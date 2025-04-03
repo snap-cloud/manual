@@ -27,7 +27,7 @@ def make_all_dirs
   `mkdir -p #{OUTPUT_DIR}/assets`
 end
 
-def chapter_file_name(heading, index)
+def chapter_folder_name(heading, index)
   # Remove all other markdown formatting from the heading
   # Strip *, !, ![](.*), and {.*} from the heading
   heading = heading.gsub(/\*|!|\!\[.*?\]|\{.*?\}/, '')
@@ -37,9 +37,11 @@ def chapter_file_name(heading, index)
   sanitized_heading = heading.downcase.gsub(/[^a-z0-9]+/, '-').gsub(/^-|-$/, '')
   sanitized_heading = sanitized_heading.split('-')[0..4].join('-')
   chapter_directoory = "#{format('%02d', index)}-#{sanitized_heading}"
-  # Create the directory for the chapter
-  `mkdir -p #{OUTPUT_DIR}/#{chapter_directoory}`
-  "#{OUTPUT_DIR}/#{chapter_directoory}/index.md"
+  "#{OUTPUT_DIR}/#{chapter_directoory}"
+end
+
+def chapter_file_name(heading, index)
+  "#{chapter_folder_name(heading, index)}/index.md"
 end
 
 
@@ -62,26 +64,26 @@ def split_chapters
     # Index - 3 so that chapter 0 is "acknowledgements"
     index -= 3
     heading = chapter.lines.first.strip
+
+    output_dir = chapter_folder_name(heading, index)
     filename = chapter_file_name(heading, index)
     puts "Processing: #{index} - #{filename}"
 
-    chapter = cleanup_chapter_md(chapter, index, image_index)
+    # Arguments: chapter_content, chapter_number, output_dir, image_index
+    chapter = cleanup_chapter_md(chapter, index, output_dir, image_index)
 
+    FileUtils.mkdir_p(output_dir)
     File.write(filename, "# " + chapter)
   end
 end
 
 # This cleans up gfm, commonmark, and pandoc markdown
-def cleanup_chapter_md(chapter, number, image_index)
+def cleanup_chapter_md(chapter, number, output_dir, image_index)
   chapter_num = format('%02d', number)
 
   # Move the style attribute of an image tag to a comment after the image
   # {width="4.326388888888889in" height="2.689583333333333in"}
   chapter.gsub!(/(!\[.*?\]\(.*?\))\s*\{(.*?)\}/m) do
-    "#{$1} <!-- #{$2.gsub(/\n/, ' ')} -->"
-  end
-  # Move the style attribute of an HTML image tag to a comment after the image
-  chapter.gsub!(/(<img.*?src=["'].*?["'].*?>)\s*\{(.*?)\}/m) do
     "#{$1} <!-- #{$2.gsub(/\n/, ' ')} -->"
   end
 
@@ -100,21 +102,42 @@ def cleanup_chapter_md(chapter, number, image_index)
   # then update the markdown to point to the new image locations
   # chapter_images = chapter.scan(/\!\[.*?\]\(.*?\)/)
   chapter_images = chapter.scan(/<img.*?src=["'](.*?)["'].*?>/m)
+  image_output_dir = "#{output_dir}/assets"
+  FileUtils.mkdir_p(image_output_dir)
+
   chapter_images.each do |image|
     # extract the image name from the markdown
     image_name = image[0]
+    # This only applies to about ~40 images in the entire manual
+    # if image_index[image_name]
+    #   # We are referencing an image that is in a different chapter.
+    #   # Therefore the path needs to be adjusted some to work using the `content/` directory.
+    #   new_image_path = image_index[image_name].gsub(/#{OUTPUT_DIR}\//, '../content/')
+    #   puts "Image already exists: #{image_name} -> #{new_image_path}"
+    #   chapter.gsub!(image_name, new_image_path)
+    #   next
+    # end
 
-    if image_index[image_name]
-      chapter.gsub!(image_name, "assets/#{image_index[image_name]}")
-      next
-    end
-
-    new_image_name = "chp-#{chapter_num}-#{File.basename(image_name)}"
-    image_index[image_name] = new_image_name
-    FileUtils.cp(image_name, "#{OUTPUT_DIR}/assets/#{new_image_name}")
-    chapter.gsub!(image_name, "assets/#{new_image_name}")
+    new_image_name = "#{image_output_dir}/#{File.basename(image_name)}"
+    html_image_path = "assets/#{File.basename(image_name)}"
+    # image_index[image_name] = new_image_name
+    FileUtils.cp(image_name, new_image_name)
+    chapter.gsub!(image_name, html_image_path)
   end
 
+    # Move the style attribute of an HTML image tag to a comment after the image
+    chapter.gsub!(/(<img.*?src=["'].*?["'].*?>)\s*\{(.*?)\}/m) do
+      "#{$1} <!-- #{$2.gsub(/\n/, ' ')} -->"
+    end
+
+    # Convert HTML-style image tags to markdown-style image tags
+    chapter.gsub!(/<img.*?src=["'](.*?)["'](.*?)>/m) do
+      image_path = $1
+      "![#{File.basename(image_path)}](#{image_path}) <!-- #{$2.gsub(/\n/, ' ')} --> "
+    end
+
+    # Tidy LaTex Index tags to remove space before punctuation
+    chapter.gsub!(/(\\index\{.*?})\s+([,\.;])/, '\1\2')
   chapter
 end
 

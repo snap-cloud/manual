@@ -31,4 +31,5 @@ conversion/chapters/*
 /.luarc.json
 
 # Utils while building...
- _index_entries.txt
+_index_entries.txt
+index-list.quarto_ipynb

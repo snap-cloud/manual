@@ -73,6 +73,7 @@ The script assumes you have `pandoc` installed and available in your path.
 cd conversion
 ruby convert-word-doc.rb
 ```
+
 This conversion script dumps content into `conversion/chapters/` and then copies it into the `content/` folder.
 
 ## Hosting the book
