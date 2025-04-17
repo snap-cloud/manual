@@ -1,0 +1,1205 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.6.42">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="description" content="A manual for Snap! TODO">
+
+<title>2&nbsp; Blocks, Scripts, and Sprites – Snap! Reference Manual</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../content/02-saving-and-loading-projects-and/index.html" rel="next">
+<link href="../../content/00-acknowledgements/index.html" rel="prev">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-c09c9fbbb0eb80a11083d72da712c037.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-sidebar floating nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="https://snap.berkeley.edu/" class="navbar-brand navbar-brand-logo">
+    <img src="../../images/snap-logo.png" alt="" class="navbar-logo">
+    </a>
+    <a class="navbar-brand" href="https://snap.berkeley.edu/">
+    <span class="navbar-title">Snap! Reference Manual</span>
+    </a>
+  </div>
+        <div class="quarto-navbar-tools tools-end">
+    <a href="https://github.com/snap-cloud/snap-manual/" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
+    <a href="../../snap-manual.pdf" title="Download PDF" class="quarto-navigation-tool px-1" aria-label="Download PDF"><i class="bi bi-file-pdf"></i></a>
+</div>
+          <div id="quarto-search" class="" title="Search"></div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../content/01-blocks-scripts-and-sprites/index.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Blocks, Scripts, and Sprites</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
+      <a href="../../index.html" class="sidebar-logo-link">
+      <img src="../../images/snap-logo.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      </a>
+      </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">The Snap<em>!</em> Reference Manual</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../content/00-acknowledgements/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Acknowledgements</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../content/01-blocks-scripts-and-sprites/index.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Blocks, Scripts, and Sprites</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../content/02-saving-and-loading-projects-and/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Saving and Loading Projects and Media</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../content/03-building-a-block/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Building a Block</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../content/04-first-class-lists/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">First class lists</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../content/05-typed-inputs/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Typed Inputs</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../content/06-procedures-as-data/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Procedures as Data</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../content/07-object-oriented-programming-with-sprites/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Object Oriented Programming with Sprites</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../content/08-oop-with-procedures/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">OOP with Procedures</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../content/09-the-outside-world/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">The Outside World</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../content/10-continuations/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Continuations</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../content/11-metaprogramming/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Metaprogramming</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../content/12-user-interface-elements/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">User Interface Elements <span></span></span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../content/Chapter1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Blocks, Scripts, and Sprites</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../content/C1-S1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Sprites and Parallelism</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../content/C1-S2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Nesting Sprites: Anchors and Parts</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../content/C1-S3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Reporter Blocks and Expressions</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../content/C1-S4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Predicates and Conditional Evaluation</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../content/C1-S5.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Variables</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../content/C1-S6.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Global Variables</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../content/C1-S7.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Script Variables</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../content/C1-S8.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Transient variables</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../content/C1-S12.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Debugging</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../content/C1-S13.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">The pause button</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../content/C1-S15.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Breakpoints: the pause all block</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../content/C1-S16.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">Visible stepping</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../content/C1-S17.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">Etcetera</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../content/C1-S18.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">Libraries</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../content/Chapter2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">28</span>&nbsp; <span class="chapter-title">Saving and Loading Projects and Media</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Appendices</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../content/13-appendix-a-snap-color-library/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Appendix A. Snap<em>!</em> color library</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../content/14-appendix-b-apl-features/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">Appendix B. APL features</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../examples.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">C</span>&nbsp; <span class="chapter-title">Example Test Title</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">D</span>&nbsp; <span class="chapter-title">References</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#hat-blocks-and-command-blocks" id="toc-hat-blocks-and-command-blocks" class="nav-link active" data-scroll-target="#hat-blocks-and-command-blocks">Hat Blocks and Command Blocks</a></li>
+  <li><a href="#sprites-and-parallelism" id="toc-sprites-and-parallelism" class="nav-link" data-scroll-target="#sprites-and-parallelism"><mark> </mark> Sprites and Parallelism</a>
+  <ul class="collapse">
+  <li><a href="#costumes-and-sounds" id="toc-costumes-and-sounds" class="nav-link" data-scroll-target="#costumes-and-sounds">Costumes and Sounds</a></li>
+  <li><a href="#inter-sprite-communication-with-broadcast" id="toc-inter-sprite-communication-with-broadcast" class="nav-link" data-scroll-target="#inter-sprite-communication-with-broadcast">Inter-Sprite Communication with Broadcast</a></li>
+  </ul></li>
+  <li><a href="#nesting-sprites-anchors-and-parts" id="toc-nesting-sprites-anchors-and-parts" class="nav-link" data-scroll-target="#nesting-sprites-anchors-and-parts">Nesting Sprites <span></span> : Anchors and Parts</a></li>
+  <li><a href="#reporter-blocks-and-expressions" id="toc-reporter-blocks-and-expressions" class="nav-link" data-scroll-target="#reporter-blocks-and-expressions">Reporter Blocks and Expressions</a></li>
+  <li><a href="#predicates-and-conditional-evaluation" id="toc-predicates-and-conditional-evaluation" class="nav-link" data-scroll-target="#predicates-and-conditional-evaluation">Predicates and Conditional Evaluation</a></li>
+  <li><a href="#variables" id="toc-variables" class="nav-link" data-scroll-target="#variables">Variables</a>
+  <ul class="collapse">
+  <li><a href="#global-variable-s" id="toc-global-variable-s" class="nav-link" data-scroll-target="#global-variable-s">Global Variable <span></span> s <span></span></a></li>
+  <li><a href="#script-variables" id="toc-script-variables" class="nav-link" data-scroll-target="#script-variables">Script Variables</a></li>
+  <li><a href="#renaming-variables" id="toc-renaming-variables" class="nav-link" data-scroll-target="#renaming-variables">Renaming variables <span></span></a></li>
+  <li><a href="#transient-variables" id="toc-transient-variables" class="nav-link" data-scroll-target="#transient-variables">Transient variables <span></span></a></li>
+  </ul></li>
+  <li><a href="#debugging" id="toc-debugging" class="nav-link" data-scroll-target="#debugging">Debugging <span></span></a>
+  <ul class="collapse">
+  <li><a href="#the-pause-button" id="toc-the-pause-button" class="nav-link" data-scroll-target="#the-pause-button">The pause button</a></li>
+  <li><a href="#breakpoints-the-pause-all-block" id="toc-breakpoints-the-pause-all-block" class="nav-link" data-scroll-target="#breakpoints-the-pause-all-block">Breakpoints <span></span> : the pause all block <span></span></a></li>
+  <li><a href="#visible-stepping" id="toc-visible-stepping" class="nav-link" data-scroll-target="#visible-stepping">Visible stepping</a></li>
+  </ul></li>
+  <li><a href="#etcetera" id="toc-etcetera" class="nav-link" data-scroll-target="#etcetera">Etcetera</a></li>
+  <li><a href="#libraries" id="toc-libraries" class="nav-link" data-scroll-target="#libraries">Libraries</a>
+  <ul class="collapse">
+  <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section"></a></li>
+  </ul></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/snap-cloud/snap-manual/edit/main/content/01-blocks-scripts-and-sprites/index.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Blocks, Scripts, and Sprites</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>This chapter describes the Snap<em>!</em> features inherited from Scratch <span></span>; experienced Scratch users can skip to Section&nbsp;B.</p>
+<p>Snap<em>!</em> is a programming language—a notation in which you can tell a computer what you want it to do. Unlike most programming languages, though, Snap<em>!</em> is a <em>visual</em> language; instead of writing a program using the keyboard, the Snap<em>!</em> programmer uses the same drag-and-drop interface familiar to computer users.</p>
+<p>Start Snap<em>!</em>. You should see the following arrangement of regions <span></span> in the window:</p>
+<p><img src="assets/image5.png" class="img-fluid" alt="image5.png"> <!--  style="width:4.32639in;height:2.68958in" / --></p>
+<p>(The proportions of these areas may be different, depending on the size and shape of your browser window.)</p>
+<p>A Snap<em>!</em> program <span></span> consists of one or more <em>scripts,</em> each of which is made of <em>blocks.</em> Here’s a typical script <span></span> :</p>
+<p><img src="assets/image6.png" class="img-fluid" alt="image6.png"> <!--  style="width:1.47917in;height:1.35417in" / --></p>
+<p>The five block <span></span> s that make up this script have three different colors, corresponding to three of the eight <em>palettes</em> in which blocks can be found. The palette <span></span> area at the left edge of the window shows one palette at a time, chosen with the eight buttons just above the palette area. In this script, the gold blocks are from the Control palette; the green block is from the Pen palette; and the blue blocks are from the Motion palette. A script is assembled by dragging blocks from a palette into the <em>scripting area</em> <span></span> in the middle part of the window. Blocks snap together (hence the name Snap<em>!</em> for the language) when you drag a block so that its indentation is near the tab of the one above it:</p>
+<p><img src="assets/image7.png" class="img-fluid" alt="image7.png"> <!--  style="width:2.24653in;height:1.46944in" / --> <img src="assets/image8.png" class="img-fluid" alt="image8.png"> <!--  style="width:2.20833in;height:1.13889in" / --></p>
+<p>The white horizontal line is a signal that if you let go of the green block it will snap into the tab of the gold one.</p>
+<section id="hat-blocks-and-command-blocks" class="level3">
+<h3 class="anchored" data-anchor-id="hat-blocks-and-command-blocks">Hat Blocks and Command Blocks</h3>
+<p>At the top of the script is a <em>hat</em> block, which indicates when the script should be carried out. Hat block names typically start with the word “when”; in the square-drawing example on page 5, the script should be run when the green flag <span></span> near the right end of the Snap<em>!</em> tool bar <span></span> is clicked. (The Snap<em>!</em> tool bar is part of the Snap<em>!</em> window, not the same as the browser’s or operating system’s menu bar.) A script isn’t required to have a hat block <span></span>, but if not, then the script will be run only if the user clicks on the script itself. A script can’t have more than one hat block, and the hat block can be used only at the top of the script; its distinctive shape is meant to remind you of that.[1]<span id="generic_when" class="anchor"></span></p>
+<p>The other blocks in our example script are <em>command</em> block <span></span>s. Each command block <span></span> corresponds to an action that Snap<em>!</em> already knows how to carry out. For example, the block <img src="assets/image9.png" class="img-fluid" alt="image9.png"> <!--  style="width:1.16667in;height:0.25in" / --> tells the sprite <span></span> (the arrowhead shape on the <em>stage</em> <span></span> at the right end of the window) to move ten steps (a step is a very small unit of distance) in the direction in which the arrowhead is pointing. We’ll see shortly that there can be more than one sprite, and that each sprite has its own scripts. Also, a sprite doesn’t have to look like an arrowhead, but can have any picture as a <em>costume</em> <span></span> <em>.</em> The shape of the move block is meant to remind you of a Lego™ brick; a script is a stack of blocks <span></span>. (The word “block” denotes both the graphical shape on the screen and the procedure, the action, that the block carries out.)</p>
+<p>The number 10 in the move block above is called an <em>input</em> to the block. By clicking on the white oval, you can type any number in place of the 10. The sample script on the previous page uses 100 as the input <span></span> value. We’ll see later that inputs can have non-oval shapes that accept values other than numbers. We’ll also see that you can compute input values, instead of typing a particular value into the oval. A block can have more than one input slot. For example, the glide block located about halfway down the Motion palette has three inputs.</p>
+<p>One of the hat blocks, the generic “when anything” block <img src="assets/image10.png" class="img-fluid" alt="image10.png"> <!--  style="width:1.09722in;height:0.35417in" / -->, is subtly different from the others. When the stop sign is clicked, or when a project or sprite is loaded, this block doesn’t test whether the condition in its hexagonal input slot is true, so the script beneath it will not run, until some other script in the project runs (because, for example, you click the green flag). When generic when blocks are disabled, the stop sign will be square instead of octagonal.</p>
+<p>Most command blocks have that brick shape, but some, like the repeat block <span></span> in the sample script, are <em>C‑shaped.</em> Most C-shaped block <span></span> s <span></span> are found in the Control palette <span></span>. The slot inside the C shape is a special kind of input slot that accepts a <em>script</em> as the input.</p>
+<p>In the sample script</p>
+<p><img src="assets/image6.png" class="img-fluid" alt="image6.png"> <!--  style="width:1.47917in;height:1.35417in" / --> <img src="assets/image11.png" class="img-fluid" alt="image11.png"> <!--  style="width:1.40625in;height:0.48958in" / --> the repeat block has two inputs: the number&nbsp;4 and the script</p>
+<p>C-shaped blocks can be put in a script in two ways. If you see a white line and let go, the block will be inserted into the script like any command block:</p>
+<p><img src="assets/image12.png" class="img-fluid" alt="image12.png"> <!--  style="width:1.47917in;height:1.35417in" / --> <img src="assets/image13.png" class="img-fluid" alt="image13.png"> <!--  style="width:1.40625in;height:0.48958in" / --></p>
+<p>But if you see an orange halo and let go, the block will <em>wrap</em> around the haloed blocks:</p>
+<p><img src="assets/image14.png" class="img-fluid" alt="image14.png"> <!--  style="width:1.47917in;height:1.35417in" / --> <img src="assets/image15.png" class="img-fluid" alt="image15.png"> <!--  style="width:1.40625in;height:0.48958in" / --></p>
+<p>The halo will always extend from the cursor position to the bottom of the script:</p>
+<p><img src="assets/image16.png" class="img-fluid" alt="image16.png"> <!--  style="width:1.47917in;height:1.35417in" / --> <img src="assets/image16.png" class="img-fluid" alt="image16.png"> <!--  style="width:1.40625in;height:0.48958in" / --></p>
+<p>If you want only some of those blocks, after wrapping you can grab the first block you don’t want wrapped, pull it down, and snap it under the C-shaped block.</p>
+<p>For “E-shaped” blocks with more than one C-shaped slot, only the first slot will wrap around existing blocks in a script, and only if that C-shaped slot is empty before wrapping. (You can fill the other slots by dragging blocks into the desired slot.)</p>
+<p><img src="assets/image24.png" class="img-fluid" alt="image24.png"> <!--  style="width:2.31111in;height:1.36667in" / --></p>
+</section>
+<section id="sprites-and-parallelism" class="level2">
+<h2 class="anchored" data-anchor-id="sprites-and-parallelism"><mark> </mark> Sprites and Parallelism</h2>
+<p>Just below the stage is the “new sprite <span></span>” button <img src="assets/image25.png" class="img-fluid" alt="image25.png"> <!--  style="width:0.34028in;height:0.24306in" / -->. Click the button to add a new sprite to the stage. The new sprite will appear in a random position on the stage, with a random color, but always facing to the right.</p>
+<p>Each sprite has its own scripts. To see the scripts for a particular sprite in the scripting area, click on the picture of that sprite in the <em>sprite corral</em> <span></span> in the bottom right corner of the window. Try putting one of the following scripts in each sprite’s scripting area:</p>
+<blockquote class="blockquote">
+<p><img src="assets/image26.png" class="img-fluid" alt="image26.png"> <!--  style="width:1.55069in;height:0.99375in" / --> <img src="assets/image27.png" class="img-fluid" alt="image27.png"> <!--  style="width:1.54167in;height:1.16667in" / --></p>
+</blockquote>
+<p>When you click the green flag, you should see one sprite rotate while the other moves back and forth. This experiment illustrates the way different scripts can run in parallel. The turning and the moving happen together. Parallelism <span></span> can be seen with multiple scripts of a single sprite also. Try this example:</p>
+<blockquote class="blockquote">
+<p><img src="assets/image28.png" class="img-fluid" alt="image28.png"> <!--  style="width:1.72917in;height:0.875in" / --> <img src="assets/image29.png" class="img-fluid" alt="image29.png"> <!--  style="width:1.72917in;height:0.89583in" / --></p>
+</blockquote>
+<p>When you press the space key, the sprite should move forever in a circle, because the move and turn blocks are run in parallel. (To stop the program, click the red stop sign <span></span> at the right end of the tool bar.)</p>
+<section id="costumes-and-sounds" class="level3">
+<h3 class="anchored" data-anchor-id="costumes-and-sounds">Costumes and Sounds</h3>
+<p>To change the appearance of a sprite, paint or import a new <em>costume</em> <span></span> for it. To paint a costume, click on the Costumes tab above the scripting area, and click the paint button <img src="assets/image32.png" class="img-fluid" alt="image32.png"> <!--  style="width:0.29167in;height:0.16667in" alt="Macintosh HD:Users:bh:Desktop:paintbutton.png" / -->. The <em>Paint Editor</em> that appears is explained on page <a href="../12-user-interface-elements/index.html#the-paint-editor">128</a>. There are three ways to import a costume. First select the desired sprite in the sprite corral. Then, one way is to click on the file icon in the tool bar , then choose <img src="assets/image30.png" class="img-fluid" alt="image30.png"> <!--  style="width:0.31944in;height:0.21528in" / --> the “Costumes…”menu item. You will see a list of costumes from the public media library, and can choose one. The second way, for a costume stored on your own computer, is to click on the file icon and choose the “Import…” menu item. You can then select a file in any picture format (PNG, JPEG, etc.) supported by your browser. The third way is quicker if the file you want is visible on the desktop: Just drag the file onto the Snap<em>!</em> window. In any of these cases, the scripting area will be replaced by something like this:</p>
+<p><img src="assets/image31.png" class="img-fluid" alt="image31.png"> <!--  style="width:1.76667in;height:1.875in" / --></p>
+<p>Just above this part of the window is a set of three tabs: Scripts, Costumes, and Sounds. You’ll see that the Costumes tab <span></span> is now selected. In this view, the sprite’s <em>wardrobe</em> <span></span> <em>,</em> you can choose whether the sprite should wear its Turtle costume or its Alonzo <span></span> costume. (Alonzo, the Snap<em>!</em> mascot, is named after Alonzo Church <span></span>, a mathematician who invented the idea of procedures as data <span></span>, the most important way in which Snap<em>!</em> is different from Scratch <span></span>.) You can give a sprite as many costumes as you like, and then choose which it will wear either by clicking in its wardrobe or by using the <img src="assets/image35.png" class="img-fluid" alt="image35.png"> <!--  style="width:1.80556in;height:0.27778in" / --> or <img src="assets/image34.png" class="img-fluid" alt="image34.png"> <!--  style="width:1.80556in;height:0.27778in" / --> block in a script. (Every costume has a number as well as a name. The next costume block selects the next costume by number; after the highest-numbered costume it switches to costume 1. The Turtle, costume 0, is never chosen by next costume.) The Turtle costume <span></span> is the only one that changes color to match a change in the sprite’s pen color. Protip: <img src="assets/image33.png" class="img-fluid" alt="image33.png"> <!--  style="width:1.80556in;height:0.27778in" / --> switches to the <em>previous</em> costume, wrapping like next costume.</p>
+<p>In addition to its costumes, a sprite can have <em>sounds;</em> the equivalent for sounds of the sprite’s wardrobe is called its <em>jukebox</em> <span></span> <em>.</em> Sound files <span></span> can be imported in any format (WAV, OGG, MP3, etc.) supported by your browser. Two blocks accomplish the task of playing sounds <span></span>. If you would like a script to continue running while the sound is playing, use the block <img src="assets/image39.png" class="img-fluid" alt="image39.png"> <!--  style="width:1.23958in;height:0.26042in" / -->. In contrast, you can use the block <img src="assets/image38.png" class="img-fluid" alt="image38.png"> <!--  style="width:1.89583in;height:0.26042in" / --> to wait for the sound’s completion before continuing the rest of the script<em>.</em></p>
+</section>
+<section id="inter-sprite-communication-with-broadcast" class="level3">
+<h3 class="anchored" data-anchor-id="inter-sprite-communication-with-broadcast">Inter-Sprite Communication with Broadcast</h3>
+<p>Earlier we saw an example of two sprites moving at the same time. In a more interesting program, though, the sprites on stage will <em>interact</em> to tell a story, play a game, etc. Often one sprite will have to tell another sprite to run a script. Here’s a simple example:</p>
+<p><img src="assets/image41.png" class="img-fluid" alt="image41.png"> <!--  style="width:0.56944in;height:1.11111in" / --> <img src="assets/image42.png" class="img-fluid" alt="image42.png"> <!--  style="width:2.78418in;height:1.51042in" / --> <img src="assets/image43.png" class="img-fluid" alt="image43.png"> <!--  style="width:1.24306in;height:0.86111in" / --> <img src="assets/image44.png" class="img-fluid" alt="image44.png"> <!--  style="width:1.52083in;height:0.60417in" / --></p>
+<p>In the block <img src="assets/image40.png" class="img-fluid" alt="image40.png"> <!--  style="width:1.71875in;height:0.24939in" / -->, the word “bark” is just an arbitrary name I made up. When you click on the downward arrowhead in that input slot, one of the choices (the only choice, the first time) is “new,” which then prompts you to enter a name for the new broadcast. When this block is run, the chosen message is sent to <em>every</em> sprite, which is why the block is called “broadcast.” (But if you click the right arrow after the message name, the block becomes <img src="assets/image45.png" class="img-fluid" alt="image45.png"> <!--  style="width:1.78958in;height:0.2in" / --> , and you can change it to <img src="assets/image46.png" class="img-fluid" alt="image46.png"> <!--  style="width:1.8in;height:0.19167in" / -->&nbsp;to send the message just to one sprite.) In this program, though, only one sprite has a script to run when that broadcast is sent, namely the dog. Because the boy’s script uses broadcast and wait <span></span> rather than just broadcast, the boy doesn’t go on to his next say block until the dog’s script finishes. That’s why the two sprites take turns talking, instead of both talking at once. In Chapter VII, “Object-Oriented Programming with Sprites,” you’ll see a more flexible way to send a message to a specific sprite using the tell and ask blocks.</p>
+<p>Notice, by the way, that the say block’s first input slot is rectangular rather than oval. This means the input can be any text string, not only a number. In text input <span></span> slots, a space character is shown as a brown dot <span></span>, so that you can count the number of spaces between words, and in particular you can tell the difference between an empty slot and one containing spaces. The brown dots are <em>not</em> shown on the stage if the text is displayed.</p>
+<p>The stage has its own scripting area. It can be selected by clicking on the Stage icon at the left of the sprite corral. Unlike a sprite, though, the stage can’t move. Instead of costumes, it has <em>backgrounds:</em> pictures that fill the entire stage area. The sprites appear in front of the current background. In a complicated project, it’s often convenient to use a script in the stage’s scripting area as the overall director of the action.</p>
+</section>
+</section>
+<section id="nesting-sprites-anchors-and-parts" class="level2">
+<h2 class="anchored" data-anchor-id="nesting-sprites-anchors-and-parts">Nesting Sprites <span></span> : Anchors and Parts</h2>
+<p>Sometimes it’s desirable to make a sort of “super-sprite” composed of pieces that can move together but can also be separately articulated. The classic example is a person’s body made up of a torso, limbs, and a head. Snap<em>!</em> allows one sprite to be designated as the <em>anchor</em> <span></span> of the combined shape, with other sprites as its <em>parts</em> <span></span> <em>.</em> To set up sprite nesting <span></span>, drag the sprite corral icon of a <em>part</em> sprite onto the stage display (not the sprite corral icon!) of the desired <em>anchor</em> sprite. The precise place where you let go of the mouse button will be the attachment point of the part on the anchor.</p>
+<p>Sprite nesting is shown in the sprite corral icons of both anchors and parts: <img src="assets/image47.png" class="img-fluid" alt="image47.png"> <!--  style="width:1.63056in;height:0.96528in" / --></p>
+<p>In this illustration, it is desired to animate Alonzo’s arm. (The arm has been colored green in this picture to make the relationship of the two sprites clearer, but in a real project they’d be the same color, probably.) Sprite, representing Alonzo’s body, is the anchor; Sprite(2) is the arm. The icon for the anchor shows small images of up to three attached parts at the bottom. The icon for each part shows a small image of the anchor in its top left corner, and a <em>synchronous</em> <span></span> <em>/dangling rotation</em> <span></span> <em>flag</em> in the top right corner. In its initial, synchronous setting, as shown above, it means that the when the anchor sprite rotates, the part sprite also rotates as well as revolving around the anchor. When clicked, it changes from a circular arrow to a straight arrow, and indicates that when the anchor sprite rotates, the part sprite revolves around it, but does not rotate, keeping its original orientation. (The part can also be rotated separately, using its turn blocks.) Any change in the position or size of the anchor is always extended to its parts. Also, cloning the anchor (see Section VII. B) will also clone all its parts.</p>
+<p><img src="assets/image56.png" class="img-fluid" alt="image56.png"> <!--  style="width:1.44444in;height:1.5625in" / --> <img src="assets/image48.png" class="img-fluid" alt="image48.png"> <!--  style="width:1.63056in;height:0.96528in" / --> <img src="assets/image49.png" class="img-fluid" alt="image49.png"> <!--  style="width:1.63056in;height:0.96528in" / --></p>
+<p><em>Top: turning the part: the green arm. Bottom: turning the anchor, with the arm synchronous (left) and dangling (right).</em></p>
+</section>
+<section id="reporter-blocks-and-expressions" class="level2">
+<h2 class="anchored" data-anchor-id="reporter-blocks-and-expressions">Reporter Blocks and Expressions</h2>
+<p>So far, we’ve used two kinds of block <span></span> s: hat blocks and command blocks. Another kind is the <em>reporter</em> block <span></span> , which has an oval shape: <img src="assets/image66.png" class="img-fluid" alt="image66.png"> <!--  style="width:0.72917in;height:0.15625in" / --> . It’s called a “reporter” because when it’s run, instead of carrying out an action, it reports a value that can be used as an input to another block. If you drag a <img src="assets/image65.png" class="img-fluid" alt="image65.png"> <!--  style="width:1.47in;height:0.52in" / --> reporter into the scripting area by itself and click on it, the value it reports will appear in a speech balloon next to the block:</p>
+<p>When you drag a reporter block over another block’s input slot, a white “halo <span></span>” appears around that input slot, analogous to the white line that appears when snapping command blocks together:</p>
+<p><img src="assets/image67.png" class="img-fluid" alt="image67.png"> <!--  style="width:1.47in;height:0.52in" / --></p>
+<p>Don’t drop the input over a <em>red</em> halo: <img src="assets/image71.png" class="img-fluid" alt="image71.png"> <!--  style="width:2.11111in;height:0.61806in" alt="Macintosh HD:Users:bh:Desktop:Google Chrome001.png" / --></p>
+<p>That’s used for a purpose explained on page <a href="../06-procedures-as-data/index.html#recursive-calls-to-multiple-input-blocks">68</a>.</p>
+<p>Here’s a simple script that uses a reporter block:</p>
+<p><img src="assets/image72.png" class="img-fluid" alt="image72.png"> <!--  style="width:2.11111in;height:0.61806in" alt="Macintosh HD:Users:bh:Desktop:Google Chrome001.png" / --></p>
+<p>Here the x position reporter provides the first input to the say block. (The sprite’s X position <span></span> is its horizontal position, how far left (negative values) or right (positive values) it is compared to the center of the stage. Similarly, the Y position <span></span> is measured vertically, in steps above (positive) or below (negative) the center.)</p>
+<p>You can do arithmetic <span></span> using reporters in the Operators palette:</p>
+<p><img src="assets/image73.png" class="img-fluid" alt="image73.png"> <!--  style="width:2.11111in;height:0.61806in" alt="Macintosh HD:Users:bh:Desktop:Google Chrome001.png" / --></p>
+<p>The round block rounds 35.3905… to 35, and the + block adds 100 to that. (By the way, the round block is in the Operators palette, just like +, but in this script it’s a lighter color with black lettering because Snap<em>!</em> alternates light and dark versions of the palette colors when a block is nested inside another block from the same palette:</p>
+<p><img src="assets/image80.png" class="img-fluid" alt="image80.png"> <!--  style="width:4.85417in;height:1.90625in" / --></p>
+<p>This aid to readability is called <em>zebra coloring</em> <span></span> <em>.</em>) A reporter block with its inputs, maybe including other reporter blocks, such as <img src="assets/image81.png" class="img-fluid" alt="image81.png"> <!--  style="width:1.91667in;height:0.23958in" / -->, is called an <em>expression</em> <span></span> <em>.</em></p>
+</section>
+<section id="predicates-and-conditional-evaluation" class="level2">
+<h2 class="anchored" data-anchor-id="predicates-and-conditional-evaluation">Predicates and Conditional Evaluation</h2>
+<p>Most reporters report <span></span> either a number, like <img src="assets/image82.png" class="img-fluid" alt="image82.png"> <!--  style="width:0.66667in;height:0.1875in" / -->, or a text string, like <img src="assets/image83.png" class="img-fluid" alt="image83.png"> <!--  style="width:1.20833in;height:0.1875in" / --> . A <em>predicate</em> is a special kind of reporter that always reports true or false. Predicate <span></span> s have a hexagonal shape <span></span> :</p>
+<p><img src="assets/image85.png" class="img-fluid" alt="image85.png"> <!--  style="width:1.07292in;height:0.15625in" / --></p>
+<p>The special shape is a reminder that predicates don’t generally make sense in an input slot of blocks that are expecting a number or text. You wouldn’t say <img src="assets/image84.png" class="img-fluid" alt="image84.png"> <!--  style="width:1.94792in;height:0.26042in" / --> , although (as you can see from the picture) Snap<em>!</em> lets you do it if you really want. Instead, you normally use predicates in special hexagonal input slots like this one: <img src="assets/image86.png" class="img-fluid" alt="image86.png"> <!--  style="width:0.66667in;height:0.56944in" / --></p>
+<p>The C-shaped if block <span></span> runs its input script if (and only if) the expression in its hexagonal input reports true. <img src="assets/image87.png" class="img-fluid" alt="image87.png"> <!--  style="width:1.59375in;height:0.61458in" / --></p>
+<p>A really useful block <span></span> in animation <span></span> s runs its input script <em>repeatedly</em> until a predicate is satisfied: <img src="assets/image89.png" class="img-fluid" alt="image89.png"> <!--  style="width:2.29167in;height:0.84375in" / --></p>
+<p>If, while working on a project, you want to omit temporarily some commands in a script, but you don’t want to forget where they belong, you can say</p>
+<p><img src="assets/image88.png" class="img-fluid" alt="image88.png"> <!--  style="width:2.28194in;height:1.46875in" / --></p>
+<p>Sometimes you want to take the same action whether some condition is true or false, but with a different input value. For this purpose you can use the <em>reporter</em> if block <span></span> :</p>
+<p><img src="assets/image90.png" class="img-fluid" alt="image90.png"> <!--  style="width:4.20833in;height:0.38542in" / --></p>
+<p>Thetechnical term for a true or false value is a “Boolean <span></span>” value; it has a capital B because it’s named after a person, George Boole <span></span>, who developed the mathematical theory of Boolean values. Don’t get confused; a hexagonal block is a <em>predicate,</em> but the value it reports is a <em>Boolean.</em></p>
+<p>Another quibble about vocabulary: Many programming languages reserve the name “procedure <span></span>” for Commands (that carry out an action) and use the name “function” for Reporters and Predicates. In this manual, a <em>procedure</em> is any computational capability, including those that report values and those that don’t. Commands, Reporters, and Predicates are all procedures. The words “a Procedure type” are shorthand for “Command type, Reporter type, or Predicate type.”</p>
+<p>If you want to put a <em>constant</em> Boolean <span></span> value in a hexagonal slot instead of a predicate-based expression, hover the mouse over the block and click on the control that appears: <img src="assets/image91.png" class="img-fluid" alt="image91.png"> <!--  style="width:1.375in;height:0.24306in" alt="Macintosh HD:Users:bh:Desktop:turbo-false.png" / --> <img src="assets/image92.png" class="img-fluid" alt="image92.png"> <!--  style="width:1.375in;height:0.24306in" alt="Macintosh HD:Users:bh:Desktop:turbo-true.png" / --></p>
+</section>
+<section id="variables" class="level2">
+<h2 class="anchored" data-anchor-id="variables">Variables</h2>
+<p>Try this script: <img src="assets/image93.png" class="img-fluid" alt="image93.png"> <!--  style="width:1.58333in;height:1.41667in" / --></p>
+<p>The input to the move block is an orange oval. To get it there, drag the orange oval that’s part of the for block <span></span> : <img src="assets/image94.png" class="img-fluid" alt="image94.png"> <!--  style="width:1.88542in;height:1.4375in" / --></p>
+<p>The orange oval <span></span> is a <em>variable:</em> a symbol that represents a value. (I took this screenshot before changing the second number input to the for block from the default 10 to 200, and before dragging in a turn block.) For runs its script input repeatedly, just like repeat, but before each repetition it sets the variable <span></span> i to a number starting with its first numeric input, adding 1 for each repetition, until it reaches the second numeric input. In this case, there will be 200 repetitions, first with i=1, then with i=2, then 3, and so on until i=200 for the final repetition. The result is that each move draws a longer and longer line segment, and that’s why the picture you see is a kind of spiral. (If you try again with a turn of 90 degrees instead of 92, you’ll see why this picture is called a “squiral <span></span>.”)</p>
+<p>The variable i is created by the for block, and it can only be used in the script inside the block’s C-slot. (By the way, if you don’t like the name i, you can change it by clicking on the orange oval without dragging it, which will pop up a dialog window in which you can enter a different name: <img src="assets/image95.png" class="img-fluid" alt="image95.png"> <!--  style="width:3.1875in;height:1.5in" / --></p>
+<p>“I” isn’t a very descriptive name; you might prefer “length” to indicate its purpose in the script. “I” is traditional because mathematicians tend to use letters between i and n to represent integer values, but in programming languages we don’t have to restrict ourselves to single-letter variable names.)</p>
+<section id="global-variable-s" class="level3">
+<h3 class="anchored" data-anchor-id="global-variable-s">Global Variable <span></span> s <span></span></h3>
+<p>You can create variables “by hand” that aren’t limited to being used within a single block. At the top of the Variables palette, click the “Make a variable <span></span>” button:</p>
+<p><img src="assets/image97.png" class="img-fluid" alt="image97.png"> <!--  style="width:2.05208in;height:2.27083in" / --></p>
+<p>This will bring up a dialog window in which you can give your variable a name:</p>
+<p><img src="assets/image96.png" class="img-fluid" alt="image96.png"> <!--  style="width:3.1875in;height:1.84375in" / --></p>
+<p>The dialog also gives you a choice to make the variable available to all sprites (which is almost always what you want) or to make it visible only in the current sprite <span></span>. You’d do that if you’re going to give several sprites individual variables <em>with the same name,</em> so that you can share a script between sprites (by dragging it from the current sprite’s scripting area to the picture of another sprite in the sprite corral), and the different sprites will do slightly different things when running that script because each has a different value for that variable name.</p>
+<p>If you give your variable the name “name” then the Variables palette will look like this:</p>
+<p><img src="assets/image98.png" class="img-fluid" alt="image98.png"> <!--  style="width:1.65833in;height:2.29167in" / --></p>
+<p>There’s now a “Delete a variable <span></span>” button, and there’s an orange oval with the variable name in it, just like the orange oval in the for block. You can drag the variable into any script in the scripting area. Next to the oval is a checkbox, initially checked. When it’s checked, you’ll also see a <em>variable watcher</em> <span></span> on the stage: <img src="assets/image99.png" class="img-fluid" alt="image99.png"> <!--  style="width:1.04167in;height:0.40625in" / --></p>
+<p>When you give the variable a value, the orange box in its watcher <span></span> will display the value.</p>
+<p>How <em>do</em> you give it a value? You use the set block <span></span> : <img src="assets/image100.png" class="img-fluid" alt="image100.png"> <!--  style="width:1.92708in;height:0.47917in" / --></p>
+<p>Note that you <em>don’t</em> drag the variable’s oval into the set block! You click on the downarrow in the first input slot, and you get a menu of all the available variable names.</p>
+<p>If you do choose “For this sprite only <span></span>” when creating a variable, its block in the palette looks like this:<img src="assets/image101.png" class="img-fluid" alt="image101.png"> <!--  style="width:0.65833in;height:0.14167in" alt="Macintosh HD:Users:bh:Desktop:local-var.png" / --></p>
+<p>The <em>location</em>-pin <span></span> icon is a bit of a pun on a sprite-<em>local</em> variable <span></span>. It’s shown only in the palette.</p>
+</section>
+<section id="script-variables" class="level3">
+<h3 class="anchored" data-anchor-id="script-variables">Script Variables</h3>
+<p>In the name example above, our project is going to carry on an interaction <span></span> with the user, and we want to remember their name throughout the project. That’s a good example of a situation in which a <em>global</em> variable <span></span> (the kind you make with the “Make a variable” button) is appropriate. Another common example is a variable called “score” in a game project. But sometimes you only need a variable <span></span> temporarily, during the running of a particular script. In that case you can use the script variables block <span></span> to make the variable:</p>
+<p><img src="assets/image105.png" class="img-fluid" alt="image105.png"> <!--  style="width:2.08333in;height:0.30208in" / --></p>
+<p>As in the for block, you can click on an orange oval in the script variables block without dragging to change its name. You can also make more than one temporary variable by clicking on the right arrow at the end of the block to add another variable oval:</p>
+<p><img src="assets/image106.png" class="img-fluid" alt="image106.png"> <!--  style="width:2.08333in;height:0.30208in" / --></p>
+</section>
+<section id="renaming-variables" class="level3">
+<h3 class="anchored" data-anchor-id="renaming-variables">Renaming variables <span></span></h3>
+<p>There are several reasons why you might want to change the name of a variable:</p>
+<ol type="1">
+<li><p>It has a default name, such as the “a” in script variables or the “i” in for.</p></li>
+<li><p>It conflicts with another name, such as a global variable, that you want to use in the same script.</p></li>
+<li><p>You just decide a different name would be more self-documenting.</p></li>
+</ol>
+<p>In the first and third case, you probably want to change the name everywhere it appears in that script, or even in all scripts. In the second case, if you’ve already used both variables in the script before realizing that they have the same name, you’ll want to look at each instance separately to decide which ones to rename. Both of these operations are possible by right-clicking or control-clicking on a variable oval.</p>
+<p>If you right-click on an orange oval in a context in which the variable is <em>used,</em> then you are able to rename just that one orange oval:</p>
+<p><img src="assets/image105.png" class="img-fluid" alt="image105.png"> <!--  style="width:2.08333in;height:0.30208in" / --></p>
+<p>If you right-click on the place where the variable is <em>defined</em> (a script variables block, the orange oval for a global variable in the Variables palette, or an orange oval that’s built into a block such as the “i” in for), then you are given two renaming options, “rename” and “rename all.” If you choose “rename,” then the name is changed only in that one orange oval, as in the previous case:</p>
+<p><img src="assets/image104.png" class="img-fluid" alt="image104.png"> <!--  style="width:2.08333in;height:0.30208in" / --></p>
+<p>But if you choose “rename all,” then the name will be changed throughout the scope of the variable (the script for a script variable, or everywhere for a global variable):</p>
+<p><img src="assets/image103.png" class="img-fluid" alt="image103.png"> <!--  style="width:2.08333in;height:0.30208in" / --></p>
+</section>
+<section id="transient-variables" class="level3">
+<h3 class="anchored" data-anchor-id="transient-variables">Transient variables <span></span></h3>
+<p>So far we’ve talked about variables with numeric values, or with short text strings such as someone’s name. But there’s no limit to the amount of information you can put in a variable; in Chapter IV you’ll see how to use <em>lists</em> to collect many values in one data structure, and in Chapter VIII you’ll see how to read information from web sites.</p>
+<p><img src="assets/image102.png" class="img-fluid" alt="image102.png"> <!--  style="width:2.08333in;height:0.30208in" / --></p>
+<p>When you use these capabilities, your project may take up a lot of memory <span></span> in the computer. If you get close to the amount of memory available to Snap<em>!</em>, then it may become impossible to save your project. (Extra space is needed temporarily to convert from Snap<em>!</em> ’s internal representation to the form in which projects are exported or saved.) If your program reads a lot of data from the outside world that will still be available when you use it next, you might want to have values containing a lot of data removed from memory before saving the project. To do this, right-click or control-click on the orange oval in the Variables palette, to see this menu: <img src="assets/image114.png" class="img-fluid" alt="image114.png"> <!--  style="width:1.29167in;height:1.05556in" / --></p>
+<p>You already know about the rename options, and help… displays a help screen about variables in general. Here we’re interested in the check box next to transient. If you check it, this variable’s value will not be saved when you save your project. Of course, you’ll have to ensure that when your project is loaded, it recreates the needed value and sets the variable to it.</p>
+</section>
+</section>
+<section id="debugging" class="level2">
+<h2 class="anchored" data-anchor-id="debugging">Debugging <span></span></h2>
+<p>Snap<em>!</em> provides several tools to help you debug a program. They center around the idea of <em>pausing</em> the running of a script partway through, so that you can examine the values of variables.</p>
+<section id="the-pause-button" class="level3">
+<h3 class="anchored" data-anchor-id="the-pause-button">The pause button</h3>
+<p>The simplest way to pause a program is manually, by clicking the pause button <img src="assets/image116.png" class="img-fluid" alt="image116.png"> <!--  style="width:0.29167in;height:0.16667in" / --> <span></span> in the top right corner of the window. While the program is paused, you can run other scripts by clicking on them, show variables on stage with the checkbox next to the variable in the Variables palette or with the show variable block <span></span>, and do all the other things you can generally do, including modifying the paused scripts by adding or removing blocks. The <img src="assets/image115.png" class="img-fluid" alt="image115.png"> <!--  style="width:0.29167in;height:0.16667in" / --> button changes shape to and clicking it again resumes the paused scripts.</p>
+</section>
+<section id="breakpoints-the-pause-all-block" class="level3">
+<h3 class="anchored" data-anchor-id="breakpoints-the-pause-all-block">Breakpoints <span></span> : the pause all block <span></span></h3>
+<p><span id="pause_all" class="anchor"></span>The pause button is great if your program seems to be in an infinite loop, but more often you’ll want to set a <em>breakpoint,</em> a particular point in a script at which you want to pause. The <img src="assets/image117.png" class="img-fluid" alt="image117.png"> <!--  style="width:0.81944in;height:0.21528in" / --> block, near the bottom of the Control palette, can be inserted in a script to pause when it is run. So, for example, if your program is getting an error message in a particular block, you could use pause all just before that block to look at the values of variables just before the error happens.</p>
+<p>The pause all block turns bright cyan while paused. Also, during the pause, you can right-click on a running script and the menu that appears will give you the option to show watchers for temporary variables of the script:</p>
+<p><img src="assets/image118.png" class="img-fluid" alt="image118.png"> <!--  style="width:1.88333in;height:0.91111in" / --></p>
+<p>But what if the block with the error is run many times in a loop, and it only errors when a particular condition is true—say, the value of some variable is negative, which shouldn’t ever happen. In the iteration library (see page <a href="#libraries-1">25</a> for more about how to use libraries) is a breakpoint block that lets you set a <em>conditional</em> breakpoint, and automatically display the relevant variables before pausing. Here’s a sample use of it:</p>
+<p><img src="assets/image119.png" class="img-fluid" alt="image119.png"> <!--  style="width:1.19444in;height:1.33333in" / --></p>
+<p>(In this contrived example, variable zot comes from outside the script but is relevant to its behavior.) When you continue (with the pause button), the temporary variable watchers are removed by this breakpoint block before resuming the script. The breakpoint block isn’t magic; you could alternatively just put a pause all inside an if.[2]</p>
+<p>The hide variable and show variable blocks can also be used to hide and show primitives in the palette. The pulldown menu doesn’t include primitive blocks, but there’s a generally useful technique to give a block input values it wasn’t expecting using run or call: <img src="assets/image120.png" class="img-fluid" alt="image120.png"> <!--  style="width:1.19444in;height:1.33333in" / --> In order to use a block as an input this way, you must explicitly put a ring around it, by right-clicking on it and choosing ringify. More about rings in Chapter VI.</p>
+</section>
+<section id="visible-stepping" class="level3">
+<h3 class="anchored" data-anchor-id="visible-stepping">Visible stepping</h3>
+<p>Sometimes you’re not exactly sure where the error is, or you don’t understand how the program got there. To understand better, you’d like to watch the program as it runs, at human speed rather than at computer speed. You can do this by clicking the <em>visible stepping bu</em> <span></span> <em>tton</em> <span></span> (<img src="assets/image121.png" class="img-fluid" alt="image121.png"> <!--  style="width:0.29167in;height:0.16667in" / --> ), before running a script or while the script is paused. The button will light up ( <img src="assets/image123.png" class="img-fluid" alt="image123.png"> <!--  style="width:0.29167in;height:0.16667in" / --> ) and a speed control slider <img src="assets/image122.png" class="img-fluid" alt="image122.png"> <!--  style="width:0.54563in;height:0.15278in" / --> will appear in the toolbar. When you start or continue the script, its blocks and input slots will light up cyan one at a time:</p>
+<p><img src="assets/image124.png" class="img-fluid" alt="image124.png"> <!--  style="width:0.54563in;height:0.15278in" / --></p>
+<p>In this simple example, the inputs to the blocks are constant values, but if an input were a more complicated expression involving several reporter blocks, each of those would light up as they are called. Note that the input to a block is evaluated before the block itself is called, so, for example, the 100 lights up before the move.</p>
+<p><strong>. . .</strong></p>
+<p>The speed of stepping is controlled by the slider <span></span>. If you move the slider all the way to the left, the speed is zero, the pause button turns into a step button <img src="assets/image134.png" class="img-fluid" alt="image134.png"> <!--  style="width:0.29167in;height:0.16667in" / --> , and the script takes a single step each time you push it. The name for this is <em>single stepping</em> <span></span> <em>.</em></p>
+<p>If several scripts that are visible in the scripting area are running at the same time, all of them are stepped in parallel. However, consider the case of two repeat loops with different numbers of blocks. While not stepping, each script goes through a complete cycle of its loop in each display cycle, despite the difference in the length of a cycle. In order to ensure that the visible result of a program on the stage is the same when stepped as when not stepped, the shorter script will wait at the bottom of its loop for the longer script to catch up.</p>
+<p>When we talk about custom blocks in Chapter III, we’ll have more to say about visible stepping as it affects those blocks.</p>
+</section>
+</section>
+<section id="etcetera" class="level2">
+<h2 class="anchored" data-anchor-id="etcetera">Etcetera</h2>
+<p>This manual doesn’t explain every block in detail. There are many more motion blocks, sound blocks, costume and graphics effects blocks, and so on. You can learn what they all do by experimentation, and also by reading the “help screens” that you can get by right-clicking or control-clicking a block and selecting “help…” from the menu that appears. If you forget what palette (color) a block is, but you remember at least part of its name, type control-F and enter the name in the text block that appears in the palette area.</p>
+<p>Here are the primitive blocks that don’t exist in Scratch: <img src="assets/image136.png" class="img-fluid" alt="image136.png"> <!--  style="width:1.05208in;height:0.22917in" / --> reports <span></span> a <span></span> new costume consisting of everything that’s drawn on the stage by any sprite. Right-clicking the block in the scripting area gives the option to change it to <img src="assets/image135.png" class="img-fluid" alt="image135.png"> <!--  style="width:1.25in;height:0.22917in" / --> if vector logging is enabled. See page <a href="#logpenvectors">116</a>.</p>
+<p><img src="assets/image137.png" class="img-fluid" alt="image137.png"> <!--  style="width:2.08333in;height:0.375in" / --> Print characters <span></span> in the given point size on the stage, at the sprite’s position and in its direction. The sprite moves to the end of the text. (That’s not always what you want, but you can save the sprite’s position before using it, and sometimes you need to know how big the text turned out to be, in turtle steps.) If the pen is down, the text will be underlined.</p>
+<p><img src="assets/image138.png" class="img-fluid" alt="image138.png"> <!--  style="width:1.20069in;height:0.51389in" alt="Macintosh HD:Users:bh:Desktop:paste-on.png" / --> Takes a sprite as input. Like stamp except that the costume is stamped onto the selected sprite instead of onto the stage. (Does nothing if the current sprite doesn’t overlap the chosen sprite.)</p>
+<p><img src="assets/image139.png" class="img-fluid" alt="image139.png"> <!--  style="width:1.19167in;height:0.33889in" alt="Macintosh HD:Users:bh:Desktop:cut-from.png" / --> Takes a sprite as input. Erases from that sprite’s costume the area that overlaps with the current sprite’s costume. (Does not affect the costume in the chosen sprite’s wardrobe, only the copy currently visible.)</p>
+<p>Runs <span></span> only this script</p>
+<p>until finished. In the Control palette even though it’s gray.</p>
+<p><img src="assets/image142.png" class="img-fluid" alt="image142.png"> <!--  style="width:1.32986in;height:0.42986in" alt="Icon Description automatically generated" / --> See page <a href="#generic_when">6</a>. <img src="assets/image141.png" class="img-fluid" alt="image141.png"> <!--  style="width:0.98958in;height:0.25972in" / --> See page <a href="#pause_all">17</a>.</p>
+<p><img src="assets/image140.png" class="img-fluid" alt="image140.png"> <!--  style="width:0.52986in;height:0.5in" / --> Runs only this script until finished. In the Control palette even though it’s gray.</p>
+<p><img src="assets/image143.png" class="img-fluid" alt="image143.png"> <!--  style="width:1.71in;height:0.23in" alt="Macintosh HD:Users:bh:Desktop:pix:reporter-if.png" / --> Reporter version of the if/else primitive command block <span></span> . Only one of the two branches is evaluated, depending on the value of the first input.</p>
+<p><img src="assets/image144.png" class="img-fluid" alt="image144.png"> <!--  style="width:1.83in;height:0.61in" alt="Macintosh HD:Users:bh:Desktop:pix:for.png" / --> Looping block like repeat but <span></span> with an index variable <span></span> .</p>
+<p><img src="assets/image145.png" class="img-fluid" alt="image145.png"> <!--  style="width:1.37986in;height:0.28958in" alt="Graphical user interface, application, logo Description automatically generated" / --> Declare local variables <span></span> in a script. <span></span></p>
+<p><img src="assets/image148.png" class="img-fluid" alt="image148.png"> <!--  style="width:1.17in;height:0.18in" / --> See page <a href="#url">91</a>.</p>
+<p><img src="assets/image146.png" class="img-fluid" alt="image146.png"> <!--  style="width:0.86in;height:0.19in" alt="Macintosh HD:Users:bh:Desktop:report-effect.png" / --> reports the value of a graphics effect <span></span>.</p>
+<p><img src="assets/image147.png" class="img-fluid" alt="image147.png"> <!--  style="width:0.72in;height:0.2in" / --> Constant true <span></span> or false <span></span> value. See page <a href="#predicates-and-conditional-evaluation">12</a>.</p>
+<p><img src="assets/image149.png" class="img-fluid" alt="image149.png"> <!--  style="width:0.72in;height:0.2in" / --></p>
+<p><img src="assets/image153.png" class="img-fluid" alt="image153.png"> <!--  style="width:2.13in;height:0.18in" / --> Create a primitive using JavaScript <span></span>. (This block is disabled by default; the user must check “Javascript extensions” in the setting menu <em>each time</em> a project is loaded.) <span></span></p>
+<p><img src="assets/image150.png" class="img-fluid" alt="image150.png"> <!--  style="width:0.72in;height:0.2in" / --> The at block <span></span> lets you examine the screen pixel <span></span> directly behind the rotation center of a sprite, the mouse, or an arbitrary (x,y) coordinate pair dropped onto the second menu slot. The first five items of the left menu let you examine the color visible at the position. (The “RGBA” option <span></span> reports a list.) The “sprites” option reports a list of all sprites, including this one, any point of which overlaps this sprite’s rotation center (behind or in front). This is a hyperblock with respect to its second input.</p>
+<p><img src="assets/image154.png" class="img-fluid" alt="image154.png"> <!--  style="width:0.72in;height:0.2in" / --> Checks the <span></span> data <span></span> type <span></span> of a value.</p>
+<p><img src="assets/image151.png" class="img-fluid" alt="image151.png"> <!--  style="width:0.72in;height:0.2in" / --> <img src="assets/image152.png" class="img-fluid" alt="image152.png"> <!--  style="width:0.72in;height:0.2in" / --></p>
+<p><strong>Blocks only for the Stage:</strong></p>
+<p>Get or set selected global flags.</p>
+<p><span></span> Turn the <span></span> text into a list, using the second input as the delimiter between items. The default delimiter, indicated by the brown dot in the input slot, is a single space character. “Letter” puts each character of the text in its own list item. “Word” puts each word in an item. ( <span></span> Words are separated by any number of consecutive space, tab, carriage return, or newline characters.) “Line” is a newline character <span></span> (0xa); “tab” is a tab character <span></span> (0x9); “cr” is a carriage return <span></span> (0xd). “Csv” <span></span> and “json” <span></span> split formatted text into lists of lists; see page <a href="../04-first-class-lists/index.html#comma-separated-values">54</a>. “Blocks” takes a script as the first input, reporting a list structure representing the structure of the script. See Chapter XI.</p>
+<p><img src="assets/image170.png" class="img-fluid" alt="image170.png"> <!--  style="width:1.47986in;height:0.18958in" alt="Macintosh HD:Users:bh:Desktop:identical.png" / --> For lists, <span></span> reports true only if its two input values are the very same list, so changing an item in one of them is visible in the other. (For =, lists that look the same are the same.) For text strings, uses case-sensitive comparison, unlike =, which is case-independent.</p>
+<p>These <em>hidden</em> blocks can be found with the relabel option <span></span> of any dyadic arithmetic block. They’re hidden partly because writing them in Snap<em>!</em> is a good, pretty easy programming exercise. Note: the two inputs to atan2 <span></span> are Δ<em>x</em> and Δ<em>y</em> in that order, because we measure angles clockwise from north. Max and min are <em>variadic;</em> by clicking the arrowhead, you can provide additional inputs.</p>
+<p><img src="assets/image177.png" class="img-fluid" alt="image177.png"> <!--  style="width:0.63in;height:0.19in" alt="Logo Description automatically generated with medium confidence" / --> <img src="assets/image178.png" class="img-fluid" alt="image178.png"> <!--  style="width:0.63in;height:0.19in" alt="A picture containing text, monitor, screenshot Description automatically generated" / --> <img src="assets/image179.png" class="img-fluid" alt="image179.png"> <!--  style="width:0.63in;height:0.19in" alt="Logo Description automatically generated" / --> Similarly, these <span></span> hidden predicates can be found by relabeling the relational predicates.</p>
+<p><strong>Metaprogramming (see Chapter XI.</strong> <strong>, page <a href="#metaprogramming">101</a>)</strong></p>
+<p>These blocks support <em>metaprogramming,</em> which means manipulating blocks and scripts as data. This is not the same as manipulating procedures (see Chapter VI. ), which are what the blocks <em>mean;</em> in metaprogramming the actual blocks, what you see on the screen, are the data. This capability is new in version 8.0.</p>
+<p><strong>First class list blocks (see Chapter IV, page <a href="#first-class-lists">46</a>):</strong></p>
+<p>Numbers from <span></span> <span></span> will count up or down.</p>
+<p>The script input to for each can refer to an</p>
+<p>item of the list with the item variable.</p>
+<p><strong> </strong><img src="assets/image224.png" class="img-fluid" alt="image224.png"> <!--  style="width:0.83in;height:0.21in" / --> <img src="assets/image225.png" class="img-fluid" alt="image225.png"> <!--  style="width:1.43in;height:0.21in" / --> report <span></span> the sprite or mouse position as a two-item vector (x,y).</p>
+<p><strong>First class procedure blocks (see Chapter VI, page <a href="../06-procedures-as-data/index.html#procedures-as-data">65</a>):</strong></p>
+<p><strong>First class continuation blocks (see Chapter X, page <a href="#continuations">93</a>):</strong></p>
+<p><strong>First class sprite, costume, and sound blocks (see Chapter VII, page <a href="#object-oriented-programming-with-sprites">73</a>):</strong></p>
+<p>Object is a hyperblock.</p>
+<p><strong>Scenes:</strong></p>
+<p><img src="assets/image280.png" class="img-fluid" alt="image280.png"> <!--  style="width:2.38in;height:1.32in" / --> The major new feature of version 7.0 is <em>scenes:</em> A project can include within it sub-projects, called scenes, each with its own stage, sprites, scripts, and so on. This block makes another scene active, replacing the current one.</p>
+<p>Nothing is automatically shared between scenes: no sprites, no blocks, no variables. But the old scene can send a message to the new one, to start it running, with optional payload as in broadcast <span></span> (page <a href="#broadcast">23</a>).</p>
+<p><img src="assets/image281.png" class="img-fluid" alt="image281.png"> <!--  style="width:2.54in;height:0.31in" / --> In particular, you can say</p>
+<blockquote class="blockquote">
+<p>if the new scene expects to be started with a green flag signal.</p>
+</blockquote>
+<p><strong> These aren’t new blocks but they have a new feature:</strong></p>
+<p>These accept two-item (x,y) <span></span> lists <span></span> as input, and have extended menus (also including other sprites): <span></span></p>
+<p>“Center” means the center of the stage <span></span>, the point at (0,0). “Direction” is in the point in direction sense, the direction that would leave this sprite pointing toward another sprite, the mouse, or the center. “Ray length” is the distance from the center of this sprite to the nearest point on the other sprite, in the current direction.</p>
+<p>The stop block <span></span> has two extra menu choices. Stop this block is used inside the definition of a custom block to stop just this invocation of this custom block and continue the script that called it. Stop all but this script is good at the end of a game to stop all the game pieces from moving around, but keep running this script to provide the user’s final score. The last two menu choices add a tab at the bottom of the block because the current script can continue after it.</p>
+<p>The new “pen trails” option is true if the sprite is touching any drawn or stamped ink on the stage. Also, touching <span></span> will not detect hidden sprites, but a hidden sprite can use it to detect visible sprites.</p>
+<p><img src="assets/image304.png" class="img-fluid" alt="image304.png"> <!--  style="width:1.05972in;height:0.27986in" alt="Icon Description automatically generated" / --> <img src="assets/image305.png" class="img-fluid" alt="image305.png"> <!--  style="width:2.43333in;height:0.3in" alt="Macintosh HD:Users:bh:Desktop:video-on.png" / --> The video block <span></span> has a snap option <span></span> that takes a snapshot and reports it as a costume. It is hyperized with <img src="assets/image306.png" class="img-fluid" alt="image306.png"> <!--  style="width:1.05208in;height:0.28125in" / --> respect to its second input.</p>
+<p>The “neg” option <span></span> is a monadic <span></span> <span></span> negation operator <span></span>, equivalent to . “lg” is log<sub>2</sub>. “id” is the identity function, which reports its input. “sign” reports 1 for positive input, 0 for zero input, or -1 for negative input. <span></span></p>
+<p>name changed to clarify that it’s different from</p>
+<p>+ and × are <em>variadic:</em> they take two or more inputs. If you drop a list on the arrowheads, the block name changes to sum or product.</p>
+<p>I</p>
+<p>Extended <span></span> mouse interaction events, sensing clicking, dragging, hovering, etc. The “stopped” option triggers when all scripts are stopped, as with the stop button; it is useful for robots whose hardware interface must be told to turn off motors. A when I am stopped script <span></span> can run only for a limited time.</p>
+<p><span id="broadcast" class="anchor"></span>Extended broadcast <span></span> : Click the right arrowhead to direct the message to a single sprite or the stage. Click again to add any value as a payload to the message.</p>
+<p>Extended when I receive <span></span> : Click the right arrowhead to expose a script variable (click on it to change its name, like any script variable) that will be set to the data of a matching broadcast. If the first input is set to “any message,” then the data variable will be set to the message, if no payload is included with the broadcast, or to a two-item list containing the message and the payload.</p>
+<p><img src="assets/image355.png" class="img-fluid" alt="image355.png"> <!--  style="width:1.68in;height:0.38in" alt="A picture containing text, clipart Description automatically generated" / --> If the input is set to “any key,” then a right arrowhead appears:</p>
+<blockquote class="blockquote">
+<p><img src="assets/image356.png" class="img-fluid" alt="image356.png"> <!--  style="width:2.25in;height:0.41944in"  --> alt=“Website Description automatically generated with medium confidence” /&gt;<img src="assets/image357.png" class="img-fluid" alt="image357.png"> <!--  style="width:1.81944in;height:0.37986in"  --> alt=“Logo Description automatically generated” /&gt;and if you click it, a script variable key is created whose value is the key that was pressed. (If the key is one that’ represented in the input menu by a word or phrase, e.g., “enter” or “up arrow,” then the value of key will be that word or phrase, <em>except for</em> the space character, which is represented as itself in key.) <span id="ask_lists" class="anchor"></span></p>
+</blockquote>
+<p>The RGB(A) <span></span> option accepts a single number, which is a grayscale value 0-255; a two-number list, grayscale plus opacity 0-255; a three-item RGB list, or a four-item RGBA list.</p>
+<p>These ask features <span></span> and more in the Menus library.</p>
+<p>The of block <span></span> has an extended menu of attributes of a sprite. Position reports an (x,y) vector. Size reports the percentage of normal size, as controlled by the set size block in the Looks category. Left, right, etc. report the stage coordinates of the corresponding edge of the sprite’s bounding box. Variables reports a list of the names of all variables in scope (global, sprite-local, and script variables if the right input is a script.</p>
+</section>
+<section id="libraries" class="level2">
+<h2 class="anchored" data-anchor-id="libraries">Libraries</h2>
+<p><span id="libraries-1" class="anchor"></span><img src="assets/image384.png" class="img-fluid" alt="image384.png"> <!--  style="width:0.31944in;height:0.18056in" alt="Macintosh HD:Users:bh:Desktop:real-desktop:Everything Snap:manual:filebutton.png" / --> There are several collections of useful procedures that aren’t Snap<em>!</em> primitives, but are provided as libraries. To include a library in your project, choose the Libraries… option <span></span> in the file ( ) menu.</p>
+<p>The library menu is divided into five broad categories. The first is, broadly, utilities: blocks that might well be primitives. They might be useful in all kinds of projects.</p>
+<p>The second category is blocks related to media computation: ones that help in dealing with costumes and sounds (a/k/a Jens libraries). There is some overlap with “big data” libraries, for dealing with large lists of lists.</p>
+<p>The third category is, roughly, specific to non-media applications (a/k/a Brian libraries). Three of them are imports from other programming languages: words and sentences from Logo, array functions from APL, and streams from Scheme. Most of the others are to meet the needs of the BJC curriculum.</p>
+<p>The fourth category is major packages (extensions) provided by users.</p>
+<p>The fifth category provides support for hardware devices such as robots, through general interfaces, replacing specific hardware libraries in versions before 7.0.</p>
+<p>When you click on the one-line description of a library, you are shown the actual blocks in the library and a longer explanation of its purpose. You can browse the libraries to find one that will satisfy your needs.</p>
+<p>The libraries and their contents may change, but as of this writing the list library <span></span> has these blocks:</p>
+<p><img src="assets/image387.png" class="img-fluid" alt="image387.png"> <!--  style="width:1.84861in;height:2.49236in" / --> (The lightning bolt <span></span> before the name in several of these blocks means that they use compiled HOFs or JavaScript primitives to achieve optimal speed. They are officially considered experimental.) Remove duplicates from <span></span> reports a list in which no two items are equal. The sort <span></span> block takes a list and a two-input comparison predicate, such as &lt;, and reports a list with the items sorted according to that comparison. The assoc block <span></span> is for looking up a key in an <em>association list:</em> a list of two-item lists. In each two-item list, the first is a <em>key</em> and the second is a <em>value.</em> The inputs are a key and an association list; the block reports the first key-value pair whose key is equal to the input key.</p>
+<p>For each item <span></span> is a variant of the primitive version that provides a # variable <span></span> containing the position in the input list of the currently considered item. Multimap <span></span> is a version of map that allows multiple list inputs, in which case the mapping function must take as many inputs as there are lists; it will be called with all the first items, all the second items, and so on. Zip takes any number of lists as inputs; it reports a list of lists: all the first items, all the second items, and so on. The no-name identity function reports its input.</p>
+<p>Sentence <span></span> and sentence➔list <span></span> are borrowed from the word and sentence library (page <a href="#wordsent">27</a>) to serve as a variant of append that accepts non-lists as inputs. Printable takes a list structure of any depth as input and reports a compact representation of the list as a text string.</p>
+<p>The iteration, composition library <span></span> has these blocks:</p>
+<p><img src="assets/image388.png" class="img-fluid" alt="image388.png"> <!--  style="width:1.68889in;height:4.75in" / --> Catch <span></span> and throw <span></span> provide a nonlocal exit facility. You can drag the tag from a catch block to a throw inside its C-slot, and the throw will then jump directly out to the matching catch without doing anything in between.</p>
+<p>If do and pause all <span></span> is for setting a breakpoint while debugging code. The idea is to put show variable blocks for local variables in the C-slot; the watchers will be deleted when the user continues from the pause.</p>
+<p>Ignore <span></span> is used when you need to call a reporter but you don’t care about the value it reports. (For example, you are writing a script to time how long the reporter takes.)</p>
+<p>The cascade <span></span> blocks take an initial value and call a function repeatedly on that value, <em>f</em>(<em>f</em>(<em>f</em>(<em>f</em>…(<em>x</em>)))).</p>
+<p>The compose <span></span> block takes two functions and reports the function <em>f</em>(<em>g</em>(<em>x</em>)).</p>
+<p><img src="assets/image389.png" class="img-fluid" alt="image389.png"> <!--  style="width:1.04444in;height:0.16111in" / --> <img src="assets/image390.png" class="img-fluid" alt="image390.png"> <!--  style="width:3.15278in;height:0.29861in" / --> The first three repeat blocks <span></span> are variants of the primitive repeat until block, giving all four combinations of whether the first test happens before or after the first repetition, and whether the condition must be true or false to continue repeating. The last repeat block is like the repeat primitive, but makes the number of repetitions so far available to the repeated script. The next two blocks are variations on for <span></span> : the first allows an explicit step instead of using ±1, and the second allows any values, not just numbers; inside the script you say</p>
+<p><img src="assets/image391.png" class="img-fluid" alt="image391.png"> <!--  style="width:3.44097in;height:1.36111in" alt="Macintosh HD:Users:bh:Desktop:untitled script pic (2).png" / --> <img src="assets/image392.png" class="img-fluid" alt="image392.png"> <!--  style="width:3.70972in;height:1.17153in" alt="Macintosh HD:Users:bh:Desktop:untitled script pic (1).png" / --> replacing the grey block in the picture with an expression to give the next desired value for the loop index. Pipe allows reordering a nested composition with a left-to-right one:</p>
+<p>The stream library <span></span> has these blocks:</p>
+<p><img src="assets/image393.png" class="img-fluid" alt="image393.png"> <!--  style="width:3.16111in;height:2.15347in" / --> <em>Streams</em> are a special kind of list whose items are not computed until they are needed. This makes certain computations more efficient, and also allows the creation of lists with infinitely many items, such as a list of all the positive integers. The first five blocks are stream versions of the list blocks in front of <span></span>, item 1 of <span></span> , all but first of <span></span> , map <span></span>, and keep. Show stream <span></span> takes a stream and a number as inputs, and reports an ordinary list of the first <em>n</em> items of the stream. Stream <span></span> is like the primitive list; it makes a finite stream from explicit items. Sieve <span></span> is an example block that takes as input the stream of integers starting with 2 and reports the stream of all the prime numbers. Stream with numbers from is <span></span> like the numbers from block for lists, except that there is no endpoint; it reports an infinite stream of numbers.</p>
+<p>The <span id="wordsent" class="anchor"></span>word and sentence library <span></span> has these blocks:</p>
+<p><img src="assets/image394.png" class="img-fluid" alt="image394.png"> <!--  style="width:1.67986in;height:3.64306in" / --> This library has the goal of recreating the Logo approach to handling text: A text isn’t best viewed as a string of characters, but rather as a <em>sentence</em>, made of <em>words,</em> each of which is a string of <em>letters.</em> With a few specialized exceptions, this is why people put text into computers: The text is sentences of natural (i.e., human) language, and the emphasis is on words as constitutive of sentences. You barely notice the letters of the words, and you don’t notice the spaces between them at all, unless you’re proof-reading. (Even then: Proofreading is <em>diffciult,</em> because you see what you expect to see, what will make the snetence make sense, rather than the misspelling in front of of your eyes.) Internally, Logo stores a sentence as a list of words, and a word as a string of letters. <span></span></p>
+<p>Inexplicably, the designers of Scratch chose to abandon that tradition, and to focus on the representation of text as a string of characters. The one vestige of the Logo tradition <span></span> from which Scratch developed is the block named letter (1) of (world) <span></span> , rather than character (1) of (world). Snap<em>!</em> inherits its text handling from Scratch.</p>
+<p>In Logo, the visual representation of a sentence <span></span> (a list of words) looks like a natural language sentence: a string of words with spaces between them. In Snap<em>!</em>, the visual representation of a list looks nothing at all like natural language. On the other hand, representing a sentence as a string means that the program must continually re-parse the text on every operation, looking for spaces, treating multiple consecutive spaces as one, and so on. Also, it’s more convenient to treat a sentence as a list of words rather than a string of words because in the former case you can use the higher order functions map, keep, and combine on them. This library attempts to be agnostic as to the internal representation of sentences. The sentence selectors accept any combination of lists and strings; there are two sentence constructors, one to make a string (join words) and one to make a list (sentence).</p>
+<p>The selector names come from Logo, and should be self-explanatory. However, because in a block language you don’t have to type the block name, instead of the terse butfirst or the cryptic bf we spell out “all but first of” and include “word” or “sentence” to indicate the intended domain. There’s no first letter of block because letter 1 of serves that need. Join words (the sentence-as-string constructor) is like the primitive join except that it puts a space in the reported value between each of the inputs. Sentence (the List-colored sentence-as-list constructor) accepts any number of inputs, which can be words, sentences-as-lists, or sentences-as-strings. (If inputs are lists of lists, only one level of flattening is done.) Sentence reports a list of words; there will be no empty words or words containing spaces. The four blocks with right-arrows in their names <span></span> convert back and forth between text strings (words or sentences) and lists. (Splitting a word into a list of letters is unusual unless you’re a linguist investigating orthography.) Printable <span></span> takes a list (including a deep list) of words as input and reports a text string in which parentheses are used to show the structure, as in Lisp/Scheme.</p>
+<p>The pixels library <span></span> has one block:</p>
+<p><img src="assets/image395.png" class="img-fluid" alt="image395.png"> <!--  style="width:0.77917in;height:0.62986in" / --> Costumes are first class data in Snap<em>!</em>. Most of the processing of costume data is done by primitive blocks in the Looks category. (See page <a href="../07-object-oriented-programming-with-sprites/index.html#media-computation-with-costumes">79</a>.) This library provides snap <span></span>, which takes a picture using your computer’s camera and reports it as a costume.</p>
+<p>The bar charts library <span></span> has these blocks:</p>
+<p><img src="assets/image396.png" class="img-fluid" alt="image396.png"> <!--  style="width:3.43056in;height:1.91667in" / --> Bar chart <span></span> takes a table (typically from a CSV data set) as input and reports a summary of the table grouped by the field in the specified column number. The remaining three inputs are used only if the field values are numbers, in which case they can be grouped into buckets (e.g., decades, centuries, etc.). Those inputs specify the smallest and largest values of interest and, most importantly, the width of a bucket (10 for decades, 100 for centuries). If the field isn’t numeric, leave these three inputs empty or set them to zero. Each string value of the field is its own bucket, and they appear sorted alphabetically.</p>
+<p>Bar chart reports a new table with three columns. The first column contains the bucket name or smallest number. The second column contains a nonnegative integer that says how many records in the input table fall into this bucket. The third column is a subtable containing the actual records from the original table that fall into the bucket. Plot bar chart <span></span> takes the table reported by bar chart and graphs it on the stage, with axes labelled appropriately. The remaining blocks are helpers for those.</p>
+<p>If your buckets aren’t of constant width, or you want to group by some function of more than one field, load the “Frequency Distribution Analysis” library instead.</p>
+<p>The multi-branched conditional library <span></span> has these blocks:</p>
+<p><img src="assets/image397.png" class="img-fluid" alt="image397.png"> <!--  style="width:1.85in;height:2.47986in" / --> The catch and throw blocks duplicate ones in the iteration library, and are included because they are used to implement the others. The cases block <span></span> sets up a multi-branch conditional, similar to cond in Lisp <span></span> or switch in C <span></span> -family languages. The first branch is built into the cases block; it consists of a Boolean test in the first hexagonal slot and an action script, in the C-slot, to be run if the test reports true. The remaining branches go in the variadic hexagonal input at the end; each branch consists of an else if block <span></span>, which includes the Boolean test and the corresponding action script, except possibly for the last branch, which can use the unconditional else block <span></span>. As in other languages, once a branch succeeds, no other branches are tested.</p>
+<section id="section" class="level3">
+<h3 class="anchored" data-anchor-id="section"></h3>
+<p>The variadic library <span></span> has these blocks:</p>
+<p><img src="assets/image398.png" class="img-fluid" alt="image398.png"> <!--  style="width:1.19653in;height:0.41667in" / --> These are <span></span> versions <span></span> <span></span> of the associative operators and, and or that take any number of inputs instead of exactly two inputs. As with any variadic input, you can also drop a list of values onto the arrowheads instead of providing the inputs one at a time As of version 8.0, the arithmetic operators sum, product, minimum, and maximum are no longer included, because the primitive operators +. ×, min, and max are themselves variadic.</p>
+<p>The colors and crayons library <span></span> has these blocks:</p>
+<p>It is intended as a more powerful replacement for the primitive set pen block <span></span>, including <em>first class color</em> support; HSL color <span></span> specification as a better alternative to the HSV that Snap<em>!</em> inherits from JavaScript; a “fair hue <span></span>” scale that compensates for the eye’s grouping a wide range of light frequencies as green while labelling mere slivers as orange or yellow; the X11/W3C standard color names <span></span>; RGB in hexadecimal; a linear color scale (as in the old days, but better) based on fair hues and including shades (darker colors) and grayscale. Another linear scale is a curated set of 100 “crayons,” explained further on the next page.</p>
+<p><img src="assets/image413.png" class="img-fluid" alt="image413.png"> <!--  style="width:1.13333in;height:0.23333in" alt="Macintosh HD:Users:bh:Desktop:pen-color.png" / --> <img src="assets/image414.png" class="img-fluid" alt="image414.png"> <!--  style="width:0.95in;height:0.225in" alt="Macintosh HD:Users:bh:Desktop:color picker.png" / --> Colors are created by the block (for direct user selection), the color from block <span></span> to specify a color numerically, or by , which reports the color currently in use by the pen. The from color block <span></span> reports names or numbers associated with a color:</p>
+<p><img src="assets/image415.png" class="img-fluid" alt="image415.png"> <!--  style="width:4.83333in;height:0.43056in" / --> Colors can be created from other colors: <span></span></p>
+<p>The three blocks with pen in their names are improved versions of primitive Pen blocks. In principle set pen <span></span>, for example, could be implemented using a (hypothetical) set pen to color composed with the color from block, but in fact set pen benefits from knowing how the pen color was set in its previous invocation, so it’s implemented separately from color from. Details in Appendix A.</p>
+<p><img src="assets/image416.png" class="img-fluid" alt="image416.png"> <!--  style="width:7.5in;height:0.25in" / --> The recommended way to choose a color is from one of two linear scales: the continuous <em>color numbers</em> and the discrete <em>crayons:</em></p>
+<p><img src="assets/image417.png" class="img-fluid" alt="image417.png"> <!--  style="width:7.5in;height:0.25in" / --></p>
+<p><img src="assets/image418.png" class="img-fluid" alt="image418.png"> <!--  style="width:4in;height:0.20833in" / --> Color numbers <span></span> are based on <em>fair hues,</em> a modification of the spectrum (rainbow) hue scale that devotes less space to green and more to orange and yellow, as well as promoting brown to a real color. Here is the normal hue scale, for reference:</p>
+<p><img src="assets/image419.png" class="img-fluid" alt="image419.png"> <!--  style="width:4in;height:0.20833in" / --> Here is the fair hue scale:</p>
+<p><img src="assets/image416.png" class="img-fluid" alt="image416.png"> <!--  style="width:5in;height:0.20833in" / --> Here is the color number scale:</p>
+<p>(The picture is wider so that pure spectral colors line up with the fair hue scale.)</p>
+<p><img src="assets/image417.png" class="img-fluid" alt="image417.png"> <!--  style="width:5in;height:0.20833in" / --> And here are the 100 crayons <span></span> :</p>
+<p>The color from block, for example, provides different pulldown menus depending on which scale you choose:</p>
+<p><img src="assets/image420.png" class="img-fluid" alt="image420.png"> <!--  style="width:2.41667in;height:0.34444in" alt="Macintosh HD:Users:bh:Desktop:color-by-name.png" / --> You can also type the crayon name: There are many scales:</p>
+<p><img src="assets/image427.png" class="img-fluid" alt="image427.png"> <!--  style="width:4.29167in;height:1.90972in" / --></p>
+<p>The white slot at the end of some of the blocks has two purposes. It can be used to add a transparency <span></span> to a color (0=opaque, 100=transparent):</p>
+<p>or it can be expanded to enter three or four numbers for a vector directly into the block, so these are equivalent:</p>
+<p>But note that a transparency number in a four-number RGBA vector is on the scale 255=opaque, 0=transparent, so the following are <em>not</em> equivalent:</p>
+<p>Set pen crayon to provides the equivalent of a box of 100 crayons. They are divided into color groups, so the menu in the set pen crayon to input <span></span> slot has submenus. The colors are chosen so that starting <img src="assets/image440.png" class="img-fluid" alt="image440.png"> <!--  style="width:4.36528in;height:0.51528in" alt="Macintosh HD:Users:bh:Desktop:pix:10-crayons.png" / --> from crayon 0, change pen crayon by 10 rotates through an interesting, basic set of ten colors:</p>
+<p><img src="assets/image441.png" class="img-fluid" alt="image441.png"> <!--  style="width:4.35556in;height:0.28194in" / --> Using change pen crayon by 5 instead gives ten more colors, for a total of 20:</p>
+<p>(Why didn’t we use the colors of the 100-crayon Crayola™ box? A few reasons, one of which is that some Crayola colors aren’t representable on RGB screens. Some year when you have nothing else to do, look up “color space” on Wikipedia. Also “crayon.” Oh, it’s deliberate that change pen crayon by 5 doesn’t include white, since that’s the usual stage background color. White is crayon 14.) Note that crayon 43 is “Variables”; all the standard block colors are included.</p>
+<p>See Appendix A (page <a href="../13-appendix-a-snap-color-library/index.html#crayons-and-color-numbers">139</a>) for more information.</p>
+<p><img src="assets/image442.png" class="img-fluid" alt="image442.png"> <!--  style="width:1.51in;height:0.9in" alt="Graphical user interface, text, application, chat or text message Description automatically generated" / --> The <strong>crayon library</strong> <span></span> has only the crayon features, without the rest of the colors package.</p>
+<p>The catch errors library <span></span> has these blocks:</p>
+<p><img src="assets/image443.png" class="img-fluid" alt="image443.png"> <!--  style="width:0.43056in;height:0.15278in" / --> <img src="assets/image444.png" class="img-fluid" alt="image444.png"> <!--  style="width:3.04167in;height:1.39583in" / --> The safely try block <span></span> allows you to handle errors that happen when your program is run within the program, instead of stopping the script with a red halo and an obscure error message. The block runs the script in its first C-slot. If it finishes without an error, nothing else happens. But if an error happens, the code in the second C-slot is run. While that second script is running, the variable contains the text of the error message that would have been displayed if you weren’t catching the error. The error block <span></span> is sort of the opposite: it lets your program <em>generate</em> an error message, which will be displayed with a red halo unless it is caught by safely try. Safely try reporting is the reporter version of safely try.</p>
+<p>The text costumes library <span></span> has only two blocks:</p>
+<p><img src="assets/image445.png" class="img-fluid" alt="image445.png"> <!--  style="width:0.53472in;height:0.20833in" alt="Macintosh HD:Users:bh:Desktop:Snaplabel.png" / --> <img src="assets/image446.png" class="img-fluid" alt="image446.png"> <!--  style="width:1.92in;height:0.45078in" alt="Macintosh HD:Users:bh:Desktop:textcostume.png" / --> Costume from text reports a costume <span></span> that can be used with the switch to <img src="assets/image447.png" class="img-fluid" alt="image447.png"> <!--  style="width:3.25972in;height:0.18958in" / --> costume block to make a button:</p>
+<p>Costume with background <span></span> reports a costume made from another costume by coloring its background, taking a color input like the set pen color to RGB(A) block and a number of turtle steps of padding around the original costume. These two blocks work together to make even better buttons:</p>
+<p><img src="assets/image448.png" class="img-fluid" alt="image448.png"> <!--  style="width:5.51in;height:0.68in" / --></p>
+<p>The text to speech library <span></span> has these blocks:</p>
+<p><img src="assets/image449.png" class="img-fluid" alt="image449.png"> <!--  style="width:2.275in;height:0.8in" alt="Macintosh HD:Users:bh:Desktop:speechlib.png" / --> This library interfaces with a capability in up-to-date browsers, so it might not work for you. <span></span> It works best if the accent matches the text!</p>
+<p>The parallelization library <span></span> contains these blocks:</p>
+<p><img src="assets/image450.png" class="img-fluid" alt="image450.png"> <!--  style="width:1.17986in;height:1.25972in" / --> The two do in parallel block <span></span> s take any number of scripts as inputs. Those scripts will be run in parallel, like ordinary independent scripts in the scripting area. The and wait version waits until all of those scripts have finished before continuing the script below the block.</p>
+<p><img src="assets/image451.png" class="img-fluid" alt="image451.png"> <!--  style="width:1.37778in;height:1.48333in" / --> The create variables library <span></span> has these blocks: <span></span></p>
+<p>These blocks allow a program to perform the same operation as the</p>
+<p>button, making global, sprite local, or script variables, but allowing the program to compute the variable name(s). It can also set and find the values of these variables, show and hide their stage watchers, delete them, and find out if they already exist.</p>
+<p>The getters and setters library <span></span> has these blocks:</p>
+<p><img src="assets/image452.png" class="img-fluid" alt="image452.png"> <!--  style="width:1.875in;height:1.05in" / --> <img src="assets/image453.png" class="img-fluid" alt="image453.png"> <!--  style="width:0.29167in;height:0.16667in" / --> The purpose of this library is to allow program access to the settings controlled by user interface elements, such as the settings menu. The setting block <span></span> reports a setting; the set flag block <span></span> sets yes-or-no options that have checkboxes in the user interface, while the set value block <span></span> controls settings with numeric or text values, such as project name.</p>
+<p>Certain settings are ordinarily remembered on a per-user basis, such as the “zoom blocks” value. But when these settings are changed by this library, the change is in effect only while the project using the library is loaded. No permanent changes are made. Note: this library has not been converted for version 7.0, so you’ll have to enable Javascript extensions to use it.</p>
+<p>The bignums, rationals, complex #s library <span></span> has these blocks:</p>
+<p><img src="assets/image454.png" class="img-fluid" alt="image454.png"> <!--  style="width:1.875in;height:1.55in" / --> The USE BIGNUMS block <span></span> takes a Boolean input, to turn the infinite precision feature on or off. When on, all of the arithmetic operators are redefined to accept and report integers of any number of digits (limited only by the memory of your computer) and, in fact, the entire Scheme numeric tower, with exact rationals and with complex numbers. The Scheme number block <span></span> has a list of functions applicable to Scheme numbers, including subtype predicates such as rational? and infinite?, and selectors such as numerator and real-part.</p>
+<p>The ! block <span></span> computes the factorial function <span></span>, useful to test whether bignums are turned on. Without bignums:</p>
+<p>With bignums:</p>
+<p>The 375-digit value of 200! isn’t readable on this page, but if you right-click on the block and choose “result pic,” you can open the resulting picture in a browser window and scroll through it. (These values end with a bunch of zero digits. That’s not roundoff error; the prime factors of 100! and 200! include many copies of 2 and 5.) The block with no name <span></span> is a way to enter things like 3/4 and 4+7i into numeric input slots by converting the slot to Any type.</p>
+<p>The strings, multi-line input library <span></span> provides these blocks: <span></span></p>
+<p><img src="assets/image463.png" class="img-fluid" alt="image463.png"> <!--  style="width:3.9375in;height:2.04167in" / --> All of these could be written in Snap<em>!</em> itself, but these are implemented using the corresponding JavaScript library functions directly, so they run fast. They can be used, for example, in scraping data from a web site. The command use case-independent comparisons applies only to this library. The multiline block <span></span> accepts and reports a text input that can include newline characters.</p>
+<p>The animation library <span></span> has these blocks:</p>
+<p><img src="assets/image464.png" class="img-fluid" alt="image464.png"> <!--  style="width:4.0125in;height:2.33125in" / --> Despite the name, this isn’t only about graphics; you can animate the values of a variable, or anything else that’s expressed numerically.</p>
+<p><img src="assets/image465.png" class="img-fluid" alt="image465.png"> <!--  style="width:0.96528in;height:0.19444in" alt="Macintosh HD:Users:bh:Desktop:pix:easing.png" / --> The central idea of this library is an <em>easing function</em> <span></span> <em>,</em> a reporter whose domain and range are real numbers between 0 and 1 inclusive. The function represents what fraction of the “distance” (in quotes because it might be any numeric value, such as temperature in a simulation of weather) from here to there should be covered in what fraction of the time. A linear easing <span></span> function means steady progression. A quadratic easing function means starting slowly and accelerating. (Note that, since it’s a requirement that <em>f</em>(0)=0 and <em>f</em>(1)=1, there is only one linear easing function, <em>f</em>(<em>x</em>)=<em>x</em>, and similarly for other categories.) The block reports some of the common easing functions.</p>
+<p><img src="assets/image466.png" class="img-fluid" alt="image466.png"> <!--  style="width:4.63194in;height:0.63194in" alt="Macintosh HD:Users:bh:Desktop:pix:animate-control.png" / --> The two Motion blocks in this library animate a sprite. Glide always animates the sprite’s motion. Animate’s first pulldown menu input allows you to animate horizontal or vertical motion, but will also animate the sprite’s direction or size. The animate block <span></span> in Control lets you animate any numeric quantity with any easing function. The getter and setter inputs are best explained by example:</p>
+<p><img src="assets/image467.png" class="img-fluid" alt="image467.png"> <!--  style="width:3.40972in;height:0.25694in" alt="Macintosh HD:Users:bh:Desktop:pix:animate-motion.png" / --> is equivalent to</p>
+<p>The other blocks in the library are helpers for these four.</p>
+<p>The serial ports library <span></span> contains these blocks:</p>
+<p><img src="assets/image468.png" class="img-fluid" alt="image468.png"> <!--  style="width:1.73264in;height:1.03472in" alt="Graphical user interface, text, application, chat or text message Description automatically generated" / --> It is used to allow hardware developers to control devices such as robots that are</p>
+<p>connected to your computer via a serial port.</p>
+<p>The frequency distribution analysis library <span></span> has these blocks:</p>
+<p><img src="assets/image469.png" class="img-fluid" alt="image469.png"> <!--  style="width:4.02708in;height:2.39583in" / --></p>
+<p>This is a collection of tools for analyzing large data sets and plotting histogram <span></span> s of how often some value is found in some column of the table holding the data.</p>
+<p>For more information go here:</p>
+<p>https://tinyurl.com/jens-data</p>
+<p>The audio comp library <span></span> includes these blocks:</p>
+<p><img src="assets/image470.png" class="img-fluid" alt="image470.png"> <!--  style="width:3.54167in;height:2.98125in" / --> This library takes a sound, one that you record or one from our collection of sounds, and manipulates it by systematically changing the intensity of the samples in the sound and by changing the sampling rate at which the sound is reproduced. Many of the blocks are helpers for the plot sound block, used to plot the waveform of a sound <span></span>. The play sound (primitive) block <span></span> plays a sound. __ Hz for <span></span> reports a sine wave as a list of samples.</p>
+<p>The web services library <span></span> has these blocks:</p>
+<p><img src="assets/image471.png" class="img-fluid" alt="image471.png"> <!--  style="width:3.40972in;height:1.10417in" alt="Graphical user interface, text, application, chat or text message Description automatically generated" / --> The first block is a generalization of the primitive url block <span></span> , allowing more control over the various options in web requests: GET, POST, PUT, and DELETE, and fine control over the content of the message sent to the server. Current location <span></span> reports your latitude and longitude. Listify <span></span> takes some text in JSON format (see page <a href="../04-first-class-lists/index.html#multi-dimensional-lists-and-json">54</a>) and converts it to a structured list. Value at key <span></span> looks up a key-value pair in a (listified) JSON dictionary. The key:value: block <span></span> is just a constructor for an abstract data type used with the other blocks</p>
+<p>The database library <span></span> contains these blocks:</p>
+<p><img src="assets/image472.png" class="img-fluid" alt="image472.png"> <!--  style="width:2.26389in;height:1.22222in" alt="Graphical user interface, text, application, chat or text message Description automatically generated" / --> It is used to keep data that persist from one Snap<em>!</em> session to the next, if you use the same browser and the same login.</p>
+<p>The world map library <span></span> has these blocks:</p>
+<p><img src="assets/image473.png" class="img-fluid" alt="image473.png"> <!--  style="width:2.44236in;height:3.40278in" / --> Using any of the command blocks puts a map on the screen, in a layer in front of the stage’s background but behind the pen trails layer (which is in turn behind all the sprites). The first block asks your browser for your current physical location, for which you may be asked to give permission. The next two blocks get and set the map’s zoom amount; the default zoom of 10 ﬁts from San Francisco not quite down to Palo Alto on the screen. A zoom of 1 ﬁts almost the entire world. A zoom of 3 fits the United States; a zoom of 5 ﬁts Germany. The zoom can be changed in half steps, i.e., 5.5 is different from 5, but 5.25 isn’t.</p>
+<p>The next five blocks convert between stage coordinates (pixels) and Earth coordinates (latitude and longitude). The change by x: y: block shifts the map relative to the stage. The distance to block measures the map distance (in meters) between two sprites. The three reporters with current in their names find <em>your</em> actual location, again supposing that geolocation is enabled on your device. Update redraws the map; as costume reports the visible section of the map as a costume. Set style allows things like satellite pictures.</p>
+<p>The APL primitives library contains <span></span> these blocks:</p>
+<p><img src="assets/image474.png" class="img-fluid" alt="image474.png"> <!--  style="width:5.73333in;height:1.11333in" / --></p>
+<p><img src="assets/image475.png" class="img-fluid" alt="image475.png"> <!--  style="width:6.45333in;height:2.04in" / --></p>
+<p>For more information about APL, see Appendix B (page <a href="#appendix-b.-apl-features">148</a>).</p>
+<p>The <img src="assets/image476.png" class="img-fluid" alt="image476.png"> <!--  style="width:1.2in;height:0.48958in" alt="Logo Description automatically generated" / --> <strong>list comprehension library</strong> <span></span> has one block, zip. Its first input is a function of two inputs. The two Any-type inputs are deep lists (lists of lists of…) interpreted as trees, and the function is called with every possible combination of a leaf node of the first tree and a leaf node of the second tree. But instead of taking atoms (non-lists) as the leaves, zip allows the leaves of each tree to be vectors (one-dimensional lists), matrices (two-dimensional lists), etc. The Number-type inputs specify the leaf dimension for each tree, so the function input might be called with a vector from the first tree and an atom from the second tree.</p>
+<p><img src="assets/image477.png" class="img-fluid" alt="image477.png"> <!--  style="width:0.89in;height:1.51in" alt="Icon Description automatically generated" / --> The <strong>bitwise library</strong> <span></span> provides bitwise logic functions; each bit of the reported value is the result of applying the corresponding Boolean function to the corresponding bits of the input(s). The Boolean functions are not for ¬, and for ∧, or for ∨, and xor (exclusive or) for ⊻. The remaining functions shift their first input left or right by the number of bits given by the second input. &lt;&lt; is left shift, &gt;&gt; is arithmetic right shift (shifting in one bits from the left), and &gt;&gt;&gt; is logical right shift (shifting in zero bits from the left). If you don’t already know what these mean, find a tutorial online.</p>
+<p>The <strong>MQTT library</strong> <span></span> supports the Message Queuing Telemetry Transport protocol, for connecting with IOT devices. See <a href="https://mqtt.org/" class="uri">https://mqtt.org/</a> for more information.</p>
+<p>The <strong>Signada library</strong> <span></span> allows you to control a microBit or similar device that works with the Signada MicroBlocks project.</p>
+<p><img src="assets/image486.png" class="img-fluid" alt="image486.png"> <!--  style="width:3.39in;height:1.9in" alt="Graphical user interface, text, application, chat or text message Description automatically generated" / --></p>
+<p>The <strong>menus library</strong> <span></span> provides the ability to display hierarchical menus on the stage, using the ask block’s ability to take lists as inputs. See page <a href="#ask_lists">24</a>.</p>
+<p>The <strong>SciSnap<em>!</em> library</strong> <span></span> and the <strong>TuneScope library</strong> <span></span> are too big to discuss here and are documented separately at <a href="http://emu-online.de/ProgrammingWithSciSnap.pdf" class="uri">http://emu-online.de/ProgrammingWithSciSnap.pdf</a> and <a href="https://maketolearn.org/creating-art-animations-and-music/" class="uri">https://maketolearn.org/creating-art-animations-and-music/</a> respectively.</p>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../../content/00-acknowledgements/index.html" class="pagination-link" aria-label="Acknowledgements">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Acknowledgements</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../../content/02-saving-and-loading-projects-and/index.html" class="pagination-link" aria-label="Saving and Loading Projects and Media">
+        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Saving and Loading Projects and Media</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/snap-cloud/snap-manual/edit/main/content/01-blocks-scripts-and-sprites/index.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li></ul></div></div></div></footer></body></html>

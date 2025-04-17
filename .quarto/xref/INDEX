@@ -1,0 +1,104 @@
+{
+  "index.qmd": {
+    "index.html": "3c0f702e"
+  },
+  "content/00-acknowledgements/index.md": {
+    "index.html": "7683ceb0"
+  },
+  "content/01-blocks-scripts-and-sprites/index.md": {
+    "index.html": "7c884fd2"
+  },
+  "content/02-saving-and-loading-projects-and/index.md": {
+    "index.html": "b7d1bd49"
+  },
+  "content/03-building-a-block/index.md": {
+    "index.html": "ab227aab"
+  },
+  "content/04-first-class-lists/index.md": {
+    "index.html": "c4e9d594"
+  },
+  "content/05-typed-inputs/index.md": {
+    "index.html": "9fdbf91a"
+  },
+  "content/06-procedures-as-data/index.md": {
+    "index.html": "5e6560b5"
+  },
+  "content/07-object-oriented-programming-with-sprites/index.md": {
+    "index.html": "f1ee8903"
+  },
+  "content/08-oop-with-procedures/index.md": {
+    "index.html": "a69e3ef3"
+  },
+  "content/09-the-outside-world/index.md": {
+    "index.html": "581c2942"
+  },
+  "content/10-continuations/index.md": {
+    "index.html": "8a532190"
+  },
+  "content/11-metaprogramming/index.md": {
+    "index.html": "8de1fd35"
+  },
+  "content/12-user-interface-elements/index.md": {
+    "index.html": "113fedfa"
+  },
+  "content/Chapter1.md": {
+    "Chapter1.html": "031cfc3c"
+  },
+  "content/C1-S1.md": {
+    "C1-S1.html": "14483145"
+  },
+  "content/C1-S2.md": {
+    "C1-S2.html": "43ec3532"
+  },
+  "content/C1-S3.md": {
+    "C1-S3.html": "5f92d9a6"
+  },
+  "content/C1-S4.md": {
+    "C1-S4.html": "42a07f84"
+  },
+  "content/C1-S5.md": {
+    "C1-S5.html": "6a910a99"
+  },
+  "content/C1-S6.md": {
+    "C1-S6.html": "e772bb72"
+  },
+  "content/C1-S7.md": {
+    "C1-S7.html": "5eb33250"
+  },
+  "content/C1-S8.md": {
+    "C1-S8.html": "50f00da5"
+  },
+  "content/C1-S12.md": {
+    "C1-S12.html": "e901a3fe"
+  },
+  "content/C1-S13.md": {
+    "C1-S13.html": "d2890ca1"
+  },
+  "content/C1-S15.md": {
+    "C1-S15.html": "3047c8ac"
+  },
+  "content/C1-S16.md": {
+    "C1-S16.html": "32218fc9"
+  },
+  "content/C1-S17.md": {
+    "C1-S17.html": "d698690c"
+  },
+  "content/C1-S18.md": {
+    "C1-S18.html": "b65d2e75"
+  },
+  "content/Chapter2.md": {
+    "Chapter2.html": "6324bfd6"
+  },
+  "content/13-appendix-a-snap-color-library/index.md": {
+    "index.html": "537f906f"
+  },
+  "content/14-appendix-b-apl-features/index.md": {
+    "index.html": "7665fbe6"
+  },
+  "examples.qmd": {
+    "examples.html": "7beb089e"
+  },
+  "references.qmd": {
+    "references.html": "eea0cd72"
+  }
+}

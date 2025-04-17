@@ -9,19 +9,22 @@ though, Snap*!* is a *visual* language; instead of writing a program
 using the keyboard, the Snap*!* programmer uses the same drag-and-drop
 interface familiar to computer users.
 
-![image5.png](assets/image5.png) <!--  style="width:4.32639in;height:2.68958in" / --> Start
-Snap*!*. You should see the following
+Start Snap*!*. You should see the following
 arrangement of regions \index{layout, window} in the window:
+
+![image5.png](assets/image5.png) <!--  style="width:4.32639in;height:2.68958in" / -->
 
 (The proportions of these areas may be different, depending on the size
 and shape of your browser window.)
 
-![image6.png](assets/image6.png) <!--  style="width:1.47917in;height:1.35417in" / --> A
+A
 Snap*!* program \index{ Snap! program} consists of one or more
 *scripts,* each of which is made of *blocks.* Here’s a typical script
 \index{script} :
 
-![image7.png](assets/image7.png) <!--  style="width:2.24653in;height:1.46944in" / --> ![image8.png](assets/image8.png) <!--  style="width:2.20833in;height:1.13889in" / --> The
+![image6.png](assets/image6.png) <!--  style="width:1.47917in;height:1.35417in" / -->
+
+ The
 five block \index{block} s that make up this script have three different
 colors, corresponding to three of the eight *palettes* in which blocks
 can be found. The palette \index{palette} area at the left edge of the
@@ -33,6 +36,8 @@ blocks from a palette into the *scripting area* \index{scripting area}
 in the middle part of the window. Blocks snap together (hence the name
 Snap*!* for the language) when you drag a block so that its indentation
 is near the tab of the one above it:
+
+![image7.png](assets/image7.png) <!--  style="width:2.24653in;height:1.46944in" / --> ![image8.png](assets/image8.png) <!--  style="width:2.20833in;height:1.13889in" / -->
 
 The white horizontal line is a signal that if you let go of the green
 block it will snap into the tab of the gold one.
@@ -52,11 +57,11 @@ block, and the hat block can be used only at the top of the script; its
 distinctive shape is meant to remind you of
 that.[1]<span id="generic_when" class="anchor"></span>
 
-![image9.png](assets/image9.png) <!--  style="width:1.16667in;height:0.25in" / --> The
+The
 other blocks in our example script are *command* block
 \index{block:command}s. Each command block \index{command block}
 corresponds to an action that Snap*!* already knows how to carry out.
-For example, the block tells the sprite \index{sprite} (the arrowhead
+For example, the block ![image9.png](assets/image9.png) <!--  style="width:1.16667in;height:0.25in" / --> tells the sprite \index{sprite} (the arrowhead
 shape on the *stage* \index{stage} at the right end of the window) to
 move ten steps (a step is a very small unit of distance) in the
 direction in which the arrowhead is pointing. We’ll see shortly that
@@ -68,8 +73,8 @@ of blocks \index{stack of blocks}. (The word “block” denotes both the
 graphical shape on the screen and the procedure, the action, that the
 block carries out.)
 
-![image10.png](assets/image10.png) <!--  style="width:1.09722in;height:0.35417in" / --> The
-number 10 in the move block above is called an *input* to the block. By
+
+The number 10 in the move block above is called an *input* to the block. By
 clicking on the white oval, you can type any number in place of the 10.
 The sample script on the previous page uses 100 as the input
 \index{input} value. We’ll see later that inputs can have non-oval
@@ -78,6 +83,8 @@ can compute input values, instead of typing a particular value into the
 oval. A block can have more than one input slot. For example, the glide
 block located about halfway down the Motion palette has three inputs.
 
+One of the hat blocks, the generic “when anything” block ![image10.png](assets/image10.png) <!--  style="width:1.09722in;height:0.35417in" / -->, is subtly different from the others.  When the stop sign is clicked, or when a project or sprite is loaded, this block doesn’t test whether the condition in its hexagonal input slot is true, so the script beneath it will not run, until some other script in the project runs (because, for example, you click the green flag).  When generic when blocks are disabled, the stop sign will be square instead of octagonal.
+
 Most command blocks have that brick shape, but some, like the repeat
 block \index{repeat block} in the sample script, are *C‑shaped.* Most
 C-shaped block \index{block:C-shaped} s \index{C-shaped block} are found
@@ -85,37 +92,44 @@ in the Control palette \index{Control palette}. The slot inside the C
 shape is a special kind of input slot that accepts a *script* as the
 input.
 
-![image6.png](assets/image6.png) <!--  style="width:1.47917in;height:1.35417in" / -->
 
-the repeat block has two inputs: the number 4 and the script
 
-![image11.png](assets/image11.png) <!--  style="width:1.40625in;height:0.48958in" / --> In
-the sample script
+In the sample script
+
+![image6.png](assets/image6.png) <!--  style="width:1.47917in;height:1.35417in" / --> ![image11.png](assets/image11.png) <!--  style="width:1.40625in;height:0.48958in" / --> the repeat block has two inputs: the number 4 and the script
 
 C-shaped blocks can be put in a script in two ways. If you see a white
 line and let go, the block will be inserted into the script like any
 command block:
 
+![image12.png](assets/image12.png) <!--  style="width:1.47917in;height:1.35417in" / --> ![image13.png](assets/image13.png) <!--  style="width:1.40625in;height:0.48958in" / -->
+
 But if you see an orange halo and let go, the block will *wrap* around
 the haloed blocks:
 
+![image14.png](assets/image14.png) <!--  style="width:1.47917in;height:1.35417in" / --> ![image15.png](assets/image15.png) <!--  style="width:1.40625in;height:0.48958in" / -->
+
 The halo will always extend from the cursor position to the bottom of
 the script:
+
+![image16.png](assets/image16.png) <!--  style="width:1.47917in;height:1.35417in" / --> ![image16.png](assets/image16.png) <!--  style="width:1.40625in;height:0.48958in" / -->
 
 If you want only some of those blocks, after wrapping you can grab the
 first block you don’t want wrapped, pull it down, and snap it under the
 C-shaped block.
 
-![image24.png](assets/image24.png) <!--  style="width:2.31111in;height:1.36667in" / --> For
+For
 “E-shaped” blocks with more than one C-shaped slot, only the first slot
 will wrap around existing blocks in a script, and only if that C-shaped
 slot is empty before wrapping. (You can fill the other slots by dragging
 blocks into the desired slot.)
 
-## <span class="mark"> </span>![image25.png](assets/image25.png) <!--  style="width:0.34028in;height:0.24306in" / --> Sprites and Parallelism
+![image24.png](assets/image24.png) <!--  style="width:2.31111in;height:1.36667in" / -->
+
+## <span class="mark"> </span> Sprites and Parallelism
 
 Just below the stage is the “new sprite \index{new sprite button} ”
-button . Click the button to add a new sprite to the stage. The new
+button ![image25.png](assets/image25.png) <!--  style="width:0.34028in;height:0.24306in" / -->. Click the button to add a new sprite to the stage. The new
 sprite will appear in a random position on the stage, with a random
 color, but always facing to the right.
 
@@ -144,14 +158,14 @@ of the tool bar.)
 
 ### Costumes and Sounds
 
-![image30.png](assets/image30.png) <!--  style="width:0.31944in;height:0.21528in" / --> ![image31.png](assets/image31.png) <!--  style="width:1.76667in;height:1.875in" / --> ![image32.png](assets/image32.png) <!--  style="width:0.29167in;height:0.16667in" alt="Macintosh HD:Users:bh:Desktop:paintbutton.png" / --> To change the
+To change the
 appearance of a sprite, paint or import a new *costume* \index{costume}
 for it. To paint a costume, click on the Costumes tab above the
-scripting area, and click the paint button . The *Paint Editor* that
+scripting area, and click the paint button ![image32.png](assets/image32.png) <!--  style="width:0.29167in;height:0.16667in" alt="Macintosh HD:Users:bh:Desktop:paintbutton.png" / -->. The *Paint Editor* that
 appears is explained on page [128](#the-paint-editor). There are three
 ways to import a costume. First select the desired sprite in the sprite
 corral. Then, one way is to click on the file icon in the tool bar ,
-then choose the “Costumes…”menu item. You will see a list of costumes
+then choose ![image30.png](assets/image30.png) <!--  style="width:0.31944in;height:0.21528in" / --> the “Costumes…”menu item. You will see a list of costumes
 from the public media library, and can choose one. The second way, for a
 costume stored on your own computer, is to click on the file icon and
 choose the “Import…” menu item. You can then select a file in any
@@ -159,6 +173,8 @@ picture format (PNG, JPEG, etc.) supported by your browser. The third
 way is quicker if the file you want is visible on the desktop: Just drag
 the file onto the Snap*!* window. In any of these cases, the scripting
 area will be replaced by something like this:
+
+ ![image31.png](assets/image31.png) <!--  style="width:1.76667in;height:1.875in" / --> 
 
 Just above this part of the window is a set of three tabs: Scripts,
 Costumes, and Sounds. You’ll see that the Costumes tab \index{Costumes
@@ -170,22 +186,22 @@ mathematician who invented the idea of procedures as data
 \index{procedures as data}, the most important way in which Snap*!* is
 different from Scratch \index{Scratch}.) You can give a sprite as many
 costumes as you like, and then choose which it will wear either by
-clicking in its wardrobe or by using the or block in a script. (Every
+clicking in its wardrobe or by using the ![image35.png](assets/image35.png) <!--  style="width:1.80556in;height:0.27778in" / --> or ![image34.png](assets/image34.png) <!--  style="width:1.80556in;height:0.27778in" / --> block in a script. (Every
 costume has a number as well as a name. The next costume block selects
 the next costume by number; after the highest-numbered costume it
 switches to costume 1. The Turtle, costume 0, is never chosen by next
 costume.) The Turtle costume \index{Turtle costume} is the only one that
-changes color to match a change in the sprite’s pen color. Protip:
+changes color to match a change in the sprite’s pen color. Protip: ![image33.png](assets/image33.png) <!--  style="width:1.80556in;height:0.27778in" / -->
 switches to the *previous* costume, wrapping like next costume.
 
-![image33.png](assets/image33.png) <!--  style="width:1.80556in;height:0.27778in" / --> ![image38.png](assets/image38.png) <!--  style="width:1.89583in;height:0.26042in" / --> ![image39.png](assets/image39.png) <!--  style="width:1.23958in;height:0.26042in" / --> In
+In
 addition to its costumes, a sprite can have *sounds;* the equivalent for
 sounds of the sprite’s wardrobe is called its *jukebox* \index{jukebox}
 *.* Sound files \index{play sound block} can be imported in any format
 (WAV, OGG, MP3, etc.) supported by your browser. Two blocks accomplish
 the task of playing sounds \index{playing sounds}. If you would like a
-script to continue running while the sound is playing, use the block .
-In contrast, you can use the block to wait for the sound's completion
+script to continue running while the sound is playing, use the block ![image39.png](assets/image39.png) <!--  style="width:1.23958in;height:0.26042in" / -->.
+In contrast, you can use the block ![image38.png](assets/image38.png) <!--  style="width:1.89583in;height:0.26042in" / --> to wait for the sound's completion
 before continuing the rest of the script*.*
 
 ### Inter-Sprite Communication with Broadcast
@@ -195,19 +211,17 @@ more interesting program, though, the sprites on stage will *interact*
 to tell a story, play a game, etc. Often one sprite will have to tell
 another sprite to run a script. Here’s a simple example:
 
-![image40.png](assets/image40.png) <!--  style="width:1.71875in;height:0.24939in" / --> ![image41.png](assets/image41.png) <!--  style="width:0.56944in;height:1.11111in" / -->
-![image42.png](assets/image42.png) <!--  style="width:2.78418in;height:1.51042in" / -->
-![image43.png](assets/image43.png) <!--  style="width:1.24306in;height:0.86111in" / -->
-![image44.png](assets/image44.png) <!--  style="width:1.52083in;height:0.60417in" / -->
+![image41.png](assets/image41.png) <!--  style="width:0.56944in;height:1.11111in" / --> ![image42.png](assets/image42.png) <!--  style="width:2.78418in;height:1.51042in" / -->
+![image43.png](assets/image43.png) <!--  style="width:1.24306in;height:0.86111in" / --> ![image44.png](assets/image44.png) <!--  style="width:1.52083in;height:0.60417in" / -->
 
-![image45.png](assets/image45.png) <!--  style="width:1.78958in;height:0.2in" / --> ![image46.png](assets/image46.png) <!--  style="width:1.8in;height:0.19167in" / --> In
-the block, the word “bark” is just an arbitrary name I made up. When you
+
+In the block ![image40.png](assets/image40.png) <!--  style="width:1.71875in;height:0.24939in" / -->, the word “bark” is just an arbitrary name I made up. When you
 click on the downward arrowhead in that input slot, one of the choices
 (the only choice, the first time) is “new,” which then prompts you to
 enter a name for the new broadcast. When this block is run, the chosen
 message is sent to *every* sprite, which is why the block is called
 “broadcast.” (But if you click the right arrow after the message name,
-the block becomes , and you can change it to  to send the message just
+the block becomes ![image45.png](assets/image45.png) <!--  style="width:1.78958in;height:0.2in" / --> , and you can change it to ![image46.png](assets/image46.png) <!--  style="width:1.8in;height:0.19167in" / --> to send the message just
 to one sprite.) In this program, though, only one sprite has a script to
 run when that broadcast is sent, namely the dog. Because the boy’s
 script uses broadcast and wait \index{broadcast and wait block} rather
@@ -247,10 +261,10 @@ onto the stage display (not the sprite corral icon!) of the desired
 *anchor* sprite. The precise place where you let go of the mouse button
 will be the attachment point of the part on the anchor.
 
-![image47.png](assets/image47.png) <!--  style="width:1.63056in;height:0.96528in" / --> Sprite
-nesting is shown in the sprite corral icons of both anchors and parts:
+Sprite nesting is shown in the sprite corral icons of both anchors and parts:
+![image47.png](assets/image47.png) <!--  style="width:1.63056in;height:0.96528in" / --> 
 
-![image56.png](assets/image56.png) <!--  style="width:1.44444in;height:1.5625in" / --> In
+In
 this illustration, it is desired to animate Alonzo’s arm. (The arm has
 been colored green in this picture to make the relationship of the two
 sprites clearer, but in a real project they’d be the same color,
@@ -270,17 +284,20 @@ blocks.) Any change in the position or size of the anchor is always
 extended to its parts. Also, cloning the anchor (see Section VII. B)
 will also clone all its parts.
 
+![image56.png](assets/image56.png) <!--  style="width:1.44444in;height:1.5625in" / --> ![image48.png](assets/image48.png) <!--  style="width:1.63056in;height:0.96528in" / --> 
+![image49.png](assets/image49.png) <!--  style="width:1.63056in;height:0.96528in" / --> 
+
 *Top: turning the part: the green arm. Bottom: turning the anchor, with
 the arm synchronous (left) and dangling (right).*
 
 ## Reporter Blocks and Expressions
 
-![image65.png](assets/image65.png) <!--  style="width:1.47in;height:0.52in" / --> ![image66.png](assets/image66.png) <!--  style="width:0.72917in;height:0.15625in" / --> So
+So
 far, we’ve used two kinds of block \index{block:reporter} s: hat blocks
 and command blocks. Another kind is the *reporter* block \index{Reporter
-block} , which has an oval shape: . It’s called a “reporter” because
+block} , which has an oval shape: ![image66.png](assets/image66.png) <!--  style="width:0.72917in;height:0.15625in" / --> . It’s called a “reporter” because
 when it’s run, instead of carrying out an action, it reports a value
-that can be used as an input to another block. If you drag a reporter
+that can be used as an input to another block. If you drag a ![image65.png](assets/image65.png) <!--  style="width:1.47in;height:0.52in" / --> reporter
 into the scripting area by itself and click on it, the value it reports
 will appear in a speech balloon next to the block:
 
@@ -288,13 +305,17 @@ When you drag a reporter block over another block’s input slot, a white
 “halo \index{halo} ” appears around that input slot, analogous to the
 white line that appears when snapping command blocks together:
 
-![image71.png](assets/image71.png) <!--  style="width:2.11111in;height:0.61806in" alt="Macintosh HD:Users:bh:Desktop:Google Chrome001.png" / --> Don’t drop
-the input over a *red* halo:
+![image67.png](assets/image67.png) <!--  style="width:1.47in;height:0.52in" / -->
+
+Don’t drop the input over a *red* halo:
+![image71.png](assets/image71.png) <!--  style="width:2.11111in;height:0.61806in" alt="Macintosh HD:Users:bh:Desktop:Google Chrome001.png" / --> 
 
 That’s used for a purpose explained on page
 [68](#recursive-calls-to-multiple-input-blocks).
 
 Here’s a simple script that uses a reporter block:
+
+![image72.png](assets/image72.png) <!--  style="width:2.11111in;height:0.61806in" alt="Macintosh HD:Users:bh:Desktop:Google Chrome001.png" / --> 
 
 Here the x position reporter provides the first input to the say block.
 (The sprite’s X position \index{X position} is its horizontal position,
@@ -306,6 +327,8 @@ the center.)
 You can do arithmetic \index{arithmetic} using reporters in the
 Operators palette:
 
+![image73.png](assets/image73.png) <!--  style="width:2.11111in;height:0.61806in" alt="Macintosh HD:Users:bh:Desktop:Google Chrome001.png" / --> 
+
 The round block rounds 35.3905… to 35, and the + block adds 100 to that.
 (By the way, the round block is in the Operators palette, just like +,
 but in this script it’s a lighter color with black lettering because
@@ -314,45 +337,52 @@ block is nested inside another block from the same palette:
 
 ![image80.png](assets/image80.png) <!--  style="width:4.85417in;height:1.90625in" / -->
 
-![image81.png](assets/image81.png) <!--  style="width:1.91667in;height:0.23958in" / --> This
+This
 aid to readability is called *zebra coloring* \index{zebra coloring}
 *.*) A reporter block with its inputs, maybe including other reporter
-blocks, such as , is called an *expression* \index{expression} *.*
+blocks, such as ![image81.png](assets/image81.png) <!--  style="width:1.91667in;height:0.23958in" / -->, is called an *expression* \index{expression} *.*
 
 ##  Predicates and Conditional Evaluation
 
-![image82.png](assets/image82.png) <!--  style="width:0.66667in;height:0.1875in" / --> ![image83.png](assets/image83.png) <!--  style="width:1.20833in;height:0.1875in" / --> Most
-reporters report \index{block:predicate} either a number, like , or a
-text string, like . A *predicate* is a special kind of reporter that
+Most
+reporters report \index{block:predicate} either a number, like ![image82.png](assets/image82.png) <!--  style="width:0.66667in;height:0.1875in" / -->, or a
+text string, like 
+![image83.png](assets/image83.png) <!--  style="width:1.20833in;height:0.1875in" / --> . A *predicate* is a special kind of reporter that
 always reports true or false. Predicate \index{Predicate block} s have a
 hexagonal shape \index{hexagonal shape} :
 
-![image84.png](assets/image84.png) <!--  style="width:1.94792in;height:0.26042in" / --> ![image85.png](assets/image85.png) <!--  style="width:1.07292in;height:0.15625in" / --> The
+![image85.png](assets/image85.png) <!--  style="width:1.07292in;height:0.15625in" / --> 
+
+The
 special shape is a reminder that predicates don’t generally make sense
 in an input slot of blocks that are expecting a number or text. You
-wouldn’t say , although (as you can see from the picture) Snap*!* lets
+wouldn’t say ![image84.png](assets/image84.png) <!--  style="width:1.94792in;height:0.26042in" / --> , although (as you can see from the picture) Snap*!* lets
 you do it if you really want. Instead, you normally use predicates in
 special hexagonal input slots like this one:
+![image86.png](assets/image86.png) <!--  style="width:0.66667in;height:0.56944in" / --> 
 
-![image86.png](assets/image86.png) <!--  style="width:0.66667in;height:0.56944in" / --> The
+The
 C-shaped if block \index{if block} runs its input script if (and only
 if) the expression in its hexagonal input reports true.
+![image87.png](assets/image87.png) <!--  style="width:1.59375in;height:0.61458in" / --> 
 
-![image87.png](assets/image87.png) <!--  style="width:1.59375in;height:0.61458in" / --> A
-really useful block \index{repeat until block} in animation
+A really useful block \index{repeat until block} in animation
 \index{animation} s runs its input script *repeatedly* until a predicate
 is satisfied:
+![image89.png](assets/image89.png) <!--  style="width:2.29167in;height:0.84375in" / --> 
 
-![image88.png](assets/image88.png) <!--  style="width:2.28194in;height:1.46875in" / --> ![image89.png](assets/image89.png) <!--  style="width:2.29167in;height:0.84375in" / --> If,
-while working on a project, you want to omit temporarily some commands
+If, while working on a project, you want to omit temporarily some commands
 in a script, but you don’t want to forget where they belong, you can say
+
+![image88.png](assets/image88.png) <!--  style="width:2.28194in;height:1.46875in" / --> 
 
 Sometimes you want to take the same action whether some condition is
 true or false, but with a different input value. For this purpose you
 can use the *reporter* if block \index{reporter if block} :
 
-![image90.png](assets/image90.png) <!--  style="width:4.20833in;height:0.38542in" / --> The
-technical term for a true or false value is a “Boolean \index{Boolean} ”
+![image90.png](assets/image90.png) <!--  style="width:4.20833in;height:0.38542in" / --> 
+
+Thetechnical term for a true or false value is a “Boolean \index{Boolean} ”
 value; it has a capital B because it’s named after a person, George
 Boole \index{Boole, George}, who developed the mathematical theory of
 Boolean values. Don’t get confused; a hexagonal block is a *predicate,*
@@ -366,19 +396,21 @@ those that report values and those that don’t. Commands, Reporters, and
 Predicates are all procedures. The words “a Procedure type” are
 shorthand for “Command type, Reporter type, or Predicate type.”
 
-![image91.png](assets/image91.png) <!--  style="width:1.375in;height:0.24306in" alt="Macintosh HD:Users:bh:Desktop:turbo-false.png" / --> ![image92.png](assets/image92.png) <!--  style="width:1.375in;height:0.24306in" alt="Macintosh HD:Users:bh:Desktop:turbo-true.png" / --> If you want to put
+If you want to put
 a *constant* Boolean \index{Boolean constant} value in a hexagonal slot
 instead of a predicate-based expression, hover the mouse over the block
-and click on the control that appears:
+and click on the control that appears: ![image91.png](assets/image91.png) <!--  style="width:1.375in;height:0.24306in" alt="Macintosh HD:Users:bh:Desktop:turbo-false.png" / --> ![image92.png](assets/image92.png) <!--  style="width:1.375in;height:0.24306in" alt="Macintosh HD:Users:bh:Desktop:turbo-true.png" / --> 
 
 ## Variables
 
-![image93.png](assets/image93.png) <!--  style="width:1.58333in;height:1.41667in" / --> Try
+Try
 this script:
+![image93.png](assets/image93.png) <!--  style="width:1.58333in;height:1.41667in" / --> 
 
-![image94.png](assets/image94.png) <!--  style="width:1.88542in;height:1.4375in" / --> The
+The
 input to the move block is an orange oval. To get it there, drag the
 orange oval that’s part of the for block \index{for block} :
+![image94.png](assets/image94.png) <!--  style="width:1.88542in;height:1.4375in" / --> 
 
 The orange oval \index{orange oval} is a *variable:* a symbol that
 represents a value. (I took this screenshot before changing the second
@@ -394,12 +426,13 @@ the picture you see is a kind of spiral. (If you try again with a turn
 of 90 degrees instead of 92, you’ll see why this picture is called a
 “squiral \index{squiral}.”)
 
-![image95.png](assets/image95.png) <!--  style="width:3.1875in;height:1.5in" / --> The
+The
 variable i is created by the for block, and it can only be used in the
 script inside the block’s C-slot. (By the way, if you don’t like the
 name i, you can change it by clicking on the orange oval without
 dragging it, which will pop up a dialog window in which you can enter a
 different name:
+![image95.png](assets/image95.png) <!--  style="width:3.1875in;height:1.5in" / --> 
 
 “I” isn’t a very descriptive name; you might prefer “length” to indicate
 its purpose in the script. “I” is traditional because mathematicians
@@ -413,9 +446,13 @@ You can create variables “by hand” that aren’t limited to being used
 within a single block. At the top of the Variables palette, click the
 “Make a variable \index{Make a variable} ” button:
 
-![image96.png](assets/image96.png) <!--  style="width:3.1875in;height:1.84375in" / --> ![image97.png](assets/image97.png) <!--  style="width:2.05208in;height:2.27083in" / --> This
+![image97.png](assets/image97.png) <!--  style="width:2.05208in;height:2.27083in" / --> 
+
+This
 will bring up a dialog window in which you can give your variable a
 name:
+
+![image96.png](assets/image96.png) <!--  style="width:3.1875in;height:1.84375in" / --> 
 
 The dialog also gives you a choice to make the variable available to all
 sprites (which is almost always what you want) or to make it visible
@@ -427,32 +464,35 @@ sprite in the sprite corral), and the different sprites will do slightly
 different things when running that script because each has a different
 value for that variable name.
 
-![image98.png](assets/image98.png) <!--  style="width:1.65833in;height:2.29167in" / --> If
+If
 you give your variable the name “name” then the Variables palette will
 look like this:
 
-![image99.png](assets/image99.png) <!--  style="width:1.04167in;height:0.40625in" / --> There’s
+![image98.png](assets/image98.png) <!--  style="width:1.65833in;height:2.29167in" / --> 
+
+There’s
 now a “Delete a variable \index{Delete a variable} ” button, and there’s
 an orange oval with the variable name in it, just like the orange oval
 in the for block. You can drag the variable into any script in the
 scripting area. Next to the oval is a checkbox, initially checked. When
 it’s checked, you’ll also see a *variable watcher* \index{variable
-watcher} on the stage:
+watcher} on the stage: ![image99.png](assets/image99.png) <!--  style="width:1.04167in;height:0.40625in" / --> 
 
 When you give the variable a value, the orange box in its watcher
 \index{watcher} will display the value.
 
-![image100.png](assets/image100.png) <!--  style="width:1.92708in;height:0.47917in" / --> How *do* you give it a value?
+How *do* you give it a value?
 You use the set block \index{set block} :
+![image100.png](assets/image100.png) <!--  style="width:1.92708in;height:0.47917in" / --> 
 
 Note that you *don’t* drag the variable’s oval into the set block! You
 click on the downarrow in the first input slot, and you get a menu of
 all the available variable names.
 
 If you do choose “For this sprite only \index{For this sprite only} ”
-when creating a variable, its block in the palette looks like this:
+when creating a variable, its block in the palette looks like this:![image101.png](assets/image101.png) <!--  style="width:0.65833in;height:0.14167in" alt="Macintosh HD:Users:bh:Desktop:local-var.png" / -->  
 
-![image101.png](assets/image101.png) <!--  style="width:0.65833in;height:0.14167in" alt="Macintosh HD:Users:bh:Desktop:local-var.png" / -->  The *location*-pin
+The *location*-pin
 \index{location-pin} icon is a bit of a pun on a sprite-*local* variable
 \index{variable:sprite-local}. It’s shown only in the palette.
 
@@ -469,12 +509,16 @@ during the running of a particular script. In that case you can use the
 script variables block \index{script variables block} to make the
 variable:
 
+![image105.png](assets/image105.png) <!--  style="width:2.08333in;height:0.30208in" / --> 
+
 As in the for block, you can click on an orange oval in the script
 variables block without dragging to change its name. You can also make
 more than one temporary variable by clicking on the right arrow at the
 end of the block to add another variable oval:
 
-### ![image106.png](assets/image106.png) <!--  style="width:2.08333in;height:0.30208in" / --> Renaming variables \index{renaming variables}
+![image106.png](assets/image106.png) <!--  style="width:2.08333in;height:0.30208in" / --> 
+
+### Renaming variables \index{renaming variables}
 
 There are several reasons why you might want to change the name of a
 variable:
@@ -495,11 +539,13 @@ instance separately to decide which ones to rename. Both of these
 operations are possible by right-clicking or control-clicking on a
 variable oval.
 
-![image107.png](assets/image107.png) <!--  style="width:1.61389in;height:1.50764in" / --> ![image108.png](assets/image108.png) <!--  style="width:2.82639in;height:1.25694in" / --> ![image109.png](assets/image109.png) <!--  style="width:1.38194in;height:0.74306in" / --> If you right-click on an
+If you right-click on an
 orange oval in a context in which the variable is *used,* then you are
 able to rename just that one orange oval:
 
-![image110.png](assets/image110.png) <!--  style="width:1.70833in;height:0.83333in" / --> ![image111.png](assets/image111.png) <!--  style="width:1.49306in;height:0.74306in" / --> If you right-click on the
+![image105.png](assets/image105.png) <!--  style="width:2.08333in;height:0.30208in" / --> 
+
+If you right-click on the
 place where the variable is *defined* (a script variables block, the
 orange oval for a global variable in the Variables palette, or an orange
 oval that’s built into a block such as the “i” in for), then you are
@@ -507,18 +553,26 @@ given two renaming options, “rename” and “rename all.” If you choose
 “rename,” then the name is changed only in that one orange oval, as in
 the previous case:
 
-![image112.png](assets/image112.png) <!--  style="width:1.49306in;height:0.74306in" / --> ![image113.png](assets/image113.png) <!--  style="width:1.70833in;height:0.83333in" / --> But if you choose “rename
+![image104.png](assets/image104.png) <!--  style="width:2.08333in;height:0.30208in" / --> 
+
+But if you choose “rename
 all,” then the name will be changed throughout the scope of the variable
 (the script for a script variable, or everywhere for a global variable):
 
-### Transient variable \index{variable:transient} s
+![image103.png](assets/image103.png) <!--  style="width:2.08333in;height:0.30208in" / --> 
 
-![image114.png](assets/image114.png) <!--  style="width:1.29167in;height:1.05556in" / --> So far we’ve talked about
+### Transient variables \index{variable:transient}
+
+So far we’ve talked about
 variables with numeric values, or with short text strings such as
 someone’s name. But there’s no limit to the amount of information you
 can put in a variable; in Chapter IV you’ll see how to use *lists* to
 collect many values in one data structure, and in Chapter VIII you’ll
-see how to read information from web sites. When you use these
+see how to read information from web sites. 
+
+![image102.png](assets/image102.png) <!--  style="width:2.08333in;height:0.30208in" / --> 
+
+When you use these
 capabilities, your project may take up a lot of memory \index{memory} in
 the computer. If you get close to the amount of memory available to
 Snap*!*, then it may become impossible to save your project. (Extra
@@ -528,7 +582,7 @@ your program reads a lot of data from the outside world that will still
 be available when you use it next, you might want to have values
 containing a lot of data removed from memory before saving the project.
 To do this, right-click or control-click on the orange oval in the
-Variables palette, to see this menu:
+Variables palette, to see this menu: ![image114.png](assets/image114.png) <!--  style="width:1.29167in;height:1.05556in" / --> 
 
 You already know about the rename options, and help… displays a help
 screen about variables in general. Here we’re interested in the check
@@ -545,31 +599,33 @@ that you can examine the values of variables.
 
 ### The pause button
 
-![image115.png](assets/image115.png) <!--  style="width:0.29167in;height:0.16667in" / --> ![image116.png](assets/image116.png) <!--  style="width:0.29167in;height:0.16667in" / --> The simplest way to pause a
-program is manually, by clicking the pause button \index{button:pause}
+The simplest way to pause a
+program is manually, by clicking the pause button ![image116.png](assets/image116.png) <!--  style="width:0.29167in;height:0.16667in" / --> \index{button:pause}
 in the top right corner of the window. While the program is paused, you
 can run other scripts by clicking on them, show variables on stage with
 the checkbox next to the variable in the Variables palette or with the
 show variable block \index{hide variable block}, and do all the other
 things you can generally do, including modifying the paused scripts by
-adding or removing blocks. The button changes shape to and clicking it
+adding or removing blocks. The ![image115.png](assets/image115.png) <!--  style="width:0.29167in;height:0.16667in" / -->  button changes shape to and clicking it
 again resumes the paused scripts.
 
-### Breakpoint \index{breakpoint} s: the pause all block \index{pause all block}
+### Breakpoints \index{breakpoint} : the pause all block \index{pause all block}
 
-<span id="pause_all" class="anchor"></span>![image117.png](assets/image117.png) <!--  style="width:0.81944in;height:0.21528in" / --> The pause button is great if
+<span id="pause_all" class="anchor"></span>The pause button is great if
 your program seems to be in an infinite loop, but more often you’ll want
 to set a *breakpoint,* a particular point in a script at which you want
-to pause. The block, near the bottom of the Control palette, can be
+to pause. The ![image117.png](assets/image117.png) <!--  style="width:0.81944in;height:0.21528in" / -->  block, near the bottom of the Control palette, can be
 inserted in a script to pause when it is run. So, for example, if your
 program is getting an error message in a particular block, you could use
 pause all just before that block to look at the values of variables just
 before the error happens.
 
-![image118.png](assets/image118.png) <!--  style="width:1.88333in;height:0.91111in" / --> The pause all block turns
+The pause all block turns
 bright cyan while paused. Also, during the pause, you can right-click on
 a running script and the menu that appears will give you the option to
-show watchers for temporary variables of the script:
+show watchers for temporary variables of the script: 
+
+![image118.png](assets/image118.png) <!--  style="width:1.88333in;height:0.91111in" / --> 
 
 But what if the block with the error is run many times in a loop, and it
 only errors when a particular condition is true—say, the value of some
@@ -579,24 +635,32 @@ libraries) is a breakpoint block that lets you set a *conditional*
 breakpoint, and automatically display the relevant variables before
 pausing. Here’s a sample use of it:
 
-![image119.png](assets/image119.png) <!--  style="width:1.19444in;height:1.33333in" / --> (In this contrived example,
+![image119.png](assets/image119.png) <!--  style="width:1.19444in;height:1.33333in" / --> 
+
+(In this contrived example,
 variable zot comes from outside the script but is relevant to its
 behavior.) When you continue (with the pause button), the temporary
 variable watchers are removed by this breakpoint block before resuming
 the script. The breakpoint block isn’t magic; you could alternatively
 just put a pause all inside an if.[2]
 
+The hide variable and show variable blocks can also be used to hide and show primitives in the palette.  The pulldown menu doesn’t include primitive blocks, but there’s a generally useful technique to give a block input values it wasn’t expecting using run or call: ![image120.png](assets/image120.png) <!--  style="width:1.19444in;height:1.33333in" / --> 
+In order to use a block as an input this way, you must explicitly put a ring around it, by right-clicking on it and choosing ringify.  More about rings in Chapter VI.  
+
+
 ### Visible stepping
 
-![image121.png](assets/image121.png) <!--  style="width:0.29167in;height:0.16667in" / --> ![image122.png](assets/image122.png) <!--  style="width:0.54563in;height:0.15278in" / --> ![image123.png](assets/image123.png) <!--  style="width:0.29167in;height:0.16667in" / --> Sometimes you’re not exactly
+Sometimes you’re not exactly
 sure where the error is, or you don’t understand how the program got
 there. To understand better, you’d like to watch the program as it runs,
 at human speed rather than at computer speed. You can do this by
 clicking the *visible stepping bu* \index{button:visible stepping}
-*tton* \index{visible stepping button} ( ), before running a script or
-while the script is paused. The button will light up ( ) and a speed
-control slider will appear in the toolbar. When you start or continue
-the script, its blocks and input slots will light up cyan one at a time:
+*tton* \index{visible stepping button} (![image121.png](assets/image121.png) <!--  style="width:0.29167in;height:0.16667in" / --> ), before running a script or
+while the script is paused. The button will light up ( ![image123.png](assets/image123.png) <!--  style="width:0.29167in;height:0.16667in" / --> ) and a speed
+control slider ![image122.png](assets/image122.png) <!--  style="width:0.54563in;height:0.15278in" / --> will appear in the toolbar. When you start or continue
+the script, its blocks and input slots will light up cyan one at a time: 
+
+![image124.png](assets/image124.png) <!--  style="width:0.54563in;height:0.15278in" / -->
 
 In this simple example, the inputs to the blocks are constant values,
 but if an input were a more complicated expression involving several
@@ -606,10 +670,10 @@ called, so, for example, the 100 lights up before the move.
 
 **. . .**
 
-![image134.png](assets/image134.png) <!--  style="width:0.29167in;height:0.16667in" / --> The speed of stepping is
+The speed of stepping is
 controlled by the slider \index{slider:stepping speed}. If you move the
 slider all the way to the left, the speed is zero, the pause button
-turns into a step button , and the script takes a single step each time
+turns into a step button ![image134.png](assets/image134.png) <!--  style="width:0.29167in;height:0.16667in" / --> , and the script takes a single step each time
 you push it. The name for this is *single stepping* \index{single
 stepping} *.*
 
@@ -637,11 +701,10 @@ at least part of its name, type control-F and enter the name in the text
 block that appears in the palette area.
 
 Here are the primitive blocks that don’t exist in Scratch:
-
-![image135.png](assets/image135.png) <!--  style="width:1.25in;height:0.22917in" / --> ![image136.png](assets/image136.png) <!--  style="width:1.05208in;height:0.22917in" / -->  reports \index{pen trails
+![image136.png](assets/image136.png) <!--  style="width:1.05208in;height:0.22917in" / -->  reports \index{pen trails
 block} a \index{pen vectors block} new costume consisting of everything
 that’s drawn on the stage by any sprite. Right-clicking the block in the
-scripting area gives the option to change it to if vector logging is
+scripting area gives the option to change it to ![image135.png](assets/image135.png) <!--  style="width:1.25in;height:0.22917in" / --> if vector logging is
 enabled. See page [116](#logpenvectors).
 
 ![image137.png](assets/image137.png) <!--  style="width:2.08333in;height:0.375in" / --> Print
@@ -652,12 +715,11 @@ sprite’s position before using it, and sometimes you need to know how
 big the text turned out to be, in turtle steps.) If the pen is down, the
 text will be underlined.
 
-![image138.png](assets/image138.png) <!--  style="width:1.20069in;height:0.51389in" alt="Macintosh HD:Users:bh:Desktop:paste-on.png" / --> Takes a sprite as
-input. Like stamp except that the costume is stamped onto the selected
-sprite instead of onto the stage. (Does nothing if the current sprite
-doesn’t overlap the chosen sprite.)
+![image138.png](assets/image138.png) <!--  style="width:1.20069in;height:0.51389in" alt="Macintosh HD:Users:bh:Desktop:paste-on.png" / --> 
+Takes a sprite as input. Like stamp except that the costume is stamped onto the selected sprite instead of onto the stage. (Does nothing if the current sprite doesn’t overlap the chosen sprite.)
 
-![image139.png](assets/image139.png) <!--  style="width:1.19167in;height:0.33889in" alt="Macintosh HD:Users:bh:Desktop:cut-from.png" / --> Takes a sprite as
+![image139.png](assets/image139.png) <!--  style="width:1.19167in;height:0.33889in" alt="Macintosh HD:Users:bh:Desktop:cut-from.png" / --> 
+Takes a sprite as
 input. Erases from that sprite’s costume the area that overlaps with the
 current sprite’s costume. (Does not affect the costume in the chosen
 sprite’s wardrobe, only the copy currently visible.)
@@ -666,8 +728,12 @@ Runs \index{warp block} only this script
 
 until finished. In the Control palette even though it’s gray.
 
-![image140.png](assets/image140.png) <!--  style="width:0.52986in;height:0.5in" / --> ![image141.png](assets/image141.png) <!--  style="width:0.98958in;height:0.25972in" / --> ![image142.png](assets/image142.png) <!--  style="width:1.32986in;height:0.42986in" alt="Icon Description automatically generated" / -->  See page
-[6](#generic_when). See page [17](#pause_all).
+ ![image142.png](assets/image142.png) <!--  style="width:1.32986in;height:0.42986in" alt="Icon Description automatically generated" / -->  See page
+[6](#generic_when). ![image141.png](assets/image141.png) <!--  style="width:0.98958in;height:0.25972in" / --> See page [17](#pause_all).
+
+![image140.png](assets/image140.png) <!--  style="width:0.52986in;height:0.5in" / -->  Runs only this script
+until finished.  In the Control palette even though it’s gray.
+
 
 ![image143.png](assets/image143.png) <!--  style="width:1.71in;height:0.23in" alt="Macintosh HD:Users:bh:Desktop:pix:reporter-if.png" / --> Reporter
 version of the if/else primitive command block \index{if else reporter
@@ -682,20 +748,22 @@ variable} .
 local variables \index{local variables} in a script. \index{script
 variables block}
 
-![image146.png](assets/image146.png) <!--  style="width:0.86in;height:0.19in" alt="Macintosh HD:Users:bh:Desktop:report-effect.png" / --> ![image147.png](assets/image147.png) <!--  style="width:0.72in;height:0.2in" / --> ![image148.png](assets/image148.png) <!--  style="width:1.17in;height:0.18in" / -->
+ ![image148.png](assets/image148.png) <!--  style="width:1.17in;height:0.18in" / -->
 See page [91](#url).
 
-reports the value of a graphics effect \index{graphics effect}.
+![image146.png](assets/image146.png) <!--  style="width:0.86in;height:0.19in" alt="Macintosh HD:Users:bh:Desktop:report-effect.png" / --> reports the value of a graphics effect \index{graphics effect}.
 
-Constant true \index{true block} or false \index{false block} value. See
+ ![image147.png](assets/image147.png) <!--  style="width:0.72in;height:0.2in" / --> Constant true \index{true block} or false \index{false block} value. See
 page [12](#predicates-and-conditional-evaluation).
+
+ ![image149.png](assets/image149.png) <!--  style="width:0.72in;height:0.2in" / -->
 
 ![image153.png](assets/image153.png) <!--  style="width:2.13in;height:0.18in" / -->
 Create a primitive using JavaScript \index{JavaScript}. (This block is
 disabled by default; the user must check “Javascript extensions” in the
 setting menu *each time* a project is loaded.) \index{pen down? block}
 
-The at block \index{at block} lets you examine the screen pixel
+ ![image150.png](assets/image150.png) <!--  style="width:0.72in;height:0.2in" / --> The at block \index{at block} lets you examine the screen pixel
 \index{screen pixel} directly behind the rotation center of a sprite,
 the mouse, or an arbitrary (x,y) coordinate pair dropped onto the second
 menu slot. The first five items of the left menu let you examine the
@@ -705,8 +773,10 @@ including this one, any point of which overlaps this sprite’s rotation
 center (behind or in front). This is a hyperblock with respect to its
 second input.
 
-![image162.png](assets/image162.png) <!--  style="width:2.44583in;height:1.32639in" / --> ![image163.png](assets/image163.png) <!--  style="width:2.35556in;height:0.38889in" alt="Macintosh HD:Users:bh:Desktop:set-on.png" / -->  Checks the \index{is
+ ![image154.png](assets/image154.png) <!--  style="width:0.72in;height:0.2in" / -->  Checks the \index{is
 \_ a \_ ? block} data \index{stage blocks} type \index{type} of a value.
+
+ ![image151.png](assets/image151.png) <!--  style="width:0.72in;height:0.2in" / -->   ![image152.png](assets/image152.png) <!--  style="width:0.72in;height:0.2in" / -->
 
 **Blocks only for the Stage:**
 

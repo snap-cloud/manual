@@ -64,7 +64,7 @@ book:
     # This stuff is duplicative of Chapter 1 and 2 above.
     - part: content/Chapter1.md
       chapters:
-      - content/C1-S1.qmd
+      - content/C1-S1.md
       - content/C1-S2.md
       - content/C1-S3.md
       - content/C1-S4.md

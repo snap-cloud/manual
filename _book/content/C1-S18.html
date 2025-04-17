@@ -1,0 +1,928 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.6.42">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="description" content="A manual for Snap! TODO">
+
+<title>27&nbsp; Libraries – Snap! Reference Manual</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../content/Chapter2.html" rel="next">
+<link href="../content/C1-S17.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-c09c9fbbb0eb80a11083d72da712c037.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-sidebar floating nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="https://snap.berkeley.edu/" class="navbar-brand navbar-brand-logo">
+    <img src="../images/snap-logo.png" alt="" class="navbar-logo">
+    </a>
+    <a class="navbar-brand" href="https://snap.berkeley.edu/">
+    <span class="navbar-title">Snap! Reference Manual</span>
+    </a>
+  </div>
+        <div class="quarto-navbar-tools tools-end">
+    <a href="https://github.com/snap-cloud/snap-manual/" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
+    <a href="../snap-manual.pdf" title="Download PDF" class="quarto-navigation-tool px-1" aria-label="Download PDF"><i class="bi bi-file-pdf"></i></a>
+</div>
+          <div id="quarto-search" class="" title="Search"></div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../content/Chapter1.html">Blocks, Scripts, and Sprites</a></li><li class="breadcrumb-item"><a href="../content/C1-S18.html"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">Libraries</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
+      <a href="../index.html" class="sidebar-logo-link">
+      <img src="../images/snap-logo.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      </a>
+      </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">The Snap<em>!</em> Reference Manual</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../content/00-acknowledgements/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Acknowledgements</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../content/01-blocks-scripts-and-sprites/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Blocks, Scripts, and Sprites</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../content/02-saving-and-loading-projects-and/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Saving and Loading Projects and Media</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../content/03-building-a-block/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Building a Block</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../content/04-first-class-lists/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">First class lists</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../content/05-typed-inputs/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Typed Inputs</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../content/06-procedures-as-data/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Procedures as Data</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../content/07-object-oriented-programming-with-sprites/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Object Oriented Programming with Sprites</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../content/08-oop-with-procedures/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">OOP with Procedures</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../content/09-the-outside-world/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">The Outside World</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../content/10-continuations/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Continuations</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../content/11-metaprogramming/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Metaprogramming</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../content/12-user-interface-elements/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">User Interface Elements <span></span></span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../content/Chapter1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Blocks, Scripts, and Sprites</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../content/C1-S1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Sprites and Parallelism</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../content/C1-S2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Nesting Sprites: Anchors and Parts</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../content/C1-S3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Reporter Blocks and Expressions</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../content/C1-S4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Predicates and Conditional Evaluation</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../content/C1-S5.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Variables</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../content/C1-S6.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Global Variables</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../content/C1-S7.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Script Variables</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../content/C1-S8.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Transient variables</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../content/C1-S12.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Debugging</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../content/C1-S13.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">The pause button</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../content/C1-S15.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Breakpoints: the pause all block</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../content/C1-S16.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">Visible stepping</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../content/C1-S17.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">Etcetera</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../content/C1-S18.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">Libraries</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../content/Chapter2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">28</span>&nbsp; <span class="chapter-title">Saving and Loading Projects and Media</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Appendices</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../content/13-appendix-a-snap-color-library/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Appendix A. Snap<em>!</em> color library</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../content/14-appendix-b-apl-features/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">Appendix B. APL features</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../examples.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">C</span>&nbsp; <span class="chapter-title">Example Test Title</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">D</span>&nbsp; <span class="chapter-title">References</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#section" id="toc-section" class="nav-link active" data-scroll-target="#section"></a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/snap-cloud/snap-manual/edit/main/content/C1-S18.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../content/Chapter1.html">Blocks, Scripts, and Sprites</a></li><li class="breadcrumb-item"><a href="../content/C1-S18.html"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">Libraries</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">Libraries</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p><img src="assets/images/image384.png" class="img-fluid"> <!-- {width="31px" height="17px"} --> <img src="assets/images/image385.png" class="img-fluid"> <!-- {width="711px" height="311px"} --> There are several collections of useful procedures that aren’t Snap<em>!</em> primitives, but are provided as libraries. To include a library in your project, choose the Libraries… option in the file ( ) menu.</p>
+<p>When you click on the one-line description of a library, you are shown the actual blocks in the library and a longer explanation of its purpose. You can browse the libraries to find one that will satisfy your needs.</p>
+<p>The libraries and their contents may change, but as of this writing the list library has these blocks:</p>
+<p><img src="assets/images/image387.png" class="img-fluid"> <!-- {width="177px" height="239px"} --> (The lightning bolt before the name in several of these blocks means that they use compiled HOFs or JavaScript primitives to achieve optimal speed. They are officially considered experimental.) Remove duplicates from reports a list in which no two items are equal. The sort block takes a list and a two-input comparison predicate, such as &lt;, and reports a list with the items sorted according to that comparison. The assoc block is for looking up a key in an <em>association list:</em> a list of two-item lists. In each two-item list, the first is a <em>key</em> and the second is a <em>value.</em> The inputs are a key and an association list; the block reports the first key-value pair whose key is equal to the input key.</p>
+<p>For each item is a variant of the primitive version that provides a # variable containing the position in the input list of the currently considered item. Multimap is a version of map that allows multiple list inputs, in which case the mapping function must take as many inputs as there are lists; it will be called with all the first items, all the second items, and so on. Zip takes any number of lists as inputs; it reports a list of lists: all the first items, all the second items, and so on. The no-name identity function reports its input.</p>
+<p>Sentence and sentence➔list are borrowed from the word and sentence library (page 27) to serve as a variant of append that accepts non-lists as inputs. Printable takes a list structure of any depth as input and reports a compact representation of the list as a text string.</p>
+<p>The iteration, composition library has these blocks:</p>
+<p><img src="assets/images/image388.png" class="img-fluid"> <!-- {width="162px" height="456px"} --> Catch and throw provide a nonlocal exit facility. You can drag the tag from a catch block to a throw inside its C-slot, and the throw will then jump directly out to the matching catch without doing anything in between.</p>
+<p>If do and pause all is for setting a breakpoint while debugging code. The idea is to put show variable blocks for local variables in the C-slot; the watchers will be deleted when the user continues from the pause.</p>
+<p>Ignore is used when you need to call a reporter but you don’t care about the value it reports. (For example, you are writing a script to time how long the reporter takes.)</p>
+<p>The cascade blocks take an initial value and call a function repeatedly on that value, <em>f</em>(<em>f</em>(<em>f</em>(<em>f</em>…(<em>x</em>)))).</p>
+<p>The compose block takes two functions and reports the function <em>f</em>(<em>g</em>(<em>x</em>)).</p>
+<p><img src="assets/images/image389.png" class="img-fluid"> <!-- {width="100px" height="15px"} --> <img src="assets/images/image390.png" class="img-fluid"> <!-- {width="303px" height="29px"} --> The first three repeat blocks are variants of the primitive repeat until block, giving all four combinations of whether the first test happens before or after the first repetition, and whether the condition must be true or false to continue repeating. The last repeat block is like the repeat primitive, but makes the number of repetitions so far available to the repeated script. The next two blocks are variations on for: the first allows an explicit step instead of using ±1, and the second allows any values, not just numbers; inside the script you say</p>
+<p><img src="assets/images/image391.png" class="img-fluid"> <!-- {width="330px" height="131px"} --> <img src="assets/images/image392.png" class="img-fluid"> <!-- {width="356px" height="112px"} --> replacing the grey block in the picture with an expression to give the next desired value for the loop index. Pipe allows reordering a nested composition with a left-to-right one:</p>
+<p>The stream library has these blocks:</p>
+<p><img src="assets/images/image393.png" class="img-fluid"> <!-- {width="303px" height="207px"} --> <em>Streams</em> are a special kind of list whose items are not computed until they are needed. This makes certain computations more efficient, and also allows the creation of lists with infinitely many items, such as a list of all the positive integers. The first five blocks are stream versions of the list blocks in front of, item 1 of, all but first of, map, and keep. Show stream takes a stream and a number as inputs, and reports an ordinary list of the first <em>n</em> items of the stream. Stream is like the primitive list; it makes a finite stream from explicit items. Sieve is an example block that takes as input the stream of integers starting with 2 and reports the stream of all the prime numbers. Stream with numbers from is like the numbers from block for lists, except that there is no endpoint; it reports an infinite stream of numbers.</p>
+<p>The word and sentence library has these blocks:</p>
+<p><img src="assets/images/image394.png" class="img-fluid"> <!-- {width="161px" height="350px"} --> This library has the goal of recreating the Logo approach to handling text: A text isn’t best viewed as a string of characters, but rather as a <em>sentence</em>, made of <em>words,</em> each of which is a string of <em>letters.</em> With a few specialized exceptions, this is why people put text into computers: The text is sentences of natural (i.e., human) language, and the emphasis is on words as constitutive of sentences. You barely notice the letters of the words, and you don’t notice the spaces between them at all, unless you’re proof-reading. (Even then: Proofreading is <em>diffciult,</em> because you see what you expect to see, what will make the snetence make sense, rather than the misspelling in front of of your eyes.) Internally, Logo stores a sentence as a list of words, and a word as a string of letters.</p>
+<p>Inexplicably, the designers of Scratch chose to abandon that tradition, and to focus on the representation of text as a string of characters. The one vestige of the Logo tradition from which Scratch developed is the block named letter (1) of (world), rather than character (1) of (world). Snap<em>!</em> inherits its text handling from Scratch.</p>
+<p>In Logo, the visual representation of a sentence (a list of words) looks like a natural language sentence: a string of words with spaces between them. In Snap<em>!</em>, the visual representation of a list looks nothing at all like natural language. On the other hand, representing a sentence as a string means that the program must continually re-parse the text on every operation, looking for spaces, treating multiple consecutive spaces as one, and so on. Also, it’s more convenient to treat a sentence as a list of words rather than a string of words because in the former case you can use the higher order functions map, keep, and combine on them. This library attempts to be agnostic as to the internal representation of sentences. The sentence selectors accept any combination of lists and strings; there are two sentence constructors, one to make a string (join words) and one to make a list (sentence).</p>
+<p>The selector names come from Logo, and should be self-explanatory. However, because in a block language you don’t have to type the block name, instead of the terse butfirst or the cryptic bf we spell out “all but first of” and include “word” or “sentence” to indicate the intended domain. There’s no first letter of block because letter 1 of serves that need. Join words (the sentence-as-string constructor) is like the primitive join except that it puts a space in the reported value between each of the inputs. Sentence (the List-colored sentence-as-list constructor) accepts any number of inputs, which can be words, sentences-as-lists, or sentences-as-strings. (If inputs are lists of lists, only one level of flattening is done.) Sentence reports a list of words; there will be no empty words or words containing spaces. The four blocks with right-arrows in their names convert back and forth between text strings (words or sentences) and lists. (Splitting a word into a list of letters is unusual unless you’re a linguist investigating orthography.) Printable takes a list (including a deep list) of words as input and reports a text string in which parentheses are used to show the structure, as in Lisp/Scheme.</p>
+<p>The pixels library has one block:</p>
+<p><img src="assets/images/image395.png" class="img-fluid"> <!-- {width="75px" height="60px"} --> Costumes are first class data in Snap<em>!</em>. Most of the processing of costume data is done by primitive blocks in the Looks category. (See page 79.) This library provides snap, which takes a picture using your computer’s camera and reports it as a costume.</p>
+<p>The bar charts library has these blocks:</p>
+<p><img src="assets/images/image396.png" class="img-fluid"> <!-- {width="329px" height="184px"} --> Bar chart takes a table (typically from a CSV data set) as input and reports a summary of the table grouped by the field in the specified column number. The remaining three inputs are used only if the field values are numbers, in which case they can be grouped into buckets (e.g., decades, centuries, etc.). Those inputs specify the smallest and largest values of interest and, most importantly, the width of a bucket (10 for decades, 100 for centuries). If the field isn't numeric, leave these three inputs empty or set them to zero. Each string value of the field is its own bucket, and they appear sorted alphabetically.</p>
+<p>Bar chart reports a new table with three columns. The first column contains the bucket name or smallest number. The second column contains a nonnegative integer that says how many records in the input table fall into this bucket. The third column is a subtable containing the actual records from the original table that fall into the bucket. Plot bar chart takes the table reported by bar chart and graphs it on the stage, with axes labelled appropriately. The remaining blocks are helpers for those.</p>
+<p>If your buckets aren't of constant width, or you want to group by some function of more than one field, load the "Frequency Distribution Analysis" library instead.</p>
+<p>The multi-branched conditional library has these blocks:</p>
+<p><img src="assets/images/image397.png" class="img-fluid"> <!-- {width="178px" height="238px"} --> The catch and throw blocks duplicate ones in the iteration library, and are included because they are used to implement the others. The cases block sets up a multi-branch conditional, similar to cond in Lisp or switch in C-family languages. The first branch is built into the cases block; it consists of a Boolean test in the first hexagonal slot and an action script, in the C-slot, to be run if the test reports true. The remaining branches go in the variadic hexagonal input at the end; each branch consists of an else if block, which includes the Boolean test and the corresponding action script, except possibly for the last branch, which can use the unconditional else block. As in other languages, once a branch succeeds, no other branches are tested.</p>
+<section id="section" class="level3">
+<h3 class="anchored" data-anchor-id="section"></h3>
+<p>The variadic library has these blocks:</p>
+<p><img src="assets/images/image398.png" class="img-fluid"> <!-- {width="115px" height="40px"} --> These are versions of the associative operators and, and or that take any number of inputs instead of exactly two inputs. As with any variadic input, you can also drop a list of values onto the arrowheads instead of providing the inputs one at a time As of version 8.0, the arithmetic operators sum, product, minimum, and maximum are no longer included, because the primitive operators +. ×, min, and max are themselves variadic.</p>
+<p><img src="assets/images/image399.png" class="img-fluid"> <!-- {width="699px" height="106px"} --> The colors and crayons library has these blocks:</p>
+<p>It is intended as a more powerful replacement for the primitive set pen block, including <em>first class color</em> support; HSL color specification as a better alternative to the HSV that Snap<em>!</em> inherits from JavaScript; a “fair hue” scale that compensates for the eye’s grouping a wide range of light frequencies as green while labelling mere slivers as orange or yellow; the X11/W3C standard color names; RGB in hexadecimal; a linear color scale (as in the old days, but better) based on fair hues and including shades (darker colors) and grayscale. Another linear scale is a curated set of 100 “crayons,” explained further on the next page.</p>
+<p><img src="assets/images/image409.png" class="img-fluid"> <!-- {width="294px" height="219px"} --> <img src="assets/images/image413.png" class="img-fluid"> <!-- {width="109px" height="22px"} --> <img src="assets/images/image414.png" class="img-fluid"> <!-- {width="91px" height="22px"} --> Colors are created by the block (for direct user selection), the color from block to specify a color numerically, or by , which reports the color currently in use by the pen. The from color block reports names or numbers associated with a color:</p>
+<p><img src="assets/images/image415.png" class="img-fluid"> <!-- {width="464px" height="41px"} --> Colors can be created from other colors:</p>
+<p>The three blocks with pen in their names are improved versions of primitive Pen blocks. In principle set pen, for example, could be implemented using a (hypothetical) set pen to color composed with the color from block, but in fact set pen benefits from knowing how the pen color was set in its previous invocation, so it’s implemented separately from color from. Details in Appendix A.</p>
+<p><img src="assets/images/image416.png" class="img-fluid"> <!-- {width="720px" height="24px"} --> The recommended way to choose a color is from one of two linear scales: the continuous <em>color numbers</em> and the discrete <em>crayons:</em></p>
+<p><img src="assets/images/image417.png" class="img-fluid"> <!-- {width="720px" height="24px"} --></p>
+<p><img src="assets/images/image418.png" class="img-fluid"> <!-- {width="384px" height="20px"} --> Color numbers are based on <em>fair hues,</em> a modification of the spectrum (rainbow) hue scale that devotes less space to green and more to orange and yellow, as well as promoting brown to a real color. Here is the normal hue scale, for reference:</p>
+<p><img src="assets/images/image419.png" class="img-fluid"> <!-- {width="384px" height="20px"} --> Here is the fair hue scale:</p>
+<p><img src="assets/images/image416.png" class="img-fluid"> <!-- {width="480px" height="20px"} --> Here is the color number scale:</p>
+<p>(The picture is wider so that pure spectral colors line up with the fair hue scale.)</p>
+<p><img src="assets/images/image417.png" class="img-fluid"> <!-- {width="480px" height="20px"} --> And here are the 100 crayons:</p>
+<p>The color from block, for example, provides different pulldown menus depending on which scale you choose:</p>
+<p><img src="assets/images/image420.png" class="img-fluid"> <!-- {width="232px" height="33px"} --> <img src="assets/images/image421.png" class="img-fluid"> <!-- {width="679px" height="275px"} --> You can also type the crayon name: There are many scales:</p>
+<p><img src="assets/images/image427.png" class="img-fluid"> <!-- {width="412px" height="183px"} --></p>
+<p><img src="assets/images/image428.png" class="img-fluid"> <!-- {width="590px" height="51px"} --> The white slot at the end of some of the blocks has two purposes. It can be used to add a transparency to a color (0=opaque, 100=transparent):</p>
+<p><img src="assets/images/image432.png" class="img-fluid"> <!-- {width="675px" height="41px"} --> or it can be expanded to enter three or four numbers for a vector directly into the block, so these are equivalent:</p>
+<p><img src="assets/images/image436.png" class="img-fluid"> <!-- {width="719px" height="41px"} --> But note that a transparency number in a four-number RGBA vector is on the scale 255=opaque, 0=transparent, so the following are <em>not</em> equivalent:</p>
+<p>Set pen crayon to provides the equivalent of a box of 100 crayons. They are divided into color groups, so the menu in the set pen crayon to input slot has submenus. The colors are chosen so that starting <img src="assets/images/image440.png" class="img-fluid"> <!-- {width="419px" height="49px"} --> from crayon 0, change pen crayon by 10 rotates through an interesting, basic set of ten colors:</p>
+<p><img src="assets/images/image441.png" class="img-fluid"> <!-- {width="418px" height="27px"} --> Using change pen crayon by 5 instead gives ten more colors, for a total of 20:</p>
+<p>(Why didn’t we use the colors of the 100-crayon Crayola™ box? A few reasons, one of which is that some Crayola colors aren’t representable on RGB screens. Some year when you have nothing else to do, look up “color space” on Wikipedia. Also “crayon.” Oh, it’s deliberate that change pen crayon by 5 doesn’t include white, since that’s the usual stage background color. White is crayon 14.) Note that crayon 43 is</p>
+<p>“Variables”; all the standard block colors are included.</p>
+<p>See Appendix A (page 139) for more information.</p>
+<p><img src="assets/images/image442.png" class="img-fluid"> <!-- {width="145px" height="86px"} --> The <strong>crayon library</strong> has only the crayon features, without the rest of the colors package.</p>
+<p>The catch errors library has these blocks:</p>
+<p><img src="assets/images/image443.png" class="img-fluid"> <!-- {width="41px" height="15px"} --> <img src="assets/images/image444.png" class="img-fluid"> <!-- {width="292px" height="134px"} --> The safely try block allows you to handle errors that happen when your program is run within the program, instead of stopping the script with a red halo and an obscure error message. The block runs the script in its first C-slot. If it finishes without an error, nothing else happens. But if an error happens, the code in the second C-slot is run. While that second script is running, the variable contains the text of the error message that would have been displayed if you weren’t catching the error. The error block is sort of the opposite: it lets your program <em>generate</em> an error message, which will be displayed with a red halo unless it is caught by safely try. Safely try reporting is the reporter version of safely try.</p>
+<p>The text costumes library has only two blocks:</p>
+<p><img src="assets/images/image445.png" class="img-fluid"> <!-- {width="51px" height="20px"} --> <img src="assets/images/image446.png" class="img-fluid"> <!-- {width="184px" height="43px"} --> Costume from text reports a costume that can be used with the switch to <img src="assets/images/image447.png" class="img-fluid"> <!-- {width="313px" height="18px"} --> costume block to make a button:</p>
+<p>Costume with background reports a costume made from another costume by coloring its background, taking a color input like the set pen color to RGB(A) block and a number of turtle steps of padding around the original costume. These two blocks work together to make even better buttons:</p>
+<p><img src="assets/images/image448.png" class="img-fluid"> <!-- {width="529px" height="65px"} --></p>
+<p>The text to speech library has these blocks:</p>
+<p><img src="assets/images/image449.png" class="img-fluid"> <!-- {width="218px" height="77px"} --> This library interfaces with a capability in up-to-date browsers, so it might not work for you. It works best if the accent matches the text!</p>
+<p>The parallelization library contains these blocks:</p>
+<p><img src="assets/images/image450.png" class="img-fluid"> <!-- {width="113px" height="121px"} --> The two do in parallel blocks take any number of scripts as inputs. Those scripts will be run in parallel, like ordinary independent scripts in the scripting area. The and wait version waits until all of those scripts have finished before continuing the script below the block.</p>
+<p><img src="assets/images/image451.png" class="img-fluid"> <!-- {width="132px" height="142px"} --> The create variables library has these blocks:</p>
+<p>These blocks allow a program to perform the same operation as the</p>
+<p>button, making global, sprite local, or script variables, but allowing the program to compute the variable name(s). It can also set and find the values of these variables, show and hide their stage watchers, delete them, and find out if they already exist.</p>
+<p>The getters and setters library has these blocks:</p>
+<p><img src="assets/images/image452.png" class="img-fluid"> <!-- {width="180px" height="101px"} --> <img src="assets/images/image453.png" class="img-fluid"> <!-- {width="28px" height="16px"} --> The purpose of this library is to allow program access to the settings controlled by user interface elements, such as the settings menu. The setting block reports a setting; the set flag block sets yes-or-no options that have checkboxes in the user interface, while the set value block controls settings with numeric or text values, such as project name.</p>
+<p>Certain settings are ordinarily remembered on a per-user basis, such as the “zoom blocks” value. But when these settings are changed by this library, the change is in effect only while the project using the library is loaded. No permanent changes are made. Note: this library has not been converted for version 7.0, so you’ll have to enable Javascript extensions to use it.</p>
+<p>The bignums, rationals, complex #s library has these blocks:</p>
+<p><img src="assets/images/image454.png" class="img-fluid"> <!-- {width="180px" height="149px"} --> The USE BIGNUMS block takes a Boolean input, to turn the infinite precision feature on or off. When on, all of the arithmetic operators are redefined to accept and report integers of any number of digits (limited only by the memory of your computer) and, in fact, the entire Scheme numeric tower, with exact rationals and with complex numbers. The Scheme number block has a list of functions applicable to Scheme numbers, including subtype predicates such as rational? and infinite?, and selectors such as numerator and real-part.</p>
+<p><img src="assets/images/image455.png" class="img-fluid"> <!-- {width="464px" height="40px"} --> The ! block computes the factorial function, useful to test whether bignums are turned on. Without bignums:</p>
+<p>With bignums:</p>
+<p><img src="assets/images/image459.png" class="img-fluid"> <!-- {width="723px" height="35px"} --> The 375-digit value of 200! isn’t readable on this page, but if you right-click on the block and choose “result pic,” you can open the resulting picture in a browser window and scroll through it. (These values end with a bunch of zero digits. That’s not roundoff error; the prime factors of 100! and 200! include many copies of 2 and 5.) The block with no name is a way to enter things like 3/4 and 4+7i into numeric input slots by converting the slot to Any type.</p>
+<p>The strings, multi-line input library provides these blocks:</p>
+<p><img src="assets/images/image463.png" class="img-fluid"> <!-- {width="378px" height="196px"} --> All of these could be written in Snap<em>!</em> itself, but these are implemented using the corresponding JavaScript library functions directly, so they run fast. They can be used, for example, in scraping data from a web site. The command use case-independent comparisons applies only to this library. The multiline block accepts and reports a text input that can include newline characters.</p>
+<p>The animation library has these blocks:</p>
+<p><img src="assets/images/image464.png" class="img-fluid"> <!-- {width="385px" height="224px"} --> Despite the name, this isn’t only about graphics; you can animate the values of a variable, or anything else that’s expressed numerically.</p>
+<p><img src="assets/images/image465.png" class="img-fluid"> <!-- {width="93px" height="19px"} --> The central idea of this library is an <em>easing function,</em> a reporter whose domain and range are real numbers between 0 and 1 inclusive. The function represents what fraction of the “distance” (in quotes because it might be any numeric value, such as temperature in a simulation of weather) from here to there should be covered in what fraction of the time. A linear easing function means steady progression. A quadratic easing function means starting slowly and accelerating. (Note that, since it’s a requirement that <em>f</em>(0)=0 and <em>f</em>(1)=1, there is only one linear easing function, <em>f</em>(<em>x</em>)=<em>x</em>, and similarly for other categories.) The block reports some of the common easing functions.</p>
+<p><img src="assets/images/image466.png" class="img-fluid"> <!-- {width="445px" height="61px"} --> The two Motion blocks in this library animate a sprite. Glide always animates the sprite’s motion. Animate’s first pulldown menu input allows you to animate horizontal or vertical motion, but will also animate the sprite’s direction or size. The animate block in Control lets you animate any numeric quantity with any easing function. The getter and setter inputs are best explained by example:</p>
+<p><img src="assets/images/image467.png" class="img-fluid"> <!-- {width="327px" height="25px"} --> is equivalent to</p>
+<p>The other blocks in the library are helpers for these four.</p>
+<p>The serial ports library contains these blocks:</p>
+<p><img src="assets/images/image468.png" class="img-fluid"> <!-- {width="166px" height="99px"} --> It is used to allow hardware developers to control devices such as robots that are</p>
+<p>connected to your computer via a serial port.</p>
+<p>The frequency distribution analysis library has these blocks:</p>
+<p><img src="assets/images/image469.png" class="img-fluid"> <!-- {width="387px" height="230px"} --></p>
+<p>This is a collection of tools for analyzing large data sets and plotting histograms of how often some value is found in some column of the table holding the data.</p>
+<p>For more information go here:</p>
+<p>http://tinyurl.com/jens-data</p>
+<p>The audio comp library includes these blocks:</p>
+<p><img src="assets/images/image470.png" class="img-fluid"> <!-- {width="340px" height="286px"} --> This library takes a sound, one that you record or one from our collection of sounds, and manipulates it by systematically changing the intensity of the samples in the sound and by changing the sampling rate at which the sound is reproduced. Many of the blocks are helpers for the plot sound block, used to plot the waveform of a sound. The play sound (primitive) block plays a sound. __ Hz for reports a sine wave as a list of samples.</p>
+<p>The web services library has these blocks:</p>
+<p><img src="assets/images/image471.png" class="img-fluid"> <!-- {width="327px" height="106px"} --> The first block is a generalization of the primitive url block, allowing more control over the various options in web requests: GET, POST, PUT, and DELETE, and fine control over the content of the message sent to the server. Current location reports your latitude and longitude. Listify takes some text in JSON format (see page 54) and converts it to a structured list. Value at key looks up a key-value pair in a (listified) JSON dictionary. The key:value: block is just a constructor for an abstract data type used with the other blocks</p>
+<p>The database library contains these blocks:</p>
+<p><img src="assets/images/image472.png" class="img-fluid"> <!-- {width="217px" height="117px"} --> It is used to keep data that persist from one Snap<em>!</em> session to the next, if you use the same browser and the same login.</p>
+<p>The world map library has these blocks:</p>
+<p><img src="assets/images/image473.png" class="img-fluid"> <!-- {width="234px" height="327px"} --> Using any of the command blocks puts a map on the screen, in a layer in front of the stage’s background but behind the pen trails layer (which is in turn behind all the sprites). The first block asks your browser for your current physical location, for which you may be asked to give permission. The next two blocks get and set the map’s zoom amount; the default zoom of 10 ﬁts from San Francisco not quite down to Palo Alto on the screen. A zoom of 1 ﬁts almost the entire world. A zoom of 3 fits the United States; a zoom of 5 ﬁts Germany. The zoom can be changed in half steps, i.e., 5.5 is different from 5, but 5.25 isn’t.</p>
+<p>The next five blocks convert between stage coordinates (pixels) and Earth coordinates (latitude and longitude). The change by x: y: block shifts the map relative to the stage. The distance to block measures the map distance (in meters) between two sprites. The three reporters with current in their names find <em>your</em> actual location, again supposing that geolocation is enabled on your device. Update redraws the map; as costume reports the visible section of the map as a costume. Set style allows things like satellite pictures.</p>
+<p>The APL primitives library contains these blocks:</p>
+<p><img src="assets/images/image474.png" class="img-fluid"> <!-- {width="550px" height="107px"} --></p>
+<p><img src="assets/images/image475.png" class="img-fluid"> <!-- {width="620px" height="196px"} --></p>
+<p>For more information about APL, see Appendix B (page 148).</p>
+<p>The <img src="assets/images/image476.png" class="img-fluid"> <!-- {width="115px" height="47px"} --> <strong>list comprehension library</strong> has one block, zip. Its first input is a function of two inputs. The two Any-type inputs are deep lists (lists of lists of…) interpreted as trees, and the function is called with every possible combination of a leaf node of the first tree and a leaf node of the second tree. But instead of taking atoms (non-lists) as the leaves, zip allows the leaves of each tree to be vectors (one-dimensional lists), matrices (two-dimensional lists), etc. The Number-type inputs specify the leaf dimension for each tree, so the function input might be called with a vector from the first tree and an atom from the second tree.</p>
+<p><img src="assets/images/image477.png" class="img-fluid"> <!-- {width="85px" height="145px"} --> The <strong>bitwise library</strong> provides bitwise logic functions; each bit of the reported value is the result of applying the corresponding Boolean function to the corresponding bits of the input(s). The Boolean functions are not for ¬, and for ∧, or for ∨, and xor (exclusive or) for ⊻. The remaining functions shift their first input left or right by the number of bits given by the second input. &lt;&lt; is left shift, &gt;&gt; is arithmetic right shift (shifting in one bits from the left), and &gt;&gt;&gt; is logical right shift (shifting in zero bits from the left). If you don’t already know what these mean, find a tutorial online.</p>
+<p><img src="assets/images/image478.png" class="img-fluid"> <!-- {width="627px" height="155px"} --></p>
+<p>The <strong>MQTT library</strong> supports the Message Queuing Telemetry Transport protocol, for connecting with IOT devices. See <a href="https://mqtt.org/" class="uri">https://mqtt.org/</a> for more information.</p>
+<p><img src="assets/images/image482.png" class="img-fluid"> <!-- {width="479px" height="277px"} --> The <strong>Signada library</strong> allows you to control a microBit or similar device that works with the Signada MicroBlocks project.</p>
+<p><img src="assets/images/image486.png" class="img-fluid"> <!-- {width="325px" height="182px"} --></p>
+<p>The <strong>menus library</strong> provides the ability to display hierarchical menus on the stage, using the ask block’s ability to take lists as inputs. See page 24.</p>
+<p>The <strong>SciSnap<em>!</em> library</strong> and the <strong>TuneScope library</strong> are too big to discuss here and are documented separately at <a href="http://emu-online.de/ProgrammingWithSciSnap.pdf" class="uri">http://emu-online.de/ProgrammingWithSciSnap.pdf</a> and <a href="https://maketolearn.org/creating-art-animations-and-music/" class="uri">https://maketolearn.org/creating-art-animations-and-music/</a> respectively.</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../content/C1-S17.html" class="pagination-link" aria-label="Etcetera">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">Etcetera</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../content/Chapter2.html" class="pagination-link" aria-label="Saving and Loading Projects and Media">
+        <span class="nav-page-text"><span class="chapter-number">28</span>&nbsp; <span class="chapter-title">Saving and Loading Projects and Media</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/snap-cloud/snap-manual/edit/main/content/C1-S18.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li></ul></div></div></div></footer></body></html>
