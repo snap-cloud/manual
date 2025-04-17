@@ -14,10 +14,16 @@ block \index{Make a block}.” Also, floating near the top of the palette
 is a plus sign. Also, the menu you get by right-clicking on the
 background of the scripting area has a “make a block” option.
 
-![image501.png](assets/image501.png) <!--  style="width:2.27083in;height:2.34722in" / --> Clicking any of these will
+![image523.png](assets/image523.png) <!--  style="width:2.27083in;height:2.34722in" / -->
+
+
+
+Clicking any of these will
 display a dialog window in which you choose the block’s name, shape, and
 palette/color. You also decide whether the block will be available to
 all sprites, or only to the current sprite and its children.
+
+![image501.png](assets/image501.png) <!--  style="width:2.27083in;height:2.34722in" / -->
 
 In this dialog box, you can choose the block's palette, shape, and name.
 With one exception, there is one color \index{color of blocks} per
@@ -52,6 +58,8 @@ custom block, then click OK:
 Your block appears at the bottom of the Motion palette. Here’s the block
 and the result of using it:
 
+![image524.png](assets/image524.png) <!--  style="width:2.27083in;height:2.34722in" / -->
+
 ###  Custom Blocks with Inputs
 
 But suppose you want to be able to draw squares of different sizes.
@@ -62,9 +70,11 @@ over one, it lights up:
 
 ![image508.png](assets/image508.png) <!--  style="width:3.44444in;height:2.72222in" / --> 
 
-![image509.png](assets/image509.png) <!--  style="width:2.58333in;height:1.60417in" / --> Click on the plus on the
+Click on the plus on the
 right. You will then see the “input name” dialog \index{input name
 dialog} :
+
+![image509.png](assets/image509.png) <!--  style="width:2.58333in;height:1.60417in" / --> 
 
 Type in the name “size” and click OK. There are other options in this
 dialog; you can choose “title text \index{title text} ” if you want to
@@ -74,19 +84,21 @@ dialog with a lot of options about your input name. But we’ll leave that
 for later. When you click OK, the new input appears in the block
 prototype:
 
-![image510.png](assets/image510.png) <!--  style="width:1.47917in;height:1.48958in" / --> You can now drag the orange
+![image510.png](assets/image510.png) <!--  style="width:1.47917in;height:1.48958in" / --> 
+
+You can now drag the orange
 variable down into the script, then click okay:
 
 ![image511.png](assets/image511.png) <!--  style="width:1.47472in;height:1.4955in" / --> 
 
-![image512.png](assets/image512.png) <!--  style="width:0.69792in;height:0.25in" / --> Your
-block now appears in the Motion palette with an input box: You can draw
+Your
+block now appears in the Motion palette with an input box: ![image512.png](assets/image512.png) <!--  style="width:0.69792in;height:0.25in" / --> You can draw
 any size square by entering the length of its side in the box and
 running the block as usual, by clicking it or by putting it in a script.
 
 ### Editing Block Properties
 
-![image513.png](assets/image513.png) <!--  style="width:0.99931in;height:0.76042in" / --> What if you change your mind
+ What if you change your mind
 about a block’s color (palette) or shape (command, reporter, predicate)?
 If you click in the hat block at the top that holds the prototype, but
 not in the prototype itself, you’ll see a window in which you can change
@@ -98,6 +110,8 @@ realize it’s the wrong category. Just delete that copy (drag it back to
 the palette) and then change the category.)
 
 If you right-click/control-click the hat block, you get this menu:
+
+![image513.png](assets/image513.png) <!--  style="width:0.99931in;height:0.76042in" / -->
 
 Script pic \index{script pic} exports a picture of the script. (Many of
 the illustrations in this manual were made that way.) Translations
@@ -122,10 +136,12 @@ same thing as regular clicking, as described earlier.
 
 ## Recursion
 
-![image514.png](assets/image514.png) <!--  style="width:2.96528in;height:2.36319in" / --> ![image515.png](assets/image515.png) <!--  style="width:1.95833in;height:2.35417in" / --> ![image516.png](assets/image516.png) <!--  style="width:1.42361in;height:0.91181in" / --> Since the new custom
+Since the new custom
 \index{recursion} block appears in its palette as soon as you *start*
 editing it, you can write recursive blocks (blocks that call themselves)
 by dragging the block into its own definition:
+
+![image514.png](assets/image514.png) <!--  style="width:2.96528in;height:2.36319in" / --> ![image515.png](assets/image515.png) <!--  style="width:1.95833in;height:2.35417in" / --> ![image516.png](assets/image516.png) <!--  style="width:1.42361in;height:0.91181in" / --> 
 
 (If you added inputs to the block since opening the editor, click Apply
 before finding the block in the palette, or drag the \index{drag from
@@ -151,6 +167,8 @@ values.
 You can also write recursive reporters \index{reporters, recursive},
 like this block to compute the factorial \index{factorial} function:
 
+![image520.png](assets/image520.png) <!--  style="width:4.29167in;height:0.86458in" / -->
+
 Note the use of the report block \index{report block}. When a reporter
 block uses this block, the reporter finishes its work and reports the
 value given; any further blocks in the script are not evaluated. Thus,
@@ -164,8 +182,10 @@ command blocks. (By contrast, the stop this script block \index{stop
 script block} stops not only the current block invocation, but also the
 entire toplevel script that called it.)
 
-![image521.png](assets/image521.png) <!--  style="width:4.29167in;height:0.86458in" / --> Here’s a slightly more
+Here’s a slightly more
 compact way to write the factorial function:
+
+![image521.png](assets/image521.png) <!--  style="width:4.29167in;height:0.86458in" / --> 
 
 For more on recursion, see *Thinking Recursively* \index{Thinking
 Recursively} by Eric Roberts \index{Roberts, Eric}. (The original
@@ -180,12 +200,13 @@ blocks that you expect to be useful in more than one project. Perhaps
 your blocks implement a particular data structure (a stack, or a
 dictionary, etc.), or they’re the framework for building a multilevel
 game. Such a collection of blocks is called a *block library.*
-
-*  
+ 
 *To create a block library, \index{library:block} choose “Export
 blocks…” from the File menu. You then see a window like this:
 
-![image522.png](assets/image522.png) <!--  style="width:2.02153in;height:2.72222in" / --> The window shows all of your
+![image522.png](assets/image522.png) <!--  style="width:2.02153in;height:2.72222in" / --> 
+
+The window shows all of your
 global custom blocks. You can uncheck some of the checkboxes to select
 exactly which blocks you want to include in your library. (You can
 right-click or control-click on the export window for a menu that lets
@@ -204,8 +225,8 @@ Visible stepping \index{visible stepping} normally treats a call to a
 custom block as a single step. If you want to see stepping inside a
 custom block you must take these steps *in order:*
 
-1.  ![image123.png](assets/image123.png) <!--  style="width:0.29167in;height:0.16667in"     alt="Macintosh HD:Users:bh:Desktop:pix:footprint-lit.png" / --> Turn on
-    Visible Stepping.
+1.  Turn on
+    Visible Stepping. ![image123.png](assets/image123.png) <!--  style="width:0.29167in;height:0.16667in"     alt="Macintosh HD:Users:bh:Desktop:pix:footprint-lit.png" / --> 
 
 2.  Select “Edit” in the context menu(s) of the block(s) you want to
     examine.
