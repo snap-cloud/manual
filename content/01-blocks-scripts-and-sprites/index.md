@@ -778,11 +778,7 @@ second input.
 
  ![image151.png](assets/image151.png) <!--  style="width:0.72in;height:0.2in" / -->   ![image152.png](assets/image152.png) <!--  style="width:0.72in;height:0.2in" / -->
 
-**Blocks only for the Stage:**
-
-Get or set selected global flags.
-
-\index{set flag block} Turn the \index{split block} text into a list,
+ ![image155.png](assets/image155.png) <!--  style="width:0.72in;height:0.2in" / -->  \index{set flag block} Turn the \index{split block} text into a list,
 using the second input as the delimiter between items. The default
 delimiter, indicated by the brown dot in the input slot, is a single
 space character. “Letter” puts each character of the text in its own
@@ -802,7 +798,7 @@ very same list, so changing an item in one of them is visible in the
 other. (For =, lists that look the same are the same.) For text strings,
 uses case-sensitive comparison, unlike =, which is case-independent.
 
-These *hidden* blocks can be found with the relabel option
+ ![image171.png](assets/image171.png) <!--  style="width:0.72in;height:0.2in" / --> These *hidden* blocks can be found with the relabel option
 \index{relabel option} of any dyadic arithmetic block. They’re hidden
 partly because writing them in Snap*!* is a good, pretty easy
 programming exercise. Note: the two inputs to atan2 \index{max block}
