@@ -543,7 +543,7 @@ If you right-click on an
 orange oval in a context in which the variable is *used,* then you are
 able to rename just that one orange oval:
 
-![image105.png](assets/image105.png) <!--  style="width:2.08333in;height:0.30208in" / --> 
+![image104.png](assets/image104.png) <!--  style="width:2.08333in;height:0.30208in" / --> 
 
 If you right-click on the
 place where the variable is *defined* (a script variables block, the
@@ -553,13 +553,13 @@ given two renaming options, “rename” and “rename all.” If you choose
 “rename,” then the name is changed only in that one orange oval, as in
 the previous case:
 
-![image104.png](assets/image104.png) <!--  style="width:2.08333in;height:0.30208in" / --> 
+![image103.png](assets/image103.png) <!--  style="width:2.08333in;height:0.30208in" / --> 
 
 But if you choose “rename
 all,” then the name will be changed throughout the scope of the variable
 (the script for a script variable, or everywhere for a global variable):
 
-![image103.png](assets/image103.png) <!--  style="width:2.08333in;height:0.30208in" / --> 
+
 
 ### Transient variables \index{variable:transient}
 
@@ -814,38 +814,38 @@ relational predicates.
 
 **Metaprogramming (see Chapter XI.** **, page [101](#metaprogramming))**
 
+ ![image172.png](assets/image172.png) <!--  style="width:0.72in;height:0.2in" / -->
+
 These blocks support *metaprogramming,* which means manipulating blocks
 and scripts as data. This is not the same as manipulating procedures
 (see Chapter VI. ), which are what the blocks *mean;* in metaprogramming
 the actual blocks, what you see on the screen, are the data. This
 capability is new in version 8.0.
 
-**First class list blocks (see Chapter IV, page
-[46](#first-class-lists)):**
+
+**First class list blocks (see Chapter IV, page[46](#first-class-lists)):**
+
+ ![image173.png](assets/image173.png) <!--  style="width:0.72in;height:0.2in" / -->
 
 Numbers from \index{numbers from block} \index{for each block} will
 count up or down.
 
-The script input to for each can refer to an
-
-item of the list with the item variable.
-
-**
-**![image224.png](assets/image224.png) <!--  style="width:0.83in;height:0.21in" / -->
+![image224.png](assets/image224.png) <!--  style="width:0.83in;height:0.21in" / -->
 ![image225.png](assets/image225.png) <!--  style="width:1.43in;height:0.21in" / -->
 report \index{position block} the sprite or mouse position as a two-item
 vector (x,y).
 
-**First class procedure blocks (see Chapter VI, page
-[65](#procedures-as-data)):**
+**First class procedure blocks (see Chapter VI, page[65](#procedures-as-data)):**
+ ![image226.png](assets/image226.png) <!--  style="width:0.72in;height:0.2in" / -->
 
-**First class continuation blocks (see Chapter X, page
-[93](#continuations)):**
+**First class continuation blocks (see Chapter X, page[93](#continuations)):**
+ ![image227.png](assets/image227.png) <!--  style="width:0.72in;height:0.2in" / -->
 
-**First class sprite, costume, and sound blocks (see Chapter VII, page
-[73](#object-oriented-programming-with-sprites)):**
+**First class sprite, costume, and sound blocks (see Chapter VII, page[73](#object-oriented-programming-with-sprites)):**
 
-Object is a hyperblock.
+ ![image228.png](assets/image228.png) <!--  style="width:0.72in;height:0.2in" / -->
+
+ ![image229.png](assets/image229.png) <!--  style="width:0.72in;height:0.2in" / --> Object is a hyperblock.
 
 **Scenes:**
 
@@ -860,10 +860,14 @@ no variables. But the old scene can send a message to the new one, to
 start it running, with optional payload as in broadcast \index{broadcast
 block} (page [23](#broadcast)).
 
-![image281.png](assets/image281.png) <!--  style="width:2.54in;height:0.31in" / --> In
+![image282.png](assets/image282.png) <!--  style="width:0.72in;height:0.2in" / -->
+
+In
 particular, you can say
 
-> if the new scene expects to be started with a green flag signal.
+![image281.png](assets/image281.png) <!--  style="width:2.54in;height:0.31in" / -->
+
+if the new scene expects to be started with a green flag signal.
 
 **
 These aren’t new blocks but they have a new feature:**
@@ -872,6 +876,8 @@ These accept two-item (x,y) \index{points as inputs} lists
 \index{two-item (x,y) lists} as input, and have extended menus (also
 including other sprites): \index{to block}
 
+![image283.png](assets/image283.png) <!--  style="width:0.72in;height:0.2in" / -->
+
 “Center” means the center of the stage \index{center of the stage}, the
 point at (0,0). “Direction” is in the point in direction sense, the
 direction that would leave this sprite pointing toward another sprite,
@@ -879,7 +885,7 @@ the mouse, or the center. “Ray length” is the distance from the center
 of this sprite to the nearest point on the other sprite, in the current
 direction.
 
-The stop block \index{stop block} has two extra menu choices. Stop this
+![image284.png](assets/image284.png) <!--  style="width:0.72in;height:0.2in" / --> The stop block \index{stop block} has two extra menu choices. Stop this
 block is used inside the definition of a custom block to stop just this
 invocation of this custom block and continue the script that called it.
 Stop all but this script is good at the end of a game to stop all the
@@ -887,66 +893,79 @@ game pieces from moving around, but keep running this script to provide
 the user’s final score. The last two menu choices add a tab at the
 bottom of the block because the current script can continue after it.
 
-The new “pen trails” option is true if the sprite is touching any drawn
+![image285.png](assets/image285.png) <!--  style="width:0.72in;height:0.2in" / --> The new “pen trails” option is true if the sprite is touching any drawn
 or stamped ink on the stage. Also, touching \index{touching block} will
 not detect hidden sprites, but a hidden sprite can use it to detect
 visible sprites.
 
-![image304.png](assets/image304.png) <!--  style="width:1.05972in;height:0.27986in" alt="Icon Description automatically generated" / --> ![image305.png](assets/image305.png) <!--  style="width:2.43333in;height:0.3in" alt="Macintosh HD:Users:bh:Desktop:video-on.png" / --> The video block
+![image305.png](assets/image305.png) <!--  style="width:2.43333in;height:0.3in" alt="Macintosh HD:Users:bh:Desktop:video-on.png" / --> The video block
 \index{video block} has a snap option \index{snap option} that takes a
-snapshot and reports it as a costume. It is hyperized with
-![image306.png](assets/image306.png) <!--  style="width:1.05208in;height:0.28125in" / --> respect to its second input.
+snapshot and reports it as a costume. It is hyperized with respect to its second input.
 
-The “neg” option \index{neg option} is a monadic \index{of block
+![image304.png](assets/image304.png) <!--  style="width:1.05972in;height:0.27986in" alt="Icon Description automatically generated" / -->  The “neg” option \index{neg option} is a monadic \index{of block
 (operators)} \index{length of text block} negation operator
-\index{negation operator}, equivalent to . “lg” is log<sub>2</sub>.
+\index{negation operator}, equivalent to ![image306.png](assets/image306.png) <!--  style="width:1.05208in;height:0.28125in" / -->. “lg” is log<sub>2</sub>.
 “id” is the identity function, which reports its input. “sign” reports 1
 for positive input, 0 for zero input, or -1 for negative input.
 \index{set background block}
 
-name changed to clarify that it’s different from
+![image307.png](assets/image307.png) <!--  style="width:1.05208in;height:0.28125in" / -->
 
-\+ and × are *variadic:* they take two or more inputs. If you drop a
-list on the arrowheads, the block name changes to sum or product.
+![image308.png](assets/image308.png) <!--  style="width:1.05208in;height:0.28125in" / --> 
 
-I
 
-Extended \index{when I am block} mouse interaction events, sensing
+![image309.png](assets/image309.png) <!--  style="width:1.05208in;height:0.28125in" / -->  Extended \index{when I am block} mouse interaction events, sensing
 clicking, dragging, hovering, etc. The “stopped” option triggers when
 all scripts are stopped, as with the stop button; it is useful for
 robots whose hardware interface must be told to turn off motors. A when
 I am stopped script \index{when I am stopped script} can run only for a
 limited time.
 
-<span id="broadcast" class="anchor"></span>Extended broadcast
+![image310.png](assets/image310.png) <!--  style="width:1.05208in;height:0.28125in" / -->  <span id="broadcast" class="anchor"></span>Extended broadcast
 \index{broadcast block} : Click the right arrowhead to direct the
 message to a single sprite or the stage. Click again to add any value as
 a payload to the message.
 
-Extended when I receive \index{when I receive block} : Click the right
+![image311.png](assets/image311.png) <!--  style="width:1.05208in;height:0.28125in" / --> Extended when I receive \index{when I receive block} : Click the right
 arrowhead to expose a script variable (click on it to change its name,
 like any script variable) that will be set to the data of a matching
 broadcast. If the first input is set to “any message,” then the data
 variable will be set to the message, if no payload is included with the
 broadcast, or to a two-item list containing the message and the payload.
 
+![image312.png](assets/image312.png) <!--  style="width:1.05208in;height:0.28125in" / --> 
+
 ![image355.png](assets/image355.png) <!--  style="width:1.68in;height:0.38in" alt="A picture containing text, clipart Description automatically generated" / -->
+
 If the input is set to “any key,” then a right arrowhead appears:
 
-> ![image356.png](assets/image356.png) <!--  style="width:2.25in;height:0.41944in"  -->  alt="Website Description automatically generated with medium confidence" />![image357.png](assets/image357.png) <!--  style="width:1.81944in;height:0.37986in"  -->  alt="Logo Description automatically generated" />and if you click it,
-> a script variable key is created whose value is the key that was
-> pressed. (If the key is one that’ represented in the input menu by a
-> word or phrase, e.g., “enter” or “up arrow,” then the value of key
-> will be that word or phrase, *except for* the space character, which
-> is represented as itself in key.)
-> <span id="ask_lists" class="anchor"></span>
+![image357.png](assets/image357.png) <!--  style="width:1.81944in;height:0.37986in"   alt="Logo Description automatically generated" -->
+
+and if you click it,
+a script variable key is created whose value is the key that was
+pressed. (If the key is one that’ represented in the input menu by a
+word or phrase, e.g., “enter” or “up arrow,” then the value of key
+will be that word or phrase, *except for* the space character, which
+is represented as itself in key.)
+
+![image356.png](assets/image356.png) <!--  style="width:2.25in;height:0.41944in"   alt="Website Description automatically generated with medium confidence" --> 
 
 The RGB(A) \index{set pen block} option accepts a single number, which
 is a grayscale value 0-255; a two-number list, grayscale plus opacity
 0-255; a three-item RGB list, or a four-item RGBA list.
 
+![image358.png](assets/image358.png) <!--  style="width:2.25in;height:0.41944in"   alt="Website Description automatically generated with medium confidence"  -->
+
 These ask features \index{ask and wait block} and more in the Menus
 library.
+
+![image359.png](assets/image359.png) <!--  style="width:1.05208in;height:0.28125in" / --> 
+
+![image360.png](assets/image360.png) <!--  style="width:1.05208in;height:0.28125in" / --> 
+
+![image361.png](assets/image361.png) <!--  style="width:1.05208in;height:0.28125in" / --> 
+
+![image362.png](assets/image362.png) <!--  style="width:1.05208in;height:0.28125in" / --> 
 
 The of block \index{of block (sensing)} has an extended menu of
 attributes of a sprite. Position reports an (x,y) vector. Size reports
@@ -954,16 +973,21 @@ the percentage of normal size, as controlled by the set size block in
 the Looks category. Left, right, etc. report the stage coordinates of
 the corresponding edge of the sprite’s bounding box. Variables reports a
 list of the names of all variables in scope (global, sprite-local, and
-script variables if the right input is a script.
+script variables if the right input is a script.)
+
+![image363.png](assets/image363.png) <!--  style="width:1.05208in;height:0.28125in" / --> 
+
+
 
 ##  Libraries
 
-<span id="libraries-1"
-class="anchor"></span>![image384.png](assets/image384.png) <!--  style="width:0.31944in;height:0.18056in" alt="Macintosh HD:Users:bh:Desktop:real-desktop:Everything Snap:manual:filebutton.png" / --> There
+<span id="libraries-1" class="anchor"></span>There
 are several collections of useful procedures that aren’t Snap*!*
 primitives, but are provided as libraries. To include a library in your
 project, choose the Libraries… option \index{Libraries… option} in the
-file ( ) menu.
+file (![image384.png](assets/image384.png) <!--  style="width:0.31944in;height:0.18056in" alt="Macintosh HD:Users:bh:Desktop:real-desktop:Everything Snap:manual:filebutton.png" / --> ) menu.
+
+![image385.png](assets/image385.png) <!--  style="width:1.05208in;height:0.28125in" / -->  
 
 The library menu is divided into five broad categories. The first is,
 broadly, utilities: blocks that might well be primitives. They might be
@@ -994,7 +1018,9 @@ needs.
 The libraries and their contents may change, but as of this writing the
 list library \index{list library} has these blocks:
 
-![image387.png](assets/image387.png) <!--  style="width:1.84861in;height:2.49236in" / -->  (The lightning bolt
+![image387.png](assets/image387.png) <!--  style="width:1.84861in;height:2.49236in" / -->  
+
+(The lightning bolt
 \index{lightning bolt symbol} before the name in several of these blocks
 means that they use compiled HOFs or JavaScript primitives to achieve
 optimal speed. They are officially considered experimental.) Remove
@@ -1027,7 +1053,10 @@ reports a compact representation of the list as a text string.
 The iteration, composition library \index{iteration library} has these
 blocks:
 
-![image388.png](assets/image388.png) <!--  style="width:1.68889in;height:4.75in" / --> Catch
+![image388.png](assets/image388.png) <!--  style="width:1.68889in;height:4.75in" / --> 
+![image389.png](assets/image389.png) <!--  style="width:1.04444in;height:0.16111in" / -->  
+
+Catch
 \index{catch block} and throw \index{throw block} provide a nonlocal
 exit facility. You can drag the tag from a catch block to a throw inside
 its C-slot, and the throw will then jump directly out to the matching
@@ -1048,7 +1077,7 @@ a function repeatedly on that value, *f*(*f*(*f*(*f*…(*x*)))).
 The compose \index{compose block} block takes two functions and reports
 the function *f*(*g*(*x*)).
 
-![image389.png](assets/image389.png) <!--  style="width:1.04444in;height:0.16111in" / --> ![image390.png](assets/image390.png) <!--  style="width:3.15278in;height:0.29861in" / --> The first three repeat blocks
+The first three repeat blocks
 \index{repeat blocks} are variants of the primitive repeat until block,
 giving all four combinations of whether the first test happens before or
 after the first repetition, and whether the condition must be true or
@@ -1058,14 +1087,20 @@ repeated script. The next two blocks are variations on for \index{for
 block} : the first allows an explicit step instead of using ±1, and the
 second allows any values, not just numbers; inside the script you say
 
-![image391.png](assets/image391.png) <!--  style="width:3.44097in;height:1.36111in" alt="Macintosh HD:Users:bh:Desktop:untitled script pic (2).png" / --> ![image392.png](assets/image392.png) <!--  style="width:3.70972in;height:1.17153in" alt="Macintosh HD:Users:bh:Desktop:untitled script pic (1).png" / --> replacing
+![image390.png](assets/image390.png) <!--  style="width:3.15278in;height:0.29861in" / -->
+
+ replacing
 the grey block in the picture with an expression to give the next
 desired value for the loop index. Pipe allows reordering a nested
 composition with a left-to-right one:
 
+![image392.png](assets/image392.png) <!--  style="width:3.70972in;height:1.17153in" alt="Macintosh HD:Users:bh:Desktop:untitled script pic (1).png" / --> ![image391.png](assets/image391.png) <!--  style="width:3.44097in;height:1.36111in" alt="Macintosh HD:Users:bh:Desktop:untitled script pic (2).png" / --> 
+
 The stream library \index{stream library} has these blocks:
 
-![image393.png](assets/image393.png) <!--  style="width:3.16111in;height:2.15347in" / --> *Streams* are a special kind
+![image393.png](assets/image393.png) <!--  style="width:3.16111in;height:2.15347in" / --> 
+
+*Streams* are a special kind
 of list whose items are not computed until they are needed. This makes
 certain computations more efficient, and also allows the creation of
 lists with infinitely many items, such as a list of all the positive
@@ -1086,7 +1121,9 @@ of numbers.
 The <span id="wordsent" class="anchor"></span>word and sentence library
 \index{sentence library} has these blocks:
 
-![image394.png](assets/image394.png) <!--  style="width:1.67986in;height:3.64306in" / --> This library has the goal of
+![image394.png](assets/image394.png) <!--  style="width:1.67986in;height:3.64306in" / --> 
+
+This library has the goal of
 recreating the Logo approach to handling text: A text isn’t best viewed
 as a string of characters, but rather as a *sentence*, made of *words,*
 each of which is a string of *letters.* With a few specialized
@@ -1144,7 +1181,9 @@ Lisp/Scheme.
 
 The pixels library \index{pixels library} has one block:
 
-![image395.png](assets/image395.png) <!--  style="width:0.77917in;height:0.62986in" / --> Costumes are first class data
+![image395.png](assets/image395.png) <!--  style="width:0.77917in;height:0.62986in" / --> 
+
+Costumes are first class data
 in Snap*!*. Most of the processing of costume data is done by primitive
 blocks in the Looks category. (See page
 [79](#media-computation-with-costumes).) This library provides snap
@@ -1153,7 +1192,9 @@ and reports it as a costume.
 
 The bar charts library \index{bar charts library} has these blocks:
 
-![image396.png](assets/image396.png) <!--  style="width:3.43056in;height:1.91667in" / --> Bar chart \index{bar chart
+![image396.png](assets/image396.png) <!--  style="width:3.43056in;height:1.91667in" / --> 
+
+Bar chart \index{bar chart
 block} takes a table (typically from a CSV data set) as input and
 reports a summary of the table grouped by the field in the specified
 column number. The remaining three inputs are used only if the field
@@ -1180,7 +1221,9 @@ Analysis" library instead.
 The multi-branched conditional library \index{conditional
 library:multiple-branch} has these blocks:
 
-![image397.png](assets/image397.png) <!--  style="width:1.85in;height:2.47986in" / --> The
+![image397.png](assets/image397.png) <!--  style="width:1.85in;height:2.47986in" / --> 
+
+The
 catch and throw blocks duplicate ones in the iteration library, and are
 included because they are used to implement the others. The cases block
 \index{cases block} sets up a multi-branch conditional, similar to cond
@@ -1199,7 +1242,9 @@ tested.
 
 The variadic library \index{variadic library} has these blocks:
 
-![image398.png](assets/image398.png) <!--  style="width:1.19653in;height:0.41667in" / --> These are \index{sum block}
+![image398.png](assets/image398.png) <!--  style="width:1.19653in;height:0.41667in" / --> 
+
+These are \index{sum block}
 versions \index{all of block} \index{any of block} of the associative
 operators and, and or that take any number of inputs instead of exactly
 two inputs. As with any variadic input, you can also drop a list of
@@ -1222,15 +1267,21 @@ on fair hues and including shades (darker colors) and grayscale. Another
 linear scale is a curated set of 100 “crayons,” explained further on the
 next page.
 
-![image413.png](assets/image413.png) <!--  style="width:1.13333in;height:0.23333in" alt="Macintosh HD:Users:bh:Desktop:pen-color.png" / --> ![image414.png](assets/image414.png) <!--  style="width:0.95in;height:0.225in" alt="Macintosh HD:Users:bh:Desktop:color picker.png" / --> Colors are
-created by the block (for direct user selection), the color from block
-\index{color from block} to specify a color numerically, or by , which
+![image412.png](assets/image412.png) <!--  style="width:1.13333in;height:0.23333in" alt="Macintosh HD:Users:bh:Desktop:pen-color.png" / -->
+
+ Colors are
+created by the ![image414.png](assets/image414.png) <!--  style="width:0.95in;height:0.225in" alt="Macintosh HD:Users:bh:Desktop:color picker.png" / --> block (for direct user selection), the color from block
+\index{color from block} to specify a color numerically,  or by ![image413.png](assets/image413.png) <!--  style="width:1.13333in;height:0.23333in" alt="Macintosh HD:Users:bh:Desktop:pen-color.png" / --> , which
 reports the color currently in use by the pen. The from color block
 \index{from color block} reports names or numbers associated with a
 color:
 
-![image415.png](assets/image415.png) <!--  style="width:4.83333in;height:0.43056in" / --> Colors can be created from
+![image411.png](assets/image411.png) <!--  style="width:0.95in;height:0.225in" alt="Macintosh HD:Users:bh:Desktop:color picker.png" / -->
+
+Colors can be created from
 other colors: \index{mix colors block}
+
+![image415.png](assets/image415.png) <!--  style="width:4.83333in;height:0.43056in" / --> 
 
 The three blocks with pen in their names are improved versions of
 primitive Pen blocks. In principle set pen \index{set pen block}, for
@@ -1239,35 +1290,51 @@ composed with the color from block, but in fact set pen benefits from
 knowing how the pen color was set in its previous invocation, so it’s
 implemented separately from color from. Details in Appendix A.
 
-![image416.png](assets/image416.png) <!--  style="width:7.5in;height:0.25in" / --> The
+ The
 recommended way to choose a color is from one of two linear scales: the
 continuous *color numbers* and the discrete *crayons:*
 
+![image416.png](assets/image416.png) <!--  style="width:7.5in;height:0.25in" / -->
+
 ![image417.png](assets/image417.png) <!--  style="width:7.5in;height:0.25in" / -->
 
-![image418.png](assets/image418.png) <!--  style="width:4in;height:0.20833in" / --> Color
+Color
 numbers \index{color numbers} are based on *fair hues,* a modification
 of the spectrum (rainbow) hue scale that devotes less space to green and
 more to orange and yellow, as well as promoting brown to a real color.
 Here is the normal hue scale, for reference:
 
-![image419.png](assets/image419.png) <!--  style="width:4in;height:0.20833in" / --> Here
+![image418.png](assets/image418.png) <!--  style="width:4in;height:0.20833in" / --> 
+
+ Here
 is the fair hue scale:
 
-![image416.png](assets/image416.png) <!--  style="width:5in;height:0.20833in" / --> Here
+![image419.png](assets/image419.png) <!--  style="width:4in;height:0.20833in" / -->
+
+ Here
 is the color number scale:
+
+![image416.png](assets/image416.png) <!--  style="width:5in;height:0.20833in" / -->
 
 (The picture is wider so that pure spectral colors line up with the fair
 hue scale.)
 
-![image417.png](assets/image417.png) <!--  style="width:5in;height:0.20833in" / --> And
+ And
 here are the 100 crayons \index{crayons} :
+
+![image417.png](assets/image417.png) <!--  style="width:5in;height:0.20833in" / -->
 
 The color from block, for example, provides different pulldown menus
 depending on which scale you choose:
 
-![image420.png](assets/image420.png) <!--  style="width:2.41667in;height:0.34444in" alt="Macintosh HD:Users:bh:Desktop:color-by-name.png" / --> You can also
-type the crayon name: There are many scales:
+![image410.png](assets/image410.png) <!--  style="width:2.41667in;height:0.34444in" alt="Macintosh HD:Users:bh:Desktop:color-by-name.png" / -->
+
+ You can also
+type the crayon name: 
+
+![image420.png](assets/image420.png) <!--  style="width:2.41667in;height:0.34444in" alt="Macintosh HD:Users:bh:Desktop:color-by-name.png" / -->
+
+There are many scales:
 
 ![image427.png](assets/image427.png) <!--  style="width:4.29167in;height:1.90972in" / -->
 
@@ -1275,23 +1342,33 @@ The white slot at the end of some of the blocks has two purposes. It can
 be used to add a transparency \index{transparency} to a color (0=opaque,
 100=transparent):
 
+![image428.png](assets/image428.png) <!--  style="width:4.29167in;height:1.90972in" / -->
+
 or it can be expanded to enter three or four numbers for a vector
 directly into the block, so these are equivalent:
+
+![image429.png](assets/image429.png) <!--  style="width:4.29167in;height:1.90972in" / -->
 
 But note that a transparency number in a four-number RGBA vector is on
 the scale 255=opaque, 0=transparent, so the following are *not*
 equivalent:
 
+![image430.png](assets/image430.png) <!--  style="width:4.29167in;height:1.90972in" / -->
+
 Set pen crayon to provides the equivalent of a box of 100 crayons. They
 are divided into color groups, so the menu in the set pen crayon to
 input \index{set pen to crayon block} slot has submenus. The colors are
 chosen so that starting
-![image440.png](assets/image440.png) <!--  style="width:4.36528in;height:0.51528in" alt="Macintosh HD:Users:bh:Desktop:pix:10-crayons.png" / --> from crayon 0,
+ from crayon 0,
 change pen crayon by 10 rotates through an interesting, basic set of ten
 colors:
 
-![image441.png](assets/image441.png) <!--  style="width:4.35556in;height:0.28194in" / --> Using change pen crayon by 5
+![image440.png](assets/image440.png) <!--  style="width:4.36528in;height:0.51528in" alt="Macintosh HD:Users:bh:Desktop:pix:10-crayons.png" / -->
+
+Using change pen crayon by 5
 instead gives ten more colors, for a total of 20:
+
+![image441.png](assets/image441.png) <!--  style="width:4.35556in;height:0.28194in" / --> 
 
 (Why didn’t we use the colors of the 100-crayon Crayola™ box? A few
 reasons, one of which is that some Crayola colors aren’t representable
@@ -1304,19 +1381,23 @@ stage background color. White is crayon 14.) Note that crayon 43 is
 See Appendix A (page [139](#crayons-and-color-numbers)) for more
 information.
 
-![image442.png](assets/image442.png) <!--  style="width:1.51in;height:0.9in" alt="Graphical user interface, text, application, chat or text message Description automatically generated" / --> The
+ The
 **crayon library** \index{crayon library} has only the crayon features,
 without the rest of the colors package.
 
+![image442.png](assets/image442.png) <!--  style="width:1.51in;height:0.9in" alt="Graphical user interface, text, application, chat or text message Description automatically generated" / -->
+
 The catch errors library \index{catch errors library} has these blocks:
 
-![image443.png](assets/image443.png) <!--  style="width:0.43056in;height:0.15278in" / --> ![image444.png](assets/image444.png) <!--  style="width:3.04167in;height:1.39583in" / --> The safely try block
+![image444.png](assets/image444.png) <!--  style="width:3.04167in;height:1.39583in" / --> 
+
+The safely try block
 \index{safely try block} allows you to handle errors that happen when
 your program is run within the program, instead of stopping the script
 with a red halo and an obscure error message. The block runs the script
 in its first C-slot. If it finishes without an error, nothing else
 happens. But if an error happens, the code in the second C-slot is run.
-While that second script is running, the variable contains the text of
+While that second script is running, the variable ![image443.png](assets/image443.png) <!--  style="width:0.43056in;height:0.15278in" / -->  contains the text of
 the error message that would have been displayed if you weren’t catching
 the error. The error block \index{error block} is sort of the opposite:
 it lets your program *generate* an error message, which will be
@@ -1326,10 +1407,15 @@ reporting is the reporter version of safely try.
 The text costumes library \index{text costume library} has only two
 blocks:
 
-![image445.png](assets/image445.png) <!--  style="width:0.53472in;height:0.20833in" alt="Macintosh HD:Users:bh:Desktop:Snaplabel.png" / --> ![image446.png](assets/image446.png) <!--  style="width:1.92in;height:0.45078in" alt="Macintosh HD:Users:bh:Desktop:textcostume.png" / --> Costume from text
+ ![image446.png](assets/image446.png) <!--  style="width:1.92in;height:0.45078in" alt="Macintosh HD:Users:bh:Desktop:textcostume.png" / --> 
+ ![image447.png](assets/image447.png) <!--  style="width:3.25972in;height:0.18958in" / --> 
+
+Costume from text
 reports a costume \index{costume from text block} that can be used with
-the switch to ![image447.png](assets/image447.png) <!--  style="width:3.25972in;height:0.18958in" / --> costume block to make a
+the switch to costume block to make a
 button:
+
+![image445.png](assets/image445.png) <!--  style="width:0.53472in;height:0.20833in" alt="Macintosh HD:Users:bh:Desktop:Snaplabel.png" / -->
 
 Costume with background \index{costume with background block} reports a
 costume made from another costume by coloring its background, taking a
@@ -1342,7 +1428,9 @@ work together to make even better buttons:
 The text to speech library \index{speech synthesis library} has these
 blocks:
 
-![image449.png](assets/image449.png) <!--  style="width:2.275in;height:0.8in" alt="Macintosh HD:Users:bh:Desktop:speechlib.png" / --> This library
+![image449.png](assets/image449.png) <!--  style="width:2.275in;height:0.8in" alt="Macintosh HD:Users:bh:Desktop:speechlib.png" / --> 
+
+This library
 interfaces with a capability in up-to-date browsers, so it might not
 work for you. \index{speak block} It works best if the accent matches
 the text!
@@ -1350,17 +1438,20 @@ the text!
 The parallelization library \index{parallelization library} contains
 these blocks:
 
-![image450.png](assets/image450.png) <!--  style="width:1.17986in;height:1.25972in" / --> The two do in parallel block
+![image450.png](assets/image450.png) <!--  style="width:1.17986in;height:1.25972in" / --> 
+
+The two do in parallel block
 \index{do in parallel block} s take any number of scripts as inputs.
 Those scripts will be run in parallel, like ordinary independent scripts
 in the scripting area. The and wait version waits until all of those
 scripts have finished before continuing the script below the block.
 
-![image451.png](assets/image451.png) <!--  style="width:1.37778in;height:1.48333in" / --> The create variables library
+The create variables library
 \index{variables library} has these blocks: \index{does var exist block}
 
-These blocks allow a program to perform the same operation as the
+![image451.png](assets/image451.png) <!--  style="width:1.37778in;height:1.48333in" / --> 
 
+These blocks allow a program to perform the same operation as the
 button, making global, sprite local, or script variables, but allowing
 the program to compute the variable name(s). It can also set and find
 the values of these variables, show and hide their stage watchers,
@@ -1369,9 +1460,11 @@ delete them, and find out if they already exist.
 The getters and setters library \index{getter/setter library} has these
 blocks:
 
-![image452.png](assets/image452.png) <!--  style="width:1.875in;height:1.05in" / --> ![image453.png](assets/image453.png) <!--  style="width:0.29167in;height:0.16667in" / --> The purpose of this library
+![image452.png](assets/image452.png) <!--  style="width:1.875in;height:1.05in" / -->  
+
+The purpose of this library
 is to allow program access to the settings controlled by user interface
-elements, such as the settings menu. The setting block \index{setting
+elements, such as the settings menu ![image453.png](assets/image453.png) <!--  style="width:0.29167in;height:0.16667in" / -->. The setting block \index{setting
 block} reports a setting; the set flag block \index{set flag block} sets
 yes-or-no options that have checkboxes in the user interface, while the
 set value block \index{set value block} controls settings with numeric
@@ -1387,7 +1480,9 @@ extensions to use it.
 The bignums, rationals, complex \#s library \index{infinite precision
 integer library} has these blocks:
 
-![image454.png](assets/image454.png) <!--  style="width:1.875in;height:1.55in" / --> The
+![image454.png](assets/image454.png) <!--  style="width:1.875in;height:1.55in" / --> 
+
+The
 USE BIGNUMS block \index{BIGNUMS block} takes a Boolean input, to turn
 the infinite precision feature on or off. When on, all of the arithmetic
 operators are redefined to accept and report integers of any number of
@@ -1402,7 +1497,11 @@ The ! block \index{! block} computes the factorial function
 \index{factorial }, useful to test whether bignums are turned on.
 Without bignums:
 
+![image455.png](assets/image455.png) <!--  style="width:0.29167in;height:0.16667in" / -->
+
 With bignums:
+
+![image456.png](assets/image456.png) <!--  style="width:0.29167in;height:0.16667in" / -->
 
 The 375-digit value of 200! isn’t readable on this page, but if you
 right-click on the block and choose “result pic,” you can open the
@@ -1416,7 +1515,9 @@ type.
 The strings, multi-line input library \index{string processing library}
 provides these blocks: \index{case-independent comparisons block}
 
-![image463.png](assets/image463.png) <!--  style="width:3.9375in;height:2.04167in" / --> All
+![image463.png](assets/image463.png) <!--  style="width:3.9375in;height:2.04167in" / --> 
+
+All
 of these could be written in Snap*!* itself, but these are implemented
 using the corresponding JavaScript library functions directly, so they
 run fast. They can be used, for example, in scraping data from a web
@@ -1426,11 +1527,15 @@ a text input that can include newline characters.
 
 The animation library \index{animation library} has these blocks:
 
-![image464.png](assets/image464.png) <!--  style="width:4.0125in;height:2.33125in" / --> Despite
+![image464.png](assets/image464.png) <!--  style="width:4.0125in;height:2.33125in" / --> 
+
+Despite
 the name, this isn’t only about graphics; you can animate the values of
 a variable, or anything else that’s expressed numerically.
 
-![image465.png](assets/image465.png) <!--  style="width:0.96528in;height:0.19444in" alt="Macintosh HD:Users:bh:Desktop:pix:easing.png" / --> The central idea of
+
+
+The central idea of
 this library is an *easing function* \index{easing function} *,* a
 reporter whose domain and range are real numbers between 0 and 1
 inclusive. The function represents what fraction of the “distance” (in
@@ -1440,10 +1545,10 @@ fraction of the time. A linear easing \index{easing block} function
 means steady progression. A quadratic easing function means starting
 slowly and accelerating. (Note that, since it’s a requirement that
 *f*(0)=0 and *f*(1)=1, there is only one linear easing function,
-*f*(*x*)=*x*, and similarly for other categories.) The block reports
+*f*(*x*)=*x*, and similarly for other categories.) The ![image465.png](assets/image465.png) <!--  style="width:0.96528in;height:0.19444in" alt="Macintosh HD:Users:bh:Desktop:pix:easing.png" / -->  block reports
 some of the common easing functions.
 
-![image466.png](assets/image466.png) <!--  style="width:4.63194in;height:0.63194in" alt="Macintosh HD:Users:bh:Desktop:pix:animate-control.png" / --> The two
+ The two
 Motion blocks in this library animate a sprite. Glide always animates
 the sprite’s motion. Animate’s first pulldown menu input allows you to
 animate horizontal or vertical motion, but will also animate the
@@ -1451,18 +1556,23 @@ sprite’s direction or size. The animate block \index{animate block} in
 Control lets you animate any numeric quantity with any easing function.
 The getter and setter inputs are best explained by example:
 
-![image467.png](assets/image467.png) <!--  style="width:3.40972in;height:0.25694in" alt="Macintosh HD:Users:bh:Desktop:pix:animate-motion.png" / --> is
+![image466.png](assets/image466.png) <!--  style="width:4.63194in;height:0.63194in" alt="Macintosh HD:Users:bh:Desktop:pix:animate-control.png" / -->
+
+is
 equivalent to
+
+![image467.png](assets/image467.png) <!--  style="width:3.40972in;height:0.25694in" alt="Macintosh HD:Users:bh:Desktop:pix:animate-motion.png" / --> 
 
 The other blocks in the library are helpers for these four.
 
 The serial ports library \index{serial-ports library} contains these
 blocks:
 
-![image468.png](assets/image468.png) <!--  style="width:1.73264in;height:1.03472in" alt="Graphical user interface, text, application, chat or text message Description automatically generated" / --> It
+![image468.png](assets/image468.png) <!--  style="width:1.73264in;height:1.03472in" alt="Graphical user interface, text, application, chat or text message Description automatically generated" / --> 
+
+It
 is used to allow hardware developers to control devices such as robots
 that are
-
 connected to your computer via a serial port.
 
 The frequency distribution analysis library \index{frequency
@@ -1481,7 +1591,9 @@ https://tinyurl.com/jens-data
 The audio comp library \index{sound manipulation library} includes these
 blocks:
 
-![image470.png](assets/image470.png) <!--  style="width:3.54167in;height:2.98125in" / --> This library takes a sound,
+![image470.png](assets/image470.png) <!--  style="width:3.54167in;height:2.98125in" / --> 
+
+This library takes a sound,
 one that you record or one from our collection of sounds, and
 manipulates it by systematically changing the intensity of the samples
 in the sound and by changing the sampling rate at which the sound is
@@ -1492,7 +1604,9 @@ sound (primitive) block \index{play block} plays a sound. \_\_ Hz for
 
 The web services library \index{web services library} has these blocks:
 
-![image471.png](assets/image471.png) <!--  style="width:3.40972in;height:1.10417in" alt="Graphical user interface, text, application, chat or text message Description automatically generated" / --> The
+![image471.png](assets/image471.png) <!--  style="width:3.40972in;height:1.10417in" alt="Graphical user interface, text, application, chat or text message Description automatically generated" / --> 
+
+The
 first block is a generalization of the primitive url block \index{url
 block} , allowing more control over the various options in web requests:
 GET, POST, PUT, and DELETE, and fine control over the content of the
@@ -1507,13 +1621,17 @@ type used with the other blocks
 
 The database library \index{database library} contains these blocks:
 
-![image472.png](assets/image472.png) <!--  style="width:2.26389in;height:1.22222in" alt="Graphical user interface, text, application, chat or text message Description automatically generated" / --> It
+![image472.png](assets/image472.png) <!--  style="width:2.26389in;height:1.22222in" alt="Graphical user interface, text, application, chat or text message Description automatically generated" / --> 
+
+It
 is used to keep data that persist from one Snap*!* session to the next,
 if you use the same browser and the same login.
 
 The world map library \index{map library} has these blocks:
 
-![image473.png](assets/image473.png) <!--  style="width:2.44236in;height:3.40278in" / --> Using any of the command
+![image473.png](assets/image473.png) <!--  style="width:2.44236in;height:3.40278in" / --> 
+
+Using any of the command
 blocks puts a map on the screen, in a layer in front of the stage’s
 background but behind the pen trails layer (which is in turn behind all
 the sprites). The first block asks your browser for your current
@@ -1542,8 +1660,11 @@ The APL primitives library contains \index{APL library} these blocks:
 For more information about APL, see Appendix B (page
 [148](#appendix-b.-apl-features)).
 
-The ![image476.png](assets/image476.png) <!--  style="width:1.2in;height:0.48958in" alt="Logo Description automatically generated" / --> **list comprehension
-library** \index{list comprehension library} has one block, zip. Its
+The  **list comprehension library** \index{list comprehension library} has one block, zip: 
+
+![image476.png](assets/image476.png) <!--  style="width:1.2in;height:0.48958in" alt="Logo Description automatically generated" / -->
+
+Its
 first input is a function of two inputs. The two Any-type inputs are
 deep lists (lists of lists of…) interpreted as trees, and the function
 is called with every possible combination of a leaf node of the first
@@ -1554,7 +1675,9 @@ The Number-type inputs specify the leaf dimension for each tree, so the
 function input might be called with a vector from the first tree and an
 atom from the second tree.
 
-![image477.png](assets/image477.png) <!--  style="width:0.89in;height:1.51in" alt="Icon Description automatically generated" / --> The **bitwise library**
+
+
+The **bitwise library**
 \index{bitwise library} provides bitwise logic functions; each bit of
 the reported value is the result of applying the corresponding Boolean
 function to the corresponding bits of the input(s). The Boolean
@@ -1565,19 +1688,25 @@ arithmetic right shift (shifting in one bits from the left), and \>\>\>
 is logical right shift (shifting in zero bits from the left). If you
 don’t already know what these mean, find a tutorial online.
 
+![image477.png](assets/image477.png) <!--  style="width:0.89in;height:1.51in" alt="Icon Description automatically generated" / --> 
+
 The **MQTT library** \index{MQTT library} supports the Message Queuing
 Telemetry Transport protocol, for connecting with IOT devices. See
 <https://mqtt.org/> for more information.
+
+![image487.png](assets/image487.png) <!--  style="width:1.2in;height:0.48958in" alt="Logo Description automatically generated" / -->
 
 The **Signada library** \index{Signada library} allows you to control a
 microBit or similar device that works with the Signada MicroBlocks
 project.
 
-![image486.png](assets/image486.png) <!--  style="width:3.39in;height:1.9in" alt="Graphical user interface, text, application, chat or text message Description automatically generated" / -->
+![image488.png](assets/image488.png) <!--  style="width:3.39in;height:1.9in" alt="Graphical user interface, text, application, chat or text message Description automatically generated" / -->
 
 The **menus library** \index{menus library} provides the ability to
 display hierarchical menus on the stage, using the ask block’s ability
 to take lists as inputs. See page [24](#ask_lists).
+
+![image486.png](assets/image486.png) <!--  style="width:3.39in;height:1.9in" alt="Graphical user interface, text, application, chat or text message Description automatically generated" / -->
 
 The **SciSnap*!* library** \index{SciSnap! library} and the **TuneScope
 library** \index{TuneScope library} are too big to discuss here and are
