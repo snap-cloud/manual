@@ -2,10 +2,10 @@
 
 ##  Scratch’s Type Notation
 
-![image654.png](assets/image654.png) <!--  style="width:1.375in;height:0.2125in" / --> Prior
+ Prior
 to version 3, Scratch \index{Scratch} block inputs came in two types
 \index{data type} : Text-or-number type and Number type. The former is
-indicated by a rectangular box, the latter by a rounded box: . A third
+indicated by a rectangular box, the latter by a rounded box: ![image654.png](assets/image654.png) <!--  style="width:1.375in;height:0.2125in" / -->. A third
 Scratch type, Boolean (true/false), can be used in certain Control
 blocks with hexagonal slots.
 
@@ -20,10 +20,14 @@ In the Block Editor \index{Block Editor} input name dialog \index{input
 name dialog} , there is a right-facing arrowhead after the “Input name”
 option:
 
+![image692.png](assets/image692.png) <!--  style="width:5.17083in;height:4.13542in" / --> 
+
 Clicking that arrowhead opens the “long” input name dialog \index{long
 input name dialog} :
 
-![image657.png](assets/image657.png) <!--  style="width:5.17083in;height:4.13542in" / --> ![image658.png](assets/image658.png) <!--  style="width:0.19792in;height:0.19792in" / --> There are twelve input type
+![image657.png](assets/image657.png) <!--  style="width:5.17083in;height:4.13542in" / --> 
+
+There are twelve input type
 shapes \index{input-type shapes}, plus three mutually exclusive
 modifiers, listed in addition to the basic choice between title text and
 an input name. The default type, the one you get if you don’t choose
@@ -32,13 +36,15 @@ any value of any type \index{Any type}. If the size input in your block
 should be an oval-shaped numeric slot rather than a generic rectangle,
 click “Number.”
 
-![image659.png](assets/image659.png) <!--  style="width:6.82222in;height:2.75694in" / --> The arrangement of the input
+The arrangement of the input
 types is systematic. As the pictures on this and the next page show,
 each row of types is a category, and parts of each column form a
 category. Understanding the arrangement will make it a little easier to
 find the type you want.
 
-![image658.png](assets/image658.png) <!--  style="width:0.13194in;height:0.13194in" / --> The second row of input types
+![image659.png](assets/image659.png) <!--  style="width:6.82222in;height:2.75694in" / --> 
+
+The second row of input types
 contains the ones found in Scratch: Number, Any, and Boolean. (The
 reason these are in the second row rather than the ﬁrst will become
 clear when we look at the column arrangement.) The ﬁrst row contains the
@@ -77,33 +83,44 @@ the fourth row are explained in Section VI.E below. In one handwavy
 sentence, they combine the *meaning* of the procedure types with the
 *appearance* of the reported value types two rows higher. (Of course,
 this isn’t quite right for the C-shaped command input type, since
-commands don’t ![image660.png](assets/image660.png) <!--  style="width:3.64583in;height:3.11389in" / --> report values. But you’ll see
+commands don’t report values. But you’ll see
 later that it’s true in spirit.)
 
-### ![image658.png](assets/image658.png) <!--  style="width:0.13194in;height:0.13194in" alt="Macintosh HD:Users:bh:Desktop:gear-part.png" / --> Pulldown inputs
+![image660.png](assets/image660.png) <!--  style="width:3.64583in;height:3.11389in" / -->
 
-![image661.png](assets/image661.png) <!--  style="width:1.68056in;height:0.94097in" / --> Certain primitive blocks have
+### Pulldown inputs
+
+
+Certain primitive blocks have
 *pulldown* inputs \index{pulldown input}, either *read-only*
 \index{read-only pulldown input} *,* like the input to the touching
 block:
 
-![image662.png](assets/image662.png) <!--  style="width:1.90208in;height:1.32292in" / --> (indicated by the input slot
+![image661.png](assets/image661.png) <!--  style="width:1.68056in;height:0.94097in" / -->
+
+(indicated by the input slot
 being the same (cyan, in this case) color as the body of the block), or
 *writeable* \index{writeable pulldown inputs} *,* like the input to the
 point in direction block:
 
+![image662.png](assets/image662.png) <!--  style="width:1.90208in;height:1.32292in" / --> 
+
 (indicated by the white input slot), which means that the user can type
 in an arbitrary input instead of using the pulldown menu.
 
-![image663.png](assets/image663.png) <!--  style="width:0.83264in;height:0.65278in" / --> ![image658.png](assets/image658.png) <!--  style="width:0.13194in;height:0.13194in" alt="Macintosh HD:Users:bh:Desktop:gear-part.png" / --> Custom blocks can
+![image663.png](assets/image663.png) <!--  style="width:0.83264in;height:0.65278in" / --> 
+
+Custom blocks can
 also have such inputs. To make a pulldown input, open the long form
-input dialog, choose a text type (Any, Text, or Number) and click the
+input dialog, choose a text type (Any, Text, or Number) and click the  ![image658.png](assets/image658.png) <!--  style="width:0.13194in;height:0.13194in" alt="Macintosh HD:Users:bh:Desktop:gear-part.png" / -->
 icon in the bottom right corner, or control/right-click in the dialog.
 You will see this menu:
 
-![image664.png](assets/image664.png) <!--  style="width:3.07639in;height:1.875in" / --> Click
+ Click
 the read-only checkbox if you want a read-only pulldown input. Then from
 the same menu, choose options… to get this dialog box:
+
+![image664.png](assets/image664.png) <!--  style="width:3.07639in;height:1.875in" / -->
 
 Each line in the text box represents one menu item. If the line does not
 contain any of the characters =~{} then the text is both what’s shown in
@@ -128,7 +145,7 @@ hovering the mouse over it displays the submenu next to the original
 menu. A line containing a close brace } ends the submenu; nothing else
 should be on that line. Submenus may be nested to arbitrary depth.
 
-### 
+![image693.png](assets/image693.png) <!--  style="width:3.07639in;height:1.875in" / -->
 
 Alternatively, instead of giving a menu listing as described above, you
 can put a JavaScript function that returns the desired menu in the
@@ -141,35 +158,42 @@ the play note piano keyboard, or the point in direction 360° dial.
 Finally, you can make the input box accept more than one line of text
 (that is, text including a newline character) from the special submenu,
 either “multi-line” for regular
-![image669.png](assets/image669.png) <!--  style="width:0.60417in;height:0.31944in" alt="Macintosh HD:Users:bh:Desktop:little-options.png" / --> text or “code”
+text or “code”
 for monospace-font computer code.
 
-![image670.png](assets/image670.png) <!--  style="width:0.13056in;height:0.1375in" alt="Macintosh HD:Users:bh:Desktop:quarter-gear.png" / --> ![image671.png](assets/image671.png) <!--  style="width:1.68056in;height:0.25694in" alt="Macintosh HD:Users:bh:Desktop:Untitled script pic (1).png" / --> If the
-input type is something other than text, then clicking the button will
+ If the
+input type is something other than text, then clicking the ![image670.png](assets/image670.png) <!--  style="width:0.13056in;height:0.1375in" alt="Macintosh HD:Users:bh:Desktop:quarter-gear.png" / --> button will
 instead show this menu:
 
-As an example, we want to make this block: The second input must be a
+![image669.png](assets/image669.png) <!--  style="width:0.60417in;height:0.31944in" alt="Macintosh HD:Users:bh:Desktop:little-options.png" / --> 
+
+As an example, we want to make this block: ![image671.png](assets/image671.png) <!--  style="width:0.60417in;height:0.31944in" alt="Macintosh HD:Users:bh:Desktop:little-options.png" / -->  The second input must be a
 read-only object menu:
 
-the move (10) steps block. In the prototype block input at the top of
-the script in the Block Editor, an input with name “size” and default
-value 10 looks like this:
+![image694.png](assets/image694.png) <!--  style="width:0.60417in;height:0.31944in" alt="Macintosh HD:Users:bh:Desktop:little-options.png" / --> 
 
-The “single input” option: In Scratch, all inputs are in this category.
-There is one input slot in the block as it appears in its palette. If a
-single input is of type Any, Number, Text, or Boolean, then you can
-specify a default value \index{default value} that will be shown in that
-slot in the palette, like the “10” in the move (10) steps block. In the
-prototype block at the top of the script in the Block editor, an
+
+
 
 ### Input variants
 
 We now turn to the three mutually exclusive options that come below the
 type array.
 
+
+The “single input” option: In Scratch, all inputs are in this category.
+There is one input slot in the block as it appears in its palette. If a
+single input is of type Any, Number, Text, or Boolean, then you can
+specify a default value \index{default value} that will be shown in that
+slot in the palette, like the “10” in the move (10) steps block. In the
+prototype block at the top of the script in the Block editor, an an input with 
+name “size” and default value 10 looks like this:
+
 ![image678.png](assets/image678.png) <!--  style="width:1.63889in;height:0.52083in" alt="Macintosh HD:Users:bh:Desktop:default-value.png" / --> 
 
-![image679.png](assets/image679.png) <!--  style="width:1.76389in;height:0.93056in" / --> ![image680.png](assets/image680.png) <!--  style="width:3.56944in;height:1.29444in" / --> The “Multiple inputs” option:
+![image679.png](assets/image679.png) <!--  style="width:1.76389in;height:0.93056in" / --> 
+
+The “Multiple inputs” option:
 The list block introduced earlier accepts any number of inputs to
 specify the items of the new list. To allow this, Snap*!* introduces the
 arrowhead notation (⏴⏵) that expands and contracts the block, adding and
@@ -194,7 +218,7 @@ than as an input slot. Here’s an example; the uparrow (**↑**)
 \index{upward-pointing arrow} in the prototype indicates this kind of
 internal variable name:
 
-➜
+![image695.png](assets/image695.png) <!--  style="width:1.76389in;height:0.93056in" / --> 
 
 The variable i (in the block on the right above) can be dragged from the
 for block \index{for block} into the blocks used in its C-shaped command
@@ -215,36 +239,48 @@ We have mentioned three notations that can appear in an input slot in
 the prototype to remind you of what kind of input this is. Here is the
 complete list of such notations:
 
-![image685.png](assets/image685.png) <!--  style="width:0.73472in;height:6.11806in" / --> = default value … multiple
-input ↑ upvar \# number
+![image685.png](assets/image685.png) <!--  style="width:0.73472in;height:6.11806in" / --> 
 
-![image686.png](assets/image686.png) <!--  style="width:0.16319in;height:0.13542in" / --> λ procedure types ⫶ list ?
-Boolean object ¶ multi-line text
+- = default value 
+- … multiple input 
+- ↑ upvar 
+- \# number
+- λ procedure types 
+- ⫶ list 
+- ? Boolean 
+- ¶ multi-line text
+- ![image686.png](assets/image686.png) <!--  style="width:0.16319in;height:0.13542in" / --> object 
 
 ### Title Text and Symbols
 
-![image687.png](assets/image687.png) <!--  style="width:1.21875in;height:0.23472in" / --> Some primitive blocks have
-symbols \index{icons in title text} as part of the block name: . Custom
+Some primitive blocks have
+symbols \index{icons in title text} as part of the block name: ![image687.png](assets/image687.png) <!--  style="width:1.21875in;height:0.23472in" / -->. Custom
 blocks can use symbols too. In the Block Editor, click the plus sign in
 the prototype at the point where you want to insert the symbol. Then
 click the title text picture below the text box that’s expecting an
 input slot name. The dialog will then change to look like this:
 
-![image688.png](assets/image688.png) <!--  style="width:1.24444in;height:0.26667in" / --> ![image689.png](assets/image689.png) <!--  style="width:2.03472in;height:1.26389in" / --> The important part to notice
+ ![image689.png](assets/image689.png) <!--  style="width:2.03472in;height:1.26389in" / --> 
+ 
+The important part to notice
 is the arrowhead that has appeared at the right end of the text box.
 Click it to see the menu shown here at the left.
 
-Choose one of the symbols. The result will have the symbol you want: The
+Choose one of the symbols. The result will have the symbol you want: ![image688.png](assets/image688.png) <!--  style="width:1.24444in;height:0.26667in" / --> The
 available symbols are, pretty much, the ones that are used in Snap*!*
 icons.
 
-![image690.png](assets/image690.png) <!--  style="width:2.03472in;height:1.26389in" / --> But I’d like the arrow symbol
+ But I’d like the arrow symbol
 bigger, and yellow, so I edit its name:
 
-![image691.png](assets/image691.png) <!--  style="width:1.19792in;height:0.27083in" / --> This makes the symbol 1.5
+![image690.png](assets/image690.png) <!--  style="width:2.03472in;height:1.26389in" / -->
+
+ This makes the symbol 1.5
 times as big as the letters in the block text, using a color with
 red-green-blue values of 255-255-150 (each between 0 and 255). Here’s
 the result:
+
+![image691.png](assets/image691.png) <!--  style="width:1.19792in;height:0.27083in" / -->
 
 The size and color controls can also be used with text: $foo-8-255-120-0
 will make a huge orange “foo.”
