@@ -2938,3 +2938,73 @@ Smalltalk||
 Lisp||
 Prolog||
 user interface elements||
+first class data type||
+Scratch||
+Make a list||
+design principle||
+anonymous list||
+list
+block||
+arrowheads||
+Scratch||
+data structure||
+lists of lists||
+constructors||
+selectors||
+mutators||
+binary tree||
+Scratch||
+imperative programming style||
+parallelism||
+mutation||
+functional
+programming style||
+in front of block||
+item 1 of block||
+all but first of
+block||
+array, dynamic||
+dynamic array||
+list, linked||
+linked list||
+ring, gray||
+higher order
+function||
+find first||
+map block||
+shallow copy of a list||
+deep copy of a list||
+combine block||
+function, associative||
+associative function||
+table view||
+list view||
+CSV (comma-separated
+values)||
+JSON
+(JavaScript Object Notation) file||
+Hyperblocks||
+scalar
+function||
+list, multi-dimensional||
+media computation||
+Alonzo||
+reshape block||
+item of block||
+length of block||
+rank of block||
+dimensions of block||
+flatten of block||
+columns of block||
+atomic
+data||
+lines of block||
+split by
+line block||
+csv of block||
+json of block||
+APL||
+Smalltalk||
+Lisp||
+Prolog||
+user interface elements||

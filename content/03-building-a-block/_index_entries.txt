@@ -418,3 +418,38 @@ Roberts, Eric||
 library:block||
 visible stepping||
 user interface elements||
+Build Your Own Blocks||
+Scratch||
+Make a block||
+color of blocks||
+shapes of blocks||
+jigsaw-piece blocks||
+oval blocks||
+hexagonal blocks||
+Block Editor||
+hat block||
+prototype||
+Block Editor||
+input name
+dialog||
+title text||
+script pic||
+translations option||
+block variable||
+recursion||
+drag from
+prototype||
+base case||
+little people||
+reporters, recursive||
+factorial||
+report block||
+stop block block||
+stop
+script block||
+Thinking
+Recursively||
+Roberts, Eric||
+library:block||
+visible stepping||
+user interface elements||

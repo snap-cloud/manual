@@ -1,12 +1,14 @@
 #  The Outside World
 
-![image148.png](assets/image148.png) <!--  style="width:1.62014in;height:0.25in" / --> The
+ The
 facilities discussed so far are fine for projects that take place
 entirely on your computer’s screen. But you may want to write programs
 that interact with physical devices \index{devices} (sensors
 \index{sensors} or robots \index{robots} ) or with the World Wide Web
 \index{World Wide Web}. For these purposes Snap*!* provides a
 <span id="url" class="anchor"></span>single primitive block:
+
+![image148.png](assets/image148.png) <!--  style="width:1.62014in;height:0.25in" / -->
 
 This might not seem like enough, but in fact it can be used to build the
 desired capabilities.
@@ -80,14 +82,17 @@ to source code repositories. This situation will improve with time.
 
 ## Date and Time
 
-![image872.png](assets/image872.png) <!--  style="width:5.30556in;height:0.31944in" alt="Macintosh HD:Users:bh:Desktop:date.png" / --> The current
+ The current
 \index{current block} block in the Sensing palette can be used to find
 out the current date or time \index{current date or time}. Each call to
 this block reports one component of the date \index{date} or time
 \index{time}, so you will probably combine several calls, like this:
 
-![image873.png](assets/image873.png) <!--  style="width:5.30556in;height:0.31944in" alt="Macintosh HD:Users:bh:Desktop:European-date.png" / --> for Americans,
-or like this:
+![image872.png](assets/image872.png) <!--  style="width:5.30556in;height:0.31944in" alt="Macintosh HD:Users:bh:Desktop:date.png" / -->
+
+for Americans, or like this:
+
+![image873.png](assets/image873.png) <!--  style="width:5.30556in;height:0.31944in" alt="Macintosh HD:Users:bh:Desktop:European-date.png" / --> 
 
 for Europeans.
 
