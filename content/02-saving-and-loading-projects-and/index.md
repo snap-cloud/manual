@@ -14,7 +14,7 @@ like if you save locally. This is why we have multiple ways to save.
 <span id="saveas" class="anchor"></span>In either case, if you choose
 “Save as…” from the File menu. You’ll see something like this:
 
-![image487.png](assets/image487.png) <!--  style="width:3.54861in;height:2.57639in" / --> 
+![image487.png](assets/image487.png) <!--  style="width:3.54861in;height:2.57639in" / -->
 
 (If you are not logged in to your Snap*!* cloud account, Computer will
 be the only usable option.) The text box at the bottom right of the Save
@@ -29,7 +29,7 @@ project has a name, that name will be the default filename if you don’t
 give a different name. Another, equivalent way to save to disk is to
 choose “Export project” from the File menu.
 
-## Creating a Cloud Account \index{cloud storage} 
+## Creating a Cloud Account \index{cloud storage}
 
 The other possibility is to
 save your project “in the cloud,” \index{save your project in the cloud}
@@ -38,7 +38,7 @@ us. Click on the Cloud button \index{Cloud button} (![image489.png](assets/image
 Choose the “Signup…” option. This will show you a window that looks like
 the picture below:
 
-![image488.png](assets/image488.png) <!--  style="width:1.23403in;height:2.32986in" / --> 
+![image488.png](assets/image488.png) <!--  style="width:1.23403in;height:2.32986in" / -->
 
 You must choose a user name \index{user name} that will identify you on
 the web site, such as Jens or bh. If you’re a Scratch user, you can use
@@ -81,7 +81,7 @@ us say this.)
 Once you’ve created your account, you can log into it using the “Login…”
 option from the Cloud menu:
 
-![image490.png](assets/image490.png) <!--  style="width:1.6875in;height:2.02778in" / --> 
+![image490.png](assets/image490.png) <!--  style="width:1.6875in;height:2.02778in" / -->
 
 Use
 the user name and password that you set up earlier. If you check the
@@ -97,7 +97,7 @@ optionally project notes; your project will be saved online and can be
 loaded from anywhere with net access. The project notes will be visible
 to other users if you publish your project.
 
-## Loading Saved Projects \index{loading saved projects} 
+## Loading Saved Projects \index{loading saved projects}
 
 Once you’ve saved a project, you want to be able to load it back into
 Snap*!*. There are two ways to do this:
@@ -157,7 +157,8 @@ To help you remember to save your projects, when you’ve edited the
 project and haven’t yet saved it, Snap*!* displays a pencil icon to the
 left of the project name on the toolbar at the top of the window:
 
-![image391.png](assets/image391.png) <!--  style="width:0.31944in;height:0.18056in"/ --> 
+<!-- TODO: MISSING FILE -->
+<!-- ![image391.png](assets/image391.png)  style="width:0.31944in;height:0.18056in"/  -->
 
 ## Private and Public Projects
 
@@ -169,4 +170,3 @@ If you publish a project, it will appear on the Snap*!* web site, and
 the whole world can see it. In any case, nobody other than you can ever
 overwrite your project; if others ask to save it, they get their own
 copy in their own account.
-

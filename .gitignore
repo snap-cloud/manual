@@ -17,6 +17,10 @@ _book
 
 # Custom Index Rendering Files.
 _index_entries.txt
+content/**/*.pdf
+content/**/*.tex
+content/**/*.html
+site_libs/
 
 # LaTex Complication Messes
 *.aux
