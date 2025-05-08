@@ -12,8 +12,8 @@ _build
 
 # Quarto
 /env/
-.quarto/
-_book/
+.quarto
+_book
 
 # LaTex Complication Messes
 *.aux
