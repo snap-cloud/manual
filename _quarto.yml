@@ -25,8 +25,10 @@ book:
   language: en
   edition: 10
   license: CC-BY-NC-SA 4.0
-  url: https://manual.snap.berkeley.edu/
-  public-url: https://manual.snap.berkeley.edu/
+  url: https://snap-cloud.github.io/manual/
+  public-url: https://snap-cloud.github.io/manual/
+  # url: https://manual.snap.berkeley.edu/
+  # public-url: https://manual.snap.berkeley.edu/
   # TODO: Should we auto-commit this to the snap repo?
   pdf-url: https://snap.berkeley.edu/snap/help/SnapManual.pdf
   # doi:
@@ -48,7 +50,7 @@ book:
     # style: "docked"
     # search: true
   # TODO: fix this from showing the GitHub icon in the navbar.
-  repo-url: https://github.com/snap-cloud/snap-manual/
+  repo-url: https://github.com/snap-cloud/manual/
   repo-actions: [edit]
   chapters:
     - index.qmd
