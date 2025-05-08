@@ -8,10 +8,6 @@ project:
   # pre-render:
   # post-render:
 
-# Freeze Python executions for consistent compilations.
-execute:
-  freeze: auto
-
 book:
   title: Snap! Reference Manual
   output-file: snap-manual
@@ -25,10 +21,8 @@ book:
   language: en
   edition: 10
   license: CC-BY-NC-SA 4.0
-  url: https://snap-cloud.github.io/manual/
-  public-url: https://snap-cloud.github.io/manual/
-  # url: https://manual.snap.berkeley.edu/
-  # public-url: https://manual.snap.berkeley.edu/
+  url: https://manual.snap.berkeley.edu/
+  public-url: https://manual.snap.berkeley.edu/
   # TODO: Should we auto-commit this to the snap repo?
   pdf-url: https://snap.berkeley.edu/snap/help/SnapManual.pdf
   # doi:
@@ -50,7 +44,7 @@ book:
     # style: "docked"
     # search: true
   # TODO: fix this from showing the GitHub icon in the navbar.
-  repo-url: https://github.com/snap-cloud/manual/
+  repo-url: https://github.com/snap-cloud/snap-manual/
   repo-actions: [edit]
   chapters:
     - index.qmd
@@ -68,31 +62,29 @@ book:
     - content/11-metaprogramming/index.md
     - content/12-user-interface-elements/index.md
     # This stuff is duplicative of Chapter 1 and 2 above.
-    - part: content/Chapter1.md
-      chapters:
-      - content/C1-S1.md
-      - content/C1-S2.md
-      - content/C1-S3.md
-      - content/C1-S4.md
-      - content/C1-S5.md
-      - content/C1-S6.md
-      - content/C1-S7.md
-      - content/C1-S8.md
-      - content/C1-S12.md
-      - content/C1-S13.md
+    #- part: content/Chapter1.md
+    #  chapters:
+    #  - content/C1-S1.md
+    #  - content/C1-S2.md
+    #  - content/C1-S3.md
+    #  - content/C1-S4.md
+    #  - content/C1-S5.md
+    #  - content/C1-S6.md
+    #  - content/C1-S7.md
+    #  - content/C1-S8.md
+    #  - content/C1-S12.md
+    #  - content/C1-S13.md
       # - content/C1-S14.md
-      - content/C1-S15.md
-      - content/C1-S16.md
-      - content/C1-S17.md
-      - content/C1-S18.md
-    - content/Chapter2.md
+    #  - content/C1-S15.md
+    #  - content/C1-S16.md
+    #  - content/C1-S17.md
+    #  - content/C1-S18.md
+    #- content/Chapter2.md
   appendices:
     - content/13-appendix-a-snap-color-library/index.md
     - content/14-appendix-b-apl-features/index.md
-    - content/15-appendix-c-blocks-index/index.md
-    # - examples.qmd
-    # - references.qmd
-    # - content/index-list.qmd
+    - references.qmd
+    - content/index-list.qmd
 
 
 bibliography: references.bib
@@ -102,6 +94,11 @@ number-depth: 1
 
 format:
   html:
+    toc: true
+    roman-numerals: true
+    section-numbering:
+      style: roman
+      roman-numerals: true
     filters:
       - scripts/collect-index.lua
     # output-file: snap-manual
