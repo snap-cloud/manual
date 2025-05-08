@@ -105,8 +105,15 @@ format:
     # output-file: snap-manual
     theme: [none, styles/snap-manual.scss]
     strip-comment: true
+    html-math-method: katex
     navbar:
       logo: images/snap-logo.png
+    # include-in-header:
+    #   - text: |
+    #       <script src="https://examples.org/demo.js"></script>
+    #   - file: analytics.html
+    #   - comments.html
+    # include-before-body: header.html
   # epub:
   #   css: styles/epub.css
   #   cover-image: cover.png
