@@ -88,3 +88,13 @@ loading saved projects||
 Restore unsaved project option||
 recover button||
 user interface elements||
+cloud storage||
+save your project in the cloud||
+Cloud button||
+user name||
+Terms of
+Service||
+loading saved projects||
+Restore unsaved project option||
+recover button||
+user interface elements||

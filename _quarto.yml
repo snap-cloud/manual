@@ -8,6 +8,10 @@ project:
   # pre-render:
   # post-render:
 
+# Freeze Python executions for consistent compilations.
+execute:
+  freeze: auto
+
 book:
   title: Snap! Reference Manual
   output-file: snap-manual
