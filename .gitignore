@@ -12,7 +12,7 @@ _build
 
 # Quarto
 /env/
-/.quarto/
+.quarto/
 _book/
 
 # LaTex Complication Messes
