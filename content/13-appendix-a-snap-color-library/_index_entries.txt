@@ -4065,3 +4065,418 @@ value||
 fair hue table||
 color chart||
 user interface elements||
+Colors and Crayons library||
+color numbers||
+crayons||
+color space||
+RGB||
+CMY||
+CMYK||
+HSL||
+HSV||
+color theory||
+pumpkin||
+denim||
+crayons||
+sepia||
+set pen block||
+box of ten crayons||
+box of twenty crayons||
+color numbers||
+gray||
+Black Hole problem||
+pen block||
+change pen block||
+set pen block||
+transparency||
+color from block||
+mix block||
+hue||
+rainbow||
+magenta||
+spectral colors||
+rods and
+cones||
+fair hue||
+indigo||
+shade||
+tint||
+dark
+candy apple red||
+maroon||
+pink||
+white background||
+gray||
+color scales||
+white||
+purple||
+violet||
+magenta||
+teal||
+cyan||
+from color block||
+nearest color number||
+HSV||
+saturation||
+value||
+HSL||
+lightness||
+color picker||
+fair
+hue||
+JavaScript||
+L\*u\*v\*||
+L\*a\*b\*||
+additive
+mixing||
+subtractive mixing||
+mixing
+paints||
+paints||
+reflectance graph||
+color at weight block||
+Burns, Scott||
+ Briggs,
+David||
+normal people||
+color nerds||
+fair HSL||
+fair hue||
+fair saturation||
+fair
+value||
+fair hue table||
+color chart||
+user interface elements||
+Colors and Crayons library||
+color numbers||
+crayons||
+color space||
+RGB||
+CMY||
+CMYK||
+HSL||
+HSV||
+color theory||
+pumpkin||
+denim||
+crayons||
+sepia||
+set pen block||
+box of ten crayons||
+box of twenty crayons||
+color numbers||
+gray||
+Black Hole problem||
+pen block||
+change pen block||
+set pen block||
+transparency||
+color from block||
+mix block||
+hue||
+rainbow||
+magenta||
+spectral colors||
+rods and
+cones||
+fair hue||
+indigo||
+shade||
+tint||
+dark
+candy apple red||
+maroon||
+pink||
+white background||
+gray||
+color scales||
+white||
+purple||
+violet||
+magenta||
+teal||
+cyan||
+from color block||
+nearest color number||
+HSV||
+saturation||
+value||
+HSL||
+lightness||
+color picker||
+fair
+hue||
+JavaScript||
+L\*u\*v\*||
+L\*a\*b\*||
+additive
+mixing||
+subtractive mixing||
+mixing
+paints||
+paints||
+reflectance graph||
+color at weight block||
+Burns, Scott||
+ Briggs,
+David||
+normal people||
+color nerds||
+fair HSL||
+fair hue||
+fair saturation||
+fair
+value||
+fair hue table||
+color chart||
+user interface elements||
+Colors and Crayons library||
+color numbers||
+crayons||
+color space||
+RGB||
+CMY||
+CMYK||
+HSL||
+HSV||
+color theory||
+pumpkin||
+denim||
+crayons||
+sepia||
+set pen block||
+box of ten crayons||
+box of twenty crayons||
+color numbers||
+gray||
+Black Hole problem||
+pen block||
+change pen block||
+set pen block||
+transparency||
+color from block||
+mix block||
+hue||
+rainbow||
+magenta||
+spectral colors||
+rods and
+cones||
+fair hue||
+indigo||
+shade||
+tint||
+dark
+candy apple red||
+maroon||
+pink||
+white background||
+gray||
+color scales||
+white||
+purple||
+violet||
+magenta||
+teal||
+cyan||
+from color block||
+nearest color number||
+HSV||
+saturation||
+value||
+HSL||
+lightness||
+color picker||
+fair
+hue||
+JavaScript||
+L\*u\*v\*||
+L\*a\*b\*||
+additive
+mixing||
+subtractive mixing||
+mixing
+paints||
+paints||
+reflectance graph||
+color at weight block||
+Burns, Scott||
+ Briggs,
+David||
+normal people||
+color nerds||
+fair HSL||
+fair hue||
+fair saturation||
+fair
+value||
+fair hue table||
+color chart||
+user interface elements||
+Colors and Crayons library||
+color numbers||
+crayons||
+color space||
+RGB||
+CMY||
+CMYK||
+HSL||
+HSV||
+color theory||
+pumpkin||
+denim||
+crayons||
+sepia||
+set pen block||
+box of ten crayons||
+box of twenty crayons||
+color numbers||
+gray||
+Black Hole problem||
+pen block||
+change pen block||
+set pen block||
+transparency||
+color from block||
+mix block||
+hue||
+rainbow||
+magenta||
+spectral colors||
+rods and
+cones||
+fair hue||
+indigo||
+shade||
+tint||
+dark
+candy apple red||
+maroon||
+pink||
+white background||
+gray||
+color scales||
+white||
+purple||
+violet||
+magenta||
+teal||
+cyan||
+from color block||
+nearest color number||
+HSV||
+saturation||
+value||
+HSL||
+lightness||
+color picker||
+fair
+hue||
+JavaScript||
+L\*u\*v\*||
+L\*a\*b\*||
+additive
+mixing||
+subtractive mixing||
+mixing
+paints||
+paints||
+reflectance graph||
+color at weight block||
+Burns, Scott||
+ Briggs,
+David||
+normal people||
+color nerds||
+fair HSL||
+fair hue||
+fair saturation||
+fair
+value||
+fair hue table||
+color chart||
+user interface elements||
+Colors and Crayons library||
+color numbers||
+crayons||
+color space||
+RGB||
+CMY||
+CMYK||
+HSL||
+HSV||
+color theory||
+pumpkin||
+denim||
+crayons||
+sepia||
+set pen block||
+box of ten crayons||
+box of twenty crayons||
+color numbers||
+gray||
+Black Hole problem||
+pen block||
+change pen block||
+set pen block||
+transparency||
+color from block||
+mix block||
+hue||
+rainbow||
+magenta||
+spectral colors||
+rods and
+cones||
+fair hue||
+indigo||
+shade||
+tint||
+dark
+candy apple red||
+maroon||
+pink||
+white background||
+gray||
+color scales||
+white||
+purple||
+violet||
+magenta||
+teal||
+cyan||
+from color block||
+nearest color number||
+HSV||
+saturation||
+value||
+HSL||
+lightness||
+color picker||
+fair
+hue||
+JavaScript||
+L\*u\*v\*||
+L\*a\*b\*||
+additive
+mixing||
+subtractive mixing||
+mixing
+paints||
+paints||
+reflectance graph||
+color at weight block||
+Burns, Scott||
+ Briggs,
+David||
+normal people||
+color nerds||
+fair HSL||
+fair hue||
+fair saturation||
+fair
+value||
+fair hue table||
+color chart||
+user interface elements||

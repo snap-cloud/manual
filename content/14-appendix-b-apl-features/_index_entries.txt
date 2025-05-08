@@ -3254,3 +3254,355 @@ Number type||
 Object Logo||
 Lieberman, Henry||
 user interface elements||
+A Programming Language||
+Iverson, Kenneth
+E.||
+IBM System/360||
+APL||
+Falkoff, Adin||
+APL\360||
+mathematicians||
+vectors||
+matrices||
+first class
+data||
+scalar
+function||
+mixed function||
+operator (APL)||
+function, higher order||
+hyperblocks||
+rank||
+termwise
+extension||
+item block||
+length block||
+reshape block||
+APL library||
+APL character set||
+Unicode||
+APL2||
+equality of complete
+structures||
+ravel
+block||
+media
+computation||
+spreadsheet||
+Paleolithic||
+scalar function||
+scalar
+= block||
+scalar
+join block||
+deal block||
+signum block||
+roll
+block||
+function, mixed||
+shape of block||
+rank of block||
+reshape block||
+flatten
+block||
+catenate block||
+catenate vertically block||
+integers block||
+iota
+block||
+index of block (APL)||
+contained in block||
+grade up block||
+grade
+down block||
+take block||
+drop block||
+compress block||
+reduce block||
+reverse block||
+reverse columns block||
+transpose
+block||
+operator (APL)||
+higher order function||
+reduce block||
+outer product block||
+table||
+inner product block||
+multiplication, matrix||
+printable block||
+hat block:generic||
+generic when||
+stop sign, square||
+square stop sign||
+hide variable block||
+show variable block||
+hide and show primitives||
+Number type||
+Object Logo||
+Lieberman, Henry||
+user interface elements||
+A Programming Language||
+Iverson, Kenneth
+E.||
+IBM System/360||
+APL||
+Falkoff, Adin||
+APL\360||
+mathematicians||
+vectors||
+matrices||
+first class
+data||
+scalar
+function||
+mixed function||
+operator (APL)||
+function, higher order||
+hyperblocks||
+rank||
+termwise
+extension||
+item block||
+length block||
+reshape block||
+APL library||
+APL character set||
+Unicode||
+APL2||
+equality of complete
+structures||
+ravel
+block||
+media
+computation||
+spreadsheet||
+Paleolithic||
+scalar function||
+scalar
+= block||
+scalar
+join block||
+deal block||
+signum block||
+roll
+block||
+function, mixed||
+shape of block||
+rank of block||
+reshape block||
+flatten
+block||
+catenate block||
+catenate vertically block||
+integers block||
+iota
+block||
+index of block (APL)||
+contained in block||
+grade up block||
+grade
+down block||
+take block||
+drop block||
+compress block||
+reduce block||
+reverse block||
+reverse columns block||
+transpose
+block||
+operator (APL)||
+higher order function||
+reduce block||
+outer product block||
+table||
+inner product block||
+multiplication, matrix||
+printable block||
+hat block:generic||
+generic when||
+stop sign, square||
+square stop sign||
+hide variable block||
+show variable block||
+hide and show primitives||
+Number type||
+Object Logo||
+Lieberman, Henry||
+user interface elements||
+A Programming Language||
+Iverson, Kenneth
+E.||
+IBM System/360||
+APL||
+Falkoff, Adin||
+APL\360||
+mathematicians||
+vectors||
+matrices||
+first class
+data||
+scalar
+function||
+mixed function||
+operator (APL)||
+function, higher order||
+hyperblocks||
+rank||
+termwise
+extension||
+item block||
+length block||
+reshape block||
+APL library||
+APL character set||
+Unicode||
+APL2||
+equality of complete
+structures||
+ravel
+block||
+media
+computation||
+spreadsheet||
+Paleolithic||
+scalar function||
+scalar
+= block||
+scalar
+join block||
+deal block||
+signum block||
+roll
+block||
+function, mixed||
+shape of block||
+rank of block||
+reshape block||
+flatten
+block||
+catenate block||
+catenate vertically block||
+integers block||
+iota
+block||
+index of block (APL)||
+contained in block||
+grade up block||
+grade
+down block||
+take block||
+drop block||
+compress block||
+reduce block||
+reverse block||
+reverse columns block||
+transpose
+block||
+operator (APL)||
+higher order function||
+reduce block||
+outer product block||
+table||
+inner product block||
+multiplication, matrix||
+printable block||
+hat block:generic||
+generic when||
+stop sign, square||
+square stop sign||
+hide variable block||
+show variable block||
+hide and show primitives||
+Number type||
+Object Logo||
+Lieberman, Henry||
+user interface elements||
+A Programming Language||
+Iverson, Kenneth
+E.||
+IBM System/360||
+APL||
+Falkoff, Adin||
+APL\360||
+mathematicians||
+vectors||
+matrices||
+first class
+data||
+scalar
+function||
+mixed function||
+operator (APL)||
+function, higher order||
+hyperblocks||
+rank||
+termwise
+extension||
+item block||
+length block||
+reshape block||
+APL library||
+APL character set||
+Unicode||
+APL2||
+equality of complete
+structures||
+ravel
+block||
+media
+computation||
+spreadsheet||
+Paleolithic||
+scalar function||
+scalar
+= block||
+scalar
+join block||
+deal block||
+signum block||
+roll
+block||
+function, mixed||
+shape of block||
+rank of block||
+reshape block||
+flatten
+block||
+catenate block||
+catenate vertically block||
+integers block||
+iota
+block||
+index of block (APL)||
+contained in block||
+grade up block||
+grade
+down block||
+take block||
+drop block||
+compress block||
+reduce block||
+reverse block||
+reverse columns block||
+transpose
+block||
+operator (APL)||
+higher order function||
+reduce block||
+outer product block||
+table||
+inner product block||
+multiplication, matrix||
+printable block||
+hat block:generic||
+generic when||
+stop sign, square||
+square stop sign||
+hide variable block||
+show variable block||
+hide and show primitives||
+Number type||
+Object Logo||
+Lieberman, Henry||
+user interface elements||

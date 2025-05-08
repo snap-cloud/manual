@@ -1,4 +1,5 @@
-# Acknowledgements
+
+# Acknowledgements {.unnumbered}
 
 We have been extremely lucky in our
 mentors. Jens cut his teeth in the company of the Smalltalk pioneers:
