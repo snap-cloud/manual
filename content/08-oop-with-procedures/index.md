@@ -15,7 +15,9 @@ build up to full implementations of class/instance and prototyping OOP.
 
 ## Local State with Script Variables
 
-![image852.png](assets/image852.png) <!--  style="width:2.23958in;height:1.51042in" / --> This script implements an
+![image852.png](assets/image852.png) <!--  style="width:2.23958in;height:1.51042in" / --> 
+
+This script implements an
 object *class*, a type of object, namely the counter class
 \index{counter class}. In this ﬁrst simplified version there is only
 one method, so no explicit message passing is necessary. When the make a
@@ -25,6 +27,8 @@ inside its body. That procedure implements a specific counter object, an
 invoked, a counter instance increases and reports its count variable.
 Each counter has its own local count: \index{objects, building
 explicitly}
+
+![image851.png](assets/image851.png) <!--  style="width:2.23958in;height:1.51042in" / --> 
 
 This example will repay careful study, because it isn’t obvious why each
 instance has a separate count. From the point of view of the make a
@@ -46,10 +50,12 @@ to a particular counter.
 
 ## Messages and Dispatch Procedures
 
-![image853.png](assets/image853.png) <!--  style="width:4.41667in;height:3.16667in" / --> In the simplified class
+ In the simplified class
 above, there is only one method, and so there are no messages; you just
 call the instance to carry out its one method. Here is a more refined
 version that uses message passing \index{message passing} :
+
+![image853.png](assets/image853.png) <!--  style="width:4.41667in;height:3.16667in" / -->
 
 Again, the make a counter block represents the counter class, and again
 the script creates a local variable count each time it is invoked. The
@@ -77,6 +83,8 @@ the arrowheads of a multiple input (in the outer call block). Note also
 that this is one of the rare cases in which we must unringify
 \index{unringify} the inner call block, whose *value when called* gives
 the method.
+
+![image855.png](assets/image855.png) <!--  style="width:4.01042in;height:0.70772in" / --> 
 
 ## Inheritance via Delegation
 
@@ -129,14 +137,15 @@ key-value pair \index{key-value pair} corresponding to a given key in a
 given table.
 
 ![image858.png](assets/image858.png) <!--  style="width:3.21528in;height:2.36111in" / --> 
-
 ![image859.png](assets/image859.png) <!--  style="width:2.625in;height:0.78125in" / --> 
 
-![image860.png](assets/image860.png) <!--  style="width:5.60417in;height:1.15625in" / --> ![image861.png](assets/image861.png) <!--  style="width:5.60417in;height:1.15625in" / --> 
+![image860.png](assets/image860.png) <!--  style="width:5.60417in;height:1.15625in" / --> 
+![image861.png](assets/image861.png) <!--  style="width:5.60417in;height:1.15625in" / --> 
 
 There are also commands to insert and delete entries:
 
-![image862.png](assets/image862.png) <!--  style="width:3.71875in;height:1.82639in" / --> ![image863.png](assets/image863.png) <!--  style="width:3.22917in;height:2.12831in" / --> 
+![image863.png](assets/image863.png) <!--  style="width:3.22917in;height:2.12831in" / --> 
+![image862.png](assets/image862.png) <!--  style="width:3.71875in;height:1.82639in" / -->
 
 As in the class/instance version, an object is represented as a dispatch
 procedure \index{dispatch procedure} that takes a message as its input
@@ -163,21 +172,27 @@ grandparent, etc.) of the original recipient, and that method refers to
 a variable or method, it will use the child’s variable or method if the
 child has its own version.
 
-![image864.png](assets/image864.png) <!--  style="width:4.375in;height:7.46944in" / --> The
+ The
 clone of block \index{clone of block} below takes an object as its input
 and makes a child object. It should be considered as an internal part of
 the implementation; the preferred way to make a child of an object is to
 send that object a clone message.
 
-![image865.png](assets/image865.png) <!--  style="width:1.57292in;height:0.6875in" / --> Every
+![image864.png](assets/image864.png) <!--  style="width:4.375in;height:7.46944in" / -->
+
+ Every
 object is created with predefined methods for set, method, delete-var,
 delete-method, and clone. It has one predefined variable, parent.
 Objects without a parent are created by calling new object:
+
+![image865.png](assets/image865.png) <!--  style="width:1.57292in;height:0.6875in" / -->
 
 As before, we provide procedures to call an object’s dispatch procedure
 and then call the method. But in this version, we provide the desired
 object as the ﬁrst method input. We provide one procedure for Command
 methods and one for Reporter methods:
+
+![image866.png](assets/image866.png) <!--  style="width:1.57292in;height:0.6875in" / -->
 
 (Remember that the “Input list:” variant of the run and call blocks is
 made by dragging the input expression over the arrowheads rather than
@@ -191,6 +206,7 @@ method always sets counter1’s total variable, which therefore keeps
 count of the total number of times that *any* counter is incremented.
 Running this script should \[say\] and (think) the following lists:
 
-![image870.png](assets/image870.png) <!--  style="width:4.20833in;height:4.39583in" / --> \[1 1\] \[2 2\] \[3 3\] \[4
-4\] (1 5) (2 6) (3 7) \[5 8\] \[6 9\] \[7 10\] \[8 11\]
+\[1 1\] \[2 2\] \[3 3\] \[4 4\] (1 5) (2 6) (3 7) \[5 8\] \[6 9\] \[7 10\] \[8 11\]
+
+![image870.png](assets/image870.png) <!--  style="width:4.20833in;height:4.39583in" / --> 
 

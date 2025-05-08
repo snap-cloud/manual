@@ -8,6 +8,10 @@ project:
   # pre-render:
   # post-render:
 
+# Freeze Python executions for consistent compilations.
+execute:
+  freeze: auto
+
 book:
   title: Snap! Reference Manual
   output-file: snap-manual
@@ -83,8 +87,9 @@ book:
   appendices:
     - content/13-appendix-a-snap-color-library/index.md
     - content/14-appendix-b-apl-features/index.md
-    - examples.qmd
-    - references.qmd
+    - content/15-appendix-c-blocks-index/index.md
+    # - examples.qmd
+    # - references.qmd
     # - content/index-list.qmd
 
 

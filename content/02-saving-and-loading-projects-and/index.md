@@ -11,8 +11,10 @@ while on an airplane or otherwise not on the net. Also, cloud projects
 are limited in size, but you can have all the costumes and sounds you
 like if you save locally. This is why we have multiple ways to save.
 
-<span id="saveas" class="anchor"></span>![image487.png](assets/image487.png) <!--  style="width:3.54861in;height:2.57639in" / --> In either case, if you choose
+<span id="saveas" class="anchor"></span>In either case, if you choose
 “Save as…” from the File menu. You’ll see something like this:
+
+![image487.png](assets/image487.png) <!--  style="width:3.54861in;height:2.57639in" / --> 
 
 (If you are not logged in to your Snap*!* cloud account, Computer will
 be the only usable option.) The text box at the bottom right of the Save
@@ -27,14 +29,16 @@ project has a name, that name will be the default filename if you don’t
 give a different name. Another, equivalent way to save to disk is to
 choose “Export project” from the File menu.
 
-## ![image488.png](assets/image488.png) <!--  style="width:1.23403in;height:2.32986in" / --> Creating a Cloud Account \index{cloud storage} 
+## Creating a Cloud Account \index{cloud storage} 
 
-![image489.png](assets/image489.png) <!--  style="width:0.29167in;height:0.16667in" / --> The other possibility is to
+The other possibility is to
 save your project “in the cloud,” \index{save your project in the cloud}
 at the Snap*!* web site. In order to do this, you need an account with
-us. Click on the Cloud button \index{Cloud button} ( ) in the Tool Bar.
+us. Click on the Cloud button \index{Cloud button} (![image489.png](assets/image489.png) <!--  style="width:0.29167in;height:0.16667in" / --> ) in the Tool Bar.
 Choose the “Signup…” option. This will show you a window that looks like
-the picture at the right.
+the picture below:
+
+![image488.png](assets/image488.png) <!--  style="width:1.23403in;height:2.32986in" / --> 
 
 You must choose a user name \index{user name} that will identify you on
 the web site, such as Jens or bh. If you’re a Scratch user, you can use
@@ -77,7 +81,9 @@ us say this.)
 Once you’ve created your account, you can log into it using the “Login…”
 option from the Cloud menu:
 
-![image490.png](assets/image490.png) <!--  style="width:1.6875in;height:2.02778in" / --> Use
+![image490.png](assets/image490.png) <!--  style="width:1.6875in;height:2.02778in" / --> 
+
+Use
 the user name and password that you set up earlier. If you check the
 “Stay signed in” box, then you will be logged in automatically the next
 time you run Snap*!* from the same browser on the same computer. Check
@@ -126,10 +132,10 @@ the Computer and Cloud options.
 
 ## If you lose your project, do this first!
 
-![image384.png](assets/image384.png) <!--  style="width:0.31944in;height:0.18056in" alt="Macintosh HD:Users:bh:Desktop:Dropbox:manual (1):filebutton.png" / --> If
+If
 you are still in **Snap*!*** and realize that you’ve loaded another
 project without saving the one you were working on: ***Don’t edit the
-new project.*** From the File menu choose the Restore unsaved project
+new project.*** From the File menu ![image384.png](assets/image384.png) <!--  style="width:0.31944in;height:0.18056in" alt="Macintosh HD:Users:bh:Desktop:Dropbox:manual (1):filebutton.png" / --> choose the Restore unsaved project
 option \index{Restore unsaved project option}.
 
 Restore unsaved project will also work if you log out of Snap*!* and
@@ -151,7 +157,7 @@ To help you remember to save your projects, when you’ve edited the
 project and haven’t yet saved it, Snap*!* displays a pencil icon to the
 left of the project name on the toolbar at the top of the window:
 
-nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn
+![image391.png](assets/image391.png) <!--  style="width:0.31944in;height:0.18056in"/ --> 
 
 ## Private and Public Projects
 

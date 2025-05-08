@@ -1,0 +1,464 @@
+object oriented
+programming||
+scope:lexical||
+dispatch procedure||
+counter class||
+instance||
+class||
+objects, building
+explicitly||
+script
+variables block||
+message passing||
+dispatch procedure||
+method||
+ask block||
+unringify||
+inheritance||
+delegation||
+child class||
+parent class||
+prototyping||
+association list||
+key-value pair||
+dispatch procedure||
+methods
+table||
+data table||
+clone of block||
+user interface elements||
+object oriented
+programming||
+scope:lexical||
+dispatch procedure||
+counter class||
+instance||
+class||
+objects, building
+explicitly||
+script
+variables block||
+message passing||
+dispatch procedure||
+method||
+ask block||
+unringify||
+inheritance||
+delegation||
+child class||
+parent class||
+prototyping||
+association list||
+key-value pair||
+dispatch procedure||
+methods
+table||
+data table||
+clone of block||
+user interface elements||
+object oriented
+programming||
+scope:lexical||
+dispatch procedure||
+counter class||
+instance||
+class||
+objects, building
+explicitly||
+script
+variables block||
+message passing||
+dispatch procedure||
+method||
+ask block||
+unringify||
+inheritance||
+delegation||
+child class||
+parent class||
+prototyping||
+association list||
+key-value pair||
+dispatch procedure||
+methods
+table||
+data table||
+clone of block||
+user interface elements||
+object oriented
+programming||
+scope:lexical||
+dispatch procedure||
+counter class||
+instance||
+class||
+objects, building
+explicitly||
+script
+variables block||
+message passing||
+dispatch procedure||
+method||
+ask block||
+unringify||
+inheritance||
+delegation||
+child class||
+parent class||
+prototyping||
+association list||
+key-value pair||
+dispatch procedure||
+methods
+table||
+data table||
+clone of block||
+user interface elements||
+object oriented
+programming||
+scope:lexical||
+dispatch procedure||
+counter class||
+instance||
+class||
+objects, building
+explicitly||
+script
+variables block||
+message passing||
+dispatch procedure||
+method||
+ask block||
+unringify||
+inheritance||
+delegation||
+child class||
+parent class||
+prototyping||
+association list||
+key-value pair||
+dispatch procedure||
+methods
+table||
+data table||
+clone of block||
+user interface elements||
+object oriented
+programming||
+scope:lexical||
+dispatch procedure||
+counter class||
+instance||
+class||
+objects, building
+explicitly||
+script
+variables block||
+message passing||
+dispatch procedure||
+method||
+ask block||
+unringify||
+inheritance||
+delegation||
+child class||
+parent class||
+prototyping||
+association list||
+key-value pair||
+dispatch procedure||
+methods
+table||
+data table||
+clone of block||
+user interface elements||
+object oriented
+programming||
+scope:lexical||
+dispatch procedure||
+counter class||
+instance||
+class||
+objects, building
+explicitly||
+script
+variables block||
+message passing||
+dispatch procedure||
+method||
+ask block||
+unringify||
+inheritance||
+delegation||
+child class||
+parent class||
+prototyping||
+association list||
+key-value pair||
+dispatch procedure||
+methods
+table||
+data table||
+clone of block||
+user interface elements||
+object oriented
+programming||
+scope:lexical||
+dispatch procedure||
+counter class||
+instance||
+class||
+objects, building
+explicitly||
+script
+variables block||
+message passing||
+dispatch procedure||
+method||
+ask block||
+unringify||
+inheritance||
+delegation||
+child class||
+parent class||
+prototyping||
+association list||
+key-value pair||
+dispatch procedure||
+methods
+table||
+data table||
+clone of block||
+user interface elements||
+object oriented
+programming||
+scope:lexical||
+dispatch procedure||
+counter class||
+instance||
+class||
+objects, building
+explicitly||
+script
+variables block||
+message passing||
+dispatch procedure||
+method||
+ask block||
+unringify||
+inheritance||
+delegation||
+child class||
+parent class||
+prototyping||
+association list||
+key-value pair||
+dispatch procedure||
+methods
+table||
+data table||
+clone of block||
+user interface elements||
+object oriented
+programming||
+scope:lexical||
+dispatch procedure||
+counter class||
+instance||
+class||
+objects, building
+explicitly||
+script
+variables block||
+message passing||
+dispatch procedure||
+method||
+ask block||
+unringify||
+inheritance||
+delegation||
+child class||
+parent class||
+prototyping||
+association list||
+key-value pair||
+dispatch procedure||
+methods
+table||
+data table||
+clone of block||
+user interface elements||
+object oriented
+programming||
+scope:lexical||
+dispatch procedure||
+counter class||
+instance||
+class||
+objects, building
+explicitly||
+script
+variables block||
+message passing||
+dispatch procedure||
+method||
+ask block||
+unringify||
+inheritance||
+delegation||
+child class||
+parent class||
+prototyping||
+association list||
+key-value pair||
+dispatch procedure||
+methods
+table||
+data table||
+clone of block||
+user interface elements||
+object oriented
+programming||
+scope:lexical||
+dispatch procedure||
+counter class||
+instance||
+class||
+objects, building
+explicitly||
+script
+variables block||
+message passing||
+dispatch procedure||
+method||
+ask block||
+unringify||
+inheritance||
+delegation||
+child class||
+parent class||
+prototyping||
+association list||
+key-value pair||
+dispatch procedure||
+methods
+table||
+data table||
+clone of block||
+user interface elements||
+object oriented
+programming||
+scope:lexical||
+dispatch procedure||
+counter class||
+instance||
+class||
+objects, building
+explicitly||
+script
+variables block||
+message passing||
+dispatch procedure||
+method||
+ask block||
+unringify||
+inheritance||
+delegation||
+child class||
+parent class||
+prototyping||
+association list||
+key-value pair||
+dispatch procedure||
+methods
+table||
+data table||
+clone of block||
+user interface elements||
+object oriented
+programming||
+scope:lexical||
+dispatch procedure||
+counter class||
+instance||
+class||
+objects, building
+explicitly||
+script
+variables block||
+message passing||
+dispatch procedure||
+method||
+ask block||
+unringify||
+inheritance||
+delegation||
+child class||
+parent class||
+prototyping||
+association list||
+key-value pair||
+dispatch procedure||
+methods
+table||
+data table||
+clone of block||
+user interface elements||
+object oriented
+programming||
+scope:lexical||
+dispatch procedure||
+counter class||
+instance||
+class||
+objects, building
+explicitly||
+script
+variables block||
+message passing||
+dispatch procedure||
+method||
+ask block||
+unringify||
+inheritance||
+delegation||
+child class||
+parent class||
+prototyping||
+association list||
+key-value pair||
+dispatch procedure||
+methods
+table||
+data table||
+clone of block||
+user interface elements||
+object oriented
+programming||
+scope:lexical||
+dispatch procedure||
+counter class||
+instance||
+class||
+objects, building
+explicitly||
+script
+variables block||
+message passing||
+dispatch procedure||
+method||
+ask block||
+unringify||
+inheritance||
+delegation||
+child class||
+parent class||
+prototyping||
+association list||
+key-value pair||
+dispatch procedure||
+methods
+table||
+data table||
+clone of block||
+user interface elements||
