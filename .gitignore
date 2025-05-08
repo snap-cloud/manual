@@ -22,12 +22,19 @@ content/**/*.tex
 content/**/*.html
 site_libs/
 
+
 # LaTex Complication Messes
 *.aux
 *.log
 content/*.tex
 *.toc
 *.idx
+*.ilg
+*.ind
+*.out
+# Ignore all intermediate tex files
+# TODO: this may be too broad
+*.tex
 content/*.pdf
 content/*_files/**
 
