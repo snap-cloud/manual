@@ -15,6 +15,9 @@ _build
 .quarto
 _book
 
+# Custom Index Rendering Files.
+_index_entries.txt
+
 # LaTex Complication Messes
 *.aux
 *.log
@@ -33,3 +36,5 @@ conversion/chapters/*
 # Utils while building...
 _index_entries.txt
 index-list.quarto_ipynb
+
+/.quarto/
