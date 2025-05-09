@@ -134,25 +134,9 @@ format:
     documentclass: book
     papersize: letter
     # mainfont: Baskerville
-    monofont: Source Code Pro
-    sansfont: Helvetica
+    # monofont: Source Code Pro
+    # sansfont: Helvetica
     resource-path:
       - ./
       - content/assets/
       - content/assets/images/
-      # - content/00-acknowledgements/assets/
-      # - content/01-blocks-scripts-and-sprites/assets/
-      # - content/02-saving-and-loading-projects-and/assets/
-      # - content/03-building-a-block/assets/
-      # - content/04-first-class-lists/assets/
-      # - content/05-typed-inputs/assets/
-      # - content/06-procedures-as-data/assets/
-      # - content/07-object-oriented-programming-with-sprites/assets/
-      # - content/08-oop-with-procedures/assets/
-      # - content/09-the-outside-world/assets/
-      # - content/10-continuations/assets/
-      # - content/11-metaprogramming/assets/
-      # - content/12-user-interface-elements/assets/
-      # - content/13-appendix-a-snap-color-library/assets/
-      # - content/14-appendix-b-apl-features/assets/
-      # - content/15-appendix-c-blocks-index/assets/
