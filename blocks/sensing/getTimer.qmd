@@ -1,0 +1,29 @@
+---
+block_description: Complete Me
+label: "timer"
+block_spec: "timer"
+help_screen: "getTimer.png"
+selector: "getTimer"
+type: reporter
+category: sensing
+arguments:
+  - name: distance
+    type: number
+    default: 10
+    description: The distance to move forward
+returns: None
+exmaple_projects:
+  - title: Example Project 1
+    url: https://example.com/project1
+  - title: Example Project 1
+    url: https://example.com/project1
+example_images:
+  - image: move_forward.png
+    description: Move forward by 10 steps
+  - image: move_forward.png
+    description: Move forward by 10 steps
+---
+
+# Timer {.unnumbered}
+
+{{< include ../_block.qmd >}}

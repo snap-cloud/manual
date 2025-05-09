@@ -1,0 +1,29 @@
+---
+block_description: Complete Me
+label: "set volume to _ %"
+block_spec: "set volume to %n %"
+help_screen: "setVolume.png"
+selector: "setVolume"
+type: command
+category: sound
+arguments:
+  - name: distance
+    type: number
+    default: 10
+    description: The distance to move forward
+returns: None
+exmaple_projects:
+  - title: Example Project 1
+    url: https://example.com/project1
+  - title: Example Project 1
+    url: https://example.com/project1
+example_images:
+  - image: move_forward.png
+    description: Move forward by 10 steps
+  - image: move_forward.png
+    description: Move forward by 10 steps
+---
+
+# Set volume to  % {.unnumbered}
+
+{{< include ../_block.qmd >}}

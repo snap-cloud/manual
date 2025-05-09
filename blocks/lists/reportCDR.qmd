@@ -1,0 +1,29 @@
+---
+block_description: Complete Me
+label: "all but first of _"
+block_spec: "all but first of %l"
+help_screen: "reportCDR.png"
+selector: "reportCDR"
+type: reporter
+category: lists
+arguments:
+  - name: distance
+    type: number
+    default: 10
+    description: The distance to move forward
+returns: None
+exmaple_projects:
+  - title: Example Project 1
+    url: https://example.com/project1
+  - title: Example Project 1
+    url: https://example.com/project1
+example_images:
+  - image: move_forward.png
+    description: Move forward by 10 steps
+  - image: move_forward.png
+    description: Move forward by 10 steps
+---
+
+# All but first of  {.unnumbered}
+
+{{< include ../_block.qmd >}}
