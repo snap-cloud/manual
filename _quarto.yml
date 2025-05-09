@@ -12,12 +12,12 @@ book:
   title: Snap! Reference Manual
   output-file: snap-manual
   author: Brian Harvey & Jens Mönig
-  date: 11/12/2024
+  date: May 8, 2025
   description: A manual for Snap! TODO
   references: references.bib
-  cover-image: cover.png
+  cover-image: images/cover-image.png
   cover-image-alt: Snap! Manual Cover Image TODO
-  # Book Metadata
+  favicon: images/snap-logo.png
   language: en
   edition: 10
   license: CC-BY-NC-SA 4.0
@@ -27,8 +27,6 @@ book:
   pdf-url: https://snap.berkeley.edu/snap/help/SnapManual.pdf
   # doi:
   # abstract:
-  #
-  # Book site display
   downloads:
     - pdf
     # - epub
@@ -43,8 +41,7 @@ book:
   # sidebar:
     # style: "docked"
     # search: true
-  # TODO: fix this from showing the GitHub icon in the navbar.
-  repo-url: https://github.com/snap-cloud/snap-manual/
+  repo-url: https://github.com/snap-cloud/manual/
   repo-actions: [edit]
   chapters:
     - index.qmd
@@ -74,7 +71,7 @@ book:
     #  - content/C1-S8.md
     #  - content/C1-S12.md
     #  - content/C1-S13.md
-      # - content/C1-S14.md
+    #  - content/C1-S14.md
     #  - content/C1-S15.md
     #  - content/C1-S16.md
     #  - content/C1-S17.md
@@ -89,7 +86,6 @@ book:
 
 
 bibliography: references.bib
-
 # Don't number subsections as chapters.
 number-depth: 1
 
@@ -122,7 +118,7 @@ format:
     dir: ltr
     # https://quarto.org/docs/reference/formats/pdf.html
     output-file: snap-manual.pdf
-    cover-image: cover.png
+    cover-image: images/cover-image.png
     # Do not use pdflatex since we have unicode chars
     pdf-engine: lualatex # wkhtmltopdf # xelatex # or lualatex
     # pdf-engine-opt:
@@ -137,7 +133,7 @@ format:
     number-depth: 1
     documentclass: book
     papersize: letter
-    mainfont: Baskerville
+    # mainfont: Baskerville
     monofont: Source Code Pro
     sansfont: Helvetica
     resource-path:
@@ -160,10 +156,3 @@ format:
       # - content/13-appendix-a-snap-color-library/assets/
       # - content/14-appendix-b-apl-features/assets/
       # - content/15-appendix-c-blocks-index/assets/
-
-# website:
-#   favicon: images/snap-logo.png
-#   navbar:
-#     logo: images/snap-logo.png
-#     background: primary
-#     search: true
