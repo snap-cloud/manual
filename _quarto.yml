@@ -284,13 +284,7 @@ book:
         - blocks/operators/reportUnicodeAsLetter.qmd
         - blocks/operators/reportIsA.qmd
         - blocks/operators/reportVariadicIsIdentical.qmd
-        - blocks/operators/reportJSFunction.qmd
-        - blocks/variables/reportGetVar.qmd
-        - blocks/variables/reportGetVar.qmd
-        - blocks/variables/reportGetVar.qmd
-        - blocks/variables/reportGetVar.qmd
-        - blocks/variables/reportGetVar.qmd
-        - blocks/variables/reportGetVar.qmd
+        # - blocks/operators/reportJSFunction.qmd
         - blocks/variables/doSetVar.qmd
         - blocks/variables/doChangeVar.qmd
         - blocks/variables/doShowVar.qmd
@@ -318,8 +312,8 @@ book:
         - blocks/lists/reportConcatenatedLists.qmd
         - blocks/lists/reportReshape.qmd
         - blocks/lists/reportCrossproduct.qmd
-        - blocks/other/doPrimitive.qmd
-        - blocks/other/doApplyExtension.qmd
-        - blocks/other/reportApplyExtension.qmd
+        # - blocks/other/doPrimitive.qmd
+        # - blocks/other/doApplyExtension.qmd
+        # - blocks/other/reportApplyExtension.qmd
     # - references.qmd
     # - content/index-list.qmd
