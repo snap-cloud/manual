@@ -120,9 +120,9 @@ book:
   appendices:
     - content/13-appendix-a-snap-color-library/index.md
     - content/14-appendix-b-apl-features/index.md
-    - part: Blocks Reference
+    - blocks/index.md
+    - part: Motion Blocks
       chapters:
-        - blocks/index.md
         - blocks/motion/forward.qmd
         - blocks/motion/turn.qmd
         - blocks/motion/turnLeft.qmd
@@ -140,6 +140,8 @@ book:
         - blocks/motion/xPosition.qmd
         - blocks/motion/yPosition.qmd
         - blocks/motion/direction.qmd
+    - part: Looks Blocks
+      chapters:
         - blocks/looks/doSwitchToCostume.qmd
         - blocks/looks/doWearNextCostume.qmd
         - blocks/looks/getCostumeIdx.qmd
@@ -163,6 +165,8 @@ book:
         - blocks/looks/reportShown.qmd
         - blocks/looks/goToLayer.qmd
         - blocks/looks/goBack.qmd
+    - part: Sound Blocks
+      chapters:
         - blocks/sound/playSound.qmd
         - blocks/sound/doPlaySoundUntilDone.qmd
         - blocks/sound/doStopAllSounds.qmd
@@ -183,6 +187,8 @@ book:
         - blocks/sound/getPan.qmd
         - blocks/sound/playFreq.qmd
         - blocks/sound/stopFreq.qmd
+    - part: Pen Blocks
+      chapters:
         - blocks/pen/clear.qmd
         - blocks/pen/down.qmd
         - blocks/pen/up.qmd
@@ -199,6 +205,8 @@ book:
         - blocks/pen/reportPenTrailsAsCostume.qmd
         - blocks/pen/doPasteOn.qmd
         - blocks/pen/doCutFrom.qmd
+    - part: Control Blocks
+      chapters:
         - blocks/control/doBroadcast.qmd
         - blocks/control/doBroadcastAndWait.qmd
         - blocks/other/doWarp.qmd
@@ -230,6 +238,8 @@ book:
         - blocks/control/reportBlockAttribute.qmd
         - blocks/control/reportEnvironment.qmd
         - blocks/control/doSetSlot.qmd
+    - part: Sensing Blocks
+      chapters:
         - blocks/sensing/reportTouchingObject.qmd
         - blocks/sensing/reportTouchingColor.qmd
         - blocks/sensing/reportColorIsTouchingColor.qmd
@@ -254,6 +264,8 @@ book:
         - blocks/sensing/doSetVideoTransparency.qmd
         - blocks/sensing/reportGlobalFlag.qmd
         - blocks/sensing/doSetGlobalFlag.qmd
+    - part: Operators Blocks
+      chapters:
         - blocks/other/reifyScript.qmd
         - blocks/other/reifyReporter.qmd
         - blocks/other/reifyPredicate.qmd
@@ -285,6 +297,8 @@ book:
         - blocks/operators/reportIsA.qmd
         - blocks/operators/reportVariadicIsIdentical.qmd
         # - blocks/operators/reportJSFunction.qmd
+    - part: Variables Blocks
+      chapters:
         - blocks/variables/doSetVar.qmd
         - blocks/variables/doChangeVar.qmd
         - blocks/variables/doShowVar.qmd
