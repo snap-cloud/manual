@@ -46766,3 +46766,1187 @@ menus library||
 SciSnap! library||
 TuneScope library||
 user interface elements||
+Scratch||
+layout, window||
+ Snap! program||
+script||
+block||
+palette||
+scripting area||
+flag, green||
+tool bar||
+block:hat||
+block:command||
+command block||
+sprite||
+stage||
+costume||
+stack of blocks||
+input||
+repeat block||
+block:C-shaped||
+C-shaped block||
+Control palette||
+new sprite button||
+sprite corral||
+parallelism||
+stop sign||
+costume||
+Costumes
+tab||
+wardrobe||
+Alonzo||
+Church, Alonzo||
+procedures as data||
+Scratch||
+Turtle costume||
+jukebox||
+play sound block||
+playing sounds||
+broadcast and wait block||
+text input||
+brown dot||
+Nesting Sprites||
+anchor||
+parts (of nested sprite)||
+sprite nesting||
+synchronous rotation||
+dangling
+rotation||
+block:reporter||
+Reporter
+block||
+halo||
+X position||
+Y position||
+arithmetic||
+zebra coloring||
+expression||
+block:predicate||
+Predicate block||
+hexagonal shape||
+if block||
+repeat until block||
+animation||
+reporter if block||
+Boolean||
+Boole, George||
+procedure||
+Boolean constant||
+for block||
+orange oval||
+variable||
+squiral||
+variable:global||
+global variable||
+Make a variable||
+sprite-local variable||
+Delete a variable||
+variable
+watcher||
+watcher||
+set block||
+For this sprite only||
+location-pin||
+variable:sprite-local||
+interaction||
+global variable||
+variable:script-local||
+script variables block||
+renaming variables||
+variable:transient||
+memory||
+Debugging||
+button:pause||
+hide variable block||
+breakpoint||
+pause all block||
+button:visible stepping||
+visible stepping button||
+slider:stepping speed||
+single
+stepping||
+pen trails
+block||
+pen vectors block||
+write block||
+warp block||
+if else reporter
+block||
+for block||
+index
+variable||
+local variables||
+script
+variables block||
+graphics effect||
+true block||
+false block||
+JavaScript||
+pen down? block||
+at block||
+screen pixel||
+RGBA option||
+is
+\_ a \_ ? block||
+stage blocks||
+type||
+set flag block||
+split block||
+whitespace||
+newline
+character||
+tab character||
+carriage return character||
+CSV format||
+JSON format||
+identical to||
+relabel option||
+max block||
+≤ block||
+numbers from block||
+for each block||
+position block||
+broadcast
+block||
+points as inputs||
+two-item (x,y) lists||
+to block||
+center of the stage||
+stop block||
+touching block||
+video block||
+snap option||
+neg option||
+of block
+(operators)||
+length of text block||
+negation operator||
+set background block||
+when I am block||
+when I am stopped script||
+broadcast block||
+when I receive block||
+set pen block||
+ask and wait block||
+of block (sensing)||
+Libraries… option||
+list library||
+lightning bolt symbol||
+remove duplicates from block||
+sort block||
+assoc block||
+for each item block||
+# variable||
+multimap block||
+sentence block||
+sentence➔list
+block||
+iteration library||
+catch block||
+throw block||
+if do and pause all block||
+ignore block||
+cascade blocks||
+compose block||
+repeat blocks||
+for
+block||
+stream library||
+in front of stream block||
+item 1
+of stream block||
+all but first of stream
+block||
+map over stream block||
+show stream block||
+Stream block||
+sieve block||
+Stream with numbers from block||
+sentence library||
+all but first blocks||
+Logo tradition||
+letter
+(1) of (world) block||
+visual
+representation of a sentence||
+list ➔ sentence block||
+printable block||
+pixels library||
+snap block||
+bar charts library||
+bar chart
+block||
+plot bar chart block||
+conditional
+library:multiple-branch||
+cases block||
+cond in Lisp||
+switch in C||
+else if block||
+else block||
+variadic library||
+sum block||
+all of block||
+any of block||
+colors library||
+set pen block||
+HSL color||
+fair hue||
+X11/W3C color names||
+color from block||
+from color block||
+mix colors block||
+set pen block||
+color numbers||
+crayons||
+transparency||
+set pen to crayon block||
+crayon library||
+catch errors library||
+safely try block||
+error block||
+text costume library||
+costume from text block||
+costume with background block||
+speech synthesis library||
+speak block||
+parallelization library||
+do in parallel block||
+variables library||
+does var exist block||
+getter/setter library||
+setting
+block||
+set flag block||
+set value block||
+infinite precision
+integer library||
+BIGNUMS block||
+Scheme number block||
+! block||
+factorial ||
+block with no name||
+string processing library||
+case-independent comparisons block||
+multiline block||
+animation library||
+easing function||
+easing block||
+animate block||
+serial-ports library||
+frequency
+distribution analysis library||
+histogram||
+sound manipulation library||
+plot sound block||
+play block||
+Hz for block||
+web services library||
+url
+block||
+current location
+block||
+listify
+block||
+value at key block||
+key\\value\\ block||
+database library||
+map library||
+APL library||
+list comprehension library||
+bitwise library||
+MQTT library||
+Signada library||
+menus library||
+SciSnap! library||
+TuneScope library||
+user interface elements||
+Scratch||
+layout, window||
+ Snap! program||
+script||
+block||
+palette||
+scripting area||
+flag, green||
+tool bar||
+block:hat||
+block:command||
+command block||
+sprite||
+stage||
+costume||
+stack of blocks||
+input||
+repeat block||
+block:C-shaped||
+C-shaped block||
+Control palette||
+new sprite button||
+sprite corral||
+parallelism||
+stop sign||
+costume||
+Costumes
+tab||
+wardrobe||
+Alonzo||
+Church, Alonzo||
+procedures as data||
+Scratch||
+Turtle costume||
+jukebox||
+play sound block||
+playing sounds||
+broadcast and wait block||
+text input||
+brown dot||
+Nesting Sprites||
+anchor||
+parts (of nested sprite)||
+sprite nesting||
+synchronous rotation||
+dangling
+rotation||
+block:reporter||
+Reporter
+block||
+halo||
+X position||
+Y position||
+arithmetic||
+zebra coloring||
+expression||
+block:predicate||
+Predicate block||
+hexagonal shape||
+if block||
+repeat until block||
+animation||
+reporter if block||
+Boolean||
+Boole, George||
+procedure||
+Boolean constant||
+for block||
+orange oval||
+variable||
+squiral||
+variable:global||
+global variable||
+Make a variable||
+sprite-local variable||
+Delete a variable||
+variable
+watcher||
+watcher||
+set block||
+For this sprite only||
+location-pin||
+variable:sprite-local||
+interaction||
+global variable||
+variable:script-local||
+script variables block||
+renaming variables||
+variable:transient||
+memory||
+Debugging||
+button:pause||
+hide variable block||
+breakpoint||
+pause all block||
+button:visible stepping||
+visible stepping button||
+slider:stepping speed||
+single
+stepping||
+pen trails
+block||
+pen vectors block||
+write block||
+warp block||
+if else reporter
+block||
+for block||
+index
+variable||
+local variables||
+script
+variables block||
+graphics effect||
+true block||
+false block||
+JavaScript||
+pen down? block||
+at block||
+screen pixel||
+RGBA option||
+is
+\_ a \_ ? block||
+stage blocks||
+type||
+set flag block||
+split block||
+whitespace||
+newline
+character||
+tab character||
+carriage return character||
+CSV format||
+JSON format||
+identical to||
+relabel option||
+max block||
+≤ block||
+numbers from block||
+for each block||
+position block||
+broadcast
+block||
+points as inputs||
+two-item (x,y) lists||
+to block||
+center of the stage||
+stop block||
+touching block||
+video block||
+snap option||
+neg option||
+of block
+(operators)||
+length of text block||
+negation operator||
+set background block||
+when I am block||
+when I am stopped script||
+broadcast block||
+when I receive block||
+set pen block||
+ask and wait block||
+of block (sensing)||
+Libraries… option||
+list library||
+lightning bolt symbol||
+remove duplicates from block||
+sort block||
+assoc block||
+for each item block||
+# variable||
+multimap block||
+sentence block||
+sentence➔list
+block||
+iteration library||
+catch block||
+throw block||
+if do and pause all block||
+ignore block||
+cascade blocks||
+compose block||
+repeat blocks||
+for
+block||
+stream library||
+in front of stream block||
+item 1
+of stream block||
+all but first of stream
+block||
+map over stream block||
+show stream block||
+Stream block||
+sieve block||
+Stream with numbers from block||
+sentence library||
+all but first blocks||
+Logo tradition||
+letter
+(1) of (world) block||
+visual
+representation of a sentence||
+list ➔ sentence block||
+printable block||
+pixels library||
+snap block||
+bar charts library||
+bar chart
+block||
+plot bar chart block||
+conditional
+library:multiple-branch||
+cases block||
+cond in Lisp||
+switch in C||
+else if block||
+else block||
+variadic library||
+sum block||
+all of block||
+any of block||
+colors library||
+set pen block||
+HSL color||
+fair hue||
+X11/W3C color names||
+color from block||
+from color block||
+mix colors block||
+set pen block||
+color numbers||
+crayons||
+transparency||
+set pen to crayon block||
+crayon library||
+catch errors library||
+safely try block||
+error block||
+text costume library||
+costume from text block||
+costume with background block||
+speech synthesis library||
+speak block||
+parallelization library||
+do in parallel block||
+variables library||
+does var exist block||
+getter/setter library||
+setting
+block||
+set flag block||
+set value block||
+infinite precision
+integer library||
+BIGNUMS block||
+Scheme number block||
+! block||
+factorial ||
+block with no name||
+string processing library||
+case-independent comparisons block||
+multiline block||
+animation library||
+easing function||
+easing block||
+animate block||
+serial-ports library||
+frequency
+distribution analysis library||
+histogram||
+sound manipulation library||
+plot sound block||
+play block||
+Hz for block||
+web services library||
+url
+block||
+current location
+block||
+listify
+block||
+value at key block||
+key\\value\\ block||
+database library||
+map library||
+APL library||
+list comprehension library||
+bitwise library||
+MQTT library||
+Signada library||
+menus library||
+SciSnap! library||
+TuneScope library||
+user interface elements||
+Scratch||
+layout, window||
+ Snap! program||
+script||
+block||
+palette||
+scripting area||
+flag, green||
+tool bar||
+block:hat||
+block:command||
+command block||
+sprite||
+stage||
+costume||
+stack of blocks||
+input||
+repeat block||
+block:C-shaped||
+C-shaped block||
+Control palette||
+new sprite button||
+sprite corral||
+parallelism||
+stop sign||
+costume||
+Costumes
+tab||
+wardrobe||
+Alonzo||
+Church, Alonzo||
+procedures as data||
+Scratch||
+Turtle costume||
+jukebox||
+play sound block||
+playing sounds||
+broadcast and wait block||
+text input||
+brown dot||
+Nesting Sprites||
+anchor||
+parts (of nested sprite)||
+sprite nesting||
+synchronous rotation||
+dangling
+rotation||
+block:reporter||
+Reporter
+block||
+halo||
+X position||
+Y position||
+arithmetic||
+zebra coloring||
+expression||
+block:predicate||
+Predicate block||
+hexagonal shape||
+if block||
+repeat until block||
+animation||
+reporter if block||
+Boolean||
+Boole, George||
+procedure||
+Boolean constant||
+for block||
+orange oval||
+variable||
+squiral||
+variable:global||
+global variable||
+Make a variable||
+sprite-local variable||
+Delete a variable||
+variable
+watcher||
+watcher||
+set block||
+For this sprite only||
+location-pin||
+variable:sprite-local||
+interaction||
+global variable||
+variable:script-local||
+script variables block||
+renaming variables||
+variable:transient||
+memory||
+Debugging||
+button:pause||
+hide variable block||
+breakpoint||
+pause all block||
+button:visible stepping||
+visible stepping button||
+slider:stepping speed||
+single
+stepping||
+pen trails
+block||
+pen vectors block||
+write block||
+warp block||
+if else reporter
+block||
+for block||
+index
+variable||
+local variables||
+script
+variables block||
+graphics effect||
+true block||
+false block||
+JavaScript||
+pen down? block||
+at block||
+screen pixel||
+RGBA option||
+is
+\_ a \_ ? block||
+stage blocks||
+type||
+set flag block||
+split block||
+whitespace||
+newline
+character||
+tab character||
+carriage return character||
+CSV format||
+JSON format||
+identical to||
+relabel option||
+max block||
+≤ block||
+numbers from block||
+for each block||
+position block||
+broadcast
+block||
+points as inputs||
+two-item (x,y) lists||
+to block||
+center of the stage||
+stop block||
+touching block||
+video block||
+snap option||
+neg option||
+of block
+(operators)||
+length of text block||
+negation operator||
+set background block||
+when I am block||
+when I am stopped script||
+broadcast block||
+when I receive block||
+set pen block||
+ask and wait block||
+of block (sensing)||
+Libraries… option||
+list library||
+lightning bolt symbol||
+remove duplicates from block||
+sort block||
+assoc block||
+for each item block||
+# variable||
+multimap block||
+sentence block||
+sentence➔list
+block||
+iteration library||
+catch block||
+throw block||
+if do and pause all block||
+ignore block||
+cascade blocks||
+compose block||
+repeat blocks||
+for
+block||
+stream library||
+in front of stream block||
+item 1
+of stream block||
+all but first of stream
+block||
+map over stream block||
+show stream block||
+Stream block||
+sieve block||
+Stream with numbers from block||
+sentence library||
+all but first blocks||
+Logo tradition||
+letter
+(1) of (world) block||
+visual
+representation of a sentence||
+list ➔ sentence block||
+printable block||
+pixels library||
+snap block||
+bar charts library||
+bar chart
+block||
+plot bar chart block||
+conditional
+library:multiple-branch||
+cases block||
+cond in Lisp||
+switch in C||
+else if block||
+else block||
+variadic library||
+sum block||
+all of block||
+any of block||
+colors library||
+set pen block||
+HSL color||
+fair hue||
+X11/W3C color names||
+color from block||
+from color block||
+mix colors block||
+set pen block||
+color numbers||
+crayons||
+transparency||
+set pen to crayon block||
+crayon library||
+catch errors library||
+safely try block||
+error block||
+text costume library||
+costume from text block||
+costume with background block||
+speech synthesis library||
+speak block||
+parallelization library||
+do in parallel block||
+variables library||
+does var exist block||
+getter/setter library||
+setting
+block||
+set flag block||
+set value block||
+infinite precision
+integer library||
+BIGNUMS block||
+Scheme number block||
+! block||
+factorial ||
+block with no name||
+string processing library||
+case-independent comparisons block||
+multiline block||
+animation library||
+easing function||
+easing block||
+animate block||
+serial-ports library||
+frequency
+distribution analysis library||
+histogram||
+sound manipulation library||
+plot sound block||
+play block||
+Hz for block||
+web services library||
+url
+block||
+current location
+block||
+listify
+block||
+value at key block||
+key\\value\\ block||
+database library||
+map library||
+APL library||
+list comprehension library||
+bitwise library||
+MQTT library||
+Signada library||
+menus library||
+SciSnap! library||
+TuneScope library||
+user interface elements||
+Scratch||
+layout, window||
+ Snap! program||
+script||
+block||
+palette||
+scripting area||
+flag, green||
+tool bar||
+block:hat||
+block:command||
+command block||
+sprite||
+stage||
+costume||
+stack of blocks||
+input||
+repeat block||
+block:C-shaped||
+C-shaped block||
+Control palette||
+new sprite button||
+sprite corral||
+parallelism||
+stop sign||
+costume||
+Costumes
+tab||
+wardrobe||
+Alonzo||
+Church, Alonzo||
+procedures as data||
+Scratch||
+Turtle costume||
+jukebox||
+play sound block||
+playing sounds||
+broadcast and wait block||
+text input||
+brown dot||
+Nesting Sprites||
+anchor||
+parts (of nested sprite)||
+sprite nesting||
+synchronous rotation||
+dangling
+rotation||
+block:reporter||
+Reporter
+block||
+halo||
+X position||
+Y position||
+arithmetic||
+zebra coloring||
+expression||
+block:predicate||
+Predicate block||
+hexagonal shape||
+if block||
+repeat until block||
+animation||
+reporter if block||
+Boolean||
+Boole, George||
+procedure||
+Boolean constant||
+for block||
+orange oval||
+variable||
+squiral||
+variable:global||
+global variable||
+Make a variable||
+sprite-local variable||
+Delete a variable||
+variable
+watcher||
+watcher||
+set block||
+For this sprite only||
+location-pin||
+variable:sprite-local||
+interaction||
+global variable||
+variable:script-local||
+script variables block||
+renaming variables||
+variable:transient||
+memory||
+Debugging||
+button:pause||
+hide variable block||
+breakpoint||
+pause all block||
+button:visible stepping||
+visible stepping button||
+slider:stepping speed||
+single
+stepping||
+pen trails
+block||
+pen vectors block||
+write block||
+warp block||
+if else reporter
+block||
+for block||
+index
+variable||
+local variables||
+script
+variables block||
+graphics effect||
+true block||
+false block||
+JavaScript||
+pen down? block||
+at block||
+screen pixel||
+RGBA option||
+is
+\_ a \_ ? block||
+stage blocks||
+type||
+set flag block||
+split block||
+whitespace||
+newline
+character||
+tab character||
+carriage return character||
+CSV format||
+JSON format||
+identical to||
+relabel option||
+max block||
+≤ block||
+numbers from block||
+for each block||
+position block||
+broadcast
+block||
+points as inputs||
+two-item (x,y) lists||
+to block||
+center of the stage||
+stop block||
+touching block||
+video block||
+snap option||
+neg option||
+of block
+(operators)||
+length of text block||
+negation operator||
+set background block||
+when I am block||
+when I am stopped script||
+broadcast block||
+when I receive block||
+set pen block||
+ask and wait block||
+of block (sensing)||
+Libraries… option||
+list library||
+lightning bolt symbol||
+remove duplicates from block||
+sort block||
+assoc block||
+for each item block||
+# variable||
+multimap block||
+sentence block||
+sentence➔list
+block||
+iteration library||
+catch block||
+throw block||
+if do and pause all block||
+ignore block||
+cascade blocks||
+compose block||
+repeat blocks||
+for
+block||
+stream library||
+in front of stream block||
+item 1
+of stream block||
+all but first of stream
+block||
+map over stream block||
+show stream block||
+Stream block||
+sieve block||
+Stream with numbers from block||
+sentence library||
+all but first blocks||
+Logo tradition||
+letter
+(1) of (world) block||
+visual
+representation of a sentence||
+list ➔ sentence block||
+printable block||
+pixels library||
+snap block||
+bar charts library||
+bar chart
+block||
+plot bar chart block||
+conditional
+library:multiple-branch||
+cases block||
+cond in Lisp||
+switch in C||
+else if block||
+else block||
+variadic library||
+sum block||
+all of block||
+any of block||
+colors library||
+set pen block||
+HSL color||
+fair hue||
+X11/W3C color names||
+color from block||
+from color block||
+mix colors block||
+set pen block||
+color numbers||
+crayons||
+transparency||
+set pen to crayon block||
+crayon library||
+catch errors library||
+safely try block||
+error block||
+text costume library||
+costume from text block||
+costume with background block||
+speech synthesis library||
+speak block||
+parallelization library||
+do in parallel block||
+variables library||
+does var exist block||
+getter/setter library||
+setting
+block||
+set flag block||
+set value block||
+infinite precision
+integer library||
+BIGNUMS block||
+Scheme number block||
+! block||
+factorial ||
+block with no name||
+string processing library||
+case-independent comparisons block||
+multiline block||
+animation library||
+easing function||
+easing block||
+animate block||
+serial-ports library||
+frequency
+distribution analysis library||
+histogram||
+sound manipulation library||
+plot sound block||
+play block||
+Hz for block||
+web services library||
+url
+block||
+current location
+block||
+listify
+block||
+value at key block||
+key\\value\\ block||
+database library||
+map library||
+APL library||
+list comprehension library||
+bitwise library||
+MQTT library||
+Signada library||
+menus library||
+SciSnap! library||
+TuneScope library||
+user interface elements||

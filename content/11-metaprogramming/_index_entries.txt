@@ -334,3 +334,19 @@ of block
 (sensing)||
 user interface elements||
 user interface elements||
+definition of block||
+split by blocks block||
+my blocks block||
+my categories block||
+custom? of block block||
+join block||
+define block||
+block label||
+set \_ of block \_ to \_ block||
+definition (of block)||
+recursive procedure using define||
+macros||
+of block
+(sensing)||
+user interface elements||
+user interface elements||

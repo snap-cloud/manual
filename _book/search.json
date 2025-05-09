@@ -18,5 +18,27 @@
     "crumbs": [
       "Snap! Reference Manual"
     ]
+  },
+  {
+    "objectID": "content/definition-of-blocks/index.html",
+    "href": "content/definition-of-blocks/index.html",
+    "title": "Appendix E — Definitions of Each Block in Snap!",
+    "section": "",
+    "text": "Motion",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>E</span>  <span class='chapter-title'>Definitions of Each Block in Snap**!**</span>"
+    ]
+  },
+  {
+    "objectID": "content/definition-of-blocks/index.html#motion",
+    "href": "content/definition-of-blocks/index.html#motion",
+    "title": "Appendix E — Definitions of Each Block in Snap!",
+    "section": "",
+    "text": "move _ blocks\n\nDefinition\n\nMoves a sprite a set number of steps (one coordinate) in whichever direction the sprite is facing\n\n\nExamples\nIn the example below, the sprite will draw a square shape.\n\n\n\nmove-steps-ex1.png\n\n\n\n\n\nturn $clockwise _ degrees\nTurns the sprite a specified degree of angle in the clockwise direction",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>E</span>  <span class='chapter-title'>Definitions of Each Block in Snap**!**</span>"
+    ]
   }
 ]

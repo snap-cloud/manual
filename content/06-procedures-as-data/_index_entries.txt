@@ -1138,3 +1138,60 @@ Boolean (unevaluated)
 type||
 C-shaped slot||
 user interface elements||
+for
+block||
+run block||
+call block ||
+ﬁrst class procedures||
+map block||
+with inputs||
+empty input slots,
+filling||
+ring, gray||
+ringify||
+unringify||
+variables in ring slots||
+higher order procedure||
+procedure||
+repeat block||
+C-shaped block||
+C programming
+language||
+Java programming language||
+run block||
+call block ||
+empty input slots, filling||
+ring, gray||
+recursive call||
+input list||
+variable-input slot||
+halo:red||
+arrowheads||
+red halo||
+input
+list||
+input name||
+name, input||
+#1||
+formal parameters||
+crossproduct||
+nested calls||
+higher order function||
+empty input slots,
+filling||
+list of procedures||
+if else block ||
+recursive operator||
+factorial||
+constant functions||
+id block||
+identity function||
+special form||
+Any (unevaluated) type||
+unevaluated type||
+Procedure type||
+sophistication||
+Boolean (unevaluated)
+type||
+C-shaped slot||
+user interface elements||

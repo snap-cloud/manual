@@ -85,6 +85,7 @@ book:
     - content/14-appendix-b-apl-features/index.md
     - references.qmd
     - content/index-list.qmd
+    - content/definition-of-blocks/index.md
 
 
 bibliography: references.bib

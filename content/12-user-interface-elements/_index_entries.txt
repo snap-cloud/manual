@@ -28794,3 +28794,316 @@ user interface elements||
 user interface elements||
 user interface elements||
 user interface elements||
+user interface elements||
+tool bar features||
+shift-clicking||
+secrets||
+Snap! logo menu||
+About option||
+license||
+AGPL||
+Reference manual option||
+Snap! website option||
+snap.berkeley.edu||
+Download source option||
+source files for Snap!||
+file
+icon menu||
+Project notes option||
+New option||
+shortcuts:keyboard||
+Open…
+option||
+Cloud button||
+Examples button||
+search
+bar||
+ice cream||
+Save option||
+Save as… option||
+Import… option||
+Export project… option||
+Export project… option||
+Computer Science Principles||
+Export blocks… option||
+block library||
+Unused blocks… option||
+Hide blocks… option||
+New category… option||
+Remove a category… option||
+scenes||
+Scenes… option||
+New scene option||
+Add scene… option||
+Libraries… option||
+Costumes… option||
+Backgrounds… option||
+bitmap||
+vector||
+Sounds… option||
+Undelete sprites… option||
+cloud
+icon||
+Login… option||
+Signup… option||
+Reset Password…
+option||
+Open in
+Community Site option||
+Logout option||
+Change password…
+option||
+settings icon||
+Language… option||
+translation||
+Zoom blocks... option||
+Fade blocks… option||
+Stage size… option||
+JavaScript extensions option||
+JavaScript
+function block||
+Extension blocks option||
+Input
+sliders option||
+Execute on slider change option||
+Turbo mode option||
+glide block||
+visible stepping option||
+Long form input dialog
+option||
+Plain prototype labels option||
+Clicking sound option||
+Flat design option||
+Thread safe scripts option||
+flat line ends option||
+codification support option||
+text-based language||
+map to code block||
+Single palette option||
+Parsons
+problems||
+Show
+categories option||
+Show buttons option||
+HSL pen color model option||
+lightness option||
+pen block||
+Disable click-to-run option||
+footprint button||
+visible stepping||
+Stage resizing buttons||
+shrink/grow button||
+presentation
+mode button||
+project control buttons||
+green flag button||
+pause
+button||
+pause all block||
+breakpoint||
+debugging||
+stop
+button||
+stop all
+block||
+palette area||
+search button||
+Make a block
+button||
+context
+menus for palette blocks||
+context
+menu||
+help… option||
+help… option for custom
+block||
+delete block definition…
+option||
+duplicate block
+definition… option||
+export block definition…
+option||
+Undefined! blocks||
+edit… option||
+context menu for the palette background||
+find blocks… option||
+hide blocks
+option||
+show primitives option||
+Modrow, Eckart||
+SciSnap!||
+scripting area||
+current sprite||
+thumbnail||
+sprite appearance and behavior
+controls||
+rotation buttons||
+name box||
+draggable checkbox||
+clicking on a script||
+green halo||
+halo||
+warp block||
+red halo||
+undo button||
+keyboard editing button||
+primitive block within a script||
+help… option||
+relabel… option||
+compile menu option||
+lightning bolt symbol||
+duplicate option||
+block picture option||
+extract option||
+shift-click on block||
+delete option||
+add comment option||
+script pic… option||
+picture of script||
+Snap! manual||
+result pic… option||
+picture with speech balloon||
+smart picture||
+ringify option||
+unringify option||
+custom block in a script||
+relabel… option||
+result pic… option||
+broadcast and wait block||
+receivers… option||
+senders… option||
+scripting area background context menu||
+undrop option||
+redrop option||
+clean up option||
+add comment option||
+comment box||
+scripts pic… option||
+make a block… option||
+shortcut||
+Costumes
+tab||
+turtle costume||
+paint brush icon||
+Paint Editor||
+camera icon||
+HTTPS||
+turtle’s rotation point||
+tip option||
+middle option||
+edit option||
+rename option||
+duplicate option||
+delete option||
+get blocks option||
+export option||
+get
+blocks option||
+Paint Editor window||
+paintbrush tool||
+rectangle tool||
+ellipse tool||
+eraser tool||
+rotation point tool||
+line drawing tool||
+solid
+rectangle tool||
+solid ellipse tool||
+floodfill tool,||
+eyedropper tool||
+color palette||
+undo button||
+clear
+button||
+Cancel button||
+ellipse tool||
+eyedropper tool||
+rotation point tool||
+vector editor||
+edge
+color||
+fill color||
+transparent paint||
+controls in the Sounds tab||
+keyboard
+editor||
+Shift-click (keyboard editor)||
+shift-enter (keyboard editor)||
+escape key (keyboard editor)||
+tab key (keyboard
+editor)||
+Shift-tab (keyboard editor)||
+up
+arrow (keyboard editor)||
+down arrow (keyboard
+editor)||
+left arrow (keyboard
+editor)||
+right arrow (keyboard editor)||
+shift-arrow keys (keyboard editor)||
+backspace key (keyboard editor)||
+focus (keyboard editor)||
+enter key (keyboard editor)||
+space key (keyboard editor)||
+control-shift-enter (keyboard editor)||
+controls on the stage||
+draggable checkbox||
+duplicate option||
+delete option||
+edit option||
+move option||
+pivot option||
+edit option||
+temporary clone||
+export option||
+normal option||
+large option||
+slider option||
+slider
+min… option||
+slider max… option||
+import… option||
+.csv file||
+.json file||
+raw data… option||
+export… option||
+.txt file||
+blockify option||
+edit option||
+show all option||
+pic… option||
+pen trails option||
+svg…
+option||
+sprite corral||
+sprite creation buttons||
+shortcut||
+show
+option||
+parent… option||
+release option||
+permanent clone||
+export… option||
+pic… option||
+scenes||
+preloading a project||
+starting Snap!||
+open (startup option)||
+run (startup option)||
+cloud (startup option)||
+present (startup option)||
+dl (startup
+option)||
+editMode (startup option)||
+noRun (startup option)||
+hideControls (startup option)||
+lang= (startup option)||
+noExitWarning (startup option)||
+mirror sites||
+bjc.edc.org||
+cs10.org||
+user interface elements||
+user interface elements||
+user interface elements||
+user interface elements||
+user interface elements||
