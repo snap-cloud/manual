@@ -1,0 +1,30 @@
+---
+readable_name: "for _ = _ to _ _"
+block_description: Complete Me
+label: "for _ = _ to _ _"
+block_spec: "for %upvar = %n to %n %cla"
+help_screen: "doFor.png"
+selector: "doFor"
+type: command
+category: control
+arguments:
+  - name: distance
+    type: number
+    default: 10
+    description: The distance to move forward
+returns: None
+exmaple_projects:
+  - title: Example Project 1
+    url: https://example.com/project1
+  - title: Example Project 1
+    url: https://example.com/project1
+example_images:
+  - image: move_forward.png
+    description: Move forward by 10 steps
+  - image: move_forward.png
+    description: Move forward by 10 steps
+---
+
+# for _ = _ to _ _ {.unnumbered}
+
+{{< include ../_block.qmd >}}

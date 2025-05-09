@@ -1,0 +1,30 @@
+---
+readable_name: "insert _ at _ of _"
+block_description: Complete Me
+label: "insert _ at _ of _"
+block_spec: "insert %s at %idx of %l"
+help_screen: "doInsertInList.png"
+selector: "doInsertInList"
+type: command
+category: lists
+arguments:
+  - name: distance
+    type: number
+    default: 10
+    description: The distance to move forward
+returns: None
+exmaple_projects:
+  - title: Example Project 1
+    url: https://example.com/project1
+  - title: Example Project 1
+    url: https://example.com/project1
+example_images:
+  - image: move_forward.png
+    description: Move forward by 10 steps
+  - image: move_forward.png
+    description: Move forward by 10 steps
+---
+
+# insert _ at _ of _ {.unnumbered}
+
+{{< include ../_block.qmd >}}

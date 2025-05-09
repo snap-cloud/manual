@@ -1,0 +1,30 @@
+---
+readable_name: "move _ steps"
+block_description: Complete Me
+label: "move _ steps"
+block_spec: "move %n steps"
+help_screen: "forward.png"
+selector: "forward"
+type: command
+category: motion
+arguments:
+  - name: distance
+    type: number
+    default: 10
+    description: The distance to move forward
+returns: None
+exmaple_projects:
+  - title: Example Project 1
+    url: https://example.com/project1
+  - title: Example Project 1
+    url: https://example.com/project1
+example_images:
+  - image: move_forward.png
+    description: Move forward by 10 steps
+  - image: move_forward.png
+    description: Move forward by 10 steps
+---
+
+# move _ steps {.unnumbered}
+
+{{< include ../_block.qmd >}}

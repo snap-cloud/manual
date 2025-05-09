@@ -1,0 +1,9 @@
+{{< meta block_description >}}
+
+![The "{{< meta readable_name >}}" block](/blocks/images/block_{{< meta selector >}}.png)
+
+![help screen for the block "{{< meta readable_name >}}"](../help/{{< meta help_screen >}})
+
+## Example Images
+
+## Example Projects

@@ -1,0 +1,30 @@
+---
+readable_name: "color _ is touching _ ?"
+block_description: Complete Me
+label: "color _ is touching _ ?"
+block_spec: "color %clr is touching %clr ?"
+help_screen: "reportColorIsTouchingColor.png"
+selector: "reportColorIsTouchingColor"
+type: predicate
+category: sensing
+arguments:
+  - name: distance
+    type: number
+    default: 10
+    description: The distance to move forward
+returns: None
+exmaple_projects:
+  - title: Example Project 1
+    url: https://example.com/project1
+  - title: Example Project 1
+    url: https://example.com/project1
+example_images:
+  - image: move_forward.png
+    description: Move forward by 10 steps
+  - image: move_forward.png
+    description: Move forward by 10 steps
+---
+
+# color _ is touching _ ? {.unnumbered}
+
+{{< include ../_block.qmd >}}

@@ -19,5 +19,5 @@
     - [Appendix A. Snap! color library](content/13-appendix-a-snap-color-library/index.md)
     - [Appendix B. APL Features](content/14-appendix-b-apl-features/index.md)
 - [Index](content/index-list.qmd)
-- [Definition of Block](content/definition-of-blocks.md)
+
 \index{home}

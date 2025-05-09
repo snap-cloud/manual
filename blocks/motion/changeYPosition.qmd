@@ -1,0 +1,30 @@
+---
+readable_name: "change y by _"
+block_description: Complete Me
+label: "change y by _"
+block_spec: "change y by %n"
+help_screen: "changeYPosition.png"
+selector: "changeYPosition"
+type: command
+category: motion
+arguments:
+  - name: distance
+    type: number
+    default: 10
+    description: The distance to move forward
+returns: None
+exmaple_projects:
+  - title: Example Project 1
+    url: https://example.com/project1
+  - title: Example Project 1
+    url: https://example.com/project1
+example_images:
+  - image: move_forward.png
+    description: Move forward by 10 steps
+  - image: move_forward.png
+    description: Move forward by 10 steps
+---
+
+# change y by _ {.unnumbered}
+
+{{< include ../_block.qmd >}}

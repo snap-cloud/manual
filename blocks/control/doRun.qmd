@@ -1,0 +1,30 @@
+---
+readable_name: "run _ _"
+block_description: Complete Me
+label: "run _ _"
+block_spec: "run %cmdRing %inputs"
+help_screen: "doRun.png"
+selector: "doRun"
+type: command
+category: control
+arguments:
+  - name: distance
+    type: number
+    default: 10
+    description: The distance to move forward
+returns: None
+exmaple_projects:
+  - title: Example Project 1
+    url: https://example.com/project1
+  - title: Example Project 1
+    url: https://example.com/project1
+example_images:
+  - image: move_forward.png
+    description: Move forward by 10 steps
+  - image: move_forward.png
+    description: Move forward by 10 steps
+---
+
+# run _ _ {.unnumbered}
+
+{{< include ../_block.qmd >}}

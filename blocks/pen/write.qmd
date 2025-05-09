@@ -1,0 +1,30 @@
+---
+readable_name: "write _ size _"
+block_description: Complete Me
+label: "write _ size _"
+block_spec: "write %s size %n"
+help_screen: "write.png"
+selector: "write"
+type: command
+category: pen
+arguments:
+  - name: distance
+    type: number
+    default: 10
+    description: The distance to move forward
+returns: None
+exmaple_projects:
+  - title: Example Project 1
+    url: https://example.com/project1
+  - title: Example Project 1
+    url: https://example.com/project1
+example_images:
+  - image: move_forward.png
+    description: Move forward by 10 steps
+  - image: move_forward.png
+    description: Move forward by 10 steps
+---
+
+# write _ size _ {.unnumbered}
+
+{{< include ../_block.qmd >}}

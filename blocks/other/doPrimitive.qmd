@@ -1,0 +1,30 @@
+---
+readable_name: "_ primitive _"
+block_description: Complete Me
+label: "_ primitive _"
+block_spec: "%bool primitive %prim"
+help_screen: "doPrimitive.png"
+selector: "doPrimitive"
+type: command
+category: other
+arguments:
+  - name: distance
+    type: number
+    default: 10
+    description: The distance to move forward
+returns: None
+exmaple_projects:
+  - title: Example Project 1
+    url: https://example.com/project1
+  - title: Example Project 1
+    url: https://example.com/project1
+example_images:
+  - image: move_forward.png
+    description: Move forward by 10 steps
+  - image: move_forward.png
+    description: Move forward by 10 steps
+---
+
+# _ primitive _ {.unnumbered}
+
+{{< include ../_block.qmd >}}

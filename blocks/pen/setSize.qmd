@@ -1,0 +1,30 @@
+---
+readable_name: "set pen size to _"
+block_description: Complete Me
+label: "set pen size to _"
+block_spec: "set pen size to %n"
+help_screen: "setSize.png"
+selector: "setSize"
+type: command
+category: pen
+arguments:
+  - name: distance
+    type: number
+    default: 10
+    description: The distance to move forward
+returns: None
+exmaple_projects:
+  - title: Example Project 1
+    url: https://example.com/project1
+  - title: Example Project 1
+    url: https://example.com/project1
+example_images:
+  - image: move_forward.png
+    description: Move forward by 10 steps
+  - image: move_forward.png
+    description: Move forward by 10 steps
+---
+
+# set pen size to _ {.unnumbered}
+
+{{< include ../_block.qmd >}}

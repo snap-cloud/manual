@@ -4,6 +4,7 @@ require 'fileutils'
 dest = 'blocks'
 TEMPLATE = <<~TEMPLATE
 ---
+readable_name: "{{ label }}"
 block_description: Complete Me
 label: "{{ label }}"
 block_spec: "{{ block_spec }}"
