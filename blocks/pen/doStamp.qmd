@@ -1,5 +1,4 @@
 ---
-readable_name: "stamp"
 block_description: Complete Me
 label: "stamp"
 block_spec: "stamp"
@@ -25,6 +24,6 @@ example_images:
     description: Move forward by 10 steps
 ---
 
-# stamp {.unnumbered}
+# Stamp {.unnumbered}
 
 {{< include ../_block.qmd >}}

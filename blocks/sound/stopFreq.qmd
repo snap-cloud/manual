@@ -1,5 +1,4 @@
 ---
-readable_name: "stop frequency"
 block_description: Complete Me
 label: "stop frequency"
 block_spec: "stop frequency"
@@ -25,6 +24,6 @@ example_images:
     description: Move forward by 10 steps
 ---
 
-# stop frequency {.unnumbered}
+# Stop frequency {.unnumbered}
 
 {{< include ../_block.qmd >}}

@@ -1,5 +1,4 @@
 ---
-readable_name: "show variable _"
 block_description: Complete Me
 label: "show variable _"
 block_spec: "show variable %var"
@@ -25,6 +24,6 @@ example_images:
     description: Move forward by 10 steps
 ---
 
-# show variable _ {.unnumbered}
+# Show variable  {.unnumbered}
 
 {{< include ../_block.qmd >}}

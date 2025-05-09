@@ -1,5 +1,4 @@
 ---
-readable_name: "touching _ ?"
 block_description: Complete Me
 label: "touching _ ?"
 block_spec: "touching %col ?"
@@ -25,6 +24,6 @@ example_images:
     description: Move forward by 10 steps
 ---
 
-# touching _ ? {.unnumbered}
+# Touching  ? {.unnumbered}
 
 {{< include ../_block.qmd >}}

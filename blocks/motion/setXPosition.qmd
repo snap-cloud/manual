@@ -1,5 +1,4 @@
 ---
-readable_name: "set x to _"
 block_description: Complete Me
 label: "set x to _"
 block_spec: "set x to %n"
@@ -25,6 +24,6 @@ example_images:
     description: Move forward by 10 steps
 ---
 
-# set x to _ {.unnumbered}
+# Set x to  {.unnumbered}
 
 {{< include ../_block.qmd >}}

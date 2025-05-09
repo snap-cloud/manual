@@ -1,5 +1,4 @@
 ---
-readable_name: "split _ by _"
 block_description: Complete Me
 label: "split _ by _"
 block_spec: "split %s by %delim"
@@ -25,6 +24,6 @@ example_images:
     description: Move forward by 10 steps
 ---
 
-# split _ by _ {.unnumbered}
+# Split  by  {.unnumbered}
 
 {{< include ../_block.qmd >}}

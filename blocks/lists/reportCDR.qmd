@@ -1,5 +1,4 @@
 ---
-readable_name: "all but first of _"
 block_description: Complete Me
 label: "all but first of _"
 block_spec: "all but first of %l"
@@ -25,6 +24,6 @@ example_images:
     description: Move forward by 10 steps
 ---
 
-# all but first of _ {.unnumbered}
+# All but first of  {.unnumbered}
 
 {{< include ../_block.qmd >}}

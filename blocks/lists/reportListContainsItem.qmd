@@ -1,5 +1,4 @@
 ---
-readable_name: "_ contains _"
 block_description: Complete Me
 label: "_ contains _"
 block_spec: "%l contains %s"
@@ -25,6 +24,6 @@ example_images:
     description: Move forward by 10 steps
 ---
 
-# _ contains _ {.unnumbered}
+#  contains  {.unnumbered}
 
 {{< include ../_block.qmd >}}

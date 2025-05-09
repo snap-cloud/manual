@@ -4,7 +4,6 @@ require 'fileutils'
 dest = 'blocks'
 TEMPLATE = <<~TEMPLATE
 ---
-readable_name: "{{ label }}"
 block_description: Complete Me
 label: "{{ label }}"
 block_spec: "{{ block_spec }}"
@@ -30,14 +29,20 @@ example_images:
     description: Move forward by 10 steps
 ---
 
-# {{ label }} {.unnumbered}
+# {{ title }} {.unnumbered}
 
 {{< include ../_block.qmd >}}
 TEMPLATE
 
+def title(label)
+  # Remove ":" from the label which seems to cause issues with YAML
+  label.gsub(':', '').gsub('_', '').capitalize
+end
+
 def block_template(block)
   template = TEMPLATE.dup
   template.gsub!('{{ label }}', block['label'])
+  template.gsub!('{{ title }}', title(block['label']))
   template.gsub!('{{ selector }}', block['selector'])
   template.gsub!('{{ type }}', block['type'])
   template.gsub!('{{ category }}', block['category'])

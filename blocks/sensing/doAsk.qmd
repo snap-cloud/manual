@@ -1,5 +1,4 @@
 ---
-readable_name: "ask _ and wait"
 block_description: Complete Me
 label: "ask _ and wait"
 block_spec: "ask %s and wait"
@@ -25,6 +24,6 @@ example_images:
     description: Move forward by 10 steps
 ---
 
-# ask _ and wait {.unnumbered}
+# Ask  and wait {.unnumbered}
 
 {{< include ../_block.qmd >}}

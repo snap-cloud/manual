@@ -1,5 +1,4 @@
 ---
-readable_name: "point in direction _"
 block_description: Complete Me
 label: "point in direction _"
 block_spec: "point in direction %dir"
@@ -25,6 +24,6 @@ example_images:
     description: Move forward by 10 steps
 ---
 
-# point in direction _ {.unnumbered}
+# Point in direction  {.unnumbered}
 
 {{< include ../_block.qmd >}}

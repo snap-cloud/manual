@@ -1,5 +1,4 @@
 ---
-readable_name: "switch to scene _ _"
 block_description: Complete Me
 label: "switch to scene _ _"
 block_spec: "switch to scene %scn %send"
@@ -25,6 +24,6 @@ example_images:
     description: Move forward by 10 steps
 ---
 
-# switch to scene _ _ {.unnumbered}
+# Switch to scene   {.unnumbered}
 
 {{< include ../_block.qmd >}}

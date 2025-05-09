@@ -1,5 +1,4 @@
 ---
-readable_name: "pause all $pause"
 block_description: Complete Me
 label: "pause all $pause"
 block_spec: "pause all $pause"
@@ -25,6 +24,6 @@ example_images:
     description: Move forward by 10 steps
 ---
 
-# pause all $pause {.unnumbered}
+# Pause all $pause {.unnumbered}
 
 {{< include ../_block.qmd >}}

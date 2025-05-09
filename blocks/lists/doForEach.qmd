@@ -1,5 +1,4 @@
 ---
-readable_name: "for each _ in _ _"
 block_description: Complete Me
 label: "for each _ in _ _"
 block_spec: "for each %upvar in %l %cla"
@@ -25,6 +24,6 @@ example_images:
     description: Move forward by 10 steps
 ---
 
-# for each _ in _ _ {.unnumbered}
+# For each  in   {.unnumbered}
 
 {{< include ../_block.qmd >}}

@@ -1,5 +1,4 @@
 ---
-readable_name: "pick random _ to _"
 block_description: Complete Me
 label: "pick random _ to _"
 block_spec: "pick random %ns to %ns"
@@ -25,6 +24,6 @@ example_images:
     description: Move forward by 10 steps
 ---
 
-# pick random _ to _ {.unnumbered}
+# Pick random  to  {.unnumbered}
 
 {{< include ../_block.qmd >}}

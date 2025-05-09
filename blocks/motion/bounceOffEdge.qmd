@@ -1,5 +1,4 @@
 ---
-readable_name: "if on edge, bounce"
 block_description: Complete Me
 label: "if on edge, bounce"
 block_spec: "if on edge, bounce"
@@ -25,6 +24,6 @@ example_images:
     description: Move forward by 10 steps
 ---
 
-# if on edge, bounce {.unnumbered}
+# If on edge, bounce {.unnumbered}
 
 {{< include ../_block.qmd >}}

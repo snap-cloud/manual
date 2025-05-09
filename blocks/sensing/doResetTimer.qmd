@@ -1,5 +1,4 @@
 ---
-readable_name: "reset timer"
 block_description: Complete Me
 label: "reset timer"
 block_spec: "reset timer"
@@ -25,6 +24,6 @@ example_images:
     description: Move forward by 10 steps
 ---
 
-# reset timer {.unnumbered}
+# Reset timer {.unnumbered}
 
 {{< include ../_block.qmd >}}

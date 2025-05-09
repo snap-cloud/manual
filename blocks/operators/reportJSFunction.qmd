@@ -1,5 +1,4 @@
 ---
-readable_name: "JavaScript function ( _ ) { _ }"
 block_description: Complete Me
 label: "JavaScript function ( _ ) { _ }"
 block_spec: "JavaScript function ( %mult%s ) { %code }"
@@ -25,6 +24,6 @@ example_images:
     description: Move forward by 10 steps
 ---
 
-# JavaScript function ( _ ) { _ } {.unnumbered}
+# Javascript function (  ) {  } {.unnumbered}
 
 {{< include ../_block.qmd >}}

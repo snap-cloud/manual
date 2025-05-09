@@ -1,5 +1,4 @@
 ---
-readable_name: "_ in front of _"
 block_description: Complete Me
 label: "_ in front of _"
 block_spec: "%s in front of %l"
@@ -25,6 +24,6 @@ example_images:
     description: Move forward by 10 steps
 ---
 
-# _ in front of _ {.unnumbered}
+#  in front of  {.unnumbered}
 
 {{< include ../_block.qmd >}}

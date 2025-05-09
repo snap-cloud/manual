@@ -1,5 +1,4 @@
 ---
-readable_name: "stretch _ x: _ y: _ %"
 block_description: Complete Me
 label: "stretch _ x: _ y: _ %"
 block_spec: "stretch %cst x: %n y: %n %"
@@ -25,6 +24,6 @@ example_images:
     description: Move forward by 10 steps
 ---
 
-# stretch _ x: _ y: _ % {.unnumbered}
+# Stretch  x  y  % {.unnumbered}
 
 {{< include ../_block.qmd >}}

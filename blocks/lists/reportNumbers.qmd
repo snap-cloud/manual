@@ -1,5 +1,4 @@
 ---
-readable_name: "numbers from _ to _"
 block_description: Complete Me
 label: "numbers from _ to _"
 block_spec: "numbers from %n to %n"
@@ -25,6 +24,6 @@ example_images:
     description: Move forward by 10 steps
 ---
 
-# numbers from _ to _ {.unnumbered}
+# Numbers from  to  {.unnumbered}
 
 {{< include ../_block.qmd >}}

@@ -1,5 +1,4 @@
 ---
-readable_name: "index of _ in _"
 block_description: Complete Me
 label: "index of _ in _"
 block_spec: "index of %s in %l"
@@ -25,6 +24,6 @@ example_images:
     description: Move forward by 10 steps
 ---
 
-# index of _ in _ {.unnumbered}
+# Index of  in  {.unnumbered}
 
 {{< include ../_block.qmd >}}

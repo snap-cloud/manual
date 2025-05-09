@@ -1,5 +1,4 @@
 ---
-readable_name: "stop _"
 block_description: Complete Me
 label: "stop _"
 block_spec: "stop %stopChoices"
@@ -25,6 +24,6 @@ example_images:
     description: Move forward by 10 steps
 ---
 
-# stop _ {.unnumbered}
+# Stop  {.unnumbered}
 
 {{< include ../_block.qmd >}}

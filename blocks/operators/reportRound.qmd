@@ -1,5 +1,4 @@
 ---
-readable_name: "round _"
 block_description: Complete Me
 label: "round _"
 block_spec: "round %n"
@@ -25,6 +24,6 @@ example_images:
     description: Move forward by 10 steps
 ---
 
-# round _ {.unnumbered}
+# Round  {.unnumbered}
 
 {{< include ../_block.qmd >}}

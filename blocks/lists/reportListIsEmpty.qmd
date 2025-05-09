@@ -1,5 +1,4 @@
 ---
-readable_name: "is _ empty?"
 block_description: Complete Me
 label: "is _ empty?"
 block_spec: "is %l empty?"
@@ -25,6 +24,6 @@ example_images:
     description: Move forward by 10 steps
 ---
 
-# is _ empty? {.unnumbered}
+# Is  empty? {.unnumbered}
 
 {{< include ../_block.qmd >}}

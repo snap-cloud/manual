@@ -1,5 +1,4 @@
 ---
-readable_name: "clear"
 block_description: Complete Me
 label: "clear"
 block_spec: "clear"
@@ -25,6 +24,6 @@ example_images:
     description: Move forward by 10 steps
 ---
 
-# clear {.unnumbered}
+# Clear {.unnumbered}
 
 {{< include ../_block.qmd >}}

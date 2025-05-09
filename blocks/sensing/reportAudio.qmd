@@ -1,5 +1,4 @@
 ---
-readable_name: "microphone _"
 block_description: Complete Me
 label: "microphone _"
 block_spec: "microphone %audio"
@@ -25,6 +24,6 @@ example_images:
     description: Move forward by 10 steps
 ---
 
-# microphone _ {.unnumbered}
+# Microphone  {.unnumbered}
 
 {{< include ../_block.qmd >}}

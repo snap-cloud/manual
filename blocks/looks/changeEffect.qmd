@@ -1,5 +1,4 @@
 ---
-readable_name: "change _ effect by _"
 block_description: Complete Me
 label: "change _ effect by _"
 block_spec: "change %eff effect by %n"
@@ -25,6 +24,6 @@ example_images:
     description: Move forward by 10 steps
 ---
 
-# change _ effect by _ {.unnumbered}
+# Change  effect by  {.unnumbered}
 
 {{< include ../_block.qmd >}}

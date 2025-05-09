@@ -1,5 +1,4 @@
 ---
-readable_name: "mouse position"
 block_description: Complete Me
 label: "mouse position"
 block_spec: "mouse position"
@@ -25,6 +24,6 @@ example_images:
     description: Move forward by 10 steps
 ---
 
-# mouse position {.unnumbered}
+# Mouse position {.unnumbered}
 
 {{< include ../_block.qmd >}}

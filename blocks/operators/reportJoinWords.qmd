@@ -1,5 +1,4 @@
 ---
-readable_name: "join _"
 block_description: Complete Me
 label: "join _"
 block_spec: "join %words"
@@ -25,6 +24,6 @@ example_images:
     description: Move forward by 10 steps
 ---
 
-# join _ {.unnumbered}
+# Join  {.unnumbered}
 
 {{< include ../_block.qmd >}}

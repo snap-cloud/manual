@@ -1,5 +1,4 @@
 ---
-readable_name: "switch to costume _"
 block_description: Complete Me
 label: "switch to costume _"
 block_spec: "switch to costume %cst"
@@ -25,6 +24,6 @@ example_images:
     description: Move forward by 10 steps
 ---
 
-# switch to costume _ {.unnumbered}
+# Switch to costume  {.unnumbered}
 
 {{< include ../_block.qmd >}}

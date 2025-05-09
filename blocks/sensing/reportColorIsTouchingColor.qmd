@@ -1,5 +1,4 @@
 ---
-readable_name: "color _ is touching _ ?"
 block_description: Complete Me
 label: "color _ is touching _ ?"
 block_spec: "color %clr is touching %clr ?"
@@ -25,6 +24,6 @@ example_images:
     description: Move forward by 10 steps
 ---
 
-# color _ is touching _ ? {.unnumbered}
+# Color  is touching  ? {.unnumbered}
 
 {{< include ../_block.qmd >}}

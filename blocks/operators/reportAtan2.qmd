@@ -1,5 +1,4 @@
 ---
-readable_name: "atan2 _ ÷ _"
 block_description: Complete Me
 label: "atan2 _ ÷ _"
 block_spec: "atan2 %n ÷ %n"
@@ -25,6 +24,6 @@ example_images:
     description: Move forward by 10 steps
 ---
 
-# atan2 _ ÷ _ {.unnumbered}
+# Atan2  ÷  {.unnumbered}
 
 {{< include ../_block.qmd >}}

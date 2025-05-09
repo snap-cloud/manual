@@ -1,5 +1,4 @@
 ---
-readable_name: "video _ on _"
 block_description: Complete Me
 label: "video _ on _"
 block_spec: "video %vid on %self"
@@ -25,6 +24,6 @@ example_images:
     description: Move forward by 10 steps
 ---
 
-# video _ on _ {.unnumbered}
+# Video  on  {.unnumbered}
 
 {{< include ../_block.qmd >}}

@@ -1,5 +1,4 @@
 ---
-readable_name: "if _ then _ else _"
 block_description: Complete Me
 label: "if _ then _ else _"
 block_spec: "if %b then %anyUE else %anyUE"
@@ -25,6 +24,6 @@ example_images:
     description: Move forward by 10 steps
 ---
 
-# if _ then _ else _ {.unnumbered}
+# If  then  else  {.unnumbered}
 
 {{< include ../_block.qmd >}}

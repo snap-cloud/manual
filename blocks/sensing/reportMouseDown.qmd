@@ -1,5 +1,4 @@
 ---
-readable_name: "mouse down?"
 block_description: Complete Me
 label: "mouse down?"
 block_spec: "mouse down?"
@@ -25,6 +24,6 @@ example_images:
     description: Move forward by 10 steps
 ---
 
-# mouse down? {.unnumbered}
+# Mouse down? {.unnumbered}
 
 {{< include ../_block.qmd >}}

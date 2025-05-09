@@ -1,5 +1,4 @@
 ---
-readable_name: "play frequency _ Hz"
 block_description: Complete Me
 label: "play frequency _ Hz"
 block_spec: "play frequency %n Hz"
@@ -25,6 +24,6 @@ example_images:
     description: Move forward by 10 steps
 ---
 
-# play frequency _ Hz {.unnumbered}
+# Play frequency  hz {.unnumbered}
 
 {{< include ../_block.qmd >}}

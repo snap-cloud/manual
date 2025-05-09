@@ -1,5 +1,4 @@
 ---
-readable_name: "_ _"
 block_description: Complete Me
 label: "_ _"
 block_spec: "%rr %ringparms"
@@ -25,6 +24,6 @@ example_images:
     description: Move forward by 10 steps
 ---
 
-# _ _ {.unnumbered}
+# Reporter Ring {.unnumbered}
 
 {{< include ../_block.qmd >}}

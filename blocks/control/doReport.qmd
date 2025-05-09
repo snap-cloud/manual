@@ -1,5 +1,4 @@
 ---
-readable_name: "report _"
 block_description: Complete Me
 label: "report _"
 block_spec: "report %s"
@@ -25,6 +24,6 @@ example_images:
     description: Move forward by 10 steps
 ---
 
-# report _ {.unnumbered}
+# Report  {.unnumbered}
 
 {{< include ../_block.qmd >}}

@@ -1,5 +1,4 @@
 ---
-readable_name: "find first item _ in _"
 block_description: Complete Me
 label: "find first item _ in _"
 block_spec: "find first item %predRing in %l"
@@ -25,6 +24,6 @@ example_images:
     description: Move forward by 10 steps
 ---
 
-# find first item _ in _ {.unnumbered}
+# Find first item  in  {.unnumbered}
 
 {{< include ../_block.qmd >}}

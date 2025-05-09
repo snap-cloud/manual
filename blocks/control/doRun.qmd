@@ -1,5 +1,4 @@
 ---
-readable_name: "run _ _"
 block_description: Complete Me
 label: "run _ _"
 block_spec: "run %cmdRing %inputs"
@@ -25,6 +24,6 @@ example_images:
     description: Move forward by 10 steps
 ---
 
-# run _ _ {.unnumbered}
+# Run   {.unnumbered}
 
 {{< include ../_block.qmd >}}

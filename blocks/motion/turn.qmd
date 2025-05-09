@@ -1,6 +1,5 @@
 ---
-readable_name: "turn $clockwise _ degrees"
-block_description: Complete Me
+block_description: Turns the sprite a specified degree of angle in the clockwise direction
 label: "turn $clockwise _ degrees"
 block_spec: "turn $clockwise %n degrees"
 help_screen: "turn.png"
@@ -25,6 +24,6 @@ example_images:
     description: Move forward by 10 steps
 ---
 
-# turn $clockwise _ degrees {.unnumbered}
+# Turn $clockwise degrees {.unnumbered}
 
 {{< include ../_block.qmd >}}

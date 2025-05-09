@@ -1,5 +1,4 @@
 ---
-readable_name: "call _ _"
 block_description: Complete Me
 label: "call _ _"
 block_spec: "call %repRing %inputs"
@@ -25,6 +24,6 @@ example_images:
     description: Move forward by 10 steps
 ---
 
-# call _ _ {.unnumbered}
+# Call   {.unnumbered}
 
 {{< include ../_block.qmd >}}

@@ -1,5 +1,4 @@
 ---
-readable_name: "inherit _"
 block_description: Complete Me
 label: "inherit _"
 block_spec: "inherit %shd"
@@ -25,6 +24,6 @@ example_images:
     description: Move forward by 10 steps
 ---
 
-# inherit _ {.unnumbered}
+# Inherit  {.unnumbered}
 
 {{< include ../_block.qmd >}}

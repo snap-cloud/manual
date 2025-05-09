@@ -1,5 +1,4 @@
 ---
-readable_name: "clear graphic effects"
 block_description: Complete Me
 label: "clear graphic effects"
 block_spec: "clear graphic effects"
@@ -25,6 +24,6 @@ example_images:
     description: Move forward by 10 steps
 ---
 
-# clear graphic effects {.unnumbered}
+# Clear graphic effects {.unnumbered}
 
 {{< include ../_block.qmd >}}

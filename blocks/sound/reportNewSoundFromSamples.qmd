@@ -1,5 +1,4 @@
 ---
-readable_name: "new sound _ rate _ Hz"
 block_description: Complete Me
 label: "new sound _ rate _ Hz"
 block_spec: "new sound %l rate %rate Hz"
@@ -25,6 +24,6 @@ example_images:
     description: Move forward by 10 steps
 ---
 
-# new sound _ rate _ Hz {.unnumbered}
+# New sound  rate  hz {.unnumbered}
 
 {{< include ../_block.qmd >}}

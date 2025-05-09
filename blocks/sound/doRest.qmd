@@ -1,5 +1,4 @@
 ---
-readable_name: "rest for _ beats"
 block_description: Complete Me
 label: "rest for _ beats"
 block_spec: "rest for %n beats"
@@ -25,6 +24,6 @@ example_images:
     description: Move forward by 10 steps
 ---
 
-# rest for _ beats {.unnumbered}
+# Rest for  beats {.unnumbered}
 
 {{< include ../_block.qmd >}}

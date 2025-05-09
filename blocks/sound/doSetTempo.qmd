@@ -1,5 +1,4 @@
 ---
-readable_name: "set tempo to _ bpm"
 block_description: Complete Me
 label: "set tempo to _ bpm"
 block_spec: "set tempo to %n bpm"
@@ -25,6 +24,6 @@ example_images:
     description: Move forward by 10 steps
 ---
 
-# set tempo to _ bpm {.unnumbered}
+# Set tempo to  bpm {.unnumbered}
 
 {{< include ../_block.qmd >}}

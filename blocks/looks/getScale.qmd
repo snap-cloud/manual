@@ -1,5 +1,4 @@
 ---
-readable_name: "size"
 block_description: Complete Me
 label: "size"
 block_spec: "size"
@@ -25,6 +24,6 @@ example_images:
     description: Move forward by 10 steps
 ---
 
-# size {.unnumbered}
+# Size {.unnumbered}
 
 {{< include ../_block.qmd >}}

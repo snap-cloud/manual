@@ -1,5 +1,4 @@
 ---
-readable_name: "set balance to _"
 block_description: Complete Me
 label: "set balance to _"
 block_spec: "set balance to %n"
@@ -25,6 +24,6 @@ example_images:
     description: Move forward by 10 steps
 ---
 
-# set balance to _ {.unnumbered}
+# Set balance to  {.unnumbered}
 
 {{< include ../_block.qmd >}}

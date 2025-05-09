@@ -1,5 +1,4 @@
 ---
-readable_name: "cut from _"
 block_description: Complete Me
 label: "cut from _"
 block_spec: "cut from %spr"
@@ -25,6 +24,6 @@ example_images:
     description: Move forward by 10 steps
 ---
 
-# cut from _ {.unnumbered}
+# Cut from  {.unnumbered}
 
 {{< include ../_block.qmd >}}

@@ -1,5 +1,4 @@
 ---
-readable_name: "next costume"
 block_description: Complete Me
 label: "next costume"
 block_spec: "next costume"
@@ -25,6 +24,6 @@ example_images:
     description: Move forward by 10 steps
 ---
 
-# next costume {.unnumbered}
+# Next costume {.unnumbered}
 
 {{< include ../_block.qmd >}}

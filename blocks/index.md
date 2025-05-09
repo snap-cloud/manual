@@ -3,19 +3,7 @@ page-layout: full
 margin-width: 1px
 ---
 
-# All Snap<em>!</em> Blocks {.unnumbered}
-
-## Motion
-
-### move _ blocks
-
-Moves a sprite a set number of steps (one coordinate) in whichever direction the sprite is facing
-
-### turn $clockwise _ degrees
-
-Turns the sprite a specified degree of angle in the clockwise direction
-
-##
+# All Snap<em>!</em> Blocks Reference {.unnumbered}
 
 <!-- TODO: These images are missing:
 reportNewCostumeSkewed

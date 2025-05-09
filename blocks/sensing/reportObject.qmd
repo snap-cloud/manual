@@ -1,5 +1,4 @@
 ---
-readable_name: "object _"
 block_description: Complete Me
 label: "object _"
 block_spec: "object %self"
@@ -25,6 +24,6 @@ example_images:
     description: Move forward by 10 steps
 ---
 
-# object _ {.unnumbered}
+# Object  {.unnumbered}
 
 {{< include ../_block.qmd >}}

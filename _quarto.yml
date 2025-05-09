@@ -11,6 +11,7 @@ project:
 bibliography: references.bib
 # Don't number subsections as chapters.
 number-depth: 1
+toc-depth: 1
 appendix-style: none
 
 format:

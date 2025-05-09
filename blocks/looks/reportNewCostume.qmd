@@ -1,5 +1,4 @@
 ---
-readable_name: "new costume _ width _ height _"
 block_description: Complete Me
 label: "new costume _ width _ height _"
 block_spec: "new costume %l width %dim height %dim"
@@ -25,6 +24,6 @@ example_images:
     description: Move forward by 10 steps
 ---
 
-# new costume _ width _ height _ {.unnumbered}
+# New costume  width  height  {.unnumbered}
 
 {{< include ../_block.qmd >}}

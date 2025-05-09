@@ -1,5 +1,4 @@
 ---
-readable_name: "append _"
 block_description: Complete Me
 label: "append _"
 block_spec: "append %lists"
@@ -25,6 +24,6 @@ example_images:
     description: Move forward by 10 steps
 ---
 
-# append _ {.unnumbered}
+# Append  {.unnumbered}
 
 {{< include ../_block.qmd >}}

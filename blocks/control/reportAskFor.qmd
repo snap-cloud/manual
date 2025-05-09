@@ -1,5 +1,4 @@
 ---
-readable_name: "ask _ for _ _"
 block_description: Complete Me
 label: "ask _ for _ _"
 block_spec: "ask %spr for %repRing %inputs"
@@ -25,6 +24,6 @@ example_images:
     description: Move forward by 10 steps
 ---
 
-# ask _ for _ _ {.unnumbered}
+# Ask  for   {.unnumbered}
 
 {{< include ../_block.qmd >}}

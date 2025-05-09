@@ -1,5 +1,4 @@
 ---
-readable_name: "paste on _"
 block_description: Complete Me
 label: "paste on _"
 block_spec: "paste on %spr"
@@ -25,6 +24,6 @@ example_images:
     description: Move forward by 10 steps
 ---
 
-# paste on _ {.unnumbered}
+# Paste on  {.unnumbered}
 
 {{< include ../_block.qmd >}}

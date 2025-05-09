@@ -1,5 +1,4 @@
 ---
-readable_name: "unicode _ as letter"
 block_description: Complete Me
 label: "unicode _ as letter"
 block_spec: "unicode %n as letter"
@@ -25,6 +24,6 @@ example_images:
     description: Move forward by 10 steps
 ---
 
-# unicode _ as letter {.unnumbered}
+# Unicode  as letter {.unnumbered}
 
 {{< include ../_block.qmd >}}

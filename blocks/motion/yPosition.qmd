@@ -1,5 +1,4 @@
 ---
-readable_name: "y position"
 block_description: Complete Me
 label: "y position"
 block_spec: "y position"
@@ -25,6 +24,6 @@ example_images:
     description: Move forward by 10 steps
 ---
 
-# y position {.unnumbered}
+# Y position {.unnumbered}
 
 {{< include ../_block.qmd >}}

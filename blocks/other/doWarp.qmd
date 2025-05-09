@@ -1,5 +1,4 @@
 ---
-readable_name: "warp _"
 block_description: Complete Me
 label: "warp _"
 block_spec: "warp %c"
@@ -25,6 +24,6 @@ example_images:
     description: Move forward by 10 steps
 ---
 
-# warp _ {.unnumbered}
+# Warp {.unnumbered}
 
 {{< include ../_block.qmd >}}

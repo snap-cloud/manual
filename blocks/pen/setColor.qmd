@@ -1,5 +1,4 @@
 ---
-readable_name: "set pen color to _"
 block_description: Complete Me
 label: "set pen color to _"
 block_spec: "set pen color to %clr"
@@ -25,6 +24,6 @@ example_images:
     description: Move forward by 10 steps
 ---
 
-# set pen color to _ {.unnumbered}
+# Set pen color to  {.unnumbered}
 
 {{< include ../_block.qmd >}}

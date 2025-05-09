@@ -1,5 +1,4 @@
 ---
-readable_name: "is _ ?"
 block_description: Complete Me
 label: "is _ ?"
 block_spec: "is %all== ?"
@@ -25,6 +24,6 @@ example_images:
     description: Move forward by 10 steps
 ---
 
-# is _ ? {.unnumbered}
+# Is  ? {.unnumbered}
 
 {{< include ../_block.qmd >}}

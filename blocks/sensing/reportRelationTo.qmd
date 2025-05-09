@@ -1,5 +1,4 @@
 ---
-readable_name: "_ to _"
 block_description: Complete Me
 label: "_ to _"
 block_spec: "%rel to %dst"
@@ -25,6 +24,6 @@ example_images:
     description: Move forward by 10 steps
 ---
 
-# _ to _ {.unnumbered}
+#  to  {.unnumbered}
 
 {{< include ../_block.qmd >}}

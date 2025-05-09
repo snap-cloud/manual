@@ -1,5 +1,4 @@
 ---
-readable_name: "play note _ for _ beats"
 block_description: Complete Me
 label: "play note _ for _ beats"
 block_spec: "play note %note for %n beats"
@@ -25,6 +24,6 @@ example_images:
     description: Move forward by 10 steps
 ---
 
-# play note _ for _ beats {.unnumbered}
+# Play note  for  beats {.unnumbered}
 
 {{< include ../_block.qmd >}}

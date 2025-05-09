@@ -1,5 +1,4 @@
 ---
-readable_name: "volume"
 block_description: Complete Me
 label: "volume"
 block_spec: "volume"
@@ -25,6 +24,6 @@ example_images:
     description: Move forward by 10 steps
 ---
 
-# volume {.unnumbered}
+# Volume {.unnumbered}
 
 {{< include ../_block.qmd >}}

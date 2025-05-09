@@ -1,5 +1,4 @@
 ---
-readable_name: "_ primitive _"
 block_description: Complete Me
 label: "_ primitive _"
 block_spec: "%bool primitive %prim"
@@ -25,6 +24,6 @@ example_images:
     description: Move forward by 10 steps
 ---
 
-# _ primitive _ {.unnumbered}
+#  primitive  {.unnumbered}
 
 {{< include ../_block.qmd >}}

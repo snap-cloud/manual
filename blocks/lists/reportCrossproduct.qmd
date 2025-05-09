@@ -1,5 +1,4 @@
 ---
-readable_name: "combinations _"
 block_description: Complete Me
 label: "combinations _"
 block_spec: "combinations %lists"
@@ -25,6 +24,6 @@ example_images:
     description: Move forward by 10 steps
 ---
 
-# combinations _ {.unnumbered}
+# Combinations  {.unnumbered}
 
 {{< include ../_block.qmd >}}

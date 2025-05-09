@@ -1,5 +1,4 @@
 ---
-readable_name: "change tempo by _"
 block_description: Complete Me
 label: "change tempo by _"
 block_spec: "change tempo by %n"
@@ -25,6 +24,6 @@ example_images:
     description: Move forward by 10 steps
 ---
 
-# change tempo by _ {.unnumbered}
+# Change tempo by  {.unnumbered}
 
 {{< include ../_block.qmd >}}

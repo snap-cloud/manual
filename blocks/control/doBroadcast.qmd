@@ -1,5 +1,4 @@
 ---
-readable_name: "broadcast _ _"
 block_description: Complete Me
 label: "broadcast _ _"
 block_spec: "broadcast %msg %receive"
@@ -25,6 +24,6 @@ example_images:
     description: Move forward by 10 steps
 ---
 
-# broadcast _ _ {.unnumbered}
+# Broadcast   {.unnumbered}
 
 {{< include ../_block.qmd >}}

@@ -1,5 +1,4 @@
 ---
-readable_name: "delete this clone"
 block_description: Complete Me
 label: "delete this clone"
 block_spec: "delete this clone"
@@ -25,6 +24,6 @@ example_images:
     description: Move forward by 10 steps
 ---
 
-# delete this clone {.unnumbered}
+# Delete this clone {.unnumbered}
 
 {{< include ../_block.qmd >}}

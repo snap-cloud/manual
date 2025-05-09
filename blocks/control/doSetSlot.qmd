@@ -1,5 +1,4 @@
 ---
-readable_name: "set slot _ to _"
 block_description: Complete Me
 label: "set slot _ to _"
 block_spec: "set slot %inputSlot to %s"
@@ -25,6 +24,6 @@ example_images:
     description: Move forward by 10 steps
 ---
 
-# set slot _ to _ {.unnumbered}
+# Set slot  to  {.unnumbered}
 
 {{< include ../_block.qmd >}}

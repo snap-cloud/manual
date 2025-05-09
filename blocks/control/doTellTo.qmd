@@ -1,5 +1,4 @@
 ---
-readable_name: "tell _ to _ _"
 block_description: Complete Me
 label: "tell _ to _ _"
 block_spec: "tell %spr to %cmdRing %inputs"
@@ -25,6 +24,6 @@ example_images:
     description: Move forward by 10 steps
 ---
 
-# tell _ to _ _ {.unnumbered}
+# Tell  to   {.unnumbered}
 
 {{< include ../_block.qmd >}}

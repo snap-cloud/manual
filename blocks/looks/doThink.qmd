@@ -1,5 +1,4 @@
 ---
-readable_name: "think _"
 block_description: Complete Me
 label: "think _"
 block_spec: "think %s"
@@ -25,6 +24,6 @@ example_images:
     description: Move forward by 10 steps
 ---
 
-# think _ {.unnumbered}
+# Think  {.unnumbered}
 
 {{< include ../_block.qmd >}}

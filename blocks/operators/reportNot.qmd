@@ -1,5 +1,4 @@
 ---
-readable_name: "not _"
 block_description: Complete Me
 label: "not _"
 block_spec: "not %b"
@@ -25,6 +24,6 @@ example_images:
     description: Move forward by 10 steps
 ---
 
-# not _ {.unnumbered}
+# Not  {.unnumbered}
 
 {{< include ../_block.qmd >}}

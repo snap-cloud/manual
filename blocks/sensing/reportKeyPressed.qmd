@@ -1,5 +1,4 @@
 ---
-readable_name: "key _ pressed?"
 block_description: Complete Me
 label: "key _ pressed?"
 block_spec: "key %key pressed?"
@@ -25,6 +24,6 @@ example_images:
     description: Move forward by 10 steps
 ---
 
-# key _ pressed? {.unnumbered}
+# Key  pressed? {.unnumbered}
 
 {{< include ../_block.qmd >}}

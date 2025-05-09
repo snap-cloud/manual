@@ -1,5 +1,4 @@
 ---
-readable_name: "wait until _"
 block_description: Complete Me
 label: "wait until _"
 block_spec: "wait until %boolUE"
@@ -25,6 +24,6 @@ example_images:
     description: Move forward by 10 steps
 ---
 
-# wait until _ {.unnumbered}
+# Wait until  {.unnumbered}
 
 {{< include ../_block.qmd >}}

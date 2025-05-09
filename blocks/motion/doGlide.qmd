@@ -1,5 +1,4 @@
 ---
-readable_name: "glide _ secs to x: _ y: _"
 block_description: Complete Me
 label: "glide _ secs to x: _ y: _"
 block_spec: "glide %n secs to x: %n y: %n"
@@ -25,6 +24,6 @@ example_images:
     description: Move forward by 10 steps
 ---
 
-# glide _ secs to x: _ y: _ {.unnumbered}
+# Glide  secs to x  y  {.unnumbered}
 
 {{< include ../_block.qmd >}}

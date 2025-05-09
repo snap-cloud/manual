@@ -1,5 +1,4 @@
 ---
-readable_name: "define _ _ _"
 block_description: Complete Me
 label: "define _ _ _"
 block_spec: "define %upvar %s %repRing"
@@ -25,6 +24,6 @@ example_images:
     description: Move forward by 10 steps
 ---
 
-# define _ _ _ {.unnumbered}
+# Define    {.unnumbered}
 
 {{< include ../_block.qmd >}}

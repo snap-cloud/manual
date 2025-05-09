@@ -1,5 +1,4 @@
 ---
-readable_name: "_ of _"
 block_description: Complete Me
 label: "_ of _"
 block_spec: "%att of %spr"
@@ -25,6 +24,6 @@ example_images:
     description: Move forward by 10 steps
 ---
 
-# _ of _ {.unnumbered}
+#  of  {.unnumbered}
 
 {{< include ../_block.qmd >}}

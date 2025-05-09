@@ -1,5 +1,4 @@
 ---
-readable_name: "a new clone of _"
 block_description: Complete Me
 label: "a new clone of _"
 block_spec: "a new clone of %clntrtl"
@@ -25,6 +24,6 @@ example_images:
     description: Move forward by 10 steps
 ---
 
-# a new clone of _ {.unnumbered}
+# A new clone of  {.unnumbered}
 
 {{< include ../_block.qmd >}}

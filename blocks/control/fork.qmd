@@ -1,5 +1,4 @@
 ---
-readable_name: "launch _ _"
 block_description: Complete Me
 label: "launch _ _"
 block_spec: "launch %cmdRing %inputs"
@@ -25,6 +24,6 @@ example_images:
     description: Move forward by 10 steps
 ---
 
-# launch _ _ {.unnumbered}
+# Launch   {.unnumbered}
 
 {{< include ../_block.qmd >}}

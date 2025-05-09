@@ -1,5 +1,4 @@
 ---
-readable_name: "hide"
 block_description: Complete Me
 label: "hide"
 block_spec: "hide"
@@ -25,6 +24,6 @@ example_images:
     description: Move forward by 10 steps
 ---
 
-# hide {.unnumbered}
+# Hide {.unnumbered}
 
 {{< include ../_block.qmd >}}

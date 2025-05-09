@@ -1,5 +1,4 @@
 ---
-readable_name: "delete _ of _"
 block_description: Complete Me
 label: "delete _ of _"
 block_spec: "delete %ida of %l"
@@ -25,6 +24,6 @@ example_images:
     description: Move forward by 10 steps
 ---
 
-# delete _ of _ {.unnumbered}
+# Delete  of  {.unnumbered}
 
 {{< include ../_block.qmd >}}

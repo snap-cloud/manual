@@ -1,5 +1,4 @@
 ---
-readable_name: "play sound _ until done"
 block_description: Complete Me
 label: "play sound _ until done"
 block_spec: "play sound %snd until done"
@@ -25,6 +24,6 @@ example_images:
     description: Move forward by 10 steps
 ---
 
-# play sound _ until done {.unnumbered}
+# Play sound  until done {.unnumbered}
 
 {{< include ../_block.qmd >}}

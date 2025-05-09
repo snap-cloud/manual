@@ -1,5 +1,4 @@
 ---
-readable_name: "forever _"
 block_description: Complete Me
 label: "forever _"
 block_spec: "forever %loop"
@@ -25,6 +24,6 @@ example_images:
     description: Move forward by 10 steps
 ---
 
-# forever _ {.unnumbered}
+# Forever  {.unnumbered}
 
 {{< include ../_block.qmd >}}

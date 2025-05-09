@@ -1,5 +1,4 @@
 ---
-readable_name: "delete block _"
 block_description: Complete Me
 label: "delete block _"
 block_spec: "delete block %repRing"
@@ -25,6 +24,6 @@ example_images:
     description: Move forward by 10 steps
 ---
 
-# delete block _ {.unnumbered}
+# Delete block  {.unnumbered}
 
 {{< include ../_block.qmd >}}

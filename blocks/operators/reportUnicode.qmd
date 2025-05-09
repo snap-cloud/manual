@@ -1,5 +1,4 @@
 ---
-readable_name: "unicode of _"
 block_description: Complete Me
 label: "unicode of _"
 block_spec: "unicode of %s"
@@ -25,6 +24,6 @@ example_images:
     description: Move forward by 10 steps
 ---
 
-# unicode of _ {.unnumbered}
+# Unicode of  {.unnumbered}
 
 {{< include ../_block.qmd >}}

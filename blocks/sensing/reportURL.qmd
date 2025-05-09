@@ -1,5 +1,4 @@
 ---
-readable_name: "url _"
 block_description: Complete Me
 label: "url _"
 block_spec: "url %s"
@@ -25,6 +24,6 @@ example_images:
     description: Move forward by 10 steps
 ---
 
-# url _ {.unnumbered}
+# Url  {.unnumbered}
 
 {{< include ../_block.qmd >}}
