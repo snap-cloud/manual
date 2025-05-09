@@ -1,0 +1,2051 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.7.30">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="description" content="A manual for Snap! TODO">
+
+<title>4&nbsp; First class lists – Snap! Reference Manual</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../content/05-typed-inputs/index.html" rel="next">
+<link href="../../content/03-building-a-block/index.html" rel="prev">
+<link href="../../images/snap-logo.png" rel="icon" type="image/png">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-de070a7b0ab54f8780927367ac907214.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-4e2893b5031d5637e2c276d160f49065.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-sidebar floating nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="https://snap-cloud.github.io/manual/" class="navbar-brand navbar-brand-logo">
+    <img src="../../images/snap-logo.png" alt="" class="navbar-logo">
+    </a>
+    <a class="navbar-brand" href="https://snap-cloud.github.io/manual/">
+    <span class="navbar-title">Snap! Reference Manual</span>
+    </a>
+  </div>
+        <div class="quarto-navbar-tools tools-end">
+    <a href="https://github.com/snap-cloud/manual/" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
+    <a href="../../snap-manual.pdf" title="Download PDF" class="quarto-navigation-tool px-1" aria-label="Download PDF"><i class="bi bi-file-pdf"></i></a>
+</div>
+          <div id="quarto-search" class="" title="Search"></div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../content/04-first-class-lists/index.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">First class lists</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
+      <a href="../../index.html" class="sidebar-logo-link">
+      <img src="../../images/snap-logo.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      </a>
+      </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Snap! Reference Manual</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../content/00-acknowledgements/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Acknowledgements</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../content/01-blocks-scripts-and-sprites/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Blocks, Scripts, and Sprites</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../content/02-saving-and-loading-projects-and/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Saving and Loading Projects and Media</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../content/03-building-a-block/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Building a Block</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../content/04-first-class-lists/index.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">First class lists</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../content/05-typed-inputs/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Typed Inputs</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../content/06-procedures-as-data/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Procedures as Data</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../content/07-object-oriented-programming-with-sprites/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Object Oriented Programming with Sprites</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../content/08-oop-with-procedures/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">OOP with Procedures</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../content/09-the-outside-world/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">The Outside World</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../content/10-continuations/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Continuations</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../content/11-metaprogramming/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Metaprogramming</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../content/12-user-interface-elements/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">User Interface Elements <span></span></span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Appendices</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../content/13-appendix-a-snap-color-library/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Appendix A. Snap<em>!</em> color library</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../content/14-appendix-b-apl-features/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">Appendix B. APL features</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
+ <span class="menu-text">Blocks Reference</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">All Snap<em>!</em> Blocks Reference</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/motion/forward.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Move steps</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/motion/turn.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Turn $clockwise degrees</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/motion/turnLeft.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Turn $counterclockwise degrees</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/motion/setHeading.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Point in direction</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/motion/doFaceTowards.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Point towards</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/motion/gotoXY.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Go to x y</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/motion/doGotoObject.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Go to</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/motion/doGlide.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Glide secs to x y</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/motion/changeXPosition.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Change x by</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/motion/setXPosition.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Set x to</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/motion/changeYPosition.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Change y by</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/motion/setYPosition.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Set y to</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/motion/bounceOffEdge.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">If on edge, bounce</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/motion/getPosition.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Position</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/motion/xPosition.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">X position</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/motion/yPosition.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Y position</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/motion/direction.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Direction</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/looks/doSwitchToCostume.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Switch to costume</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/looks/doWearNextCostume.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Next costume</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/looks/getCostumeIdx.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Costume #</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/looks/doSayFor.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Say for secs</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/looks/bubble.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Say</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/looks/doThinkFor.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Think for secs</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/looks/doThink.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Think</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/looks/reportGetImageAttribute.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">of costume</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/looks/reportNewCostumeStretched.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Stretch x y %</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/looks/reportNewCostumeSkewed.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Skew to degrees %</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/looks/reportNewCostume.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">New costume width height</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/looks/changeEffect.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Change effect by</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/looks/setEffect.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Set effect to</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/looks/clearEffects.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Clear graphic effects</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/looks/getEffect.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">effect</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/looks/changeScale.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Change size by</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/looks/setScale.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Set size to %</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/looks/getScale.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Size</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/looks/show.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Show</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/looks/hide.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Hide</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/looks/reportShown.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Shown?</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/looks/goToLayer.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Go to layer</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/looks/goBack.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Go back layers</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/sound/playSound.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Play sound</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/sound/doPlaySoundUntilDone.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Play sound until done</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/sound/doStopAllSounds.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Stop all sounds</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/sound/doPlaySoundAtRate.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Play sound at hz</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/sound/reportGetSoundAttribute.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">of sound</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/sound/reportNewSoundFromSamples.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">New sound rate hz</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/sound/doRest.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Rest for beats</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/sound/doPlayNote.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Play note for beats</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/sound/doSetInstrument.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Set instrument to</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/sound/doChangeTempo.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Change tempo by</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/sound/doSetTempo.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Set tempo to bpm</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/sound/getTempo.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Tempo</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/sound/changeVolume.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Change volume by</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/sound/setVolume.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Set volume to %</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/sound/getVolume.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Volume</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/sound/changePan.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Change balance by</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/sound/setPan.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Set balance to</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/sound/getPan.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Balance</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/sound/playFreq.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Play frequency hz</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/sound/stopFreq.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Stop frequency</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/pen/clear.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Clear</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/pen/down.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Pen down</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/pen/up.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Pen up</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/pen/getPenDown.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Pen down?</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/pen/setColor.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Set pen color to</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/pen/changePenColorDimension.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Change pen by</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/pen/setPenColorDimension.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Set pen to</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/pen/getPenAttribute.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Pen</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/pen/changeSize.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Change pen size by</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/pen/setSize.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Set pen size to</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/pen/doStamp.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Stamp</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/pen/floodFill.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Fill</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/pen/write.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Write size</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/pen/reportPenTrailsAsCostume.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Pen trails</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/pen/doPasteOn.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Paste on</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/pen/doCutFrom.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Cut from</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/control/doBroadcast.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Broadcast</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/control/doBroadcastAndWait.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Broadcast and wait</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/other/doWarp.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Warp</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/control/doWait.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Wait secs</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/control/doWaitUntil.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Wait until</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/control/doForever.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Forever</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/control/doRepeat.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Repeat</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/control/doUntil.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Repeat until</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/control/doFor.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">For = to</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/control/doIf.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">If</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/control/doIfElse.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">If else</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/control/reportIfElse.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">If then else</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/control/doReport.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Report</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/control/doStopThis.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Stop</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/control/doRun.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Run</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/control/fork.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Launch</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/control/evaluate.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Call</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/control/reportPipe.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Pipe $arrowright</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/control/doTellTo.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Tell to</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/control/reportAskFor.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Ask for</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/control/createClone.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Create a clone of</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/control/newClone.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">A new clone of</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/control/removeClone.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Delete this clone</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/control/doPauseAll.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Pause all $pause</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/control/doSwitchToScene.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Switch to scene</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/control/doDefineBlock.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Define</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/control/doDeleteBlock.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Delete block</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/control/doSetBlockAttribute.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Set of block to</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/control/reportBlockAttribute.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">of block</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/control/reportEnvironment.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">This</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/control/doSetSlot.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Set slot to</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/sensing/reportTouchingObject.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Touching ?</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/sensing/reportTouchingColor.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Touching ?</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/sensing/reportColorIsTouchingColor.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Color is touching ?</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/sensing/doAsk.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Ask and wait</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/sensing/getLastAnswer.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Answer</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/sensing/reportMousePosition.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Mouse position</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/sensing/reportMouseX.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Mouse x</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/sensing/reportMouseY.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Mouse y</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/sensing/reportMouseDown.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Mouse down?</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/sensing/reportKeyPressed.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Key pressed?</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/sensing/reportRelationTo.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">to</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/sensing/reportAspect.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">at</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/sensing/doResetTimer.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Reset timer</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/sensing/getTimer.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Timer</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/sensing/reportDate.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Current</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/sensing/reportAttributeOf.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">of</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/sensing/reportGet.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">My</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/sensing/reportObject.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Object</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/sensing/reportURL.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Url</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/sensing/reportAudio.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Microphone</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/sensing/reportVideo.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Video on</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/sensing/doSetVideoTransparency.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Set video transparency to</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/sensing/reportGlobalFlag.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Is on?</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/sensing/doSetGlobalFlag.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Set to</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/other/reifyScript.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Command Ring</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/other/reifyReporter.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Reporter Ring</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/other/reifyPredicate.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Predicate Ring</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/operators/reportVariadicSum.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">reportVariadicSum.html</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/operators/reportDifference.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">−</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/operators/reportVariadicProduct.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">reportVariadicProduct.html</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/operators/reportQuotient.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">/</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/operators/reportPower.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">^</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/operators/reportModulus.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">mod</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/operators/reportVariadicMin.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">reportVariadicMin.html</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/operators/reportVariadicMax.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">reportVariadicMax.html</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/operators/reportRound.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Round</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/operators/reportMonadic.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">of</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/operators/reportAtan2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Atan2 ÷</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/operators/reportRandom.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Pick random to</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/operators/reportVariadicLessThan.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">reportVariadicLessThan.html</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/operators/reportVariadicEquals.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">reportVariadicEquals.html</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/operators/reportVariadicGreaterThan.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">reportVariadicGreaterThan.html</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/operators/reportVariadicAnd.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">reportVariadicAnd.html</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/operators/reportVariadicOr.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">reportVariadicOr.html</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/operators/reportNot.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Not</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/operators/reportBoolean.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">reportBoolean.html</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/operators/reportJoinWords.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Join</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/operators/reportTextSplit.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Split by</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/operators/reportLetter.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Letter of</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/operators/reportTextAttribute.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">of text</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/operators/reportUnicode.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Unicode of</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/operators/reportUnicodeAsLetter.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Unicode as letter</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/operators/reportIsA.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Is a ?</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/operators/reportVariadicIsIdentical.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Is ?</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/operators/reportJSFunction.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Javascript function ( ) { }</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/variables/reportGetVar.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Test-block</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/variables/reportGetVar.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Test-block</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/variables/reportGetVar.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Test-block</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/variables/reportGetVar.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Test-block</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/variables/reportGetVar.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Test-block</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/variables/reportGetVar.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Test-block</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/variables/doSetVar.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Set to</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/variables/doChangeVar.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Change by</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/variables/doShowVar.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Show variable</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/variables/doHideVar.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Hide variable</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/other/doDeclareVariables.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Script variables</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/variables/doDeleteAttr.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Inherit</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/lists/reportNewList.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">List</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/lists/reportNumbers.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Numbers from to</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/lists/reportCONS.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">in front of</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/lists/reportListItem.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Item of</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/lists/reportCDR.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">All but first of</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/lists/reportListAttribute.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">of</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/lists/reportListIndex.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Index of in</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/lists/reportListContainsItem.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">contains</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/lists/reportListIsEmpty.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Is empty?</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/lists/reportMap.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Map over</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/lists/reportKeep.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Keep items from</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/lists/reportFindFirst.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Find first item in</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/lists/reportCombine.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Combine using</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/lists/doForEach.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">For each in</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/lists/doAddToList.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Add to</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/lists/doDeleteFromList.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Delete of</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/lists/doInsertInList.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Insert at of</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/lists/doReplaceInList.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Replace item of with</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/lists/reportConcatenatedLists.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Append</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/lists/reportReshape.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Reshape to</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/lists/reportCrossproduct.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Combinations</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/other/doPrimitive.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">primitive</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/other/doApplyExtension.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Extension</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blocks/other/reportApplyExtension.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Extension</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">First class lists</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>A data type is <em>ﬁrst class</em> <span></span> in a programming language if data of that type can be</p>
+<ul>
+<li><p>the value of a variable</p></li>
+<li><p>an input to a procedure</p></li>
+<li><p>the value returned by a procedure</p></li>
+<li><p>a member of a data aggregate</p></li>
+<li><p>anonymous (not named)</p></li>
+</ul>
+<p>In Scratch <span></span>, numbers and text strings are ﬁrst class. You can put a number in a variable, use one as the input to a block, call a reporter that reports a number, or put a number into a list.</p>
+<p>But Scratch’s lists are not ﬁrst class. You create one using the “Make a list <span></span>” button, which requires that you give the list a name. You can’t put the list into a variable, into an input slot of a block, or into a list item—you can’t have lists of lists. None of the Scratch reporters reports a list value. (You can use a reduction of the list into a text string as input to other blocks, but this loses the list structure; the input is just a text string, not a data aggregate.)</p>
+<p>A fundamental design principle <span></span> in Snap<em>!</em> is that <em><strong><u>all data should be ﬁrst class</u></strong>.</em> If it’s in the language, then we should be able to use it fully and freely. We believe that this principle avoids the need for many special-case tools, which can instead be written by Snap<em>!</em> users themselves.</p>
+<p>Note that it’s a data <em>type</em> that’s ﬁrst class, not an individual value. Don’t think, for example, that some lists are ﬁrst class, while others aren’t. In Snap<em>!</em>, lists are ﬁrst class, period.</p>
+<p><img src="assets/image523.png" class="img-fluid" alt="image523.png"> <!--  style="width:2.83958in;height:0.41597in" / --></p>
+<section id="the-list-block" class="level2">
+<h2 class="anchored" data-anchor-id="the-list-block">The list Block</h2>
+<p>At the heart of providing first class lists is the ability to make an “anonymous” list <span></span> —to make a list without simultaneously giving it a name. The list reporter block <span></span> does that.</p>
+<p><img src="assets/image628.png" class="img-fluid" alt="image628.png"> <!--  style="width:2.83958in;height:0.41597in" / --></p>
+<p>At the right end of the block are two left-and-right arrowheads <span></span>. Clicking on these changes the number of inputs to list, i.e., the number of elements in the list you are building. Shift-clicking changes by three at a time.</p>
+<p>You can use this block as input to many other blocks:</p>
+<p><img src="assets/image629.png" class="img-fluid" alt="image629.png"> <!--  style="width:2.83958in;height:0.41597in" / --></p>
+<p>Snap<em>!</em> does not have a “Make a list” button like the one in Scratch <span></span>. If you want a global “named list,” make a global variable and use the set block to put a list into the variable.</p>
+</section>
+<section id="lists-of-lists" class="level2">
+<h2 class="anchored" data-anchor-id="lists-of-lists">Lists of Lists</h2>
+<p>Lists can be inserted as elements in larger lists. We can easily create ad hoc structures as needed:</p>
+<p><img src="assets/image538.png" class="img-fluid" alt="image538.png"> <!--  style="width:5.88889in;height:1.04861in" / --></p>
+<p>Notice that this list is presented in a different format from the “She Loves You” list above. A two-dimensional list is called a <em>table</em> and is by default shown in <em>table view.</em> We’ll have more to say about this later.</p>
+<p>We can also build any classic computer science data structure <span></span> out of lists of lists <span></span>, by defining <em>constructors</em> <span></span> (blocks to make an instance of the structure), <em>selectors</em> <span></span> (blocks to pull out a piece of the structure), and <em>mutators</em> <span></span> (blocks to change the contents of the structure) as needed. Here we create binary tree <span></span> s with selectors that check for input of the correct data type; only one selector is shown but the ones for left and right children are analogous.</p>
+<p><img src="assets/image630.png" class="img-fluid" alt="image630.png"> <!--  style="width:5.88889in;height:1.04861in" / --></p>
+</section>
+<section id="functional-and-imperative-list-programming" class="level2">
+<h2 class="anchored" data-anchor-id="functional-and-imperative-list-programming">Functional and Imperative List Programming</h2>
+<p>There are two ways to create a list inside a program. Scratch <span></span> users will be familiar with the <em>imperative</em> programming style <span></span>, which is based on a set of command blocks that modify a list:</p>
+<p><img src="assets/image631.png" class="img-fluid" alt="image631.png"> <!--  style="width:5.88889in;height:1.04861in" / --></p>
+<p>As an example, here are two blocks that take a list of numbers as input, and report a new list containing only the even numbers from the original list:[4]</p>
+<p><img src="assets/image632.png" class="img-fluid" alt="image632.png"> <!--  style="width:5.88889in;height:1.04861in" / --></p>
+<p>In this script, we first create a temporary variable, then put an empty list in it, then go through the items of the input list using the add <strong>…</strong> to (result) block to modify the result list, adding one item at a time, and finally report the result.</p>
+<p><em>Functional</em> programming is a different approach that is becoming important in “real world” programming because of parallelism <span></span>, i.e., the fact that different processors can be manipulating the same data at the same time. This makes the use of mutation <span></span> (changing the value associated with a variable, or the items of a list) problematic because with parallelism it’s impossible to know the exact sequence of events, so the result of mutation may not be what the programmer expected. Even without parallelism, though, functional programming <span></span> is sometimes a simpler and more effective technique, especially when dealing with recursively defined data structures. It uses reporter blocks, not command blocks, to build up a list value:</p>
+<p><img src="assets/image633.png" class="img-fluid" alt="image633.png"> <!--  style="width:5.88889in;height:1.04861in" / --></p>
+<p>In a functional program, we often use recursion to construct a list, one item at a time. The in front of block <span></span> makes a list that has one item added to the front of an existing list, <em>without changing the value of the original list.</em> A nonempty list is processed by dividing it into its first item (item 1 of <span></span> ) and all the rest of the items (all but first of <span></span> ), which are handled through a recursive call:</p>
+<p><img src="assets/image555.png" class="img-fluid" alt="image555.png"> <!--  style="width:4.75in;height:2.24097in" / --></p>
+<p>Snap<em>!</em> uses two different internal representations of lists, one (dynamic <span></span> array <span></span> ) for imperative programming and the other (linked <span></span> list <span></span> ) for functional programming. Each representation makes the corresponding built-in list blocks (commands or reporters, respectively) most efficient. It’s possible to mix styles in the same program, but if <em>the same list</em> is used both ways, the program will run more slowly because it converts from one representation to the other repeatedly. (The item ( ) of [ ] block doesn’t change the representation.) You don’t have to know the details of the internal representations, but it’s worthwhile to use each list in a consistent way.</p>
+</section>
+<section id="higher-order-list-operations-and-rings" class="level2">
+<h2 class="anchored" data-anchor-id="higher-order-list-operations-and-rings">Higher Order List Operations and Rings</h2>
+<p>There’s an even easier way to select the even numbers from a list:</p>
+<p><img src="assets/image556.png" class="img-fluid" alt="image556.png"> <!--  style="width:5.86458in;height:1.07153in" / --></p>
+<p>The keep block takes a Predicate expression as its first input, and a list as its second input. It reports a list containing those elements of the input list for which the predicate returns true. Notice two things about the predicate input: First, it has a grey ring <span></span> around it. Second, the mod block has an empty input. Keep puts each item of its input list, one at a time, into that empty input before evaluating the predicate. (The empty input is supposed to remind you of the “box” notation for variables in elementary school: ☐+3=7.) The grey ring is part of the keep block as it appears in the palette:</p>
+<p><img src="assets/image557.png" class="img-fluid" alt="image557.png"> <!--  style="width:2.375in;height:0.27778in" / --></p>
+<p>What the ring means is that this input is a block (a predicate block, in this case, because the interior of the ring is a hexagon), rather than the value reported by that block. Here’s the difference:</p>
+<p><img src="assets/image634.png" class="img-fluid" alt="image634.png"> <!--  style="width:2.375in;height:0.27778in" / --></p>
+<p>Evaluating the = block without a ring reports true or false; evaluating the block <em>with</em> a ring reports the block itself. This allows keep to evaluate the = predicate repeatedly, once for each list item. A block that takes another block as input is called a <em>higher order</em> block (or higher order procedure, or higher order function <span></span> ).</p>
+<p><img src="assets/image635.png" class="img-fluid" alt="image635.png"> <!--  style="width:2.375in;height:0.27778in" / --></p>
+<p>Snap<em>!</em> provides four higher order function blocks for operating on lists:</p>
+<p><img src="assets/image636.png" class="img-fluid" alt="image636.png"> <!--  style="width:2.375in;height:0.27778in" / --></p>
+<p><span id="map" class="anchor"></span>You’ve already seen keep. Find first is <span></span> similar, but it reports just the first item that satisfies the predicate, not a list of all the matching items. It’s equivalent to <img src="assets/image562.png" class="img-fluid" alt="image562.png"> <!--  style="width:2.39in;height:0.22in" / --> but faster because it stops looking as soon as it finds a match. If there are no matching items, it returns an empty string.</p>
+<p>Map <span></span> takes a Reporter block and a list as inputs. It reports a new list in which each item is the value reported by the Reporter block as applied to one item from the input list. That’s a mouthful, but an example will make its meaning clear:</p>
+<p><img src="assets/image637.png" class="img-fluid" alt="image637.png"> <!--  style="width:2.375in;height:0.27778in" / --></p>
+<p>By the way, we’ve been using arithmetic examples, but the list items can be of any type, and any reporter can be used. We’ll make the plurals of some words:</p>
+<p><img src="assets/image638.png" class="img-fluid" alt="image638.png"> <!--  style="width:2.375in;height:0.27778in" / --></p>
+<p>These examples use small lists, to fit the page, but the higher order blocks work for any size list.</p>
+<p>An <em>empty</em> gray ring represents the <em>identity function,</em> which just reports its input. Leaving the ring in map empty is the most concise way to make a shallow copy of a list (that is, in the case of a list of lists, the result is a new toplevel list whose items are the same (uncopied) lists that are items of the toplevel input list) <span></span>. To make a deep copy of a list <span></span> (that is, one in which all the sublists, sublists of sublists, etc. are copied), use the list as input to the <img src="assets/image576.png" class="img-fluid" alt="image576.png"> <!--  style="width:0.74306in;height:0.19444in" alt="Macintosh HD:Users:bh:Desktop:id.png" / --> block (one of the variants of the sqrt of block). This works because id of is a hyperblock (page <a href="#hyperblocks">55</a>).</p>
+<p>The third higher order block, combine <span></span>, computes a single result from <em>all</em> the items of a list, using a <em>two-input</em> reporter as its second input. In practice, there are only a few blocks you’ll ever use with combine:</p>
+<p><img src="assets/image639.png" class="img-fluid" alt="image639.png"> <!--  style="width:2.375in;height:0.27778in" / --></p>
+<p>These blocks take the sum of the list items, take their product, string them into one word, combine them into a sentence (with spaces between items), see if all items of a list of Booleans are true, see if any of the items is true, find the smallest, or find the largest.</p>
+<p><img src="assets/image586.png" class="img-fluid" alt="image586.png"> <!--  style="width:3.86806in;height:0.34514in" / --> <img src="assets/image585.png" class="img-fluid" alt="image585.png"> <!--  style="width:6.27917in;height:0.37569in" alt="Macintosh HD:Users:bh:Desktop:comma-list.png" / --></p>
+<p>Why + but not −? It only makes sense to combine list items using an <em>associative</em> <span></span> function <span></span> : one that doesn’t care in what order the items are combined (left to right or right to left). (2+3)+4 = 2+(3+4), but (2−3)−4 ≠ 2−(3−4).</p>
+<p>The functions map, keep, and find first have an advanced mode with rarely-used features: If their function input is given explicit input names (by clicking the arrowhead at the right end of the gray ring; see page <a href="#formal-parameters">69</a>), then it will be called for each list item with <em>three</em> inputs: the item’s value (as usual), the item’s position in the input list (its index), and the entire input list. No more than three input names can be used in this contex</p>
+<p><img src="assets/image587.png" class="img-fluid" alt="image587.png"> <!--  style="width:5.80833in;height:1.19097in" / --></p>
+</section>
+<section id="table-view-vs.-list-view" class="level2">
+<h2 class="anchored" data-anchor-id="table-view-vs.-list-view">Table View <span></span> vs.&nbsp;List View <span></span></h2>
+<p>We mentioned earlier that there are two ways of representing lists visually. For one-dimensional lists (lists whose items are not themselves lists) the visual differences are small:</p>
+<p><img src="assets/image640.png" class="img-fluid" alt="image640.png"> <!--  style="width:2.375in;height:0.27778in" / --></p>
+<p>For one-dimensional lists, it’s not really the appearance that’s important. What matters is that the <em>list view</em> allows very versatile direct manipulation of the list through the picture: you can edit the individual items, you can delete items by clicking the tiny buttons next to each item, and you can add new items at the end by clicking the tiny plus sign in the lower left corner. (You can just barely see that the item deletion buttons have minus signs in them.) Even if you have several watchers for the same list, all of them will be updated when you change anything. On the other hand, this versatility comes at an efficiency cost; a list view watcher for a long list would be way too slow. As a partial workaround, the list view can only contain 100 items at a time; the downward-pointing arrowhead opens a menu in which you can choose which 100 to display.</p>
+<p><img src="assets/image641.png" class="img-fluid" alt="image641.png"> <!--  style="width:2.375in;height:0.27778in" / --></p>
+<p>By contrast, because it doesn’t allow direct editing, the <em>table view</em> watcher can hold hundreds of thousands of items and still scroll through them efficiently. The table view has flatter graphics for the items to remind you that they’re not clickable to edit the values.</p>
+<p>Right-clicking on a list watcher (in either form) gives you the option to switch to the other form. The right-click menu also offers an open in dialog… option that opens an <em>offstage</em> table view watcher, because the watchers can take up a lot of stage space that may make it hard to see what your program is actually doing. Once the offstage dialog box is open, you can close the stage watcher. There’s an OK button on the offstage dialog to close it if you want. Or you can right-click it to make <em>another</em> offstage watcher, which is useful if you want to watch two parts of the list at once by having each watcher scrolled to a different place.</p>
+<p>Table view is the default if the list has more than 100 items, or if any of the first ten items of the list are lists, in which case it makes a very different-looking two-dimensional picture:</p>
+<p><img src="assets/image538.png" class="img-fluid" alt="image538.png"> <!--  style="width:5.88889in;height:1.04861in" / --></p>
+<p>In this format, the column of red items has been replaced by a spreadsheet-looking display. For short, wide lists, this display makes the content of the list very clear. A vertical display, with much of the space taken up by the “machinery” at the bottom of each sublist, would make it hard to show all the text at once. (The pedagogic cost is that the structure is no longer explicit; we can’t tell just by looking that this is a list of row-lists, rather than a list of column-lists or a primitive two-dimensional array type. But you can choose list view to see the structure.)</p>
+<p>Beyond such simple cases, in which every item of the main list is a list of the same length, it’s important to keep in mind that the design of table view has to satisfy two goals, not always in agreement: (1) a visually compelling display of two-dimensional arrays, and (2) highly efficient display generation, so that Snap<em>!</em> can handle very large lists, since “big data” is an important topic of study. To meet the first goal perfectly in the case of “ragged right” arrays in which sublists can have different lengths, Snap<em>!</em> would scan the entire list to find the maximum width before displaying anything, but that would violate the second goal.</p>
+<p>Snap<em>!</em> uses the simplest possible compromise between the two goals: It examines only the first ten items of the list to decide on the format. If none of those are lists, or they’re all lists of one item, and the overall length is no more than 100, list view is used. If the any of first ten items is a list, then table view is used, and the number of columns in the table is equal to the largest number of items among the first ten items (sublists) of the main list.</p>
+<p>Table views open with standard values for the width and height of a cell, regardless of the actual data. You can change these values by dragging the column letters or row numbers. Each column has its own width, but changing the height of a row changes the height for all rows. (This distinction is based not on the semantics of rows vs.&nbsp;columns, but on the fact that a constant row height makes scrolling through a large list more efficient.) Shift-dragging a column label will change the width of that column.</p>
+<p>If you tried out the adjustments in the previous paragraph, you may have noticed that a column letter turns into a number when you hover over it. Labeling rows and columns differently makes cell references such as “cell 4B” unambiguous; you don’t have to have a convention about whether to say the row first or the column first. (“Cell B4” is the same as “cell 4B.”) On the other hand, to extract a value from column B in your program, you have to say item 2 of, not item B of. So it’s useful to be able to find out a column number by hovering over its letter.</p>
+<p>Any value that can appear in a program can be displayed in a table cell:</p>
+<p><img src="assets/image596.png" class="img-fluid" alt="image596.png"> <!--  style="width:3.81736in;height:0.81111in" / --></p>
+<p>This display shows that the standard cell dimensions may not be enough for large value images. By expanding the entire speech balloon and then the second column and all the rows, we can make the result fit:</p>
+<p><img src="assets/image642.png" class="img-fluid" alt="image642.png"> <!--  style="width:3.34097in;height:0.57708in" / --></p>
+<p>But we make an exception for cases in which the value in a cell is a list (so that the entire table is three-dimensional). Because lists are visually very big, we don’t try to fit the entire value in a cell:</p>
+<p><img src="assets/image601.png" class="img-fluid" alt="image601.png"> <!--  style="width:3.34097in;height:0.57708in" / --></p>
+<p>Even if you expand the size of the cells, Snap<em>!</em> will not display sublists of sublists in table view. There are two ways to see these inner sublists: You can switch to list view, or you can double-click on a list icon in the table to open a dialog box showing just that sub-sub-list in table view.</p>
+<p>One last detail: If the first item of a list is a list (so table view is used), but a later item <em>isn’t</em> a list, that later item will be displayed on a red background, like an item of a single-column list:</p>
+<p><img src="assets/image602.png" class="img-fluid" alt="image602.png"> <!--  style="width:3.35417in;height:0.69444in" / --></p>
+<p>So, in particular, if only the first item is a list, the display will look almost like a one-column display.</p>
+<section id="comma-separated-values" class="level3">
+<h3 class="anchored" data-anchor-id="comma-separated-values">Comma-Separated Values</h3>
+<p>Spreadsheet and database programs generally offer the option to export their data as CSV (comma-separated values) <span></span> lists. You can import these files into Snap<em>!</em> and turn them into tables (lists of lists), and you can export tables in CSV format. Snap<em>!</em> recognizes a CSV file by the extension .csv in its filename.</p>
+<p>A CSV file has one line per table row, with the fields separated by commas within a row:</p>
+<p>John,Lennon,rhythm guitar</p>
+<p>Paul,McCartney,bass guitar</p>
+<p>George,Harrison,lead guitar</p>
+<p>Ringo,Starr,drums</p>
+<p>Here’s what the corresponding table looks like:</p>
+<p><img src="assets/image643.png" class="img-fluid" alt="image643.png"> <!--  style="width:3.35417in;height:0.69444in" / --></p>
+<p>Here’s how to read a spreadsheet into Snap<em>!</em>:</p>
+<ol type="1">
+<li><p>Make a variable with a watcher on stage: <img src="assets/image607.png" class="img-fluid" alt="image607.png"> <!--  style="width:1.20833in;height:0.27083in" alt="Macintosh HD:Users:bh:Desktop:pix:watcher.png" / --></p></li>
+<li><p>Right-click on the watcher and choose the “import” option. (If the variable’s value is already a list, be sure to click on the outside border of the watcher; there is a different menu if you click on the list itself.) Select the file with your csv data.</p></li>
+<li><p>There is no 3; that’s it! Snap<em>!</em> will notice that the name of the file you’re importing is something.csv and will turn the text into a list of lists automatically.</p></li>
+</ol>
+<p>Or, even easier, just drag and drop the file from your desktop onto the Snap<em>!</em> window, and Snap<em>!</em> will automatically create a variable named after the file and import the data into it.</p>
+<p>If you actually want to import the raw CSV data into a variable, either change the file extension to .txt before loading it, or choose “raw data” instead of “import” in the watcher menu.</p>
+<p>If you want to export a list, put a variable watcher containing the list on the stage, right-click its border, and choose “Export.” (Don’t right-click an item instead of the border; that gives a different menu.)</p>
+</section>
+<section id="multi-dimensional-lists-and-json" class="level3">
+<h3 class="anchored" data-anchor-id="multi-dimensional-lists-and-json">Multi-dimensional lists and JSON</h3>
+<p>CSV format is easy to read, but works only for one- or two-dimensional lists. If you have a list of lists of lists, Snap<em>!</em> will instead export your list as a JSON (JavaScript Object Notation) file <span></span> . I modified my list:</p>
+<p><img src="assets/image608.png" class="img-fluid" alt="image608.png"> <!--  style="width:6.33333in;height:0.44792in" / --></p>
+<p>and then exported again, getting this file:</p>
+<p>[[“John”,“Lennon”,“rhythm guitar”],[[“James”,“Paul”],“McCartney”,“bass guitar”],[“George”,“Harrison”,“lead guitar”],[“Ringo”,“Starr”,“drums”]]</p>
+<p>You can also import lists, including tables, from a .json file. (And you can import plain text from a .txt file.) Drag and drop works for these formats also.</p>
+</section>
+</section>
+<section id="hyperblocks" class="level2">
+<h2 class="anchored" data-anchor-id="hyperblocks">Hyperblocks <span></span></h2>
+<p>A <em>scalar</em> is anything other than a list. The name comes from mathematics, where it means a magnitude without direction, as opposed to a vector, which points toward somewhere. A scalar function <span></span> is one whose domain and range are scalars, so all the arithmetic operations are scalar functions, but so are the text ones such as letter and the Boolean ones such as not.</p>
+<p>The major new feature in Snap<em>!</em> 6.0 is that the domain and range of most scalar function blocks is extended to multi-dimensional <span></span> lists, with the underlying scalar function applied termwise:</p>
+<p><img src="assets/image610.png" class="img-fluid" alt="image610.png"> <!--  style="width:3.34028in;height:0.91667in" alt="Macintosh HD:Users:bh:Desktop:vector-vector.png" / --> <img src="assets/image609.png" class="img-fluid" alt="image609.png"> <!--  style="width:2.5625in;height:0.91667in" alt="Macintosh HD:Users:bh:Desktop:vector-monadic.png" / --> <img src="assets/image611.png" class="img-fluid" alt="image611.png"> <!--  style="width:4.94444in;height:0.69444in" alt="Macintosh HD:Users:bh:Desktop:matrix-matrix.png" / --></p>
+<p>Mathematicians, note in the last example above that the result is just a termwise application of the underlying function (7×3, 8×5, etc.), <em>not</em> matrix multiplication. See Appendix B for that. For a dyadic (two-input) function, if the lengths don’t agree, the length of the result (in each dimension) is the length of the shorter input:</p>
+<p><img src="assets/image612.png" class="img-fluid" alt="image612.png"> <!--  style="width:5.74306in;height:0.69444in" alt="Macintosh HD:Users:bh:Desktop:matrix-ragged.png" / --></p>
+<p>However, if the <em>number of dimensions</em> differs in the two inputs, then the number of dimensions in the result agrees with the <em>higher-</em>dimensional input; the lower-dimensional one is used repeatedly in the missing dimension(s):</p>
+<p><img src="assets/image613.png" class="img-fluid" alt="image613.png"> <!--  style="width:6.79167in;height:0.86806in" alt="Macintosh HD:Users:bh:Desktop:missing-dimension.png" / --></p>
+<p>(7×6. 8×10, 1×20, <em>40</em>×<em>6, 20</em>×<em>10,</em> etc.). In particular, a <em>scalar</em> input is paired with every scalar in the other input:</p>
+<p><img src="assets/image644.png" class="img-fluid" alt="image644.png"> <!--  style="width:7.48333in;height:0.63125in" alt="Macintosh HD:Users:bh:Desktop:vector-alonzo.png" / --></p>
+<p>One important motivation for this feature is how it simplifies and speeds up media computation <span></span>, as in this shifting of the Alonzo <span></span> costume to be bluer:</p>
+<p><img src="assets/image614.png" class="img-fluid" alt="image614.png"> <!--  style="width:7.48333in;height:0.63125in" alt="Macintosh HD:Users:bh:Desktop:vector-alonzo.png" / --></p>
+<p>Each pixel of the result has ¾ of its original red and green, and three times its original blue (with its transparency unchanged). By putting some sliders on the stage, you can play with colors dynamically:</p>
+<p><img src="assets/image620.png" class="img-fluid" alt="image620.png"> <!--  style="width:5.19444in;height:1.04861in" alt="Graphical user interface, application Description automatically generated" / --><img src="assets/image619.png" class="img-fluid" alt="image619.png"> <!--  style="width:1.6875in;height:1.04861in" alt="Macintosh HD:Users:bh:Desktop:Screen Shot 2020-06-13 at 9.25.32 PM.png" / --></p>
+<p>There are a few naturally scalar functions that have already had specific meanings when applied to lists and therefore are not hyperblocks: = and identical to (because they compare entire structures, not just scalars, always reporting a single Boolean result), and and or (because they don’t evaluate their second input at all if the first input determines the result), join (because it converts non-scalar (and other non-text) inputs to text string form), and is a (type) (because it applies to its input as a whole). Blocks whose inputs are “natively” lists, such as <img src="assets/image193.png" class="img-fluid" alt="image193.png"> <!--  style="width:0.88958in;height:0.2in" / --> and <img src="assets/image621.png" class="img-fluid" alt="image621.png"> <!--  style="width:1.02986in;height:0.18958in" --> , are never hyperblocks.</p>
+<p><img src="assets/image205.png" class="img-fluid" alt="image205.png"> <!--  style="width:2.09917in;height:0.2475in" alt="Application Description automatically generated with low confidence" / --> The reshape block <span></span> takes a list (of any depth) as its first input, and then takes zero or more sizes along the dimensions of an array. In the example it will report a table (a matrix) of four rows and three columns. If no sizes are given, the result is an empty list. Otherwise, the cells of the specified shape are filled with the atomic values from the input list. If more values are needed than provided, the block starts again at the head of the list, using values more than once. If more values are provided than needed, the extras are ignored; this isn’t an error.</p>
+<p><img src="assets/image203.png" class="img-fluid" alt="image203.png"> <!--  style="width:1.76in;height:0.2in" / --> The combinations block takes any number of lists as input; it reports a list in which each item is a list whose length is the number of inputs; item <em>i</em> of a sublist is an item of input <em>i.</em> Every possible combination of items of the inputs is included, so the length of the reported list is the product of the lengths of the inputs.</p>
+<p><img src="assets/image622.png" class="img-fluid" alt="image622.png"> <!--  style="width:5.23958in;height:1.67986in" alt="Graphical user interface, text, application Description automatically generated" / --></p>
+<p><img src="assets/image204.png" class="img-fluid" alt="image204.png"> <!--  style="width:1.34in;height:0.25in" alt="Icon Description automatically generated" / --> The item of block <span></span> has a special set of rules, designed to preserve its pre-hyperblock meaning and also provide a useful behavior when given a list as its first (index) input:</p>
+<ol type="1">
+<li><p>If the index is a number, then item of reports the indicated top-level item of the list input; that item may be a sublist, in which case the entire sublist is reported (the original meaning of item of):</p>
+<p><img src="assets/image623.png" class="img-fluid" alt="image623.png"> <!--  style="width:5.50694in;height:0.91667in"     alt="Macintosh HD:Users:bh:Desktop:item-scalar.png" / --></p></li>
+<li><p>If the index is a list of numbers (no sublists), then item of reports a list of the indicated top-level items (rows, in a matrix; a straightforward hyperization): <img src="assets/image624.png" class="img-fluid" alt="image624.png"> <!--  style="width:6.00694in;height:0.86806in"     alt="Macintosh HD:Users:bh:Desktop:item-vector.png" / --></p></li>
+<li><p>If the index is a list of lists of numbers, then item of reports an array of only those scalars whose position in the list input matches the index input in all dimensions (changed in Snap<em>!</em> 6.6!):</p>
+<p><img src="assets/image625.png" class="img-fluid" alt="image625.png"> <!--  style="width:6.00694in;height:0.6875in" / --></p></li>
+<li><p>If a list of list of numbers includes an empty sublist, then all items are chosen along that dimension:</p>
+<p><img src="assets/image626.png" class="img-fluid" alt="image626.png"> <!--  style="width:6.00694in;height:0.6875in" / --></p></li>
+</ol>
+<p>To get a column or columns of a spreadsheet, use an empty list in the row selector (changed in Snap<em>!</em> 6.6!):</p>
+<p><img src="assets/image627.png" class="img-fluid" alt="image627.png"> <!--  style="width:6.60417in;height:1.04861in" alt="Graphical user interface, application, website Description automatically generated" / --></p>
+<p>The length of block <span></span> is extended to provide various ways of looking at the shape and contents of a list. The options other than length are mainly useful for <em>lists of lists,</em> to any depth. These new options work well with hyperblocks and the APL library. (Examples are on the next page.)</p>
+<p><img src="assets/image645.png" class="img-fluid" alt="image645.png"> <!--  style="width:6.60417in;height:1.04861in"  / --></p>
+<ul>
+<li><p>length: reports the number of (toplevel) items in the list, as always.</p></li>
+<li><p>rank <span></span> : reports the number of <em>dimensions</em> of the list, i.e., the maximum depth of lists of lists of lists of lists. (That example would be rank 4.)</p></li>
+<li><p>dimensions <span></span> : reports a list of numbers, each of which is the maximum length in one dimension, so a spreadsheet of 1000 records, each with 4 fields, would report the list [1000 4].</p></li>
+<li><p>flatten <span></span> : reports a flat, one-dimensional list containing the <em>atomic</em> (non-list) items anywhere in the input list.</p></li>
+<li><p>columns <span></span> : reports a list in which the rows and columns of the input list are interchanged, so the shape of the transpose of a shape [1000 4] list would be [4 1000]. This option works only for lists whose rank is at most 2. The name reflects the fact that the toplevel items of the reported table are the columns of the original table.</p></li>
+<li><p>reverse: reports a list in which the (toplevel) items of the input list are in reverse order.</p></li>
+</ul>
+<p>The remaining three options report a (generally multi-line) text string. The input list may not include any atomic (non-list) data <span></span> other than text or numbers. The lines <span></span> option is intended for use with rank-one lists of text strings; it reports a string in which each list item becomes a line of text. You can think of it as the opposite of the split by line block <span></span> . The csv <span></span> option (comma-separated values) is intended for rank-two lists that represent a spreadsheet or other tabular data. Each item of the input list should be a list of atoms; the block reports a text string in which each item of the big list becomes a line of text in which the items of that sublist are separated by commas. The json <span></span> option is for lists of any rank; it reports a text string in which the list structure is explicitly represented using square brackets. These are the opposites of split by csv and split by json.</p>
+<p><img src="assets/image646.png" class="img-fluid" alt="image646.png"> <!--  style="width:6.60417in;height:1.04861in" / --></p>
+<p>The idea of extending the domain and range of scalar functions to include arrays comes from the language APL <span></span>. (All the great programming languages are based on mathematical ideas. Our primary ancestors are Smalltalk <span></span>, based on models, and Lisp <span></span>, based on lambda calculus. Prolog <span></span>, a great language not (so far) influencing Snap<em>!</em>, is based on logic. And APL, now joining our family, is based on linear algebra, which studies vectors and matrices. Those <em>other</em> programming languages are based on the weaknesses of computer hardware.) Hyperblocks are not the whole story about APL, which also has mixed-domain functions and higher order functions. Some of what’s missing is provided in the APL library. (See Appendix B.)</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
+        }
+        return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../../content/03-building-a-block/index.html" class="pagination-link" aria-label="Building a Block">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Building a Block</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../../content/05-typed-inputs/index.html" class="pagination-link" aria-label="Typed Inputs">
+        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Typed Inputs</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions"><ul><li><a href="https://github.com/snap-cloud/manual/edit/main/content/04-first-class-lists/index.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li></ul></div></div></div></footer></body></html>
