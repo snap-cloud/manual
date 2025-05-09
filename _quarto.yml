@@ -8,6 +8,64 @@ project:
   # pre-render:
   # post-render:
 
+bibliography: references.bib
+# Don't number subsections as chapters.
+number-depth: 1
+appendix-style: none
+
+format:
+  html:
+    toc: true
+    roman-numerals: true
+    section-numbering:
+      style: roman
+      roman-numerals: true
+    filters:
+      - scripts/collect-index.lua
+    theme: [styles/snap-manual.scss]
+    strip-comment: true
+    html-math-method: katex
+    navbar:
+      logo: images/snap-logo.png
+    # include-in-header:
+    #   - text: |
+    #       <script src="https://examples.org/demo.js"></script>
+    #   - file: analytics.html
+    #   - comments.html
+    # include-before-body: header.html
+  # epub:
+  #   css: styles/epub.css
+  #   cover-image: cover.png
+  pdf:
+    lang: en
+    dir: ltr
+    # https://quarto.org/docs/reference/formats/pdf.html
+    output-file: snap-manual.pdf
+    cover-image: images/cover-image.png
+    # Do not use pdflatex since we have unicode chars
+    pdf-engine: lualatex # wkhtmltopdf # xelatex # or lualatex
+    # pdf-engine-opt:
+    keep-tex: false
+    # This are necessary to make an index.
+    include-in-header: styles/latex-preamble.tex
+    include-after-body:
+      text: |
+        \printindex
+    toc: true
+    number-sections: true
+    number-depth: 1
+    documentclass: book
+    papersize: letter
+    # mainfont: Baskerville
+    # monofont: Source Code Pro
+    # sansfont: Helvetica
+    resource-path:
+      - ./
+      - content/assets/
+      - content/assets/images/
+      - blocks/images/
+      - blocks/help/
+
 book:
   title: Snap! Reference Manual
   output-file: snap-manual
@@ -58,85 +116,209 @@ book:
     - content/10-continuations/index.md
     - content/11-metaprogramming/index.md
     - content/12-user-interface-elements/index.md
-    # This stuff is duplicative of Chapter 1 and 2 above.
-    #- part: content/Chapter1.md
-    #  chapters:
-    #  - content/C1-S1.md
-    #  - content/C1-S2.md
-    #  - content/C1-S3.md
-    #  - content/C1-S4.md
-    #  - content/C1-S5.md
-    #  - content/C1-S6.md
-    #  - content/C1-S7.md
-    #  - content/C1-S8.md
-    #  - content/C1-S12.md
-    #  - content/C1-S13.md
-    #  - content/C1-S14.md
-    #  - content/C1-S15.md
-    #  - content/C1-S16.md
-    #  - content/C1-S17.md
-    #  - content/C1-S18.md
-    #- content/Chapter2.md
   appendices:
     - content/13-appendix-a-snap-color-library/index.md
     - content/14-appendix-b-apl-features/index.md
-    - content/15-appendix-c-blocks-index/index.md
-    - references.qmd
-    - content/index-list.qmd
-
-
-bibliography: references.bib
-# Don't number subsections as chapters.
-number-depth: 1
-
-format:
-  html:
-    toc: true
-    roman-numerals: true
-    section-numbering:
-      style: roman
-      roman-numerals: true
-    filters:
-      - scripts/collect-index.lua
-    # output-file: snap-manual
-    theme: [none, styles/snap-manual.scss]
-    strip-comment: true
-    html-math-method: katex
-    navbar:
-      logo: images/snap-logo.png
-    # include-in-header:
-    #   - text: |
-    #       <script src="https://examples.org/demo.js"></script>
-    #   - file: analytics.html
-    #   - comments.html
-    # include-before-body: header.html
-  # epub:
-  #   css: styles/epub.css
-  #   cover-image: cover.png
-  pdf:
-    lang: en
-    dir: ltr
-    # https://quarto.org/docs/reference/formats/pdf.html
-    output-file: snap-manual.pdf
-    cover-image: images/cover-image.png
-    # Do not use pdflatex since we have unicode chars
-    pdf-engine: lualatex # wkhtmltopdf # xelatex # or lualatex
-    # pdf-engine-opt:
-    keep-tex: false
-    # This are necessary to make an index.
-    include-in-header: styles/latex-preamble.tex
-    include-after-body:
-      text: |
-        \printindex
-    toc: true
-    number-sections: true
-    number-depth: 1
-    documentclass: book
-    papersize: letter
-    # mainfont: Baskerville
-    # monofont: Source Code Pro
-    # sansfont: Helvetica
-    resource-path:
-      - ./
-      - content/assets/
-      - content/assets/images/
+    - part: Blocks Reference
+      chapters:
+        - blocks/index.md
+        - blocks/motion/forward.qmd
+        - blocks/motion/turn.qmd
+        - blocks/motion/turnLeft.qmd
+        - blocks/motion/setHeading.qmd
+        - blocks/motion/doFaceTowards.qmd
+        - blocks/motion/gotoXY.qmd
+        - blocks/motion/doGotoObject.qmd
+        - blocks/motion/doGlide.qmd
+        - blocks/motion/changeXPosition.qmd
+        - blocks/motion/setXPosition.qmd
+        - blocks/motion/changeYPosition.qmd
+        - blocks/motion/setYPosition.qmd
+        - blocks/motion/bounceOffEdge.qmd
+        - blocks/motion/getPosition.qmd
+        - blocks/motion/xPosition.qmd
+        - blocks/motion/yPosition.qmd
+        - blocks/motion/direction.qmd
+        - blocks/looks/doSwitchToCostume.qmd
+        - blocks/looks/doWearNextCostume.qmd
+        - blocks/looks/getCostumeIdx.qmd
+        - blocks/looks/doSayFor.qmd
+        - blocks/looks/bubble.qmd
+        - blocks/looks/doThinkFor.qmd
+        - blocks/looks/doThink.qmd
+        - blocks/looks/reportGetImageAttribute.qmd
+        - blocks/looks/reportNewCostumeStretched.qmd
+        - blocks/looks/reportNewCostumeSkewed.qmd
+        - blocks/looks/reportNewCostume.qmd
+        - blocks/looks/changeEffect.qmd
+        - blocks/looks/setEffect.qmd
+        - blocks/looks/clearEffects.qmd
+        - blocks/looks/getEffect.qmd
+        - blocks/looks/changeScale.qmd
+        - blocks/looks/setScale.qmd
+        - blocks/looks/getScale.qmd
+        - blocks/looks/show.qmd
+        - blocks/looks/hide.qmd
+        - blocks/looks/reportShown.qmd
+        - blocks/looks/goToLayer.qmd
+        - blocks/looks/goBack.qmd
+        - blocks/sound/playSound.qmd
+        - blocks/sound/doPlaySoundUntilDone.qmd
+        - blocks/sound/doStopAllSounds.qmd
+        - blocks/sound/doPlaySoundAtRate.qmd
+        - blocks/sound/reportGetSoundAttribute.qmd
+        - blocks/sound/reportNewSoundFromSamples.qmd
+        - blocks/sound/doRest.qmd
+        - blocks/sound/doPlayNote.qmd
+        - blocks/sound/doSetInstrument.qmd
+        - blocks/sound/doChangeTempo.qmd
+        - blocks/sound/doSetTempo.qmd
+        - blocks/sound/getTempo.qmd
+        - blocks/sound/changeVolume.qmd
+        - blocks/sound/setVolume.qmd
+        - blocks/sound/getVolume.qmd
+        - blocks/sound/changePan.qmd
+        - blocks/sound/setPan.qmd
+        - blocks/sound/getPan.qmd
+        - blocks/sound/playFreq.qmd
+        - blocks/sound/stopFreq.qmd
+        - blocks/pen/clear.qmd
+        - blocks/pen/down.qmd
+        - blocks/pen/up.qmd
+        - blocks/pen/getPenDown.qmd
+        - blocks/pen/setColor.qmd
+        - blocks/pen/changePenColorDimension.qmd
+        - blocks/pen/setPenColorDimension.qmd
+        - blocks/pen/getPenAttribute.qmd
+        - blocks/pen/changeSize.qmd
+        - blocks/pen/setSize.qmd
+        - blocks/pen/doStamp.qmd
+        - blocks/pen/floodFill.qmd
+        - blocks/pen/write.qmd
+        - blocks/pen/reportPenTrailsAsCostume.qmd
+        - blocks/pen/doPasteOn.qmd
+        - blocks/pen/doCutFrom.qmd
+        - blocks/control/doBroadcast.qmd
+        - blocks/control/doBroadcastAndWait.qmd
+        - blocks/other/doWarp.qmd
+        - blocks/control/doWait.qmd
+        - blocks/control/doWaitUntil.qmd
+        - blocks/control/doForever.qmd
+        - blocks/control/doRepeat.qmd
+        - blocks/control/doUntil.qmd
+        - blocks/control/doFor.qmd
+        - blocks/control/doIf.qmd
+        - blocks/control/doIfElse.qmd
+        - blocks/control/reportIfElse.qmd
+        - blocks/control/doReport.qmd
+        - blocks/control/doStopThis.qmd
+        - blocks/control/doRun.qmd
+        - blocks/control/fork.qmd
+        - blocks/control/evaluate.qmd
+        - blocks/control/reportPipe.qmd
+        - blocks/control/doTellTo.qmd
+        - blocks/control/reportAskFor.qmd
+        - blocks/control/createClone.qmd
+        - blocks/control/newClone.qmd
+        - blocks/control/removeClone.qmd
+        - blocks/control/doPauseAll.qmd
+        - blocks/control/doSwitchToScene.qmd
+        - blocks/control/doDefineBlock.qmd
+        - blocks/control/doDeleteBlock.qmd
+        - blocks/control/doSetBlockAttribute.qmd
+        - blocks/control/reportBlockAttribute.qmd
+        - blocks/control/reportEnvironment.qmd
+        - blocks/control/doSetSlot.qmd
+        - blocks/sensing/reportTouchingObject.qmd
+        - blocks/sensing/reportTouchingColor.qmd
+        - blocks/sensing/reportColorIsTouchingColor.qmd
+        - blocks/sensing/doAsk.qmd
+        - blocks/sensing/getLastAnswer.qmd
+        - blocks/sensing/reportMousePosition.qmd
+        - blocks/sensing/reportMouseX.qmd
+        - blocks/sensing/reportMouseY.qmd
+        - blocks/sensing/reportMouseDown.qmd
+        - blocks/sensing/reportKeyPressed.qmd
+        - blocks/sensing/reportRelationTo.qmd
+        - blocks/sensing/reportAspect.qmd
+        - blocks/sensing/doResetTimer.qmd
+        - blocks/sensing/getTimer.qmd
+        - blocks/sensing/reportDate.qmd
+        - blocks/sensing/reportAttributeOf.qmd
+        - blocks/sensing/reportGet.qmd
+        - blocks/sensing/reportObject.qmd
+        - blocks/sensing/reportURL.qmd
+        - blocks/sensing/reportAudio.qmd
+        - blocks/sensing/reportVideo.qmd
+        - blocks/sensing/doSetVideoTransparency.qmd
+        - blocks/sensing/reportGlobalFlag.qmd
+        - blocks/sensing/doSetGlobalFlag.qmd
+        - blocks/other/reifyScript.qmd
+        - blocks/other/reifyReporter.qmd
+        - blocks/other/reifyPredicate.qmd
+        - blocks/operators/reportVariadicSum.qmd
+        - blocks/operators/reportDifference.qmd
+        - blocks/operators/reportVariadicProduct.qmd
+        - blocks/operators/reportQuotient.qmd
+        - blocks/operators/reportPower.qmd
+        - blocks/operators/reportModulus.qmd
+        - blocks/operators/reportVariadicMin.qmd
+        - blocks/operators/reportVariadicMax.qmd
+        - blocks/operators/reportRound.qmd
+        - blocks/operators/reportMonadic.qmd
+        - blocks/operators/reportAtan2.qmd
+        - blocks/operators/reportRandom.qmd
+        - blocks/operators/reportVariadicLessThan.qmd
+        - blocks/operators/reportVariadicEquals.qmd
+        - blocks/operators/reportVariadicGreaterThan.qmd
+        - blocks/operators/reportVariadicAnd.qmd
+        - blocks/operators/reportVariadicOr.qmd
+        - blocks/operators/reportNot.qmd
+        - blocks/operators/reportBoolean.qmd
+        - blocks/operators/reportJoinWords.qmd
+        - blocks/operators/reportTextSplit.qmd
+        - blocks/operators/reportLetter.qmd
+        - blocks/operators/reportTextAttribute.qmd
+        - blocks/operators/reportUnicode.qmd
+        - blocks/operators/reportUnicodeAsLetter.qmd
+        - blocks/operators/reportIsA.qmd
+        - blocks/operators/reportVariadicIsIdentical.qmd
+        - blocks/operators/reportJSFunction.qmd
+        - blocks/variables/reportGetVar.qmd
+        - blocks/variables/reportGetVar.qmd
+        - blocks/variables/reportGetVar.qmd
+        - blocks/variables/reportGetVar.qmd
+        - blocks/variables/reportGetVar.qmd
+        - blocks/variables/reportGetVar.qmd
+        - blocks/variables/doSetVar.qmd
+        - blocks/variables/doChangeVar.qmd
+        - blocks/variables/doShowVar.qmd
+        - blocks/variables/doHideVar.qmd
+        - blocks/other/doDeclareVariables.qmd
+        - blocks/variables/doDeleteAttr.qmd
+        - blocks/lists/reportNewList.qmd
+        - blocks/lists/reportNumbers.qmd
+        - blocks/lists/reportCONS.qmd
+        - blocks/lists/reportListItem.qmd
+        - blocks/lists/reportCDR.qmd
+        - blocks/lists/reportListAttribute.qmd
+        - blocks/lists/reportListIndex.qmd
+        - blocks/lists/reportListContainsItem.qmd
+        - blocks/lists/reportListIsEmpty.qmd
+        - blocks/lists/reportMap.qmd
+        - blocks/lists/reportKeep.qmd
+        - blocks/lists/reportFindFirst.qmd
+        - blocks/lists/reportCombine.qmd
+        - blocks/lists/doForEach.qmd
+        - blocks/lists/doAddToList.qmd
+        - blocks/lists/doDeleteFromList.qmd
+        - blocks/lists/doInsertInList.qmd
+        - blocks/lists/doReplaceInList.qmd
+        - blocks/lists/reportConcatenatedLists.qmd
+        - blocks/lists/reportReshape.qmd
+        - blocks/lists/reportCrossproduct.qmd
+        - blocks/other/doPrimitive.qmd
+        - blocks/other/doApplyExtension.qmd
+        - blocks/other/reportApplyExtension.qmd
+    # - references.qmd
+    # - content/index-list.qmd
