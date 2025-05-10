@@ -24,6 +24,6 @@ example_images:
     description: Move forward by 10 steps
 ---
 
-# Pipe  $arrowright  {.unnumbered}
+# pipe _ → _ {.unnumbered}
 
 {{< include ../_block.qmd >}}

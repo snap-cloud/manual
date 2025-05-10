@@ -24,6 +24,6 @@ example_images:
     description: Move forward by 10 steps
 ---
 
-# Stop all sounds {.unnumbered}
+# stop all sounds {.unnumbered}
 
 {{< include ../_block.qmd >}}

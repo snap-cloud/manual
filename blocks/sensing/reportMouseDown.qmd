@@ -24,6 +24,6 @@ example_images:
     description: Move forward by 10 steps
 ---
 
-# Mouse down? {.unnumbered}
+# mouse down? {.unnumbered}
 
 {{< include ../_block.qmd >}}

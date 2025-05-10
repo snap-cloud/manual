@@ -24,6 +24,6 @@ example_images:
     description: Move forward by 10 steps
 ---
 
-# Is  empty? {.unnumbered}
+# is _ empty? {.unnumbered}
 
 {{< include ../_block.qmd >}}

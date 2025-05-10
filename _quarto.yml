@@ -207,6 +207,13 @@ book:
         - blocks/pen/doCutFrom.qmd
     - part: Control Blocks
       chapters:
+        - blocks/control/receiveGo.qmd
+        - blocks/control/receiveUserEdit.qmd
+        - blocks/control/receiveOnClone.qmd
+        - blocks/control/receiveMessage.qmd
+        - blocks/control/receiveKey.qmd
+        - blocks/control/receiveConditionEvent.qmd
+        - blocks/control/receiveInteraction.qmd
         - blocks/control/doBroadcast.qmd
         - blocks/control/doBroadcastAndWait.qmd
         - blocks/other/doWarp.qmd

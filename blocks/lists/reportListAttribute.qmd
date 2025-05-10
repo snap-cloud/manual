@@ -24,6 +24,6 @@ example_images:
     description: Move forward by 10 steps
 ---
 
-#  of  {.unnumbered}
+# _ of _ {.unnumbered}
 
 {{< include ../_block.qmd >}}

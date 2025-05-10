@@ -24,6 +24,6 @@ example_images:
     description: Move forward by 10 steps
 ---
 
-# Color  is touching  ? {.unnumbered}
+# color _ is touching _ ? {.unnumbered}
 
 {{< include ../_block.qmd >}}

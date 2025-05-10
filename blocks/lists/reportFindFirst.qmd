@@ -24,6 +24,6 @@ example_images:
     description: Move forward by 10 steps
 ---
 
-# Find first item  in  {.unnumbered}
+# find first item _ in _ {.unnumbered}
 
 {{< include ../_block.qmd >}}

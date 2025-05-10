@@ -24,6 +24,6 @@ example_images:
     description: Move forward by 10 steps
 ---
 
-# Change pen size by  {.unnumbered}
+# change pen size by _ {.unnumbered}
 
 {{< include ../_block.qmd >}}

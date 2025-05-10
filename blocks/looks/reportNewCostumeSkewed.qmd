@@ -24,6 +24,6 @@ example_images:
     description: Move forward by 10 steps
 ---
 
-# Skew  to  degrees  % {.unnumbered}
+# skew _ to _ degrees _ % {.unnumbered}
 
 {{< include ../_block.qmd >}}

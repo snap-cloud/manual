@@ -24,6 +24,6 @@ example_images:
     description: Move forward by 10 steps
 ---
 
-# Play frequency  hz {.unnumbered}
+# play frequency _ Hz {.unnumbered}
 
 {{< include ../_block.qmd >}}

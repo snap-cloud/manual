@@ -24,6 +24,6 @@ example_images:
     description: Move forward by 10 steps
 ---
 
-# Set  effect to  {.unnumbered}
+# set _ effect to _ {.unnumbered}
 
 {{< include ../_block.qmd >}}

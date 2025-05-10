@@ -24,6 +24,6 @@ example_images:
     description: Move forward by 10 steps
 ---
 
-# Key  pressed? {.unnumbered}
+# key _ pressed? {.unnumbered}
 
 {{< include ../_block.qmd >}}

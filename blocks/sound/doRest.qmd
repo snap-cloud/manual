@@ -24,6 +24,6 @@ example_images:
     description: Move forward by 10 steps
 ---
 
-# Rest for  beats {.unnumbered}
+# rest for _ beats {.unnumbered}
 
 {{< include ../_block.qmd >}}

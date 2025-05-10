@@ -24,6 +24,6 @@ example_images:
     description: Move forward by 10 steps
 ---
 
-# Set slot  to  {.unnumbered}
+# set slot _ to _ {.unnumbered}
 
 {{< include ../_block.qmd >}}

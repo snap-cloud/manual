@@ -1,5 +1,54 @@
 [
     {
+        "label": "when $greenflag clicked",
+        "type": "",
+        "category": "control",
+        "selector": "receiveGo",
+        "block_spec": "when $greenflag clicked"
+    },
+    {
+        "label": "when _ is edited _",
+        "type": "",
+        "category": "control",
+        "selector": "receiveUserEdit",
+        "block_spec": "when %edit is edited %message"
+    },
+    {
+        "label": "when I start as a clone",
+        "type": "",
+        "category": "control",
+        "selector": "receiveOnClone",
+        "block_spec": "when I start as a clone"
+    },
+    {
+        "label": "when I receive _ _",
+        "type": "",
+        "category": "control",
+        "selector": "receiveMessage",
+        "block_spec": "when I receive %msgHat %message"
+    },
+    {
+        "label": "when _ key pressed _",
+        "type": "",
+        "category": "control",
+        "selector": "receiveKey",
+        "block_spec": "when %keyHat key pressed %keyName"
+    },
+    {
+        "label": "when _",
+        "type": "",
+        "category": "control",
+        "selector": "receiveConditionEvent",
+        "block_spec": "when %b"
+    },
+    {
+        "label": "when I am _",
+        "type": "",
+        "category": "control",
+        "selector": "receiveInteraction",
+        "block_spec": "when I am %interaction"
+    },
+    {
         "label": "move _ steps",
         "type": "command",
         "category": "motion",
@@ -532,6 +581,27 @@
         "block_spec": "cut from %spr"
     },
     {
+        "label": "color _",
+        "type": "reporter",
+        "category": "pen",
+        "selector": "reportColor",
+        "block_spec": "color %clr"
+    },
+    {
+        "label": "_ of color _",
+        "type": "reporter",
+        "category": "pen",
+        "selector": "reportColorAttribute",
+        "block_spec": "%color of color %clr"
+    },
+    {
+        "label": "new color _",
+        "type": "reporter",
+        "category": "pen",
+        "selector": "reportNewColor",
+        "block_spec": "new color %hsbt"
+    },
+    {
         "label": "broadcast _ _",
         "type": "command",
         "category": "control",
@@ -544,13 +614,6 @@
         "category": "control",
         "selector": "doBroadcastAndWait",
         "block_spec": "broadcast %msg %receive and wait"
-    },
-    {
-        "label": "warp _",
-        "type": "command",
-        "category": "other",
-        "selector": "doWarp",
-        "block_spec": "warp %c"
     },
     {
         "label": "wait _ secs",
@@ -917,27 +980,6 @@
         "block_spec": "set %setting to %b"
     },
     {
-        "label": "_ _",
-        "type": "command",
-        "category": "other",
-        "selector": "reifyScript",
-        "block_spec": "%rc %ringparms"
-    },
-    {
-        "label": "_ _",
-        "type": "reporter",
-        "category": "other",
-        "selector": "reifyReporter",
-        "block_spec": "%rr %ringparms"
-    },
-    {
-        "label": "_ _",
-        "type": "predicate",
-        "category": "other",
-        "selector": "reifyPredicate",
-        "block_spec": "%rp %ringparms"
-    },
-    {
         "label": "_",
         "type": "reporter",
         "category": "operators",
@@ -1134,48 +1176,6 @@
         "block_spec": "JavaScript function ( %mult%s ) { %code }"
     },
     {
-        "label": "blocks json",
-        "type": "reporter",
-        "category": "variables",
-        "selector": "reportGetVar",
-        "block_spec": "blocks json"
-    },
-    {
-        "label": "blocks list",
-        "type": "reporter",
-        "category": "variables",
-        "selector": "reportGetVar",
-        "block_spec": "blocks list"
-    },
-    {
-        "label": "blocks table md",
-        "type": "reporter",
-        "category": "variables",
-        "selector": "reportGetVar",
-        "block_spec": "blocks table md"
-    },
-    {
-        "label": "HEADER",
-        "type": "reporter",
-        "category": "variables",
-        "selector": "reportGetVar",
-        "block_spec": "HEADER"
-    },
-    {
-        "label": "missing screens",
-        "type": "reporter",
-        "category": "variables",
-        "selector": "reportGetVar",
-        "block_spec": "missing screens"
-    },
-    {
-        "label": "test-block",
-        "type": "reporter",
-        "category": "variables",
-        "selector": "reportGetVar",
-        "block_spec": "test-block"
-    },
-    {
         "label": "set _ to _",
         "type": "command",
         "category": "variables",
@@ -1202,13 +1202,6 @@
         "category": "variables",
         "selector": "doHideVar",
         "block_spec": "hide variable %var"
-    },
-    {
-        "label": "script variables _",
-        "type": "command",
-        "category": "other",
-        "selector": "doDeclareVariables",
-        "block_spec": "script variables %scriptVars"
     },
     {
         "label": "inherit _",
@@ -1363,26 +1356,5 @@
         "category": "lists",
         "selector": "reportCrossproduct",
         "block_spec": "combinations %lists"
-    },
-    {
-        "label": "_ primitive _",
-        "type": "command",
-        "category": "other",
-        "selector": "doPrimitive",
-        "block_spec": "%bool primitive %prim"
-    },
-    {
-        "label": "extension _ _",
-        "type": "command",
-        "category": "other",
-        "selector": "doApplyExtension",
-        "block_spec": "extension %ext %mult%s"
-    },
-    {
-        "label": "extension _ _",
-        "type": "reporter",
-        "category": "other",
-        "selector": "reportApplyExtension",
-        "block_spec": "extension %ext %mult%s"
     }
 ]

@@ -24,6 +24,6 @@ example_images:
     description: Move forward by 10 steps
 ---
 
-# If on edge, bounce {.unnumbered}
+# if on edge, bounce {.unnumbered}
 
 {{< include ../_block.qmd >}}

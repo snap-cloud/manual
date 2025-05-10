@@ -24,6 +24,6 @@ example_images:
     description: Move forward by 10 steps
 ---
 
-# Ask  and wait {.unnumbered}
+# ask _ and wait {.unnumbered}
 
 {{< include ../_block.qmd >}}

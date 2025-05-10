@@ -24,6 +24,6 @@ example_images:
     description: Move forward by 10 steps
 ---
 
-# Clear graphic effects {.unnumbered}
+# clear graphic effects {.unnumbered}
 
 {{< include ../_block.qmd >}}
