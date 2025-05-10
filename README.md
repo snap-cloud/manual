@@ -3,10 +3,14 @@
 
 ![Snap! Logo](./images/snap-logo.png)
 
-## [Read the Manual][webiste] ([PDF - coming soon][pdf])
+## [Read the Manual][webiste] ([PDF - coming soon][pdf]) (Original PDF)[orginal_pdf]
 
-[webiste]: https://snap-cloud.github.io/snap-manual/
-[pdf]: https://snap-cloud.github.io/snap-manual/snap-manual.pdf
+[![GitHub Pages](https://img.shields.io/badge/website-GitHub%20Pages-blue.svg)](https://snap-cloud.github.io/manual/)
+
+
+[webiste]: https://snap-cloud.github.io/manual/
+[pdf]: https://snap-cloud.github.io/manual/snap-manual.pdf
+[orginal_pdf]: https://snap.berkeley.edu/snap/help/SnapManual.pdf
 
 The reference manual for the [Snap<em>!</em> programming language][sbe]. ([GitHub][snap_gh])
 
