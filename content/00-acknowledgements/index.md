@@ -76,7 +76,7 @@ Foundation or other funders.
 **Version 8.0**
 
 Snap*!* (formerly BYOB) is an extended reimplementation of Scratch
-(<u>https://scratch.mit.edu</u>) that allows you to Build Your Own
+(<a href="https://scratch.mit.edu"><u>https://scratch.mit.edu</u></a>) that allows you to Build Your Own
 Blocks. It also features ﬁrst class lists, ﬁrst class procedures, first
 class sprites, first class costumes, first class sounds, and first class
 continuations. These added capabilities make it suitable for a serious
@@ -88,6 +88,6 @@ very helpful to have some experience with Scratch before reading this
 manual, but not essential.
 
 To run Snap*!*, open a browser window and
-connect to https://snap.berkeley.edu/run. The Snap*!* community web site
-at https://snap.berkeley.edu is not part of this manual’s scope.
+connect to <a href="https://snap.berkeley.edu/run">https://snap.berkeley.edu/run</a>. The Snap*!* community web site
+at <a href="https://snap.berkeley.edu">https://snap.berkeley.edu</a> is not part of this manual’s scope.
 
