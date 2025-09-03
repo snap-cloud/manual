@@ -19,9 +19,9 @@ partial-data:
   #     url: https://example.com/project1
   #   - title: Example Project 1
   #     url: https://example.com/project1
-  # example_images:
-  #   - image: move_forward.png
-  #     description: Move forward by 10 steps
+  example_images:
+     - image: Snap-Move-Video.mp4
+       description: Create a square shape
   #   - image: move_forward.png
   #     description: Move forward by 10 steps
 ---
