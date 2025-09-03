@@ -33,7 +33,7 @@ manual, but not essential.
 
 To run [Snap]{.snap}, open a browser window and
 visit [`https://snap.berkeley.edu/snap`](https://snap.berkeley.edu/snap). The [Snap]{.snap} community web site
-at https://snap.berkeley.edu is covered briefly in [@sec-appendix-community].
+at https://snap.berkeley.edu is covered briefly in @sec-appendix-community
 
 
 The manual is roughly organized into a few sections.
@@ -59,3 +59,4 @@ A search function is included in the upper right hand corner. If you which you c
 
 this is currently a work in progress.
 :::
+
