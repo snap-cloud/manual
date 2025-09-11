@@ -4,7 +4,7 @@
 
 Prior to version 3, Scratch\index{Scratch} block inputs came in two types
 \index{data type} : [Text-or-number]{.mono} type and [Number]{.mono} type. The former is
-indicated by a rectangular box, the latter by a rounded box: ![image654.png](assets/image654.png){.image-inline} <!--  style="width:1.375in;height:0.2125in" / -->. A third
+indicated by a rectangular box, the latter by a rounded box: ![image654.png](assets/image654.png){.image-inline}. A third
 Scratch type, [Boolean]{.mono} (true/false), can be used in certain [Control]{.mono}
 blocks with hexagonal slots.
 
@@ -19,16 +19,15 @@ In the Block Editor\index{Block Editor} input name dialog\index{input
 name dialog}, there is a right-facing arrowhead after the "`Input name`"
 option:
 
-![image692.png](assets/image692.png{.image-4x} <!--  style="width:5.17083in;height:4.13542in" / -->
+![image692.png](assets/image692.png)
 
 Clicking that arrowhead opens the “long” input name dialog\index{long
 input name dialog} :
 
-![image657.png](assets/image657.png){.image-4x} <!--  style="width:5.17083in;height:4.13542in" / -->
+![image657.png](assets/image657.png)
 
-There are twelve input type
-shapes\index{input-type shapes}, plus three mutually exclusive
-modifiers, listed in addition to the basic choice between title text and
+There are twelve input type shapes\index{input-type shapes}, plus
+three mutually exclusive modifiers, listed in addition to the basic choice between title text and
 an input name. The default type, the one you get if you don’t choose
 anything else, is "`Any`", meaning that this input slot is meant to accept
 any value of any type\index{Any type}. If the <var>size</var> input in your block
