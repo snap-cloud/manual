@@ -1578,10 +1578,21 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../05-typed-inputs/assets/image695.png" class="img-fluid figure-img"></p>
+<figcaption>Definition of <code>my for</code> block and the block created.</figcaption>
+</figure>
+</div>
 <section id="call-and-run" class="level2" data-number="6.1">
 <h2 data-number="6.1" class="anchored" data-anchor-id="call-and-run"><span class="header-section-number">6.1</span> Call and Run</h2>
 <p>In the for block<span></span> example above, the input named <var>action</var> has been declared as type “<code>Command (C-shaped)</code>”; that’s why the finished block is C-shaped. But how does the block actually tell <span class="snap">Snap</span> to carry out the commands inside the C-slot? Here is a simple version of the block script:</p>
-<p><img src="assets/image692.png" class="img-fluid" alt="image692.png"> <!--  style="width:3.67292in;height:1.58333in" / --></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="assets/image692.png" class="img-fluid figure-img"></p>
+<figcaption>image692.png</figcaption>
+</figure>
+</div>
 <p>This is simplified because it assumes, without checking, that the ending value is greater than the starting value; if not, the block should (depending on the designer’s purposes) either not run at all, or change the variable by −1 for each repetition instead of by 1.</p>
 <p>The important part of this script is the <code>run</code> block<span></span> near the end. This is a <span class="snap">Snap</span> built-in command block that takes a Command-type value (a script) as its input, and carries out its instructions. (In this example, the value of the input <img src="assets/image693.png" class="img-fluid" alt="image693.png"> <!--  style="width:0.5in;height:0.15625in" / --> is the script that the user puts in the C-slot of the <code>my for</code> block.) There is a similar <code>call</code> reporter block for invoking a Reporter or Predicate block. The <code>call</code><span></span> and <code>run</code> blocks are at the heart of <span class="snap">Snap</span>’s ﬁrst class procedure<span></span> feature; they allow scripts and blocks to be used as data—in this example, as an input to a block—and eventually carried out under control of the user’s program.</p>
 <p>Here’s another example, this time using a Reporter-type input in a <code>map</code> block (see <a href="../04-first-class-lists/index.html#sec-map" class="quarto-xref"><span>Section 4.4.1</span></a>):<span></span></p>
@@ -1602,12 +1613,12 @@ ul.task-list li input[type="checkbox"] {
 <p>If the number of inputs provided is neither one nor the number of empty slots, then there is no automatic filling of empty slots. (Instead you must use explicit parameters in the ring, as discussed in Section C below.)</p>
 <p>An even more important thing to notice about these examples is the <em><code>ring</code></em><span></span> around the Reporter-type input slots in <code>call</code> and <code>map</code> above. This notation indicates that <em>the block itself,</em> not the number or other value that the block would report when called, is the input. If you want to use a block itself in a non-Reporter-type (e.g., Any-type) input slot, you can enclose it explicitly in a ring, found at the top of the <span class="mono">Operators</span> palette.</p>
 <p><img src="assets/image744.png" class="img-fluid" alt="image744.png"> <!--  style="width:0.5in;height:0.15625in" / --></p>
-<p>As a shortcut, if you right-click or control-click on a block (such as the <code>( ) + ( ) </code> block in this example), one of the choices in the menu that appears is “<code>ringify</code>”<span></span> and/or “<code>unringify</code>” <span></span>. The <code>ring</code> indicating a Reporter-type or Predicate-type input slot is essentially the same idea for reporters as the C-shaped input slot with which you’re already familiar; with a C-shaped slot, it’s <em>the script</em> you put in the slot that becomes the input to the C-shaped block.</p>
+<p>As a shortcut, if you right-click or control-click on a block (such as the <code>( ) + ( )</code> block in this example), one of the choices in the menu that appears is “<code>ringify</code>”<span></span> and/or “<code>unringify</code>” <span></span>. The <code>ring</code> indicating a Reporter-type or Predicate-type input slot is essentially the same idea for reporters as the C-shaped input slot with which you’re already familiar; with a C-shaped slot, it’s <em>the script</em> you put in the slot that becomes the input to the C-shaped block.</p>
 <p>There are three <code>ring</code> shapes. All are oval on the outside, indicating that the <code>ring</code> reports a value, the block or script inside it, but the inside shapes are command, reporter, or predicate, indicating what kind of block or script is expected. Sometimes you want to put something more complicated than a single reporter inside a reporter <code>ring</code>; if so, you can use a script, but the script must <code>report</code> a value, as in a custom reporter definition.</p>
 </section>
 <section id="variables-in-ring-slots" class="level3" data-number="6.1.2">
 <h3 data-number="6.1.2" class="anchored" data-anchor-id="variables-in-ring-slots"><span class="header-section-number">6.1.2</span> Variables in Ring Slots</h3>
-<p>Note that the <code>run</code> block<span></span> in the definition of the <code>my for</code> block (see <span class="quarto-unresolved-ref">?sec-call-and-run</span>) doesn’t have a <code>ring</code> around its input variable <var>action</var>. When you drag a variable into a ringed input slot, you generally <em>do</em> want to use <em>the value of</em> the variable, which will be the block or script you’re trying to run or call, rather than the orange variable reporter itself. So <span class="snap">Snap</span> automatically removes the ring in this case. If you ever do want to use the variable <em>block itself,</em> rather than the value of the variable, as a Procedure-type input, you can drag the variable into the input slot, then control-click or right-click it and choose “<code>ringify</code>” from the menu that appears. (Similarly, if you ever want to call a function that will report a block to use as the input, such as <code>item (1) of ( ) </code> applied to a list <em>of blocks,</em> you can choose “<code>unringify</code>” from the menu. Almost all the time, though, <span class="snap">Snap</span> does what you mean without help.)</p>
+<p>Note that the <code>run</code> block<span></span> in the definition of the <code>my for</code> block (see <span class="quarto-unresolved-ref">?sec-call-and-run</span>) doesn’t have a <code>ring</code> around its input variable <var>action</var>. When you drag a variable into a ringed input slot, you generally <em>do</em> want to use <em>the value of</em> the variable, which will be the block or script you’re trying to run or call, rather than the orange variable reporter itself. So <span class="snap">Snap</span> automatically removes the ring in this case. If you ever do want to use the variable <em>block itself,</em> rather than the value of the variable, as a Procedure-type input, you can drag the variable into the input slot, then control-click or right-click it and choose “<code>ringify</code>” from the menu that appears. (Similarly, if you ever want to call a function that will report a block to use as the input, such as <code>item (1) of ( )</code> applied to a list <em>of blocks,</em> you can choose “<code>unringify</code>” from the menu. Almost all the time, though, <span class="snap">Snap</span> does what you mean without help.)</p>
 </section>
 </section>
 <section id="writing-higher-order-procedures" class="level2" data-number="6.2">
@@ -1624,7 +1635,7 @@ ul.task-list li input[type="checkbox"] {
 <p>Why would you ever choose an inline Command slot rather than a C shape? Other than the <code>run</code> block discussed below, the only case I can think of is something like the C<span></span> /C++/Java<span></span> <code>for</code> loop, which actually has <em>three</em> command script inputs (and one predicate input), only one of which is the “featured” loop body:</p>
 <p><img src="assets/image710.png" class="img-fluid" alt="image710.png"> <!--  style="width:2.11458in;height:0.46875in" / --></p>
 <p>Okay, now that we have procedures as inputs to our blocks, how do we use them? We use the blocks <code>run</code><span></span> (for commands) and <code>call</code> <span></span> (for reporters). The <code>run</code> block’s script input is an inline <code>ring</code>, not C-shaped, because we anticipate that it will be rare to use a specific, literal script as the input. Instead, the input will generally be a variable whose <em>value</em> is a script.</p>
-<p>The <code>run and <code>call blocks have arrowheads at the end that can be used to open slots for inputs to the called procedures. How does <span class="snap">Snap</span> know where to use those inputs? If the called procedure (block or script) has empty input slots, <span class="snap">Snap</span> “does the right thing.” This has several possible meanings:</code></code></p><code><code>
+<p>The <code>run</code> and <code>call</code> blocks have arrowheads at the end that can be used to open slots for inputs to the called procedures. How does <span class="snap">Snap</span> know where to use those inputs? If the called procedure (block or script) has empty input slots, <span class="snap">Snap</span> “does the right thing.” This has several possible meanings:</p>
 <ol type="1">
 <li>If the number of empty slots<span></span> is exactly equal to the number of inputs provided, then <span class="snap">Snap</span> fills the empty slots from left to right:</li>
 </ol>
@@ -1642,11 +1653,21 @@ ul.task-list li input[type="checkbox"] {
 <p>A relatively rare situation not yet considered here is the case of a recursive block that has a variable number of inputs. Let’s say the user of your project calls your block with five inputs one time, and 87 inputs another time. How do you write the recursive call <span></span> to your block when you don’t know how many inputs to give it? The answer is that you collect the inputs in a list <span></span> (recall that, when you declare an input name to represent a variable number of inputs, your block sees those inputs as a list of values in the first place), and then, in the recursive call, you drop that input list <em>onto the arrowheads</em> that indicate a variable-input slot<span></span>, rather than onto the input slot:</p>
 <p><img src="assets/image715.png" class="img-fluid" alt="image715.png"> <!--  style="width:2.27569in;height:1.59722in" / --></p>
 <p>Note that the halo<span></span> you see while dragging onto the arrowheads<span></span> is red<span></span> instead of white, and covers the input slot as well as the arrowheads. And when you drop the expression onto the arrowheads, the words “<code>input list:</code>”<span></span> are added to the block text and the arrowheads disappear (in this invocation only) to remind you that the list represents all of the multiple inputs, not just a single input. The items in the list are taken <em>individually</em> as inputs to the script. Since <var>numbers</var> is a list of numbers, each individual item is a number, just what <code>sizes</code> wants. This block will take any number of numbers as inputs, and will make the sprite grow and shrink accordingly:</p>
-<p><img src="assets/image716.png" class="img-fluid" alt="image716.png"> <!--  style="width:2.95833in;height:0.6875in" / --></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="assets/image716.png" class="img-fluid figure-img"></p>
+<figcaption>image716.png</figcaption>
+</figure>
+</div>
 <p>The user of this block calls it with any number of <em>individual numbers</em> as inputs. But inside the definition of the block, all of those numbers form <em>a list</em> that has a single input name, <var>numbers</var>. This recursive definition ﬁrst checks to make sure there are any inputs at all. If so, it processes the ﬁrst input (<code>item (1) of ( )</code>the list), then it wants to make a recursive call with all but the ﬁrst number (<code>all but first of ( )</code>). But <code>sizes</code> doesn’t take a list as input; it takes numbers as inputs! So this would be wrong:</p>
-<p><img src="assets/image722.png" class="img-fluid" alt="image722.png"> <!--  style="width:2.95833in;height:0.6875in" / --></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="assets/image722.png" class="img-fluid figure-img"></p>
+<figcaption>image722.png</figcaption>
+</figure>
+</div>
 </section>
-</code></code></section><code><code>
+</section>
 <section id="formal-parameters" class="level2" data-number="6.3">
 <h2 data-number="6.3" class="anchored" data-anchor-id="formal-parameters"><span class="header-section-number">6.3</span> Formal Parameters</h2>
 <p>The <code>rings</code> around Procedure-type inputs<span></span> have an arrowhead at the right. Clicking the arrowhead allows you to give the inputs to a block or script explicit names<span></span>, instead of using empty input slots as we’ve done until now.</p>
@@ -1671,12 +1692,54 @@ ul.task-list li input[type="checkbox"] {
 <section id="special-forms" class="level2" data-number="6.5">
 <h2 data-number="6.5" class="anchored" data-anchor-id="special-forms"><span class="header-section-number">6.5</span> Special Forms</h2>
 <p>The primitive <code>if else</code> <span></span> block has two C-shaped command slots and chooses one or the other depending on a Boolean test. Because Scratch doesn’t emphasize functional programming, it lacks a corresponding reporter block to choose between two expressions. <span class="snap">Snap</span> has one, but we could write our own:</p>
-<p><img src="assets/image736.png" class="img-fluid" alt="image736.png"> <!--  style="width:2.49931in;height:0.27847in" / --> <img src="assets/image737.png" class="img-fluid" alt="image737.png"> <!--  style="width:2.40208in;height:1.42708in" / --> <img src="assets/image739.png" class="img-fluid" alt="image739.png"> <!--  style="width:3.81899in;height:0.27433in" / --></p>
-<p>Our block works for these simple examples, but if we try to use it in writing a recursive operator <span></span>, it’ll fail:</p>
+<!-- TODO: The 2 + 1 layout is kind of a special case. -->
+<div class="evenly-spaced-images quarto-layout-panel" data-layout-ncol="2">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<p><img src="assets/image736.png" class="img-fluid" alt="image736.png"> <br> <img src="assets/image739.png" class="img-fluid" alt="image739.png"></p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="assets/image737.png" class="img-fluid figure-img"></p>
+<figcaption>image737.png</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<p>Our block works for these simple examples, but if we try to use it in writing a recursive operator<span></span>, it’ll fail:</p>
 <p><img src="assets/image738.png" class="img-fluid" alt="image738.png"> <!--  style="width:4.29167in;height:0.84861in" / --></p>
 <p>The problem is that when any block is called, all of its inputs are computed (evaluated) before the block itself runs. The block itself knows only the values of its inputs, not what expressions were used to compute them. In particular, all of the inputs to <code>my if then else</code> block are evaluated ﬁrst thing. That means that even in the base case, <code>factorial</code><span></span> will try to call itself recursively, causing an infinite loop. We need <code>my if then else</code> block to be able to select only one of the two alternatives to be evaluated.</p>
 <p>We have a mechanism to allow that: declare the then variable <var>yes</var> and else variable <var>no</var> inputs to be of type <span class="mono">Reporter</span> rather than type <span class="mono">Any</span>. Then, when calling the block, those inputs will be enclosed in a <code>ring</code> so that the expressions themselves, rather than their values, become the inputs:</p>
-<p><img src="assets/image740.png" class="img-fluid" alt="image740.png"> <!--  style="width:1.11458in;height:0.69792in" / --> <img src="assets/image742.png" class="img-fluid" alt="image742.png"> <!--  style="width:2.61736in;height:1.51042in" / --> <img src="assets/image741.png" class="img-fluid" alt="image741.png"> <!--  style="width:4.52083in;height:1.02292in" / --></p>
+<div class="evenly-spaced-images quarto-layout-panel" data-layout-ncol="3">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="assets/image740.png" class="img-fluid figure-img"></p>
+<figcaption>image740.png</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="assets/image742.png" class="img-fluid figure-img"></p>
+<figcaption>image742.png</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="assets/image741.png" class="img-fluid figure-img"></p>
+<figcaption>image741.png</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
 <p>In this version, the program works, with no infinite loop. But we’ve paid a heavy price: this <code>reporter-if</code> is no longer as intuitively obvious as the Scratch command-<code>if</code>. You have to know about procedures as data, about <code>rings</code>, and about a trick to get a constant value in a ringed slot <span></span>. (The <code>id ( )</code> block<span></span> implements the identity function<span></span>, which reports its input.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> We need it because <code>rings</code> take only reporters as input, not numbers.) What we’d like is a <code>reporter-if</code> that <em>behaves</em> like this one, delaying the evaluation of its inputs, but <em>looks</em> like our ﬁrst version, which was easy to use except that it didn’t work.</p>
 <p>Such blocks are indeed possible. A block that seems to take a simple expression as input, but delays the evaluation of that input by wrapping an “invisible ring” around it (and, if necessary, an <code>id ( )</code>-like transformation of constant data into constant functions) is called a <em>special form</em><span></span>. To turn our <code>if</code> block into a special form, we edit the block’s prototype, declaring the inputs <var>yes</var> and <var>no</var> to be of type “<code>Any (unevaluated)</code>”<span></span> instead of type <span class="mono">Reporter</span>. The script for the block is still that of the second version, including the use of <code>call</code> to evaluate either <var>yes</var> or <var>no</var> but not both. But the slots appear as white <span class="mono">Any-type</span> rectangles, not <span class="mono">Reporter-type</span> rings, and the factorial block will look like our ﬁrst attempt.</p>
 <p>In a special form’s prototype, the unevaluated<span></span> input slot(s) are indicated by a lambda (“<code>λ</code>”) next to the input name, just as if they were declared as <span class="mono">Procedure</span> type<span></span>. They <em>are</em> <span class="mono">Procedure</span> type, really; they’re just disguised to the user of the block.</p>
@@ -1696,7 +1759,7 @@ ul.task-list li input[type="checkbox"] {
 </ol>
 </section>
 
-</code></code></main><code><code> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
@@ -2115,8 +2178,8 @@ ul.task-list li input[type="checkbox"] {
       </a>
   </div>
 </nav>
-</code></code></div><footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://forum.snap.berkeley.edu/c/manual/77" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></div></div></footer><code><code> <!-- /content -->
-<script>
+</div> <!-- /content -->
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://forum.snap.berkeley.edu/c/manual/77" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></div></div></footer><script>
   const nav = document.querySelector('nav');
   nav.insertAdjacentHTML('afterend', '<div class="trapezoid"></div>');
 </script>
@@ -2124,5 +2187,5 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-</code></code><script src="../site_libs/quarto-html/zenscroll-min.js"></script>
+<script src="../site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>
