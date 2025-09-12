@@ -1638,7 +1638,13 @@ ul.task-list li input[type="checkbox"] {
 <p>The “<code>Multiple inputs</code>” option: The <code>list</code> block introduced earlier accepts any number of inputs to specify the items of the new list. To allow this, <span class="snap">Snap</span> introduces the arrowhead notation (⏴⏵) that expands and contracts the block, adding and removing input slots. (<span class="mono">Shift-clicking</span> on an arrowhead adds or removes three input slots at once.) Custom blocks made by the <span class="snap">Snap</span> user have that capability, too. If you choose the “<code>Multiple inputs</code>” button, then arrowheads<span></span> will appear after the input slot in the block. More or fewer slots (as few as zero) may be used. When the block runs, all of the values in all of the slots for this input name are collected into a list, and the value of the input as seen inside the script is that list of values:</p>
 <p>The ellipsis<span></span> (…) in the orange input slot name box in the prototype indicates a multiple or <em>variadic</em> input<span></span> .</p>
 <p>The third category, “<code>Upvar - make internal variable</code><span></span> <code>visible to caller</code>”<span></span>, isn’t really an input at all, but rather a sort of output from the block to its user. It appears as an orange variable oval in the block, rather than as an input slot. Here’s an example; the uparrow (<strong>↑</strong>) <span></span> in the prototype indicates this kind of internal variable name:</p>
-<p><img src="assets/image695.png" class="img-fluid" alt="image695.png"> <!--  style="width:1.76389in;height:0.93056in" / --></p>
+<!-- Referred to at the top of chapter 6. -->
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="assets/image695.png" class="img-fluid figure-img"></p>
+<figcaption>Definition of <code>my for</code> block and the block created.</figcaption>
+</figure>
+</div>
 <p>The variable <var>i</var> (in the block on the right above) can be dragged from the for block<span></span> into the blocks used in its C-shaped command slot. Also, by clicking on the orange <var>i</var>, the user can change the name of the variable as seen in the calling script (although the name hasn’t changed inside the block’s definition). This kind of variable is called an <em>upvar</em><span></span> for short, because it is passed <em>upward</em> from the custom block to the script that uses it.</p>
 <p>Note about the example: <code>for</code> is a primitive block, but it doesn’t need to be. You’re about to see (next chapter) how it can be written in <span class="snap">Snap</span>. Just give it a different name to avoid confusion, such as <code>my for</code> as above.</p>
 </section>
@@ -1663,7 +1669,7 @@ ul.task-list li input[type="checkbox"] {
 <p>Some primitive blocks have symbols<span></span> as part of the block name: <img src="assets/image687.png" class="image-inline img-fluid" alt="image687.png"> <!--  style="width:1.21875in;height:0.23472in" / -->. Custom blocks can use symbols too. In the Block Editor, click the plus sign in the prototype at the point where you want to insert the symbol. Then click the “<code>title text</code>” picture below the text box that’s expecting an input slot name. The dialog will then change to look like this:</p>
 <p><img src="assets/image689.png" class="img-fluid" alt="image689.png"> <!--  style="width:2.03472in;height:1.26389in" / --></p>
 <p>The important part to notice is the arrowhead that has appeared at the right end of the text box. Click it to see the menu shown here at the left.</p>
-<p>Choose one of the symbols. The result will have the symbol you want: <img src="assets/image688.png" class="image-inline img-fluid" alt="image688.png"> <!--  style="width:1.24444in;height:0.26667in" / --> The available symbols are, pretty much, the ones that are used in <span class="snap">Snap</span> icons.</p>
+<p>Choose one of the symbols. The result will have the symbol you want: <img src="assets/image688.png" class="image-inline img-fluid" alt="image688.png">. The available symbols are, pretty much, the ones that are used in <span class="snap">Snap</span> icons.</p>
 <p>But I’d like the arrow symbol bigger, and yellow, so I edit its name:</p>
 <p><img src="assets/image690.png" class="img-fluid" alt="image690.png"> <!--  style="width:2.03472in;height:1.26389in" / --></p>
 <p>This makes the symbol 1.5 times as big as the letters in the block text, using a color with red-green-blue values of 255-255-150 (each between 0 and 255). Here’s the result:</p>
