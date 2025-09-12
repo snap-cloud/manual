@@ -222,7 +222,8 @@ than as an input slot. Here’s an example; the uparrow (**↑**)
 \index{upward-pointing arrow} in the prototype indicates this kind of
 internal variable name:
 
-![image695.png](assets/image695.png) <!--  style="width:1.76389in;height:0.93056in" / -->
+<!-- Referred to at the top of chapter 6. -->
+![Definition of `my for` block and the block created.](assets/image695.png)
 
 The variable <var>i</var> (in the block on the right above) can be dragged from the
 for block\index{for block} into the blocks used in its C-shaped command
@@ -270,7 +271,7 @@ The important part to notice
 is the arrowhead that has appeared at the right end of the text box.
 Click it to see the menu shown here at the left.
 
-Choose one of the symbols. The result will have the symbol you want: ![image688.png](assets/image688.png){.image-inline} <!--  style="width:1.24444in;height:0.26667in" / --> The
+Choose one of the symbols. The result will have the symbol you want: ![image688.png](assets/image688.png){.image-inline}. The
 available symbols are, pretty much, the ones that are used in [Snap]{.snap}
 icons.
 
