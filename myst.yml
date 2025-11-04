@@ -1,0 +1,302 @@
+# See docs at: https://mystmd.org/guide/frontmatter
+version: 1
+project:
+  id: e2e8108c-f6b3-443e-8192-e9f0a4b5e752
+  title: Snap<em>!</em> Reference Manual
+  description: A manual for the Snap! programming language
+  keywords:
+    - Snap!
+    - programming languages
+    - blocks-based programming
+    - visual programming
+  authors:
+    - Brian Harvey
+    - Jens Mönig
+    - Michael Ball
+    - Jadga Hügle
+    - Victoria Phelps
+    - Bernat Romagosa
+  github: https://github.com/snap-cloud/manual
+  # To autogenerate a Table of Contents, run "jupyter book init --write-toc"
+
+  toc:
+    - file: index.md
+    - title: Acknowledgements
+      children:
+        - file: 00-acknowledgements/index.md
+    - title: Blocks, Scripts, and Sprites
+      children:
+        - file: 01-blocks-scripts-and-sprites/index.md
+    - title: Saving And Loading Projects
+      children:
+        - file: 02-saving-and-loading-projects-and/index.md
+    - title: Building A Block
+      children:
+        - file: 03-building-a-block/index.md
+    - title: First Class Lists
+      children:
+        - file: 04-first-class-lists/index.md
+    - title: Typed Inputs
+      children:
+        - file: 05-typed-inputs/index.md
+    - title: Procedures As Data
+      children:
+        - file: 06-procedures-as-data/index.md
+    - title: Object Oriented Programming With Sprites
+      children:
+        - file: 07-object-oriented-programming-with-sprites/index.md
+    - title: Oop With Procedures
+      children:
+        - file: 08-oop-with-procedures/index.md
+    - title: The Outside World
+      children:
+        - file: 09-the-outside-world/index.md
+    - title: Continuations
+      children:
+        - file: 10-continuations/index.md
+    - title: Metaprogramming
+      children:
+        - file: 11-metaprogramming/index.md
+    - title: User Interface Elements
+      children:
+        - file: 12-user-interface-elements/index.md
+    - title: Appendix
+      children:
+        - title: A Snap Color Library
+          children:
+            - file: appendix/a-snap-color-library/index.md
+        - title: B Apl Features
+          children:
+            - file: appendix/b-apl-features/index.md
+        - title: Community
+          children:
+            - file: appendix/community/index.md
+            - file: appendix/community/students.md
+            - file: appendix/community/teachers.md
+        - title: Libraries
+          children:
+            - file: appendix/libraries/index.md
+    # Consider Auto-generating this, but it should match the actual Snap! palette.
+    - title: Blocks
+      children:
+        - file: blocks/index.md
+        - title: Motion Blocks
+          children:
+            - file: blocks/motion/forward.qmd
+            - file: blocks/motion/turn.qmd
+            - file: blocks/motion/turnLeft.qmd
+            - file: blocks/motion/setHeading.qmd
+            - file: blocks/motion/doFaceTowards.qmd
+            - file: blocks/motion/gotoXY.qmd
+            - file: blocks/motion/doGotoObject.qmd
+            - file: blocks/motion/doGlide.qmd
+            - file: blocks/motion/changeXPosition.qmd
+            - file: blocks/motion/setXPosition.qmd
+            - file: blocks/motion/changeYPosition.qmd
+            - file: blocks/motion/setYPosition.qmd
+            - file: blocks/motion/bounceOffEdge.qmd
+            - file: blocks/motion/getPosition.qmd
+            - file: blocks/motion/xPosition.qmd
+            - file: blocks/motion/yPosition.qmd
+            - file: blocks/motion/direction.qmd
+        - title: Looks Blocks
+          children:
+            - file: blocks/looks/doSwitchToCostume.qmd
+            - file: blocks/looks/doWearNextCostume.qmd
+            - file: blocks/looks/getCostumeIdx.qmd
+            - file: blocks/looks/doSayFor.qmd
+            - file: blocks/looks/bubble.qmd
+            - file: blocks/looks/doThinkFor.qmd
+            - file: blocks/looks/doThink.qmd
+            - file: blocks/looks/reportGetImageAttribute.qmd
+            - file: blocks/looks/reportNewCostumeStretched.qmd
+            - file: blocks/looks/reportNewCostumeSkewed.qmd
+            - file: blocks/looks/reportNewCostume.qmd
+            - file: blocks/looks/changeEffect.qmd
+            - file: blocks/looks/setEffect.qmd
+            - file: blocks/looks/clearEffects.qmd
+            - file: blocks/looks/getEffect.qmd
+            - file: blocks/looks/changeScale.qmd
+            - file: blocks/looks/setScale.qmd
+            - file: blocks/looks/getScale.qmd
+            - file: blocks/looks/show.qmd
+            - file: blocks/looks/hide.qmd
+            - file: blocks/looks/reportShown.qmd
+            - file: blocks/looks/goToLayer.qmd
+            - file: blocks/looks/goBack.qmd
+        - title: Sound Blocks
+          children:
+            - file: blocks/sound/playSound.qmd
+            - file: blocks/sound/doPlaySoundUntilDone.qmd
+            - file: blocks/sound/doStopAllSounds.qmd
+            - file: blocks/sound/doPlaySoundAtRate.qmd
+            - file: blocks/sound/reportGetSoundAttribute.qmd
+            - file: blocks/sound/reportNewSoundFromSamples.qmd
+            - file: blocks/sound/doRest.qmd
+            - file: blocks/sound/doPlayNote.qmd
+            - file: blocks/sound/doSetInstrument.qmd
+            - file: blocks/sound/doChangeTempo.qmd
+            - file: blocks/sound/doSetTempo.qmd
+            - file: blocks/sound/getTempo.qmd
+            - file: blocks/sound/changeVolume.qmd
+            - file: blocks/sound/setVolume.qmd
+            - file: blocks/sound/getVolume.qmd
+            - file: blocks/sound/changePan.qmd
+            - file: blocks/sound/setPan.qmd
+            - file: blocks/sound/getPan.qmd
+            - file: blocks/sound/playFreq.qmd
+            - file: blocks/sound/stopFreq.qmd
+        - title: Pen Blocks
+          children:
+            - file: blocks/pen/clear.qmd
+            - file: blocks/pen/down.qmd
+            - file: blocks/pen/up.qmd
+            - file: blocks/pen/getPenDown.qmd
+            - file: blocks/pen/setColor.qmd
+            - file: blocks/pen/changePenColorDimension.qmd
+            - file: blocks/pen/setPenColorDimension.qmd
+            - file: blocks/pen/getPenAttribute.qmd
+            - file: blocks/pen/changeSize.qmd
+            - file: blocks/pen/setSize.qmd
+            - file: blocks/pen/doStamp.qmd
+            - file: blocks/pen/floodFill.qmd
+            - file: blocks/pen/write.qmd
+            - file: blocks/pen/reportPenTrailsAsCostume.qmd
+            - file: blocks/pen/doPasteOn.qmd
+            - file: blocks/pen/doCutFrom.qmd
+            - file: blocks/pen/reportColor.qmd
+            - file: blocks/pen/reportColorAttribute.qmd
+            - file: blocks/pen/reportNewColor.qmd
+        - title: Control Blocks
+          children:
+            - file: blocks/control/receiveGo.qmd
+            - file: blocks/control/receiveUserEdit.qmd
+            - file: blocks/control/receiveOnClone.qmd
+            - file: blocks/control/receiveMessage.qmd
+            - file: blocks/control/receiveKey.qmd
+            - file: blocks/control/receiveConditionEvent.qmd
+            - file: blocks/control/receiveInteraction.qmd
+            - file: blocks/control/doBroadcast.qmd
+            - file: blocks/control/doBroadcastAndWait.qmd
+            - file: blocks/other/doWarp.qmd
+            - file: blocks/control/doWait.qmd
+            - file: blocks/control/doWaitUntil.qmd
+            - file: blocks/control/doForever.qmd
+            - file: blocks/control/doRepeat.qmd
+            - file: blocks/control/doUntil.qmd
+            - file: blocks/control/doFor.qmd
+            - file: blocks/control/doIf.qmd
+            - file: blocks/control/doIfElse.qmd
+            - file: blocks/control/reportIfElse.qmd
+            - file: blocks/control/doReport.qmd
+            - file: blocks/control/doStopThis.qmd
+            - file: blocks/control/doRun.qmd
+            - file: blocks/control/fork.qmd
+            - file: blocks/control/evaluate.qmd
+            - file: blocks/control/reportPipe.qmd
+            - file: blocks/control/doTellTo.qmd
+            - file: blocks/control/reportAskFor.qmd
+            - file: blocks/control/createClone.qmd
+            - file: blocks/control/newClone.qmd
+            - file: blocks/control/removeClone.qmd
+            - file: blocks/control/doPauseAll.qmd
+            - file: blocks/control/doSwitchToScene.qmd
+            - file: blocks/control/doDefineBlock.qmd
+            - file: blocks/control/doDeleteBlock.qmd
+            - file: blocks/control/doSetBlockAttribute.qmd
+            - file: blocks/control/reportBlockAttribute.qmd
+            - file: blocks/control/reportEnvironment.qmd
+            - file: blocks/control/doSetSlot.qmd
+        - title: Sensing Blocks
+          children:
+            - file: blocks/sensing/reportTouchingObject.qmd
+            - file: blocks/sensing/reportTouchingColor.qmd
+            - file: blocks/sensing/reportColorIsTouchingColor.qmd
+            - file: blocks/sensing/doAsk.qmd
+            - file: blocks/sensing/getLastAnswer.qmd
+            - file: blocks/sensing/reportMousePosition.qmd
+            - file: blocks/sensing/reportMouseX.qmd
+            - file: blocks/sensing/reportMouseY.qmd
+            - file: blocks/sensing/reportMouseDown.qmd
+            - file: blocks/sensing/reportKeyPressed.qmd
+            - file: blocks/sensing/reportRelationTo.qmd
+            - file: blocks/sensing/reportAspect.qmd
+            - file: blocks/sensing/doResetTimer.qmd
+            - file: blocks/sensing/getTimer.qmd
+            - file: blocks/sensing/reportDate.qmd
+            - file: blocks/sensing/reportAttributeOf.qmd
+            - file: blocks/sensing/reportGet.qmd
+            - file: blocks/sensing/reportObject.qmd
+            - file: blocks/sensing/reportURL.qmd
+            - file: blocks/sensing/reportAudio.qmd
+            - file: blocks/sensing/reportVideo.qmd
+            - file: blocks/sensing/doSetVideoTransparency.qmd
+            - file: blocks/sensing/reportGlobalFlag.qmd
+            - file: blocks/sensing/doSetGlobalFlag.qmd
+        - title: Operators Blocks
+          children:
+            - file: blocks/other/reifyScript.qmd
+            - file: blocks/other/reifyReporter.qmd
+            - file: blocks/other/reifyPredicate.qmd
+            - file: blocks/operators/reportVariadicSum.qmd
+            - file: blocks/operators/reportDifference.qmd
+            - file: blocks/operators/reportVariadicProduct.qmd
+            - file: blocks/operators/reportQuotient.qmd
+            - file: blocks/operators/reportPower.qmd
+            - file: blocks/operators/reportModulus.qmd
+            - file: blocks/operators/reportVariadicMin.qmd
+            - file: blocks/operators/reportVariadicMax.qmd
+            - file: blocks/operators/reportRound.qmd
+            - file: blocks/operators/reportMonadic.qmd
+            - file: blocks/operators/reportAtan2.qmd
+            - file: blocks/operators/reportRandom.qmd
+            - file: blocks/operators/reportVariadicLessThan.qmd
+            - file: blocks/operators/reportVariadicEquals.qmd
+            - file: blocks/operators/reportVariadicGreaterThan.qmd
+            - file: blocks/operators/reportVariadicAnd.qmd
+            - file: blocks/operators/reportVariadicOr.qmd
+            - file: blocks/operators/reportNot.qmd
+            - file: blocks/operators/reportBoolean.qmd
+            - file: blocks/operators/reportJoinWords.qmd
+            - file: blocks/operators/reportTextSplit.qmd
+            - file: blocks/operators/reportLetter.qmd
+            - file: blocks/operators/reportTextAttribute.qmd
+            - file: blocks/operators/reportUnicode.qmd
+            - file: blocks/operators/reportUnicodeAsLetter.qmd
+            - file: blocks/operators/reportIsA.qmd
+            - file: blocks/operators/reportVariadicIsIdentical.qmd
+        - title: Variables Blocks
+          children:
+            - file: blocks/variables/doSetVar.qmd
+            - file: blocks/variables/doChangeVar.qmd
+            - file: blocks/variables/doShowVar.qmd
+            - file: blocks/variables/doHideVar.qmd
+            - file: blocks/other/doDeclareVariables.qmd
+            - file: blocks/variables/doDeleteAttr.qmd
+            - file: blocks/lists/reportNewList.qmd
+            - file: blocks/lists/reportNumbers.qmd
+            - file: blocks/lists/reportCONS.qmd
+            - file: blocks/lists/reportListItem.qmd
+            - file: blocks/lists/reportCDR.qmd
+            - file: blocks/lists/reportListAttribute.qmd
+            - file: blocks/lists/reportListIndex.qmd
+            - file: blocks/lists/reportListContainsItem.qmd
+            - file: blocks/lists/reportListIsEmpty.qmd
+            - file: blocks/lists/reportMap.qmd
+            - file: blocks/lists/reportKeep.qmd
+            - file: blocks/lists/reportFindFirst.qmd
+            - file: blocks/lists/reportCombine.qmd
+            - file: blocks/lists/doForEach.qmd
+            - file: blocks/lists/doAddToList.qmd
+            - file: blocks/lists/doDeleteFromList.qmd
+            - file: blocks/lists/doInsertInList.qmd
+            - file: blocks/lists/doReplaceInList.qmd
+            - file: blocks/lists/reportConcatenatedLists.qmd
+            - file: blocks/lists/reportReshape.qmd
+            - file: blocks/lists/reportCrossproduct.qmd
+
+site:
+  template: book-theme
+  options:
+    favicon: images/favicon.png
+    logo: images/snap_logo.png
