@@ -17,16 +17,12 @@ project:
     - Victoria Phelps
     - Bernat Romagosa
   github: https://github.com/snap-cloud/manual
-  # To autogenerate a Table of Contents, run "jupyter book init --write-toc"
   exclude:
     - '**/*.qmd'
     - '**/*.tex'
-  numbered: true
   toc:
     - file: index.md
-    - title: Acknowledgements
-      children:
-        - file: 00-acknowledgements/index.md
+    - file: 00-acknowledgements.md
     - title: Blocks, Scripts, and Sprites
       children:
         - file: 01-blocks-scripts-and-sprites/index.md
@@ -303,5 +299,7 @@ site:
   template: book-theme
   numbered-references: true
   options:
+    style:
+      - _support/styles/snap-manual.scss
     favicon: images/favicon.png
     logo: images/snap-logo.png

@@ -392,7 +392,7 @@ Spreadsheet and database programs generally offer the option to export
 their data as CSV (comma-separated values)\index{CSV (comma-separated
 values)} lists. You can import these files into Snap*!* and turn them
 into tables (lists of lists), and you can export tables in CSV format.
-[Snap]{.snap} recognizes a CSV file by the extension .csv in its filename.
+{.snap}`Snap` recognizes a CSV file by the extension .csv in its filename.
 
 A CSV file has one line per table row, with the fields separated by
 commas within a row:

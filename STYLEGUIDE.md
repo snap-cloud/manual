@@ -6,7 +6,7 @@
 * Write UI elements inside quoted code blocks. e.g. ```"`Open`"```
 * Monospaced text should use the CSS class `.mono` e.g. `[text here]{.mono}`
 * Do not put spaces around index entries. `text\index{text},`
-* To write Snap! as stylized text write: `[Snap]{.snap}`
+* To write Snap! as stylized text write: `{.snap}`Snap``
 * Chapters are included at the top level of the repo, named 'NN-chapter'
   * Each contains an `index.md` file, which is the chapter's main content.
   * The `assets/` folder contains images used in the chapter.

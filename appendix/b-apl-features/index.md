@@ -28,21 +28,21 @@ function} , {index}`mixed functions`, and operators
 \index{operator (APL)}. A *scalar function* is one whose natural domain
 is individual numbers or text characters. A *mixed function* is one
 whose domain includes arrays (vectors, matrices, or higher-dimensional
-collections). In [Snap]{.snap}, scalar functions are generally found in the
+collections). In {.snap}`Snap`, scalar functions are generally found in the
 green Operators palette, while mixed functions are in the red Lists
-palette. The third category, confusingly for [Snap]{.snap} users, is called
+palette. The third category, confusingly for {.snap}`Snap` users, is called
 *operators* in APL, but corresponds to what we call higher order
 functions\index{function, higher order} : functions whose domain
 includes functions.
 
-[Snap]{.snap} hyperblocks\index{hyperblocks} are scalar functions that behave
+{.snap}`Snap` hyperblocks\index{hyperblocks} are scalar functions that behave
 like APL scalar functions: they can be called with arrays as inputs, and
 the underlying function is applied to each number in the arrays. (If the
 function is *monadic,* meaning that it takes one input, then there’s no
 complexity to this idea. Take the square root of an array, and you are
 taking the square root of each number in the array. If the function is
 *dyadic,* taking two inputs, then the two arrays must have the same
-shape. [Snap]{.snap} is more forgiving than APL; if the arrays don’t agree in
+shape. {.snap}`Snap` is more forgiving than APL; if the arrays don’t agree in
 number of dimensions, called the *rank* of the array, the lower-rank
 \index{rank} array is matched repeatedly with subsets of the higher-rank
 one; if they don’t agree in length along one dimension, the result has
@@ -53,7 +53,7 @@ array input.)
 
 As explained in Section IV.F, this termwise extension\index{termwise
 extension} of scalar functions is the main APL-like feature built into
-[Snap]{.snap} itself. We also include an extension of the item block
+{.snap}`Snap` itself. We also include an extension of the item block
 \index{item block} to address multiple dimensions, an extension to the
 {index}`length block` with five list functions from APL, and
 a new primitive {index}`reshape block`. The APL library
@@ -62,7 +62,7 @@ include a few missing scalar functions and several missing mixed
 functions and operators.
 
 Programming in APL really is *very* different in style from programming
-in other languages, even [Snap]{.snap}. This appendix can’t hope to be a
+in other languages, even {.snap}`Snap`. This appendix can’t hope to be a
 complete reference for APL, let alone a tutorial. If you’re interested,
 find one of those in a library or a (probably used) bookstore, read it,
 and *do the exercises.* Sorry to sound like a teacher, but the notation
@@ -81,22 +81,22 @@ before you could download fonts in software. Today the more unusual APL
 characters\index{APL character set} are in Unicode\index{Unicode} at
 U+2336 to U+2395.) The character set was probably the main reason APL
 didn’t take over the world. APL2\index{APL2} has a lot to recommend it
-for [Snap]{.snap} users, mainly because it moves from the original APL idea
+for {.snap}`Snap` users, mainly because it moves from the original APL idea
 that all arrays must be uniform in dimension, and the elements of arrays
 must be numbers or single text characters, to our idea that a list can
 be an element of another list, and that such elements don’t all have to
 have the same dimensions. Nevertheless, its mechanism for allowing both
 old-style APL arrays and more general “nested arrays” is complicated and
-hard for an APL beginner (probably all but two or three [Snap]{.snap} users)
+hard for an APL beginner (probably all but two or three {.snap}`Snap` users)
 to understand. So we are starting with plain APL. If it turns out to be
 wildly popular, we may decide later to include APL2 features.
 
 Here are some of the guiding ideas in the design of the APL library:
 
 - Goal:  Enable interested
-**[Snap]{.snap}** users to learn the feel and style of APL programming. It’s
+**{.snap}`Snap`** users to learn the feel and style of APL programming. It’s
 really worth the effort. For example, we didn’t hyperize the = block
-because [Snap]{.snap} users expect it to give a single yes-or-no answer about
+because {.snap}`Snap` users expect it to give a single yes-or-no answer about
 the equality of two complete structures\index{equality of complete
 structures} , whatever their types and shapes. In APL, = is a scalar
 function; it compares two numbers or two characters. How could APL users
@@ -106,11 +106,11 @@ left, a=b reports an array of Booleans (represented in APL as 0 for
 False, 1 for True); the comma operator turns the shape of the array into
 a simple vector; and **∧**/ means “reduce with and”; “reduce” is our
 combine function. That six-character program is much less effort than
-the equivalent ![image1263.png](assets/image1263.png) <!--  style="width:4.45139in;height:0.52083in" / --> in [Snap]{.snap}. Note in passing
+the equivalent ![image1263.png](assets/image1263.png) <!--  style="width:4.45139in;height:0.52083in" / --> in {.snap}`Snap`. Note in passing
 that if you wanted to know *how many* corresponding elements of the two
 arrays are equal, you’d just use +/ instead of **∧**/. Note also that
 our APLish blocks are a little verbose, because they include up to three
-notations for the function: the usual [Snap]{.snap} name (e.g., flatten), the
+notations for the function: the usual {.snap}`Snap` name (e.g., flatten), the
 name APL programmers use when talking about it (ravel\index{ravel
 block} ), and, in yellow type, the symbol used in actual APL code (,).
 We’re not consistent about it; ![image1264.png](assets/image1264.png) <!--  style="width:0.99306in;height:0.20833in" / -->  seems self-documenting. And LCM (and) is
@@ -118,19 +118,19 @@ different even though it has two names; it turns out that if you
 represent Boolean values as 0 and 1, then the algorithm to compute the
 least common multiple of two integers computes the and function if the
 two inputs happen to be Boolean. Including the APL symbols serves two
-purposes: the two or three [Snap]{.snap} users who’ve actually programmed in
+purposes: the two or three {.snap}`Snap` users who’ve actually programmed in
 APL will be sure what function they’re using, but more importantly, the
-ones who are reading an APL tutorial while building programs in [Snap]{.snap}
+ones who are reading an APL tutorial while building programs in {.snap}`Snap`
 will find the block that matches the APL they’re reading.
 
 - Goal:  Bring the best and most general APL ideas into “mainstream”
-**[Snap]{.snap}** programming style. Media computation\index{media
+**{.snap}`Snap`** programming style. Media computation\index{media
 computation} , in particular, becomes much simpler when scalar functions
 can be applied to an entire picture or sound. Yes, map provides
 essentially the same capability, but the notation gets complicated if
-you want to map over columns rather than rows. Also, [Snap]{.snap} lists are
+you want to map over columns rather than rows. Also, {.snap}`Snap` lists are
 fundamentally one-dimensional, but real data often have more dimensions.
-A [Snap]{.snap} programmer has to be thinking all the time about the
+A {.snap}`Snap` programmer has to be thinking all the time about the
 convention that we represent a matrix as a list of rows, each of which
 is a list of individual cells. That is, row 23 of a spreadsheet
 \index{spreadsheet} is item 23 of spreadsheet, but column 23 is map
@@ -138,7 +138,7 @@ is a list of individual cells. That is, row 23 of a spreadsheet
 symmetrically.
 
 - Non-goal:  Allow programs written originally in APL to run in
-**[Snap]{.snap}** essentially unchanged.  For example, in APL the atomic text
+**{.snap}`Snap`** essentially unchanged.  For example, in APL the atomic text
 unit is a single character, and strings of characters are lists. We
 treat a text string as scalar, and that isn’t going to change. Because
 APL programmers rarely use conditionals, instead computing functions
@@ -166,7 +166,7 @@ seven, not six plus four. That takes some getting used to, but it really
 doesn’t take long if you immerse yourself in APL. The reason is that
 there are too many infix operators for people to memorize a precedence
 table. But in any case, block notation eliminates the problem,
-especially with [Snap]{.snap}’s zebra coloring. You can see and control the
+especially with {.snap}`Snap`’s zebra coloring. You can see and control the
 grouping by which block is inside which other block’s input slot.
 Another problem with APL’s syntax is that it bends over backward not to
 have reserved words, as opposed to Fortran, its main competition back
@@ -177,12 +177,12 @@ asked; it’s$\\\sqrt{1 - x^{2}}$.
 
 ## Boolean values
 
-[Snap]{.snap} uses distinct Boolean values true and false that are different
+{.snap}`Snap` uses distinct Boolean values true and false that are different
 from other data types. APL uses 1 and 0, respectively. The APL style of
 programming depends heavily on doing arithmetic on Booleans, although
 their conditionals insist on only 0 or 1 in a Boolean input slot, not
-other numbers. [Snap]{.snap} *arithmetic* functions treat false as 0 and true
-as 1, so our APL library tries to report [Snap]{.snap} Boolean values from
+other numbers. {.snap}`Snap` *arithmetic* functions treat false as 0 and true
+as 1, so our APL library tries to report {.snap}`Snap` Boolean values from
 predicate functions.
 
 ### Scalar functions
@@ -301,7 +301,7 @@ hyperblock, applying itself to each item of its input list:
 block} has a special meaning for list inputs: The input must be a shape
 vector; the result is an array with that shape in which each item is a
 list of the indices of the cell along each dimension. A picture is worth
-10<sup>3</sup> words, but [Snap]{.snap} isn’t so good at displaying arrays
+10<sup>3</sup> words, but {.snap}`Snap` isn’t so good at displaying arrays
 with more than two dimensions, so here we reduce each cell’s index list
 to a string:
 
@@ -520,7 +520,7 @@ adding individual numbers, it’s clear that in
 
  the *vector*
 (10, 26, 42) is the sum of *column vectors* (1, 5, 9)+(2, 6, 10)+(3, 7,
-11)+(4, 8, 12). In pre-6.0 [Snap]{.snap}, we’d get the same result this way:
+11)+(4, 8, 12). In pre-6.0 {.snap}`Snap`, we’d get the same result this way:
 
 ![image1334.png](assets/image1334.png) <!--  style="width:4.80833in;height:1.1in" alt="Macintosh HD:Users:bh:Desktop:non-apl-combine.png" / -->
 
@@ -555,7 +555,7 @@ have corresponding items in common.
 
 ![image1339.png](assets/image1339.png) <!--  style="width:0.95833in;height:0.18333in" alt="Macintosh HD:Users:bh:Desktop:printable.png" / --> The printable block
 \index{printable block} isn’t an APL function; it’s an aid to exploring
-APL-in-[Snap]{.snap}. It transforms arrays to a compact representation that
+APL-in-{.snap}`Snap`. It transforms arrays to a compact representation that
 still makes the structure clear:
 
 ![image1340.png](assets/image1340.png) <!--  style="width:5.99792in;height:0.33333in" alt="Macintosh HD:Users:bh:Desktop:printable-ex.png" / -->

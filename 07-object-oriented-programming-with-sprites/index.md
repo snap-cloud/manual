@@ -14,7 +14,7 @@ emphasize the *simulation* aspect (in which each object abstractly
 represents something in the world, and the interactions of objects in
 the program model real interactions of real people or things). Data
 hiding is important for large multi-programmer industrial projects, but
-for [Snap]{.snap} users it’s the simulation\index{simulation} aspect that’s
+for {.snap}`Snap` users it’s the simulation\index{simulation} aspect that’s
 important. Our approach is therefore less restrictive than that of some
 other [OOP]{.mono} languages; we give objects easy access to each others’ data
 and methods.
@@ -40,7 +40,7 @@ programmed explicitly.
 
 ##  First Class Sprites
 
-Like Scratch, [Snap]{.snap} comes with things that are natural objects: its
+Like Scratch, {.snap}`Snap` comes with things that are natural objects: its
 sprites\index{sprite}. Each sprite can own local variables; each
 sprite has its own scripts (methods). A Scratch animation is plainly a
 simulation of the interaction of characters in a play. There are two
@@ -53,7 +53,7 @@ paradigm objects are *data;* they can be the value of a variable, an
 element of a list, and so on, but that’s not the case for Scratch
 sprites.
 
-[Snap]{.snap} sprites are first class\index{first class sprites} data. They can
+{.snap}`Snap` sprites are first class\index{first class sprites} data. They can
 be created and deleted by a script, stored in a variable or list, and
 sent messages individually. The children of a sprite can inherit
 sprite-local variables, methods (sprite-local procedures), and other
@@ -112,11 +112,11 @@ of <var>Cocker Spaniel</var> (so there are four altogether) and two clones of
 breed in particular. Each dog has its own position, special behaviors,
 and so on. You want to save all of these dogs in the project. These are
 *[permanent]{.mono}* clones\index{permanent clone}. In [BYOB 3.1]{.mono}, the
-predecessor to [Snap]{.snap}, all clones\index{clone!permanent} are
+predecessor to {.snap}`Snap`, all clones\index{clone!permanent} are
 permanent.
 
  One advantage
-of temporary clones is that they don’t slow down [Snap]{.snap} even when you
+of temporary clones is that they don’t slow down {.snap}`Snap` even when you
 have a lot of them. (If you’re curious, one reason is that permanent
 clones appear in the sprite corral, where their pictures have to be
 updated to reflect the clone’s current costume, direction, and so on.)
@@ -174,10 +174,10 @@ continue without waiting. For this purpose we have the <code>launch ( )</code> b
 
 <code>Launch ( )</code> is analogous to <code>broadcast</code> without the “wait.”
 
-[Snap]{.snap} [4.1]{.mono}, following [BYOB 3.1]{.mono}, used an extension of the of block to
+{.snap}`Snap` [4.1]{.mono}, following [BYOB 3.1]{.mono}, used an extension of the of block to
 provide access to other sprites’ methods. That interface was designed
 back when we were trying hard to avoid adding new primitive blocks; it
-allowed us to write <code>ask ( ) and wait</code> and <code>tell ( )</code> as tool procedures in [Snap]{.snap} itself.
+allowed us to write <code>ask ( ) and wait</code> and <code>tell ( )</code> as tool procedures in {.snap}`Snap` itself.
 That technique still works, but is deprecated, because nobody understood
 it, and now we have the more straightforward primitives.
 
@@ -243,7 +243,7 @@ The block, if any, that examines a variable or attribute
 may be more than one, as in the direction example above) that modifies a
 variable or attribute is called a\index{setter} *setter.*
 
-In [Snap]{.snap} we allow virtually all attributes to be examined. But instead
+In {.snap}`Snap` we allow virtually all attributes to be examined. But instead
 of adding dozens of reporters, we use a more uniform interface for
 attributes: The {index}`my block`’s menu (in [Sensing]{.mono}; see page
 [78](#attrib.pnglist-of-attributes)) includes many of the attributes of
@@ -263,7 +263,7 @@ objects. A class is a particular *kind of object,* and an instance is an
 and several instances Fido, Spot, and Runt. The class typically
 specifies the methods shared by all dogs (RollOver, SitUpAndBeg, Fetch,
 and so on), and the instances contain data such as species, color, and
-friendliness. [Snap]{.snap} uses a different approach called *prototyping,* in
+friendliness. {.snap}`Snap` uses a different approach called *prototyping,* in
 which there is no distinction between classes and instances. Prototyping
 \index{prototyping} is better suited to an experimental, tinkering style
 of work: You make a single dog sprite, with both methods (blocks) and

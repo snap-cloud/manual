@@ -1,6 +1,6 @@
 # The Snap<em>!</em> Community Site {.unnumbered}
 
-The [Snap]{.snap} [community website]{#sec-appendix-community} is what you see when you visit [https://snap.berkeley.edu](https://snap.berkeley.edu). {#sec-appendix-community}
+The {.snap}`Snap` [community website]{#sec-appendix-community} is what you see when you visit [https://snap.berkeley.edu](https://snap.berkeley.edu). {#sec-appendix-community}
 
 ## User Accounts {.unnumbered .unlisted}
 
