@@ -15,7 +15,7 @@ block expects; they are not enforced by the language.
 
 ## The [Snap]{.snap} Input Type Dialog
 
-In the Block Editor\index{Block Editor} input name dialog\index{input
+In the {index}`Block Editor` input name dialog\index{input
 name dialog}, there is a right-facing arrowhead after the "`Input name`"
 option:
 
@@ -30,7 +30,7 @@ There are twelve input type shapes\index{input-type shapes}, plus
 three mutually exclusive modifiers, listed in addition to the basic choice between title text and
 an input name. The default type, the one you get if you don’t choose
 anything else, is "`Any`", meaning that this input slot is meant to accept
-any value of any type\index{Any type}. If the <var>size</var> input in your block
+any value of {index}`any type`. If the <var>size</var> input in your block
 should be an oval-shaped numeric slot rather than a generic rectangle,
 click "`Number`"
 
@@ -76,7 +76,7 @@ in the input type selection box.)
 
 Although the procedure types are discussed more fully later, they are
 the key to understanding the column arrangement in the input types. Like
-Scratch, [Snap]{.snap} has three block shapes\index{block shapes} :
+Scratch, [Snap]{.snap} has three {index}`block shapes` :
 jigsaw-piece\index{jigsaw-piece blocks} for command blocks, oval
 \index{oval blocks} for reporters, and hexagonal\index{hexagonal
 blocks} for predicates. (A *predicate* is a reporter that always reports
@@ -188,7 +188,7 @@ type array.
 The "`single input`" option: In Scratch, all inputs are in this category.
 There is one input slot in the block as it appears in its palette. If a
 single input is of type [Any]{.mono}, [Number]{.mono}, [Text]{.mono}, or [Boolean]{.mono}, then you can
-specify a default value\index{default value} that will be shown in that
+specify a {index}`default value` that will be shown in that
 slot in the palette, like the “10” in the <code>move (10) steps block</code>. In the
 prototype block at the top of the script in the Block editor, an an input with
 name “size” and default value 10 looks like this:
@@ -226,7 +226,7 @@ internal variable name:
 ![Definition of `my for` block and the block created.](assets/image695.png)
 
 The variable <var>i</var> (in the block on the right above) can be dragged from the
-for block\index{for block} into the blocks used in its C-shaped command
+{index}`for block` into the blocks used in its C-shaped command
 slot. Also, by clicking on the orange <var>i</var>, the user can change the name of
 the variable as seen in the calling script (although the name hasn’t
 changed inside the block’s definition). This kind of variable is called

@@ -14,7 +14,7 @@ desired capabilities.
 
 ## The World Wide Web
 
-The input to the url block\index{url block} is the URL\index{URL} (Uniform
+The input to the {index}`url block` is the URL\index{URL} (Uniform
 Resource Locator\index{Uniform Resource Locator}) of a web page. The
 block reports the body of the Web server’s response (minus HTTP header),
 *without interpretation.* This means that in most cases the response is
@@ -23,7 +23,7 @@ a description of the page in HTML\index{HTML} (HyperText Markup Language)
 commercial web sites, the actual information you’re trying to find on
 the page is actually at another URL included in the reported HTML. The
 Web page is typically a very long text string, and so the primitive
-split block\index{split block} is useful to get the text in a
+{index}`split block` is useful to get the text in a
 manageable form, namely, as a list of lines:
 
 <!-- TODO: Shrink an image like this in the PDF so more stuff fits on the previous page... -->
@@ -51,7 +51,7 @@ workaround for this limitation called the CORS\index{CORS} protocol
 (Cross-Origin Resource Sharing\index{Cross-Origin Resource Sharing}),
 but the *target* site has to allow snap.berkeley.edu explicitly, and of
 course most don’t. To get around this problem, you can use third-party
-sites (“cors proxies\index{cors proxies}”) that are not limited by
+sites (“{index}`cors proxies`”) that are not limited by
 JavaScript and that forward your requests.
 
 <!-- TODO: Note that you must trust the CORS proxy that you use not to steal your data or modify the responses. -->
@@ -71,7 +71,7 @@ requests to the device. *Unlike* [Snap]{.snap} *itself, these programs have
 access to anything on your computer, so you have to trust the author of
 the software!* Our web site, snap.berkeley.edu, provides links to
 drivers for several devices, including, at this writing, the Lego NXT
-\index{Lego NXT}, Finch\index{Finch}, Hummingbird\index{Hummingbird}, and Parallax S2\index{Parallax S2} robots; the Nintendo
+\index{Lego NXT}, Finch\index{Finch}, Hummingbird\index{Hummingbird}, and {index}`Parallax S2` robots; the Nintendo
 \index{Nintendo} Wiimote\index{Wiimote} and Leap Motion\index{Leap
 Motion} sensors, the Arduino\index{Arduino} microcomputer, and
 Super-Awesome Sylvia\index{Super-Awesome Sylvia} ’s Water Color Bot

@@ -25,7 +25,7 @@ Scratch reporters reports a list value. (You can use a reduction of the
 list into a text string as input to other blocks, but this loses the
 list structure; the input is just a text string, not a data aggregate.)
 
-A fundamental design principle\index{design principle} in Snap*!* is
+A fundamental {index}`design principle` in Snap*!* is
 that ***<u>all data should be ﬁrst class</u>**.* If it’s in the
 language, then we should be able to use it fully and freely. We believe
 that this principle avoids the need for many special-case tools, which
@@ -258,7 +258,7 @@ used in this context.
 ![image587.png](assets/image587.png) <!--  style="width:5.80833in;height:1.19097in" / -->
 
 
-## Table View\index{table view}  vs. List View\index{list view}
+## {index}`Table View`  vs. {index}`List View`
 
 We mentioned earlier that there are two ways of representing lists
 visually. For one-dimensional lists (lists whose items are not

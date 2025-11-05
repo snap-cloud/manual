@@ -54,7 +54,7 @@ At the top of the script is a *hat* block, which indicates when the
 script should be carried out. Hat block names typically start with the
 word “when”; in the square-drawing example in @fig-draw-square, the script should
 be run when the green flag\index{flag, green} near the right end of the
-[Snap]{.snap} tool bar\index{tool bar} is clicked. (The [Snap]{.snap} tool bar is
+[Snap]{.snap} {index}`tool bar` is clicked. (The [Snap]{.snap} tool bar is
 part of the [Snap]{.snap} window, not the same as the browser’s or operating
 system’s menu bar.) A script isn’t required to have a hat block
 \index{block!hat}, but if not, then the script will be run only if the
@@ -70,12 +70,12 @@ sign is clicked, or when a project or sprite is loaded, this block
 doesn’t test whether the condition in its hexagonal input slot is true,
 so the script beneath it will not run, until some *other* script in the
 project runs (because, for example, you click the green flag). When
-generic when\index{generic when} blocks are disabled, the stop sign
+{index}`generic when` blocks are disabled, the stop sign
 \index{stop sign, square} will be square\index{square stop sign}
 instead of octagonal. {#para-generic-when}
 
 The other blocks in our example script are *command* blocks
-\index{block!command}. Each command block\index{command block}
+\index{block!command}. Each {index}`command block`
 corresponds to an action that [Snap]{.snap} already knows how to carry out.
 For example, the block ![image9.png](../blocks/images/block_forward.png){.image-inline} tells the sprite\index{sprite} (the arrowhead
 shape on the *stage*\index{stage} at the right end of the window) to
@@ -99,7 +99,7 @@ block located about halfway down the Motion palette has three inputs.
 Most command blocks have that brick shape, but some, like the `repeat`
 block\index{repeat block} in the sample script, are *C‑shaped.* Most
 C-shaped blocks\index{block!C-shaped}\index{C-shaped block} are found
-in the Control palette\index{Control palette}. The slot inside the C
+in the {index}`Control palette`. The slot inside the C
 shape is a special kind of input slot that accepts a *script* as the
 input.
 
@@ -191,7 +191,7 @@ When you click the green flag, the sprite should move back and forth
 
 When you press the space key, the sprite should move forever in a
 circle, because the move and turn blocks are run in parallel. (To stop
-the program, click the red stop sign\index{stop sign} at the right end
+the program, click the red {index}`stop sign` at the right end
 of the tool bar.)
 
 ### Costumes and Sounds
@@ -226,7 +226,7 @@ clicking in its wardrobe or by using the ![image35.png](../blocks/images/block_d
 (Every costume has a number as well as a name. The `next` costume block
 selects the next costume by number; after the highest-numbered costume it
 switches to costume 1. The Turtle, costume 0, is never chosen by next
-costume.) The Turtle costume\index{Turtle costume} is the only one that
+costume.) The {index}`Turtle costume` is the only one that
 changes color to match a change in the sprite’s pen color.
 
 ::: {.callout-tip}
@@ -237,7 +237,7 @@ In addition to its costumes, a sprite can have *sounds;* the equivalent for
 sounds of the sprite’s wardrobe is called its *jukebox.*\index{jukebox}
 Sound files\index{play sound block} can be imported in any format
 (WAV, OGG, MP3, etc.) supported by your browser. Two blocks accomplish
-the task of playing sounds\index{playing sounds}. If you would like a
+the task of {index}`playing sounds`. If you would like a
 script to continue running while the sound is playing, use the block ![image39.png](assets/image39.png).
 In contrast, you can use the block ![image38.png](assets/image38.png) to wait for the sound's completion
 before continuing the rest of the script.
@@ -279,8 +279,8 @@ blocks.
 
 Notice, by the way, that the say block’s first input slot is rectangular
 rather than oval. This means the input can be any text string, not only
-a number. In text input\index{text input} slots, a space character is
-shown as a brown dot\index{brown dot}, so that you can count the
+a number. In {index}`text input` slots, a space character is
+shown as a {index}`brown dot`, so that you can count the
 number of spaces between words, and in particular you can tell the
 difference between an empty slot and one containing spaces. The brown
 dots are *not* shown on the stage if the text is displayed.
@@ -293,7 +293,7 @@ the current background. In a complicated project, it’s often convenient
 to use a script in the stage’s scripting area as the overall director of
 the action.
 
-## Nesting Sprites\index{Nesting Sprites}: Anchors and Parts
+## {index}`Nesting Sprites`: Anchors and Parts
 
 Sometimes it’s desirable to make a sort of “super-sprite” composed of
 pieces that can move together but can also be separately articulated.
@@ -363,9 +363,9 @@ Here’s a simple script that uses a reporter block:
 ![image72.png](assets/image72.png) <!--  style="width:2.11111in;height:0.61806in" alt="Macintosh HD:Users:bh:Desktop:Google Chrome001.png" / -->
 
 Here the `x position` reporter provides the first input to the say block.
-(The sprite’s X position\index{X position} is its horizontal position,
+(The sprite’s {index}`X position` is its horizontal position,
 how far left (negative values) or right (positive values) it is compared
-to the center of the stage. Similarly, the Y position\index{Y position}
+to the center of the stage. Similarly, the {index}`Y position`
 is measured vertically, in steps above (positive) or below (negative)
 the center.)
 
@@ -394,7 +394,7 @@ or a text string, like
 ![image83.png](../blocks/images/block_reportJoinWords.png){.image-inline}.
 A *predicate* is a special kind of reporter that
 always reports true or false. Predicates\index{Predicate block} have a
-hexagonal shape\index{hexagonal shape}: ![image85.png](../blocks/images/block_reportMouseDown.png){.image-inline}
+{index}`hexagonal shape`: ![image85.png](../blocks/images/block_reportMouseDown.png){.image-inline}
 
 The special shape is a reminder that predicates don’t generally make sense
 in an input slot of blocks that are expecting a number or text. You
@@ -404,7 +404,7 @@ special hexagonal input slots like this one:
 
 ![image86.png](../blocks/images/block_doIf.png){.image-4x}
 
-The C-shaped if block\index{if block} runs its input script if (and only
+The C-shaped {index}`if block` runs its input script if (and only
 if) the expression in its hexagonal input reports true.
 ![image87.png](assets/image87.png)
 
@@ -452,10 +452,10 @@ this script:
 
 The
 input to the move block is an orange oval. To get it there, drag the
-orange oval that’s part of the `for` block\index{for block} :
+orange oval that’s part of the {index}`\`for\` block<`for` block>` :
 ![image94.png](assets/image94.png) <!-- {width=1.88542in height=1.4375in} -->
 
-The orange oval\index{orange oval} is a *variable:* a symbol that
+The {index}`orange oval` is a *variable:* a symbol that
 represents a value. (I took this screenshot before changing the second
 number input to the `for` block from the default 10 to 200, and before
 dragging in a `turn` block.)
@@ -525,7 +525,7 @@ When you give the variable a value, the orange box in its watcher
 \index{watcher} will display the value.
 
 How *do* you give it a value?
-You use the `set` block\index{set block} :
+You use the {index}`\`set\` block<`set` block>` :
 ![image100.png](assets/image100.png) <!-- {width=1.92708in height=0.47917in} -->
 
 Note that you *don’t* drag the variable’s oval into the `set` block! You
@@ -561,7 +561,7 @@ end of the block to add another variable oval:
 
 ![image106.png](assets/image106.png) <!-- {width=2.08333in height=0.30208in} -->
 
-### Renaming variables\index{renaming variables}
+### {index}`Renaming variables`
 
 There are several reasons why you might want to change the name of a
 variable:
@@ -696,7 +696,7 @@ In order to use a block as an input this way, you must explicitly put a
 ring around it, by right-clicking on it and choosing ringify. More about
 rings in Chapter VI.
 
-### Visible stepping\index{visible stepping}
+### {index}`Visible stepping`
 
 Sometimes you’re not exactly sure where the error is, or you don’t
 understand how the program got there. To understand better, you’d
@@ -782,14 +782,14 @@ value of the first input.
 variable} .
 
 ![image145.png](assets/image145.png){.image-inline} <!--  style="width:1.37986in;height:0.28958in" alt="Graphical user interface, application, logo Description automatically generated" / --> Declare
-local variables\index{local variables} in a script.\index{script
+{index}`local variables` in a script.\index{script
 variables block}
 
 ![image148.png](assets/image148.png){.image-inline} See @sec-ch09.
 
-![image146.png](assets/image146.png){.image-inline} reports the value of a graphics effect\index{graphics effect}.
+![image146.png](assets/image146.png){.image-inline} reports the value of a {index}`graphics effect`.
 
-![image147.png](assets/image147.png){.image-inline} Constant true\index{true block} or false\index{false block} value. See @sec-predicates-and-conditional-evaluation.
+![image147.png](assets/image147.png){.image-inline} Constant {index}`true <true block>` or {index}`false<false block>` value. See @sec-predicates-and-conditional-evaluation.
 
 ![image149.png](assets/image149.png){.image-inline}
 
@@ -801,7 +801,7 @@ setting menu *each time* a project is loaded.)\index{pen down? block}
 ::: {.evenly-spaced-images layout-ncol=2}
 ![image150.png](assets/image150.png){.image-inline}
 
-The `at` block\index{at block} lets you examine the screen pixel
+The {index}`\`at\` block<`at` block>` lets you examine the screen pixel
 \index{screen pixel} directly behind the rotation center of a sprite,
 the mouse, or an arbitrary (x,y) coordinate pair dropped onto the second
 menu slot. The first five items of the left menu let you examine the
@@ -824,14 +824,14 @@ Checks the\index{is-a-block@`is \_ a \_ ?` block} data\index{stage blocks} type\
 ::: {layout-ncol=2}
 ![image155.png](assets/image155.png){.image-4x}\index{set flag block}
 
-Turn the\index{split block} text into a list,
+{index}`Turn the` text into a list,
 using the second input as the delimiter between items. The default
 delimiter, indicated by the brown dot in the input slot, is a single
 space character. “Letter” puts each character of the text in its own
 list item. “Word” puts each word in an item. (\index{whitespace} Words
 are separated by any number of consecutive space, tab, carriage return,
 or newline characters.) “Line” is a newline character\index{newline
-character} (0xa); “tab” is a tab character\index{tab character} (0x9);
+character} (0xa); “tab” is a {index}`tab character` (0x9);
 “cr” is a carriage return\index{carriage return character} (0xd). “Csv”
 \index{CSV format} and “json”\index{JSON format} split formatted text
 into lists of lists; see @sec-csv. “Blocks”
@@ -930,7 +930,7 @@ of this sprite to the nearest point on the other sprite, in the current
 direction.
 
 ![image284.png](assets/image284.png){.image-4x}
-The `stop` block\index{stop block} has two extra menu choices. `Stop this block` is used inside the definition of a custom block to stop just this
+The {index}`\`stop\` block<`stop` block>` has two extra menu choices. `Stop this block` is used inside the definition of a custom block to stop just this
 invocation of this custom block and continue the script that called it.
 `Stop all` but this script is good at the end of a game to stop all the
 game pieces from moving around, but keep running this script to provide
@@ -944,7 +944,7 @@ not detect hidden sprites, but a hidden sprite can use it to detect
 visible sprites.
 
 ![image305.png](assets/image305.png){.image-inline} <!--  style="width:2.43333in;height:0.3in" alt="Macintosh HD:Users:bh:Desktop:video-on.png" / --> The `video on` block
-\index{video block} has a snap option\index{snap option} that takes a
+\index{video block} has a {index}`snap option` that takes a
 snapshot and reports it as a costume. It is hyperized with respect to its second input.
 
 :::{.evenly-spaced-images layout-ncol=2}
@@ -983,7 +983,7 @@ limited time.
 ::: {.evenly-spaced-images layout-ncol=2}
 ![image310.png](assets/image310.png)
 
-Extended broadcast\index{broadcast block} : Click the right arrowhead to direct the message to a single sprite or the stage. Click again to add any value as a payload to the message. {#para-broadcast}
+{index}`Extended broadcast`: Click the right arrowhead to direct the message to a single sprite or the stage. Click again to add any value as a payload to the message. {#para-broadcast}
 :::
 
 ::: {.evenly-spaced-images layout-ncol=2}
@@ -1079,7 +1079,7 @@ purpose. You can browse the libraries to find one that will satisfy your
 needs.
 
 The libraries and their contents may change, but as of this writing the
-list library\index{list library} has these blocks:
+{index}`list library` has these blocks:
 
 ![image387.png](assets/image387.png){.image-4x} <!-- {width=1.84861in height=2.49236in} -->
 
@@ -1110,7 +1110,7 @@ so on. The `no-name` identity function reports its input.
 as inputs. `Printable` takes a list structure of any depth as input and
 reports a compact representation of the list as a text string.
 
-The iteration, composition library\index{iteration library} has these
+The iteration, {index}`composition library` has these
 blocks:
 
 ![image388.png](assets/image388.png) <!-- {width=1.68889in height=4.75in} -->
@@ -1152,7 +1152,7 @@ desired value for the loop index.
 
 ![image392.png](assets/image392.png) <!--  style="width:3.70972in;height:1.17153in" alt="Macintosh HD:Users:bh:Desktop:untitled script pic (1).png" / --> ![image391.png](assets/image391.png) <!--  style="width:3.44097in;height:1.36111in" alt="Macintosh HD:Users:bh:Desktop:untitled script pic (2).png" / -->
 
-The stream library\index{stream library} has these blocks:
+The {index}`stream library` has these blocks:
 
 ![image393.png](assets/image393.png) <!-- {width=3.16111in height=2.15347in} -->
 
@@ -1197,7 +1197,7 @@ stores a sentence as a list of words, and a word as a string of letters.
 
 Inexplicably, the designers of Scratch chose to abandon that tradition,
 and to focus on the representation of text as a string of characters.
-The one vestige of the Logo tradition\index{Logo tradition} from which
+The one vestige of the {index}`Logo tradition` from which
 Scratch developed is the block named letter (1) of (world)\index{letter
 (1) of (world) block} , rather than character (1) of (world). [Snap]{.snap}
 inherits its text handling from Scratch.
@@ -1237,7 +1237,7 @@ takes a list (including a deep list) of words as input and reports a
 text string in which parentheses are used to show the structure, as in
 Lisp/Scheme.
 
-The pixels library\index{pixels library} has one block:
+The {index}`pixels library` has one block:
 
 ![image395.png](assets/image395.png{.image-4x} <!-- {width=0.77917in height=0.62986in} -->
 
@@ -1291,30 +1291,33 @@ the C-slot, to be run if the test reports true. The remaining branches
 go in the variadic hexagonal input at the end; each branch consists of
 an `else if` block\index{else if block}, which includes the Boolean test
 and the corresponding action script, except possibly for the last
-branch, which can use the unconditional `else` block\index{else block}.
+branch, which can use the unconditional {index}`\`else\` block<`else` block>`.
 As in other languages, once a branch succeeds, no other branches are
 tested.
 
 ###
 
-The variadic library\index{variadic library} has these blocks:
+The {index}`variadic library` has these blocks:
 
 ![image398.png](assets/image398.png) <!-- {width=1.19653in height=0.41667in} -->
 
-These are\index{sum block}
-versions\index{all of block}\index{any of block} of the associative
-operators `and`, and `or` that take any number of inputs instead of exactly
-two inputs. As with any variadic input, you can also drop a list of
-values onto the arrowheads instead of providing the inputs one at a time
+:::{index}
+\index{sum block}\index{all of block}\index{any of block}
+:::
+These are versions of the associative
+operators `and`, and `or` that take any number of inputs
+instead of exactly two inputs. As with any variadic input,
+you can also drop a list of values onto the arrowheads
+instead of providing the inputs one at a time
 As of version 8.0, the arithmetic operators sum, product, minimum, and
 maximum are no longer included, because the primitive operators `+` `x`,
 `min`, and `max` are themselves variadic.
 
-The colors and crayons library\index{colors library} has these blocks:
+The colors and {index}`crayons library` has these blocks:
 
 It is intended as a more powerful replacement for the primitive `set pen`
 block\index{set pen block}, including *first class color* support; `HSL color`\index{HSL color} specification as a better alternative to the HSV
-that [Snap]{.snap} inherits from JavaScript; a “fair hue\index{fair hue} ”
+that [Snap]{.snap} inherits from JavaScript; a “{index}`fair hue`”
 scale that compensates for the eye’s grouping a wide range of light
 frequencies as green while labelling mere slivers as orange or yellow;
 the `X11/W3C standard color names`\index{X11/W3C color names}; `RGB in
@@ -1353,7 +1356,7 @@ continuous *color numbers* and the discrete *crayons:*
 
 ![image417.png](assets/image417.png) <!-- {width=7.5in height=0.25in} -->
 
-Color numbers\index{color numbers} are based on *fair hues,* a modification
+{index}`Color numbers` are based on *fair hues,* a modification
 of the spectrum (rainbow) hue scale that devotes less space to green and
 more to orange and yellow, as well as promoting brown to a real color.
 Here is the normal hue scale, for reference:
@@ -1447,7 +1450,7 @@ in its first C-slot. If it finishes without an error, nothing else
 happens. But if an error happens, the code in the second C-slot is run.
 While that second script is running, the variable ![image443.png](assets/image443.png) <!-- {width=0.43056in height=0.15278in} -->  contains the text of
 the error message that would have been displayed if you weren’t catching
-the error. The `error` block\index{error block} is sort of the opposite:
+the error. The {index}`\`error\` block<`error` block>` is sort of the opposite:
 it lets your program *generate* an error message, which will be
 displayed with a red halo unless it is caught by `safely try`. `Safely try reporting` is the reporter version of `safely try`.
 
@@ -1482,7 +1485,7 @@ interfaces with a capability in up-to-date browsers, so it might not
 work for you.\index{speak block} It works best if the accent matches
 the text!
 
-The parallelization library\index{parallelization library} contains
+The {index}`parallelization library` contains
 these blocks:
 
 ![image450.png](assets/image450.png) <!-- {width=1.17986in height=1.25972in} -->
@@ -1567,10 +1570,10 @@ of these could be written in [Snap]{.snap} itself, but these are implemented
 using the corresponding JavaScript library functions directly, so they
 run fast. They can be used, for example, in scraping data from a web
 site. The command use case-independent comparisons applies only to this
-library. The `multiline` block\index{multiline block} accepts and reports
+library. The {index}`\`multiline\` block<`multiline` block>` accepts and reports
 a text input that can include newline characters.
 
-The animation library\index{animation library} has these blocks:
+The {index}`animation library` has these blocks:
 
 ![image464.png](assets/image464.png) <!-- {width=4.0125in height=2.33125in} -->
 
@@ -1583,7 +1586,7 @@ reporter whose domain and range are real numbers between 0 and 1
 inclusive. The function represents what fraction of the “distance” (in
 quotes because it might be any numeric value, such as temperature in a
 simulation of weather) from here to there should be covered in what
-fraction of the time. A linear easing\index{easing block} function
+fraction of the time. A {index}`linear easing` function
 means steady progression. A quadratic easing function means starting
 slowly and accelerating. (Note that, since it’s a requirement that
 *f*(0)=0 and *f*(1)=1, there is only one linear easing function,
@@ -1645,7 +1648,7 @@ The web services library\index{web services library} has these blocks:
 ![image471.png](assets/image471.png)
 
 The first block is a generalization of the primitive
-`url` block\index{url block} , allowing more control over the various
+{index}`\`url\` block<`url` block>` , allowing more control over the various
 options in web requests:
 `GET`, `POST`, `PUT`, and `DELETE`, and fine control over the content of the
 message sent to the server. `Current location`\index{current location
@@ -1657,14 +1660,14 @@ in a (listified) JSON dictionary. The `key:value:` block
 \index{$key:value:$ block} is just a constructor for an abstract data
 type used with the other blocks
 
-The database library\index{database library} contains these blocks:
+The {index}`database library` contains these blocks:
 
 ![image472.png](assets/image472.png)
 
 It is used to keep data that persist from one [Snap]{.snap} session
  to the next, if you use the same browser and the same login.
 
-The world map library\index{map library} has these blocks:
+The world {index}`map library` has these blocks:
 
 ![image473.png](assets/image473.png) <!-- {width=2.44236in height=3.40278in} -->
 
@@ -1688,7 +1691,7 @@ geolocation is enabled on your device. Update redraws the map; as
 costume reports the visible section of the map as a costume. `Set style`
 allows things like satellite pictures.
 
-The APL primitives library contains\index{APL library} these blocks:
+The APL primitives {index}`library contains` these blocks:
 
 ![image474.png](assets/image474.png)
 

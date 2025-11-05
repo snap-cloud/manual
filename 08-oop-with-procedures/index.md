@@ -53,7 +53,7 @@ to a particular counter.
  In the simplified class
 above, there is only one method, and so there are no messages; you just
 call the instance to carry out its one method. Here is a more refined
-version that uses message passing\index{message passing} :
+version that uses {index}`message passing` :
 
 ![image853.png](assets/image853.png) <!--  style="width:4.41667in;height:3.16667in" / -->
 
@@ -91,8 +91,8 @@ the method.
 So, our objects now have local state variables and message passing. What
 about inheritance\index{inheritance}? We can provide that capability
 using the technique of *delegation*\index{delegation}. Each instance
-of the child class\index{child class} contains an instance of the
-parent class\index{parent class}, and simply passes on the messages it
+of the {index}`child class` contains an instance of the
+{index}`parent class`, and simply passes on the messages it
 doesn’t want to specialize:
 
 ![image857.png](assets/image857.png) <!--  style="width:3.8125in;height:3.58333in" / -->
@@ -130,7 +130,7 @@ entire family, it must ask the parent to do it.)
 Because we want to be able to create and delete properties dynamically,
 we won’t use [Snap]{.snap} variables to hold an object’s variables or methods.
 Instead, each object has two *tables,* called **methods** and **data**, each of
-which is an\index{association list} *association list:* a list of
+which {index}`is an` *association list:* a list of
 two-item lists, in which each of the latter contains a *key* and a
 corresponding *value.* We provide a lookup procedure to locate the
 key-value pair\index{key-value pair} corresponding to a given key in a
@@ -152,7 +152,7 @@ procedure\index{dispatch procedure} that takes a message as its input
 and reports the corresponding method. When an object gets a message, it
 will ﬁrst look for that keyword in its methods table\index{methods
 table} . If it’s found, the corresponding value is the method we want.
-If not, the object looks in its data table\index{data table}. If a
+If not, the object looks in its {index}`data table`. If a
 value is found there, what the object returns is *not* that value, but
 rather a reporter method that, when called, will report the value. This
 means that what an object returns is *always* a method.

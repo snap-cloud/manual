@@ -87,12 +87,12 @@ those buttons is an alphabetical listing of projects from that source;
 selecting a project by clicking shows its thumbnail (a picture of the
 stage when it was saved) and its project notes at the right.
 
-The search bar\index{search bar} at the top can be used to find a project by name or text in the
+The {index}`search bar` at the top can be used to find a project by name or text in the
 project notes. So in this example:
 
 ![The open dialog showing a search filter for the text "cre"](assets/image996.png) <!--  style="width:2.72431in;height:1.97778in" / -->
 
-I was looking for my ice cream\index{ice cream} projects and typed “crea” in
+I was looking for my {index}`ice cream` projects and typed “crea” in
 the search bar, then wondered why “ferris” matched. But then when I clicked on ferris I saw this:
 
 ![Open dialog showing a project called "ferris" selected](assets/image997.png) <!--  style="width:2.72361in;height:1.97778in" / -->
@@ -181,7 +181,7 @@ requirements of the Advanced Placement Computer Science Principles
 
 <!-- TODO: Update to default to downloading an XML file. -->
 The "`Export blocks…`" option\index{Export blocks… option} is used to
-create a block library\index{block library}. It presents a list of all
+create a {index}`block library`. It presents a list of all
 the global (for all sprites) blocks in your project, and lets you select
 which to export. It then opens a browser tab with those blocks in XML
 format, or stores directly to your local disk, as with the "`Export
@@ -651,7 +651,7 @@ temporary clones.
 
 ##  The Palette Area
 
-At the top of the palette area\index{palette area} are the eight
+At the top of the {index}`palette area` are the eight
 buttons that select which palette (which block category) is shown:
 Motion, Looks, Sound, Pen, Control, Sensing, Operators, and Variables
 (which also includes the List and Other blocks). There are no menus
@@ -789,7 +789,7 @@ of the palette below its standard value.
 
 ## The Scripting Area
 
-The scripting area\index{scripting area} is the middle vertical region
+The {index}`scripting area` is the middle vertical region
 of the [Snap]{.snap} window, containing scripts and also some controls for the
 appearance and behavior of a sprite. There is always a *current sprite*
 \index{current sprite} *,* whose scripts are shown in the scripting
@@ -811,7 +811,7 @@ controls} are a picture of the sprite and some controls for it:
 Note that the sprite picture reflects its rotation, if any. There are
 three things that can be controlled here:
 
-1. The three circular buttons\index{rotation buttons} in a column at
+1. The three {index}`circular buttons` in a column at
 the left control the sprite’s *rotation* behavior. Sprite costumes are
 designed to be right-side-up when the sprite is facing toward the right
 (direction = 90). If the topmost button is lit, the default as shown in
@@ -822,10 +822,10 @@ reversed left-right when the sprite’s direction is roughly leftward
 If the bottom button is selected, the costume’s orientation does not
 change regardless of the sprite’s direction.
 
-2. The sprite’s *name* can be changed in the text box\index{name box}
+2. The sprite’s *name* can be changed in the {index}`text box`
 that, in this picture, says “Sprite.”
 
-3. Finally, if the draggable checkbox\index{draggable checkbox} is
+3. Finally, if the {index}`draggable checkbox` is
 checked, then the user can move the sprite on the stage by clicking and
 dragging it. The common use of this feature is in game projects, in
 which some sprites are meant to be under the player’s control but others
@@ -854,7 +854,7 @@ The script will have a green “halo”\index{green halo} around it while
 it’s running. If the script is shared with clones, then while it has the
 green halo it will also have a count of how many instances of the script
 are running. Clicking a script with such a halo\index{halo} *stops* the
-script. (If the script includes a warp block\index{warp block}, which
+script. (If the script includes a {index}`warp block`, which
 might be inside a custom block used in the script, then [Snap]{.snap} may not
 respond immediately to clicks.)
 
@@ -917,7 +917,7 @@ you experiment with the compilation feature. The right-click menu for a
 compiled higher order function will have an uncompile option. This is an
 experimental feature.
 
-The duplicate option\index{duplicate option} for a command block makes
+The {index}`duplicate option` for a command block makes
 a copy of the *entire script* starting from the selected block. For a
 reporter, it copies only that reporter and its inputs. The copy is
 attached to the mouse, and you can drag it to another script (or even to
@@ -931,7 +931,7 @@ script. Note that if the selected block is a C-shaped control block, the
 script inside its C-shaped slot is included. If the block is at the end
 of its script, this option does not appear. (Use duplicate instead.)
 
-The extract option\index{extract option} removes the selected block
+The {index}`extract option` removes the selected block
 from the script and leaves you holding it with the mouse. In other
 words, it’s like the block picture option, but it doesn’t leave a copy
 of the block in the original script. If the block is at the end of its
@@ -939,7 +939,7 @@ script, this option does not appear. (Just grab the block with the
 mouse.) A shorthand for this operation is to *shift-click*
 \index{shift-click on block} and drag out the block.
 
-The delete option\index{delete option} deletes the selected block from
+The {index}`delete option` deletes the selected block from
 the script.
 
 The add comment option\index{add comment option} creates a comment,
@@ -1012,7 +1012,7 @@ background of the scripting area gives this menu:
 
 ![image1075.png](assets/image1075.png) <!--  style="width:1.28958in;height:1.27778in" / -->
 
-The undrop option\index{undrop option} is a sort of “undo” feature for
+The {index}`undrop option` is a sort of “undo” feature for
 the common case of dropping a block somewhere other than where you meant
 it to go. It remembers all the dragging and dropping you’ve done in this
 sprite’s scripting area (that is, other sprites have their own separate
@@ -1129,8 +1129,8 @@ turtle have a different context menu:
 
 ![image1091.png](assets/image1091.png) <!--  style="width:0.98333in;height:1.31944in" / -->
 
-The edit option\index{edit option} opens the Paint Editor on this
-costume. The rename option\index{rename option} opens a dialog box in
+The {index}`edit option` opens the Paint Editor on this
+costume. The {index}`rename option` opens a dialog box in
 which you can rename the costume. (A costume’s initial name comes from
 the file from which it was imported, if any, or is something like
 costume5.) Duplicate\index{duplicate option} makes a copy of the
@@ -1138,7 +1138,7 @@ costume, in the same sprite. (Presumably you’d do that because you
 intend to edit one of the copies.) Delete\index{delete option} is
 obvious. The get blocks option\index{get blocks option} appears only
 for a smart costume, and brings its script to the scripting area. The
-export option\index{export option} saves the costume as a file on your
+{index}`export option` saves the costume as a file on your
 computer, in your usual downloads folder.
 
 You can drag costumes up and down in the Costumes tab in order to
@@ -1169,8 +1169,8 @@ window can be open at a time.
 
 The ten square buttons in two rows of five near the top left of the
 window are the *tools.* The top row, from left to right, are the
-paintbrush tool\index{paintbrush tool}, the outlined rectangle tool
-\index{rectangle tool}, the outlined ellipse tool\index{ellipse tool}, the eraser tool\index{eraser tool}, and the rotation point tool
+{index}`paintbrush tool`, the outlined rectangle tool
+\index{rectangle tool}, the outlined {index}`ellipse tool`, the {index}`eraser tool`, and the rotation point tool
 \index{rotation point tool}. The bottom row tools are the line drawing
 tool\index{line drawing tool}, the solid rectangle tool\index{solid
 rectangle tool} , the solid ellipse tool\index{solid ellipse tool},
@@ -1178,7 +1178,7 @@ the floodfill tool,\index{floodfill tool,} and the eyedropper tool
 \index{eyedropper tool}. Below the tools is a row of four buttons that
 immediately change the picture. The first two change its overall size;
 the next two flip the picture around horizontally or vertically. Below
-these are a color palette\index{color palette}, a greyscale tape, and
+these are a {index}`color palette`, a greyscale tape, and
 larger buttons for black, white, and transparent paint. Below these is a
 solid bar displaying the currently selected color. Below that is a
 picture of a line showing the brush width for painting and drawing, and
@@ -1190,15 +1190,15 @@ same effect temporarily by holding down the shift key, which makes a
 check appear in the box as long as you hold it down. (But the Caps Lock
 key doesn’t affect it.)
 
-You can correct errors with the undo button\index{undo button}, which
+You can correct errors with the {index}`undo button`, which
 removes the last thing you drew, or the clear button\index{clear
 button} , which erases the entire picture. (Note, it does *not* revert
 to what the costume looked like before you started editing it! If that’s
-what you want, click the Cancel button\index{Cancel button} at the
+what you want, click the {index}`Cancel button` at the
 bottom of the editor.) When you’re finished editing, to keep your
 changes, click OK.
 
-Note that the ellipse tool\index{ellipse tool} s work more intuitively
+Note that the {index}`ellipse tool` s work more intuitively
 than ones in other software you may have used. Instead of dragging
 between opposite corners of the rectangle circumscribing the ellipse you
 want, so that the endpoints of your dragging have no obvious connection
@@ -1212,7 +1212,7 @@ check the checkbox.) The rectangle tools, though, work the way you
 expect: You start at one corner of the desired rectangle and drag to the
 opposite corner.
 
-Using the eyedropper tool\index{eyedropper tool}, you can click
+Using the {index}`eyedropper tool`, you can click
 anywhere in the [Snap]{.snap} window, even outside the Paint Editor, and the
 tool will select the color at the mouse cursor for use in the Paint
 Editor. You can only do this once, because the Paint Editor
@@ -1234,8 +1234,8 @@ The vector editor
 editor. One point of difference is that the bitmap editor has two
 buttons for solid ![image1098.png](assets/image1098.png) <!--  style="width:0.21528in;height:0.21528in" / -->  and outline ![image1097.png](assets/image1097.png) <!--  style="width:0.21528in;height:0.21528in" / -->  rectangles, and similarly for ellipses,
 but in the vector editor there is always an edge color\index{edge
-color} and a fill color\index{fill color}, even if the latter is
-“transparent paint\index{transparent paint},” and so only one button
+color} and a {index}`fill color`, even if the latter is
+“{index}`transparent paint`,” and so only one button
 per shape is needed. Since each shape that you draw is a separate layer
 (like sprites on the stage), there are controls to move the selected
 shape up (frontward) or down (rearward) relative to other shapes. There
@@ -1425,7 +1425,7 @@ menu:
 
 ![image1112.png](assets/image1112.png) <!--  style="width:0.60139in;height:1.08333in" / -->
 
-The duplicate option\index{duplicate option} makes another sprite with
+The {index}`duplicate option` makes another sprite with
 copies of the same scripts, same costumes, etc., as this sprite. The new
 sprite starts at a randomly chosen position different from the original,
 so you can see quickly which is which. The new sprite is *selected:* It
@@ -1433,7 +1433,7 @@ becomes the current sprite, the one shown in the scripting area. The
 clone option makes a permanent clone of this sprite, with some shared
 attributes, and selects it.
 
-The delete option\index{delete option} deletes the sprite. It’s not
+The {index}`delete option` deletes the sprite. It’s not
 just hidden; it’s gone for good. (But you can undelete it by clicking
 the wastebasket just below the right edge of the stage.) The edit option
 \index{edit option} selects the sprite. It doesn’t actually change
@@ -1474,9 +1474,9 @@ the pivot point in the Paint Editor, this technique does not visibly
 move the sprite on the stage. Instead, the values of x position and y
 position will change.
 
-The edit option\index{edit option} makes this the selected sprite,
+The {index}`edit option` makes this the selected sprite,
 highlighting it in the sprite corral and showing its scripting area. If
-the sprite was a temporary clone\index{temporary clone}, it becomes
+the sprite was a {index}`temporary clone`, it becomes
 permanent.
 
 The export… option\index{export option} saves, or opens a new browser
@@ -1528,7 +1528,7 @@ onto the [Snap]{.snap} window, in which case a variable will be created if
 necessary with the same name as the file (but without the extension).
 
 If the value of the variable is a list, then the menu will include an
-additional blockify option\index{blockify option}; clicking it will
+additional {index}`blockify option`; clicking it will
 generate an expression with nested list blocks that, if evaluated, will
 reconstruct the list. It’s useful if you imported a list and then want
 to write code that will construct the same list later.
@@ -1567,7 +1567,7 @@ logged vectors, the menu includes an extra option, svg…\index{svg…
 option} , that exports a picture of the stage in vector format. Only
 lines are logged, not color regions made with the fill block.
 
-## The Sprite Corral\index{sprite corral}  and Sprite Creation Buttons\index{sprite creation buttons}
+## The {index}`Sprite Corral`  and Sprite Creation Buttons\index{sprite creation buttons}
 
 Between the stage and the
 sprite corral at the bottom right of the [Snap]{.snap} window is a dark grey
@@ -1706,7 +1706,7 @@ then re-saved to the cloud.
 ## Mirror Sites
 
 If the site snap.berkeley.edu is ever unavailable, you can load [Snap]{.snap}
-at the following mirror sites\index{mirror sites} :
+at the following {index}`mirror sites` :
 
 - https://bjc.edc.org\index{bjc.edc.org} /snapsource/snap.html
 

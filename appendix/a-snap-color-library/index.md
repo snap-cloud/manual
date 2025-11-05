@@ -27,7 +27,7 @@ distinguish that many. For example, here’s red 57, green 180, blue 200: ![a te
 And here’s red 57, green *182,* blue 200:  ![image1138.png](assets/image1138.png) <!--  style="width:0.23611in;height:0.23611in" alt="Macintosh HD:Users:bh:Desktop:Google Chrome001.png" / --> You might be able to tell them
 apart if you see them side by side: ![image1137.png](assets/image1137.png) <!--  style="width:0.23611in;height:0.23611in" alt="Macintosh HD:Users:bh:Desktop:Google Chrome002.png" / --> ![image1138.png](assets/image1138.png) <!--  style="width:0.23611in;height:0.23611in" alt="Macintosh HD:Users:bh:Desktop:Google Chrome001.png" / --> but maybe not even then.
 
-Color space\index{color space}—the collection of all possible
+{index}`Color space`—the collection of all possible
 colors—is three-dimensional, but there are many ways to choose the
 dimensions. RGB\index{RGB} (red-green-blue), the one most commonly used
 in computers, matches the way TVs and displays produce color. Behind
@@ -88,7 +88,7 @@ crayons\index{box of twenty crayons} :
 
 The set of *color numbers* is arranged so that each color number is
 visually near each of its neighbors. Bright and dark colors alternate
-for each family. Color numbers\index{color numbers} range from 0 to 99,
+for each family. {index}`Color numbers` range from 0 to 99,
 like crayon numbers, but you can use fractional numbers to get as tiny a
 step as you like:
 
@@ -120,7 +120,7 @@ They have the same names as three of the primitive Pen blocks:
 The first (Pen block-colored) input slot is used to select which color
 scale you want to use. (These blocks also allow reading or setting two
 block properties that are not colors: the pen size and its
-transparency.) The pen reporter\index{pen block} requires no other
+transparency.) The {index}`pen reporter` requires no other
 inputs; it reports the state of the pen in whatever dimension you
 choose.
 
@@ -168,7 +168,7 @@ number, as in the Red example, you can use this block:
 
 ![image402.png](assets/image402.png) <!--  style="width:1.80556in;height:0.19444in" alt="Macintosh HD:Users:bh:Desktop:color-from-and.png" / -->
 
-Finally, the library includes the mix block\index{mix block} and a
+Finally, the library includes the {index}`mix block` and a
 helper:
 
 ![image1160.png](assets/image1160.png) <!--  style="width:5.79306in;height:0.3in" / -->
@@ -223,7 +223,7 @@ In this scale, each of the
 seven rainbow colors and brown get an equal share. (Red’s looks too
 small, but that’s because it’s split between the two ends: hue 0 is pure
 red, brownish reds are to its right, and purplish reds are wrapped
-around to the right end.) We call this scale “fair hue\index{fair hue}
+around to the right end.) We call this scale “{index}`fair hue`
 ” because each color family gets a fair share of the total hue range.
 (By the way, you were probably taught “… green, blue, indigo
 \index{indigo}, violet” in school, but it turns out that color names
@@ -264,7 +264,7 @@ color numbers by 10
 
 ![image1197.png](assets/image1197.png) <!--  style="width:0.23611in;height:0.23611in" alt="Macintosh HD:Users:bh:Desktop:pink.png" / -->
 
-This chart shows how the color scales\index{color scales} discussed so
+This chart shows how the {index}`color scales` discussed so
 far are related. Note that all scales range from 0 to 100; the fair hues
 scale has been compressed in the chart so that similar colors line up
 vertically. (Its dimensions are different because it doesn’t include the
@@ -543,13 +543,13 @@ mistakes are bh’s.)
 
 ### tl;dr {#sec-tldr-spirals}
 
-For normal people\index{normal people}, [Snap]{.snap} provides three simple,
+For {index}`normal people`, [Snap]{.snap} provides three simple,
 one-dimensional scales: *<u>crayons</u>* for specific interesting
 colors, *<u>color numbers</u>* for a continuum of high-contrast colors
 with a range of hues and shading, and *<u>fair hues</u>* for a continuum
-without shading. For color nerds\index{color nerds}, it provides
+without shading. For {index}`color nerds`, it provides
 three-dimensional color spaces RGB, HSL, HSV, and fair-hue variants of
-the latter two. We recommend “fair HSL\index{fair HSL} ” for zeroing in on a desired color.
+the latter two. We recommend “{index}`fair HSL` ” for zeroing in on a desired color.
 
 <!-- Image hidden because it is included as part of the next image. -->
 <!-- ![image1241.png](assets/image1241.png) -->
@@ -590,8 +590,8 @@ expected, falls substantially in the browns, to a low of about 56%
 curve is smooth, without inflection points other than that minimum-value
 pure brown.
 
-“Fair saturation\index{fair saturation} ” and “fair value\index{fair
-value} ” are by definition 100% for the entire range of fair hues. This
+“{index}`Fair saturation`” and “fair value\index{fair
+value}” are by definition 100% for the entire range of fair hues. This
 means that in the browns, the real saturation and value are the product
 (in percent) of the innate shading of the specific brown fair hue and
 the user’s fair saturation/value setting. When the user’s previous color
@@ -655,7 +655,7 @@ increase, so we get brighter and greener colors.
 
 - (65,70) Shades of green-cyan mixtures.
 
-In the color number chart\index{color chart}, all the dark color
+In the color {index}`number chart`, all the dark color
 numbers look a lot like black, but they’re quite different. Here are the
 darkest colors in each color number family.
 

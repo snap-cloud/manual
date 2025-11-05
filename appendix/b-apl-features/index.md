@@ -24,7 +24,7 @@ data} .” A mathematician who wants to add two vectors writes
 result\[i\]=v1\[i\]+v2\[i\].” Same for a programmer using APL.
 
 There are three kinds of function in APL: scalar functions\index{scalar
-function} , mixed functions\index{mixed function}, and operators
+function} , {index}`mixed functions`, and operators
 \index{operator (APL)}. A *scalar function* is one whose natural domain
 is individual numbers or text characters. A *mixed function* is one
 whose domain includes arrays (vectors, matrices, or higher-dimensional
@@ -55,8 +55,8 @@ As explained in Section IV.F, this termwise extension\index{termwise
 extension} of scalar functions is the main APL-like feature built into
 [Snap]{.snap} itself. We also include an extension of the item block
 \index{item block} to address multiple dimensions, an extension to the
-length block\index{length block} with five list functions from APL, and
-a new primitive reshape block\index{reshape block}. The APL library
+{index}`length block` with five list functions from APL, and
+a new primitive {index}`reshape block`. The APL library
 \index{APL library} extends the implementation of APL features to
 include a few missing scalar functions and several missing mixed
 functions and operators.
@@ -190,7 +190,7 @@ predicate functions.
 ![image1265.png](assets/image1265.png) <!--  style="width:5.73333in;height:1.10667in" / -->
 
 These are the
-scalar functions\index{scalar function} in the APL library. Most of
+{index}`scalar functions` in the APL library. Most of
 them are straightforward to figure out. The scalar = block\index{scalar
 = block} provides an APL-style version of = (and other exceptions) as a
 hyperblock that extends termwise to arrays. Join, the only non-predicate
@@ -422,7 +422,7 @@ to select by columns rather than by rows.
 
  ![image1311.png](assets/image1311.png) <!--  style="width:2.91667in;height:0.325in" alt="Macintosh HD:Users:bh:Desktop:column-select.png" / -->
 
-Select (if take\index{take block} ) or select all but (if drop
+Select ({index}`if take` ) or select all but (if drop
 \index{drop block} ) the first (if *n*\>0) or last (if *n*\<0) |*n*|
 items from a vector, or rows from a matrix. Alternatively, if the left
 input is a two-item vector, select rows with the first item and columns
@@ -430,7 +430,7 @@ with the second.
 
  ![image1312.png](assets/image1312.png) <!--  style="width:2.91667in;height:0.325in" alt="Macintosh HD:Users:bh:Desktop:column-select.png" / -->
 
-The compress block\index{compress block} selects a subset of its right
+The {index}`compress block` selects a subset of its right
 input based on the Boolean values in its left input, which must be a
 vector of Booleans whose length equals the length of the array (the
 number of rows, for a matrix) in the right input. The block reports an
@@ -455,7 +455,7 @@ long block names so it won’t take you a month!
 ![image1320.png](assets/image1320.png) <!--  style="width:2.99444in;height:0.23333in" / -->
 ![image1319.png](assets/image1319.png) <!--  style="width:3.175in;height:0.18333in" / -->
 ![image1321.png](assets/image1321.png) <!--  style="width:1.11181in;height:0.23333in" alt="Macintosh HD:Users:bh:Desktop:transpose.png" / --> Don’t confuse this
-block with the reduce block\index{reduce block}, whose APL symbol is
+block with the {index}`reduce block`, whose APL symbol is
 also a slash. In that block, what comes to the left of the slash is a
 dyadic combining function; it’s the APL equivalent of combine. This
 block is more nearly equivalent to keep. But keep takes a predicate
@@ -469,7 +469,7 @@ applied to a list instead of to a scalar. The reason both blocks use the
 / character is that both of them reduce the size of the input array,
 although in different ways.
 
-The reverse row order\index{reverse block}, reverse column order
+The {index}`reverse row order<reverse block>`, reverse column order
 \index{reverse columns block}, and transpose blocks\index{transpose
 block} form a group: the group of reflections of a matrix. The APL
 symbols are all a circle with a line through it; the lines are the

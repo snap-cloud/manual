@@ -309,8 +309,8 @@ automatically, there is generally no need for the user to think about
 threads. But, just to show that this, too, is not magic, here is an
 implementation of a simple thread system. It uses a global variable
 named tasks that initially contains an empty list. Each use of the
-C-shaped thread block\index{thread block} adds a continuation (the
-ringed script) to the list. The yield block\index{yield block} uses run
+C-shaped {index}`thread block` adds a continuation (the
+ringed script) to the list. The {index}`yield block` uses run
 w/continuation to create a continuation for a partly done thread, adds
 it to the task list, and then runs the first waiting task. The
 end** **thread block (which is automatically added at the end of every

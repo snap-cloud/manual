@@ -29,18 +29,18 @@ project has a name, that name will be the default filename if you don’t
 give a different name. Another, equivalent way to save to disk is to
 choose "`Export project`" from the File menu.
 
-## Creating a Cloud Account\index{cloud storage}
+## Creating a {index}`Cloud Account`
 
 The other possibility is to
 save your project "`in the cloud`",\index{save your project in the cloud}
 at the [Snap]{.snap} web site. In order to do this, you need an account with
-us. Click on the Cloud button\index{Cloud button} (![image489.png](assets/image489.png) <!--  style="width:0.29167in;height:0.16667in" / --> ) in the Tool Bar.
+us. Click on the {index}`Cloud button` (![image489.png](assets/image489.png) <!--  style="width:0.29167in;height:0.16667in" / --> ) in the Tool Bar.
 Choose the “`Signup…`” option. This will show you a window that looks like
 the picture below:
 
 ![image488.png](assets/image488.png) <!--  style="width:1.23403in;height:2.32986in" / -->
 
-You must choose a user name\index{user name} that will identify you on
+You must choose a {index}`user name` that will identify you on
 the web site, such as `Jens`. If you’re a Scratch user, you can use
 your Scratch name for [Snap]{.snap} too. If you’re a kid, don’t pick a user
 name that includes your family name, but first names or initials are
@@ -144,7 +144,7 @@ just opened, but actually changed in the project editor).
 If your project on the cloud is missing, empty, or otherwise broken and
 isn’t the one you edited most recently, or if Restore unsaved project
 fails: ***Don’t edit the broken project.*** In the "`Open…`" box, enter your
-project name, then push the Recover button\index{recover button}. *Do
+project name, then push the {index}`Recover button`. *Do
 this right away,* because we save only the version before the most
 recent, and the latest before today. So don’t keep saving bad versions;
 Recover right away. The Recover feature works only on a project version

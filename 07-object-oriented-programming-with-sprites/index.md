@@ -7,7 +7,7 @@ just more data) that you interact with by sending it a\index{message}
 *message* (just a name, maybe in the form of a text string, and perhaps
 additional inputs). The object responds to the message by carrying out a
 method, which may or may not report a value back to the asker. Some
-people emphasize the\index{data hiding} *data hiding* aspect of [OOP]{.mono}
+people {index}`emphasize the` *data hiding* aspect of [OOP]{.mono}
 (because each object has local variables that other objects can access
 only by sending request messages to the owning object) while others
 emphasize the *simulation* aspect (in which each object abstractly
@@ -245,7 +245,7 @@ variable or attribute is called a\index{setter} *setter.*
 
 In [Snap]{.snap} we allow virtually all attributes to be examined. But instead
 of adding dozens of reporters, we use a more uniform interface for
-attributes: The my block\index{my block}’s menu (in [Sensing]{.mono}; see page
+attributes: The {index}`my block`’s menu (in [Sensing]{.mono}; see page
 [78](#attrib.pnglist-of-attributes)) includes many of the attributes of
 a sprite. It serves as a general getter for those attributes, e.g., <code>my
 (anchor)</code> to find the sprite, if any, to which this sprite is attached
@@ -276,7 +276,7 @@ class/instance\index{class/instance} programmers may find prototyping
 \index{prototyping} strange at first, but it is actually a more
 expressive system, because you can easily simulate a class/instance
 hierarchy by hiding the prototype sprite! Prototyping is also a better
-fit with the Scratch design principle\index{design principle} that
+fit with the Scratch {index}`design principle` that
 everything in a project should be concrete and visible on the stage; in
 class/instance [OOP]{.mono} the programming process begins with an abstract,
 invisible entity, the class, that must be designed before any concrete
@@ -287,7 +287,7 @@ JavaScript, claim to use prototyping, but their object system is much
 more complicated than what we are describing (we’re guessing it’s
 because they were designed by people too familiar with class/instance
 programming); that has, in some circles, given prototyping a bad name.
-Our prototyping design comes from Object Logo\index{Object Logo}, and
+Our prototyping design comes from {index}`Object Logo`, and
 before that, from Henry Lieberman\index{Lieberman, Henry}.
 \[Lieberman, H., Using Prototypical Objects to Implement Shared Behavior
 in Object-Oriented Systems, First Conference on Object-Oriented

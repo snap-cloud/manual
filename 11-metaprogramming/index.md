@@ -54,7 +54,7 @@ case, the value of block is the new block itself (the hexagon block, in
 this example). The second slot is where you give the *label* for the new
 block. In this example, the label is “hexagon \_” in which the
 underscore represents an input slot. So, here are a few examples of
-block label\index{block label} s:
+{index}`block label` s:
 
 set pen \_ to \_
 

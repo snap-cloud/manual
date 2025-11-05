@@ -34,18 +34,18 @@ category.
 There are three block shapes\index{shapes of blocks}, following a
 convention that should be familiar to Scratch users: The
 jigsaw-puzzle-piece shaped blocks\index{jigsaw-piece blocks} are
-Commands, and don’t report a value. The oval blocks\index{oval blocks}
-are Reporters, and the hexagonal blocks\index{hexagonal blocks} are
+Commands, and don’t report a value. The {index}`oval blocks`
+are Reporters, and the {index}`hexagonal blocks` are
 Predicates, which is the technical term for reporters that report
 Boolean (true or false) values.
 
 Suppose you want to make a block named “square” that draws a square. You
 would choose [Motion]{.mono}, Command, and type “square” into the name field.
-When you click "`OK`", you enter the Block Editor\index{Block Editor}.
+When you click "`OK`", you enter the {index}`Block Editor`.
 This works just like making a script in the sprite’s scripting area,
 except that the “hat” block at the top, instead of saying something like
 <code>when I am clicked</code>, has a picture of the block you’re building. This
-hat block\index{hat block} is called the *prototype*\index{prototype}
+{index}`hat block` is called the *prototype*\index{prototype}
 of your custom block.[^3] You drag blocks under the hat to program your
 custom block, then click OK:
 
@@ -122,7 +122,7 @@ create a variant of script variables for this block: A script variable
 is created when a block is called, and it disappears when that call
 finishes. What if you want a variable that’s local to this block, as a
 script variable is, but doesn’t disappear between invocations? That’s a
-block variable\index{block variable}. If the definition of a block
+{index}`block variable`. If the definition of a block
 includes a block variable, then every time that (custom) block is
 dragged from the palette into a script, the block variable is created.
 Every time *that copy* of the block is called, it uses the same block
@@ -158,7 +158,7 @@ in a recursive program. Instead, imagine that inside the computer there
 are many small people, and if Theresa is drawing a tree of size 100,
 depth 6, she hires Tom to make a tree of size 70, depth 5, and later
 hires Theo to make another tree of size 70, depth 5. Tom in turn hires
-Tammy and Tallulah, and so on. Each little person\index{little people}
+Tammy and Tallulah, and so on. Each {index}`little person`
 has his or her own local variables "`size`" and "`depth`", each with different
 values.
 
@@ -220,7 +220,7 @@ them, see @sec-libraries-intro.
 
 ## Custom blocks and Visible Stepping
 
-Visible stepping\index{visible stepping} normally treats a call to a
+{index}`Visible stepping` normally treats a call to a
 custom block as a single step. If you want to see stepping inside a
 custom block you must take these steps *in order:*
 

@@ -4,9 +4,9 @@
 
 We have been extremely lucky in our mentors.
 Jens cut his teeth in the company of the Smalltalk pioneers:
-Alan Kay\index{Kay, Alan}, Dan Ingalls\index{Ingalls, Dan}, and the
+{index}`Alan Kay<single: Kay, Alan>`, Dan Ingalls\index{Ingalls, Dan}, and the
 rest of the gang who invented personal computing and object oriented
-programming in the great days of Xerox PARC\index{Xerox PARC}. He
+programming in the great days of {index}`Xerox PARC`. He
 worked with John Maloney\index{Maloney, John}, of the MIT
 \index{Massachusetts Institute of Technology} Scratch Team
 \index{Scratch!Team@Scratch Team}, who developed the Morphic\index{Morphic}

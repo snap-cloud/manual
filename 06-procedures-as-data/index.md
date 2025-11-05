@@ -4,7 +4,7 @@
 
 ## Call and Run
 
-In the for block\index{for block} example above, the input named <var>action</var> has been declared as type
+In the {index}`for block` example above, the input named <var>action</var> has been declared as type
 "`Command (C-shaped)`"; that’s why the finished block is C-shaped. But how
 does the block actually tell [Snap]{.snap} to carry out the commands inside
 the C-slot? Here is a simple version of the block script:
@@ -17,7 +17,7 @@ value is greater than the starting value; if not, the block should
 the variable by −1 for each repetition instead of by 1.
 
 The
-important part of this script is the `run` block\index{run block} near
+important part of this script is the {index}`\`run\` block<`run` block>` near
 the end. This is a [Snap]{.snap} built-in command block that takes a
 Command-type value (a script) as its input, and carries out its
 instructions. (In this example, the value of the input ![image693.png](assets/image693.png) <!--  style="width:0.5in;height:0.15625in" / --> is the script
@@ -135,7 +135,7 @@ Why would you want a block to take a procedure as input? This is actually
 not an obscure thing to do; the primitive conditional and looping blocks
 (the C-shaped ones in the Control palette) take a script as input. Users
 just don’t usually think about it in those terms! We could write the
-`repeat` block\index{repeat block} as a custom block this way, if [Snap]{.snap}
+{index}`\`repeat\` block<`repeat` block>` as a custom block this way, if [Snap]{.snap}
 didn’t already have one:
 
 ![image708.png](assets/image708.png) <!--  style="width:2.375in;height:1.35417in" / -->
@@ -254,7 +254,7 @@ list as input; it takes numbers as inputs! So this would be wrong:
 
 ## Formal Parameters
 
-The `rings` around Procedure-type inputs\index{input name} have an
+The `rings` around Procedure-{index}`type inputs` have an
 arrowhead at the right. Clicking the arrowhead allows you to give the
 inputs to a block or script explicit names\index{name, input}, instead
 of using empty input slots as we’ve done until now.
@@ -346,7 +346,7 @@ write our own:
 :::
 
 Our block works for these simple examples, but if we try to use it in writing a
-recursive operator\index{recursive operator}, it’ll fail:
+{index}`recursive operator`, it’ll fail:
 
 ![image738.png](assets/image738.png) <!--  style="width:4.29167in;height:0.84861in" / -->
 
@@ -377,7 +377,7 @@ paid a heavy price: this `reporter-if` is no longer as intuitively obvious
 as the Scratch command-`if`. You have to know about procedures as data,
 about `rings`, and about a trick to get a constant value in a ringed slot
 \index{constant functions}. (The `id ( )` block\index{id block} implements
-the identity function\index{identity function}, which reports its
+the {index}`identity function`, which reports its
 input.[^6] We need it because `rings` take only reporters as input, not
 numbers.) What we’d like is a `reporter-if` that *behaves* like this one,
 delaying the evaluation of its inputs, but *looks* like our ﬁrst
@@ -400,7 +400,7 @@ but not both. But the slots appear as white [Any-type]{.mono} rectangles, not
 [Reporter-type]{.mono} rings, and the factorial block will look like our ﬁrst
 attempt.
 
-In a special form’s prototype, the unevaluated\index{unevaluated type}
+In a special form’s prototype, {index}`the unevaluated`
 input slot(s) are indicated by a lambda ("`λ`") next to the input name, just
 as if they were declared as [Procedure]{.mono} type\index{Procedure type}. They
 *are* [Procedure]{.mono} type, really; they’re just disguised to the user of the
