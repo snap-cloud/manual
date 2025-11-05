@@ -20,6 +20,10 @@ project:
   exclude:
     - '**/*.qmd'
     - '**/*.tex'
+  exports:
+  - format: tex+pdf
+    template: plain_latex_book
+    output: output/snap-manual.pdf
   toc:
     - file: index.md
     - file: 00-acknowledgements.md
@@ -299,7 +303,6 @@ site:
   template: book-theme
   numbered-references: true
   options:
-    style:
-      - _support/styles/snap-manual.scss
+    style: _support/styles/snap-manual.scss
     favicon: images/favicon.png
     logo: images/snap-logo.png
