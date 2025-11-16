@@ -53,7 +53,7 @@ block it will snap into the tab of the gold one.
 At the top of the script is a *hat* block, which indicates when the
 script should be carried out. Hat block names typically start with the
 word “when”; in the square-drawing example in @fig-draw-square, the script should
-be run when the green flag\index{flag, green} near the right end of the
+be run when the {index}`green flag<single: flag, green>` near the right end of the
 {.snap}`Snap` {index}`tool bar` is clicked. (The {.snap}`Snap` tool bar is
 part of the {.snap}`Snap` window, not the same as the browser’s or operating
 system’s menu bar.) A script isn’t required to have a hat block
@@ -217,7 +217,7 @@ Costumes, and Sounds. You’ll see that the Costumes tab\index{Costumes
 tab} is now selected. In this view, the sprite’s *wardrobe,*
 \index{wardrobe} you can choose whether the sprite should wear its
 Turtle costume or its Alonzo\index{Alonzo} costume. (Alonzo, the
-{.snap}`Snap` mascot, is named after Alonzo Church\index{Church, Alonzo}, a
+{.snap}`Snap` mascot, is named after {index}`Alonzo Church<single: Church, Alonzo>`, a
 mathematician who invented the idea of procedures as data
 \index{procedures as data}, the most important way in which {.snap}`Snap` is
 different from Scratch\index{Scratch}.) You can give a sprite as many

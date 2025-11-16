@@ -162,7 +162,7 @@ Tammy and Tallulah, and so on. Each {index}`little person`
 has his or her own local variables "`size`" and "`depth`", each with different
 values.
 
-You can also write recursive reporters\index{reporters, recursive},
+You can also write {index}`recursive reporters<single: reporters, recursive>`,
 like this block to compute the factorial\index{factorial} function:
 
 ![image520.png](assets/image520.png) <!--  style="width:4.29167in;height:0.86458in" / -->
@@ -186,7 +186,7 @@ compact way to write the <code>factorial</code> function:
 ![image521.png](assets/image521.png) <!--  style="width:4.29167in;height:0.86458in" / -->
 
 For more on recursion, see *Thinking Recursively*\index{Thinking
-Recursively} by Eric Roberts\index{Roberts, Eric}. (The original
+Recursively} by {index}`Eric Roberts<single: Roberts, Eric>`. (The original
 edition is ISBN 978‑0471816522; a more recent *Thinking Recursively in
 Java* is ISBN 978-0471701460.) <!-- Do we want to link to something like https://books.google.com/books/about/Thinking_Recursively.html?id=oH9QAAAAMAAJ&source=kp_book_description --MF -->
 

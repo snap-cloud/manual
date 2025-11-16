@@ -1,0 +1,91 @@
+\documentclass[12pt,oneside]{scrbook}
+\usepackage[paperheight=11in,
+   paperwidth=8.5in,
+   top=1.5cm,
+   bottom=2cm,
+   left=1.5cm,
+   right=1.5cm]{geometry}
+
+% https://www.overleaf.com/learn/latex/Indices
+\usepackage{imakeidx}
+
+% \usepackage[top=2cm, bottom=2cm, left=2cm, right=2cm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{natbib}
+\usepackage{xcolor}
+\usepackage{changepage}
+\usepackage{framed}
+\usepackage{hyperref}
+\usepackage{amssymb}
+\bibliographystyle{abbrvnat}
+
+% Make list items more compact
+\usepackage{enumitem}
+\setlist[itemize]{noitemsep, topsep=0pt}
+
+\makeindex[intoc=true, columns=2, options=-s _support/tex/index-style.ist]
+
+[- IMPORTS -]
+
+\hypersetup{
+  colorlinks,
+  linkcolor={black},
+  citecolor={black},
+  urlcolor={black}
+}
+
+% Style quotes
+\definecolor{darkblue}{rgb}{0.0, 0.0, 0.55}
+\definecolor{quoteshade}{rgb}{0.95, 0.95, 1}
+\renewenvironment{quote}{%
+  \def\FrameCommand{%
+    \hspace{1pt}%
+    {\color{darkblue}\vrule width 2pt}%
+    {\color{quoteshade}\vrule width 4pt}%
+    \colorbox{quoteshade}%
+  }%
+  \MakeFramed {\advance\hsize-\width \FrameRestore}%
+  \noindent\hspace{-8pt}% disable indenting first paragraph
+  \begin{adjustwidth}{0pt}{0pt}% adjust as needed
+  \vspace{2pt}\vspace{2pt}%
+}
+{%
+  \vspace{2pt}\end{adjustwidth}\endMakeFramed%
+}
+
+\title{\Huge \textbf{[-doc.title-]}[# if doc.subtitle #] \\ \huge [-doc.subtitle-][# endif #]}
+
+\author{\parbox{\textwidth}{\centering\textsc{
+[#- for author in doc.authors #]
+  [#- if not loop.first #] and [# endif #][-author.name-][# if not loop.last and not loop.first #], [# endif #]
+[#- endfor -#]
+}}}
+
+\begin{document}
+\sloppy
+
+\frontmatter
+\maketitle
+
+\tableofcontents
+% \listoffigures
+% \listoftables
+
+\mainmatter
+
+% \include{preface.tex}
+% \include{acknowledgements.tex}
+
+[- CONTENT -]
+
+
+[# if doc.bibliography #]
+\bibliography{[- doc.bibliography | join(", ") -]}
+[# endif #]
+
+
+\end{document}

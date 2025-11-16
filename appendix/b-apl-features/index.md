@@ -8,7 +8,7 @@ later take its name from the first letters of the words in the book’s
 title. It was little-known until 1964, when a formal description of the
 just-announced IBM System/360\index{IBM System/360} in the *IBM Systems
 Journal* used APL\index{APL} notation. (Around the same time, Iverson’s
-associate Adin Falkoff\index{Falkoff, Adin} gave a talk on APL to a New
+associate {index}`Adin Falkoff<single: Falkoff, Adin>` gave a talk on APL to a New
 York Association for Computing Machinery chapter, with an excited
 14-year-old Brian Harvey in the audience.) But it wasn’t until 1966 that
 the first public implementation of the language for the System/360 was
@@ -528,7 +528,8 @@ mapping over the *rows* of the matrix, applying combine to each row.
 Combining rows, reducing column vectors.
 
 
-![image1336.png](assets/image1336.png) <!--  style="width:2.16667in;height:0.24167in" alt="Macintosh HD:Users:bh:Desktop:outer.png" / --> The outer product block\index{outer product block} takes two arrays
+![image1336.png](assets/image1336.png)
+The outer product block\index{outer product block} takes two arrays
 (vectors, typically) and a dyadic scalar function as inputs. It reports
 an array whose rank is the sum of the ranks of the inputs (so, typically
 a matrix), in which each item is the result of applying the function to
@@ -544,7 +545,7 @@ symbol ◦. is pronounced “jot dot.”) The way to think about this block is
 block\index{inner product block} takes two matrices and two operations
 as input. The number of columns in the left matrix must equal the number
 of rows in the right matrix. When the two operations are + and ×, this
-is the matrix multiplication\index{multiplication, matrix} familiar to
+is the {index}`matrix multiplication<single: multiplication, matrix>` familiar to
 mathematicians:
 
 ![image1338.png](assets/image1338.png) <!--  style="width:7.33861in;height:1.00694in" alt="Macintosh HD:Users:bh:Desktop:inner-ex.png" / -->

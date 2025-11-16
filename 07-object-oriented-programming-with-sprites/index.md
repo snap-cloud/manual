@@ -288,7 +288,8 @@ more complicated than what we are describing (we’re guessing it’s
 because they were designed by people too familiar with class/instance
 programming); that has, in some circles, given prototyping a bad name.
 Our prototyping design comes from {index}`Object Logo`, and
-before that, from Henry Lieberman\index{Lieberman, Henry}.
+before that, from {index}`Henry Lieberman<single: Lieberman, Henry>`.
+
 \[Lieberman, H., Using Prototypical Objects to Implement Shared Behavior
 in Object-Oriented Systems, First Conference on Object-Oriented
 Programming Languages, Systems, and Applications \[OOPSLA-86\], ACM

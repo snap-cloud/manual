@@ -759,7 +759,7 @@ built-in categories in the category selector:
 ![image1060.png](assets/image1060.png) <!--  style="width:1.42986in;height:2.90972in" alt="Graphical user interface, application Description automatically generated" / -->
 
 This
-example comes from Eckart\index{Modrow, Eckart} Modrow’s Sci{.snap}`Snap`
+example comes {index}`from Eckart<single: Eckart, from>` Modrow’s Sci{.snap}`Snap`
 \index{"SciSnap!"} library. Note that the custom category list has its own
 scroll bar, which appears if you have more than six custom categories.
 Note also that the buttons to select a custom category occupy the full

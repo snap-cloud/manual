@@ -1,4 +1,4 @@
-# Introduction {.unnumbered .unlisted}
+# The {.snap}`snap` Reference Manual
 
 <!--
   This is the first page of the Snap! Manual.

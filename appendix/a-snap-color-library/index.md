@@ -536,9 +536,9 @@ weighted:
 
 ![image1231.png](assets/image1231.png) <!--  style="width:4.34028in;height:0.65278in" alt="Macintosh HD:Users:bh:Desktop:5R-3G-paint.png" / -->
 
-(Thanks to [Scott Burns\index{Burns, Scott}
+(Thanks to [{index}`Scott Burns<single: Burns, Scott>`
 ](http://scottburns.us/subtractive-color-mixture/) for his help in
-understanding paint mixing, along with [David Briggs\index{Briggs, David}](http://www.huevaluechroma.com/061.php)’s tutorial. Remaining
+understanding paint mixing, along with [{index}`David Briggs<single: Briggs, David>`](http://www.huevaluechroma.com/061.php)’s tutorial. Remaining
 mistakes are bh’s.)
 
 ### tl;dr {#sec-tldr-spirals}
