@@ -4,7 +4,7 @@ toc: true
 
 # Blocks, Scripts, and Sprites {#sec-ch01}
 
-This chapter describes the {.snap}`Snap` features inherited from Scratch\index{Scratch}; experienced Scratch users can skip to @sec-sprites-parallelism.
+This chapter describes the {.snap}`Snap` features inherited from {index}`Scratch`; experienced Scratch users can skip to @sec-sprites-parallelism.
 
 {.snap}`Snap` is a programming language—a notation in which you can tell a
 computer what you want it to do. Unlike most programming languages,
