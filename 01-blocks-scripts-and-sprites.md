@@ -2,7 +2,8 @@
 toc: true
 ---
 
-# Blocks, Scripts, and Sprites {#sec-ch01}
+(sec-ch01)=
+# 1. Blocks, Scripts, and Sprites
 
 This chapter describes the {.snap}`Snap` features inherited from {index}`Scratch`; experienced Scratch users can skip to @sec-sprites-parallelism.
 
@@ -15,7 +16,7 @@ interface familiar to computer users.
 Start {.snap}`Snap`. You should see the following
 arrangement of regions\index{layout, window} in the window:
 
-![An annotated screenshot of blank Snap! editor](../12-user-interface-elements/assets/snap-ide-annotated.png)
+![An annotated screenshot of blank Snap! editor](./12-user-interface-elements/assets/snap-ide-annotated.png)
 
 (The proportions of these areas may be different, depending on the size
 and shape of your browser window.)
@@ -38,12 +39,14 @@ in the middle part of the window. Blocks snap together (hence the name
 {.snap}`Snap` for the language) when you drag a block so that its indentation
 is near the tab of the one above it:
 
-::: {#fig-snapping-blocks .evenly-spaced-images layout-ncol=2}
+```{subfigure} snapping-blocks
+:gap: 1em
+:name: fig-snapping-blocks
 
 ![image7.png](images/01-blocks-scripts-and-sprites/image7.png)
 
 ![image8.png](images/01-blocks-scripts-and-sprites/image8.png)
-:::
+```
 
 The white horizontal line is a signal that if you let go of the green
 block it will snap into the tab of the gold one.
@@ -77,7 +80,7 @@ instead of octagonal. {#para-generic-when}
 The other blocks in our example script are *command* blocks
 \index{block!command}. Each {index}`command block`
 corresponds to an action that {.snap}`Snap` already knows how to carry out.
-For example, the block ![image9.png](../blocks/images/block_forward.png){.image-inline} tells the sprite\index{sprite} (the arrowhead
+For example, the block ![image9.png](./blocks/images/block_forward.png){.image-inline} tells the sprite\index{sprite} (the arrowhead
 shape on the *stage*\index{stage} at the right end of the window) to
 move ten steps (a step is a very small unit of distance) in the
 direction in which the arrowhead is pointing. We’ll see shortly that
@@ -222,7 +225,7 @@ mathematician who invented the idea of procedures as data
 \index{procedures as data}, the most important way in which {.snap}`Snap` is
 different from Scratch\index{Scratch}.) You can give a sprite as many
 costumes as you like, and then choose which it will wear either by
-clicking in its wardrobe or by using the ![image35.png](../blocks/images/block_doSwitchToCostume.png){.image-inline} or ![Next Costume](../blocks/images/block_doWearNextCostume.png){.image-inline} block in a script.
+clicking in its wardrobe or by using the ![image35.png](./blocks/images/block_doSwitchToCostume.png){.image-inline} or ![Next Costume](./blocks/images/block_doWearNextCostume.png){.image-inline} block in a script.
 (Every costume has a number as well as a name. The `next` costume block
 selects the next costume by number; after the highest-numbered costume it
 switches to costume 1. The Turtle, costume 0, is never chosen by next
@@ -389,12 +392,12 @@ blocks, such as ![image81.png](images/01-blocks-scripts-and-sprites/image81.png)
 
 ##  Predicates and Conditional Evaluation {#sec-sec-predicates-and-conditional-evaluation}
 
-Most reporters report\index{block!predicate} either a number, like ![image82.png](../blocks/images/block_reportVariadicSum.png){.image-inline},
+Most reporters report\index{block!predicate} either a number, like ![image82.png](./blocks/images/block_reportVariadicSum.png){.image-inline},
 or a text string, like
-![image83.png](../blocks/images/block_reportJoinWords.png){.image-inline}.
+![image83.png](./blocks/images/block_reportJoinWords.png){.image-inline}.
 A *predicate* is a special kind of reporter that
 always reports true or false. Predicates\index{Predicate block} have a
-{index}`hexagonal shape`: ![image85.png](../blocks/images/block_reportMouseDown.png){.image-inline}
+{index}`hexagonal shape`: ![image85.png](./blocks/images/block_reportMouseDown.png){.image-inline}
 
 The special shape is a reminder that predicates don’t generally make sense
 in an input slot of blocks that are expecting a number or text. You
@@ -402,7 +405,7 @@ wouldn’t say ![image84.png](images/01-blocks-scripts-and-sprites/image84.png),
 you do it if you really want. Instead, you normally use predicates in
 special hexagonal input slots like this one:
 
-![image86.png](../blocks/images/block_doIf.png){.image-4x}
+![image86.png](./blocks/images/block_doIf.png){.image-4x}
 
 The C-shaped {index}`if block` runs its input script if (and only
 if) the expression in its hexagonal input reports true.
@@ -657,7 +660,7 @@ again resumes the paused scripts.
 The pause button is great if your program seems to be in an infinite loop,
 but more often you’ll want
 to set a *breakpoint,* a particular point in a script at which you want
-to pause. The ![image117.png](../blocks/images/block_doPauseAll.png){.image-inline} block, near the bottom of the Control palette, can be
+to pause. The ![image117.png](./blocks/images/block_doPauseAll.png){.image-inline} block, near the bottom of the Control palette, can be
 inserted in a script to pause when it is run. So, for example, if your
 program is getting an error message in a particular block, you could use
 `pause all` just before that block to look at the values of variables just
@@ -961,7 +964,7 @@ for positive input, 0 for zero input, or -1 for negative input.
 <!-- ::: {.callout-tip} -->
 <!-- ## Two Different Length Of Blocks -->
 
-The ![length of text block](../blocks/images/block_reportTextAttribute.png){.image-inline} name was changed to clarify it is different from ![length of text block](../blocks/images/block_reportListAttribute.png){.image-inline}
+The ![length of text block](./blocks/images/block_reportTextAttribute.png){.image-inline} name was changed to clarify it is different from ![length of text block](./blocks/images/block_reportListAttribute.png){.image-inline}
 <!-- ::: -->
 
 ![image308.png](images/01-blocks-scripts-and-sprites/image308.png)

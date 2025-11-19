@@ -3,9 +3,7 @@ project:
   toc:
     - file: index.md
     - file: 00-acknowledgements.md
-    - title: Blocks, Scripts, and Sprites
-      children:
-        - file: 01-blocks-scripts-and-sprites/index.md
+    - file: 01-blocks-scripts-and-sprites.md
     - title: Saving And Loading Projects
       children:
         - file: 02-saving-and-loading-projects-and/index.md
