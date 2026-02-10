@@ -12,9 +12,7 @@ In every palette, at or near the bottom, is a button labeled "`Make a block`"\in
 is a plus sign (+). Also, the menu you get by right-clicking on the
 background of the scripting area has a "`make a block`" option.
 
-![image523.png](assets/image523.png) <!--  style="width:2.27083in;height:2.34722in" / -->
-
-
+![image523.png](assets/image523.png)
 
 Clicking any of these will
 display a dialog window in which you choose the block’s name, shape, and
