@@ -1,4 +1,5 @@
-# Saving and Loading Projects and Media {#sec-ch02}
+(sec-ch02)=
+# Saving and Loading Projects and Media
 
 After you’ve created a project, you’ll want to save it, so that you can
 have access to it the next time you use {.snap}`Snap`. There are two ways to
@@ -21,6 +22,7 @@ be the only usable option.) The text box at the bottom right of the Save
 dialog allows you to enter project notes that are saved with the
 project.
 
+(sec-local-storage)=
 ## Local Storage
 
 Click on Computer and {.snap}`Snap`’s Save Project dialog window will be
@@ -29,6 +31,7 @@ project has a name, that name will be the default filename if you don’t
 give a different name. Another, equivalent way to save to disk is to
 choose "`Export project`" from the File menu.
 
+(sec-creating-cloud-account)=
 ## Creating a {index}`Cloud Account`
 
 The other possibility is to
@@ -76,6 +79,7 @@ go wrong; since {.snap}`Snap` runs in JavaScript in your browser, it is
 strongly isolated from the rest of your computer. But the lawyers make
 us say this.)
 
+(sec-saving-to-cloud)=
 ## Saving to the Cloud
 
 Once you’ve created your account, you can log into it using the "`Login…`"
@@ -96,6 +100,7 @@ optionally project notes; your project will be saved online and can be
 loaded from anywhere with net access. The project notes will be visible
 to other users if you publish your project.
 
+(sec-loading-saved-projects)=
 ## Loading Saved Projects{index}`loading saved projects`
 
 Once you’ve saved a project, you want to be able to load it back into
@@ -129,6 +134,7 @@ If you saved projects in an earlier version of {.snap}`Snap` using the
 to allow you to retrieve those projects. But you can save them only with
 the Computer and Cloud options.
 
+(sec-lose-project)=
 ## If you lose your project, do this first!
 
 If you are still in **{.snap}`Snap`** and realize that you’ve loaded another
@@ -158,6 +164,7 @@ left of the project name on the toolbar at the top of the window:
 <!-- TODO: MISSING FILE -->
 <!-- ![image391.png](assets/image391.png)  style="width:0.31944in;height:0.18056in"/  -->
 
+(sec-private-public-projects)=
 ## Private and Public Projects
 
 By default, a project you save in the cloud is private; only you can see
