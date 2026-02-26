@@ -3,9 +3,22 @@
 <!-- Editor Note: This document should be written using GitHub-flavored markdown,
   unlike the rest of the manual. -->
 
+This manual is written in **MyST Markdown** (Markedly Structured Text) for **JupyterBook 2**.
+
+## JupyterBook 2 / MyST Documentation
+
+**Official Documentation:**
+* [MyST Markdown Guide](https://mystmd.org/guide) - Main MyST documentation
+* [MyST Syntax Reference](https://mystmd.org/guide/syntax) - Complete syntax guide
+* [JupyterBook Documentation](https://jupyterbook.org/) - Book theme and features
+* [MyST Directives](https://mystmd.org/guide/directives) - Special content blocks
+* [Cross-references](https://mystmd.org/guide/cross-references) - Linking sections and figures
+
+## Core Syntax Rules
+
 * Write UI elements inside quoted code blocks. e.g. ```"`Open`"```
 * Monospaced text should use the CSS class `.mono` e.g. `[text here]{.mono}`
-* Do not put spaces around index entries. `text\index{text},`
+* Do not put spaces around index entries. `text{index}`text`,`
 * To write Snap! as stylized text write: `{.snap}`Snap``
 * Chapters are included at the top level of the repo, named 'NN-chapter'
   * Each contains an `index.md` file, which is the chapter's main content.
@@ -16,10 +29,28 @@
   * `blocks/help/` is the help screen for each block, named `selector.png`.
 
 
-## Editing Section References
+## Section Labels and Cross-References
 
-* Replace original text with a markdown link (e.g. `[text](url)`) with the section name but no page number
-* Links should be formatted like the URL, e.g. `../chapter-name`
+MyST uses labels to enable cross-references between sections.
+
+**Creating section labels:**
+```md
+(label-name)=
+# Section Title
+```
+
+**Referencing sections:**
+* Use `@label-name` to reference a labeled section
+* Example: `See @sec-ch01 for more information`
+
+**Label naming conventions:**
+* Chapter labels: `(sec-chNN)=` where NN is the chapter number
+* Section labels: `(sec-descriptive-name)=` using lowercase with hyphens
+* Figure labels: `{#fig-descriptive-name}` in image attributes
+
+**Links vs Cross-references:**
+* Use `@label` for internal cross-references (preferred for sections/figures)
+* Use `[text](url)` for external links or when you need custom link text
 
 ## Images
 
@@ -44,17 +75,39 @@ Write markdown like this:
 
 ## Indexing and Index Entries
 
-https://en.wikibooks.org/wiki/LaTeX/Indexing
+**MyST/JupyterBook 2 Syntax:** Use `{index}` with backticks instead of LaTeX `\index{}`.
 
-* Write an index entry by writing `text\index{text},` at the end of a term.
-* Do not put spaces around the `\index{}` command.
-* Use *LaTeX* inside the `\index` command.
-* `!` denotes sub-terms in the index.
-* Use `""` to escape special characters in the index.
-* Use `$$` for verabatim text in the index, mostly for block names.
-* The format is `\index{sortkey@entrytext}`
-  * You will need to use this when you are trying to index a block name.
-  * e.g. `\index{block name@$Block Name$ block}`
+**Basic index entries:**
+```md
+term{index}`term`
+```
+
+**Index with different display text:**
+```md
+{index}`display text<actual index term>`
+```
+
+**Sub-entries (using `!`):**
+```md
+{index}`main term!sub-term`
+```
+
+**Example:**
+```md
+The palette{index}`palette` area contains blocks{index}`block`.
+A hat block{index}`block!hat` starts a script.
+The {index}`green flag<single: flag, green>` starts the program.
+```
+
+**Special characters and formatting:**
+* `!` denotes sub-terms in the index (same as LaTeX)
+* Use `<>` angle brackets for alternate index text
+* Use `single:` for specialized index entries
+* For block names, use the block selector as the term
+
+**Additional Resources:**
+* [MyST Index Syntax](https://mystmd.org/guide/index-entries) - Official MyST index documentation
+* [LaTeX Indexing](https://en.wikibooks.org/wiki/LaTeX/Indexing) - Traditional reference (for understanding concepts)
 
 ## Making new CSS classes
 
@@ -63,11 +116,11 @@ Add all CSS to the file `snap-manual.scss`. All "image" related CSS should be pr
 * If you need to make classes for a specific chapter include that, e.g. `image-ch3-...`
 * Otherwise you can use `{style="..."}` to manually set the style of a single image
 
-## Callouts
-https://quarto.org/docs/authoring/callouts.html
+## Callouts and Admonitions
 
-You may want to replace images on text with a callout block.
+MyST supports callouts (admonitions) for highlighting special content.
 
+**Syntax:**
 ```md
 ::: {.callout-tip}
 ## Tip with Title
@@ -75,6 +128,66 @@ You may want to replace images on text with a callout block.
 This is an example of a callout with a title.
 :::
 ```
+
+**Available callout types:**
+* `.callout-note` - General notes and information
+* `.callout-tip` - Helpful tips and pro-tips
+* `.callout-warning` - Warnings and cautions
+* `.callout-important` - Important information
+* `.callout-caution` - Caution notices
+
+**Documentation:**
+* [MyST Admonitions](https://mystmd.org/guide/admonitions) - Official MyST docs
+* [Quarto Callouts](https://quarto.org/docs/authoring/callouts.html) - Similar syntax (for reference)
+
+## MyST Directives and Special Blocks
+
+MyST provides special directives for advanced formatting.
+
+**Subfigures** - Multiple images in one figure:
+```md
+```{subfigure} figure-id
+:gap: 1em
+:name: fig-figure-name
+
+![](image1.png)
+![](image2.png)
+```
+```
+
+**Multi-column layouts:**
+```md
+::: {.evenly-spaced-images layout-ncol=2}
+![](image1.png)
+![](image2.png)
+:::
+```
+
+**Other useful directives:**
+* Custom divs: `::: {.class-name}` for styled sections
+* Code blocks: ` ```{code-cell}` ` for executable code
+* Math: ` ```{math}` ` for block equations
+
+**Documentation:**
+* [MyST Directives](https://mystmd.org/guide/directives) - Complete directive reference
+* [MyST Figures](https://mystmd.org/guide/figures) - Figure and subfigure syntax
+
+## Building the Manual
+
+**Build HTML:**
+```bash
+myst build --html
+```
+
+**Build PDF:**
+```bash
+myst build --pdf
+```
+
+**Configuration files:**
+* `myst.yml` - Project configuration, metadata, and export settings
+* `toc.yml` - Table of contents structure
+* `_support/styles/snap-manual.scss` - Custom styles
 
 ---
 
