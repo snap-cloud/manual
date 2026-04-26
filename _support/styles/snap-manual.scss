@@ -139,7 +139,19 @@ h1, h2, h3, h4, h5, h6 {
   vertical-align: bottom;
 }
 
-// TODO: make latex env
+// MyST grid: make items fill their column and center images
+.sd-row .sd-col {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+// Legacy Quarto evenly-spaced images (kept for other chapters not yet migrated)
 .evenly-spaced-images {
   display: flex;
   flex-wrap: wrap;

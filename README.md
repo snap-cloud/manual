@@ -68,45 +68,64 @@ These DOI's always point to the latest version of the manual and Snap! software,
 ## Authors
 Brian Harvey, Jens Mönig, Michael Ball, Jadge Hügle, Victoria Phelps, Mary Fries
 
-## Quarto
-This version of the Snap! manual is built using [Quarto][quarto].
+## Jupyter Book 2 (MyST)
 
-[quarto]: https://quarto.org/docs/
+This version of the Snap! manual is built using [Jupyter Book 2][jb2] via [MyST Markdown][myst].
 
-### Brief installation guide
+[jb2]: https://jupyterbook.org
+[myst]: https://mystmd.org
 
-You need:
-* Quarto
-* Pandoc
-* LaTeX
+### Installation
 
-macOS:
+You need [Node.js][nodejs] (v18+) to install MyST:
+
 ```shell
-brew install quarto
-brew install pandoc
-brew install mactex-no-gui
+npm install -g mystmd
 ```
 
-It is also recommended to install the [Quarto VSCode extension][quarto_vscode].
+[nodejs]: https://nodejs.org
 
-[quarto_vscode]: https://marketplace.visualstudio.com/items?itemName=quarto.quarto
+macOS (via Homebrew):
+```shell
+brew install node
+npm install -g mystmd
+```
+
+It is also recommended to install the [MyST VSCode extension][myst_vscode].
+
+[myst_vscode]: https://marketplace.visualstudio.com/items?itemName=ExecutableBookProject.myst-highlight
 
 ### Building the book
 
-**While writing content:**
+**While writing content (live preview):**
 
 ```shell
-quarto preview
+myst start
 ```
 
-This will automatically build the web version and display it in the browser.
-Your webpage will automatically refresh as you save changes to files.
+This builds the web version and opens it in the browser.
+The page reloads automatically as you save changes.
 
-**To compile the PDF and final version:**
+**To build the final HTML:**
 
 ```shell
-quarto render [--to pdf | --to html]
+myst build --html
 ```
+
+Output is placed in `_build/html/`.
+
+**To build a PDF (requires LaTeX):**
+
+```shell
+myst build --pdf
+```
+
+### Quarto (legacy)
+
+The original Quarto build system is preserved on the `quarto` branch.
+The `quarto.yml` GitHub Actions workflow still targets that branch.
+
+[quarto]: https://quarto.org/docs/
 
 ## Writing Style
 
@@ -114,9 +133,7 @@ Please read [`STYLEGUIDE.md`](./STYLEGUIDE.md)
 
 ## VSCode and Editing
 
-* Use the GitHub Codespace link to edit the book in the browser.
-https://quarto.org/docs/visual-editor/vscode/
-
+Install the [MyST VSCode extension][myst_vscode] for syntax highlighting and live preview.
 
 ## Document Conversion
 If you are making large updates to the md structure, it may be worth working on the script to convert the Word document to markdown.
@@ -127,11 +144,9 @@ cd _support/conversion
 ruby convert-word-doc.rb
 ```
 
-This conversion script dumps content into `conversion/chapters/` and then copies it into the `content/` folder. These have been moved to the top of the repo so the URLs in the compiled site are nicer.
-
 ## Published Book
 
-The website is hosted on GitHub pages, compiled by the `quarto.yml` workflow.
+The website is hosted on GitHub Pages, compiled by the `myst.yml` workflow and deployed to the `gh-pages` branch.
 
 ## License
 

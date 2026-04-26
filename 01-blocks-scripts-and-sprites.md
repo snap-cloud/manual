@@ -25,7 +25,8 @@ A {.snap}`Snap` program\index{"Snap! program"} consists of one or more
 *scripts,* each of which is made of *blocks.* Here’s a typical script
 \index{script} :
 
-![image6.png](images/01-blocks-scripts-and-sprites/image6.png){#fig-draw-square}
+(fig-draw-square)=
+![image6.png](images/01-blocks-scripts-and-sprites/image6.png)
 
 The five blocks\index{block} that make up this script have three different
 colors, corresponding to three of the eight *palettes* in which blocks
@@ -39,14 +40,18 @@ in the middle part of the window. Blocks snap together (hence the name
 {.snap}`Snap` for the language) when you drag a block so that its indentation
 is near the tab of the one above it:
 
-```{subfigure} snapping-blocks
-:gap: 1em
-:name: fig-snapping-blocks
+(fig-snapping-blocks)=
+::::{grid} 2
+:gutter: 3
 
+:::{grid-item}
 ![image7.png](images/01-blocks-scripts-and-sprites/image7.png)
+:::
 
+:::{grid-item}
 ![image8.png](images/01-blocks-scripts-and-sprites/image8.png)
-```
+:::
+::::
 
 The white horizontal line is a signal that if you let go of the green
 block it will snap into the tab of the gold one.
@@ -68,14 +73,14 @@ that.[^1]
 
 <!-- TODO: Different CSS for an inline hat block? -->
 [^1]: One of the hat blocks, the generic\index{hat block!generic}
-“when anything” block ![generic when hat block](images/01-blocks-scripts-and-sprites/image10.png){.image-inline #fig-generic-when}, is subtly different from the others. When the stop
+“when anything” block ![generic when hat block](images/01-blocks-scripts-and-sprites/image10.png){.image-inline}, is subtly different from the others. When the stop
 sign is clicked, or when a project or sprite is loaded, this block
 doesn’t test whether the condition in its hexagonal input slot is true,
 so the script beneath it will not run, until some *other* script in the
 project runs (because, for example, you click the green flag). When
 {index}`generic when` blocks are disabled, the stop sign
 \index{stop sign, square} will be square\index{square stop sign}
-instead of octagonal. {#para-generic-when}
+instead of octagonal.
 
 The other blocks in our example script are *command* blocks
 \index{block!command}. Each {index}`command block`
@@ -107,46 +112,73 @@ shape is a special kind of input slot that accepts a *script* as the
 input.
 
 <!-- TODO-mb: These images are a bit small on the web. -->
-::: {.evenly-spaced-images layout-ncol=4}
+::::{grid} 4
+:gutter: 2
+
+:::{grid-item}
 In the sample script
-
-![image6.png](images/01-blocks-scripts-and-sprites/image6.png)
-
-the `repeat` block has two inputs: the number 4 and the script
-
-![image11.png](images/01-blocks-scripts-and-sprites/image11.png)
-
 :::
+
+:::{grid-item}
+![image6.png](images/01-blocks-scripts-and-sprites/image6.png)
+:::
+
+:::{grid-item}
+the `repeat` block has two inputs: the number 4 and the script
+:::
+
+:::{grid-item}
+![image11.png](images/01-blocks-scripts-and-sprites/image11.png)
+:::
+::::
 
 C-shaped blocks can be put in a script in two ways. If you see a white
 line and let go, the block will be inserted into the script like any
 command block:
 
-::: {.evenly-spaced-images layout-ncol=2}
-![image12.png](images/01-blocks-scripts-and-sprites/image12.png)
+::::{grid} 2
+:gutter: 3
 
+:::{grid-item}
+![image12.png](images/01-blocks-scripts-and-sprites/image12.png)
+:::
+
+:::{grid-item}
 ![image13.png](images/01-blocks-scripts-and-sprites/image13.png)
 :::
+::::
 
 <!-- Note until images are cleaned up 12 and 14 were identical, 13 and 15 were identical. -->
 
 But if you see an orange halo and let go, the block will *wrap* around
 the haloed blocks:
 
-::: {.evenly-spaced-images layout-ncol=2}
-![image16.png](images/01-blocks-scripts-and-sprites/image16.png)
+::::{grid} 2
+:gutter: 3
 
+:::{grid-item}
+![image16.png](images/01-blocks-scripts-and-sprites/image16.png)
+:::
+
+:::{grid-item}
 ![image17.png](images/01-blocks-scripts-and-sprites/image17.png)
 :::
+::::
 
 The halo will always extend from the cursor position to the bottom of
 the script:
 
-::: {.evenly-spaced-images layout-ncol=2}
-![image18.png](images/01-blocks-scripts-and-sprites/image18.png)
+::::{grid} 2
+:gutter: 3
 
+:::{grid-item}
+![image18.png](images/01-blocks-scripts-and-sprites/image18.png)
+:::
+
+:::{grid-item}
 ![image19.png](images/01-blocks-scripts-and-sprites/image19.png)
 :::
+::::
 
 If you want only some of those blocks, after wrapping you can grab the
 first block you don’t want wrapped, pull it down, and snap it under the
@@ -172,11 +204,17 @@ sprite in the scripting area, click on the picture of that sprite in the
 window. Try putting one of the following scripts in each sprite’s
 scripting area:
 
-::: {.evenly-spaced-images layout-ncol=2}
-![image26.png](images/01-blocks-scripts-and-sprites/image26.png)
+::::{grid} 2
+:gutter: 3
 
+:::{grid-item}
+![image26.png](images/01-blocks-scripts-and-sprites/image26.png)
+:::
+
+:::{grid-item}
 ![image27.png](images/01-blocks-scripts-and-sprites/image27.png)
 :::
+::::
 
 When you click the green flag, you should see one sprite rotate while
 the other moves back and forth. This experiment illustrates the way
@@ -184,11 +222,17 @@ different scripts can run in parallel. The turning and the moving happen
 together. Parallelism\index{parallelism} can be seen with multiple
 scripts of a single sprite also. Try this example:
 
-::: {.evenly-spaced-images layout-ncol=2}
-![image28.png](images/01-blocks-scripts-and-sprites/image28.png)
+::::{grid} 2
+:gutter: 3
 
+:::{grid-item}
+![image28.png](images/01-blocks-scripts-and-sprites/image28.png)
+:::
+
+:::{grid-item}
 ![image29.png](images/01-blocks-scripts-and-sprites/image29.png)
 :::
+::::
 
 When you click the green flag, the sprite should move back and forth
 
@@ -252,16 +296,26 @@ more interesting program, though, the sprites on stage will *interact*
 to tell a story, play a game, etc. Often one sprite will have to tell
 another sprite to run a script. Here’s a simple example:
 
-::: {#fig-broadcast-dog .evenly-spaced-images layout-ncol=4}
+(fig-broadcast-dog)=
+::::{grid} 4
+:gutter: 2
 
+:::{grid-item}
 ![image41.png](images/01-blocks-scripts-and-sprites/image41.png)
+:::
 
+:::{grid-item}
 ![image42.png](images/01-blocks-scripts-and-sprites/image42.png)
+:::
 
+:::{grid-item}
 ![image43.png](images/01-blocks-scripts-and-sprites/image43.png)
+:::
 
+:::{grid-item}
 ![image44.png](images/01-blocks-scripts-and-sprites/image44.png)
 :::
+::::
 
 
 In the block ![image40.png](images/01-blocks-scripts-and-sprites/image40.png){.image-inline}, the word “bark” is just an arbitrary name I made up. When you
@@ -390,7 +444,7 @@ aid to readability is called *zebra coloring.*\index{zebra coloring}
 A reporter block with its inputs, maybe including other reporter
 blocks, such as ![image81.png](images/01-blocks-scripts-and-sprites/image81.png) <!-- {width=1.91667in height=0.23958in} -->, is called an *expression.*\index{expression}
 
-##  Predicates and Conditional Evaluation {#sec-sec-predicates-and-conditional-evaluation}
+## Predicates and Conditional Evaluation {#sec-predicates-and-conditional-evaluation}
 
 Most reporters report\index{block!predicate} either a number, like ![image82.png](./blocks/images/block_reportVariadicSum.png){.image-inline},
 or a text string, like
@@ -769,7 +823,7 @@ Takes a sprite as input. Like stamp except that the costume is stamped onto the 
 ![image139.png](images/01-blocks-scripts-and-sprites/image139.png){.image-inline}
 Takes a sprite as input. Erases from that sprite’s costume the area that overlaps with the current sprite’s costume. (Does not affect the costume in the chosen sprite’s wardrobe, only the copy currently visible.)
 
-![image142.png](images/01-blocks-scripts-and-sprites/image142.png){.image-inline} See @fig-generic-when.
+![image142.png](images/01-blocks-scripts-and-sprites/image142.png){.image-inline} See the "generic when" hat block described in footnote [^1].
 
 ![image141.png](images/01-blocks-scripts-and-sprites/image141.png){.image-inline} See @sec-pause-all.
 
@@ -801,19 +855,25 @@ Create a primitive using JavaScript\index{JavaScript}. (This block is
 disabled by default; the user must check “Javascript extensions” in the
 setting menu *each time* a project is loaded.)\index{pen down? block}
 
-::: {.evenly-spaced-images layout-ncol=2}
-![image150.png](images/01-blocks-scripts-and-sprites/image150.png){.image-inline}
+::::{grid} 2
+:gutter: 3
 
+:::{grid-item}
+![image150.png](images/01-blocks-scripts-and-sprites/image150.png){.image-inline}
+:::
+
+:::{grid-item}
 The {index}`\`at\` block<`at` block>` lets you examine the screen pixel
 \index{screen pixel} directly behind the rotation center of a sprite,
 the mouse, or an arbitrary (x,y) coordinate pair dropped onto the second
 menu slot. The first five items of the left menu let you examine the
-color visible at the position. (The “RGBA” option\index{RGBA option}
-reports a list.) The “sprites” option reports a list of all sprites,
-including this one, any point of which overlaps this sprite’s rotation
+color visible at the position. (The "RGBA" option\index{RGBA option}
+reports a list.) The "sprites" option reports a list of all sprites,
+including this one, any point of which overlaps this sprite's rotation
 center (behind or in front). This is a hyperblock with respect to its
 second input.
 :::
+::::
 
 <!-- This needs 2 columns ??? -->
 ![image154.png](images/01-blocks-scripts-and-sprites/image154.png){.image-4x}
@@ -824,23 +884,29 @@ Checks the\index{is-a-block@`is \_ a \_ ?` block} data\index{stage blocks} type\
 ![image151.png](images/01-blocks-scripts-and-sprites/image151.png){.image-4x}
 ![image152.png](images/01-blocks-scripts-and-sprites/image152.png){.image-4x}
 
-::: {layout-ncol=2}
-![image155.png](images/01-blocks-scripts-and-sprites/image155.png){.image-4x}\index{set flag block}
+::::{grid} 2
+:gutter: 3
 
+:::{grid-item}
+![image155.png](images/01-blocks-scripts-and-sprites/image155.png){.image-4x}\index{set flag block}
+:::
+
+:::{grid-item}
 {index}`Turn the` text into a list,
 using the second input as the delimiter between items. The default
 delimiter, indicated by the brown dot in the input slot, is a single
-space character. “Letter” puts each character of the text in its own
-list item. “Word” puts each word in an item. (\index{whitespace} Words
+space character. "Letter" puts each character of the text in its own
+list item. "Word" puts each word in an item. (\index{whitespace} Words
 are separated by any number of consecutive space, tab, carriage return,
-or newline characters.) “Line” is a newline character\index{newline
-character} (0xa); “tab” is a {index}`tab character` (0x9);
-“cr” is a carriage return\index{carriage return character} (0xd). “Csv”
-\index{CSV format} and “json”\index{JSON format} split formatted text
-into lists of lists; see @sec-csv. “Blocks”
+or newline characters.) "Line" is a newline character\index{newline
+character} (0xa); "tab" is a {index}`tab character` (0x9);
+"cr" is a carriage return\index{carriage return character} (0xd). "Csv"
+\index{CSV format} and "json"\index{JSON format} split formatted text
+into lists of lists; see @sec-csv. "Blocks"
 takes a script as the first input, reporting a list structure
 representing the structure of the script. See Chapter XI.
 :::
+::::
 
 ![image170.png](images/01-blocks-scripts-and-sprites/image170.png){.image-inline} For lists,
 \index{identical to} reports true only if its two input values are the
@@ -950,16 +1016,22 @@ visible sprites.
 \index{video block} has a {index}`snap option` that takes a
 snapshot and reports it as a costume. It is hyperized with respect to its second input.
 
-:::{.evenly-spaced-images layout-ncol=2}
-![image306.png](images/01-blocks-scripts-and-sprites/image306.png){.image-inline}
+::::{grid} 2
+:gutter: 3
 
-![image304.png](images/01-blocks-scripts-and-sprites/image304.png){.image-inline} The “neg” option\index{neg option} is a monadic\index{of block
+:::{grid-item}
+![image306.png](images/01-blocks-scripts-and-sprites/image306.png){.image-inline}
+:::
+
+:::{grid-item}
+![image304.png](images/01-blocks-scripts-and-sprites/image304.png){.image-inline} The "neg" option\index{neg option} is a monadic\index{of block
 (operators)}\index{length of text block} negation operator
-\index{negation operator}, equivalent to “lg” is log<sub>2</sub>.
-“id” is the identity function, which reports its input. “sign” reports 1
+\index{negation operator}, equivalent to "lg" is log<sub>2</sub>.
+"id" is the identity function, which reports its input. "sign" reports 1
 for positive input, 0 for zero input, or -1 for negative input.
 \index{set background block}
 :::
+::::
 
 <!-- ::: {.callout-tip} -->
 <!-- ## Two Different Length Of Blocks -->
@@ -973,32 +1045,51 @@ The ![length of text block](./blocks/images/block_reportTextAttribute.png){.imag
 you drop a list on the arrowheads, the block name
 changes to `sum` or `product`.
 
-::: {.evenly-spaced-images layout-ncol=2}
-![image309.png](images/01-blocks-scripts-and-sprites/image309.png)
+::::{grid} 2
+:gutter: 3
 
+:::{grid-item}
+![image309.png](images/01-blocks-scripts-and-sprites/image309.png)
+:::
+
+:::{grid-item}
 Extended\index{when I am block} mouse interaction events, sensing
-clicking, dragging, hovering, etc. The “stopped” option triggers when
+clicking, dragging, hovering, etc. The "stopped" option triggers when
 all scripts are stopped, as with the stop button; it is useful for
 robots whose hardware interface must be told to turn off motors. A `when I am stopped` script\index{when I am stopped script} can run only for a
 limited time.
 :::
+::::
 
-::: {.evenly-spaced-images layout-ncol=2}
+(para-broadcast)=
+::::{grid} 2
+:gutter: 3
+
+:::{grid-item}
 ![image310.png](images/01-blocks-scripts-and-sprites/image310.png)
-
-{index}`Extended broadcast`: Click the right arrowhead to direct the message to a single sprite or the stage. Click again to add any value as a payload to the message. {#para-broadcast}
 :::
 
-::: {.evenly-spaced-images layout-ncol=2}
-![image311.png](images/01-blocks-scripts-and-sprites/image311.png){.image-4x}
+:::{grid-item}
+{index}`Extended broadcast`: Click the right arrowhead to direct the message to a single sprite or the stage. Click again to add any value as a payload to the message.
+:::
+::::
 
+::::{grid} 2
+:gutter: 3
+
+:::{grid-item}
+![image311.png](images/01-blocks-scripts-and-sprites/image311.png){.image-4x}
+:::
+
+:::{grid-item}
 Extended `when I receive`\index{when I receive block}: Click the right
 arrowhead to expose a script variable (click on it to change its name,
 like any script variable) that will be set to the data of a matching
-broadcast. If the first input is set to “any message,” then the data
+broadcast. If the first input is set to "any message," then the data
 variable will be set to the message, if no payload is included with the
 broadcast, or to a two-item list containing the message and the payload.
 :::
+::::
 
 ![image312.png](images/01-blocks-scripts-and-sprites/image312.png){.image-2x}
 
@@ -1033,17 +1124,23 @@ library.
 
 ![image362.png](images/01-blocks-scripts-and-sprites/image362.png)
 
-::: {.evenly-spaced-images layout-ncol=2}
-![image363.png](images/01-blocks-scripts-and-sprites/image363.png){.image-4x}
+::::{grid} 2
+:gutter: 3
 
+:::{grid-item}
+![image363.png](images/01-blocks-scripts-and-sprites/image363.png){.image-4x}
+:::
+
+:::{grid-item}
 The `of` block\index{of block (sensing)} has an extended menu of
 attributes of a sprite. Position reports an (x,y) vector. Size reports
 the percentage of normal size, as controlled by the set size block in
 the Looks category. Left, right, etc. report the stage coordinates of
-the corresponding edge of the sprite’s bounding box. Variables reports a
+the corresponding edge of the sprite's bounding box. Variables reports a
 list of the names of all variables in scope (global, sprite-local, and
 script variables if the right input is a script.)
 :::
+::::
 
 ## Libraries {#sec-libraries-intro}
 
