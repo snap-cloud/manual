@@ -18,4 +18,13 @@ function Image(img)
     img.attributes['width'] = '50%'
     return img
   end
+
+  -- Apply pdf-width as width for LaTeX/PDF output only.
+  -- This filter is only loaded for PDF builds (see _quarto.yml).
+  local pdf_width = img.attributes['pdf-width']
+  if pdf_width then
+    img.attributes['pdf-width'] = nil
+    img.attributes['width'] = pdf_width
+    return img
+  end
 end
