@@ -1,4 +1,9 @@
-# Saving and Loading Projects and Media {#sec-ch02}
+---
+toc: true
+---
+
+(sec-ch02)=
+# 2. Saving and Loading Projects and Media
 
 After you’ve created a project, you’ll want to save it, so that you can
 have access to it the next time you use {.snap}`Snap`. There are two ways to
@@ -14,7 +19,6 @@ like if you save locally. This is why we have multiple ways to save.
 In either case, if you choose "`Save as…`" from the File menu. You’ll see something like this:
 
 ![image487.png](assets/image487.png){#fig-saveas}
-<!--  style="width:3.54861in;height:2.57639in" / -->
 
 (If you are not logged in to your {.snap}`Snap` cloud account, Computer will
 be the only usable option.) The text box at the bottom right of the Save
@@ -34,11 +38,11 @@ choose "`Export project`" from the File menu.
 The other possibility is to
 save your project "`in the cloud`",\index{save your project in the cloud}
 at the {.snap}`Snap` web site. In order to do this, you need an account with
-us. Click on the {index}`Cloud button` (![image489.png](assets/image489.png) <!--  style="width:0.29167in;height:0.16667in" / --> ) in the Tool Bar.
+us. Click on the {index}`Cloud button` (![image489.png](assets/image489.png)) in the Tool Bar.
 Choose the “`Signup…`” option. This will show you a window that looks like
 the picture below:
 
-![image488.png](assets/image488.png) <!--  style="width:1.23403in;height:2.32986in" / -->
+![image488.png](assets/image488.png)
 
 You must choose a {index}`user name` that will identify you on
 the web site, such as `Jens`. If you’re a Scratch user, you can use
@@ -81,7 +85,7 @@ us say this.)
 Once you’ve created your account, you can log into it using the "`Login…`"
 option from the Cloud menu:
 
-![image490.png](assets/image490.png) <!--  style="width:1.6875in;height:2.02778in" / -->
+![image490.png](assets/image490.png)
 
 Use the user name and password that you set up earlier. If you check the
 "`Stay signed in`" box, then you will be logged in automatically the next
@@ -133,7 +137,7 @@ the Computer and Cloud options.
 
 If you are still in **{.snap}`Snap`** and realize that you’ve loaded another
 project without saving the one you were working on: ***Don’t edit the
-new project.*** From the File menu ![image384.png](assets/image384.png) <!--  style="width:0.31944in;height:0.18056in" alt="Macintosh HD:Users:bh:Desktop:Dropbox:manual (1):filebutton.png" / --> choose the "`Restore unsaved project`"
+new project.*** From the File menu ![image384.png](assets/image384.png) choose the "`Restore unsaved project`"
 option\index{Restore unsaved project option}.
 
 Restore unsaved project will also work if you log out of {.snap}`Snap` and

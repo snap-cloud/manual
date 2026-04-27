@@ -278,14 +278,22 @@ every-tenth-crayon selections don’t include it, so that all of the
 crayons in those smaller boxes are visible against a white\index{white}
 stage background.
 
-::: {.evenly-spaced-images layout-ncol="2"}
-![(attribution: Wikipedia user Andys. CC BY-SA.)](assets/image1198.png "(attribution: Wikipedia user Andys. CC BY-SA.)"){#fig-rainbow}
+::::{grid} 2
+:class: evenly-spaced-images
+:gutter: 2
 
+:::{grid-item}
+![(attribution: Wikipedia user Andys. CC BY-SA.)](assets/image1198.png "(attribution: Wikipedia user Andys. CC BY-SA.)"){#fig-rainbow}
+:::
+
+:::{grid-item}
 Among purples\index{purple}, the official spectral violet
 \index{violet} (crayon 90) is the end of the spectrum. Magenta
 \index{magenta}, brighter than violet, isn’t a spectral color at all.
 (In the picture at the left, the top part is the spectrum of white light spread out through a prism; the middle part is a photograph of a rainbow, and the bottom part is a digital simulation of a rainbow.) Magenta is a mixture of red and blue.
 :::
+
+::::
 
 The light gray at color number 10 is slightly different from crayon 10
 just because of roundoff in computing crayon values. Color number 90 is

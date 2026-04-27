@@ -338,12 +338,20 @@ block to choose between two expressions. {.snap}`Snap` has one, but we could
 write our own:
 
 <!-- TODO: The 2 + 1 layout is kind of a special case. -->
-:::{.evenly-spaced-images layout-ncol=2}
+::::{grid} 2
+:class: evenly-spaced-images
+:gutter: 2
+
+:::{grid-item}
 ![image736.png](assets/image736.png) <br/>
 ![image739.png](assets/image739.png)
+:::
 
+:::{grid-item}
 ![image737.png](assets/image737.png)
 :::
+
+::::
 
 Our block works for these simple examples, but if we try to use it in writing a
 {index}`recursive operator`, it’ll fail:
@@ -364,13 +372,23 @@ be of type [Reporter]{.mono} rather than type [Any]{.mono}. Then, when calling t
 those inputs will be enclosed in a `ring` so that the expressions
 themselves, rather than their values, become the inputs:
 
-:::{.evenly-spaced-images layout-ncol=3}
+::::{grid} 3
+:class: evenly-spaced-images
+:gutter: 2
+
+:::{grid-item}
 ![image740.png](assets/image740.png)
+:::
 
+:::{grid-item}
 ![image742.png](assets/image742.png)
+:::
 
+:::{grid-item}
 ![image741.png](assets/image741.png)
 :::
+
+::::
 
 In this version, the program works, with no infinite loop. But we’ve
 paid a heavy price: this `reporter-if` is no longer as intuitively obvious
