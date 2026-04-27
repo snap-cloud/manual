@@ -5,15 +5,15 @@ toc: true
 (sec-ch01)=
 # 1. Blocks, Scripts, and Sprites
 
-This chapter describes the {.snap}`Snap` features inherited from {index}`Scratch`; experienced Scratch users can skip to @sec-sprites-parallelism.
+This chapter describes the [Snap!]{.snap} features inherited from {index}`Scratch`; experienced Scratch users can skip to @sec-sprites-parallelism.
 
-{.snap}`Snap` is a programming language—a notation in which you can tell a
+[Snap!]{.snap} is a programming language—a notation in which you can tell a
 computer what you want it to do. Unlike most programming languages,
-though, {.snap}`Snap` is a *visual* language; instead of writing a program
-using the keyboard, the {.snap}`Snap` programmer uses the same drag-and-drop
+though, [Snap!]{.snap} is a *visual* language; instead of writing a program
+using the keyboard, the [Snap!]{.snap} programmer uses the same drag-and-drop
 interface familiar to computer users.
 
-Start {.snap}`Snap`. You should see the following
+Start [Snap!]{.snap}. You should see the following
 arrangement of regions\index{layout, window} in the window:
 
 ![An annotated screenshot of blank Snap! editor](./12-user-interface-elements/assets/snap-ide-annotated.png)
@@ -21,7 +21,7 @@ arrangement of regions\index{layout, window} in the window:
 (The proportions of these areas may be different, depending on the size
 and shape of your browser window.)
 
-A {.snap}`Snap` program\index{"Snap! program"} consists of one or more
+A [Snap!]{.snap} program\index{"Snap! program"} consists of one or more
 *scripts,* each of which is made of *blocks.* Here’s a typical script
 \index{script} :
 
@@ -36,7 +36,7 @@ Control palette; the green block is from the Pen palette; and the blue
 blocks are from the Motion palette. A script is assembled by dragging
 blocks from a palette into the *scripting area*\index{scripting area}
 in the middle part of the window. Blocks snap together (hence the name
-{.snap}`Snap` for the language) when you drag a block so that its indentation
+[Snap!]{.snap} for the language) when you drag a block so that its indentation
 is near the tab of the one above it:
 
 ```{subfigure} snapping-blocks
@@ -57,8 +57,8 @@ At the top of the script is a *hat* block, which indicates when the
 script should be carried out. Hat block names typically start with the
 word “when”; in the square-drawing example in @fig-draw-square, the script should
 be run when the {index}`green flag<single: flag, green>` near the right end of the
-{.snap}`Snap` {index}`tool bar` is clicked. (The {.snap}`Snap` tool bar is
-part of the {.snap}`Snap` window, not the same as the browser’s or operating
+[Snap!]{.snap} {index}`tool bar` is clicked. (The [Snap!]{.snap} tool bar is
+part of the [Snap!]{.snap} window, not the same as the browser’s or operating
 system’s menu bar.) A script isn’t required to have a hat block
 \index{block!hat}, but if not, then the script will be run only if the
 user clicks on the script itself. A script can’t have more than one hat
@@ -79,7 +79,7 @@ instead of octagonal. {#para-generic-when}
 
 The other blocks in our example script are *command* blocks
 \index{block!command}. Each {index}`command block`
-corresponds to an action that {.snap}`Snap` already knows how to carry out.
+corresponds to an action that [Snap!]{.snap} already knows how to carry out.
 For example, the block ![image9.png](./blocks/images/block_forward.png){.image-inline} tells the sprite\index{sprite} (the arrowhead
 shape on the *stage*\index{stage} at the right end of the window) to
 move ten steps (a step is a very small unit of distance) in the
@@ -210,7 +210,7 @@ costume stored on your own computer, is to click on the file icon and
 choose the “Import…” menu item. You can then select a file in any
 picture format (PNG, JPEG, etc.) supported by your browser. The third
 way is quicker if the file you want is visible on the desktop: Just drag
-the file onto the {.snap}`Snap` window. In any of these cases, the scripting
+the file onto the [Snap!]{.snap} window. In any of these cases, the scripting
 area will be replaced by something like this:
 
 ![image31.png](images/01-blocks-scripts-and-sprites/image31.png)
@@ -220,9 +220,9 @@ Costumes, and Sounds. You’ll see that the Costumes tab\index{Costumes
 tab} is now selected. In this view, the sprite’s *wardrobe,*
 \index{wardrobe} you can choose whether the sprite should wear its
 Turtle costume or its Alonzo\index{Alonzo} costume. (Alonzo, the
-{.snap}`Snap` mascot, is named after {index}`Alonzo Church<single: Church, Alonzo>`, a
+[Snap!]{.snap} mascot, is named after {index}`Alonzo Church<single: Church, Alonzo>`, a
 mathematician who invented the idea of procedures as data
-\index{procedures as data}, the most important way in which {.snap}`Snap` is
+\index{procedures as data}, the most important way in which [Snap!]{.snap} is
 different from Scratch\index{Scratch}.) You can give a sprite as many
 costumes as you like, and then choose which it will wear either by
 clicking in its wardrobe or by using the ![image35.png](./blocks/images/block_doSwitchToCostume.png){.image-inline} or ![Next Costume](./blocks/images/block_doWearNextCostume.png){.image-inline} block in a script.
@@ -301,7 +301,7 @@ the action.
 Sometimes it’s desirable to make a sort of “super-sprite” composed of
 pieces that can move together but can also be separately articulated.
 The classic example is a person’s body made up of a torso, limbs, and a
-head. {.snap}`Snap` allows one sprite to be designated as the *anchor*
+head. [Snap!]{.snap} allows one sprite to be designated as the *anchor*
 \index{anchor} of the combined shape, with other sprites as its *parts.*
 \index{parts (of nested sprite)}
 
@@ -380,7 +380,7 @@ Operators palette:
 The `round` block rounds 35.3905… to 35, and the `+` block adds 100 to that.
 (By the way, the `round` block is in the Operators palette, just like `+`,
 but in this script it’s a lighter color with black lettering because
-{.snap}`Snap` alternates light and dark versions of the palette colors when a
+[Snap!]{.snap} alternates light and dark versions of the palette colors when a
 block is nested inside another block from the same palette:
 
 ![image80.png](images/01-blocks-scripts-and-sprites/image80.png) <!-- {width=4.85417in height=1.90625in} -->
@@ -401,7 +401,7 @@ always reports true or false. Predicates\index{Predicate block} have a
 
 The special shape is a reminder that predicates don’t generally make sense
 in an input slot of blocks that are expecting a number or text. You
-wouldn’t say ![image84.png](images/01-blocks-scripts-and-sprites/image84.png), although (as you can see from the picture) {.snap}`Snap` lets
+wouldn’t say ![image84.png](images/01-blocks-scripts-and-sprites/image84.png), although (as you can see from the picture) [Snap!]{.snap} lets
 you do it if you really want. Instead, you normally use predicates in
 special hexagonal input slots like this one:
 
@@ -621,8 +621,8 @@ see how to read information from web sites.
 When you use these
 capabilities, your project may take up a lot of memory\index{memory} in
 the computer. If you get close to the amount of memory available to
-{.snap}`Snap`, then it may become impossible to save your project. (Extra
-space is needed temporarily to convert from {.snap}`Snap`’s internal
+[Snap!]{.snap}, then it may become impossible to save your project. (Extra
+space is needed temporarily to convert from [Snap!]{.snap}’s internal
 representation to the form in which projects are exported or saved.) If
 your program reads a lot of data from the outside world that will still
 be available when you use it next, you might want to have values
@@ -639,7 +639,7 @@ the variable to it.
 
 ## Debugging\index{Debugging}
 
-{.snap}`Snap` provides several tools to help you debug a program. They center
+[Snap!]{.snap} provides several tools to help you debug a program. They center
 around the idea of *pausing* the running of a script partway through, so
 that you can examine the values of variables.
 
@@ -850,7 +850,7 @@ uses case-sensitive comparison, unlike `=`, which is case-independent.
 
 ![image171.png](images/01-blocks-scripts-and-sprites/image171.png){.image-inline} These *hidden* blocks can be found with the relabel option
 \index{relabel option} of any dyadic arithmetic block. They’re hidden
-partly because writing them in {.snap}`Snap` is a good, pretty easy
+partly because writing them in [Snap!]{.snap} is a good, pretty easy
 programming exercise. Note: the two inputs to `atan2`\index{atan2 block}
 are Δ*x* and Δ*y* in that order, because we measure angles clockwise
 from north. `max` /index{max block} and `min` /index{min block} are *variadic;* by clicking the arrowhead, you
@@ -1047,7 +1047,7 @@ script variables if the right input is a script.)
 
 ## Libraries {#sec-libraries-intro}
 
-There are several collections of useful procedures that aren’t {.snap}`Snap`
+There are several collections of useful procedures that aren’t [Snap!]{.snap}
 primitives, but are provided as libraries. To include a library in your
 project, choose the Libraries… option\index{Libraries… option} in the
 file (![file menu icon](images/01-blocks-scripts-and-sprites/image384.png){.image-inline}) menu.
@@ -1202,13 +1202,13 @@ Inexplicably, the designers of Scratch chose to abandon that tradition,
 and to focus on the representation of text as a string of characters.
 The one vestige of the {index}`Logo tradition` from which
 Scratch developed is the block named letter (1) of (world)\index{letter
-(1) of (world) block} , rather than character (1) of (world). {.snap}`Snap`
+(1) of (world) block} , rather than character (1) of (world). [Snap!]{.snap}
 inherits its text handling from Scratch.
 
 In Logo, the visual representation of a sentence\index{visual
 representation of a sentence} (a list of words) looks like a natural
 language sentence: a string of words with spaces between them. In
-{.snap}`Snap`, the visual representation of a list looks nothing at all like
+[Snap!]{.snap}, the visual representation of a list looks nothing at all like
 natural language. On the other hand, representing a sentence as a string
 means that the program must continually re-parse the text on every
 operation, looking for spaces, treating multiple consecutive spaces as
@@ -1245,7 +1245,7 @@ The {index}`pixels library` has one block:
 ![image395.png](images/01-blocks-scripts-and-sprites/image395.png{.image-4x} <!-- {width=0.77917in height=0.62986in} -->
 
 Costumes are first class data
-in {.snap}`Snap`. Most of the processing of costume data is done by primitive
+in [Snap!]{.snap}. Most of the processing of costume data is done by primitive
 blocks in the Looks category. (See page
 [79](#media-computation-with-costumes).) This library provides snap
 \index{snap block}, which takes a picture using your computer’s camera
@@ -1320,7 +1320,7 @@ The colors and {index}`crayons library` has these blocks:
 
 It is intended as a more powerful replacement for the primitive `set pen`
 block\index{set pen block}, including *first class color* support; `HSL color`\index{HSL color} specification as a better alternative to the HSV
-that {.snap}`Snap` inherits from JavaScript; a “{index}`fair hue`”
+that [Snap!]{.snap} inherits from JavaScript; a “{index}`fair hue`”
 scale that compensates for the eye’s grouping a wide range of light
 frequencies as green while labelling mere slivers as orange or yellow;
 the `X11/W3C standard color names`\index{X11/W3C color names}; `RGB in
@@ -1569,7 +1569,7 @@ provides these blocks:\index{case-independent comparisons block}
 ![image463.png](images/01-blocks-scripts-and-sprites/image463.png) <!-- {width=3.9375in height=2.04167in} -->
 
 All
-of these could be written in {.snap}`Snap` itself, but these are implemented
+of these could be written in [Snap!]{.snap} itself, but these are implemented
 using the corresponding JavaScript library functions directly, so they
 run fast. They can be used, for example, in scraping data from a web
 site. The command use case-independent comparisons applies only to this
@@ -1667,7 +1667,7 @@ The {index}`database library` contains these blocks:
 
 ![image472.png](images/01-blocks-scripts-and-sprites/image472.png)
 
-It is used to keep data that persist from one {.snap}`Snap` session
+It is used to keep data that persist from one [Snap!]{.snap} session
  to the next, if you use the same browser and the same login.
 
 The world {index}`map library` has these blocks:
@@ -1747,7 +1747,7 @@ to take lists as inputs. See @sec-ask-lists.
 
 ![image486.png](images/01-blocks-scripts-and-sprites/image486.png)
 
-The **Sci{.snap}`Snap` library**\index{SciSnap@"SciSnap! library"} and the **TuneScope
+The **[SciSnap!]{.snap} library**\index{SciSnap@"SciSnap! library"} and the **TuneScope
 library**\index{TuneScope@"TuneScope library"} are too big to discuss here and are
 documented separately at
 <http://emu-online.de/ProgrammingWithSciSnap.pdf> and

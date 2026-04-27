@@ -2,7 +2,7 @@
 page-layout: full
 ---
 
-# All Snap<em>!</em> Blocks {.unnumbered}
+# All [Snap!]{.snap} Blocks {.unnumbered}
 
 <!--
 The table below is currently generated from

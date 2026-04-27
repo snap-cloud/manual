@@ -1,1 +1,1 @@
-# Libraries in {.snap}`Snap` {#sec-libraries}
+# Libraries in [Snap!]{.snap} {#sec-libraries}

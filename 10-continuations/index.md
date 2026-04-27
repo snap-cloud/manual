@@ -90,9 +90,9 @@ using the empty-slot notation for input substitution.
 ## Continuation Passing Style
 
 Like all\index{continuation passing style} programming languages,
-{.snap}`Snap` evaluates compositions of nested reporters from the inside out.
+[Snap!]{.snap} evaluates compositions of nested reporters from the inside out.
 For example, in the expression
-![image884.png](assets/image884.png) <!--  style="width:1.3125in;height:0.22917in" / --> {.snap}`Snap`
+![image884.png](assets/image884.png) <!--  style="width:1.3125in;height:0.22917in" / --> [Snap!]{.snap}
 first adds 4 and 5, then multiplies 3 by that sum. This often means that
 the order in which the operations are done is backwards from the order
 in which they appear in the expression: When reading the above
@@ -181,7 +181,7 @@ explicitly CPS if/else block.
 ## Call/Run w/Continuation
 
 To use explicit continuation passing style, we had to define special
-versions of all the reporters, add and so on. {.snap}`Snap` provides a
+versions of all the reporters, add and so on. [Snap!]{.snap} provides a
 primitive mechanism for capturing continuations when we need to, without
 using continuation passing throughout a project.
 
@@ -245,7 +245,7 @@ so that the continuation is saved permanently and can be called from
 anywhere in the project. That’s why the input slot in call
 w/continuation has a Command ring rather than a Reporter ring.
 
-First class continuations are an experimental feature in {.snap}`Snap` and
+First class continuations are an experimental feature in [Snap!]{.snap} and
 there are many known limitations in it. One is that the display of
 reporter continuations shows only the single block in which the call
 w/continuation is an input.
@@ -292,10 +292,10 @@ and the × block multiplies 10 and 20.
 
 **Creating a Thread System**
 
-{.snap}`Snap` can be running several scripts at once, within a single sprite
+[Snap!]{.snap} can be running several scripts at once, within a single sprite
 and across many sprites. If you only have one computer, how can it do
 many things at once? The answer is that only one is actually running at
-any moment, but {.snap}`Snap` switches its attention from one script to
+any moment, but [Snap!]{.snap} switches its attention from one script to
 another frequently. At the bottom of every looping block (repeat, repeat
 until, forever), there is an implicit “yield” command, which remembers
 where the current script is up to, and switches to some other script,
@@ -327,6 +327,6 @@ p,q,r,s,t,u,12,13,v,w,x,y,z,14,15,16,17,18,…30.
 
 ![image928.png](assets/image928.png) <!--  style="width:2.94792in;height:4.25417in" / -->
 
-If we wanted this to behave exactly like {.snap}`Snap`’s own threads, we’d
+If we wanted this to behave exactly like [Snap!]{.snap}’s own threads, we’d
 define new versions of repeat and so on that run yield after each
 repetition.

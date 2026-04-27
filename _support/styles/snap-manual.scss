@@ -180,16 +180,22 @@ p code:not(.sourceCode) {
 // TODO: make latex command
 // This is the font used in the Word document.`
 // TODO: load Candara font.
+//
+// The trailing "!" is wrapped in an <em> so it lives in the actual document
+// text (sidebar/TOC/<title>/search all see "Snap!"). The lua filter
+// `_support/scripts/replace-snap.lua` produces this markup from
+// `[Snap!]{.snap}` for both HTML and LaTeX output.
 .snap {
   font-size: 1.1em;
   font-family: "candara", sans-serif;
   font-weight: 400;
   font-style: normal;
-}
 
-.snap::after {
-  content: '!';
-  font-style: italic;
+  em {
+    font-family: inherit;
+    font-weight: inherit;
+    font-style: italic;
+  }
 }
 
 // TODO: Style paragraph indents?

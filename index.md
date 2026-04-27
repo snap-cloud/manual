@@ -1,4 +1,4 @@
-# The {.snap}`snap` Reference Manual
+# The [Snap!]{.snap} Reference Manual
 
 <!--
   This is the first page of the Snap! Manual.
@@ -10,7 +10,7 @@
 ::: {.callout-note}
 ## This a work in progress!
 
-Welcome to the "new" {.snap}`Snap` manual. However, there are still many images and pages that need proper formatting and updates for version 11.
+Welcome to the "new" [Snap!]{.snap} manual. However, there are still many images and pages that need proper formatting and updates for version 11.
 
 You may wish to [read a very nicely typeset version][pdf] of the manual.
 
@@ -19,7 +19,7 @@ You may wish to [read a very nicely typeset version][pdf] of the manual.
 
 **Version 11.0**
 
-{.snap}`Snap` (formerly BYOB) is an extended reimplementation of Scratch
+[Snap!]{.snap} (formerly BYOB) is an extended reimplementation of Scratch
 (<u>https://scratch.mit.edu</u>) that allows you to Build Your Own
 Blocks. It also features ﬁrst class lists, first class procedures, first
 class sprites, first class costumes, first class sounds, and first class
@@ -27,21 +27,21 @@ continuations. These added capabilities make it suitable for a serious
 introduction to computer science for high school or college students.
 
 In this manual we sometimes make reference to Scratch, e.g., to explain
-how some {.snap}`Snap` feature extends something familiar in Scratch. It’s
+how some [Snap!]{.snap} feature extends something familiar in Scratch. It’s
 very helpful to have some experience with Scratch before reading this
 manual, but not essential.
 
-To run {.snap}`Snap`, open a browser window and
-visit [`https://snap.berkeley.edu/snap`](https://snap.berkeley.edu/snap). The {.snap}`Snap` community web site
+To run [Snap!]{.snap}, open a browser window and
+visit [`https://snap.berkeley.edu/snap`](https://snap.berkeley.edu/snap). The [Snap!]{.snap} community web site
 at https://snap.berkeley.edu is covered briefly in @sec-appendix-community
 
 
 The manual is roughly organized into a few sections.
 
 * Chapters 1 to 11 cover the primary features for writing programings in
-Snap*!*. They are organized from introductory to advanced topics.
-* Chapters 12 and 13 cover the user interface components of both the Snap*!* editor and the community site.
-* The appendicies provide [documentation for every block in {.snap}`Snap` block][blocks], as well as some of libraries provided.
+[Snap!]{.snap}. They are organized from introductory to advanced topics.
+* Chapters 12 and 13 cover the user interface components of both the [Snap!]{.snap} editor and the community site.
+* The appendicies provide [documentation for every block in [Snap!]{.snap} block][blocks], as well as some of libraries provided.
 
 [blocks]: /blocks/
 

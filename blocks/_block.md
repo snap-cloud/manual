@@ -46,4 +46,4 @@ No examples yet.
 
 ---
 
-_Individual pages for each block are new. Most blocks don't yet additional links and images. If you have any questions, please post in the {.snap}`Snap` [forum](https://forum.snap.berkeley.edu/c/help/snap-help/49)._
+_Individual pages for each block are new. Most blocks don't yet additional links and images. If you have any questions, please post in the [Snap!]{.snap} [forum](https://forum.snap.berkeley.edu/c/help/snap-help/49)._

@@ -50,6 +50,7 @@ format:
     aria: true # requires quarto-dev / v1.8+
     toc: true
     filters:
+      - _support/scripts/replace-snap.lua
       - _support/scripts/collect-index.lua
       - _support/scripts/exclude-blocks-toc.lua
     link-external-icon: true
@@ -150,7 +151,11 @@ format:
 #   center: center-env
 
 book:
-  title: Snap<em>!</em> Reference Manual
+  # The `[Snap!]{.snap}` span is rewritten by replace-snap.lua to the right
+  # markup for each format (a styled span for HTML, `Snap\textit{!}` for
+  # LaTeX). The PDF format above also has a raw-LaTeX `title:` override that
+  # takes effect for that one format.
+  title: "[Snap!]{.snap} Reference Manual"
   output-file: snap-manual
   author: Brian Harvey, Jens Mönig, Michael Ball, Jadga Hügle, Victoria Phelps, Bernat Romagosa
   date: September 1, 2025

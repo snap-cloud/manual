@@ -6,7 +6,19 @@
 * Write UI elements inside quoted code blocks. e.g. ```"`Open`"```
 * Monospaced text should use the CSS class `.mono` e.g. `[text here]{.mono}`
 * Do not put spaces around index entries. `text\index{text},`
-* To write Snap! as stylized text write: `{.snap}`Snap``
+* To write Snap! as stylized text, use `[Snap!]{.snap}`. This works in body
+  text, headings, and other inline contexts. The `_support/scripts/replace-snap.lua`
+  filter rewrites it to the right markup for HTML and LaTeX, so the trailing
+  `!` renders in italics in both formats and is included in the actual heading
+  text (so it appears in the sidebar, the TOC, the page `<title>`, and search).
+  * For compound names like SciSnap! use `[SciSnap!]{.snap}`.
+  * The legacy `` {.snap}`Snap` `` syntax is still accepted by the filter, but
+    new content should use the bracketed-span form.
+  * In raw YAML metadata that doesn't go through Pandoc filtering (for
+    example, format-specific titles in `_quarto.yml`), use the per-format
+    markup directly: `<span class="snap">Snap<em>!</em></span>` for HTML,
+    `Snap\textit{!}` for LaTeX. Plain `Snap!` is fine for `description`,
+    `alt` text, and other text-only fields.
 * Chapters are included at the top level of the repo, named 'NN-chapter'
   * Each contains an `index.md` file, which is the chapter's main content.
   * The `assets/` folder contains images used in the chapter.

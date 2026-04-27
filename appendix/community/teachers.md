@@ -1,6 +1,6 @@
 # Teacher Accounts {.unnumbered .unlisted}
 
-Snap<em>!</em> supports basic teacher account functionality.
+[Snap!]{.snap} supports basic teacher account functionality.
 
 ## Bulk Account Creation {.unnumbered .unlisted}
 

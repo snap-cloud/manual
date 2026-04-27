@@ -222,11 +222,11 @@ except that the “procedure” is a macro, with different evaluation rules
 from ordinary procedures. Two things make a macro different: its input
 expressions are not evaluated, so a macro can establish its own syntax
 (but still delimited by parentheses, in Lisp, or still one block, in
-{.snap}`Snap` ); and the result of a macro call is a new expression that is
+[Snap!]{.snap} ); and the result of a macro call is a new expression that is
 evaluated *as if it appeared in the caller* of the macro, with access to
 the caller’s variables and, implicitly, its continuation.
 
-{.snap}`Snap` has long had the first part of this, the ability to make inputs
+[Snap!]{.snap} has long had the first part of this, the ability to make inputs
 unevaluated. In version 8.0 we add the ability to run code in the
 context of another procedure, just as we can run code in the context of
 another sprite, using the same mechanism: the of block\index{of block
