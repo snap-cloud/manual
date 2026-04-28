@@ -17,14 +17,14 @@ In every palette, at or near the bottom, is a button labeled "`Make a block`"\in
 is a plus sign (+). Also, the menu you get by right-clicking on the
 background of the scripting area has a "`make a block`" option.
 
-![image523.png](03-building-a-block/assets/image523.png)
+![image523.png](images/03-building-a-block/image523.png)
 
 Clicking any of these will
 display a dialog window in which you choose the block’s name, shape, and
 palette/color. You also decide whether the block will be available to
 all sprites, or only to the current sprite and its children.
 
-![image501.png](03-building-a-block/assets/image501.png) <!--  style="width:2.27083in;height:2.34722in" / -->
+![image501.png](images/03-building-a-block/image501.png) <!--  style="width:2.27083in;height:2.34722in" / -->
 
 In this dialog box, you can choose the block's palette, shape, and name.
 With one exception, there is one color\index{color of blocks} per
@@ -52,14 +52,14 @@ except that the “hat” block at the top, instead of saying something like
 of your custom block.[^3] You drag blocks under the hat to program your
 custom block, then click OK:
 
-![image502.png](03-building-a-block/assets/image502.png) <!--  style="width:4.21094in;height:1.3364in" / -->
+![image502.png](images/03-building-a-block/image502.png) <!--  style="width:4.21094in;height:1.3364in" / -->
 
-![image503.png](03-building-a-block/assets/image503.png) <!--  style="width:4.61556in;height:3.64778in" / -->
+![image503.png](images/03-building-a-block/image503.png) <!--  style="width:4.61556in;height:3.64778in" / -->
 
 Your block appears at the bottom of the [Motion]{.mono} palette. Here’s the block
 and the result of using it:
 
-![image524.png](03-building-a-block/assets/image524.png) <!--  style="width:2.27083in;height:2.34722in" / -->
+![image524.png](images/03-building-a-block/image524.png) <!--  style="width:2.27083in;height:2.34722in" / -->
 
 [^3]: This use of the word “prototype” is unrelated to the *prototyping
 object oriented programming* discussed later.
@@ -72,13 +72,13 @@ Editor\index{Block Editor} will open. Notice the plus signs before and
 after the word square in the prototype block. If you hover the mouse
 over one, it lights up:
 
-![image508.png](03-building-a-block/assets/image508.png) <!--  style="width:3.44444in;height:2.72222in" / -->
+![image508.png](images/03-building-a-block/image508.png) <!--  style="width:3.44444in;height:2.72222in" / -->
 
 Click on the plus on the
 right. You will then see the “input name” dialog\index{input name
 dialog}:
 
-![image509.png](03-building-a-block/assets/image509.png) <!--  style="width:2.58333in;height:1.60417in" / -->
+![image509.png](images/03-building-a-block/image509.png) <!--  style="width:2.58333in;height:1.60417in" / -->
 
 Type in the name “size” and click "`OK`" There are other options in this
 dialog; you can choose "`title text`"\index{title text} if you want to
@@ -88,15 +88,15 @@ dialog with a lot of options about your input name. But we’ll leave that
 for later. When you click OK, the new input appears in the block
 prototype:
 
-![image510.png](03-building-a-block/assets/image510.png) <!--  style="width:1.47917in;height:1.48958in" / -->
+![image510.png](images/03-building-a-block/image510.png) <!--  style="width:1.47917in;height:1.48958in" / -->
 
 You can now drag the orange
 variable down into the script, then click okay:
 
-![image511.png](03-building-a-block/assets/image511.png) <!--  style="width:1.47472in;height:1.4955in" / -->
+![image511.png](images/03-building-a-block/image511.png) <!--  style="width:1.47472in;height:1.4955in" / -->
 
 Your
-block now appears in the [Motion]{.mono} palette with an input box: ![image512.png](03-building-a-block/assets/image512.png) <!--  style="width:0.69792in;height:0.25in" / --> You can draw
+block now appears in the [Motion]{.mono} palette with an input box: ![image512.png](images/03-building-a-block/image512.png) <!--  style="width:0.69792in;height:0.25in" / --> You can draw
 any size square by entering the length of its side in the box and
 running the block as usual, by clicking it or by putting it in a script.
 
@@ -115,7 +115,7 @@ the palette) and then change the category.)
 
 If you "`right-click/control-click`" the hat block, you get this menu:
 
-![image513.png](03-building-a-block/assets/image513.png) <!--  style="width:0.99931in;height:0.76042in" / -->
+![image513.png](images/03-building-a-block/image513.png) <!--  style="width:0.99931in;height:0.76042in" / -->
 
 "`Script pic`" \index{script pic} exports a picture of the script. (Many of
 the illustrations in this manual were made that way.) "`Translations`" \index{translations option} opens a window in which you can specify how
@@ -142,7 +142,7 @@ Since the new custom\index{recursion} block appears in its palette as soon as yo
 editing it, you can write recursive blocks (blocks that call themselves)
 by dragging the block into its own definition:
 
-![image514.png](03-building-a-block/assets/image514.png) <!--  style="width:2.96528in;height:2.36319in" / --> ![image515.png](03-building-a-block/assets/image515.png) <!--  style="width:1.95833in;height:2.35417in" / --> ![image516.png](03-building-a-block/assets/image516.png) <!--  style="width:1.42361in;height:0.91181in" / -->
+![image514.png](images/03-building-a-block/image514.png) <!--  style="width:2.96528in;height:2.36319in" / --> ![image515.png](images/03-building-a-block/image515.png) <!--  style="width:1.95833in;height:2.35417in" / --> ![image516.png](images/03-building-a-block/image516.png) <!--  style="width:1.42361in;height:0.91181in" / -->
 
 (If you added inputs to the block since opening the editor, click "`Apply`"
 before finding the block in the palette, or drag the\index{drag from
@@ -168,7 +168,7 @@ values.
 You can also write {index}`recursive reporters<single: reporters, recursive>`,
 like this block to compute the factorial\index{factorial} function:
 
-![image520.png](03-building-a-block/assets/image520.png) <!--  style="width:4.29167in;height:0.86458in" / -->
+![image520.png](images/03-building-a-block/image520.png) <!--  style="width:4.29167in;height:0.86458in" / -->
 
 Note the use of the <code>report</code> block\index{report block}. When a reporter
 block uses this block, the reporter finishes its work and reports the
@@ -186,7 +186,7 @@ entire toplevel script that called it.)
 Here’s a slightly more
 compact way to write the <code>factorial</code> function:
 
-![image521.png](03-building-a-block/assets/image521.png) <!--  style="width:4.29167in;height:0.86458in" / -->
+![image521.png](images/03-building-a-block/image521.png) <!--  style="width:4.29167in;height:0.86458in" / -->
 
 For more on recursion, see *Thinking Recursively*\index{Thinking
 Recursively} by {index}`Eric Roberts<single: Roberts, Eric>`. (The original
@@ -206,7 +206,7 @@ To create a block library,\index{library!block} choose "`Export
 blocks…`" from the
 "`File`" menu. You then see a window like this:
 
-![image522.png](03-building-a-block/assets/image522.png) <!--  style="width:2.02153in;height:2.72222in" / -->
+![image522.png](images/03-building-a-block/image522.png) <!--  style="width:2.02153in;height:2.72222in" / -->
 
 The window shows all of your
 global custom blocks. You can uncheck some of the checkboxes to select
@@ -228,7 +228,7 @@ custom block as a single step. If you want to see stepping inside a
 custom block you must take these steps *in order:*
 
 1.  Turn on
-    "`Visible Stepping`" by pressing the footprints button: ![image123.png](03-building-a-block/assets/image123.png)
+    "`Visible Stepping`" by pressing the footprints button: ![image123.png](images/03-building-a-block/image123.png)
 
 2.  Select "`Edit`" in the context menu(s) of the block(s) you want to
     examine.

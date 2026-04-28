@@ -12,7 +12,7 @@ that interact with physical devices\index{devices} (sensors
 \index{World Wide Web}. For these purposes {.snap}`Snap` provides a
 single primitive block:
 
-![image148.png](../blocks/images/block_reportURL.png)
+![image148.png](blocks/images/block_reportURL.png)
 
 This might not seem like enough, but in fact it can be used to build the
 desired capabilities.
