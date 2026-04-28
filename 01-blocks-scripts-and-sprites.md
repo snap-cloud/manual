@@ -16,7 +16,7 @@ interface familiar to computer users.
 Start Snap<em>!</em>. You should see the following
 arrangement of {index}`regions <layout, window>` in the window:
 
-![An annotated screenshot of blank Snap! editor](./12-user-interface-elements/assets/snap-ide-annotated.png)
+![An annotated screenshot of blank Snap! editor](images/12-user-interface-elements/snap-ide-annotated.png)
 
 (The proportions of these areas may be different, depending on the size
 and shape of your browser window.)

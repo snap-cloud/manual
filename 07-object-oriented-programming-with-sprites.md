@@ -67,15 +67,15 @@ attributes (e.g., <code>x position</code>).
 The fundamental means by which programs get access to sprites is the <code>my ( )</code> reporter
 block\index{my}. It has a dropdown-menu input slot that, when clicked,
 gives access to all the sprites, plus the stage\index{stage}.
-![my self](07-object-oriented-programming-with-sprites/assets/image745.png){.image-inline} reports a
-single sprite, the one asking the question. ![image744.png](07-object-oriented-programming-with-sprites/assets/image744.png) <!--  style="width:1.08333in;height:0.19444in" / -->   reports a list of all
-sprites other than the one asking the question. ![image743.png](07-object-oriented-programming-with-sprites/assets/image743.png) <!--  style="width:0.96528in;height:0.19444in" / -->  reports a list of all
+![my self](images/07-object-oriented-programming-with-sprites/image745.png){.image-inline} reports a
+single sprite, the one asking the question. ![image744.png](images/07-object-oriented-programming-with-sprites/image744.png) <!--  style="width:1.08333in;height:0.19444in" / -->   reports a list of all
+sprites other than the one asking the question. ![image743.png](images/07-object-oriented-programming-with-sprites/image743.png) <!--  style="width:0.96528in;height:0.19444in" / -->  reports a list of all
 sprites that are *near* the one asking—the ones that are candidates for
 having collided with this one, for example. The <code>my ( )</code> block\index{my
 block} has many other options, discussed below. If you know the name of
 a particular sprite, the object reporter will report the sprite itself.
 
-<!-- ![image746.png](07-object-oriented-programming-with-sprites/assets/image746.png) style="width:3.55208in;height:0.51042in" / ![image747.png](07-object-oriented-programming-with-sprites/assets/image747.png)   style="width:2.69143in;height:1.25in" alt="C:\Documents and Settings\bh\Desktop\Scratch002.png" / -->
+<!-- ![image746.png](images/07-object-oriented-programming-with-sprites/image746.png) style="width:3.55208in;height:0.51042in" / ![image747.png](images/07-object-oriented-programming-with-sprites/image747.png)   style="width:2.69143in;height:1.25in" alt="C:\Documents and Settings\bh\Desktop\Scratch002.png" / -->
 
 An object or
 list of objects reported by <code>my ( )</code> or <code>object ( )</code> can be used as input to any
@@ -83,11 +83,11 @@ block that accepts any input type, such as set’s (<code>set ( ) to ( )</code>)
 <code>say ( )</code> an object, the resulting speech balloon will contain a smaller image
 of the object’s costume or (for the stage) background.
 
-![image742.png](07-object-oriented-programming-with-sprites/assets/image742.png) <!--  style="width:3.54514in;height:0.82639in" / -->
+![image742.png](images/07-object-oriented-programming-with-sprites/image742.png) <!--  style="width:3.54514in;height:0.82639in" / -->
 
 ##  Permanent and Temporary Clones
 
-The ![image748.png](07-object-oriented-programming-with-sprites/assets/image748.png) <!--  style="width:1.51389in;height:0.19444in" alt="Macintosh HD:Users:bh:Desktop:pix:clone-block.png" / --> block is
+The ![image748.png](images/07-object-oriented-programming-with-sprites/image748.png) <!--  style="width:1.51389in;height:0.19444in" alt="Macintosh HD:Users:bh:Desktop:pix:clone-block.png" / --> block is
 used to create and report an instance (a clone) of any sprite. (There is
 also a command version, for historical reasons.) There are two different
 kinds of situations in which clones are used. One is that you’ve made an
@@ -126,7 +126,7 @@ have a lot of them. (If you’re curious, one reason is that permanent
 clones appear in the sprite corral, where their pictures have to be
 updated to reflect the clone’s current costume, direction, and so on.)
 We have tried to anticipate your needs, as follows: When you make a
-clone in a script, using the ![image748.png](07-object-oriented-programming-with-sprites/assets/image748.png) <!--  style="width:1.51389in;height:0.19444in" alt="Macintosh HD:Users:bh:Desktop:pix:clone-block.png" / --> block, it is “born” temporary. But when you
+clone in a script, using the ![image748.png](images/07-object-oriented-programming-with-sprites/image748.png) <!--  style="width:1.51389in;height:0.19444in" alt="Macintosh HD:Users:bh:Desktop:pix:clone-block.png" / --> block, it is “born” temporary. But when you
 make a clone from the user interface, for example by right-clicking on a
 sprite and choosing "`cline`", it is born permanent. The reason this makes
 sense is that you don’t create 100 *kinds* of dogs automatically. Each
@@ -140,7 +140,7 @@ temporary sprite to permanent by right-clicking it and choosing "`edit.`"
 the scripting area to reflect that sprite, as if you’d pressed its
 button in the sprite corral.) You can change a permanent sprite to
 temporary by right-clicking it and choosing "`release.`" You can also
-change the status of a clone in your program with ![image749.png](07-object-oriented-programming-with-sprites/assets/image749.png) <!--  style="width:1.51389in;height:0.25694in" alt="Macintosh HD:Users:bh:Desktop:set-my-temp.png" / --> with true or false as
+change the status of a clone in your program with ![image749.png](images/07-object-oriented-programming-with-sprites/image749.png) <!--  style="width:1.51389in;height:0.25694in" alt="Macintosh HD:Users:bh:Desktop:set-my-temp.png" / --> with true or false as
 the second input.
 
 ##  Sending Messages to Sprites
@@ -153,9 +153,9 @@ Editor.)
 The way to send a message to a sprite (or the stage) is with the <code>tell ( ) to ( )</code>
 block (for command messages) or the <code>say ( )</code> block (for reporter messages).
 
-![image749.png](07-object-oriented-programming-with-sprites/assets/image749.png) <!--  style="width:3.54514in;height:0.82639in" / -->
+![image749.png](images/07-object-oriented-programming-with-sprites/image749.png) <!--  style="width:3.54514in;height:0.82639in" / -->
 
-![image750.png](07-object-oriented-programming-with-sprites/assets/image750.png) <!--  style="width:3.54514in;height:0.82639in" / -->
+![image750.png](images/07-object-oriented-programming-with-sprites/image750.png) <!--  style="width:3.54514in;height:0.82639in" / -->
 
 A small point to note in the examples above: all dropdown menus include
 an empty entry at the top, which can be selected for use in higher order
@@ -165,7 +165,7 @@ procedures like the <code>for each</code> and <code>map</code> examples. Each of
 By the way, if you want a list of *all* the sprites, including this
 sprite, you can use either of these:
 
-![image751.png](07-object-oriented-programming-with-sprites/assets/image751.png) <!--  style="width:3.54514in;height:0.82639in" / -->
+![image751.png](images/07-object-oriented-programming-with-sprites/image751.png) <!--  style="width:3.54514in;height:0.82639in" / -->
 
 <code>Tell ( )</code> and <code>ask ( ) and wait</code> wait until the
 other sprite has carried out its method before this sprite’s script
@@ -175,7 +175,7 @@ and wait</code>. Sometimes the other sprite’s method may take a long time, or
 may even be a forever loop, so you want the originating script to
 continue without waiting. For this purpose we have the <code>launch ( )</code> block:
 
-![image762.png](07-object-oriented-programming-with-sprites/assets/image762.png) <!--  style="width:3.54514in;height:0.82639in" / -->
+![image762.png](images/07-object-oriented-programming-with-sprites/image762.png) <!--  style="width:3.54514in;height:0.82639in" / -->
 
 <code>Launch ( )</code> is analogous to <code>broadcast</code> without the “wait.”
 
@@ -193,7 +193,7 @@ with two clones CockerSpaniel and PitBull. In the [Dog]{.mono} sprite you define
 this method\index{method} ("`For this sprite only` block
 \index{block!sprite-local} ):
 
-![image763.png](07-object-oriented-programming-with-sprites/assets/image763.png) <!--  style="width:1.67361in;height:1.40208in" / -->
+![image763.png](images/07-object-oriented-programming-with-sprites/image763.png) <!--  style="width:1.67361in;height:1.40208in" / -->
 
 Note the *loca*tion ([map-pin]{.mono}) symbol\index{map-pin symbol} before the
 block’s name. The symbol is not part of the block title; it’s a visual
@@ -203,11 +203,11 @@ similarly marked.
 But you don’t define <code>greet ( ) as friend</code> or <code>greet ( ) as enemy</code> in Dog. Each kind
 of dog has a different behavior. Here’s what a CockerSpaniel does:
 
-![image764.png](07-object-oriented-programming-with-sprites/assets/image764.png) <!--  style="width:1.67361in;height:1.40208in" / -->
+![image764.png](images/07-object-oriented-programming-with-sprites/image764.png) <!--  style="width:1.67361in;height:1.40208in" / -->
 
 And here’s what a PitBull does:
 
-![image765.png](07-object-oriented-programming-with-sprites/assets/image765.png) <!--  style="width:1.67361in;height:1.40208in" / -->
+![image765.png](images/07-object-oriented-programming-with-sprites/image765.png) <!--  style="width:1.67361in;height:1.40208in" / -->
 
 <code>Greet ( )</code> is defined in the [Dog]{.mono} sprite.
 If Fido is a particular cocker
@@ -258,7 +258,7 @@ in a nesting arrangement (see page
 [10](#nesting-sprites-anchors-and-parts)). Similarly, the same <code>set ( ) to ( )</code> block
 used to set variable values allows setting some sprite attributes.
 
-![image766.png](07-object-oriented-programming-with-sprites/assets/image766.png) <!--  style="width:1.67361in;height:1.40208in" / -->
+![image766.png](images/07-object-oriented-programming-with-sprites/image766.png) <!--  style="width:1.67361in;height:1.40208in" / -->
 
 ##  Prototyping: Parents and Children
 
@@ -310,7 +310,7 @@ sprites have a “parent” attribute\index{parent attribute} that can be
 set, like any attribute, thereby *changing* the parent of an existing
 sprite.
 
-![image766.png](07-object-oriented-programming-with-sprites/assets/image766.png) <!--  style="width:1.67361in;height:1.40208in" / -->
+![image766.png](images/07-object-oriented-programming-with-sprites/image766.png) <!--  style="width:1.67361in;height:1.40208in" / -->
 
 ## Inheritance by Delegation
 
@@ -345,7 +345,7 @@ in the parent (and therefore in itself and all its siblings)? Remember
 that in this system any object can <code>tell</code> any other object to do
 something:
 
-![image779.png](07-object-oriented-programming-with-sprites/assets/image779.png) <!--  style="width:5.07292in;height:0.58333in" / -->
+![image779.png](images/07-object-oriented-programming-with-sprites/image779.png) <!--  style="width:5.07292in;height:0.58333in" / -->
 
 When a sprite gets a message
 for which it doesn’t have a corresponding block, the message is
@@ -355,15 +355,15 @@ that implements a delegated message refers to <code>my (self)</code>, it means t
 child to which the message was originally sent, not the parent to which
 the message was delegated.
 
-![image780.png](07-object-oriented-programming-with-sprites/assets/image780.png) <!--  style="width:0.78958in;height:3.46806in" alt="attrib.png" / -->
+![image780.png](images/07-object-oriented-programming-with-sprites/image780.png) <!--  style="width:0.78958in;height:3.46806in" alt="attrib.png" / -->
 
 ##  List of attributes
 
-<!-- ![image781.png](07-object-oriented-programming-with-sprites/assets/image781.png) ![image782.png](07-object-oriented-programming-with-sprites/assets/image782.png)  -->
+<!-- ![image781.png](images/07-object-oriented-programming-with-sprites/image781.png) ![image782.png](images/07-object-oriented-programming-with-sprites/image782.png)  -->
 
 At the right is a picture of the dropdown menu of attributes\index{attributes, list of} in the <code>my ( )</code> block.
 
-![image770.png](07-object-oriented-programming-with-sprites/assets/image770.png) <!--  style="width:5.07292in;height:0.58333in" / -->
+![image770.png](images/07-object-oriented-programming-with-sprites/image770.png) <!--  style="width:5.07292in;height:0.58333in" / -->
 
 Several of these are not real attributes, but things related to
 attributes:
@@ -443,7 +443,7 @@ report lists of them.
 ### Media Computation with Costumes
 
 The components of a
-costume are its name, width, height, and pixels. The ![image783.png](07-object-oriented-programming-with-sprites/assets/image783.png) <!--  style="width:1.63194in;height:0.1875in" alt="Macintosh HD:Users:bh:Desktop:ofcostume.png" / -->  block gives access
+costume are its name, width, height, and pixels. The ![image783.png](images/07-object-oriented-programming-with-sprites/image783.png) <!--  style="width:1.63194in;height:0.1875in" alt="Macintosh HD:Users:bh:Desktop:ofcostume.png" / -->  block gives access
 to these components\index{of costume block} using its left menu. From
 its right menu you can choose the current costume, the Turtle costume,
 or any costume in the sprite’s wardrobe. Since costumes are first class,
@@ -482,7 +482,7 @@ reflects the way bitmaps are stored in the computer’s hardware and
 operating system, but also makes it easy to produce transformations of a
 costume with <code>map</code>:
 
-![image784.png](07-object-oriented-programming-with-sprites/assets/image784.png) <!--  style="width:1.63194in;height:0.1875in" alt="Macintosh HD:Users:bh:Desktop:ofcostume.png" / -->
+![image784.png](images/07-object-oriented-programming-with-sprites/image784.png) <!--  style="width:1.63194in;height:0.1875in" alt="Macintosh HD:Users:bh:Desktop:ofcostume.png" / -->
 
 In this simplest possible transformation, the red value of all the
 pixels have been changed to a constant 150. Colors that were red in the
@@ -507,24 +507,24 @@ there’s no <var>name</var> input; costumes computed in this way are all named
 <var>costume</var>. Note also that the use of switch to costume does *not* add the
 computed costume to the sprite’s wardrobe; to do that, say
 
-![image790.png](07-object-oriented-programming-with-sprites/assets/image790.png) <!--  style="width:2.25694in;height:0.28472in" alt="Macintosh HD:Users:bh:Desktop:add-to-wardrobe.png" / -->
+![image790.png](images/07-object-oriented-programming-with-sprites/image790.png) <!--  style="width:2.25694in;height:0.28472in" alt="Macintosh HD:Users:bh:Desktop:add-to-wardrobe.png" / -->
 
 Here’s a more interesting example of color manipulation:
 
-![image791.png](07-object-oriented-programming-with-sprites/assets/image791.png) <!--  style="width:2.25694in;height:0.28472in" alt="Macintosh HD:Users:bh:Desktop:add-to-wardrobe.png" / -->
+![image791.png](images/07-object-oriented-programming-with-sprites/image791.png) <!--  style="width:2.25694in;height:0.28472in" alt="Macintosh HD:Users:bh:Desktop:add-to-wardrobe.png" / -->
 
 Each
 color value is constrained to be 0, 80, 160, or 240. This gives the
 picture a more cartoonish look. Alternatively, you can do the
 computation taking advantage of hyperblocks:
 
-![image797.png](07-object-oriented-programming-with-sprites/assets/image797.png) <!--  style="width:2.25694in;height:0.28472in" alt="Macintosh HD:Users:bh:Desktop:add-to-wardrobe.png" / -->
+![image797.png](images/07-object-oriented-programming-with-sprites/image797.png) <!--  style="width:2.25694in;height:0.28472in" alt="Macintosh HD:Users:bh:Desktop:add-to-wardrobe.png" / -->
 
 Here’s one way to exchange red and green values:
 
-![image798.png](07-object-oriented-programming-with-sprites/assets/image798.png) <!--  style="width:2.25694in;height:0.28472in" alt="Macintosh HD:Users:bh:Desktop:add-to-wardrobe.png" / -->
+![image798.png](images/07-object-oriented-programming-with-sprites/image798.png) <!--  style="width:2.25694in;height:0.28472in" alt="Macintosh HD:Users:bh:Desktop:add-to-wardrobe.png" / -->
 
-It’s the ![image804.png](07-object-oriented-programming-with-sprites/assets/image804.png) <!--  style="width:0.95833in;height:0.18056in" alt="Macintosh HD:Users:bh:Desktop:2-1-3-4.png" / --> list that
+It’s the ![image804.png](images/07-object-oriented-programming-with-sprites/image804.png) <!--  style="width:0.95833in;height:0.18056in" alt="Macintosh HD:Users:bh:Desktop:2-1-3-4.png" / --> list that
 determines the rearrangement of colors: green➔red, red➔green, and the
 other two unchanged. That <code>list</code> is inside another <code>list</code> because otherwise
 it would be selecting *rows* of the pixel array, and we want to select
@@ -535,11 +535,11 @@ get stuck turning it green, instead of alternating colors.
 The <code>stretch</code> block
 \index{stretch block} takes a costume as its first input, either by
 selecting a costume from the menu or by dropping a costume-valued
-expression such as ![image809.png](07-object-oriented-programming-with-sprites/assets/image809.png) <!--  style="width:1.72222in;height:0.22917in" alt="Macintosh HD:Users:bh:Desktop:a-costume.png" / -->  onto it. The other two inputs are percents of the
+expression such as ![image809.png](images/07-object-oriented-programming-with-sprites/image809.png) <!--  style="width:1.72222in;height:0.22917in" alt="Macintosh HD:Users:bh:Desktop:a-costume.png" / -->  onto it. The other two inputs are percents of the
 original width and height, as advertised, so you can make fun house
 mirror versions of costumes:
 
-![image805.png](07-object-oriented-programming-with-sprites/assets/image805.png) <!--  style="width:0.95833in;height:0.18056in" alt="Macintosh HD:Users:bh:Desktop:2-1-3-4.png" / -->
+![image805.png](images/07-object-oriented-programming-with-sprites/image805.png) <!--  style="width:0.95833in;height:0.18056in" alt="Macintosh HD:Users:bh:Desktop:2-1-3-4.png" / -->
 
 The resulting costumes can be used with <code>switch to costume ( )</code> and so on.
 
@@ -552,8 +552,8 @@ Using the
 <code>video (motion) on (myself)</code> block\index{video on block} turns on the camera and displays
 what it sees on the stage, regardless of the inputs given. The camera
 remains on until you click the red stop button, your program runs the
-<code>stop all</code> block, or you turn it off explicitly with the  ![image814.png](07-object-oriented-programming-with-sprites/assets/image814.png) <!--  style="width:1.40278in;height:0.24306in" alt="Macintosh HD:Users:bh:Desktop:mirror-video.png" / --> block. The video
-image on the stage is partly ghosted, to an extent determined by the ![image813.png](07-object-oriented-programming-with-sprites/assets/image813.png) <!--  style="width:1.47222in;height:0.24306in" alt="Macintosh HD:Users:bh:Desktop:Jump! script pic.png" / --> <code>set
+<code>stop all</code> block, or you turn it off explicitly with the  ![image814.png](images/07-object-oriented-programming-with-sprites/image814.png) <!--  style="width:1.40278in;height:0.24306in" alt="Macintosh HD:Users:bh:Desktop:mirror-video.png" / --> block. The video
+image on the stage is partly ghosted, to an extent determined by the ![image813.png](images/07-object-oriented-programming-with-sprites/image813.png) <!--  style="width:1.47222in;height:0.24306in" alt="Macintosh HD:Users:bh:Desktop:Jump! script pic.png" / --> <code>set
 video transparency to ( )</code> block, whose input really is transparency and not
 opacity. (Small numbers make the video more visible.) By default, the
 video image is mirrored, like the selfie camera on your cell phone: When
@@ -567,16 +567,16 @@ trims it to fit on the selected sprite. (<code>Video snap on</code> stage means 
 use the entire stage-sized rectangle.) For example, here’s a camera
 snapshot trimmed to fit Alonzo:
 
-![image815.png](07-object-oriented-programming-with-sprites/assets/image815.png) <!--  style="width:1.20417in;height:1.6125in" / -->
+![image815.png](images/07-object-oriented-programming-with-sprites/image815.png) <!--  style="width:1.20417in;height:1.6125in" / -->
 
 The
 “Video Capture” project in the Examples collection repeatedly takes such
 trimmed snapshots and has the Alonzo sprite use the current snapshot as
 its costume, so it looks like this:
 
-![image816.png](07-object-oriented-programming-with-sprites/assets/image816.png) <!--  style="width:2.67014in;height:1.29861in" alt="Macintosh HD:Users:bh:Desktop:Video Capture script 1.png" / -->
+![image816.png](images/07-object-oriented-programming-with-sprites/image816.png) <!--  style="width:2.67014in;height:1.29861in" alt="Macintosh HD:Users:bh:Desktop:Video Capture script 1.png" / -->
 
-![image818.png](07-object-oriented-programming-with-sprites/assets/image818.png) <!--  style="width:3.33333in;height:2.5in" alt="Macintosh HD:Users:bh:Desktop:video.png" / -->
+![image818.png](images/07-object-oriented-programming-with-sprites/image818.png) <!--  style="width:3.33333in;height:2.5in" alt="Macintosh HD:Users:bh:Desktop:video.png" / -->
 
  (The picture above was
 actually taken with transparency set to 50, to make the background more
@@ -585,7 +585,7 @@ where the snapshot was taken, its costume exactly fits in with the rest
 of the full-stage video. If you were to add a <code>move (100) steps</code> block after
 the <code>switch to costume ( )</code>, you’d see something like this:
 
-![image817.png](07-object-oriented-programming-with-sprites/assets/image817.png) <!--  style="width:2.66667in;height:2in" alt="Macintosh HD:Users:bh:Desktop:offset-video.png" / -->
+![image817.png](images/07-object-oriented-programming-with-sprites/image817.png) <!--  style="width:2.66667in;height:2in" alt="Macintosh HD:Users:bh:Desktop:offset-video.png" / -->
 
 This time, the sprite’s costume was captured at one position, and then
 the sprite is shown at a different position. (You probably wouldn’t want
@@ -593,7 +593,7 @@ to do this, but perhaps it’s helpful for explanatory purposes.)
 
 What you *would* want to do is push the sprite around the stage:
 
-![image819.png](07-object-oriented-programming-with-sprites/assets/image819.png) <!--  style="width:2.66667in;height:2in" alt="Macintosh HD:Users:bh:Desktop:offset-video.png" / -->
+![image819.png](images/07-object-oriented-programming-with-sprites/image819.png) <!--  style="width:2.66667in;height:2in" alt="Macintosh HD:Users:bh:Desktop:offset-video.png" / -->
 
 (Really these
 should be Jens’s picture; it’s his project. But he’s vacationing. ☺)
@@ -617,18 +617,18 @@ brief burst of sound from your microphone\index{microphone}. (How
 brief? On my computer, 0.010667 seconds, but you’ll see shortly how to
 ﬁnd out or control the sample size on your computer.)
 
-![image825.png](07-object-oriented-programming-with-sprites/assets/image825.png) <!--  style="width:3.09028in;height:1.92361in" alt="Macintosh HD:Users:bh:Desktop:microphone.png" / -->
+![image825.png](images/07-object-oriented-programming-with-sprites/image825.png) <!--  style="width:3.09028in;height:1.92361in" alt="Macintosh HD:Users:bh:Desktop:microphone.png" / -->
 
 Just as the *pixel* is
 the smallest piece of a picture, the *sample* is the smallest piece of a
-sound ![image826.png](07-object-oriented-programming-with-sprites/assets/image826.png) <!--  style="width:1.96528in;height:0.25694in" alt="Macintosh HD:Users:bh:Desktop:sample-rate.png" / --> . It says here: that on my computer, 48,000 samples are recorded
+sound ![image826.png](images/07-object-oriented-programming-with-sprites/image826.png) <!--  style="width:1.96528in;height:0.25694in" alt="Macintosh HD:Users:bh:Desktop:sample-rate.png" / --> . It says here: that on my computer, 48,000 samples are recorded
 per second, so each sample\index{sample} is 1/48,000 of a second. The
 value of a sample is between -1 and 1, and represents the sound pressure
 on the microphone—how hard the air is pushing—at that instant. (You can
 skip the next page or so if you know about Fourier analysis.) Here’s a
 picture of 400 samples:
 
-![image827.png](07-object-oriented-programming-with-sprites/assets/image827.png) <!--  style="width:5.99931in;height:2.62014in" alt="Macintosh HD:Users:bh:Desktop:samples.png" / -->
+![image827.png](images/07-object-oriented-programming-with-sprites/image827.png) <!--  style="width:5.99931in;height:2.62014in" alt="Macintosh HD:Users:bh:Desktop:samples.png" / -->
 
 In this graph, the *x* axis represents the time at which each sample was
 measured; the *y* axis measures the value of the sample at that time.
@@ -639,7 +639,7 @@ Every periodic function (more or less, any sample that sounds like music
 rather than sounding like static) is composed of a sum of sine wave
 \index{sine wave} s of different frequencies.
 
-![image829.png](07-object-oriented-programming-with-sprites/assets/image829.png) <!--  style="width:2.78472in;height:1.04861in" alt="Macintosh HD:Users:bh:Desktop:sine.png" / -->
+![image829.png](images/07-object-oriented-programming-with-sprites/image829.png) <!--  style="width:2.78472in;height:1.04861in" alt="Macintosh HD:Users:bh:Desktop:sine.png" / -->
 
 Look back at the graph of our sampled sound. There is a green dot every
 seven samples. There’s nothing magic about the number seven; I tried
@@ -674,7 +674,7 @@ shrill-sounding note. But remember that a complex waveform is the sum of
 multiple sine waves at different frequency. Here’s a different
 up-and-down regularity:
 
-![image828.png](07-object-oriented-programming-with-sprites/assets/image828.png) <!--  style="width:2.79514in;height:1.22222in" alt="Macintosh HD:Users:bh:Desktop:red-sine.png" / -->
+![image828.png](images/07-object-oriented-programming-with-sprites/image828.png) <!--  style="width:2.79514in;height:1.22222in" alt="Macintosh HD:Users:bh:Desktop:red-sine.png" / -->
 
 It’s not obvious, but in
 the left part of the graph, the signal is more above the *x* axis than
@@ -693,7 +693,7 @@ but is best known for working out the nature of periodic functions as a
 sum of sine waves.) Luckily we don’t have to do the math; the <code>microphone ( )</code>
 block will do it for us, if we ask for <code>microphone (spectrum)</code>:
 
-![image830.png](07-object-oriented-programming-with-sprites/assets/image830.png) <!--  style="width:2.79514in;height:1.22222in" alt="Macintosh HD:Users:bh:Desktop:red-sine.png" / -->
+![image830.png](images/07-object-oriented-programming-with-sprites/image830.png) <!--  style="width:2.79514in;height:1.22222in" alt="Macintosh HD:Users:bh:Desktop:red-sine.png" / -->
 
 These are frequency spectra from (samples of) three different songs. The
 most obvious thing about these graphs is that their overall slope is
@@ -725,6 +725,6 @@ sound. But the <code>microphone ( )</code> block has other, simpler options also
 of the array in which data are collected (typically 512, must be a power
 of 2).
 
-The block for sounds that corresponds to <code>new picture</code> for pictures is ![image258.png](07-object-oriented-programming-with-sprites/assets/image258.png) <!--  style="width:2.91667in;height:0.28125in" alt="Macintosh HD:Users:bh:Desktop:new-sound.png" / -->
+The block for sounds that corresponds to <code>new picture</code> for pictures is ![image258.png](images/07-object-oriented-programming-with-sprites/image258.png) <!--  style="width:2.91667in;height:0.28125in" alt="Macintosh HD:Users:bh:Desktop:new-sound.png" / -->
 \index{new sound block}. Its first input is a list of samples, and its second input specifies how
 many samples occupy one second.

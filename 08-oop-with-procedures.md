@@ -20,7 +20,7 @@ build up to full implementations of class/instance and prototyping OOP.
 
 ## Local State with Script Variables
 
-![image852.png](08-oop-with-procedures/assets/image852.png) <!--  style="width:2.23958in;height:1.51042in" / -->
+![image852.png](images/08-oop-with-procedures/image852.png) <!--  style="width:2.23958in;height:1.51042in" / -->
 
 This script implements an
 object *class*, a type of object, namely the counter class
@@ -33,7 +33,7 @@ invoked, a counter instance increases and reports its count variable.
 Each counter has its own local count:\index{objects, building
 explicitly}
 
-![image851.png](08-oop-with-procedures/assets/image851.png){.image-4x} <!--  style="width:2.23958in;height:1.51042in" / -->
+![image851.png](images/08-oop-with-procedures/image851.png){.image-4x} <!--  style="width:2.23958in;height:1.51042in" / -->
 
 This example will repay careful study, because it isn’t obvious why each
 instance has a separate count. From the point of view of the <code>make a
@@ -60,7 +60,7 @@ above, there is only one method, and so there are no messages; you just
 call the instance to carry out its one method. Here is a more refined
 version that uses {index}`message passing` :
 
-![image853.png](08-oop-with-procedures/assets/image853.png) <!--  style="width:4.41667in;height:3.16667in" / -->
+![image853.png](images/08-oop-with-procedures/image853.png) <!--  style="width:4.41667in;height:3.16667in" / -->
 
 Again, the <code>make a counter</code> block represents the <var>counter</var> class, and again
 the script creates a local variable <var>count</var> each time it is invoked. The
@@ -75,7 +75,7 @@ version, calling the instance gives access to a method\index{method},
 which must then be called to finish the job. We can provide a block to
 do both procedure calls in one:
 
-![image854.png](08-oop-with-procedures/assets/image854.png){.image-4x} <!--  style="width:4.01042in;height:0.70772in" / -->
+![image854.png](images/08-oop-with-procedures/image854.png){.image-4x} <!--  style="width:4.01042in;height:0.70772in" / -->
 
 The <code>ask</code> block\index{ask block} has two required inputs: an object and a
 message. It also accepts optional additional inputs, which {.snap}`Snap` puts
@@ -89,7 +89,7 @@ that this is one of the rare cases in which we must unringify
 \index{unringify} the inner <code>call</code> block, whose *value when called* gives
 the method.
 
-![image855.png](08-oop-with-procedures/assets/image855.png) <!--  style="width:4.01042in;height:0.70772in" / -->
+![image855.png](images/08-oop-with-procedures/image855.png) <!--  style="width:4.01042in;height:0.70772in" / -->
 
 ## Inheritance via Delegation
 
@@ -100,7 +100,7 @@ of the {index}`child class` contains an instance of the
 {index}`parent class`, and simply passes on the messages it
 doesn’t want to specialize:
 
-![image857.png](08-oop-with-procedures/assets/image857.png) <!--  style="width:3.8125in;height:3.58333in" / -->
+![image857.png](images/08-oop-with-procedures/image857.png) <!--  style="width:3.8125in;height:3.58333in" / -->
 
 This script implements the <var>buzzer</var> class, which is a child of <var>counter</var>.
 Instead of having a <var>count</var> (a number) as a local state variable, each
@@ -141,16 +141,16 @@ corresponding *value.* We provide a lookup procedure to locate the
 key-value pair\index{key-value pair} corresponding to a given key in a
 given table.
 
-![image858.png](08-oop-with-procedures/assets/image858.png) <!--  style="width:3.21528in;height:2.36111in" / -->
-![image859.png](08-oop-with-procedures/assets/image859.png) <!--  style="width:2.625in;height:0.78125in" / -->
+![image858.png](images/08-oop-with-procedures/image858.png) <!--  style="width:3.21528in;height:2.36111in" / -->
+![image859.png](images/08-oop-with-procedures/image859.png) <!--  style="width:2.625in;height:0.78125in" / -->
 
-![image860.png](08-oop-with-procedures/assets/image860.png) <!--  style="width:5.60417in;height:1.15625in" / -->
-![image861.png](08-oop-with-procedures/assets/image861.png) <!--  style="width:5.60417in;height:1.15625in" / -->
+![image860.png](images/08-oop-with-procedures/image860.png) <!--  style="width:5.60417in;height:1.15625in" / -->
+![image861.png](images/08-oop-with-procedures/image861.png) <!--  style="width:5.60417in;height:1.15625in" / -->
 
 There are also commands to <code>insert</code> and <code>delete</code> entries:
 
-![image863.png](08-oop-with-procedures/assets/image863.png) <!--  style="width:3.22917in;height:2.12831in" / -->
-![image862.png](08-oop-with-procedures/assets/image862.png) <!--  style="width:3.71875in;height:1.82639in" / -->
+![image863.png](images/08-oop-with-procedures/image863.png) <!--  style="width:3.22917in;height:2.12831in" / -->
+![image862.png](images/08-oop-with-procedures/image862.png) <!--  style="width:3.71875in;height:1.82639in" / -->
 
 As in the class/instance version, an object is represented as a dispatch
 procedure\index{dispatch procedure} that takes a message as its input
@@ -183,21 +183,21 @@ and makes a child object. It should be considered as an internal part of
 the implementation; the preferred way to make a child of an object is to
 send that object a <var>clone</var> message.
 
-![image864.png](08-oop-with-procedures/assets/image864.png) <!--  style="width:4.375in;height:7.46944in" / -->
+![image864.png](images/08-oop-with-procedures/image864.png) <!--  style="width:4.375in;height:7.46944in" / -->
 
 Every
 object is created with predefined methods for <code>set, method, delete-var,
 delete-method, and clone</code>. It has one predefined variable, <var>parent</var>.
 Objects without a parent are created by calling <code>new object</code>:
 
-![image865.png](08-oop-with-procedures/assets/image865.png) <!--  style="width:1.57292in;height:0.6875in" / -->
+![image865.png](images/08-oop-with-procedures/image865.png) <!--  style="width:1.57292in;height:0.6875in" / -->
 
 As before, we provide procedures to call an object’s dispatch procedure
 and then call the method. But in this version, we provide the desired
 object as the ﬁrst method input. We provide one procedure for Command
 methods and one for Reporter methods:
 
-![image866.png](08-oop-with-procedures/assets/image866.png) <!--  style="width:1.57292in;height:0.6875in" / -->
+![image866.png](images/08-oop-with-procedures/image866.png) <!--  style="width:1.57292in;height:0.6875in" / -->
 
 (Remember that the <code>“Input list:”</code> variant of the <code>run</code> and <code>call</code> blocks is
 made by dragging the input expression over the arrowheads rather than
@@ -213,4 +213,4 @@ Running this script should <code>say</code> and <code>think</code> the following
 
 \[1 1\] \[2 2\] \[3 3\] \[4 4\] (1 5) (2 6) (3 7) \[5 8\] \[6 9\] \[7 10\] \[8 11\]
 
-![image870.png](08-oop-with-procedures/assets/image870.png) <!--  style="width:4.20833in;height:4.39583in" / -->
+![image870.png](images/08-oop-with-procedures/image870.png) <!--  style="width:4.20833in;height:4.39583in" / -->

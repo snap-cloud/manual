@@ -9,7 +9,7 @@ toc: true
 
 Prior to version 3, Scratch\index{Scratch} block inputs came in two types
 \index{data type} : [Text-or-number]{.mono} type and [Number]{.mono} type. The former is
-indicated by a rectangular box, the latter by a rounded box: ![image654.png](05-typed-inputs/assets/image654.png){.image-inline}. A third
+indicated by a rectangular box, the latter by a rounded box: ![image654.png](images/05-typed-inputs/image654.png){.image-inline}. A third
 Scratch type, [Boolean]{.mono} (true/false), can be used in certain [Control]{.mono}
 blocks with hexagonal slots.
 
@@ -24,12 +24,12 @@ In the {index}`Block Editor` input name dialog\index{input
 name dialog}, there is a right-facing arrowhead after the "`Input name`"
 option:
 
-![image692.png](05-typed-inputs/assets/image692.png)
+![image692.png](images/05-typed-inputs/image692.png)
 
 Clicking that arrowhead opens the “long” input name dialog\index{long
 input name dialog} :
 
-![image657.png](05-typed-inputs/assets/image657.png)
+![image657.png](images/05-typed-inputs/image657.png)
 
 There are twelve input type shapes\index{input-type shapes}, plus
 three mutually exclusive modifiers, listed in addition to the basic choice between title text and
@@ -45,7 +45,7 @@ each row of types is a category, and parts of each column form a
 category. Understanding the arrangement will make it a little easier to
 find the type you want.
 
-![image659.png](05-typed-inputs/assets/image659.png) <!--  style="width:6.82222in;height:2.75694in" / -->
+![image659.png](images/05-typed-inputs/image659.png) <!--  style="width:6.82222in;height:2.75694in" / -->
 
 The second row of input types
 contains the ones found in Scratch: [Number]{.mono}, [Any]{.mono}, and [Boolean]{.mono}. (The
@@ -100,7 +100,7 @@ this isn’t quite right for the C-shaped command input type, since
 commands don’t report values. But you’ll see
 later that it’s true in spirit.)
 
-![image660.png](05-typed-inputs/assets/image660.png) <!--  style="width:3.64583in;height:3.11389in" / -->
+![image660.png](images/05-typed-inputs/image660.png) <!--  style="width:3.64583in;height:3.11389in" / -->
 
 ### Pulldown inputs
 
@@ -108,20 +108,20 @@ Certain primitive blocks have *pulldown* inputs\index{pulldown input},
 either *read-only*\index{read-only pulldown input} *,* like the input
 to the <code>is ( ) touching</code> block:
 
-![image661.png](05-typed-inputs/assets/image661.png) <!--  style="width:1.68056in;height:0.94097in" / -->
+![image661.png](images/05-typed-inputs/image661.png) <!--  style="width:1.68056in;height:0.94097in" / -->
 
 (indicated by the input slot being the same (cyan, in this case) color as the body of the block), or *writeable*\index{writeable pulldown inputs}, like the input to the <code>point in direction ( )</code> block:
 
-![image662.png](05-typed-inputs/assets/image662.png) <!--  style="width:1.90208in;height:1.32292in" / -->
+![image662.png](images/05-typed-inputs/image662.png) <!--  style="width:1.90208in;height:1.32292in" / -->
 
 (indicated by the white input slot), which means that the user can type
 in an arbitrary input instead of using the pulldown menu.
 
-![image663.png](05-typed-inputs/assets/image663.png) <!--  style="width:0.83264in;height:0.65278in" / -->
+![image663.png](images/05-typed-inputs/image663.png) <!--  style="width:0.83264in;height:0.65278in" / -->
 
 Custom blocks can
 also have such inputs. To make a pulldown input, open the long form
-input dialog, choose a text type ([Any]{.mono}, [Text]{.mono}, or [Number]{.mono}) and click the ![image658.png](05-typed-inputs/assets/image658.png) <!--  style="width:0.13194in;height:0.13194in" alt="Macintosh HD:Users:bh:Desktop:gear-part.png" / -->
+input dialog, choose a text type ([Any]{.mono}, [Text]{.mono}, or [Number]{.mono}) and click the ![image658.png](images/05-typed-inputs/image658.png) <!--  style="width:0.13194in;height:0.13194in" alt="Macintosh HD:Users:bh:Desktop:gear-part.png" / -->
 icon in the bottom right corner, or [control/right-click]{.mono} in the dialog.
 You will see this menu:
 
@@ -129,7 +129,7 @@ Click
 the "`read-only`" checkbox if you want a read-only pulldown input. Then from
 the same menu, choose "`options…`" to get this dialog box:
 
-![image664.png](05-typed-inputs/assets/image664.png) <!--  style="width:3.07639in;height:1.875in" / -->
+![image664.png](images/05-typed-inputs/image664.png) <!--  style="width:3.07639in;height:1.875in" / -->
 
 Each line in the text box represents one menu item. If the line does not
 contain any of the characters "`=`", "`~`", or "`{}`" then the text is both what’s shown in
@@ -154,7 +154,7 @@ hovering the mouse over it displays the submenu next to the original
 menu. A line containing a close brace "`}`" ends the submenu; nothing else
 should be on that line. Submenus may be nested to arbitrary depth.
 
-![image693.png](05-typed-inputs/assets/image693.png) <!--  style="width:3.07639in;height:1.875in" / -->
+![image693.png](images/05-typed-inputs/image693.png) <!--  style="width:3.07639in;height:1.875in" / -->
 
 Alternatively, instead of giving a menu listing as described above, you
 can put a JavaScript function that returns the desired menu in the
@@ -171,15 +171,15 @@ text or "`code`"
 for monospace-font computer code.
 
  If the
-input type is something other than text, then clicking the ![image670.png](05-typed-inputs/assets/image670.png){.image-inline} <!--  style="width:0.13056in;height:0.1375in" alt="Macintosh HD:Users:bh:Desktop:quarter-gear.png" / --> button will
+input type is something other than text, then clicking the ![image670.png](images/05-typed-inputs/image670.png){.image-inline} <!--  style="width:0.13056in;height:0.1375in" alt="Macintosh HD:Users:bh:Desktop:quarter-gear.png" / --> button will
 instead show this menu:
 
-![image669.png](05-typed-inputs/assets/image669.png) <!--  style="width:0.60417in;height:0.31944in" alt="Macintosh HD:Users:bh:Desktop:little-options.png" / -->
+![image669.png](images/05-typed-inputs/image669.png) <!--  style="width:0.60417in;height:0.31944in" alt="Macintosh HD:Users:bh:Desktop:little-options.png" / -->
 
-As an example, we want to make this block: ![image671.png](05-typed-inputs/assets/image671.png){.image-inline} <!--  style="width:0.60417in;height:0.31944in" alt="Macintosh HD:Users:bh:Desktop:little-options.png" / -->  The second input must be a
+As an example, we want to make this block: ![image671.png](images/05-typed-inputs/image671.png){.image-inline} <!--  style="width:0.60417in;height:0.31944in" alt="Macintosh HD:Users:bh:Desktop:little-options.png" / -->  The second input must be a
 read-only object menu:
 
-![image694.png](05-typed-inputs/assets/image694.png){.image-4x} <!--  style="width:0.60417in;height:0.31944in" alt="Macintosh HD:Users:bh:Desktop:little-options.png" / -->
+![image694.png](images/05-typed-inputs/image694.png){.image-4x} <!--  style="width:0.60417in;height:0.31944in" alt="Macintosh HD:Users:bh:Desktop:little-options.png" / -->
 
 
 
@@ -198,9 +198,9 @@ slot in the palette, like the “10” in the <code>move (10) steps block</code>
 prototype block at the top of the script in the Block editor, an an input with
 name “size” and default value 10 looks like this:
 
-![image678.png](05-typed-inputs/assets/image678.png) <!--  style="width:1.63889in;height:0.52083in" alt="Macintosh HD:Users:bh:Desktop:default-value.png" / -->
+![image678.png](images/05-typed-inputs/image678.png) <!--  style="width:1.63889in;height:0.52083in" alt="Macintosh HD:Users:bh:Desktop:default-value.png" / -->
 
-![image679.png](05-typed-inputs/assets/image679.png) <!--  style="width:1.76389in;height:0.93056in" / -->
+![image679.png](images/05-typed-inputs/image679.png) <!--  style="width:1.76389in;height:0.93056in" / -->
 
 The "`Multiple inputs`" option:
 The <code>list</code> block introduced earlier accepts any number of inputs to
@@ -228,7 +228,7 @@ than as an input slot. Here’s an example; the uparrow (**↑**)
 internal variable name:
 
 <!-- Referred to at the top of chapter 6. -->
-![Definition of `my for` block and the block created.](05-typed-inputs/assets/image695.png)
+![Definition of `my for` block and the block created.](images/05-typed-inputs/image695.png)
 
 The variable <var>i</var> (in the block on the right above) can be dragged from the
 {index}`for block` into the blocks used in its C-shaped command
@@ -249,7 +249,7 @@ We have mentioned three notations that can appear in an input slot in
 the prototype to remind you of what kind of input this is. Here is the
 complete list of such notations:
 
-![image685.png](05-typed-inputs/assets/image685.png) <!--  style="width:0.73472in;height:6.11806in" / -->
+![image685.png](images/05-typed-inputs/image685.png) <!--  style="width:0.73472in;height:6.11806in" / -->
 
 - = default value
 - … multiple input
@@ -259,38 +259,38 @@ complete list of such notations:
 - ⫶ list
 - ? Boolean
 - ¶ multi-line text
-- ![image686.png](05-typed-inputs/assets/image686.png) <!--  style="width:0.16319in;height:0.13542in" / --> object
+- ![image686.png](images/05-typed-inputs/image686.png) <!--  style="width:0.16319in;height:0.13542in" / --> object
 
 ### Title Text and Symbols
 
 Some primitive blocks have
-symbols\index{icons in title text} as part of the block name: ![image687.png](05-typed-inputs/assets/image687.png){.image-inline} <!--  style="width:1.21875in;height:0.23472in" / -->. Custom
+symbols\index{icons in title text} as part of the block name: ![image687.png](images/05-typed-inputs/image687.png){.image-inline} <!--  style="width:1.21875in;height:0.23472in" / -->. Custom
 blocks can use symbols too. In the Block Editor, click the plus sign in
 the prototype at the point where you want to insert the symbol. Then
 click the "`title text`" picture below the text box that’s expecting an
 input slot name. The dialog will then change to look like this:
 
- ![image689.png](05-typed-inputs/assets/image689.png) <!--  style="width:2.03472in;height:1.26389in" / -->
+ ![image689.png](images/05-typed-inputs/image689.png) <!--  style="width:2.03472in;height:1.26389in" / -->
 
 The important part to notice
 is the arrowhead that has appeared at the right end of the text box.
 Click it to see the menu shown here at the left.
 
-Choose one of the symbols. The result will have the symbol you want: ![image688.png](05-typed-inputs/assets/image688.png){.image-inline}. The
+Choose one of the symbols. The result will have the symbol you want: ![image688.png](images/05-typed-inputs/image688.png){.image-inline}. The
 available symbols are, pretty much, the ones that are used in {.snap}`Snap`
 icons.
 
  But I’d like the arrow symbol
 bigger, and yellow, so I edit its name:
 
-![image690.png](05-typed-inputs/assets/image690.png) <!--  style="width:2.03472in;height:1.26389in" / -->
+![image690.png](images/05-typed-inputs/image690.png) <!--  style="width:2.03472in;height:1.26389in" / -->
 
  This makes the symbol 1.5
 times as big as the letters in the block text, using a color with
 red-green-blue values of 255-255-150 (each between 0 and 255). Here’s
 the result:
 
-![image691.png](05-typed-inputs/assets/image691.png) <!--  style="width:1.19792in;height:0.27083in" / -->
+![image691.png](images/05-typed-inputs/image691.png) <!--  style="width:1.19792in;height:0.27083in" / -->
 
 The size and color controls can also be used with text: <code>$foo-8-255-120-0</code>
 will make a huge orange <code>foo</code>.

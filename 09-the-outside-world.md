@@ -32,7 +32,7 @@ Web page is typically a very long text string, and so the primitive
 manageable form, namely, as a list of lines:
 
 <!-- TODO: Shrink an image like this in the PDF so more stuff fits on the previous page... -->
-![image871.png](09-the-outside-world/assets/image871.png)
+![image871.png](images/09-the-outside-world/image871.png)
 
 The second input to split is the character to be used to separate the
 text string into a list of lines, or one of a set of common cases (such
@@ -94,10 +94,10 @@ out the current date or time\index{current date or time}. Each call to
 this block reports one component of the date\index{date} or time
 \index{time}, so you will probably combine several calls, like this:
 
-![image872.png](09-the-outside-world/assets/image872.png) <!--  style="width:5.30556in;height:0.31944in" alt="Macintosh HD:Users:bh:Desktop:date.png" / -->
+![image872.png](images/09-the-outside-world/image872.png) <!--  style="width:5.30556in;height:0.31944in" alt="Macintosh HD:Users:bh:Desktop:date.png" / -->
 
 for Americans, or like this:
 
-![image873.png](09-the-outside-world/assets/image873.png) <!--  style="width:5.30556in;height:0.31944in" alt="Macintosh HD:Users:bh:Desktop:European-date.png" / -->
+![image873.png](images/09-the-outside-world/image873.png) <!--  style="width:5.30556in;height:0.31944in" alt="Macintosh HD:Users:bh:Desktop:European-date.png" / -->
 
 for Europeans.

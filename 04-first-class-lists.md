@@ -41,7 +41,7 @@ that’s ﬁrst class, not an individual value. Don’t think, for example,
 that some lists are ﬁrst class, while others aren’t. In Snap*!*, lists
 are ﬁrst class, period.
 
-![image523.png](04-first-class-lists/assets/image523.png) <!--  style="width:2.83958in;height:0.41597in" / -->
+![image523.png](images/04-first-class-lists/image523.png) <!--  style="width:2.83958in;height:0.41597in" / -->
 
 ##  The `list` Block
 
@@ -50,7 +50,7 @@ At the heart of providing first class lists is the ability to make an
 simultaneously giving it a name. The `list` reporter block \index{`list`
 block} does that.
 
-![image628.png](04-first-class-lists/assets/image628.png){.image-4x} <!--  style="width:2.83958in;height:0.41597in" / -->
+![image628.png](images/04-first-class-lists/image628.png){.image-4x} <!--  style="width:2.83958in;height:0.41597in" / -->
 
 At the right end of the block are two left-and-right arrowheads
 \index{arrowheads}. Clicking on these changes the number of inputs to
@@ -60,7 +60,7 @@ Shift-clicking changes by three at a time.
 You can use this block as
 input to many other blocks:
 
-![image629.png](04-first-class-lists/assets/image629.png) <!--  style="width:2.83958in;height:0.41597in" / -->
+![image629.png](images/04-first-class-lists/image629.png) <!--  style="width:2.83958in;height:0.41597in" / -->
 
 Snap*!* does not have a “`Make
 a list`” button like the one in Scratch \index{Scratch}. If you want a
@@ -73,7 +73,7 @@ Lists can be inserted as
 elements in larger lists. We can easily create ad hoc structures as
 needed:
 
-![image538.png](04-first-class-lists/assets/image538.png) <!--  style="width:5.88889in;height:1.04861in" / -->
+![image538.png](images/04-first-class-lists/image538.png) <!--  style="width:5.88889in;height:1.04861in" / -->
 
 Notice that this list is presented in a different format from the “She
 Loves You” list above. A two-dimensional list is called a *table* and is
@@ -90,7 +90,7 @@ tree\index{binary tree}s with selectors that check for input of the
 correct data type; only one selector is shown but the ones for left and
 right children are analogous.
 
-![image630.png](04-first-class-lists/assets/image630.png) <!--  style="width:5.88889in;height:1.04861in" / -->
+![image630.png](images/04-first-class-lists/image630.png) <!--  style="width:5.88889in;height:1.04861in" / -->
 
 ##  Functional and Imperative List Programming
 
@@ -99,7 +99,7 @@ There are two ways to create a list inside a program. Scratch
 style\index{imperative programming style}, which is based on a set of
 command blocks that modify a list:
 
-![image631.png](04-first-class-lists/assets/image631.png){.image-4x} <!--  style="width:5.88889in;height:1.04861in" / -->
+![image631.png](images/04-first-class-lists/image631.png){.image-4x} <!--  style="width:5.88889in;height:1.04861in" / -->
 
 As an example, here are two blocks that take a list of numbers as input,
 and report a new list containing only the even numbers from the original
@@ -107,7 +107,7 @@ list:[^primitives]
 
 [^primitives]: Note to users of earlier versions: From the beginning, there has been a tension in our work between the desire to provide tools such as `for` (used in this example) and the higher order functions introduced on the next page as primitives, to be used as easily as other primitives, and the desire to show how readily such tools can be implemented in Snap! itself. This is one instance of our general pedagogic understanding that learners should both use abstractions and be permitted to see beneath the abstraction barrier. Until version 5.0, we used the uneasy compromise of a library of tools written in Snap! and easily, but not easily enough, loaded into a project. By not loading the tools, users or teachers could explore how to program them. In 5.0 we made them true primitives, partly because that’s what some of us wanted all along and partly because of the increasing importance of fast performance as we explore “big data” and media computation. In version 10.0 we introduced “hybrid” primitives, implemented in high speed Javascript but with an “Edit” option that will open, not the primitive implementation, but the version written in Snap*!*. This gives us editable primitives without dramatically slowing users’ projects.
 
-![image632.png](04-first-class-lists/assets/image632.png) <!--  style="width:5.88889in;height:1.04861in" / -->
+![image632.png](images/04-first-class-lists/image632.png) <!--  style="width:5.88889in;height:1.04861in" / -->
 
 In these scripts, we first create a temporary variable, then put an empty
 list in it, then go through the items of the input list using the `add
@@ -127,7 +127,7 @@ programming style} is sometimes a simpler and more effective technique,
 especially when dealing with recursively defined data structures. It
 uses reporter blocks, not command blocks, to build up a list value:
 
-![image633.png](04-first-class-lists/assets/image633.png){.image-4x} <!--  style="width:5.88889in;height:1.04861in" / -->
+![image633.png](images/04-first-class-lists/image633.png){.image-4x} <!--  style="width:5.88889in;height:1.04861in" / -->
 
 In a functional program, we often use recursion to construct a list, one
 item at a time. The `in front of` block \index{`in front of` block} makes a
@@ -137,7 +137,7 @@ by dividing it into its first item (`item 1 of`\index{`item 1 of` block})
 and all the rest of the items (`all but first of`\index{`all but first of`
 block}), which are handled through a recursive call:
 
-![image555.png](04-first-class-lists/assets/image555.png) <!--  style="width:4.75in;height:2.24097in" / -->
+![image555.png](images/04-first-class-lists/image555.png) <!--  style="width:4.75in;height:2.24097in" / -->
 
 Snap*!*
 uses two different internal representations of lists, one (dynamic
@@ -157,7 +157,7 @@ way.
 
 There’s an even easier way to select the even numbers from a list:
 
-![image556.png](04-first-class-lists/assets/image556.png)
+![image556.png](images/04-first-class-lists/image556.png)
 
 The `keep` block takes a Predicate expression as its first input, and a list
 as its second input. It reports a list containing those elements of the
@@ -169,14 +169,14 @@ predicate. (The empty input is supposed to remind you of the “box”
 notation for variables in elementary school: 🔳+3=7.) The grey ring is
 part of the `keep` block as it appears in the palette:
 
-![image557.png](04-first-class-lists/assets/image557.png) <!--  style="width:2.375in;height:0.27778in" / -->
+![image557.png](images/04-first-class-lists/image557.png) <!--  style="width:2.375in;height:0.27778in" / -->
 
 What the ring means is that this input is a block (a predicate block, in
 this case, because the interior of the ring is a hexagon), rather than
 the value reported by that block. Here’s the difference:
 
 <!-- TODO: this image is squished in its origianl form. -->
-![image634.png](04-first-class-lists/assets/image634.png)
+![image634.png](images/04-first-class-lists/image634.png)
 
 Evaluating the `=` block without a ring reports `true` or `false`; evaluating
 the block *with* a ring reports the block itself. This allows `keep` to
@@ -185,20 +185,20 @@ that takes another block as input is called a *higher order* block (or
 higher order procedure, or higher order function\index{higher order
 function}).
 
-![image635.png](04-first-class-lists/assets/image635.png) <!--  style="width:2.375in;height:0.27778in" / -->
+![image635.png](images/04-first-class-lists/image635.png) <!--  style="width:2.375in;height:0.27778in" / -->
 
 
 Snap*!* provides four higher order function blocks for operating on
 lists:
 
-![image636.png](04-first-class-lists/assets/image636.png){.image-4x}
+![image636.png](images/04-first-class-lists/image636.png){.image-4x}
 
 ### The `map` block {#sec-map}
 
 You’ve already seen `keep`. `Find first` is
 \index{`find first` block} similar, but it reports just the first item that
 satisfies the predicate, not a list of all the matching items. It’s
-equivalent to ![image562.png](04-first-class-lists/assets/image562.png) but faster because it
+equivalent to ![image562.png](images/04-first-class-lists/image562.png) but faster because it
 stops looking as soon as it finds a match. If there are no matching
 items, it returns an empty string.
 
@@ -207,13 +207,13 @@ reports a new list in which each item is the value reported by the
 Reporter block as applied to one item from the input list. That’s a
 mouthful, but an example will make its meaning clear:
 
-![image637.png](04-first-class-lists/assets/image637.png)
+![image637.png](images/04-first-class-lists/image637.png)
 
 By the way, we’ve been using arithmetic examples, but the list items can
 be of any type, and any reporter can be used. We’ll make the plurals of
 some words:
 
-![image638.png](04-first-class-lists/assets/image638.png) <!--  style="width:2.375in;height:0.27778in" / -->
+![image638.png](images/04-first-class-lists/image638.png) <!--  style="width:2.375in;height:0.27778in" / -->
 
 These examples use small lists, to fit the page, but the higher order
 blocks work for any size list.
@@ -226,7 +226,7 @@ lists, the result is a new toplevel list whose items are the same
 \index{shallow copy of a list}. To make a deep copy of a list
 \index{deep copy of a list} (that is, one in which all the sublists,
 sublists of sublists, etc. are copied), use the list as input to the
-![image576.png](04-first-class-lists/assets/image576.png){.image-4x} <!--  style="width:0.74306in;height:0.19444in" alt="Macintosh HD:Users:bh:Desktop:id.png" / -->  block (one of the variants
+![image576.png](images/04-first-class-lists/image576.png){.image-4x} <!--  style="width:0.74306in;height:0.19444in" alt="Macintosh HD:Users:bh:Desktop:id.png" / -->  block (one of the variants
 of the `sqrt of` block). This works because `id of`\index{`id of` block} is a [hyperblock](#hyperblocks).
 
 The third higher order block, `combine`\index{`combine` block}, computes a
@@ -234,15 +234,15 @@ single result from *all* the items of a list, using a *two-input*
 reporter as its second input. In practice, there are only a few blocks
 you’ll ever use with `combine`:
 
-![image639.png](04-first-class-lists/assets/image639.png) <!--  style="width:2.375in;height:0.27778in" / -->
+![image639.png](images/04-first-class-lists/image639.png) <!--  style="width:2.375in;height:0.27778in" / -->
 
 These blocks take the sum of the list items, take their product, string
 them into one word, combine them into a sentence (with spaces between
 items), see if all items of a list of Booleans are true, see if any of
 the items is true, find the smallest, or find the largest.
 
-![image586.png](04-first-class-lists/assets/image586.png) <!--  style="width:3.86806in;height:0.34514in" / -->
-![image585.png](04-first-class-lists/assets/image585.png) <!--  style="width:6.27917in;height:0.37569in" alt="Macintosh HD:Users:bh:Desktop:comma-list.png" / -->
+![image586.png](images/04-first-class-lists/image586.png) <!--  style="width:3.86806in;height:0.34514in" / -->
+![image585.png](images/04-first-class-lists/image585.png) <!--  style="width:6.27917in;height:0.37569in" alt="Macintosh HD:Users:bh:Desktop:comma-list.png" / -->
 
 Why `+` but not `−`? It only
 makes sense to combine list items using an *associative*
@@ -260,7 +260,7 @@ item’s value (as usual), the item’s position in the input list (its
 index), and the entire input list. No more than three input names can be
 used in this context.
 
-![image587.png](04-first-class-lists/assets/image587.png) <!--  style="width:5.80833in;height:1.19097in" / -->
+![image587.png](images/04-first-class-lists/image587.png) <!--  style="width:5.80833in;height:1.19097in" / -->
 
 
 ## {index}`Table View`  vs. {index}`List View`
@@ -269,7 +269,7 @@ We mentioned earlier that there are two ways of representing lists
 visually. For one-dimensional lists (lists whose items are not
 themselves lists) the visual differences are small:
 
-![image640.png](04-first-class-lists/assets/image640.png){.image-4x} <!--  style="width:2.375in;height:0.27778in" / -->
+![image640.png](images/04-first-class-lists/image640.png){.image-4x} <!--  style="width:2.375in;height:0.27778in" / -->
 
 For one-dimensional lists, it’s not really the appearance that’s
 important. What matters is that the *list view* allows very versatile
@@ -285,7 +285,7 @@ slow. As a partial workaround, the list view can only contain 100 items
 at a time; the downward-pointing arrowhead opens a menu in which you can
 choose which 100 to display.
 
-![image641.png](04-first-class-lists/assets/image641.png){.image-4x} <!--  style="width:2.375in;height:0.27778in" / -->
+![image641.png](images/04-first-class-lists/image641.png){.image-4x} <!--  style="width:2.375in;height:0.27778in" / -->
 
 By contrast, because it doesn’t allow direct editing, the *table view*
 watcher can hold hundreds of thousands of items and still scroll through
@@ -308,7 +308,7 @@ the list has more than 100 items, or if any of the first ten items of
 the list are lists, in which case it makes a very different-looking
 two-dimensional picture:
 
-![image538.png](04-first-class-lists/assets/image538.png) <!--  style="width:5.88889in;height:1.04861in" / -->
+![image538.png](images/04-first-class-lists/image538.png) <!--  style="width:5.88889in;height:1.04861in" / -->
 
 In this format, the column of red items has been replaced by a
 spreadsheet-looking display. For short, wide lists, this display makes
@@ -360,20 +360,20 @@ able to find out a column number by hovering over its letter.
  Any value that can appear in
 a program can be displayed in a table cell:
 
-![image596.png](04-first-class-lists/assets/image596.png) <!--  style="width:3.81736in;height:0.81111in" / -->
+![image596.png](images/04-first-class-lists/image596.png) <!--  style="width:3.81736in;height:0.81111in" / -->
 
 This display shows that the standard cell dimensions may not be enough
 for large value images. By expanding the entire speech balloon and then
 the second column and all the rows, we can make the result fit:
 
-![image642.png](04-first-class-lists/assets/image642.png) <!--  style="width:3.34097in;height:0.57708in" / -->
+![image642.png](images/04-first-class-lists/image642.png) <!--  style="width:3.34097in;height:0.57708in" / -->
 
  But we make an exception for
 cases in which the value in a cell is a list (so that the entire table
 is three-dimensional). Because lists are visually very big, we don’t try
 to fit the entire value in a cell:
 
-![image601.png](04-first-class-lists/assets/image601.png) <!--  style="width:3.34097in;height:0.57708in" / -->
+![image601.png](images/04-first-class-lists/image601.png) <!--  style="width:3.34097in;height:0.57708in" / -->
 
 Even if you expand the size of the cells, Snap*!* will not display
 sublists of sublists in table view. There are two ways to see these
@@ -386,7 +386,7 @@ item of a list is a list (so table view is used), but a later item
 *isn’t* a list, that later item will be displayed on a red background,
 like an item of a single-column list:
 
-![image602.png](04-first-class-lists/assets/image602.png) <!--  style="width:3.35417in;height:0.69444in" / -->
+![image602.png](images/04-first-class-lists/image602.png) <!--  style="width:3.35417in;height:0.69444in" / -->
 
 So, in particular, if only the first item is a list, the display will
 look almost like a one-column display.
@@ -413,15 +413,15 @@ Here’s what the corresponding table looks like:
 
 <!-- This image needs work. It shouldn't include the csv in text form, and the two views of the list should be captioned. Ideally this would be two separate captioned pictures on the same line. bh -->
 
-<!-- ![image643.png](04-first-class-lists/assets/image643.png)  style="width:3.35417in;height:0.69444in" / -->
+<!-- ![image643.png](images/04-first-class-lists/image643.png)  style="width:3.35417in;height:0.69444in" / -->
 
-![table view](04-first-class-lists/assets/table-view.png)
-![list view](04-first-class-lists/assets/list-view.png)
+![table view](images/04-first-class-lists/table-view.png)
+![list view](images/04-first-class-lists/list-view.png)
 
 Here’s how to read a spreadsheet into Snap*!*:
 
 1. Make a variable
-with a watcher on stage: ![image607.png](04-first-class-lists/assets/image607.png) <!-- style="width:1.20833in;height:0.27083in" alt="Macintosh HD:Users:bh:Desktop:pix:watcher.png" -->
+with a watcher on stage: ![image607.png](images/04-first-class-lists/image607.png) <!-- style="width:1.20833in;height:0.27083in" alt="Macintosh HD:Users:bh:Desktop:pix:watcher.png" -->
 
 <!-- The background of this picture should be transparent, not white. bh  -->
 
@@ -454,7 +454,7 @@ lists. If you have a list of lists of lists, Snap*!* will instead export
 your list as a JSON (JavaScript Object Notation) file\index{JSON
 (JavaScript Object Notation) file} . I modified my list:
 
-![image608.png](04-first-class-lists/assets/image608.png) <!--  style="width:6.33333in;height:0.44792in" / -->
+![image608.png](images/04-first-class-lists/image608.png) <!--  style="width:6.33333in;height:0.44792in" / -->
 
 and then exported again,
 getting this file:
@@ -482,33 +482,33 @@ most scalar function blocks is extended to multi-dimensional
 \index{list, multi-dimensional} lists, with the underlying scalar
 function applied termwise:
 
-![image610.png](04-first-class-lists/assets/image610.png) <!--  style="width:3.34028in;height:0.91667in" alt="Macintosh HD:Users:bh:Desktop:vector-vector.png" / -->  ![image609.png](04-first-class-lists/assets/image609.png) <!--  style="width:2.5625in;height:0.91667in" alt="Macintosh HD:Users:bh:Desktop:vector-monadic.png" / -->  ![image611.png](04-first-class-lists/assets/image611.png) <!--  style="width:4.94444in;height:0.69444in" alt="Macintosh HD:Users:bh:Desktop:matrix-matrix.png" / -->
+![image610.png](images/04-first-class-lists/image610.png) <!--  style="width:3.34028in;height:0.91667in" alt="Macintosh HD:Users:bh:Desktop:vector-vector.png" / -->  ![image609.png](images/04-first-class-lists/image609.png) <!--  style="width:2.5625in;height:0.91667in" alt="Macintosh HD:Users:bh:Desktop:vector-monadic.png" / -->  ![image611.png](images/04-first-class-lists/image611.png) <!--  style="width:4.94444in;height:0.69444in" alt="Macintosh HD:Users:bh:Desktop:matrix-matrix.png" / -->
 
 Mathematicians, note in the last example above that the result is just a termwise
 application of the underlying function (7×3, 8×5, etc.), *not* matrix
 multiplication. See @sec-appendix-b-apl for that. For a dyadic (two-input) function, if the lengths don’t agree, the length of the result (in each
 dimension) is the length of the shorter input:
 
-![image612.png](04-first-class-lists/assets/image612.png) <!--  style="width:5.74306in;height:0.69444in" alt="Macintosh HD:Users:bh:Desktop:matrix-ragged.png" / -->
+![image612.png](images/04-first-class-lists/image612.png) <!--  style="width:5.74306in;height:0.69444in" alt="Macintosh HD:Users:bh:Desktop:matrix-ragged.png" / -->
 
 However, if
 the *number of dimensions* differs in the two inputs, then the number of
 dimensions in the result agrees with the *higher-*dimensional input; the
 lower-dimensional one is used repeatedly in the missing dimension(s):
 
-![image613.png](04-first-class-lists/assets/image613.png) <!--  style="width:6.79167in;height:0.86806in" alt="Macintosh HD:Users:bh:Desktop:missing-dimension.png" / -->
+![image613.png](images/04-first-class-lists/image613.png) <!--  style="width:6.79167in;height:0.86806in" alt="Macintosh HD:Users:bh:Desktop:missing-dimension.png" / -->
 
 (7×6, 8×10, 1×20, *40*×*6*, *20*×*10*, etc.). In particular, a *scalar*
 input is paired with every scalar in the other input:
 
-![image644.png](04-first-class-lists/assets/image644.png) <!--  style="width:7.48333in;height:0.63125in" alt="Macintosh HD:Users:bh:Desktop:vector-alonzo.png" / -->
+![image644.png](images/04-first-class-lists/image644.png) <!--  style="width:7.48333in;height:0.63125in" alt="Macintosh HD:Users:bh:Desktop:vector-alonzo.png" / -->
 
 One important
 motivation for this feature is how it simplifies and speeds up media
 computation\index{media computation}, as in this shifting of the
 Alonzo\index{Alonzo} costume to be bluer:
 
-![image614.png](04-first-class-lists/assets/image614.png) <!--  style="width:7.48333in;height:0.63125in" alt="Macintosh HD:Users:bh:Desktop:vector-alonzo.png" / -->
+![image614.png](images/04-first-class-lists/image614.png) <!--  style="width:7.48333in;height:0.63125in" alt="Macintosh HD:Users:bh:Desktop:vector-alonzo.png" / -->
 
 
 
@@ -517,7 +517,7 @@ pixel of the result has ¾ of its original red and green, and three times
 its original blue (with its transparency unchanged). By putting some
 sliders on the stage, you can play with colors dynamically:
 
-![image620.png](04-first-class-lists/assets/image620.png) <!--  style="width:5.19444in;height:1.04861in" alt="Graphical user interface, application Description automatically generated" / -->![image619.png](04-first-class-lists/assets/image619.png) <!--  style="width:1.6875in;height:1.04861in" alt="Macintosh HD:Users:bh:Desktop:Screen Shot 2020-06-13 at 9.25.32 PM.png" / -->
+![image620.png](images/04-first-class-lists/image620.png) <!--  style="width:5.19444in;height:1.04861in" alt="Graphical user interface, application Description automatically generated" / -->![image619.png](images/04-first-class-lists/image619.png) <!--  style="width:1.6875in;height:1.04861in" alt="Macintosh HD:Users:bh:Desktop:Screen Shot 2020-06-13 at 9.25.32 PM.png" / -->
 
 
 
@@ -529,10 +529,10 @@ always reporting a single Boolean result), `and` and `or` (because they
 don’t evaluate their second input at all if the first input determines
 the result), `join` (because it converts non-scalar (and other non-text)
 inputs to text string form), and `is a (type)` (because it applies to its
-input as a whole). Blocks whose inputs are “natively” lists, such as ![image193.png](04-first-class-lists/assets/image193.png){.image-4x .image-inline} <!--  style="width:0.88958in;height:0.2in" / --> and
-![image621.png](04-first-class-lists/assets/image621.png) <!--  style="width:1.02986in;height:0.18958in" --> , are never hyperblocks.
+input as a whole). Blocks whose inputs are “natively” lists, such as ![image193.png](images/04-first-class-lists/image193.png){.image-4x .image-inline} <!--  style="width:0.88958in;height:0.2in" / --> and
+![image621.png](images/04-first-class-lists/image621.png) <!--  style="width:1.02986in;height:0.18958in" --> , are never hyperblocks.
 
-![image205.png](04-first-class-lists/assets/image205.png){.image-inline} <!--  style="width:2.09917in;height:0.2475in" alt="Application Description automatically generated with low confidence" / --> The
+![image205.png](images/04-first-class-lists/image205.png){.image-inline} <!--  style="width:2.09917in;height:0.2475in" alt="Application Description automatically generated with low confidence" / --> The
 `reshape` block\index{`reshape` block} takes a list (of any depth) as its
 first input, and then takes zero or more sizes along the dimensions of
 an array. In the example it will report a table (a matrix) of four rows
@@ -543,16 +543,16 @@ block starts again at the head of the list, using values more than once.
 If more values are provided than needed, the extras are ignored; this
 isn’t an error.
 
-![image203.png](04-first-class-lists/assets/image203.png){.image-inline} <!--  style="width:1.76in;height:0.2in" / -->  The
+![image203.png](images/04-first-class-lists/image203.png){.image-inline} <!--  style="width:1.76in;height:0.2in" / -->  The
 `combinations` block takes any number of lists as input; it reports a list
 in which each item is a list whose length is the number of inputs; item
 *i* of a sublist is an item of input *i.* Every possible combination of
 items of the inputs is included, so the length of the reported list is
 the product of the lengths of the inputs.
 
-![image622.png](04-first-class-lists/assets/image622.png) <!--  style="width:5.23958in;height:1.67986in" alt="Graphical user interface, text, application Description automatically generated" / -->
+![image622.png](images/04-first-class-lists/image622.png) <!--  style="width:5.23958in;height:1.67986in" alt="Graphical user interface, text, application Description automatically generated" / -->
 
-![image204.png](04-first-class-lists/assets/image204.png){.image-inline} <!--  style="width:1.34in;height:0.25in" alt="Icon Description automatically generated" / -->  The `item of` block
+![image204.png](images/04-first-class-lists/image204.png){.image-inline} <!--  style="width:1.34in;height:0.25in" alt="Icon Description automatically generated" / -->  The `item of` block
 \index{`item of` block} has a special set of rules, designed to preserve
 its pre-hyperblock meaning and also provide a useful behavior when given
 a list as its first (index) input:
@@ -562,31 +562,31 @@ a list as its first (index) input:
     which case the entire sublist is reported (the original meaning of
     `item of`):
 
-    ![image623.png](04-first-class-lists/assets/image623.png) <!--  style="width:5.50694in;height:0.91667in"     alt="Macintosh HD:Users:bh:Desktop:item-scalar.png" / -->
+    ![image623.png](images/04-first-class-lists/image623.png) <!--  style="width:5.50694in;height:0.91667in"     alt="Macintosh HD:Users:bh:Desktop:item-scalar.png" / -->
 
 2.  If the index is a list of numbers (no sublists), then `item of`
     reports a list of the indicated top-level items (rows, in a matrix;
     a straightforward hyperization):
-    ![image624.png](04-first-class-lists/assets/image624.png) <!--  style="width:6.00694in;height:0.86806in"     alt="Macintosh HD:Users:bh:Desktop:item-vector.png" / -->
+    ![image624.png](images/04-first-class-lists/image624.png) <!--  style="width:6.00694in;height:0.86806in"     alt="Macintosh HD:Users:bh:Desktop:item-vector.png" / -->
 
 3.  If the index is a list of lists of numbers, then `item of` reports an
     array of only those scalars whose position in the list input matches
     the index input in all dimensions (as of Snap*!*
     6.6):
 
-    ![image625.png](04-first-class-lists/assets/image625.png) <!--  style="width:6.00694in;height:0.6875in" / -->
+    ![image625.png](images/04-first-class-lists/image625.png) <!--  style="width:6.00694in;height:0.6875in" / -->
 
 4.  If a list of list of numbers includes an empty sublist, then all
     items are chosen along that
     dimension:
 
-    ![image626.png](04-first-class-lists/assets/image626.png) <!--  style="width:6.00694in;height:0.6875in" / -->
+    ![image626.png](images/04-first-class-lists/image626.png) <!--  style="width:6.00694in;height:0.6875in" / -->
 
  To
 get a column or columns of a spreadsheet, use an empty list in the row
 selector (as of Snap*!* 6.6):
 
-![image627.png](04-first-class-lists/assets/image627.png) <!--  style="width:6.60417in;height:1.04861in" alt="Graphical user interface, application, website Description automatically generated" / -->
+![image627.png](images/04-first-class-lists/image627.png) <!--  style="width:6.60417in;height:1.04861in" alt="Graphical user interface, application, website Description automatically generated" / -->
 
 The `length of` block \index{`length of` block} is extended to provide
 various ways of looking at the shape and contents of a list. The options
@@ -594,7 +594,7 @@ other than `length` are mainly useful for *lists of lists,* to any depth.
 These new options work well with hyperblocks and the APL library.
 <!-- (Examples are on the next page.) -➞
 
-![image645.png](04-first-class-lists/assets/image645.png) <!--  style="width:6.60417in;height:1.04861in"  / -->
+![image645.png](images/04-first-class-lists/image645.png) <!--  style="width:6.60417in;height:1.04861in"  / -->
 
 - `length`: reports the number of (toplevel) items in the list, as always.
 
@@ -635,7 +635,7 @@ of any rank; it reports a text string in which the list structure is
 explicitly represented using square brackets. These are the opposites of
 `split by csv` and `split by json`.
 
-![image646.png](04-first-class-lists/assets/image646.png) <!--  style="width:6.60417in;height:1.04861in" / -->
+![image646.png](images/04-first-class-lists/image646.png) <!--  style="width:6.60417in;height:1.04861in" / -->
 
 The idea of extending the domain and range of scalar functions to
 include arrays comes from the language APL\index{APL}. (All the great
