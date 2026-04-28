@@ -6,9 +6,9 @@ toc: true
 # 2. Saving and Loading Projects and Media
 
 After you’ve created a project, you’ll want to save it, so that you can
-have access to it the next time you use {.snap}`Snap`. There are two ways to
+have access to it the next time you use Snap<em>!</em>. There are two ways to
 do that. You can save a project on your own computer, or you can save it
-at the {.snap}`Snap` web site. The advantage of saving on the net is that you
+at the Snap<em>!</em> web site. The advantage of saving on the net is that you
 have access to your project even if you are using a different computer,
 or a mobile device such as a tablet or smartphone. The advantage of
 saving on your computer is that you have access to the saved project
@@ -21,14 +21,14 @@ In either case, if you choose "`Save as…`" from the File menu. You’ll see so
 ![image487.png](images/02-saving-and-loading-projects-and/image487.png){#fig-saveas}
 <!--  style="width:3.54861in;height:2.57639in" / -->
 
-(If you are not logged in to your {.snap}`Snap` cloud account, Computer will
+(If you are not logged in to your Snap<em>!</em> cloud account, Computer will
 be the only usable option.) The text box at the bottom right of the Save
 dialog allows you to enter project notes that are saved with the
 project.
 
 ## Local Storage
 
-Click on Computer and {.snap}`Snap`’s Save Project dialog window will be
+Click on Computer and Snap<em>!</em>’s Save Project dialog window will be
 replaced by your operating system’s standard save window. If your
 project has a name, that name will be the default filename if you don’t
 give a different name. Another, equivalent way to save to disk is to
@@ -38,7 +38,7 @@ choose "`Export project`" from the File menu.
 
 The other possibility is to
 save your project "`in the cloud`",\index{save your project in the cloud}
-at the {.snap}`Snap` web site. In order to do this, you need an account with
+at the Snap<em>!</em> web site. In order to do this, you need an account with
 us. Click on the {index}`Cloud button` (![image489.png](images/02-saving-and-loading-projects-and/image489.png) <!--  style="width:0.29167in;height:0.16667in" / --> ) in the Tool Bar.
 Choose the “`Signup…`” option. This will show you a window that looks like
 the picture below:
@@ -47,7 +47,7 @@ the picture below:
 
 You must choose a {index}`user name` that will identify you on
 the web site, such as `Jens`. If you’re a Scratch user, you can use
-your Scratch name for {.snap}`Snap` too. If you’re a kid, don’t pick a user
+your Scratch name for Snap<em>!</em> too. If you’re a kid, don’t pick a user
 name that includes your family name, but first names or initials are
 okay. Don’t pick something you’d be embarrassed to have other users (or
 your parents) see! If the name you want is already taken, you’ll have to
@@ -56,7 +56,7 @@ choose another one. You must also supply a password.
 We ask for your month and year of birth; we use this information only to
 decide whether to ask for your own email address or your parent’s email
 address. (If you’re a kid, you shouldn’t sign up for anything on the
-net, not even {.snap}`Snap`, without your parent’s knowledge.) We do not store
+net, not even Snap<em>!</em>, without your parent’s knowledge.) We do not store
 your birthdate information on our server; it is used on your own
 computer only during this initial signup. We do not ask for your *exact*
 birthdate, even for this one-time purpose, because that’s an important
@@ -77,7 +77,7 @@ Service}. A quick summary: Don’t interfere with anyone else’s use of
 the web site, and don’t put copyrighted media or personally identifiable
 information in projects that you share with other users. And we’re not
 responsible if something goes wrong. (Not that we *expect* anything to
-go wrong; since {.snap}`Snap` runs in JavaScript in your browser, it is
+go wrong; since Snap<em>!</em> runs in JavaScript in your browser, it is
 strongly isolated from the rest of your computer. But the lawyers make
 us say this.)
 
@@ -90,7 +90,7 @@ option from the Cloud menu:
 
 Use the user name and password that you set up earlier. If you check the
 "`Stay signed in`" box, then you will be logged in automatically the next
-time you run {.snap}`Snap` from the same browser on the same computer. Check
+time you run Snap<em>!</em> from the same browser on the same computer. Check
 the box if you’re using your own computer and you don’t share it with
 siblings. *Don’t* check the box if you’re using a public computer at the
 library, at school, etc.
@@ -104,9 +104,9 @@ to other users if you publish your project.
 ## Loading Saved Projects\index{loading saved projects}
 
 Once you’ve saved a project, you want to be able to load it back into
-{.snap}`Snap`. There are two ways to do this:
+Snap<em>!</em>. There are two ways to do this:
 
-1. If you saved the project in your online {.snap}`Snap` account, choose the
+1. If you saved the project in your online Snap<em>!</em> account, choose the
 "`Open…`" option from the File menu. Choose the "`Cloud`" button, then
 select your project from the list in the big text box and click "`OK`", or
 choose the "`Computer`" button to open an operating system open dialog. (A
@@ -118,32 +118,32 @@ it and reading its project notes.)
 "`Import…`" from the File menu. This will give you an ordinary browser
 file-open window, in which you can navigate to the file as you would in
 other software. Alternatively, find the XML file on your desktop, and
-just drag it onto the {.snap}`Snap` window.
+just drag it onto the Snap<em>!</em> window.
 
 The second technique above also allows you to import media (costumes and
 sounds) into a project. Just choose "`Import…`" and then select a picture
 or sound file instead of an XML file.
 
-{.snap}`Snap` can also import projects created in BYOB 3.0 or 3.1, or (with
+Snap<em>!</em> can also import projects created in BYOB 3.0 or 3.1, or (with
 some effort; see our web site) in Scratch 1.4, 2.0 or 3.0. Almost all
-such projects work correctly in {.snap}`Snap`, apart from a small number of
+such projects work correctly in Snap<em>!</em>, apart from a small number of
 incompatible blocks.
 
-If you saved projects in an earlier version of {.snap}`Snap` using the
+If you saved projects in an earlier version of Snap<em>!</em> using the
 "`Browser`" option, then a Browser button will be shown in the Open dialog
 to allow you to retrieve those projects. But you can save them only with
 the Computer and Cloud options.
 
 ## If you lose your project, do this first!
 
-If you are still in **{.snap}`Snap`** and realize that you’ve loaded another
+If you are still in **Snap<em>!</em>** and realize that you’ve loaded another
 project without saving the one you were working on: ***Don’t edit the
 new project.*** From the File menu ![image384.png](images/02-saving-and-loading-projects-and/image384.png) <!--  style="width:0.31944in;height:0.18056in" alt="Macintosh HD:Users:bh:Desktop:Dropbox:manual (1):filebutton.png" / --> choose the "`Restore unsaved project`"
 option\index{Restore unsaved project option}.
 
-Restore unsaved project will also work if you log out of {.snap}`Snap` and
+Restore unsaved project will also work if you log out of Snap<em>!</em> and
 later log back in, as long as you don’t edit another project meanwhile.
-{.snap}`Snap` remembers only the most recent project that you’ve edited (not
+Snap<em>!</em> remembers only the most recent project that you’ve edited (not
 just opened, but actually changed in the project editor).
 
 If your project on the cloud is missing, empty, or otherwise broken and
@@ -157,7 +157,7 @@ that you actually saved, so Restore unsaved project is your first choice
 if you switch away from a project without saving it.
 
 To help you remember to save your projects, when you’ve edited the
-project and haven’t yet saved it, {.snap}`Snap` displays a pencil icon to the
+project and haven’t yet saved it, Snap<em>!</em> displays a pencil icon to the
 left of the project name on the toolbar at the top of the window:
 
 <!-- TODO: MISSING FILE -->
@@ -169,7 +169,7 @@ By default, a project you save in the cloud is private; only you can see
 it. There are two ways to make a project available to others. If you
 share a project, you can give your friends a project URL (in your
 browser’s URL bar after you open the project) they can use to read it.
-If you publish a project, it will appear on the {.snap}`Snap` web site, and
+If you publish a project, it will appear on the Snap<em>!</em> web site, and
 the whole world can see it. In any case, nobody other than you can ever
 overwrite your project; if others ask to save it, they get their own
 copy in their own account.

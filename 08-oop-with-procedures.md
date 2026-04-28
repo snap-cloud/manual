@@ -78,7 +78,7 @@ do both procedure calls in one:
 ![image854.png](images/08-oop-with-procedures/image854.png){.image-4x} <!--  style="width:4.01042in;height:0.70772in" / -->
 
 The <code>ask</code> block\index{ask block} has two required inputs: an object and a
-message. It also accepts optional additional inputs, which {.snap}`Snap` puts
+message. It also accepts optional additional inputs, which Snap<em>!</em> puts
 in a list; that list is named <var>args</var> inside the block. <code>Ask</code> has two nested
 call blocks. The inner one calls the object, i.e., the dispatch
 procedure. The dispatch procedure always takes exactly one input, namely
@@ -133,7 +133,7 @@ gets a private copy. (If a child wants to change something for its
 entire family, it must ask the parent to do it.)
 
 Because we want to be able to create and delete properties dynamically,
-we won’t use {.snap}`Snap` variables to hold an object’s variables or methods.
+we won’t use Snap<em>!</em> variables to hold an object’s variables or methods.
 Instead, each object has two *tables,* called **methods** and **data**, each of
 which {index}`is an` *association list:* a list of
 two-item lists, in which each of the latter contains a *key* and a

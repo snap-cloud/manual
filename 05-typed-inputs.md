@@ -13,12 +13,12 @@ indicated by a rectangular box, the latter by a rounded box: ![image654.png](ima
 Scratch type, [Boolean]{.mono} (true/false), can be used in certain [Control]{.mono}
 blocks with hexagonal slots.
 
-The {.snap}`Snap` types are an expanded collection including [Procedure]{.mono}, [List]{.mono},
+The Snap<em>!</em> types are an expanded collection including [Procedure]{.mono}, [List]{.mono},
 and [Object]{.mono} types. Note that, with the exception of [Procedure]{.mono} types, all
 of the input type shapes are just reminders to the user of what the
 block expects; they are not enforced by the language.
 
-## The {.snap}`Snap` Input Type Dialog
+## The Snap<em>!</em> Input Type Dialog
 
 In the {index}`Block Editor` input name dialog\index{input
 name dialog}, there is a right-facing arrowhead after the "`Input name`"
@@ -51,13 +51,13 @@ The second row of input types
 contains the ones found in Scratch: [Number]{.mono}, [Any]{.mono}, and [Boolean]{.mono}. (The
 reason these are in the second row rather than the ﬁrst will become
 clear when we look at the column arrangement.) The ﬁrst row contains the
-new {.snap}`Snap` types other than procedures: [Object]{.mono}, [Text]{.mono}, and [List]{.mono}. The
+new Snap<em>!</em> types other than procedures: [Object]{.mono}, [Text]{.mono}, and [List]{.mono}. The
 last two rows are the types related to procedures, discussed more fully
 below.
 
 The [List]{.mono} type\index{List type} is used for ﬁrst class lists, discussed
 in Chapter IV above. The red rectangles inside the input slot are meant
-to resemble the appearance of lists as {.snap}`Snap` displays them on the
+to resemble the appearance of lists as Snap<em>!</em> displays them on the
 stage: each element in a red rectangle.
 
 The [Object]{.mono} type\index{Object type} is for sprites, costumes, sounds,
@@ -81,11 +81,11 @@ in the input type selection box.)
 
 Although the procedure types are discussed more fully later, they are
 the key to understanding the column arrangement in the input types. Like
-Scratch, {.snap}`Snap` has three {index}`block shapes` :
+Scratch, Snap<em>!</em> has three {index}`block shapes` :
 jigsaw-piece\index{jigsaw-piece blocks} for command blocks, oval
 \index{oval blocks} for reporters, and hexagonal\index{hexagonal
 blocks} for predicates. (A *predicate* is a reporter that always reports
-true or false.) In {.snap}`Snap` these blocks are ﬁrst class data; an input to
+true or false.) In Snap<em>!</em> these blocks are ﬁrst class data; an input to
 a block can be of Command type, Reporter type, or Predicate type. Each
 of these types is directly below the type of value that that kind of
 block reports, except for Commands, which don’t report a value at all.
@@ -204,10 +204,10 @@ name “size” and default value 10 looks like this:
 
 The "`Multiple inputs`" option:
 The <code>list</code> block introduced earlier accepts any number of inputs to
-specify the items of the new list. To allow this, {.snap}`Snap` introduces the
+specify the items of the new list. To allow this, Snap<em>!</em> introduces the
 arrowhead notation (⏴⏵) that expands and contracts the block, adding and
 removing input slots. ([Shift-clicking]{.mono} on an arrowhead adds or removes
-three input slots at once.) Custom blocks made by the {.snap}`Snap` user have
+three input slots at once.) Custom blocks made by the Snap<em>!</em> user have
 that capability, too. If you choose the "`Multiple inputs`" button, then
 arrowheads\index{arrowheads} will appear after the input slot in the
 block. More or fewer slots (as few as zero) may be used. When the block
@@ -239,7 +239,7 @@ an *upvar*\index{upvar} for short, because it is passed *upward* from
 the custom block to the script that uses it.
 
 Note about the example: <code>for</code> is a primitive block, but it doesn’t need to
-be. You’re about to see (next chapter) how it can be written in {.snap}`Snap`.
+be. You’re about to see (next chapter) how it can be written in Snap<em>!</em>.
 Just give it a different name to avoid confusion, such as <code>my for</code> as
 above.
 
@@ -277,7 +277,7 @@ is the arrowhead that has appeared at the right end of the text box.
 Click it to see the menu shown here at the left.
 
 Choose one of the symbols. The result will have the symbol you want: ![image688.png](images/05-typed-inputs/image688.png){.image-inline}. The
-available symbols are, pretty much, the ones that are used in {.snap}`Snap`
+available symbols are, pretty much, the ones that are used in Snap<em>!</em>
 icons.
 
  But I’d like the arrow symbol
@@ -297,5 +297,5 @@ will make a huge orange <code>foo</code>.
 
 Note the last entry in the symbol menu: "`new line`"\index{new line
 character}. This can be used in a block with many inputs to control
-where the text continues on another line, instead of letting {.snap}`Snap`
+where the text continues on another line, instead of letting Snap<em>!</em>
 choose the line break itself.

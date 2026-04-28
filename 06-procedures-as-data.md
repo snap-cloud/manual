@@ -11,7 +11,7 @@ toc: true
 
 In the {index}`for block` example above, the input named <var>action</var> has been declared as type
 "`Command (C-shaped)`"; that’s why the finished block is C-shaped. But how
-does the block actually tell {.snap}`Snap` to carry out the commands inside
+does the block actually tell Snap<em>!</em> to carry out the commands inside
 the C-slot? Here is a simple version of the block script:
 
 ![image692.png](images/06-procedures-as-data/image692.png)
@@ -23,13 +23,13 @@ the variable by −1 for each repetition instead of by 1.
 
 The
 important part of this script is the {index}`\`run\` block<`run` block>` near
-the end. This is a {.snap}`Snap` built-in command block that takes a
+the end. This is a Snap<em>!</em> built-in command block that takes a
 Command-type value (a script) as its input, and carries out its
 instructions. (In this example, the value of the input ![image693.png](images/06-procedures-as-data/image693.png) <!--  style="width:0.5in;height:0.15625in" / --> is the script
 that the user puts in the C-slot of the `my for` block.) There is a
 similar `call` reporter block for invoking a Reporter or Predicate block.
 The `call`\index{call block } and `run` blocks are at the heart of
-{.snap}`Snap`’s ﬁrst class procedure\index{first class procedures} feature;
+Snap<em>!</em>’s ﬁrst class procedure\index{first class procedures} feature;
 they allow scripts and blocks to be used as data—in this example, as an
 input to a block—and eventually carried out under control of the user’s
 program.
@@ -110,7 +110,7 @@ definition of the `my for` block (see @sec-call-and-run) doesn’t have a
 `ring` around its input variable <var>action</var>. When you drag a variable into a
 ringed input slot, you generally *do* want to use *the value of* the
 variable, which will be the block or script you’re trying to run or
-call, rather than the orange variable reporter itself. So {.snap}`Snap`
+call, rather than the orange variable reporter itself. So Snap<em>!</em>
 automatically removes the ring in this case. If you ever do want to use
 the variable *block itself,* rather than the value of the variable, as a
 Procedure-type input, you can drag the variable into the input slot,
@@ -118,7 +118,7 @@ then control-click or right-click it and choose "`ringify`" from the menu
 that appears. (Similarly, if you ever want to call a function that will
 report a block to use as the input, such as `item (1) of ( ) ` applied to a list
 *of blocks,* you can choose "`unringify`" from the menu. Almost all the
-time, though, {.snap}`Snap` does what you mean without help.)
+time, though, Snap<em>!</em> does what you mean without help.)
 
 ## Writing Higher Order Procedures
 
@@ -140,7 +140,7 @@ Why would you want a block to take a procedure as input? This is actually
 not an obscure thing to do; the primitive conditional and looping blocks
 (the C-shaped ones in the Control palette) take a script as input. Users
 just don’t usually think about it in those terms! We could write the
-{index}`\`repeat\` block<`repeat` block>` as a custom block this way, if {.snap}`Snap`
+{index}`\`repeat\` block<`repeat` block>` as a custom block this way, if Snap<em>!</em>
 didn’t already have one:
 
 ![image708.png](images/06-procedures-as-data/image708.png) <!--  style="width:2.375in;height:1.35417in" / -->
@@ -191,23 +191,23 @@ use a specific, literal script as the input. Instead, the input will
 generally be a variable whose *value* is a script.
 
 The `run` and `call` blocks have arrowheads at the end that can be used to
-open slots for inputs to the called procedures. How does {.snap}`Snap` know
+open slots for inputs to the called procedures. How does Snap<em>!</em> know
 where to use those inputs? If the called procedure (block or script) has
-empty input slots, {.snap}`Snap` “does the right thing.” This has several
+empty input slots, Snap<em>!</em> “does the right thing.” This has several
 possible meanings:
 
 1. If the number of empty slots\index{empty input slots, filling} is exactly equal to the number
-of inputs provided, then {.snap}`Snap` fills the empty slots from left to
+of inputs provided, then Snap<em>!</em> fills the empty slots from left to
 right:
 
 ![image711.png](images/06-procedures-as-data/image711.png) <!--  style="width:3.44792in;height:0.34406in" / -->
 
-2. If exactly one input is provided, {.snap}`Snap` will fill any number of
+2. If exactly one input is provided, Snap<em>!</em> will fill any number of
 empty slots with it:
 
 ![image712.png](images/06-procedures-as-data/image712.png) <!--  style="width:2.80208in;height:0.30694in" / -->
 
-3. Otherwise, {.snap}`Snap` won’t fill any slots, because the user’s
+3. Otherwise, Snap<em>!</em> won’t fill any slots, because the user’s
 intention is unclear.
 
 If the user wants to override these rules, the solution is to use a `ring`
@@ -282,7 +282,7 @@ the `ring`:
 ![image731.png](images/06-procedures-as-data/image731.png) <!--  style="width:4.32292in;height:0.45417in" / -->
 
 Here we just want to put one of the inputs into two different slots. If
-we left all three slots empty, {.snap}`Snap` would not fill any of them,
+we left all three slots empty, Snap<em>!</em> would not fill any of them,
 because the number of inputs provided (2) would not match the number of
 empty slots (3).
 
@@ -305,11 +305,11 @@ must give an explicit name, <var>newitem</var>, to the value that the outer `map
 giving to the inner one, then drag that variable into the `( ) in front of ( )`
 block.
 
-By the way, once the called block provides names for its inputs, {.snap}`Snap`
+By the way, once the called block provides names for its inputs, Snap<em>!</em>
 will not automatically fill empty slots\index{empty input slots,
 filling}, on the theory that the user has taken control. In fact,
 that’s another reason you might want to name the inputs explicitly: to
-stop {.snap}`Snap` from filling a slot that should really remain empty.
+stop Snap<em>!</em> from filling a slot that should really remain empty.
 
 ## Procedures as Data
 
@@ -340,7 +340,7 @@ reports a procedure):
 \index{if else block } block has two C-shaped command slots and chooses
 one or the other depending on a Boolean test. Because Scratch doesn’t
 emphasize functional programming, it lacks a corresponding reporter
-block to choose between two expressions. {.snap}`Snap` has one, but we could
+block to choose between two expressions. Snap<em>!</em> has one, but we could
 write our own:
 
 <!-- TODO: The 2 + 1 layout is kind of a special case. -->
@@ -421,7 +421,7 @@ it works internally.
 
 ### Special Forms in Scratch
 
-Special forms are actually not a new invention in {.snap}`Snap`. Many of
+Special forms are actually not a new invention in Snap<em>!</em>. Many of
 Scratch’s conditional and looping blocks are really special forms. The
 hexagonal input slot in the `if` block is a straightforward Boolean value,
 because the value can be computed once, before the `if` block makes its
@@ -431,7 +431,7 @@ have to be of type “Boolean (unevaluated)\index{Boolean (unevaluated)
 type},” so that Scratch can evaluate them over and over again. Since
 Scratch doesn’t have custom C‑shaped blocks, it can afford to handwave
 away the distinction between evaluated and unevaluated Booleans, but
-{.snap}`Snap` can’t. The pedagogic value of special forms is proven by the
+Snap<em>!</em> can’t. The pedagogic value of special forms is proven by the
 fact that no Scratcher ever notices that there’s anything strange about
 the way in which the hexagonal inputs in the [Control]{.mono} blocks are
 evaluated.

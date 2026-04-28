@@ -1,2 +1,2 @@
 (sec-libraries)=
-# Libraries in {.snap}`Snap`
+# Libraries in Snap<em>!</em>

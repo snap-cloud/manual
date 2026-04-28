@@ -1,7 +1,7 @@
 (sec-appendix-community)=
 # The Snap<em>!</em> Community Site
 
-The {.snap}`Snap` [community website](https://snap.berkeley.edu) is what you see when you visit [https://snap.berkeley.edu](https://snap.berkeley.edu).
+The Snap<em>!</em> [community website](https://snap.berkeley.edu) is what you see when you visit [https://snap.berkeley.edu](https://snap.berkeley.edu).
 
 ## User Accounts
 
