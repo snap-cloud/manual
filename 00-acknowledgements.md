@@ -1,11 +1,16 @@
-# Acknowledgements {.unnumbered}
+---
+toc: true
+numbering:
+  title: false
+---
 
-[]{#sec-acknowledgements}
+(sec-acknowledgements)=
+# Acknowledgements
 
 We have been extremely lucky in our mentors.
 Jens cut his teeth in the company of the Smalltalk pioneers:
-{index}`Alan Kay<single: Kay, Alan>`, {index}`Dan Ingalls<single: Ingalls, Dan>`, and the
-rest of the gang who invented personal computing and object oriented
+{index}`Alan Kay<single: Kay, Alan>`, {index}`Dan Ingalls<single: Ingalls, Dan>`,
+and the rest of the gang who invented personal computing and object oriented
 programming in the great days of {index}`Xerox PARC`. He
 worked with {index}`John Maloney<single: Maloney, John>`, of the MIT
 \index{Massachusetts Institute of Technology} Scratch Team

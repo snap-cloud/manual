@@ -3,7 +3,7 @@ toc: true
 ---
 
 (sec-ch01)=
-# 1. Blocks, Scripts, and Sprites {span .snap}`Snap!`
+# 1. Blocks, Scripts, and Sprites
 
 This chapter describes the Snap<em>!</em> features inherited from {index}`Scratch`; experienced Scratch users can skip to @sec-sprites-parallelism.
 
@@ -14,28 +14,28 @@ using the keyboard, the Snap<em>!</em> programmer uses the same drag-and-drop
 interface familiar to computer users.
 
 Start Snap<em>!</em>. You should see the following
-arrangement of regions\index{layout, window} in the window:
+arrangement of {index}`regions <layout, window>` in the window:
 
 ![An annotated screenshot of blank Snap! editor](./12-user-interface-elements/assets/snap-ide-annotated.png)
 
 (The proportions of these areas may be different, depending on the size
 and shape of your browser window.)
 
-A Snap<em>!</em> program\index{"Snap! program"} consists of one or more
+A Snap<em>!</em> {index}`Snap! program` consists of one or more
 *scripts,* each of which is made of *blocks.* Here’s a typical script
-\index{script} :
+{index}`script` :
 
 (fig-draw-square)=
 ![image6.png](images/01-blocks-scripts-and-sprites/image6.png)
 
-The five blocks\index{block} that make up this script have three different
+index that make up this script have three different
 colors, corresponding to three of the eight *palettes* in which blocks
-can be found. The palette\index{palette} area at the left edge of the
+can be found. The {index}`palette` area at the left edge of the
 window shows one palette at a time, chosen with the eight buttons just
 above the palette area. In this script, the gold blocks are from the
 Control palette; the green block is from the Pen palette; and the blue
 blocks are from the Motion palette. A script is assembled by dragging
-blocks from a palette into the *scripting area*\index{scripting area}
+blocks from a palette into the {index}`scripting area`
 in the middle part of the window. Blocks snap together (hence the name
 Snap<em>!</em> for the language) when you drag a block so that its indentation
 is near the tab of the one above it:
@@ -65,7 +65,7 @@ be run when the {index}`green flag<single: flag, green>` near the right end of t
 Snap<em>!</em> {index}`tool bar` is clicked. (The Snap<em>!</em> tool bar is
 part of the Snap<em>!</em> window, not the same as the browser’s or operating
 system’s menu bar.) A script isn’t required to have a hat block
-\index{block!hat}, but if not, then the script will be run only if the
+{index}`block; hat`, but if not, then the script will be run only if the
 user clicks on the script itself. A script can’t have more than one hat
 block, and the hat block can be used only at the top of the script; its
 distinctive shape is meant to remind you of

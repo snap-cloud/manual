@@ -4,39 +4,17 @@ project:
     - file: index.md
     - file: 00-acknowledgements.md
     - file: 01-blocks-scripts-and-sprites.md
-    - title: Saving And Loading Projects
-      children:
-        - file: 02-saving-and-loading-projects-and/index.md
-    - title: Building A Block
-      children:
-        - file: 03-building-a-block/index.md
-    - title: First Class Lists
-      children:
-        - file: 04-first-class-lists/index.md
-    - title: Typed Inputs
-      children:
-        - file: 05-typed-inputs/index.md
-    - title: Procedures As Data
-      children:
-        - file: 06-procedures-as-data/index.md
-    - title: Object Oriented Programming With Sprites
-      children:
-        - file: 07-object-oriented-programming-with-sprites/index.md
-    - title: Oop With Procedures
-      children:
-        - file: 08-oop-with-procedures/index.md
-    - title: The Outside World
-      children:
-        - file: 09-the-outside-world/index.md
-    - title: Continuations
-      children:
-        - file: 10-continuations/index.md
-    - title: Metaprogramming
-      children:
-        - file: 11-metaprogramming/index.md
-    - title: User Interface Elements
-      children:
-        - file: 12-user-interface-elements/index.md
+    - file: 02-saving-and-loading-projects-and/index.md
+    - file: 03-building-a-block/index.md
+    - file: 04-first-class-lists/index.md
+    - file: 05-typed-inputs/index.md
+    - file: 06-procedures-as-data/index.md
+    - file: 07-object-oriented-programming-with-sprites/index.md
+    - file: 08-oop-with-procedures/index.md
+    - file: 09-the-outside-world/index.md
+    - file: 10-continuations/index.md
+    - file: 11-metaprogramming/index.md
+    - file: 12-user-interface-elements/index.md
     - title: Appendix
       children:
         - title: A Snap Color Library

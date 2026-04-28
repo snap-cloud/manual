@@ -20,11 +20,6 @@ project:
   exclude:
     - '**/*.qmd'
     - '**/*.tex'
-  myst_substitutions:
-    # Snap: '<snap class="snap">Snap<em>!</em></span>'
-    # Snap: '{span .snap}`Snap!`'
-    Snap: 'Test Snap!'
-    SnapHTML: '<span class="snap">Snap<em>!</em></span>'
   exports:
   - format: tex+pdf
     title: Snap\textit{!} Reference Manual
@@ -41,3 +36,7 @@ site:
     style: _support/styles/snap-manual.css
     favicon: images/favicon.png
     logo: images/snap-logo.png
+    logo_alt: Snap! logo
+
+plugins:
+  - https://github.com/choldgraf/myst-substitutions/releases/download/v0.1/index.mjs
