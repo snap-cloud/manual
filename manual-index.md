@@ -1,4 +1,8 @@
-# The Snap_!_ Manual Index
+---
+toc: true
+---
+
+# The {{ Snap }} Manual Index
 
 ```{show-index}
 ```

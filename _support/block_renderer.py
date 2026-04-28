@@ -81,7 +81,7 @@ These example projects show the block in the context of a larger project. These 
 
     example_images_md = '\n'.join(example_images_md)
     example_projects_md = '\n'.join(example_projects_md)
-    no_index = '{.unnumbered .unlisted}'
+    no_index = ''
     _html_visible = '{.content-visible when-format="html"}'
     _pdf_visible = '{.content-visible when-format="pdf"}'
     small_image = '{height=15pt}'

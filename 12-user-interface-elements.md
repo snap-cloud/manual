@@ -3,7 +3,10 @@ toc: true
 ---
 
 (sec-ch12)=
-# 12. User Interface Elements\index{user interface elements}
+# 12. User Interface Elements
+
+:::{index} user interface elements
+:::
 
 In this chapter we describe in detail the various buttons, menus, and
 other clickable elements of the {.snap}`Snap` user interface. Here again is
@@ -677,7 +680,8 @@ button ![image1050.png](images/12-user-interface-elements/image1050.png) <!--  s
 button} , except that the dialog window that it opens has the current
 palette (color) preselected.
 
-### Context Menus for Palette Blocks {#sec-context-menus-for-palette-blocks}
+(sec-context-menus-for-palette-blocks)=
+### Context Menus for Palette Blocks
 
  Most elements\index{context
 menus for palette blocks} of the {.snap}`Snap` display can be
@@ -1159,7 +1163,8 @@ Its right-click menu will have an extra get blocks option\index{get
 blocks option} that switches to the Scripts tab with the script ready to
 be dropped there.
 
-### The Paint Editor {#sec-the-paint-editor}
+(sec-the-paint-editor)=
+### The Paint Editor
 
 Here is a picture of a Paint Editor window\index{Paint Editor window}:
 
@@ -1271,7 +1276,8 @@ When you’re satisfied, push the Save button. If you need a sound editor,
 consider the free (both senses)
 [https://audacity.sourceforge.net](http://audacity.sourceforge.net).
 
-## Keyboard Editing {#sec-keyboard-editing}
+(sec-keyboard-editing)=
+## Keyboard Editing
 
 An ongoing area of research is how to make visual programming languages
 usable by people with visual or motoric disabilities. As a first step in

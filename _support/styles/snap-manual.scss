@@ -121,22 +121,33 @@ h1, h2, h3, h4, h5, h6 {
 
 // TODO: make latex command
 // Review the vertical alignment of reporters vs hats/
+// .image-inline may be on an <img> directly or on a MyST-generated <picture>
+// wrapper. Shared layout rules live on the element; sizing/alignment rules are
+// applied to both the element itself and any nested <img>.
 .image-inline {
+  display: inline;
   padding: 0;
-  width: auto;
-  max-width: auto;
-  max-height: 1.6em;
-  line-height: 1.8;
-  vertical-align: middle;
+
+  &, img {
+    width: auto;
+    max-width: none;
+    max-height: 1.6em;
+    line-height: 1.8;
+    vertical-align: middle;
+  }
 }
 
 .image-inline-tall {
+  display: inline;
   padding: 0;
-  width: auto;
-  max-width: auto;
-  max-height: 2.4em;
-  line-height: 2.4;
-  vertical-align: bottom;
+
+  &, img {
+    width: auto;
+    max-width: none;
+    max-height: 2.4em;
+    line-height: 2.4;
+    vertical-align: bottom;
+  }
 }
 
 // MyST grid: make items fill their column and center images
@@ -161,7 +172,7 @@ h1, h2, h3, h4, h5, h6 {
 // TODO: Not sure if we want to combine these two classes
 // Slightly smaller than 100% for inline blocks.
 .image-4x.image-inline {
-  width: 20%
+  &, img { width: 20%; max-height: none; }
 }
 
 // TODO: make latex command

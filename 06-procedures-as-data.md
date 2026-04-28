@@ -215,7 +215,8 @@ If the user wants to override these rules, the solution is to use a `ring`
 given block or script to indicate how inputs are to be used. This will
 be discussed more fully below.
 
-### Recursive Calls to Multiple-Input Blocks {#sec-recursive-calls-to-multiple-input-blocks}
+(sec-recursive-calls-to-multiple-input-blocks)=
+### Recursive Calls to Multiple-Input Blocks
 
 A relatively rare situation not yet considered here is the case of a
 recursive block that has a variable number of inputs. Let’s say the user

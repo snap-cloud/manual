@@ -20,6 +20,8 @@ project:
   exclude:
     - '**/*.qmd'
     - '**/*.tex'
+  substituitions:
+    Snap: 'Snap<em>!</em>'
   exports:
   - format: tex+pdf
     title: Snap\textit{!} Reference Manual

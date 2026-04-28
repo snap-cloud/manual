@@ -1,4 +1,4 @@
-# The {.snap}`snap` Reference Manual
+# The Snap! Reference Manual
 
 <!--
   This is the first page of the Snap! Manual.
@@ -55,7 +55,7 @@ A search function is included in the upper right hand corner. If you which you c
 :::
 
 ::: {.content-visible when-format="pdf"}
-## The 'New' PDF Manual {.unnumbered .unlisted}
+## The 'New' PDF Manual
 
 this is currently a work in progress.
 :::

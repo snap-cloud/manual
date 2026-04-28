@@ -1,4 +1,5 @@
-# Appendix A. {.snap}`Snap` color library {#sec-appendix-a-colors}
+(sec-appendix-a-colors)=
+# Appendix A. {.snap}`Snap` color library
 
 The Colors and Crayons library\index{Colors and Crayons library}
 provides several tools for manipulating color. Although its main purpose
@@ -50,7 +51,8 @@ see but your computer display can’t generate. If that intrigues you,
 look up [color theory](https://en.wikipedia.org/wiki/Color_theory)
 \index{color theory} in Wikipedia.
 
-### Crayons and Color Numbers {#sec-crayons-and-color-numbers}
+(sec-crayons-and-color-numbers)=
+### Crayons and Color Numbers
 
 But if you just want some colors in your project, we provide a simple,
 one-dimensional subset of the available colors. Two subsets, actually:
@@ -541,7 +543,8 @@ weighted:
 understanding paint mixing, along with [{index}`David Briggs<single: Briggs, David>`](http://www.huevaluechroma.com/061.php)’s tutorial. Remaining
 mistakes are bh’s.)
 
-### tl;dr {#sec-tldr-spirals}
+(sec-tldr-spirals)=
+### tl;dr
 
 For {index}`normal people`, {.snap}`Snap` provides three simple,
 one-dimensional scales: *<u>crayons</u>* for specific interesting

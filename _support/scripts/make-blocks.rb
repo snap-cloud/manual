@@ -33,7 +33,7 @@ partial-data:
       description: Move forward by 10 steps
 ---
 
-# {{ title }} {.unnumbered}
+# {{ title }}
 
 {{< include blocks/_block.qmd >}}
 TEMPLATE

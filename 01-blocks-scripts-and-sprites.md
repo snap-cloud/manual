@@ -5,6 +5,8 @@ toc: true
 (sec-ch01)=
 # 1. Blocks, Scripts, and Sprites
 
+{{ Snap }}
+
 This chapter describes the Snap<em>!</em> features inherited from {index}`Scratch`; experienced Scratch users can skip to @sec-sprites-parallelism.
 
 Snap<em>!</em> is a programming language—a notation in which you can tell a

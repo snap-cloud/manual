@@ -193,7 +193,8 @@ lists:
 
 ![image636.png](images/04-first-class-lists/image636.png){.image-4x}
 
-### The `map` block {#sec-map}
+(sec-map)=
+### The `map` block
 
 You’ve already seen `keep`. `Find first` is
 \index{`find first` block} similar, but it reports just the first item that
@@ -391,7 +392,8 @@ like an item of a single-column list:
 So, in particular, if only the first item is a list, the display will
 look almost like a one-column display.
 
-### Comma-Separated Values {#sec-csv}
+(sec-csv)=
+### Comma-Separated Values
 
 Spreadsheet and database programs generally offer the option to export
 their data as CSV (comma-separated values)\index{CSV (comma-separated
