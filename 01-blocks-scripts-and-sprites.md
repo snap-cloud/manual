@@ -3,17 +3,17 @@ toc: true
 ---
 
 (sec-ch01)=
-# 1. Blocks, Scripts, and Sprites
+# 1. Blocks, Scripts, and Sprites {span .snap}`Snap!`
 
-This chapter describes the {.snap}`Snap` features inherited from {index}`Scratch`; experienced Scratch users can skip to @sec-sprites-parallelism.
+This chapter describes the Snap<em>!</em> features inherited from {index}`Scratch`; experienced Scratch users can skip to @sec-sprites-parallelism.
 
-{.snap}`Snap` is a programming language—a notation in which you can tell a
+Snap<em>!</em> is a programming language—a notation in which you can tell a
 computer what you want it to do. Unlike most programming languages,
-though, {.snap}`Snap` is a *visual* language; instead of writing a program
-using the keyboard, the {.snap}`Snap` programmer uses the same drag-and-drop
+though, Snap<em>!</em> is a *visual* language; instead of writing a program
+using the keyboard, the Snap<em>!</em> programmer uses the same drag-and-drop
 interface familiar to computer users.
 
-Start {.snap}`Snap`. You should see the following
+Start Snap<em>!</em>. You should see the following
 arrangement of regions\index{layout, window} in the window:
 
 ![An annotated screenshot of blank Snap! editor](./12-user-interface-elements/assets/snap-ide-annotated.png)
@@ -21,7 +21,7 @@ arrangement of regions\index{layout, window} in the window:
 (The proportions of these areas may be different, depending on the size
 and shape of your browser window.)
 
-A {.snap}`Snap` program\index{"Snap! program"} consists of one or more
+A Snap<em>!</em> program\index{"Snap! program"} consists of one or more
 *scripts,* each of which is made of *blocks.* Here’s a typical script
 \index{script} :
 
@@ -37,7 +37,7 @@ Control palette; the green block is from the Pen palette; and the blue
 blocks are from the Motion palette. A script is assembled by dragging
 blocks from a palette into the *scripting area*\index{scripting area}
 in the middle part of the window. Blocks snap together (hence the name
-{.snap}`Snap` for the language) when you drag a block so that its indentation
+Snap<em>!</em> for the language) when you drag a block so that its indentation
 is near the tab of the one above it:
 
 (fig-snapping-blocks)=
@@ -62,8 +62,8 @@ At the top of the script is a *hat* block, which indicates when the
 script should be carried out. Hat block names typically start with the
 word “when”; in the square-drawing example in @fig-draw-square, the script should
 be run when the {index}`green flag<single: flag, green>` near the right end of the
-{.snap}`Snap` {index}`tool bar` is clicked. (The {.snap}`Snap` tool bar is
-part of the {.snap}`Snap` window, not the same as the browser’s or operating
+Snap<em>!</em> {index}`tool bar` is clicked. (The Snap<em>!</em> tool bar is
+part of the Snap<em>!</em> window, not the same as the browser’s or operating
 system’s menu bar.) A script isn’t required to have a hat block
 \index{block!hat}, but if not, then the script will be run only if the
 user clicks on the script itself. A script can’t have more than one hat
@@ -73,7 +73,7 @@ that.[^1]
 
 <!-- TODO: Different CSS for an inline hat block? -->
 [^1]: One of the hat blocks, the generic\index{hat block!generic}
-“when anything” block ![generic when hat block](images/01-blocks-scripts-and-sprites/image10.png){.image-inline}, is subtly different from the others. When the stop
+“when anything” block <img class="image-inline" src="images/01-blocks-scripts-and-sprites/image10.png" alt="generic when hat block">, is subtly different from the others. When the stop
 sign is clicked, or when a project or sprite is loaded, this block
 doesn’t test whether the condition in its hexagonal input slot is true,
 so the script beneath it will not run, until some *other* script in the
@@ -84,8 +84,8 @@ instead of octagonal.
 
 The other blocks in our example script are *command* blocks
 \index{block!command}. Each {index}`command block`
-corresponds to an action that {.snap}`Snap` already knows how to carry out.
-For example, the block ![image9.png](./blocks/images/block_forward.png){.image-inline} tells the sprite\index{sprite} (the arrowhead
+corresponds to an action that Snap<em>!</em> already knows how to carry out.
+For example, the block <img class="image-inline" src="./blocks/images/block_forward.png" alt="image9.png"> tells the sprite\index{sprite} (the arrowhead
 shape on the *stage*\index{stage} at the right end of the window) to
 move ten steps (a step is a very small unit of distance) in the
 direction in which the arrowhead is pointing. We’ll see shortly that
@@ -191,10 +191,11 @@ blocks into the desired slot.)
 
 ![image24.png](images/01-blocks-scripts-and-sprites/image24.png)
 
-## Sprites and Parallelism {#sec-sprites-parallelism}
+(sec-sprites-parallelism)=
+## Sprites and Parallelism
 
 Just below the stage is the “new sprite button\index{new sprite button}”
-![image25.png](images/01-blocks-scripts-and-sprites/image25.png){.image-inline}. Click the button to add a new sprite to the stage. The new
+<img class="image-inline" src="images/01-blocks-scripts-and-sprites/image25.png" alt="image25.png">. Click the button to add a new sprite to the stage. The new
 sprite will appear in a random position on the stage, with a random
 color, but always facing to the right.
 
@@ -248,13 +249,13 @@ scripting area, and click the paint button ![image32.png](images/01-blocks-scrip
 appears is explained in @sec-the-paint-editor. There are three
 ways to import a costume. First select the desired sprite in the sprite
 corral. Then, one way is to click on the file icon in the tool bar,
-then choose ![image30.png](images/01-blocks-scripts-and-sprites/image30.png){.image-inline} the “`Costumes…`” menu item. You will see a list of costumes
+then choose <img class="image-inline" src="images/01-blocks-scripts-and-sprites/image30.png" alt="image30.png"> the “`Costumes…`” menu item. You will see a list of costumes
 from the public media library, and can choose one. The second way, for a
 costume stored on your own computer, is to click on the file icon and
 choose the “Import…” menu item. You can then select a file in any
 picture format (PNG, JPEG, etc.) supported by your browser. The third
 way is quicker if the file you want is visible on the desktop: Just drag
-the file onto the {.snap}`Snap` window. In any of these cases, the scripting
+the file onto the Snap<em>!</em> window. In any of these cases, the scripting
 area will be replaced by something like this:
 
 ![image31.png](images/01-blocks-scripts-and-sprites/image31.png)
@@ -264,12 +265,12 @@ Costumes, and Sounds. You’ll see that the Costumes tab\index{Costumes
 tab} is now selected. In this view, the sprite’s *wardrobe,*
 \index{wardrobe} you can choose whether the sprite should wear its
 Turtle costume or its Alonzo\index{Alonzo} costume. (Alonzo, the
-{.snap}`Snap` mascot, is named after {index}`Alonzo Church<single: Church, Alonzo>`, a
+Snap<em>!</em> mascot, is named after {index}`Alonzo Church<single: Church, Alonzo>`, a
 mathematician who invented the idea of procedures as data
-\index{procedures as data}, the most important way in which {.snap}`Snap` is
+\index{procedures as data}, the most important way in which Snap<em>!</em> is
 different from Scratch\index{Scratch}.) You can give a sprite as many
 costumes as you like, and then choose which it will wear either by
-clicking in its wardrobe or by using the ![image35.png](./blocks/images/block_doSwitchToCostume.png){.image-inline} or ![Next Costume](./blocks/images/block_doWearNextCostume.png){.image-inline} block in a script.
+clicking in its wardrobe or by using the <img class="image-inline" src="./blocks/images/block_doSwitchToCostume.png" alt="image35.png"> or <img class="image-inline" src="./blocks/images/block_doWearNextCostume.png" alt="Next Costume"> block in a script.
 (Every costume has a number as well as a name. The `next` costume block
 selects the next costume by number; after the highest-numbered costume it
 switches to costume 1. The Turtle, costume 0, is never chosen by next
@@ -277,7 +278,7 @@ costume.) The {index}`Turtle costume` is the only one that
 changes color to match a change in the sprite’s pen color.
 
 ::: {.callout-tip}
-Protip: ![Switch to costumer (() - 1)](images/01-blocks-scripts-and-sprites/image33.png){.image-inline} switches to the *previous* costume, wrapping like `next costume`.
+Protip: <img class="image-inline" src="images/01-blocks-scripts-and-sprites/image33.png" alt="Switch to costumer (() - 1)"> switches to the *previous* costume, wrapping like `next costume`.
 :::
 
 In addition to its costumes, a sprite can have *sounds;* the equivalent for
@@ -318,13 +319,13 @@ another sprite to run a script. Here’s a simple example:
 ::::
 
 
-In the block ![image40.png](images/01-blocks-scripts-and-sprites/image40.png){.image-inline}, the word “bark” is just an arbitrary name I made up. When you
+In the block <img class="image-inline" src="images/01-blocks-scripts-and-sprites/image40.png" alt="image40.png">, the word “bark” is just an arbitrary name I made up. When you
 click on the downward arrowhead in that input slot, one of the choices
 (the only choice, the first time) is “new,” which then prompts you to
 enter a name for the new broadcast. When this block is run, the chosen
 message is sent to *every* sprite, which is why the block is called
 “broadcast.” (But if you click the right arrow after the message name,
-the block becomes ![image45.png](images/01-blocks-scripts-and-sprites/image45.png){.image-inline}, and you can change it to ![image46.png](images/01-blocks-scripts-and-sprites/image46.png){.image-inline} to send the message just
+the block becomes <img class="image-inline" src="images/01-blocks-scripts-and-sprites/image45.png" alt="image45.png">, and you can change it to <img class="image-inline" src="images/01-blocks-scripts-and-sprites/image46.png" alt="image46.png"> to send the message just
 to one sprite.) In this program, though, only one sprite has a script to
 run when that broadcast is sent, namely the dog. Because the boy’s
 script uses `broadcast and wait`\index{broadcast and wait block} rather
@@ -355,7 +356,7 @@ the action.
 Sometimes it’s desirable to make a sort of “super-sprite” composed of
 pieces that can move together but can also be separately articulated.
 The classic example is a person’s body made up of a torso, limbs, and a
-head. {.snap}`Snap` allows one sprite to be designated as the *anchor*
+head. Snap<em>!</em> allows one sprite to be designated as the *anchor*
 \index{anchor} of the combined shape, with other sprites as its *parts.*
 \index{parts (of nested sprite)}
 
@@ -400,7 +401,7 @@ far, we’ve used two kinds of blocks\index{block!reporter}: hat blocks
 and command blocks. Another kind is the *reporter* block,\index{Reporter
 block} which has an oval shape: ![image66.png](images/01-blocks-scripts-and-sprites/image66.png) <!-- {width=0.72917in height=0.15625in} --> . It’s called a “reporter” because
 when it’s run, instead of carrying out an action, it reports a value
-that can be used as an input to another block. If you drag a ![image65.png](images/01-blocks-scripts-and-sprites/image65.png){.image-inline} <!-- {width=1.47in height=0.52in} --> reporter
+that can be used as an input to another block. If you drag a <img class="image-inline" src="images/01-blocks-scripts-and-sprites/image65.png" alt="image65.png"> <!-- {width=1.47in height=0.52in} --> reporter
 into the scripting area by itself and click on it, the value it reports
 will appear in a speech balloon next to the block:
 
@@ -434,7 +435,7 @@ Operators palette:
 The `round` block rounds 35.3905… to 35, and the `+` block adds 100 to that.
 (By the way, the `round` block is in the Operators palette, just like `+`,
 but in this script it’s a lighter color with black lettering because
-{.snap}`Snap` alternates light and dark versions of the palette colors when a
+Snap<em>!</em> alternates light and dark versions of the palette colors when a
 block is nested inside another block from the same palette:
 
 ![image80.png](images/01-blocks-scripts-and-sprites/image80.png) <!-- {width=4.85417in height=1.90625in} -->
@@ -444,18 +445,19 @@ aid to readability is called *zebra coloring.*\index{zebra coloring}
 A reporter block with its inputs, maybe including other reporter
 blocks, such as ![image81.png](images/01-blocks-scripts-and-sprites/image81.png) <!-- {width=1.91667in height=0.23958in} -->, is called an *expression.*\index{expression}
 
-## Predicates and Conditional Evaluation {#sec-predicates-and-conditional-evaluation}
+(sec-predicates-and-conditional-evaluation)=
+## Predicates and Conditional Evaluation
 
-Most reporters report\index{block!predicate} either a number, like ![image82.png](./blocks/images/block_reportVariadicSum.png){.image-inline},
+Most reporters report\index{block!predicate} either a number, like <img class="image-inline" src="./blocks/images/block_reportVariadicSum.png" alt="image82.png">,
 or a text string, like
-![image83.png](./blocks/images/block_reportJoinWords.png){.image-inline}.
+<img class="image-inline" src="./blocks/images/block_reportJoinWords.png" alt="image83.png">.
 A *predicate* is a special kind of reporter that
 always reports true or false. Predicates\index{Predicate block} have a
-{index}`hexagonal shape`: ![image85.png](./blocks/images/block_reportMouseDown.png){.image-inline}
+{index}`hexagonal shape`: <img class="image-inline" src="./blocks/images/block_reportMouseDown.png" alt="image85.png">
 
 The special shape is a reminder that predicates don’t generally make sense
 in an input slot of blocks that are expecting a number or text. You
-wouldn’t say ![image84.png](images/01-blocks-scripts-and-sprites/image84.png), although (as you can see from the picture) {.snap}`Snap` lets
+wouldn’t say ![image84.png](images/01-blocks-scripts-and-sprites/image84.png), although (as you can see from the picture) Snap<em>!</em> lets
 you do it if you really want. Instead, you normally use predicates in
 special hexagonal input slots like this one:
 
@@ -499,7 +501,7 @@ a *constant* Boolean\index{Boolean constant} value in a hexagonal slot
 instead of a predicate-based expression, hover the mouse over the block
 and click on the control that appears:
 
-![image91.png](images/01-blocks-scripts-and-sprites/image91.png){.image-inline} <!--  style="width:1.375in;height:0.24306in" alt="Macintosh HD:Users:bh:Desktop:turbo-false.png" / --> ![image92.png](images/01-blocks-scripts-and-sprites/image92.png){.image-inline} <!--  style="width:1.375in;height:0.24306in" alt="Macintosh HD:Users:bh:Desktop:turbo-true.png" / -->
+<img class="image-inline" src="images/01-blocks-scripts-and-sprites/image91.png" alt="image91.png"> <!--  style="width:1.375in;height:0.24306in" alt="Macintosh HD:Users:bh:Desktop:turbo-false.png" / --> <img class="image-inline" src="images/01-blocks-scripts-and-sprites/image92.png" alt="image92.png"> <!--  style="width:1.375in;height:0.24306in" alt="Macintosh HD:Users:bh:Desktop:turbo-true.png" / -->
 
 ## Variables
 
@@ -675,8 +677,8 @@ see how to read information from web sites.
 When you use these
 capabilities, your project may take up a lot of memory\index{memory} in
 the computer. If you get close to the amount of memory available to
-{.snap}`Snap`, then it may become impossible to save your project. (Extra
-space is needed temporarily to convert from {.snap}`Snap`’s internal
+Snap<em>!</em>, then it may become impossible to save your project. (Extra
+space is needed temporarily to convert from Snap<em>!</em>’s internal
 representation to the form in which projects are exported or saved.) If
 your program reads a lot of data from the outside world that will still
 be available when you use it next, you might want to have values
@@ -693,7 +695,7 @@ the variable to it.
 
 ## Debugging\index{Debugging}
 
-{.snap}`Snap` provides several tools to help you debug a program. They center
+Snap<em>!</em> provides several tools to help you debug a program. They center
 around the idea of *pausing* the running of a script partway through, so
 that you can examine the values of variables.
 
@@ -709,12 +711,13 @@ things you can generally do, including modifying the paused scripts by
 adding or removing blocks. The ![image115.png](images/01-blocks-scripts-and-sprites/image115.png) <!-- {width=0.29167in height=0.16667in} -->  button changes shape too and clicking it
 again resumes the paused scripts.
 
-### Breakpoints\index{breakpoint} : the `pause all` block\index{pause all block} {#sec-pause-all}
+(sec-pause-all)=
+### Breakpoints\index{breakpoint} : the `pause all` block\index{pause all block}
 
 The pause button is great if your program seems to be in an infinite loop,
 but more often you’ll want
 to set a *breakpoint,* a particular point in a script at which you want
-to pause. The ![image117.png](./blocks/images/block_doPauseAll.png){.image-inline} block, near the bottom of the Control palette, can be
+to pause. The <img class="image-inline" src="./blocks/images/block_doPauseAll.png" alt="image117.png"> block, near the bottom of the Control palette, can be
 inserted in a script to pause when it is run. So, for example, if your
 program is getting an error message in a particular block, you could use
 `pause all` just before that block to look at the values of variables just
@@ -809,7 +812,7 @@ block}\index{pen vectors block}, a new costume consisting of everything
 that’s drawn on the stage by any sprite. Right-clicking the block in the
 scripting area gives the option to change it to ![image135.png](images/01-blocks-scripts-and-sprites/image135.png) if vector logging is enabled. See @para-log-pen-vectors.
 
-![image137.png](images/01-blocks-scripts-and-sprites/image137.png){.image-inline} Print
+<img class="image-inline" src="images/01-blocks-scripts-and-sprites/image137.png" alt="image137.png"> Print
 characters\index{write block} in the given point size on the stage, at
 the sprite’s position and in its direction. The sprite moves to the end
 of the text. (That’s not always what you want, but you can save the
@@ -817,40 +820,40 @@ sprite’s position before using it, and sometimes you need to know how
 big the text turned out to be, in turtle steps.) If the pen is down, the
 text will be underlined.
 
-![image138.png](images/01-blocks-scripts-and-sprites/image138.png){.image-inline}
+<img class="image-inline" src="images/01-blocks-scripts-and-sprites/image138.png" alt="image138.png">
 Takes a sprite as input. Like stamp except that the costume is stamped onto the selected sprite instead of onto the stage. (Does nothing if the current sprite doesn’t overlap the chosen sprite.)
 
-![image139.png](images/01-blocks-scripts-and-sprites/image139.png){.image-inline}
+<img class="image-inline" src="images/01-blocks-scripts-and-sprites/image139.png" alt="image139.png">
 Takes a sprite as input. Erases from that sprite’s costume the area that overlaps with the current sprite’s costume. (Does not affect the costume in the chosen sprite’s wardrobe, only the copy currently visible.)
 
-![image142.png](images/01-blocks-scripts-and-sprites/image142.png){.image-inline} See the "generic when" hat block described in footnote [^1].
+<img class="image-inline" src="images/01-blocks-scripts-and-sprites/image142.png" alt="image142.png"> See the "generic when" hat block described in footnote [^1].
 
-![image141.png](images/01-blocks-scripts-and-sprites/image141.png){.image-inline} See @sec-pause-all.
+<img class="image-inline" src="images/01-blocks-scripts-and-sprites/image141.png" alt="image141.png"> See @sec-pause-all.
 
-![image140.png](images/01-blocks-scripts-and-sprites/image140.png){.image-inline} Runs only this script until finished. In the Control palette even though it’s gray.
+<img class="image-inline" src="images/01-blocks-scripts-and-sprites/image140.png" alt="image140.png"> Runs only this script until finished. In the Control palette even though it’s gray.
 
-![image143.png](images/01-blocks-scripts-and-sprites/image143.png){.image-inline} <!--  style="width:1.71in;height:0.23in" alt="Macintosh HD:Users:bh:Desktop:pix:reporter-if.png" / --> Reporter
+<img class="image-inline" src="images/01-blocks-scripts-and-sprites/image143.png" alt="image143.png"> <!--  style="width:1.71in;height:0.23in" alt="Macintosh HD:Users:bh:Desktop:pix:reporter-if.png" / --> Reporter
 version of the `if/else` primitive command block\index{if else reporter
 block} . Only one of the two branches is evaluated, depending on the
 value of the first input.
 
-![image144.png](images/01-blocks-scripts-and-sprites/image144.png){.image-inline} <!--  style="width:1.83in;height:0.61in" alt="Macintosh HD:Users:bh:Desktop:pix:for.png" / --> Looping block like
+<img class="image-inline" src="images/01-blocks-scripts-and-sprites/image144.png" alt="image144.png"> <!--  style="width:1.83in;height:0.61in" alt="Macintosh HD:Users:bh:Desktop:pix:for.png" / --> Looping block like
 `repeat` but\index{for block} with an index variable\index{index
 variable} .
 
-![image145.png](images/01-blocks-scripts-and-sprites/image145.png){.image-inline} <!--  style="width:1.37986in;height:0.28958in" alt="Graphical user interface, application, logo Description automatically generated" / --> Declare
+<img class="image-inline" src="images/01-blocks-scripts-and-sprites/image145.png" alt="image145.png"> <!--  style="width:1.37986in;height:0.28958in" alt="Graphical user interface, application, logo Description automatically generated" / --> Declare
 {index}`local variables` in a script.\index{script
 variables block}
 
-![image148.png](images/01-blocks-scripts-and-sprites/image148.png){.image-inline} See @sec-ch09.
+<img class="image-inline" src="images/01-blocks-scripts-and-sprites/image148.png" alt="image148.png"> See @sec-ch09.
 
-![image146.png](images/01-blocks-scripts-and-sprites/image146.png){.image-inline} reports the value of a {index}`graphics effect`.
+<img class="image-inline" src="images/01-blocks-scripts-and-sprites/image146.png" alt="image146.png"> reports the value of a {index}`graphics effect`.
 
-![image147.png](images/01-blocks-scripts-and-sprites/image147.png){.image-inline} Constant {index}`true <true block>` or {index}`false<false block>` value. See @sec-predicates-and-conditional-evaluation.
+<img class="image-inline" src="images/01-blocks-scripts-and-sprites/image147.png" alt="image147.png"> Constant {index}`true <true block>` or {index}`false<false block>` value. See @sec-predicates-and-conditional-evaluation.
 
-![image149.png](images/01-blocks-scripts-and-sprites/image149.png){.image-inline}
+<img class="image-inline" src="images/01-blocks-scripts-and-sprites/image149.png" alt="image149.png">
 
-![image153.png](images/01-blocks-scripts-and-sprites/image153.png){.image-inline}
+<img class="image-inline" src="images/01-blocks-scripts-and-sprites/image153.png" alt="image153.png">
 Create a primitive using JavaScript\index{JavaScript}. (This block is
 disabled by default; the user must check “Javascript extensions” in the
 setting menu *each time* a project is loaded.)\index{pen down? block}
@@ -859,7 +862,7 @@ setting menu *each time* a project is loaded.)\index{pen down? block}
 :gutter: 3
 
 :::{grid-item}
-![image150.png](images/01-blocks-scripts-and-sprites/image150.png){.image-inline}
+<img class="image-inline" src="images/01-blocks-scripts-and-sprites/image150.png" alt="image150.png">
 :::
 
 :::{grid-item}
@@ -908,21 +911,21 @@ representing the structure of the script. See Chapter XI.
 :::
 ::::
 
-![image170.png](images/01-blocks-scripts-and-sprites/image170.png){.image-inline} For lists,
+<img class="image-inline" src="images/01-blocks-scripts-and-sprites/image170.png" alt="image170.png"> For lists,
 \index{identical to} reports true only if its two input values are the
 very same list, so changing an item in one of them is visible in the
 other. (For `=`, lists that look the same are the same.) For text strings,
 uses case-sensitive comparison, unlike `=`, which is case-independent.
 
-![image171.png](images/01-blocks-scripts-and-sprites/image171.png){.image-inline} These *hidden* blocks can be found with the relabel option
+<img class="image-inline" src="images/01-blocks-scripts-and-sprites/image171.png" alt="image171.png"> These *hidden* blocks can be found with the relabel option
 \index{relabel option} of any dyadic arithmetic block. They’re hidden
-partly because writing them in {.snap}`Snap` is a good, pretty easy
+partly because writing them in Snap<em>!</em> is a good, pretty easy
 programming exercise. Note: the two inputs to `atan2`\index{atan2 block}
 are Δ*x* and Δ*y* in that order, because we measure angles clockwise
 from north. `max` /index{max block} and `min` /index{min block} are *variadic;* by clicking the arrowhead, you
 can provide additional inputs.
 
-![image177.png](images/01-blocks-scripts-and-sprites/image177.png){.image-inline} ![image178.png](images/01-blocks-scripts-and-sprites/image178.png){.image-inline} ![image179.png](images/01-blocks-scripts-and-sprites/image179.png){.image-inline}
+<img class="image-inline" src="images/01-blocks-scripts-and-sprites/image177.png" alt="image177.png"> <img class="image-inline" src="images/01-blocks-scripts-and-sprites/image178.png" alt="image178.png"> <img class="image-inline" src="images/01-blocks-scripts-and-sprites/image179.png" alt="image179.png">
 
 Similarly, these\index{*less-than-or-equal@`≤` block} hidden predicates can be found by relabeling the relational predicates.
 
@@ -944,7 +947,7 @@ capability is new in version 8.0.
 `Numbers from`\index{numbers from block} will
 count up or down.
 
-![image224.png](images/01-blocks-scripts-and-sprites/image224.png){.image-inline} ![image225.png](images/01-blocks-scripts-and-sprites/image225.png){.image-inline}
+<img class="image-inline" src="images/01-blocks-scripts-and-sprites/image224.png" alt="image224.png"> <img class="image-inline" src="images/01-blocks-scripts-and-sprites/image225.png" alt="image225.png">
 report\index{position block} the sprite or mouse position as a two-item
 vector (x,y).
 
@@ -1012,7 +1015,7 @@ or stamped ink on the stage. Also, `touching`\index{touching block} will
 not detect hidden sprites, but a hidden sprite can use it to detect
 visible sprites.
 
-![image305.png](images/01-blocks-scripts-and-sprites/image305.png){.image-inline} <!--  style="width:2.43333in;height:0.3in" alt="Macintosh HD:Users:bh:Desktop:video-on.png" / --> The `video on` block
+<img class="image-inline" src="images/01-blocks-scripts-and-sprites/image305.png" alt="image305.png"> <!--  style="width:2.43333in;height:0.3in" alt="Macintosh HD:Users:bh:Desktop:video-on.png" / --> The `video on` block
 \index{video block} has a {index}`snap option` that takes a
 snapshot and reports it as a costume. It is hyperized with respect to its second input.
 
@@ -1020,11 +1023,11 @@ snapshot and reports it as a costume. It is hyperized with respect to its second
 :gutter: 3
 
 :::{grid-item}
-![image306.png](images/01-blocks-scripts-and-sprites/image306.png){.image-inline}
+<img class="image-inline" src="images/01-blocks-scripts-and-sprites/image306.png" alt="image306.png">
 :::
 
 :::{grid-item}
-![image304.png](images/01-blocks-scripts-and-sprites/image304.png){.image-inline} The "neg" option\index{neg option} is a monadic\index{of block
+<img class="image-inline" src="images/01-blocks-scripts-and-sprites/image304.png" alt="image304.png"> The "neg" option\index{neg option} is a monadic\index{of block
 (operators)}\index{length of text block} negation operator
 \index{negation operator}, equivalent to "lg" is log<sub>2</sub>.
 "id" is the identity function, which reports its input. "sign" reports 1
@@ -1036,7 +1039,7 @@ for positive input, 0 for zero input, or -1 for negative input.
 <!-- ::: {.callout-tip} -->
 <!-- ## Two Different Length Of Blocks -->
 
-The ![length of text block](./blocks/images/block_reportTextAttribute.png){.image-inline} name was changed to clarify it is different from ![length of text block](./blocks/images/block_reportListAttribute.png){.image-inline}
+The <img class="image-inline" src="./blocks/images/block_reportTextAttribute.png" alt="length of text block"> name was changed to clarify it is different from <img class="image-inline" src="./blocks/images/block_reportListAttribute.png" alt="length of text block">
 <!-- ::: -->
 
 ![image308.png](images/01-blocks-scripts-and-sprites/image308.png)
@@ -1096,7 +1099,7 @@ broadcast, or to a two-item list containing the message and the payload.
 ![image355.png](images/01-blocks-scripts-and-sprites/image355.png){.image-2x}
 
 If the input is set to “any key,” then a right arrowhead appears:
-![image357.png](images/01-blocks-scripts-and-sprites/image357.png){.image-inline-tall} and if you click it,
+<img class="image-inline-tall" src="images/01-blocks-scripts-and-sprites/image357.png" alt="image357.png"> and if you click it,
 a script variable key is created whose value is the key that was
 pressed. (If the key is one that’ represented in the input menu by a
 word or phrase, e.g., “enter” or “up arrow,” then the value of key
@@ -1112,7 +1115,8 @@ is a grayscale value 0-255; a two-number list, grayscale plus opacity
 <!-- TODO: Images like this should have index entries defined after this image. -->
 ![image358.png](images/01-blocks-scripts-and-sprites/image358.png)
 
-### Using Lists with the Ask Block {#sec-ask-lists}
+(sec-ask-lists)=
+### Using Lists with the Ask Block
 These ask features\index{ask and wait block} and more in the Menus
 library.
 
@@ -1142,12 +1146,13 @@ script variables if the right input is a script.)
 :::
 ::::
 
-## Libraries {#sec-libraries-intro}
+(sec-libraries-intro)=
+## Libraries
 
-There are several collections of useful procedures that aren’t {.snap}`Snap`
+There are several collections of useful procedures that aren’t Snap<em>!</em>
 primitives, but are provided as libraries. To include a library in your
 project, choose the Libraries… option\index{Libraries… option} in the
-file (![file menu icon](images/01-blocks-scripts-and-sprites/image384.png){.image-inline}) menu.
+file (<img class="image-inline" src="images/01-blocks-scripts-and-sprites/image384.png" alt="file menu icon">) menu.
 
 ![The import libraries dialog](images/01-blocks-scripts-and-sprites/image385.png)
 
@@ -1244,7 +1249,7 @@ false to continue repeating. The last repeat block is like the `repeat`
 primitive, but makes the number of repetitions so far available to the
 repeated script. The next two blocks are variations on `for`\index{$for$
 block} : the first allows an explicit step instead of using ±1, and the
-second allows any values, not just numbers; inside the script you say ![image390.png](images/01-blocks-scripts-and-sprites/image390.png){.image-inline} <!-- {width=3.15278in height=0.29861in} -->
+second allows any values, not just numbers; inside the script you say <img class="image-inline" src="images/01-blocks-scripts-and-sprites/image390.png" alt="image390.png"> <!-- {width=3.15278in height=0.29861in} -->
 replacing the grey block in the picture with an expression to give the next
 desired value for the loop index.
 
@@ -1299,13 +1304,13 @@ Inexplicably, the designers of Scratch chose to abandon that tradition,
 and to focus on the representation of text as a string of characters.
 The one vestige of the {index}`Logo tradition` from which
 Scratch developed is the block named letter (1) of (world)\index{letter
-(1) of (world) block} , rather than character (1) of (world). {.snap}`Snap`
+(1) of (world) block} , rather than character (1) of (world). Snap<em>!</em>
 inherits its text handling from Scratch.
 
 In Logo, the visual representation of a sentence\index{visual
 representation of a sentence} (a list of words) looks like a natural
 language sentence: a string of words with spaces between them. In
-{.snap}`Snap`, the visual representation of a list looks nothing at all like
+Snap<em>!</em>, the visual representation of a list looks nothing at all like
 natural language. On the other hand, representing a sentence as a string
 means that the program must continually re-parse the text on every
 operation, looking for spaces, treating multiple consecutive spaces as
@@ -1342,7 +1347,7 @@ The {index}`pixels library` has one block:
 ![image395.png](images/01-blocks-scripts-and-sprites/image395.png{.image-4x} <!-- {width=0.77917in height=0.62986in} -->
 
 Costumes are first class data
-in {.snap}`Snap`. Most of the processing of costume data is done by primitive
+in Snap<em>!</em>. Most of the processing of costume data is done by primitive
 blocks in the Looks category. (See page
 [79](#media-computation-with-costumes).) This library provides snap
 \index{snap block}, which takes a picture using your computer’s camera
@@ -1417,7 +1422,7 @@ The colors and {index}`crayons library` has these blocks:
 
 It is intended as a more powerful replacement for the primitive `set pen`
 block\index{set pen block}, including *first class color* support; `HSL color`\index{HSL color} specification as a better alternative to the HSV
-that {.snap}`Snap` inherits from JavaScript; a “{index}`fair hue`”
+that Snap<em>!</em> inherits from JavaScript; a “{index}`fair hue`”
 scale that compensates for the eye’s grouping a wide range of light
 frequencies as green while labelling mere slivers as orange or yellow;
 the `X11/W3C standard color names`\index{X11/W3C color names}; `RGB in
@@ -1429,8 +1434,8 @@ next page.
 ![image412.png](images/01-blocks-scripts-and-sprites/image412.png) <!--  style="width:1.13333in;height:0.23333in" alt="Macintosh HD:Users:bh:Desktop:pen-color.png" / -->
 
 Colors are
-created by the ![image414.png](images/01-blocks-scripts-and-sprites/image414.png){.image-inline} <!--  style="width:0.95in;height:0.225in" alt="Macintosh HD:Users:bh:Desktop:color picker.png" / --> block (for direct user selection), the `color from`
-\index{color from block} to specify a color numerically,  or by ![image413.png](images/01-blocks-scripts-and-sprites/image413.png){.image-inline} <!--  style="width:1.13333in;height:0.23333in" alt="Macintosh HD:Users:bh:Desktop:pen-color.png" / --> , which
+created by the <img class="image-inline" src="images/01-blocks-scripts-and-sprites/image414.png" alt="image414.png"> <!--  style="width:0.95in;height:0.225in" alt="Macintosh HD:Users:bh:Desktop:color picker.png" / --> block (for direct user selection), the `color from`
+\index{color from block} to specify a color numerically,  or by <img class="image-inline" src="images/01-blocks-scripts-and-sprites/image413.png" alt="image413.png"> <!--  style="width:1.13333in;height:0.23333in" alt="Macintosh HD:Users:bh:Desktop:pen-color.png" / --> , which
 reports the color currently in use by the pen. The `from color` block
 \index{from color block} reports names or numbers associated with a
 color:
@@ -1666,7 +1671,7 @@ provides these blocks:\index{case-independent comparisons block}
 ![image463.png](images/01-blocks-scripts-and-sprites/image463.png) <!-- {width=3.9375in height=2.04167in} -->
 
 All
-of these could be written in {.snap}`Snap` itself, but these are implemented
+of these could be written in Snap<em>!</em> itself, but these are implemented
 using the corresponding JavaScript library functions directly, so they
 run fast. They can be used, for example, in scraping data from a web
 site. The command use case-independent comparisons applies only to this
@@ -1764,7 +1769,7 @@ The {index}`database library` contains these blocks:
 
 ![image472.png](images/01-blocks-scripts-and-sprites/image472.png)
 
-It is used to keep data that persist from one {.snap}`Snap` session
+It is used to keep data that persist from one Snap<em>!</em> session
  to the next, if you use the same browser and the same login.
 
 The world {index}`map library` has these blocks:
@@ -1844,7 +1849,7 @@ to take lists as inputs. See @sec-ask-lists.
 
 ![image486.png](images/01-blocks-scripts-and-sprites/image486.png)
 
-The **Sci{.snap}`Snap` library**\index{SciSnap@"SciSnap! library"} and the **TuneScope
+The **SciSnap<em>!</em> library**\index{SciSnap@"SciSnap! library"} and the **TuneScope
 library**\index{TuneScope@"TuneScope library"} are too big to discuss here and are
 documented separately at
 <http://emu-online.de/ProgrammingWithSciSnap.pdf> and

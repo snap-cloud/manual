@@ -20,6 +20,11 @@ project:
   exclude:
     - '**/*.qmd'
     - '**/*.tex'
+  myst_substitutions:
+    # Snap: '<snap class="snap">Snap<em>!</em></span>'
+    # Snap: '{span .snap}`Snap!`'
+    Snap: 'Test Snap!'
+    SnapHTML: '<span class="snap">Snap<em>!</em></span>'
   exports:
   - format: tex+pdf
     title: Snap\textit{!} Reference Manual
@@ -33,6 +38,6 @@ site:
   template: book-theme
   numbered-references: true
   options:
-    style: _support/styles/snap-manual.scss
+    style: _support/styles/snap-manual.css
     favicon: images/favicon.png
     logo: images/snap-logo.png

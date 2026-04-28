@@ -1,0 +1,11 @@
+{
+  "devDependencies": {
+    "sass": "^1.99.0"
+  },
+  "scripts": {
+    "styles:build": "sass _support/styles/snap-manual.scss _support/styles/snap-manual.css --style=compressed --no-source-map",
+    "styles:watch": "sass --watch _support/styles/snap-manual.scss:_support/styles/snap-manual.css",
+    "dev": "npm run styles:build && jupyter-book start",
+    "build": "npm run styles:build && jupyter-book build --html"
+  }
+}

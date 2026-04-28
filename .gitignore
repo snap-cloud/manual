@@ -2,6 +2,11 @@
 Thumbs.db
 ~*
 
+# CSS Compilation
+node_modules/
+_support/styles/snap-manual.css
+_support/styles/*.map
+
 # Basic Python-y things
 env/
 

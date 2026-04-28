@@ -2,7 +2,8 @@
   "permissions": {
     "allow": [
       "Bash(xxd)",
-      "Bash(python3 *)"
+      "Bash(python3 *)",
+      "Bash(node_modules/.bin/myst --version)"
     ]
   }
 }
