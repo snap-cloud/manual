@@ -27,8 +27,30 @@ jobs:
       - name: Print MyST version
         run: myst --version
 
+      - name: Install LaTeX
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends \
+            latexmk \
+            texlive-latex-recommended \
+            texlive-latex-extra \
+            texlive-fonts-recommended \
+            texlive-fonts-extra \
+            texlive-luatex \
+            texlive-xetex
+
       - name: Build HTML
         run: myst build --html
+
+      - name: Build PDF
+        run: myst build --pdf
+
+      - name: Stage PDF for publishing
+        run: |
+          # The PDF location is configured in myst.yml under exports.output.
+          # Copy it into the HTML output so it ships alongside the site.
+          mkdir -p _build/html
+          cp output/snap-manual.pdf _build/html/snap-manual.pdf
 
       - name: Publish HTML to gh-pages
         uses: peaceiris/actions-gh-pages@v4

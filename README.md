@@ -1,13 +1,12 @@
 ![Snap! Logo](./images/snap-logo.png)
 
 # The Snap<em>!</em> Reference Manual
-## [Read at docs.snap.berkeley.edu][website] ([Original PDF][original_pdf])
+## [Read at docs.snap.berkeley.edu][website] &middot; [Download the PDF][pdf]
 
 [![GitHub Pages](https://img.shields.io/badge/website-GitHub%20Pages-blue.svg)](https://docs.snap.berkeley.edu/)
 
 [website]: https://docs.snap.berkeley.edu
 [pdf]: https://docs.snap.berkeley.edu/snap-manual.pdf
-[original_pdf]: ./SnapManual.pdf
 
 The reference manual for the [Snap<em>!</em> programming language][snap]. ([GitHub][snap_gh])
 
@@ -114,11 +113,15 @@ myst build --html
 
 Output is placed in `_build/html/`.
 
-**To build a PDF (requires LaTeX):**
+**To build a PDF (requires a TeX Live install):**
 
 ```shell
 myst build --pdf
 ```
+
+The PDF is written to `output/snap-manual.pdf`. See
+[`docs/latex.md`](./docs/latex.md) for details on the PDF pipeline and the
+local LaTeX template at [`_latex-template/`](./_latex-template/).
 
 ### Quarto (legacy)
 
@@ -146,7 +149,11 @@ ruby convert-word-doc.rb
 
 ## Published Book
 
-The website is hosted on GitHub Pages, compiled by the `myst.yml` workflow and deployed to the `gh-pages` branch.
+The website is hosted on GitHub Pages at [docs.snap.berkeley.edu][website].
+On every push to `main`, the [`myst.yml`](./.github/workflows/myst.yml)
+workflow builds both the HTML site and the PDF (`snap-manual.pdf`), then
+publishes them together to the `gh-pages` branch. The PDF is therefore
+available at [`/snap-manual.pdf`][pdf] on the published site.
 
 ## License
 
