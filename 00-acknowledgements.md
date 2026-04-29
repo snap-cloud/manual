@@ -26,16 +26,27 @@ MIT, MIT Media Lab
 :::
 
 Brian grew up at the MIT and Stanford Artificial Intelligence Labs
-\index{MIT Artificial Intelligence Lab}\index{Stanford Artificial Intelligence Lab}, learning from Lisp inventor
-{index}`John McCarthy<single: McCarthy, John>`, Scheme\index{Scheme} inventors
-Gerald J. Sussman\index{Sussman, Gerald J.} and Guy Steele
-\index{Steele, Guy}, and the authors of the world’s best computer
+, learning from Lisp inventor
+{index}`John McCarthy<single: McCarthy, John>`, Scheme inventors
+Gerald J. Sussman and Guy Steele
+, and the authors of the world’s best computer
 science book, *Structure and Interpretation of Computer Programs*
-\index{Structure and Interpretation of Computer Programs} *,* Hal
-Abelson\index{Abelson, Hal} and Gerald J. Sussman with Julie Sussman
-\index{Sussman, Julie}, among many other heroes of computer science.
+ *,* Hal
+Abelson and Gerald J. Sussman with Julie Sussman
+, among many other heroes of computer science.
 (Brian was also lucky enough, while in high school, to meet Kenneth
-Iverson\index{Iverson, Kenneth E.}, the inventor of APL\index{APL}.)
+Iverson, the inventor of APL.)
+:::{index} MIT Artificial Intelligence Lab
+Stanford Artificial Intelligence Lab
+Scheme
+Sussman, Gerald J.
+Steele, Guy
+Structure and Interpretation of Computer Programs
+Abelson, Hal
+Sussman, Julie
+Iverson, Kenneth E.
+APL
+:::
 
 ***In the glory days of the MIT Logo Lab, we used to say, “Logo is Lisp
 disguised as BASIC.” Now, with its first class procedures, lexical
@@ -47,26 +58,35 @@ of Snap<em>!</em> that we have officially declared them members of the team:
 {index}`Michael Ball<single: Ball, Michael>` and Bernat Romagosa, in addition to
 contributions throughout the project, have primary responsibility for
 the web site and {index}`cloud storage<single: storage, cloud>`. Joan Guillén i
-Pelegay\index{Guillén i Pelegay, Joan} has contributed very careful and
+Pelegay has contributed very careful and
 wise analysis of outstanding issues, including help in taming the
 management of translations to non-English languages. Jadga Hügle
-\index{Huegle, Jadga}, has energetically contributed to online
+, has energetically contributed to online
 mini-courses about Snap<em>!</em> and leading workshops for kids and for
 adults. Jens, Jadga, and Bernat are paid to work on Snap<em>!</em> by SAP,
 which also supports our computing needs.
+:::{index} Guillén i Pelegay, Joan
+Huegle, Jadga
+:::
 
 We have been fortunate to get to know an amazing group of brilliant
 middle school(!) and high school students through the Scratch Advanced
 Topics forum, several of whom (since grown up) have contributed code to
 Snap<em>!</em>: {index}`Kartik Chandra<single: Chandra, Kartik>`, Nathan Dinsmore
-\index{Dinsmore, Nathan}, {index}`Connor Hudson<single: Hudson, Connor>`, Ian
-Reynolds\index{Reynolds, Ian}, and Deborah Servilla\index{Servilla,
+, {index}`Connor Hudson<single: Hudson, Connor>`, Ian
+Reynolds, and Deborah Servilla\index{Servilla,
 Deborah} . Many more have contributed ideas and alpha-testing bug
 reports. UC Berkeley students who’ve contributed code include Achal Dave
-\index{Dave, Achal}. Kyle Hotchkiss\index{Hotchkiss. Kyle}, Ivan
-Motyashov\index{Motyashov, Ivan}, and {index}`Yuan Yuan<single: Yuan, Yuan>`.
+. Kyle Hotchkiss, Ivan
+Motyashov, and {index}`Yuan Yuan<single: Yuan, Yuan>`.
 Contributors of translations are too numerous to list here, but they’re
 in the “About…” box in Snap<em>!</em> itself.
+:::{index} Dinsmore, Nathan
+Reynolds, Ian
+Dave, Achal
+Hotchkiss. Kyle
+Motyashov, Ivan
+:::
 
 This material is based upon work supported in part by the National
 Science Foundation under Grants No.
