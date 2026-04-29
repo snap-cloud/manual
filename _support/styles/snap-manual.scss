@@ -1,17 +1,7 @@
 // Adobe Fonts -- Michael's UC Berkeley Adobe Account
-// Loaded brw3qiw.css in the _quarto.yml file
 // TODO: Move to Adobe Fonts
 @import url('https://fonts.googleapis.com/css2?family=Freight+Text+Pro:wght@400;700&display=swap');
 
-/*-- scss:defaults --*/
-// $h2-font-size:          1.6rem !default;
-// $headings-font-weight:  500 !default;
-$bs-navbar-brand-color: #FFF;
-$bs-navbar-brand-hover-color: #FFF;
-
-/*-- scss:uses --*/
-
-/*-- scss:rules --*/
 :root,
 :root[data-theme='dark'] {
   // Berkeley Color Palette
@@ -61,17 +51,7 @@ $bs-navbar-brand-hover-color: #FFF;
       color: #FFF;
     }
   }
-  .quarto-navbar-tools .quarto-navigation-tool {
-    color: #FFF;
 
-    &:hover, &:focus {
-      color: #FFF;
-    }
-  }
-
-  #quarto-search.type-overlay .aa-Autocomplete svg.aa-SubmitIcon {
-    color: #FFF;
-  }
 }
 
 /* Designed to be the last element in a section / nav
@@ -95,8 +75,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Freight Text Pro', serif;
 }
 
-// Block (page) titles cannot have their own classes added to them
-// So we will override Quarto's CSS where these titles appear.
+// Block (page) titles cannot have their own classes added to them directly.
 .title code,
 .menu-text code {
   color: #000;
@@ -124,6 +103,14 @@ h1, h2, h3, h4, h5, h6 {
 // .image-inline may be on an <img> directly or on a MyST-generated <picture>
 // wrapper. Shared layout rules live on the element; sizing/alignment rules are
 // applied to both the element itself and any nested <img>.
+// MyST wraps images in <picture> or <figure> and applies margin: auto.
+// Override for all three possible wrapper elements + bare <img>.
+figure.image-inline,
+figure.image-inline-tall {
+  display: inline;
+  margin: 0;
+}
+
 .image-inline {
   display: inline;
   padding: 0;
@@ -134,6 +121,7 @@ h1, h2, h3, h4, h5, h6 {
     max-height: 1.6em;
     line-height: 1.8;
     vertical-align: middle;
+    margin: 0;
   }
 }
 
@@ -147,6 +135,7 @@ h1, h2, h3, h4, h5, h6 {
     max-height: 2.4em;
     line-height: 2.4;
     vertical-align: bottom;
+    margin: 0;
   }
 }
 
@@ -162,7 +151,6 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-// Legacy Quarto evenly-spaced images (kept for other chapters not yet migrated)
 .evenly-spaced-images {
   display: flex;
   flex-wrap: wrap;

@@ -30,8 +30,8 @@ A Snap<em>!</em> {index}`Snap! program` consists of one or more
 (fig-draw-square)=
 ![image6.png](images/01-blocks-scripts-and-sprites/image6.png)
 
-index that make up this script have three different
-colors, corresponding to three of the eight *palettes* in which blocks
+The five {index}`blocks <block>` that make up this script have three different colors,
+corresponding to three of the eight *palettes* in which blocks
 can be found. The {index}`palette` area at the left edge of the
 window shows one palette at a time, chosen with the eight buttons just
 above the palette area. In this script, the gold blocks are from the
@@ -66,14 +66,14 @@ word “when”; in the square-drawing example in @fig-draw-square, the script s
 be run when the {index}`green flag<single: flag, green>` near the right end of the
 Snap<em>!</em> {index}`tool bar` is clicked. (The Snap<em>!</em> tool bar is
 part of the Snap<em>!</em> window, not the same as the browser’s or operating
-system’s menu bar.) A script isn’t required to have a hat block
-{index}`block; hat`, but if not, then the script will be run only if the
+system’s menu bar.) A script isn’t required to have a
+{index}`hat block <block; hat>`, but if not, then the script will be run only if the
 user clicks on the script itself. A script can’t have more than one hat
 block, and the hat block can be used only at the top of the script; its
 distinctive shape is meant to remind you of
 that.[^1]
 
-<!-- TODO: Different CSS for an inline hat block? -->
+- TODO: Different CSS for an inline hat block? -->
 [^1]: One of the hat blocks, the generic\index{hat block!generic}
 “when anything” block <img class="image-inline" src="images/01-blocks-scripts-and-sprites/image10.png" alt="generic when hat block">, is subtly different from the others. When the stop
 sign is clicked, or when a project or sprite is loaded, this block
@@ -87,8 +87,8 @@ instead of octagonal.
 The other blocks in our example script are *command* blocks
 \index{block!command}. Each {index}`command block`
 corresponds to an action that Snap<em>!</em> already knows how to carry out.
-For example, the block <img class="image-inline" src="./blocks/images/block_forward.png" alt="image9.png"> tells the sprite\index{sprite} (the arrowhead
-shape on the *stage*\index{stage} at the right end of the window) to
+For example, the block <img class="image-inline" src="./blocks/images/block_forward.png" alt="image9.png"> tells the {index}`sprite` (the arrowhead
+shape on the <em>{index}`stage`</em> at the right end of the window) to
 move ten steps (a step is a very small unit of distance) in the
 direction in which the arrowhead is pointing. We’ll see shortly that
 there can be more than one sprite, and that each sprite has its own

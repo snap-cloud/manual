@@ -1,41 +1,9 @@
 ---
-partial-data:
-  block_description: |
-    Moves a sprite a set number of steps (one coordinate) in whichever direction the sprite is facing.
-  label: "move _ steps"
-  block_spec: "move %n steps"
-  help_screen: "forward.png"
-  selector: "forward"
-  type: command
-  category: motion
-  arguments:
-    - name: distance
-      type: number
-      default: 10
-      description: The distance to move forward
-  returns: None
-  example_projects:
-    - title: Move Steps Example 1
-      url: https://snap.berkeley.edu/snap/snap.html#present:Username=snapcloud&ProjectName=Move%20Steps%20Example%201&editMode&noRun
-    - title: Move Steps Example 2
-      url: https://snap.berkeley.edu/snap/snap.html#present:Username=snapcloud&ProjectName=Move%20Steps%20Example%202&editMode&noRun
-    - title: Move Steps Example 3
-      url: https://snap.berkeley.edu/snap/snap.html#present:Username=snapcloud&ProjectName=Move%20Steps%20Example%203&editMode&noRun
-  example_images:
-     - image: Snap-Move-Video.mp4
-       description: Create a square shape
-  #   - image: move_forward.png
-  #     description: Move forward by 10 steps
+{}
 ---
 
 # `move steps` {.unnumbered .unlisted .pdf-only-unlisted}
 
 <!-- s2 -->
-<!-- {{< partial blocks/_block.qmd >}} -->
-```{python}
-#| echo: false
-#| output: asis
-import sys; sys.path.append('_support')
-from block_renderer import render_block
-render_block()
+```{block-help}
 ```

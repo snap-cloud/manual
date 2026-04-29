@@ -20,8 +20,15 @@ project:
   exclude:
     - '**/*.qmd'
     - '**/*.tex'
-  substituitions:
-    Snap: 'Snap<em>!</em>'
+  plugins:
+    - https://github.com/choldgraf/myst-substitutions/releases/download/v0.1/index.mjs
+    - _support/plugins/inline-image.mjs
+    - _support/plugins/block-help.mjs
+    - _support/plugins/snap-role.mjs
+  # Note this does not get rendered as native HTML / it is escaped.
+  substitutions:
+    Snap: Snap!
+    # Snap: 'Snap<em>!</em>'
   exports:
   - format: tex+pdf
     title: Snap\textit{!} Reference Manual
@@ -34,11 +41,9 @@ extends:
 site:
   template: book-theme
   numbered-references: true
+  hide_authors: true
   options:
     style: _support/styles/snap-manual.css
     favicon: images/favicon.png
     logo: images/snap-logo.png
     logo_alt: Snap! logo
-
-plugins:
-  - https://github.com/choldgraf/myst-substitutions/releases/download/v0.1/index.mjs

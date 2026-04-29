@@ -1,8 +1,8 @@
 ---
-page-layout: full
+toc: false
 ---
 
-# All Snap<em>!</em> Blocks
+# All {snap}`_` Blocks
 
 <!--
 The table below is currently generated from
@@ -39,14 +39,15 @@ reportCrossproduct
 
 <style>
 /* In the markdown table this class is applied to the link */
-.block-image-2x img {
+td .link picture img {
   height: 55%;
 }
 </style>
 
-<!-- This file should contain noting but markdown. -->
-{{< include _raw_blocks_table.qmd >}}
-: All Snap! Blocks {.blocks-table .table-striped .table-bordered .table-hover .table-responsive-sm .dataTable #sec-all-blocks}
+```{include} _raw_blocks_table.md
+```
+
+<!-- : All Snap! Blocks {.blocks-table .table-striped .table-bordered .table-hover .table-responsive-sm .dataTable #sec-all-blocks} -->
 
 <!--
 Consider loaing the DataTables script and stylesheets from a CDN.
