@@ -2,7 +2,7 @@
 toc: false
 ---
 
-# `hide variable` {.unnumbered .unlisted .pdf-only-unlisted}
+# `hide variable`
 
 ```{block-help}
 ```

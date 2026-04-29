@@ -40,7 +40,8 @@ reportCrossproduct
 <style>
 /* In the markdown table this class is applied to the link */
 td .link picture img {
-  height: 55%;
+  height: 55% !important;
+  margin: unset !important;
 }
 </style>
 

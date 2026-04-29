@@ -2,7 +2,7 @@
 toc: false
 ---
 
-# `atan2  ÷` {.unnumbered .unlisted .pdf-only-unlisted}
+# `atan2  ÷`
 
 ```{block-help}
 ```

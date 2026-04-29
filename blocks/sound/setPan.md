@@ -2,7 +2,7 @@
 toc: false
 ---
 
-# `Set Balance To` {.unnumbered .unlisted .pdf-only-unlisted}
+# `Set Balance To`
 
 ```{block-help}
 ```

@@ -2,7 +2,7 @@
 toc: false
 ---
 
-# Product `×` {.unnumbered .unlisted .pdf-only-unlisted}
+# Product `×`
 
 ```{block-help}
 ```

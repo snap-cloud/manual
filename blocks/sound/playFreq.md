@@ -2,7 +2,7 @@
 toc: false
 ---
 
-# `Play Frequency Hz` {.unnumbered .unlisted .pdf-only-unlisted}
+# `Play Frequency Hz`
 
 ```{block-help}
 ```

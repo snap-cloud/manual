@@ -2,7 +2,7 @@
 toc: false
 ---
 
-# `pause all ⏸` {.unnumbered .unlisted .pdf-only-unlisted}
+# `pause all ⏸`
 
 ```{block-help}
 ```

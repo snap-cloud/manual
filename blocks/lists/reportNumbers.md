@@ -2,7 +2,7 @@
 toc: false
 ---
 
-# `numbers from  to` {.unnumbered .unlisted .pdf-only-unlisted}
+# `numbers from  to`
 
 ```{block-help}
 ```

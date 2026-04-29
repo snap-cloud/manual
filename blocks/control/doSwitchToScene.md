@@ -2,7 +2,7 @@
 toc: false
 ---
 
-# `switch to scene` {.unnumbered .unlisted .pdf-only-unlisted}
+# `switch to scene`
 
 ```{block-help}
 ```

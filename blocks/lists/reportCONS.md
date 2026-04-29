@@ -2,7 +2,7 @@
 toc: false
 ---
 
-# `In Front Of` {.unnumbered .unlisted .pdf-only-unlisted}
+# `In Front Of`
 
 ```{block-help}
 ```

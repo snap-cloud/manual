@@ -75,6 +75,8 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Freight Text Pro', serif;
 }
 
+nav a[href*="/blocks/"] { font-family: ui-monospace, monospace; }
+
 // Block (page) titles cannot have their own classes added to them directly.
 .title code,
 .menu-text code {
@@ -96,6 +98,12 @@ h1, h2, h3, h4, h5, h6 {
 .image-4x {
   height: 25%;
   width: auto;
+}
+
+/* In the markdown table this class is applied to the link */
+td .link picture img {
+  height: 55% !important;
+  margin: unset !important;
 }
 
 // TODO: make latex command

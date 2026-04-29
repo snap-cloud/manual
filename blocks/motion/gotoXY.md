@@ -2,7 +2,7 @@
 toc: false
 ---
 
-# `go to x:  y:` {.unnumbered .unlisted .pdf-only-unlisted}
+# `go to x:  y:`
 
 ```{block-help}
 ```

@@ -2,7 +2,7 @@
 toc: false
 ---
 
-# `repeat until` {.unnumbered .unlisted .pdf-only-unlisted}
+# `repeat until`
 
 ```{block-help}
 ```

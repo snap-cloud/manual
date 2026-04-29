@@ -2,7 +2,7 @@
 toc: false
 ---
 
-# `reshape  to` {.unnumbered .unlisted .pdf-only-unlisted}
+# `reshape  to`
 
 ```{block-help}
 ```

@@ -2,7 +2,7 @@
 toc: false
 ---
 
-# `mouse down?` {.unnumbered .unlisted .pdf-only-unlisted}
+# `mouse down?`
 
 ```{block-help}
 ```

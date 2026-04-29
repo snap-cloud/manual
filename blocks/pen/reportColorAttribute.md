@@ -2,7 +2,7 @@
 toc: false
 ---
 
-# `Color Attribute` {.unnumbered .unlisted .pdf-only-unlisted}
+# `Color Attribute`
 
 ```{block-help}
 ```

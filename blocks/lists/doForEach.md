@@ -2,7 +2,7 @@
 toc: false
 ---
 
-# `for each in` {.unnumbered .unlisted .pdf-only-unlisted}
+# `for each in`
 
 ```{block-help}
 ```

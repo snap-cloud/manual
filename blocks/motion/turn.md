@@ -2,7 +2,7 @@
 toc: false
 ---
 
-# `turn ↻ degrees` {.unnumbered .unlisted .pdf-only-unlisted}
+# `turn ↻ degrees`
 
 <!-- s -->
 ```{block-help}

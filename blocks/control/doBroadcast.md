@@ -2,7 +2,7 @@
 toc: false
 ---
 
-# `broadcast` {.unnumbered .unlisted .pdf-only-unlisted}
+# `broadcast`
 
 ```{block-help}
 ```

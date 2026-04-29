@@ -2,7 +2,7 @@
 toc: false
 ---
 
-# `reset timer` {.unnumbered .unlisted .pdf-only-unlisted}
+# `reset timer`
 
 ```{block-help}
 ```

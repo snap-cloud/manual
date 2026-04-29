@@ -2,7 +2,7 @@
 toc: false
 ---
 
-# `Attribute of Costume` {.unnumbered .unlisted .pdf-only-unlisted}
+# `Attribute of Costume`
 
 ```{block-help}
 ```

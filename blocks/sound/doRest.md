@@ -2,7 +2,7 @@
 toc: false
 ---
 
-# `Rest For Beats` {.unnumbered .unlisted .pdf-only-unlisted}
+# `Rest For Beats`
 
 ```{block-help}
 ```

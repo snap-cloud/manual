@@ -2,7 +2,7 @@
 toc: false
 ---
 
-# `inherit` {.unnumbered .unlisted .pdf-only-unlisted}
+# `inherit`
 
 ```{block-help}
 ```

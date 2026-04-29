@@ -2,7 +2,7 @@
 toc: false
 ---
 
-# `go to  layer` {.unnumbered .unlisted .pdf-only-unlisted}
+# `go to  layer`
 
 ```{block-help}
 ```

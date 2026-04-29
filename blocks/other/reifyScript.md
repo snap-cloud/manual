@@ -2,7 +2,7 @@
 toc: false
 ---
 
-# `Command Ring` {.unnumbered .unlisted .pdf-only-unlisted}
+# `Command Ring`
 
 ```{block-help}
 ```

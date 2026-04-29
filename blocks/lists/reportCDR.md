@@ -2,7 +2,7 @@
 toc: false
 ---
 
-# `all but first of` {.unnumbered .unlisted .pdf-only-unlisted}
+# `all but first of`
 
 ```{block-help}
 ```

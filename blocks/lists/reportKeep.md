@@ -2,7 +2,7 @@
 toc: false
 ---
 
-# `keep items  from` {.unnumbered .unlisted .pdf-only-unlisted}
+# `keep items  from`
 
 ```{block-help}
 ```

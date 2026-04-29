@@ -2,7 +2,7 @@
 toc: false
 ---
 
-# `pick random  to` {.unnumbered .unlisted .pdf-only-unlisted}
+# `pick random  to`
 
 ```{block-help}
 ```

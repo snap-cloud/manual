@@ -2,7 +2,7 @@
 toc: false
 ---
 
-# `set  effect to` {.unnumbered .unlisted .pdf-only-unlisted}
+# `set  effect to`
 
 ```{block-help}
 ```

@@ -2,7 +2,7 @@
 toc: false
 ---
 
-# `change pen size by` {.unnumbered .unlisted .pdf-only-unlisted}
+# `change pen size by`
 
 ```{block-help}
 ```

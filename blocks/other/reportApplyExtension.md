@@ -2,7 +2,7 @@
 toc: false
 ---
 
-# `report extension` {.unnumbered .unlisted .pdf-only-unlisted}
+# `report extension`
 
 ```{block-help}
 ```

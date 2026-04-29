@@ -2,7 +2,7 @@
 toc: false
 ---
 
-# `Color at Location` {.unnumbered .unlisted .pdf-only-unlisted}
+# `Color at Location`
 
 ```{block-help}
 ```

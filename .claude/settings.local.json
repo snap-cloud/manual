@@ -5,7 +5,8 @@
       "Bash(python3 *)",
       "Bash(node_modules/.bin/myst --version)",
       "WebSearch",
-      "Bash(find /tmp/mystmd/docs -name \"*.md\" -type f -exec grep -l \"image\\\\|align\" {} \\\\;)"
+      "Bash(find /tmp/mystmd/docs -name \"*.md\" -type f -exec grep -l \"image\\\\|align\" {} \\\\;)",
+      "Bash(find /tmp/mystmd/packages/myst-spec -type f -name \"*.yml\" -exec grep -l \"{.*\\\\..*}\" {} \\\\;)"
     ]
   }
 }

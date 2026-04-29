@@ -2,7 +2,7 @@
 toc: false
 ---
 
-# `stamp` {.unnumbered .unlisted .pdf-only-unlisted}
+# `stamp`
 
 ```{block-help}
 ```

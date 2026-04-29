@@ -2,7 +2,7 @@
 {}
 ---
 
-# `move steps` {.unnumbered .unlisted .pdf-only-unlisted}
+# `move steps`
 
 <!-- s2 -->
 ```{block-help}

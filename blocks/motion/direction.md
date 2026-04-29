@@ -2,7 +2,7 @@
 toc: false
 ---
 
-# `direction` {.unnumbered .unlisted .pdf-only-unlisted}
+# `direction`
 
 ```{block-help}
 ```

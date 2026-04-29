@@ -2,7 +2,7 @@
 toc: false
 ---
 
-# `set slot  to` {.unnumbered .unlisted .pdf-only-unlisted}
+# `set slot  to`
 
 ```{block-help}
 ```

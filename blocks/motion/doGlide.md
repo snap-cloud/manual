@@ -2,7 +2,7 @@
 toc: false
 ---
 
-# `Glide Secs to Position` {.unnumbered .unlisted .pdf-only-unlisted}
+# `Glide Secs to Position`
 
 ```{block-help}
 ```

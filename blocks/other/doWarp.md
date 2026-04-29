@@ -2,7 +2,7 @@
 toc: false
 ---
 
-# `Warp` {.unnumbered .unlisted .pdf-only-unlisted}
+# `Warp`
 
 ```{block-help}
 ```

@@ -2,7 +2,7 @@
 toc: false
 ---
 
-# `Change Tempo` {.unnumbered .unlisted .pdf-only-unlisted}
+# `Change Tempo`
 
 ```{block-help}
 ```

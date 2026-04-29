@@ -2,7 +2,7 @@
 toc: false
 ---
 
-# `change y by` {.unnumbered .unlisted .pdf-only-unlisted}
+# `change y by`
 
 ```{block-help}
 ```

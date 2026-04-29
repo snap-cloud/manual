@@ -2,7 +2,7 @@
 toc: false
 ---
 
-# `Stretch Costume` {.unnumbered .unlisted .pdf-only-unlisted}
+# `Stretch Costume`
 
 ```{block-help}
 ```

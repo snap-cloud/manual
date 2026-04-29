@@ -2,7 +2,7 @@
 toc: false
 ---
 
-# `paste on` {.unnumbered .unlisted .pdf-only-unlisted}
+# `paste on`
 
 ```{block-help}
 ```

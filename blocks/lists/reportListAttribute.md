@@ -2,7 +2,7 @@
 toc: false
 ---
 
-# `Report List Attribute` {.unnumbered .unlisted .pdf-only-unlisted}
+# `Report List Attribute`
 
 ```{block-help}
 ```

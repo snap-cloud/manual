@@ -2,7 +2,7 @@
 toc: false
 ---
 
-# `Play Sound Hz` {.unnumbered .unlisted .pdf-only-unlisted}
+# `Play Sound Hz`
 
 ```{block-help}
 ```

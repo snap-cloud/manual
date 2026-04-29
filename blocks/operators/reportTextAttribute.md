@@ -2,7 +2,7 @@
 toc: false
 ---
 
-# `Attribute of Text` {.unnumbered .unlisted .pdf-only-unlisted}
+# `Attribute of Text`
 
 ```{block-help}
 ```

@@ -2,7 +2,7 @@
 toc: false
 ---
 
-# `cut from` {.unnumbered .unlisted .pdf-only-unlisted}
+# `cut from`
 
 ```{block-help}
 ```

@@ -2,7 +2,7 @@
 toc: false
 ---
 
-# `Play Note For Beats` {.unnumbered .unlisted .pdf-only-unlisted}
+# `Play Note For Beats`
 
 ```{block-help}
 ```

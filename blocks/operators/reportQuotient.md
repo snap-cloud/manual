@@ -2,7 +2,7 @@
 toc: false
 ---
 
-# Divide `÷` {.unnumbered .unlisted .pdf-only-unlisted}
+# Divide `÷`
 
 ```{block-help}
 ```

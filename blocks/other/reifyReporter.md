@@ -2,7 +2,7 @@
 toc: false
 ---
 
-# `Reporter Ring` {.unnumbered .unlisted .pdf-only-unlisted}
+# `Reporter Ring`
 
 ```{block-help}
 ```

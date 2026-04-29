@@ -2,7 +2,7 @@
 toc: false
 ---
 
-# `apply xtension` {.unnumbered .unlisted .pdf-only-unlisted}
+# `apply xtension`
 
 ```{block-help}
 ```

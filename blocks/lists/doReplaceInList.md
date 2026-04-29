@@ -2,7 +2,7 @@
 toc: false
 ---
 
-# `replace item of with` {.unnumbered .unlisted .pdf-only-unlisted}
+# `replace item of with`
 
 ```{block-help}
 ```

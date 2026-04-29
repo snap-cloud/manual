@@ -2,7 +2,7 @@
 toc: false
 ---
 
-# `Power of Number` {.unnumbered .unlisted .pdf-only-unlisted}
+# `Power of Number`
 
 ```{block-help}
 ```

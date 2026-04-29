@@ -2,7 +2,7 @@
 toc: false
 ---
 
-# `Set Volume` {.unnumbered .unlisted .pdf-only-unlisted}
+# `Set Volume`
 
 ```{block-help}
 ```

@@ -2,7 +2,7 @@
 toc: false
 ---
 
-# `wait  secs` {.unnumbered .unlisted .pdf-only-unlisted}
+# `wait  secs`
 
 ```{block-help}
 ```

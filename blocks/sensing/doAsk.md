@@ -2,7 +2,7 @@
 toc: false
 ---
 
-# `ask  and wait` {.unnumbered .unlisted .pdf-only-unlisted}
+# `ask  and wait`
 
 ```{block-help}
 ```

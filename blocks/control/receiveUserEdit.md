@@ -2,7 +2,7 @@
 toc: false
 ---
 
-# `when  is edited` {.unnumbered .unlisted .pdf-only-unlisted}
+# `when  is edited`
 
 ```{block-help}
 ```

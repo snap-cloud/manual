@@ -2,7 +2,7 @@
 toc: false
 ---
 
-# `next costume` {.unnumbered .unlisted .pdf-only-unlisted}
+# `next costume`
 
 ```{block-help}
 ```

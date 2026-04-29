@@ -2,7 +2,7 @@
 toc: false
 ---
 
-# `if on edge, bounce` {.unnumbered .unlisted .pdf-only-unlisted}
+# `if on edge, bounce`
 
 ```{block-help}
 ```

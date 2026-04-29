@@ -2,7 +2,7 @@
 toc: false
 ---
 
-# `when I receive` {.unnumbered .unlisted .pdf-only-unlisted}
+# `when I receive`
 
 ```{block-help}
 ```

@@ -2,7 +2,7 @@
 toc: false
 ---
 
-# `this` {.unnumbered .unlisted .pdf-only-unlisted}
+# `this`
 
 ```{block-help}
 ```

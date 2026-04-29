@@ -2,7 +2,7 @@
 toc: false
 ---
 
-# `Predicate Ring` {.unnumbered .unlisted .pdf-only-unlisted}
+# `Predicate Ring`
 
 ```{block-help}
 ```

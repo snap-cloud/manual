@@ -2,7 +2,7 @@
 toc: false
 ---
 
-# `JavaScript Function` {.unnumbered .unlisted .pdf-only-unlisted}
+# `JavaScript Function`
 
 ```{block-help}
 ```

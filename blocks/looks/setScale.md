@@ -2,7 +2,7 @@
 toc: false
 ---
 
-# `Set Sprite Size` {.unnumbered .unlisted .pdf-only-unlisted}
+# `Set Sprite Size`
 
 ```{block-help}
 ```

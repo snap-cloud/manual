@@ -2,7 +2,7 @@
 toc: false
 ---
 
-# `point towards` {.unnumbered .unlisted .pdf-only-unlisted}
+# `point towards`
 
 ```{block-help}
 ```

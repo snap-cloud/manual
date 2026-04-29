@@ -2,7 +2,7 @@
 toc: false
 ---
 
-# `Skew Costume by Degrees` {.unnumbered .unlisted .pdf-only-unlisted}
+# `Skew Costume by Degrees`
 
 ```{block-help}
 ```

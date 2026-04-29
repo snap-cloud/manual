@@ -2,7 +2,7 @@
 toc: false
 ---
 
-# `max` {.unnumbered .unlisted .pdf-only-unlisted}
+# `max`
 
 ```{block-help}
 ```

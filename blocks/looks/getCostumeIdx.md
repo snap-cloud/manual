@@ -2,7 +2,7 @@
 toc: false
 ---
 
-# `costume number` {.unnumbered .unlisted .pdf-only-unlisted}
+# `costume number`
 
 ```{block-help}
 ```

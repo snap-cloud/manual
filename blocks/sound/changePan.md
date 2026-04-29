@@ -2,7 +2,7 @@
 toc: false
 ---
 
-# `Change Balance` {.unnumbered .unlisted .pdf-only-unlisted}
+# `Change Balance`
 
 ```{block-help}
 ```

@@ -2,7 +2,7 @@
 toc: false
 ---
 
-# `think  for  secs` {.unnumbered .unlisted .pdf-only-unlisted}
+# `think  for  secs`
 
 ```{block-help}
 ```

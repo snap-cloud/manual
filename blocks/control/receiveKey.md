@@ -2,7 +2,7 @@
 toc: false
 ---
 
-# `when  key pressed` {.unnumbered .unlisted .pdf-only-unlisted}
+# `when  key pressed`
 
 ```{block-help}
 ```

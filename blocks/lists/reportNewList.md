@@ -2,7 +2,7 @@
 toc: false
 ---
 
-# `list` {.unnumbered .unlisted .pdf-only-unlisted}
+# `list`
 
 ```{block-help}
 ```

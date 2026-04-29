@@ -2,7 +2,7 @@
 toc: false
 ---
 
-# `New Sound Rate Hz` {.unnumbered .unlisted .pdf-only-unlisted}
+# `New Sound Rate Hz`
 
 ```{block-help}
 ```

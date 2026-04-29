@@ -2,7 +2,7 @@
 toc: false
 ---
 
-# `delete this clone` {.unnumbered .unlisted .pdf-only-unlisted}
+# `delete this clone`
 
 ```{block-help}
 ```

@@ -2,7 +2,7 @@
 toc: false
 ---
 
-# `Math Functions` {.unnumbered .unlisted .pdf-only-unlisted}
+# `Math Functions`
 
 ```{block-help}
 ```

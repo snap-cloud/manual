@@ -2,7 +2,7 @@
 toc: false
 ---
 
-# `Report Balance` {.unnumbered .unlisted .pdf-only-unlisted}
+# `Report Balance`
 
 ```{block-help}
 ```

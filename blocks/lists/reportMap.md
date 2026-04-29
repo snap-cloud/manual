@@ -2,7 +2,7 @@
 toc: false
 ---
 
-# `map  over` {.unnumbered .unlisted .pdf-only-unlisted}
+# `map  over`
 
 ```{block-help}
 ```

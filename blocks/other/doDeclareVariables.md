@@ -2,7 +2,7 @@
 toc: false
 ---
 
-# `Script variables` {.unnumbered .unlisted .pdf-only-unlisted}
+# `Script variables`
 
 ```{block-help}
 ```

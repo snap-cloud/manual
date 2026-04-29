@@ -2,7 +2,7 @@
 toc: false
 ---
 
-# `index of in` {.unnumbered .unlisted .pdf-only-unlisted}
+# `index of in`
 
 ```{block-help}
 ```

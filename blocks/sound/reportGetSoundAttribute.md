@@ -2,7 +2,7 @@
 toc: false
 ---
 
-# `Attribute Of Sound` {.unnumbered .unlisted .pdf-only-unlisted}
+# `Attribute Of Sound`
 
 ```{block-help}
 ```

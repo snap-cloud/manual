@@ -2,7 +2,7 @@
 toc: false
 ---
 
-# `color  is touching  ?` {.unnumbered .unlisted .pdf-only-unlisted}
+# `color  is touching  ?`
 
 ```{block-help}
 ```

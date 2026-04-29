@@ -2,7 +2,7 @@
 toc: false
 ---
 
-# `Stop All Sounds` {.unnumbered .unlisted .pdf-only-unlisted}
+# `Stop All Sounds`
 
 ```{block-help}
 ```

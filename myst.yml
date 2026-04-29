@@ -43,6 +43,7 @@ site:
   numbered-references: true
   hide_authors: true
   options:
+    folders: true
     style: _support/styles/snap-manual.css
     favicon: images/favicon.png
     logo: images/snap-logo.png

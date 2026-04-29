@@ -2,7 +2,7 @@
 toc: false
 ---
 
-# `Play Sound Until Done` {.unnumbered .unlisted .pdf-only-unlisted}
+# `Play Sound Until Done`
 
 ```{block-help}
 ```

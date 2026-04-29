@@ -2,7 +2,7 @@
 toc: false
 ---
 
-# `combinations` {.unnumbered .unlisted .pdf-only-unlisted}
+# `combinations`
 
 ```{block-help}
 ```

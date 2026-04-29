@@ -2,7 +2,7 @@
 toc: false
 ---
 
-# Sum `+` {.unnumbered .unlisted .pdf-only-unlisted}
+# Sum `+`
 
 ```{block-help}
 ```

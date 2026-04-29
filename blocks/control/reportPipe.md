@@ -2,7 +2,7 @@
 toc: false
 ---
 
-# `pipe →` {.unnumbered .unlisted .pdf-only-unlisted}
+# `pipe →`
 
 ```{block-help}
 ```
