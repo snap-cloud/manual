@@ -1,5 +1,4 @@
 ---
-toc: true
 ---
 
 (sec-ch05)=
@@ -121,7 +120,7 @@ in an arbitrary input instead of using the pulldown menu.
 
 Custom blocks can
 also have such inputs. To make a pulldown input, open the long form
-input dialog, choose a text type ([Any]{.mono}, [Text]{.mono}, or [Number]{.mono}) and click the ![image658.png](images/05-typed-inputs/image658.png) <!--  style="width:0.13194in;height:0.13194in" alt="Macintosh HD:Users:bh:Desktop:gear-part.png" / -->
+input dialog, choose a text type ([Any]{.mono}, [Text]{.mono}, or [Number]{.mono}) and click the ![image658.png](images/05-typed-inputs/image658.png) <!--  style="width:0.13194in;height:0.13194in" -->
 icon in the bottom right corner, or [control/right-click]{.mono} in the dialog.
 You will see this menu:
 
@@ -171,15 +170,15 @@ text or "`code`"
 for monospace-font computer code.
 
  If the
-input type is something other than text, then clicking the ![image670.png](images/05-typed-inputs/image670.png){.image-inline} <!--  style="width:0.13056in;height:0.1375in" alt="Macintosh HD:Users:bh:Desktop:quarter-gear.png" / --> button will
+input type is something other than text, then clicking the ![image670.png](images/05-typed-inputs/image670.png){.image-inline} <!--  style="width:0.13056in;height:0.1375in" --> button will
 instead show this menu:
 
-![image669.png](images/05-typed-inputs/image669.png) <!--  style="width:0.60417in;height:0.31944in" alt="Macintosh HD:Users:bh:Desktop:little-options.png" / -->
+![image669.png](images/05-typed-inputs/image669.png) <!--  style="width:0.60417in;height:0.31944in" -->
 
-As an example, we want to make this block: ![image671.png](images/05-typed-inputs/image671.png){.image-inline} <!--  style="width:0.60417in;height:0.31944in" alt="Macintosh HD:Users:bh:Desktop:little-options.png" / -->  The second input must be a
+As an example, we want to make this block: ![image671.png](images/05-typed-inputs/image671.png){.image-inline} <!--  style="width:0.60417in;height:0.31944in" -->  The second input must be a
 read-only object menu:
 
-![image694.png](images/05-typed-inputs/image694.png){.image-4x} <!--  style="width:0.60417in;height:0.31944in" alt="Macintosh HD:Users:bh:Desktop:little-options.png" / -->
+![image694.png](images/05-typed-inputs/image694.png){.image-4x} <!--  style="width:0.60417in;height:0.31944in" -->
 
 
 
@@ -198,7 +197,7 @@ slot in the palette, like the “10” in the <code>move (10) steps block</code>
 prototype block at the top of the script in the Block editor, an an input with
 name “size” and default value 10 looks like this:
 
-![image678.png](images/05-typed-inputs/image678.png) <!--  style="width:1.63889in;height:0.52083in" alt="Macintosh HD:Users:bh:Desktop:default-value.png" / -->
+![image678.png](images/05-typed-inputs/image678.png) <!--  style="width:1.63889in;height:0.52083in" -->
 
 ![image679.png](images/05-typed-inputs/image679.png) <!--  style="width:1.76389in;height:0.93056in" / -->
 

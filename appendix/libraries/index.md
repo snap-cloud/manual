@@ -1,2 +1,7 @@
-(sec-libraries)=
-# Libraries in Snap<em>!</em>
+---
+---
+
+(sec-libraries-list)=
+# Libraries in Snap!
+
+**Coming soon!**

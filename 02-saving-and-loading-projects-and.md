@@ -1,5 +1,4 @@
 ---
-toc: true
 ---
 
 (sec-ch02)=
@@ -18,7 +17,8 @@ like if you save locally. This is why we have multiple ways to save.
 
 In either case, if you choose "`Save as…`" from the File menu. You’ll see something like this:
 
-![image487.png](images/02-saving-and-loading-projects-and/image487.png){#fig-saveas}
+(fig-saveas)=
+![image487.png](images/02-saving-and-loading-projects-and/image487.png)
 <!--  style="width:3.54861in;height:2.57639in" / -->
 
 (If you are not logged in to your Snap<em>!</em> cloud account, Computer will
@@ -138,7 +138,7 @@ the Computer and Cloud options.
 
 If you are still in **Snap<em>!</em>** and realize that you’ve loaded another
 project without saving the one you were working on: ***Don’t edit the
-new project.*** From the File menu ![image384.png](images/02-saving-and-loading-projects-and/image384.png) <!--  style="width:0.31944in;height:0.18056in" alt="Macintosh HD:Users:bh:Desktop:Dropbox:manual (1):filebutton.png" / --> choose the "`Restore unsaved project`"
+new project.*** From the File menu ![image384.png](images/02-saving-and-loading-projects-and/image384.png) <!--  style="width:0.31944in;height:0.18056in" --> choose the "`Restore unsaved project`"
 option\index{Restore unsaved project option}.
 
 Restore unsaved project will also work if you log out of Snap<em>!</em> and

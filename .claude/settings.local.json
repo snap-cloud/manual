@@ -6,7 +6,9 @@
       "Bash(node_modules/.bin/myst --version)",
       "WebSearch",
       "Bash(find /tmp/mystmd/docs -name \"*.md\" -type f -exec grep -l \"image\\\\|align\" {} \\\\;)",
-      "Bash(find /tmp/mystmd/packages/myst-spec -type f -name \"*.yml\" -exec grep -l \"{.*\\\\..*}\" {} \\\\;)"
+      "Bash(find /tmp/mystmd/packages/myst-spec -type f -name \"*.yml\" -exec grep -l \"{.*\\\\..*}\" {} \\\\;)",
+      "Bash(\" /tmp/mystmd/docs --include=\"*.md\" -B 2 -A 2 | head -50)",
+      "Bash(grep -r \"span.*\\\\.class\\\\|{.*\\\\..*}.*`\" /tmp/mystmd/docs --include=\"*.md\" -B 2 -A 2 | head -50)"
     ]
   }
 }

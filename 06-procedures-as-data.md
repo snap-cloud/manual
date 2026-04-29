@@ -1,5 +1,4 @@
 ---
-toc: true
 ---
 
 (sec-ch06)=
@@ -7,6 +6,7 @@ toc: true
 
 ![Definition of `my for` block and the block created.](images/05-typed-inputs/image695.png)
 
+(sec-call-and-run)=
 ## Call and Run
 
 In the {index}`for block` example above, the input named <var>action</var> has been declared as type
@@ -258,7 +258,10 @@ list as input; it takes numbers as inputs! So this would be wrong:
 
 ![image722.png](images/06-procedures-as-data/image722.png)
 
+(sec-formal-parameters)=
 ## Formal Parameters
+:::{index} formal parameters
+:::
 
 The `rings` around Procedure-{index}`type inputs` have an
 arrowhead at the right. Clicking the arrowhead allows you to give the

@@ -2,6 +2,7 @@
 toc: false
 ---
 
+(sec-all-blocks)=
 # All {snap}`_` Blocks
 
 <!--
@@ -36,14 +37,6 @@ reportVariadicGreaterThan
 reportTextAttribute
 reportCrossproduct
 -->
-
-<style>
-/* In the markdown table this class is applied to the link */
-td .link picture img {
-  height: 55% !important;
-  margin: unset !important;
-}
-</style>
 
 ```{include} _raw_blocks_table.md
 ```

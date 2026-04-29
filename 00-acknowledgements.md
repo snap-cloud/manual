@@ -1,5 +1,4 @@
 ---
-toc: true
 numbering:
   title: false
 ---
@@ -12,14 +11,19 @@ Jens cut his teeth in the company of the Smalltalk pioneers:
 {index}`Alan Kay<single: Kay, Alan>`, {index}`Dan Ingalls<single: Ingalls, Dan>`,
 and the rest of the gang who invented personal computing and object oriented
 programming in the great days of {index}`Xerox PARC`. He
-worked with {index}`John Maloney<single: Maloney, John>`, of the MIT
-\index{Massachusetts Institute of Technology} Scratch Team
-\index{Scratch!Team@Scratch Team}, who developed the Morphic\index{Morphic}
-graphics framework that’s still at the heart of Snap<em>!</em>.
+worked with {index}`John Maloney<single: Maloney, John>`, of the MIT Scratch Team, who developed the Morphic graphics framework that’s still at the heart of Snap<em>!</em>.
+:::{index}
+MIT, Massachusetts Institute of Technology
+Scratch Team
+Morphic
+:::
 
 <strong><em>The brilliant design of Scratch, from the Lifelong Kindergarten
-Group\index{Lifelong Kindergarten Group} at the MIT Media Lab
-\index{Media Lab}\index{MIT Media Lab}, is crucial to Snap<em>!</em>. Our earlier version, BYOB, was a direct modification of the Scratch source code. Snap<em>!</em> is a complete rewrite, but its code structure and its user interface remain deeply indebted to Scratch. And the Scratch Team, who could have seen us as rivals, have been entirely supportive and welcoming to us.</em></strong>
+Group at the MIT Media Lab, is crucial to Snap<em>!</em>. Our earlier version, BYOB, was a direct modification of the Scratch source code. Snap<em>!</em> is a complete rewrite, but its code structure and its user interface remain deeply indebted to Scratch. And the Scratch Team, who could have seen us as rivals, have been entirely supportive and welcoming to us.</em></strong>
+:::{index}
+Lifelong Kindergarten Group
+MIT, MIT Media Lab
+:::
 
 Brian grew up at the MIT and Stanford Artificial Intelligence Labs
 \index{MIT Artificial Intelligence Lab}\index{Stanford Artificial Intelligence Lab}, learning from Lisp inventor

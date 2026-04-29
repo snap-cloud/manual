@@ -39,23 +39,21 @@ at https://snap.berkeley.edu is covered briefly in @sec-appendix-community
 The manual is roughly organized into a few sections.
 
 * Chapters 1 to 11 cover the primary features for writing programings in
-Snap*!*. They are organized from introductory to advanced topics.
-* Chapters 12 and 13 cover the user interface components of both the Snap*!* editor and the community site.
+Snap<em>!</em>. They are organized from introductory to advanced topics.
+* Chapters 12 and 13 cover the user interface components of both the Snap<em>!</em> editor and the community site.
 * The appendicies provide [documentation for every block in Snap<em>!</em> block][blocks], as well as some of libraries provided.
 
 [blocks]: /blocks/
 
-<!-- TODO: Hide this from the PDF. -->
-::: {.content-visible when-format="html"}
++++ {"no-pdf": true}
 ## Features of the Manual
 
 You'll find the table of contents on the left side of each page. At the bottom of each page, you'll find previous and next links to navigate the manual in order.
 
 A search function is included in the upper right hand corner. If you which you can type <kbd>/</kbd> (or <kbd>?</kbd>) to jump to the search function.
-:::
++++
 
-::: {.content-visible when-format="pdf"}
+
 ## The 'New' PDF Manual
 
-this is currently a work in progress.
-:::
+This is currently a work in progress.

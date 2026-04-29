@@ -1,5 +1,4 @@
 ---
-toc: true
 ---
 
 (sec-ch12)=
@@ -273,8 +272,7 @@ versions before 7.0.
 When you click on the one-line description of a library, you are shown
 the actual blocks in the library and a longer explanation of its
 purpose. You can browse the libraries to find one that will satisfy your
-needs. The libraries are described in detail in Section I.H, page
-[25](#libraries).
+needs. The libraries are described in detail in Section I.H, @sec-libraries.
 
  The "`Costumes…`" option \index{Costumes… option} opens a browser into the costume library:
 
@@ -460,15 +458,16 @@ equivalent to clicking the footprint button above the scripting area.
 You don’t want this on except when you’re actively debugging, because
 even the fastest setting of the slider is still slowed a lot.
 
+ (sec-para-log-pen-vectors)=
 `Log pen vectors` tells Snap<em>!</em> to remember lines drawn by sprites as
-exact vectors, rather than remember only the pixels that the drawing leaves on the stage. This
-remembered vector picture can be used in two ways: First, right-clicking
+exact vectors, rather than remember only the pixels that the drawing leaves on the
+stage. This remembered vector picture can be used in two ways: First, right-clicking
 on a `pen trails` block gives an option to relabel it into a pen vectors
 block which, when run, reports the logged lines as a vector (svg)
 costume. Second, right-clicking on the stage when there are logged
 vectors shows an extra option, `svg…`, that exports a picture of the stage
 in vector format. Only lines are logged, not color regions made with the
-fill block. {#para-log-pen-vectors}
+fill block.
 
 The next group of four are user preference options, preserved when you
 load a new project. Long form input dialog\index{Long form input dialog
@@ -587,7 +586,7 @@ teacher-approved ways. But kids can uncheck the checkbox. ☺︎
 
 After the menu
 buttons you’ll see the project name. After that comes the footprint
-button ![image121.png](images/12-user-interface-elements/image121.png) <!--  style="width:0.37917in;height:0.21667in" alt="Macintosh HD:Users:bh:Desktop:pix:footprints.png" / --> \index{footprint button} used to turn on visible stepping
+button ![image121.png](images/12-user-interface-elements/image121.png) <!--  style="width:0.37917in;height:0.21667in" --> \index{footprint button} used to turn on visible stepping
 \index{visible stepping} and, when it’s on, the slider to control the
 speed of stepping.
 
@@ -669,14 +668,14 @@ behind these buttons.
 
  Under the
 eight palette selector buttons, at the top of the actual palette, are
-two semi-transparent buttons. The first is the *search* button ![image1049.png](images/12-user-interface-elements/image1049.png) <!--  style="width:0.26042in;height:0.26042in" alt="Macintosh HD:Users:bh:Desktop:pix:search-button.png" / -->
+two semi-transparent buttons. The first is the *search* button ![image1049.png](images/12-user-interface-elements/image1049.png) <!--  style="width:0.26042in;height:0.26042in" -->
 \index{search button}, which is equivalent to typing control-F: It
 replaces the palette with a search bar into which you can type part of
 the title text of the block you’re trying to find. To leave this search
 mode, click one of the eight palette selectors, or type the Escape key.
 
 The other
-button ![image1050.png](images/12-user-interface-elements/image1050.png) <!--  style="width:0.26042in;height:0.26042in" alt="Macintosh HD:Users:bh:Desktop:pix:make-button.png" / --> is equivalent to the “Make a block” button\index{Make a block
+button ![image1050.png](images/12-user-interface-elements/image1050.png) <!--  style="width:0.26042in;height:0.26042in" --> is equivalent to the “Make a block” button\index{Make a block
 button} , except that the dialog window that it opens has the current
 palette (color) preselected.
 
@@ -915,7 +914,7 @@ feature to access them.
 Not every reporter has a compile option\index{compile menu option}; it
 exists only for the higher order functions. When selected, a lightning
 bolt\index{lightning bolt symbol} appears before the block name:
-![image1072.png](images/12-user-interface-elements/image1072.png) <!--  style="width:1.40278in;height:0.20139in" alt="Macintosh HD:Users:bh:Desktop:lightning.png" / -->  and Snap<em>!</em> tries
+![image1072.png](images/12-user-interface-elements/image1072.png) <!--  style="width:1.40278in;height:0.20139in" -->  and Snap<em>!</em> tries
 to compile the function inside the ring to JavaScript, so it runs at
 primitive speed. This works only for simple functions (but the higher
 order function still works even if the compilation doesn’t). The
@@ -1096,7 +1095,7 @@ files or other browser tabs if your browser supports that. Clicking on a
 costume selects it; that is, the sprite will look like the selected
 costume. Clicking on the paint brush icon ![image1084.png](images/12-user-interface-elements/image1084.png) <!--  style="width:0.29167in;height:0.16667in" / -->\index{paint brush icon}
 opens the *Paint Editor*\index{Paint Editor} *,* in which you can
-create a new costume. Clicking on the camera icon ![image1083.png](images/12-user-interface-elements/image1083.png) <!--  style="width:0.37917in;height:0.21667in" alt="Macintosh HD:Users:bh:Desktop:pix:camera.png" / --> \index{camera icon}
+create a new costume. Clicking on the camera icon ![image1083.png](images/12-user-interface-elements/image1083.png) <!--  style="width:0.37917in;height:0.21667in" --> \index{camera icon}
 opens a window in which you see what your computer’s camera is seeing,
 and you can take a picture (which will be the full size of the stage
 unless you shrink it in the Paint Editor). This works only if you give
@@ -1104,7 +1103,7 @@ Snap<em>!</em> permission to use the camera, and maybe only if you opened
 Snap<em>!</em> in secure (HTTPS\index{HTTPS} ) mode, and then only if your
 browser loves you.
 
-![image1085.png](images/12-user-interface-elements/image1085.png) <!--  style="width:3.56944in;height:3.18056in" alt="Macintosh HD:Users:bh:Desktop:pix:camera-dialog.png" / -->
+![image1085.png](images/12-user-interface-elements/image1085.png) <!--  style="width:3.56944in;height:3.18056in" -->
 *Brian’s bedroom when he’s staying at Paul’s house.*
 
 Control-clicking/right-clicking on the turtle picture gives this menu:
@@ -1264,9 +1263,9 @@ sprite always has an appearance unless hidden, but it doesn’t sing
 unless explicitly asked.) So the context menu for sounds has only
 rename, delete, and export options, and it has a clickable button
 labeled Play or Stop as appropriate. There is a sound *recorder,* which
-appears if you click the red record button (![image1099.png](images/12-user-interface-elements/image1099.png) <!--  style="width:0.35in;height:0.2in" alt="Macintosh HD:Users:bh:Desktop:record-button.png" / --> ):
+appears if you click the red record button (![image1099.png](images/12-user-interface-elements/image1099.png) <!--  style="width:0.35in;height:0.2in" --> ):
 
-![image1100.png](images/12-user-interface-elements/image1100.png) <!--  style="width:2.325in;height:1.03333in" alt="Macintosh HD:Users:bh:Desktop:sound-recorder.png" / -->
+![image1100.png](images/12-user-interface-elements/image1100.png) <!--  style="width:2.325in;height:1.03333in" -->
 
 The first,
 round button starts recording. The second, square button stops
@@ -1455,7 +1454,7 @@ The move
 option\index{move option} shows a “move handle” inside the sprite (the
 diagonal striped square in the middle):
 
-![image1113.png](images/12-user-interface-elements/image1113.png) <!--  style="width:0.65278in;height:0.88889in" alt="Macintosh HD:Users:bh:Desktop:pix:move-handle.png" / -->
+![image1113.png](images/12-user-interface-elements/image1113.png) <!--  style="width:0.65278in;height:0.88889in" -->
 
 You can ordinarily just grab and move the sprite without this option,
 but there are two reasons you might need it: First, it works even if the
@@ -1475,7 +1474,7 @@ direction block) or use the mouse to rotate the handle on the dial in
 The pivot
 option\index{pivot option} shows a crosshair inside the sprite:
 
-![image1115.png](images/12-user-interface-elements/image1115.png) <!--  style="width:0.65278in;height:0.84722in" alt="Macintosh HD:Users:bh:Desktop:pix:pivot-handle.png" / -->
+![image1115.png](images/12-user-interface-elements/image1115.png) <!--  style="width:0.65278in;height:0.84722in" -->
 
 You can click and drag the crosshair anywhere onstage to set the
 costume’s pivot point. (If you move it outside the sprite, then turning
@@ -1501,12 +1500,12 @@ browsers, the sprite is directly saved into a file.)
 
 Right-clicking on a variable watcher shows this menu:
 
-![image1116.png](images/12-user-interface-elements/image1116.png) <!--  style="width:0.95833in;height:1.44792in" alt="Macintosh HD:Users:bh:Desktop:watcher-menu.png" / -->
+![image1116.png](images/12-user-interface-elements/image1116.png) <!--  style="width:0.95833in;height:1.44792in" -->
 
 The first section of the menu lets you choose one of three
 visualizations of the watcher:
 
-![image1117.png](images/12-user-interface-elements/image1117.png) <!--  style="width:0.95833in;height:1.44792in" alt="Macintosh HD:Users:bh:Desktop:watcher-menu.png" / -->
+![image1117.png](images/12-user-interface-elements/image1117.png) <!--  style="width:0.95833in;height:1.44792in" -->
 
 The first (normal)\index{normal option} visualization is for debugging.
 The second (large)\index{large option} is for displaying information to
@@ -1590,7 +1589,7 @@ direction will also be random.) The second button ![image1125.png](images/12-use
 opens the Paint Editor so that you can make your own costume for it. (Of
 course you could click the first button and then click the paint button
 in its costumes tab; this paint button is a shortcut\index{shortcut}
-for all that.) Similarly, the third button ![image1083.png](images/12-user-interface-elements/image1083.png) <!--  style="width:0.37917in;height:0.20556in" alt="Macintosh HD:Users:bh:Desktop:pix:camera.png" / --> uses your camera, if
+for all that.) Similarly, the third button ![image1083.png](images/12-user-interface-elements/image1083.png) <!--  style="width:0.37917in;height:0.20556in" --> uses your camera, if
 possible, to make a costume for the new sprite.
 
 The trash can button ![image1126.png](images/12-user-interface-elements/image1126.png) <!--  style="width:0.29167in;height:0.17361in" / -->  at the right has two uses.
@@ -1635,7 +1634,7 @@ If pen trails are being logged, there will also be an svg… option.
 If your project includes scenes\index{scenes}, then under the stage
 icon in the sprite corral will be the *scene corral:*
 
-![image1128.png](images/12-user-interface-elements/image1128.png) <!--  style="width:3.33333in;height:1.70833in" alt="Macintosh HD:Users:bh:Desktop:scene-corral.png" / -->
+![image1128.png](images/12-user-interface-elements/image1128.png) <!--  style="width:3.33333in;height:1.70833in" -->
 
 Clicking on a
 scene will select it; right-clicking will present a menu in which you

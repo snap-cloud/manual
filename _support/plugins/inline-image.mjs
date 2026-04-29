@@ -19,8 +19,6 @@ function walk(node, fn) {
   if (node.children) node.children.forEach((child) => walk(child, fn));
 }
 
-// alert('hello');
-
 const inlineImageAlignTransform = {
   name: 'inline-image-align',
   doc: 'Clear align on .image-inline/.image-inline-tall images to prevent margin:auto inline styles.',
@@ -28,8 +26,7 @@ const inlineImageAlignTransform = {
   plugin: () => (tree) => {
     walk(tree, (node) => {
       if (node.type === 'image' && hasInlineClass(node)) {
-        console.log(node);
-        node.align = '_';
+        node.align = undefined;
       }
     });
   },

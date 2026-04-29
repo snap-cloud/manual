@@ -1,5 +1,4 @@
 ---
-toc: true
 ---
 
 (sec-ch09)=
@@ -94,10 +93,10 @@ out the current date or time\index{current date or time}. Each call to
 this block reports one component of the date\index{date} or time
 \index{time}, so you will probably combine several calls, like this:
 
-![image872.png](images/09-the-outside-world/image872.png) <!--  style="width:5.30556in;height:0.31944in" alt="Macintosh HD:Users:bh:Desktop:date.png" / -->
+![image872.png](images/09-the-outside-world/image872.png) <!--  style="width:5.30556in;height:0.31944in" -->
 
 for Americans, or like this:
 
-![image873.png](images/09-the-outside-world/image873.png) <!--  style="width:5.30556in;height:0.31944in" alt="Macintosh HD:Users:bh:Desktop:European-date.png" / -->
+![image873.png](images/09-the-outside-world/image873.png) <!--  style="width:5.30556in;height:0.31944in" -->
 
 for Europeans.

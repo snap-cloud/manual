@@ -1,5 +1,4 @@
 ---
-toc: true
 ---
 
 (sec-ch03)=
@@ -219,7 +218,7 @@ To import a block library, use the "`Import…`" command in the "`File`" menu,
 or just drag the [XML]{.mono} file into the Snap<em>!</em> window.
 
 Several block libraries are included with Snap<em>!</em>; for details about
-them, see @sec-libraries-intro.
+them, see @sec-libraries.
 
 ## Custom blocks and Visible Stepping
 

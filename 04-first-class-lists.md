@@ -1,5 +1,4 @@
 ---
-toc: true
 ---
 
 (sec-ch04)=
@@ -30,15 +29,15 @@ Scratch reporters reports a list value. (You can use a reduction of the
 list into a text string as input to other blocks, but this loses the
 list structure; the input is just a text string, not a data aggregate.)
 
-A fundamental {index}`design principle` in Snap*!* is
+A fundamental {index}`design principle` in Snap<em>!</em> is
 that ***<u>all data should be ﬁrst class</u>**.* If it’s in the
 language, then we should be able to use it fully and freely. We believe
 that this principle avoids the need for many special-case tools, which
-can instead be written by Snap*!* users themselves.
+can instead be written by Snap<em>!</em> users themselves.
 
 Note that it’s a data *type*
 that’s ﬁrst class, not an individual value. Don’t think, for example,
-that some lists are ﬁrst class, while others aren’t. In Snap*!*, lists
+that some lists are ﬁrst class, while others aren’t. In Snap<em>!</em>, lists
 are ﬁrst class, period.
 
 ![image523.png](images/04-first-class-lists/image523.png) <!--  style="width:2.83958in;height:0.41597in" / -->
@@ -62,7 +61,7 @@ input to many other blocks:
 
 ![image629.png](images/04-first-class-lists/image629.png) <!--  style="width:2.83958in;height:0.41597in" / -->
 
-Snap*!* does not have a “`Make
+Snap<em>!</em> does not have a “`Make
 a list`” button like the one in Scratch \index{Scratch}. If you want a
 global “named list,” make a global variable and use the `set` block to put
 a list into the variable.
@@ -105,7 +104,7 @@ As an example, here are two blocks that take a list of numbers as input,
 and report a new list containing only the even numbers from the original
 list:[^primitives]
 
-[^primitives]: Note to users of earlier versions: From the beginning, there has been a tension in our work between the desire to provide tools such as `for` (used in this example) and the higher order functions introduced on the next page as primitives, to be used as easily as other primitives, and the desire to show how readily such tools can be implemented in Snap! itself. This is one instance of our general pedagogic understanding that learners should both use abstractions and be permitted to see beneath the abstraction barrier. Until version 5.0, we used the uneasy compromise of a library of tools written in Snap! and easily, but not easily enough, loaded into a project. By not loading the tools, users or teachers could explore how to program them. In 5.0 we made them true primitives, partly because that’s what some of us wanted all along and partly because of the increasing importance of fast performance as we explore “big data” and media computation. In version 10.0 we introduced “hybrid” primitives, implemented in high speed Javascript but with an “Edit” option that will open, not the primitive implementation, but the version written in Snap*!*. This gives us editable primitives without dramatically slowing users’ projects.
+[^primitives]: Note to users of earlier versions: From the beginning, there has been a tension in our work between the desire to provide tools such as `for` (used in this example) and the higher order functions introduced on the next page as primitives, to be used as easily as other primitives, and the desire to show how readily such tools can be implemented in Snap! itself. This is one instance of our general pedagogic understanding that learners should both use abstractions and be permitted to see beneath the abstraction barrier. Until version 5.0, we used the uneasy compromise of a library of tools written in Snap! and easily, but not easily enough, loaded into a project. By not loading the tools, users or teachers could explore how to program them. In 5.0 we made them true primitives, partly because that’s what some of us wanted all along and partly because of the increasing importance of fast performance as we explore “big data” and media computation. In version 10.0 we introduced “hybrid” primitives, implemented in high speed Javascript but with an “Edit” option that will open, not the primitive implementation, but the version written in Snap<em>!</em>. This gives us editable primitives without dramatically slowing users’ projects.
 
 ![image632.png](images/04-first-class-lists/image632.png) <!--  style="width:5.88889in;height:1.04861in" / -->
 
@@ -139,7 +138,7 @@ block}), which are handled through a recursive call:
 
 ![image555.png](images/04-first-class-lists/image555.png) <!--  style="width:4.75in;height:2.24097in" / -->
 
-Snap*!*
+Snap<em>!</em>
 uses two different internal representations of lists, one (dynamic
 \index{array, dynamic} array\index{dynamic array}) for imperative
 programming and the other (linked\index{list, linked} list\index{linked list})
@@ -188,7 +187,7 @@ function}).
 ![image635.png](images/04-first-class-lists/image635.png) <!--  style="width:2.375in;height:0.27778in" / -->
 
 
-Snap*!* provides four higher order function blocks for operating on
+Snap<em>!</em> provides four higher order function blocks for operating on
 lists:
 
 ![image636.png](images/04-first-class-lists/image636.png){.image-4x}
@@ -227,8 +226,8 @@ lists, the result is a new toplevel list whose items are the same
 \index{shallow copy of a list}. To make a deep copy of a list
 \index{deep copy of a list} (that is, one in which all the sublists,
 sublists of sublists, etc. are copied), use the list as input to the
-![image576.png](images/04-first-class-lists/image576.png){.image-4x} <!--  style="width:0.74306in;height:0.19444in" alt="Macintosh HD:Users:bh:Desktop:id.png" / -->  block (one of the variants
-of the `sqrt of` block). This works because `id of`\index{`id of` block} is a [hyperblock](#hyperblocks).
+![image576.png](images/04-first-class-lists/image576.png){.image-4x} <!--  style="width:0.74306in;height:0.19444in" -->  block (one of the variants
+of the `sqrt of` block). This works because `id of`\index{`id of` block} is a @sec-hyperblock.
 
 The third higher order block, `combine`\index{`combine` block}, computes a
 single result from *all* the items of a list, using a *two-input*
@@ -243,7 +242,7 @@ items), see if all items of a list of Booleans are true, see if any of
 the items is true, find the smallest, or find the largest.
 
 ![image586.png](images/04-first-class-lists/image586.png) <!--  style="width:3.86806in;height:0.34514in" / -->
-![image585.png](images/04-first-class-lists/image585.png) <!--  style="width:6.27917in;height:0.37569in" alt="Macintosh HD:Users:bh:Desktop:comma-list.png" / -->
+![image585.png](images/04-first-class-lists/image585.png) <!--  style="width:6.27917in;height:0.37569in" -->
 
 Why `+` but not `−`? It only
 makes sense to combine list items using an *associative*
@@ -251,9 +250,11 @@ makes sense to combine list items using an *associative*
 one that doesn’t care in what order the items are combined (left to
 right or right to left). (2+3)+4 = 2+(3+4), but (2−3)−4 ≠ 2−(3−4).
 
+<!-- TODO: See if we can remove the (see ...) -->
+
 The functions `map`, `keep`, and
 `find first` have an advanced mode with rarely-used features: If their
-function input is given [explicit input names](#formal-parameters)
+function input is given explicit input names (see @sec-formal-parameters)
 (by clicking the arrowhead
 at the right end of the gray ring),
 then it will be called for each list item with *three* inputs: the
@@ -325,14 +326,14 @@ Beyond such simple cases, in which every item of the main list is a list
 of the same length, it’s important to keep in mind that the design of
 table view has to satisfy two goals, not always in agreement: (1) a
 visually compelling display of two-dimensional arrays, and (2) highly
-efficient display generation, so that Snap*!* can handle very large
+efficient display generation, so that Snap<em>!</em> can handle very large
 lists, since “big data” is an important topic of study. To meet the
 first goal perfectly in the case of “ragged right” arrays in which
-sublists can have different lengths, Snap*!* would scan the entire list
+sublists can have different lengths, Snap<em>!</em> would scan the entire list
 to find the maximum width before displaying anything, but that would
 violate the second goal.
 
-Snap*!* uses the simplest possible compromise between the two goals: It
+Snap<em>!</em> uses the simplest possible compromise between the two goals: It
 examines only the first ten items of the list to decide on the format.
 If none of those are lists, or they’re all lists of one item, and the
 overall length is no more than 100, list view is used. If the any of
@@ -376,7 +377,7 @@ to fit the entire value in a cell:
 
 ![image601.png](images/04-first-class-lists/image601.png) <!--  style="width:3.34097in;height:0.57708in" / -->
 
-Even if you expand the size of the cells, Snap*!* will not display
+Even if you expand the size of the cells, Snap<em>!</em> will not display
 sublists of sublists in table view. There are two ways to see these
 inner sublists: You can switch to list view, or you can double-click on
 a list icon in the table to open a dialog box showing just that
@@ -397,7 +398,7 @@ look almost like a one-column display.
 
 Spreadsheet and database programs generally offer the option to export
 their data as CSV (comma-separated values)\index{CSV (comma-separated
-values)} lists. You can import these files into Snap*!* and turn them
+values)} lists. You can import these files into Snap<em>!</em> and turn them
 into tables (lists of lists), and you can export tables in CSV format.
 Snap<em>!</em> recognizes a CSV file by the extension .csv in its filename.
 
@@ -420,10 +421,10 @@ Here’s what the corresponding table looks like:
 ![table view](images/04-first-class-lists/table-view.png)
 ![list view](images/04-first-class-lists/list-view.png)
 
-Here’s how to read a spreadsheet into Snap*!*:
+Here’s how to read a spreadsheet into Snap<em>!</em>:
 
 1. Make a variable
-with a watcher on stage: ![image607.png](images/04-first-class-lists/image607.png) <!-- style="width:1.20833in;height:0.27083in" alt="Macintosh HD:Users:bh:Desktop:pix:watcher.png" -->
+with a watcher on stage: ![image607.png](images/04-first-class-lists/image607.png) <!-- style="width:1.20833in;height:0.27083in" -->
 
 <!-- The background of this picture should be transparent, not white. bh  -->
 
@@ -433,12 +434,12 @@ variable’s value is already a list, be sure to click on the outside
 border of the watcher; there is a different menu if you click on the
 list itself.) Select the file with your csv data.
 
-3. There is no 3; that’s it! Snap*!* will notice that the name of the
+3. There is no 3; that’s it! Snap<em>!</em> will notice that the name of the
 file you’re importing is something`.csv` and will turn the text into a
 list of lists automatically.
 
 Or, even easier, just drag and drop the file from your desktop onto the
-Snap*!* window, and Snap*!* will automatically create a variable named
+Snap<em>!</em> window, and Snap<em>!</em> will automatically create a variable named
 after the file and import the data into it.
 
 If you actually want to import the raw CSV data into a variable, either
@@ -449,10 +450,11 @@ If you want to export a list, put a variable watcher containing the list
 on the stage, right-click its border, and choose “`Export`.” (Don’t
 right-click an item instead of the border; that gives a different menu.)
 
+(sec-multi-dimensional-lists-and-json)=
 ### Multi-dimensional lists and JSON
 
 CSV format is easy to read, but works only for one- or two-dimensional
-lists. If you have a list of lists of lists, Snap*!* will instead export
+lists. If you have a list of lists of lists, Snap<em>!</em> will instead export
 your list as a JSON (JavaScript Object Notation) file\index{JSON
 (JavaScript Object Notation) file} . I modified my list:
 
@@ -470,7 +472,13 @@ You can also import lists, including tables, from a `.json` file. (And you
 can import plain text from a `.txt` file.) Drag and drop works for these
 formats also.
 
-##  Hyperblocks\index{Hyperblocks}
+<!-- Two section entires to handle plurals more easily -->
+(sec-hyperblock)=
+(sec-hyperblocks)=
+## Hyperblocks
+
+:::{index} hyperblocks
+:::
 
 A *scalar* is anything other than a list. The name comes from
 mathematics, where it means a magnitude without direction, as opposed to
@@ -479,38 +487,38 @@ function} is one whose domain and range are scalars, so all the
 arithmetic operations are scalar functions, but so are the text ones
 such as `letter` and the Boolean ones such as `not`.
 
-The major new feature in Snap*!* 6.0 is that the domain and range of
+The major new feature in Snap<em>!</em> 6.0 is that the domain and range of
 most scalar function blocks is extended to multi-dimensional
 \index{list, multi-dimensional} lists, with the underlying scalar
 function applied termwise:
 
-![image610.png](images/04-first-class-lists/image610.png) <!--  style="width:3.34028in;height:0.91667in" alt="Macintosh HD:Users:bh:Desktop:vector-vector.png" / -->  ![image609.png](images/04-first-class-lists/image609.png) <!--  style="width:2.5625in;height:0.91667in" alt="Macintosh HD:Users:bh:Desktop:vector-monadic.png" / -->  ![image611.png](images/04-first-class-lists/image611.png) <!--  style="width:4.94444in;height:0.69444in" alt="Macintosh HD:Users:bh:Desktop:matrix-matrix.png" / -->
+![image610.png](images/04-first-class-lists/image610.png) <!--  style="width:3.34028in;height:0.91667in" -->  ![image609.png](images/04-first-class-lists/image609.png) <!--  style="width:2.5625in;height:0.91667in" -->  ![image611.png](images/04-first-class-lists/image611.png) <!--  style="width:4.94444in;height:0.69444in" -->
 
 Mathematicians, note in the last example above that the result is just a termwise
 application of the underlying function (7×3, 8×5, etc.), *not* matrix
 multiplication. See @sec-appendix-b-apl for that. For a dyadic (two-input) function, if the lengths don’t agree, the length of the result (in each
 dimension) is the length of the shorter input:
 
-![image612.png](images/04-first-class-lists/image612.png) <!--  style="width:5.74306in;height:0.69444in" alt="Macintosh HD:Users:bh:Desktop:matrix-ragged.png" / -->
+![image612.png](images/04-first-class-lists/image612.png) <!--  style="width:5.74306in;height:0.69444in" -->
 
 However, if
 the *number of dimensions* differs in the two inputs, then the number of
 dimensions in the result agrees with the *higher-*dimensional input; the
 lower-dimensional one is used repeatedly in the missing dimension(s):
 
-![image613.png](images/04-first-class-lists/image613.png) <!--  style="width:6.79167in;height:0.86806in" alt="Macintosh HD:Users:bh:Desktop:missing-dimension.png" / -->
+![image613.png](images/04-first-class-lists/image613.png) <!--  style="width:6.79167in;height:0.86806in" -->
 
 (7×6, 8×10, 1×20, *40*×*6*, *20*×*10*, etc.). In particular, a *scalar*
 input is paired with every scalar in the other input:
 
-![image644.png](images/04-first-class-lists/image644.png) <!--  style="width:7.48333in;height:0.63125in" alt="Macintosh HD:Users:bh:Desktop:vector-alonzo.png" / -->
+![image644.png](images/04-first-class-lists/image644.png) <!--  style="width:7.48333in;height:0.63125in" -->
 
 One important
 motivation for this feature is how it simplifies and speeds up media
 computation\index{media computation}, as in this shifting of the
 Alonzo\index{Alonzo} costume to be bluer:
 
-![image614.png](images/04-first-class-lists/image614.png) <!--  style="width:7.48333in;height:0.63125in" alt="Macintosh HD:Users:bh:Desktop:vector-alonzo.png" / -->
+![image614.png](images/04-first-class-lists/image614.png) <!--  style="width:7.48333in;height:0.63125in" -->
 
 
 
@@ -519,7 +527,7 @@ pixel of the result has ¾ of its original red and green, and three times
 its original blue (with its transparency unchanged). By putting some
 sliders on the stage, you can play with colors dynamically:
 
-![image620.png](images/04-first-class-lists/image620.png) <!--  style="width:5.19444in;height:1.04861in" alt="Graphical user interface, application Description automatically generated" / -->![image619.png](images/04-first-class-lists/image619.png) <!--  style="width:1.6875in;height:1.04861in" alt="Macintosh HD:Users:bh:Desktop:Screen Shot 2020-06-13 at 9.25.32 PM.png" / -->
+![image620.png](images/04-first-class-lists/image620.png) <!--  style="width:5.19444in;height:1.04861in" alt="Graphical user interface, application Description automatically generated" / -->![image619.png](images/04-first-class-lists/image619.png) <!--  style="width:1.6875in;height:1.04861in" -->
 
 
 
@@ -564,16 +572,16 @@ a list as its first (index) input:
     which case the entire sublist is reported (the original meaning of
     `item of`):
 
-    ![image623.png](images/04-first-class-lists/image623.png) <!--  style="width:5.50694in;height:0.91667in"     alt="Macintosh HD:Users:bh:Desktop:item-scalar.png" / -->
+    ![image623.png](images/04-first-class-lists/image623.png) <!--  style="width:5.50694in;height:0.91667in"     -->
 
 2.  If the index is a list of numbers (no sublists), then `item of`
     reports a list of the indicated top-level items (rows, in a matrix;
     a straightforward hyperization):
-    ![image624.png](images/04-first-class-lists/image624.png) <!--  style="width:6.00694in;height:0.86806in"     alt="Macintosh HD:Users:bh:Desktop:item-vector.png" / -->
+    ![image624.png](images/04-first-class-lists/image624.png) <!--  style="width:6.00694in;height:0.86806in"     -->
 
 3.  If the index is a list of lists of numbers, then `item of` reports an
     array of only those scalars whose position in the list input matches
-    the index input in all dimensions (as of Snap*!*
+    the index input in all dimensions (as of Snap<em>!</em>
     6.6):
 
     ![image625.png](images/04-first-class-lists/image625.png) <!--  style="width:6.00694in;height:0.6875in" / -->
@@ -586,7 +594,7 @@ a list as its first (index) input:
 
  To
 get a column or columns of a spreadsheet, use an empty list in the row
-selector (as of Snap*!* 6.6):
+selector (as of Snap<em>!</em> 6.6):
 
 ![image627.png](images/04-first-class-lists/image627.png) <!--  style="width:6.60417in;height:1.04861in" alt="Graphical user interface, application, website Description automatically generated" / -->
 
@@ -644,7 +652,7 @@ include arrays comes from the language APL\index{APL}. (All the great
 programming languages are based on mathematical ideas. Our primary
 ancestors are Smalltalk\index{Smalltalk}, based on models, and Lisp
 \index{Lisp}, based on lambda calculus. Prolog\index{Prolog}, a great
-language not (so far) influencing Snap*!*, is based on logic. And APL,
+language not (so far) influencing Snap<em>!</em>, is based on logic. And APL,
 now joining our family, is based on linear algebra, which studies
 vectors and matrices. Those *other* programming languages are based on
 the weaknesses of computer hardware.) Hyperblocks are not the whole
