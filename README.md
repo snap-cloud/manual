@@ -12,6 +12,7 @@ GitHub Pages on every push:
 | ------ | --- |
 | HTML site | <https://docs.snap.berkeley.edu/> |
 | PDF | <https://docs.snap.berkeley.edu/snap-manual.pdf> |
+| Original Snap! 8 PDF (legacy reference) | <https://snap.berkeley.edu/snap/help/SnapManual.pdf> |
 
 For PRs, an unmerged-but-built copy of the PDF is attached to each CI run as
 a GitHub Actions artifact (kept for 10 days). See ["Previewing the PDF for a
@@ -19,6 +20,7 @@ PR"](#previewing-the-pdf-for-a-pr) below.
 
 [website]: https://docs.snap.berkeley.edu
 [pdf]: https://docs.snap.berkeley.edu/snap-manual.pdf
+[legacy_pdf]: https://snap.berkeley.edu/snap/help/SnapManual.pdf
 
 The reference manual for the [Snap<em>!</em> programming language][snap]. ([GitHub][snap_gh])
 
@@ -26,9 +28,10 @@ The reference manual for the [Snap<em>!</em> programming language][snap]. ([GitH
 [snap_gh]: https://github.com/jmoenig/snap/
 
 > [!NOTE]
-> The web manual is a "translation" of the original PDF, which was last largely updated for
-> Snap<em>!</em> 8. We're first working on the making the web version readable, then we'll
-> update the content to match recent Snap<em>!</em> releases.
+> The web manual is a "translation" of the [original PDF][legacy_pdf], which
+> was last largely updated for Snap<em>!</em> 8. We're first working on
+> making the web version readable, then we'll update the content to match
+> recent Snap<em>!</em> releases.
 
 ## Citing Snap! and the Snap! Manual
 
@@ -135,16 +138,10 @@ The PDF is written to `output/snap-manual.pdf`. See
 [`docs/latex.md`](./docs/latex.md) for details on the PDF pipeline and the
 local LaTeX template at [`_latex-template/`](./_latex-template/).
 
-### Quarto (legacy)
-
-The original Quarto build system is preserved on the `quarto` branch.
-The `quarto.yml` GitHub Actions workflow still targets that branch.
-
-[quarto]: https://quarto.org/docs/
-
 ## Writing Style
 
-Please read [`STYLEGUIDE.md`](./STYLEGUIDE.md)
+Please read [`docs/STYLEGUIDE.md`](./docs/STYLEGUIDE.md). Other developer
+docs live in [`docs/`](./docs/).
 
 ## VSCode and Editing
 
