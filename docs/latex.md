@@ -142,15 +142,25 @@ The output is placed at `output/snap-manual.pdf`.
 
 ## CI
 
-On every push to `main`, the
-[`myst.yml`](../.github/workflows/myst.yml) GitHub Actions workflow:
+The [`myst.yml`](../.github/workflows/myst.yml) GitHub Actions workflow runs
+on push to `main`, on pull requests, and via `workflow_dispatch`. Each run:
 
 1. Installs Node.js, MyST, and TeX Live.
 2. Runs `myst build --html` to build the site.
 3. Runs `myst build --pdf` to build `output/snap-manual.pdf`.
 4. Copies the PDF to `_build/html/snap-manual.pdf` so it is published
    alongside the site.
-5. Pushes `_build/html/` to the `gh-pages` branch via
-   [`peaceiris/actions-gh-pages`][gh-pages-action].
+
+The remaining steps depend on the trigger:
+
+- **Push to `main` / `workflow_dispatch`**: pushes `_build/html/` to the
+  `gh-pages` branch via [`peaceiris/actions-gh-pages`][gh-pages-action]. The
+  result is served at <https://docs.snap.berkeley.edu/>, and the PDF is at
+  <https://docs.snap.berkeley.edu/snap-manual.pdf>.
+- **Pull request**: uploads `output/snap-manual.pdf` as a workflow artifact
+  named `snap-manual-pdf` (retention 10 days) and stops there &mdash; nothing
+  is published to `gh-pages` from a PR. Reviewers can download the artifact
+  from the run's **Artifacts** section, or via
+  `gh run download --name snap-manual-pdf --repo snap-cloud/manual`.
 
 [gh-pages-action]: https://github.com/peaceiris/actions-gh-pages

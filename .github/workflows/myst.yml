@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+  pull_request:
   workflow_dispatch:
 
 jobs:
@@ -52,7 +53,22 @@ jobs:
           mkdir -p _build/html
           cp output/snap-manual.pdf _build/html/snap-manual.pdf
 
+      # On PRs, attach the PDF as a workflow artifact so reviewers can grab a
+      # preview without needing to run the build locally. Kept for 10 days to
+      # avoid filling up artifact storage.
+      - name: Upload PDF artifact
+        if: github.event_name == 'pull_request'
+        uses: actions/upload-artifact@v4
+        with:
+          name: snap-manual-pdf
+          path: output/snap-manual.pdf
+          retention-days: 10
+          if-no-files-found: error
+
+      # Only publish to gh-pages from main (or workflow_dispatch). PRs stop
+      # after building + uploading the artifact above.
       - name: Publish HTML to gh-pages
+        if: github.event_name != 'pull_request'
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}

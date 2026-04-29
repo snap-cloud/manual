@@ -1,9 +1,21 @@
 ![Snap! Logo](./images/snap-logo.png)
 
 # The Snap<em>!</em> Reference Manual
-## [Read at docs.snap.berkeley.edu][website] &middot; [Download the PDF][pdf]
+## [Read online at docs.snap.berkeley.edu][website] &middot; [Download the PDF][pdf]
 
 [![GitHub Pages](https://img.shields.io/badge/website-GitHub%20Pages-blue.svg)](https://docs.snap.berkeley.edu/)
+
+The latest production build of the manual is published from `main` to
+GitHub Pages on every push:
+
+| Format | URL |
+| ------ | --- |
+| HTML site | <https://docs.snap.berkeley.edu/> |
+| PDF | <https://docs.snap.berkeley.edu/snap-manual.pdf> |
+
+For PRs, an unmerged-but-built copy of the PDF is attached to each CI run as
+a GitHub Actions artifact (kept for 10 days). See ["Previewing the PDF for a
+PR"](#previewing-the-pdf-for-a-pr) below.
 
 [website]: https://docs.snap.berkeley.edu
 [pdf]: https://docs.snap.berkeley.edu/snap-manual.pdf
@@ -154,6 +166,26 @@ On every push to `main`, the [`myst.yml`](./.github/workflows/myst.yml)
 workflow builds both the HTML site and the PDF (`snap-manual.pdf`), then
 publishes them together to the `gh-pages` branch. The PDF is therefore
 available at [`/snap-manual.pdf`][pdf] on the published site.
+
+### Previewing the PDF for a PR
+
+The same workflow also runs on pull requests. It does **not** publish to
+`gh-pages`, but it does attach the freshly built `snap-manual.pdf` to the
+workflow run as a GitHub Actions artifact named `snap-manual-pdf` with a
+10-day retention.
+
+To grab the PR's PDF:
+
+1. Open the PR on GitHub and click **Checks** &rarr; **Deploy MyST /
+   Jupyter Book to GitHub Pages**.
+2. On the run page, scroll to the **Artifacts** section at the bottom.
+3. Download `snap-manual-pdf` &mdash; it expands to `snap-manual.pdf`.
+
+Or from the CLI:
+
+```shell
+gh run download --name snap-manual-pdf --repo snap-cloud/manual
+```
 
 ## License
 
