@@ -6,11 +6,16 @@
 
 ![Definition of `my for` block and the block created.](images/05-typed-inputs/image695.png)
 
+:::{index} call block
+first class procedures
+`map` block
+`run` block
+:::
+
 (sec-call-and-run)=
 ## Call and Run
 
-In the {index}`for block` example above, the input named <var>action</var> has been declared as type
-"`Command (C-shaped)`"; that’s why the finished block is C-shaped. But how
+In the {index}`for block` example above, the input named <var>action</var> has been declared as type "`Command (C-shaped)`"; that’s why the finished block is C-shaped. But how
 does the block actually tell Snap<em>!</em> to carry out the commands inside
 the C-slot? Here is a simple version of the block script:
 
@@ -21,21 +26,20 @@ value is greater than the starting value; if not, the block should
 (depending on the designer’s purposes) either not run at all, or change
 the variable by −1 for each repetition instead of by 1.
 
-The
-important part of this script is the {index}`\`run\` block<`run` block>` near
+The important part of this script is the `run` block near
 the end. This is a Snap<em>!</em> built-in command block that takes a
 Command-type value (a script) as its input, and carries out its
 instructions. (In this example, the value of the input ![image693.png](images/06-procedures-as-data/image693.png) <!--  style="width:0.5in;height:0.15625in" / --> is the script
 that the user puts in the C-slot of the `my for` block.) There is a
 similar `call` reporter block for invoking a Reporter or Predicate block.
-The `call`\index{call block } and `run` blocks are at the heart of
-Snap<em>!</em>’s ﬁrst class procedure\index{first class procedures} feature;
+The `call` and `run` blocks are at the heart of
+Snap<em>!</em>’s ﬁrst class procedure feature;
 they allow scripts and blocks to be used as data—in this example, as an
 input to a block—and eventually carried out under control of the user’s
 program.
 
 Here’s another example, this time using a Reporter-type input in a `map`
-block (see @sec-map):\index{map block}
+block (see @sec-map):
 
 ![image743.png](images/06-procedures-as-data/image743.png)
 
@@ -49,23 +53,28 @@ block knows to use the input value given to it just to fill the other
 definition, the input <var>function</var> is declared to be type Reporter, and <var>data</var>
 is of type List.
 
+:::{index} with inputs
+empty input slots, filling
+ring, gray
+ringify
+unringify
+:::
+
 ### Call/Run with inputs
 
-The
-`call` block (like the `run` block) has a right arrowhead at the end;
+The `call` block (like the `run` block) has a right arrowhead at the end;
 clicking on it adds the phrase "`with inputs`" and then a slot into which
 an input can be inserted:
 
 ![image698.png](images/06-procedures-as-data/image698.png) <!--  style="width:1.8125in;height:0.20833in" / -->
 
-If the left arrowhead is used to remove the last input slot, the "`with inputs`"\index{with inputs} disappears also. The right arrowhead can be
+If the left arrowhead is used to remove the last input slot, the "`with inputs`" disappears also. The right arrowhead can be
 clicked as many times as needed for the number of inputs required by the
 reporter block being called.
 
- If the number of inputs given
+If the number of inputs given
 to `call` (not counting the Reporter-type input that comes first) is the
-same as the number of empty input slots\index{empty input slots,
-filling}, then the empty slots are filled from left to right with the
+same as the number of empty input slots, then the empty slots are filled from left to right with the
 given input values. If `call` is given exactly one input, then *every*
 empty input slot of the called block is filled with the same value:
 
@@ -77,7 +86,7 @@ must use explicit parameters in the ring, as discussed in Section C
 below.)
 
 An even more important thing to notice about these examples is the
-*`ring`*\index{ring, gray} around the Reporter-type input slots in `call`
+*`ring`* around the Reporter-type input slots in `call`
 and `map` above. This notation indicates that *the block itself,* not the
 number or other value that the block would report when called, is the
 input. If you want to use a block itself in a non-Reporter-type (e.g.,
@@ -88,8 +97,7 @@ the top of the [Operators]{.mono} palette.
 
 As a shortcut, if you right-click or control-click on a block (such as
 the `( ) + ( ) ` block in this example), one of the choices in the menu that
-appears is "`ringify`"\index{ringify} and/or "`unringify`"
-\index{unringify}. The `ring` indicating a Reporter-type or
+appears is "`ringify`" and/or "`unringify`". The `ring` indicating a Reporter-type or
 Predicate-type input slot is essentially the same idea for reporters as
 the C-shaped input slot with which you’re already familiar; with a
 C-shaped slot, it’s *the script* you put in the slot that becomes the
@@ -103,10 +111,12 @@ complicated than a single reporter inside a reporter `ring`; if so, you
 can use a script, but the script must `report` a value, as in a custom
 reporter definition.
 
+:::{index} variables in ring slots
+:::
+
 ### Variables in Ring Slots
 
-Note that the `run` block\index{variables in ring slots} in the
-definition of the `my for` block (see @sec-call-and-run) doesn’t have a
+Note that the `run` block in the definition of the `my for` block (see @sec-call-and-run) doesn’t have a
 `ring` around its input variable <var>action</var>. When you drag a variable into a
 ringed input slot, you generally *do* want to use *the value of* the
 variable, which will be the block or script you’re trying to run or
@@ -120,11 +130,23 @@ report a block to use as the input, such as `item (1) of ( ) ` applied to a list
 *of blocks,* you can choose "`unringify`" from the menu. Almost all the
 time, though, Snap<em>!</em> does what you mean without help.)
 
+:::{index} higher order procedure
+procedure
+C-shaped block
+C programming language
+Java programming language
+run block
+call block
+empty input slots, filling
+ring, gray
+`repeat` block
+:::
+
 ## Writing Higher Order Procedures
 
-A *higher order procedure*\index{higher order procedure} is one that
+A *higher order procedure* is one that
 takes another procedure as an input, or that reports a procedure. In
-this document, the word "`procedure`"\index{procedure} encompasses
+this document, the word "`procedure`" encompasses
 scripts, individual blocks, and nested reporters. (Unless specified
 otherwise, “reporter” includes predicates. When the word is capitalized
 inside a sentence, it means specifically oval-shaped blocks. So, “nested
@@ -140,20 +162,18 @@ Why would you want a block to take a procedure as input? This is actually
 not an obscure thing to do; the primitive conditional and looping blocks
 (the C-shaped ones in the Control palette) take a script as input. Users
 just don’t usually think about it in those terms! We could write the
-{index}`\`repeat\` block<`repeat` block>` as a custom block this way, if Snap<em>!</em>
+repeat block as a custom block this way, if Snap<em>!</em>
 didn’t already have one:
 
 ![image708.png](images/06-procedures-as-data/image708.png) <!--  style="width:2.375in;height:1.35417in" / -->
 
 The lambda ("`λ`") next to <var>action</var> in the prototype indicates that this is a
-C-shaped block\index{C-shaped block}, and that the script enclosed by
+C-shaped block, and that the script enclosed by
 the C when the block is used is the input named <var>action</var> in the body of
 the script. The only way to make sense of the variable <var>action</var> is to
 understand that its value is a script.
 
-To declare an input to be
-[Procedure-type]{.mono}, open the input name dialog as usual, and click on the
-arrowhead:
+To declare an input to be [Procedure-type]{.mono}, open the input name dialog as usual, and click on the arrowhead:
 
 ![image509.png](images/06-procedures-as-data/image509.png) <!--  style="width:2.58333in;height:1.60417in" / -->
 
@@ -176,16 +196,15 @@ they aren’t accepted in a C-shaped slot.)
 
 Why would you ever choose an inline Command slot rather than a C shape?
 Other than the `run` block discussed below, the only
-case I can think of is something like the C\index{C programming
-language} /C++/Java\index{Java programming language} `for` loop, which
+case I can think of is something like the C /C++/Java `for` loop, which
 actually has *three* command script inputs (and one predicate input),
 only one of which is the “featured” loop body:
 
 ![image710.png](images/06-procedures-as-data/image710.png) <!--  style="width:2.11458in;height:0.46875in" / -->
 
 Okay, now that we have procedures as inputs to our blocks, how do we use
-them? We use the blocks `run`\index{run block} (for commands) and `call`
-\index{call block } (for reporters). The `run` block’s script input is an
+them? We use the blocks `run` (for commands) and `call`
+(for reporters). The `run` block’s script input is an
 inline `ring`, not C-shaped, because we anticipate that it will be rare to
 use a specific, literal script as the input. Instead, the input will
 generally be a variable whose *value* is a script.
@@ -196,7 +215,7 @@ where to use those inputs? If the called procedure (block or script) has
 empty input slots, Snap<em>!</em> “does the right thing.” This has several
 possible meanings:
 
-1. If the number of empty slots\index{empty input slots, filling} is exactly equal to the number
+1. If the number of empty slots is exactly equal to the number
 of inputs provided, then Snap<em>!</em> fills the empty slots from left to
 right:
 
@@ -211,9 +230,17 @@ empty slots with it:
 intention is unclear.
 
 If the user wants to override these rules, the solution is to use a `ring`
-\index{ring, gray} with explicit input names that can be put into the
+with explicit input names that can be put into the
 given block or script to indicate how inputs are to be used. This will
 be discussed more fully below.
+
+:::{index} recursive call
+input list
+variable-input slot
+halo; red
+arrowheads
+red halo
+:::
 
 (sec-recursive-calls-to-multiple-input-blocks)=
 ### Recursive Calls to Multiple-Input Blocks
@@ -222,23 +249,22 @@ A relatively rare situation not yet considered here is the case of a
 recursive block that has a variable number of inputs. Let’s say the user
 of your project calls your block with five inputs one time, and 87
 inputs another time. How do you write the recursive call
-\index{recursive call} to your block when you don’t know how many inputs
+to your block when you don’t know how many inputs
 to give it? The answer is that you collect the inputs in a list
-\index{input list} (recall that, when you declare an input name to
+(recall that, when you declare an input name to
 represent a variable number of inputs, your block sees those inputs as a
 list of values in the first place), and then, in the recursive call, you
 drop that input list *onto the arrowheads* that indicate a
-variable-input slot\index{variable-input slot}, rather than onto the
+variable-input slot, rather than onto the
 input slot:
 
 ![image715.png](images/06-procedures-as-data/image715.png) <!--  style="width:2.27569in;height:1.59722in" / -->
 
 
-Note that the halo\index{halo!red} you see while dragging onto the
-arrowheads\index{arrowheads} is red\index{red halo} instead of white,
+Note that the halo you see while dragging onto the
+arrowheads is red instead of white,
 and covers the input slot as well as the arrowheads. And when you drop
-the expression onto the arrowheads, the words "`input list:`"\index{input
-list} are added to the block text and the arrowheads disappear (in
+the expression onto the arrowheads, the words "`input list:`" are added to the block text and the arrowheads disappear (in
 this invocation only) to remind you that the list represents all of the
 multiple inputs, not just a single input. The items in the list are
 taken *individually* as inputs to the script. Since <var>numbers</var> is a list of
@@ -258,6 +284,15 @@ list as input; it takes numbers as inputs! So this would be wrong:
 
 ![image722.png](images/06-procedures-as-data/image722.png)
 
+:::{index} name, input
+`#1`
+formal parameters
+crossproduct
+nested calls
+higher order function
+empty input slots, filling
+:::
+
 (sec-formal-parameters)=
 ## Formal Parameters
 :::{index} formal parameters
@@ -265,16 +300,16 @@ list as input; it takes numbers as inputs! So this would be wrong:
 
 The `rings` around Procedure-{index}`type inputs` have an
 arrowhead at the right. Clicking the arrowhead allows you to give the
-inputs to a block or script explicit names\index{name, input}, instead
+inputs to a block or script explicit names, instead
 of using empty input slots as we’ve done until now.
 
 ![image730.png](images/06-procedures-as-data/image730.png) <!--  style="width:4.32292in;height:0.45417in" / -->
 
-The names <var>\#1</var>\index{\#1}, <var>\#2</var>, etc. are provided by default, but you
+The names <var>\#1</var>, <var>\#2</var>, etc. are provided by default, but you
 can change a name by clicking on its orange oval in the "`input names`"
 list. Be careful not to *drag* the oval when clicking; that’s how you
 use the input inside the `ring`. The names of the input variables are
-called the *formal parameters*\index{formal parameters} of the
+called the *formal parameters* of the
 encapsulated procedure.
 
 Here’s a simple but contrived
@@ -290,15 +325,15 @@ because the number of inputs provided (2) would not match the number of
 empty slots (3).
 
 Here is a more realistic,
-much more advanced example\index{crossproduct} : ![image733.png](images/06-procedures-as-data/image733.png) <!--  style="width:4.34722in;height:1.40278in" / -->
+much more advanced example: ![image733.png](images/06-procedures-as-data/image733.png) <!--  style="width:4.34722in;height:1.40278in" / -->
 
 ![image732.png](images/06-procedures-as-data/image732.png) <!--  style="width:4.67986in;height:3.01806in" / -->
 
 This is the definition of a block that takes any number of lists, and
 reports the list of all possible combinations of one item from each
 list. The important part for this discussion is that near the bottom
-there are two *nested* calls\index{nested calls} to `map`, the higher
-order function\index{higher order function} that applies an input
+there are two *nested* calls to `map`, the higher
+order function that applies an input
 function to each item of an input list. In the inner block, the function
 being mapped is `( ) in front of ( )`, and that block takes two inputs. The
 second, the empty List-type slot, will get its value in each call from
@@ -309,10 +344,12 @@ giving to the inner one, then drag that variable into the `( ) in front of ( )`
 block.
 
 By the way, once the called block provides names for its inputs, Snap<em>!</em>
-will not automatically fill empty slots\index{empty input slots,
-filling}, on the theory that the user has taken control. In fact,
+will not automatically fill empty slots, on the theory that the user has taken control. In fact,
 that’s another reason you might want to name the inputs explicitly: to
 stop Snap<em>!</em> from filling a slot that should really remain empty.
+
+:::{index} list of procedures
+:::
 
 ## Procedures as Data
 
@@ -323,7 +360,7 @@ procedure (block or script) inside it:
 
 ![image734.png](images/06-procedures-as-data/image734.png) <!--  style="width:5.1875in;height:1.65625in" / -->
 
-Here, we are making a list of procedures\index{list of procedures}.
+Here, we are making a list of procedures.
 But the `list` block accepts inputs of any type, so its input slots are
 not ringed. We must say explicitly that we want the block *itself* as
 the input, rather than whatever value would result from evaluating the
@@ -337,10 +374,21 @@ reports a procedure):
 
 ![image735.png](images/06-procedures-as-data/image735.png) <!--  style="width:3.83333in;height:0.84375in" / -->
 
+:::{index} `if else` block
+factorial
+constant functions
+`id` block
+special form
+type, `Any (unevaluated)`
+`Any (unevaluated)` type
+Procedure type
+sophistication
+:::
+
 ## Special Forms
 
- The primitive `if else`
-\index{if else block } block has two C-shaped command slots and chooses
+The primitive `if else`
+block has two C-shaped command slots and chooses
 one or the other depending on a Boolean test. Because Scratch doesn’t
 emphasize functional programming, it lacks a corresponding reporter
 block to choose between two expressions. Snap<em>!</em> has one, but we could
@@ -364,7 +412,7 @@ computed (evaluated) before the block itself runs. The block itself
 knows only the values of its inputs, not what expressions were used to
 compute them. In particular, all of the inputs to `my if then else` block
 are evaluated ﬁrst thing. That means that even in the base case,
-`factorial`\index{factorial} will try to call itself recursively, causing
+`factorial` will try to call itself recursively, causing
 an infinite loop. We need `my if then else` block to be able to select
 only one of the two alternatives to be evaluated.
 
@@ -384,8 +432,8 @@ themselves, rather than their values, become the inputs:
 In this version, the program works, with no infinite loop. But we’ve
 paid a heavy price: this `reporter-if` is no longer as intuitively obvious
 as the Scratch command-`if`. You have to know about procedures as data,
-about `rings`, and about a trick to get a constant value in a ringed slot
-\index{constant functions}. (The `id ( )` block\index{id block} implements
+about `rings`, and about a trick to get a constant value in a ringed slot.
+(The `id ( )` block implements
 the {index}`identity function`, which reports its
 input.[^6] We need it because `rings` take only reporters as input, not
 numbers.) What we’d like is a `reporter-if` that *behaves* like this one,
@@ -400,9 +448,9 @@ Such blocks are indeed possible. A block that seems to take a simple
 expression as input, but delays the evaluation of that input by wrapping
 an “invisible ring” around it (and, if necessary, an `id ( )`-like
 transformation of constant data into constant functions) is called a
-*special form*\index{special form}. To turn our `if` block into a
+*special form*. To turn our `if` block into a
 special form, we edit the block’s prototype, declaring the inputs <var>yes</var>
-and <var>no</var> to be of type "`Any (unevaluated)`"\index{Any (unevaluated) type}
+and <var>no</var> to be of type "`Any (unevaluated)`"
 instead of type [Reporter]{.mono}. The script for the block is still that of the
 second version, including the use of `call` to evaluate either <var>yes</var> or <var>no</var>
 but not both. But the slots appear as white [Any-type]{.mono} rectangles, not
@@ -411,16 +459,20 @@ attempt.
 
 In a special form’s prototype, {index}`the unevaluated`
 input slot(s) are indicated by a lambda ("`λ`") next to the input name, just
-as if they were declared as [Procedure]{.mono} type\index{Procedure type}. They
+as if they were declared as [Procedure]{.mono} type. They
 *are* [Procedure]{.mono} type, really; they’re just disguised to the user of the
 block.
 
 Special forms trade off implementor sophistication
-\index{sophistication} for user sophistication. That is, you have to
+for user sophistication. That is, you have to
 understand all about procedures as data to make sense of the special
 form implementation of `my if then else`. But any experienced Scratch
 programmer can *use* `my if then else` without thinking at all about how
 it works internally.
+
+:::{index} Boolean (unevaluated) type
+C-shaped slot
+:::
 
 ### Special Forms in Scratch
 
@@ -430,8 +482,7 @@ hexagonal input slot in the `if` block is a straightforward Boolean value,
 because the value can be computed once, before the `if` block makes its
 decision about whether or not to run its action input. But the `forever
 if`, `repeat until ( )`, and `wait until ( )` blocks’ inputs can’t be Booleans; they
-have to be of type “Boolean (unevaluated)\index{Boolean (unevaluated)
-type},” so that Scratch can evaluate them over and over again. Since
+have to be of type “Boolean (unevaluated),” so that Scratch can evaluate them over and over again. Since
 Scratch doesn’t have custom C‑shaped blocks, it can afford to handwave
 away the distinction between evaluated and unevaluated Booleans, but
 Snap<em>!</em> can’t. The pedagogic value of special forms is proven by the
@@ -439,7 +490,7 @@ fact that no Scratcher ever notices that there’s anything strange about
 the way in which the hexagonal inputs in the [Control]{.mono} blocks are
 evaluated.
 
-Also, the C-shaped slot\index{C-shaped slot} familiar to Scratch users
+Also, the C-shaped slot familiar to Scratch users
 is an unevaluated procedure type; you don’t have to use a `ring` to keep
 the commands in the C-slot from being run before the C-shaped block is
 run. Those commands themselves, not the result of running them, are the
