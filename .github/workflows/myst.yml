@@ -52,7 +52,7 @@ jobs:
           # Copy them into the HTML output so they ship alongside the site.
           mkdir -p _build/html
           cp output/snap-manual.pdf              _build/html/snap-manual.pdf
-          cp output/snap-manual-no-blocks-ref.pdf _build/html/snap-manual-no-blocks-ref.pdf
+          cp output/snap-manual-blocks-ref.pdf _build/html/snap-manual-no-blocks-ref.pdf
           cp output/snap-blocks-ref.pdf          _build/html/snap-blocks-ref.pdf
 
       # On PRs, attach all three PDFs as workflow artifacts so reviewers can
@@ -68,7 +68,8 @@ jobs:
             output/snap-manual-no-blocks-ref.pdf
             output/snap-blocks-ref.pdf
           retention-days: 10
-          if-no-files-found: error
+          # TODO: Ignore for now while secondary files are disabled.
+          if-no-files-found: ignore
 
       # Only publish to gh-pages from main (or workflow_dispatch). PRs stop
       # after building + uploading the artifact above.

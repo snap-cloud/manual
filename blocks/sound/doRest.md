@@ -1,5 +1,4 @@
 ---
-toc: false
 ---
 
 # `Rest For Beats`

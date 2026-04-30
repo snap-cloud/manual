@@ -44,7 +44,6 @@ is near the tab of the one above it:
 
 (fig-snapping-blocks)=
 ::::{grid} 2
-:gutter: 3
 
 :::{grid-item}
 ![image7.png](images/01-blocks-scripts-and-sprites/image7.png)
@@ -157,7 +156,6 @@ But if you see an orange halo and let go, the block will *wrap* around
 the haloed blocks:
 
 ::::{grid} 2
-:gutter: 3
 
 :::{grid-item}
 ![image16.png](images/01-blocks-scripts-and-sprites/image16.png)
@@ -172,7 +170,6 @@ The halo will always extend from the cursor position to the bottom of
 the script:
 
 ::::{grid} 2
-:gutter: 3
 
 :::{grid-item}
 ![image18.png](images/01-blocks-scripts-and-sprites/image18.png)
@@ -213,7 +210,6 @@ window. Try putting one of the following scripts in each sprite’s
 scripting area:
 
 ::::{grid} 2
-:gutter: 3
 
 :::{grid-item}
 ![image26.png](images/01-blocks-scripts-and-sprites/image26.png)
@@ -231,7 +227,6 @@ together. Parallelism can be seen with multiple
 scripts of a single sprite also. Try this example:
 
 ::::{grid} 2
-:gutter: 3
 
 :::{grid-item}
 ![image28.png](images/01-blocks-scripts-and-sprites/image28.png)
@@ -319,8 +314,6 @@ another sprite to run a script. Here’s a simple example:
 
 (fig-broadcast-dog)=
 ::::{grid} 4
-:gutter: 2
-
 :::{grid-item}
 ![image41.png](images/01-blocks-scripts-and-sprites/image41.png)
 :::
@@ -767,7 +760,7 @@ the variable to it.
 :::{index} help
 :::
 
-:::{index} Debugging
+:::{index} debugging
 :::
 
 ## Debugging
@@ -845,9 +838,10 @@ hide and show primitives
 :::
 
 :::{index} single stepping
+visible stepping
 :::
 
-### {index}`Visible stepping`
+### Visible stepping
 
 Sometimes you’re not exactly sure where the error is, or you don’t
 understand how the program got there. To understand better, you’d
@@ -966,7 +960,6 @@ pen down? block
 :::
 
 ::::{grid} 2
-:gutter: 3
 
 :::{grid-item}
 <img class="image-inline" src="images/01-blocks-scripts-and-sprites/image150.png" alt="image150.png">
@@ -1002,7 +995,6 @@ type
 ![image152.png](images/01-blocks-scripts-and-sprites/image152.png){.image-4x}
 
 ::::{grid} 2
-:gutter: 3
 
 :::{grid-item}
 ![image155.png](images/01-blocks-scripts-and-sprites/image155.png){.image-4x}
@@ -1166,7 +1158,6 @@ snapshot and reports it as a costume. It is hyperized with respect to its second
 :::
 
 ::::{grid} 2
-:gutter: 3
 
 :::{grid-item}
 <img class="image-inline" src="images/01-blocks-scripts-and-sprites/image306.png" alt="image306.png">
@@ -1199,7 +1190,6 @@ you drop a list on the arrowheads, the block name
 changes to `sum` or `product`.
 
 ::::{grid} 2
-:gutter: 3
 
 :::{grid-item}
 ![image309.png](images/01-blocks-scripts-and-sprites/image309.png)
@@ -1219,7 +1209,6 @@ when I am stopped script
 
 (para-broadcast)=
 ::::{grid} 2
-:gutter: 3
 
 :::{grid-item}
 ![image310.png](images/01-blocks-scripts-and-sprites/image310.png)
@@ -1231,7 +1220,6 @@ when I am stopped script
 ::::
 
 ::::{grid} 2
-:gutter: 3
 
 :::{grid-item}
 ![image311.png](images/01-blocks-scripts-and-sprites/image311.png){.image-4x}
@@ -1290,13 +1278,13 @@ library.
 ![image362.png](images/01-blocks-scripts-and-sprites/image362.png)
 
 ::::{grid} 2
-:gutter: 3
 
 :::{grid-item}
 ![image363.png](images/01-blocks-scripts-and-sprites/image363.png){.image-4x}
 :::
 
 :::{grid-item}
+(sec-image-list-of-attributes)=
 The `of` block has an extended menu of
 attributes of a sprite. Position reports an (x,y) vector. Size reports
 the percentage of normal size, as controlled by the set size block in
@@ -1313,7 +1301,8 @@ script variables if the right input is a script.)
 letter (1) of (world) block
 visual representation of a sentence
 bar chart block
-conditional library:multiple-branch
+conditional library
+conditional library; multiple-branch
 setting block
 infinite precision integer library
 Libraries… option
@@ -1440,8 +1429,7 @@ the function *f*(*g*(*x*)).
 :::{index} `compose` block
 :::
 
-The first three repeat blocks
- are variants of the primitive `repeat until` block,
+The first three repeat blocks are variants of the primitive `repeat until` block,
 giving all four combinations of whether the first test happens before or
 after the first repetition, and whether the condition must be true or
 false to continue repeating. The last repeat block is like the `repeat`
@@ -1459,17 +1447,25 @@ desired value for the loop index.
 
 ![image392.png](images/01-blocks-scripts-and-sprites/image392.png) <!--  style="width:3.70972in;height:1.17153in" --> ![image391.png](images/01-blocks-scripts-and-sprites/image391.png) <!--  style="width:3.44097in;height:1.36111in" -->
 
+
+:::{index}
+stream list
+in front of stream block
+map over stream block
+show stream block
+Stream block
+sieve block
+Stream with numbers from block
+:::
+(sec-stream-library)=
 The {index}`stream library` has these blocks:
 
 ![image393.png](images/01-blocks-scripts-and-sprites/image393.png) <!-- {width=3.16111in height=2.15347in} -->
 
-*Streams* are a special kind
-of list whose items are not computed until they are needed. This makes
+*Streams* are a special kind of list whose items are not computed until they are needed. This makes
 certain computations more efficient, and also allows the creation of
 lists with infinitely many items, such as a list of all the positive
 integers. The first five blocks are stream versions of the list blocks.
-:::{index} stream list
-:::
 
 `in front of`, `item 1 of`, `all but first of`, `map`, and `keep`. `Show stream`
  takes a stream and a number as inputs, and
@@ -1481,27 +1477,19 @@ reports the stream of all the prime numbers. `Stream with numbers from` is
  like the numbers from block for
 lists, except that there is no endpoint; it reports an infinite stream
 of numbers.
-:::{index} in front of stream block
-map over stream block
-show stream block
-Stream block
-sieve block
-Stream with numbers from block
-:::
 
+
+:::{index} sentence library
+`word ➔ list` block
+:::
 (word-and-sentence-library)=
 The **word and sentence library** has these blocks:
-:::{index} sentence library
-:::
 
 <!-- TODO: Index Entries for all these blocks -->
 ![image394.png](images/01-blocks-scripts-and-sprites/image394.png)
 
-:::{index} `word ➔ list` block
-:::
-
 This library has the goal of recreating the Logo approach to handling text:
-A text isn’t best viewed as a string of characters, but rather as a *sentence*, made of *words,*
+A text isn’t best viewed as a string of characters, but rather as a *sentence*, made of *words*,
 each of which is a string of *letters.* With a few specialized
 exceptions, this is why people put text into computers: The text is
 sentences of natural (i.e., human) language, and the emphasis is on
@@ -1512,14 +1500,13 @@ you see what you expect to see, what will make the snetence make sense,
 rather than the misspelling in front of of your eyes.) Internally, Logo
 stores a sentence as a list of words, and a word as a string of letters.
 
-:::{index} all but first blocks
+:::{index} `all but first` blocks
 :::
 
 Inexplicably, the designers of Scratch chose to abandon that tradition,
 and to focus on the representation of text as a string of characters.
 The one vestige of the {index}`Logo tradition` from which
-Scratch developed is the block named letter (1) of (world), rather than character (1) of (world). Snap<em>!</em>
-inherits its text handling from Scratch.
+Scratch developed is the block named "`letter (1) of (world)`", rather than "`character (1) of (world)`". Snap<em>!</em> inherits its text handling from Scratch.
 
 In Logo, the visual representation of a sentence (a list of words) looks like a natural
 language sentence: a string of words with spaces between them. In
@@ -1554,22 +1541,24 @@ a linguist investigating orthography.) `Printable`
 takes a list (including a deep list) of words as input and reports a
 text string in which parentheses are used to show the structure, as in
 Lisp/Scheme.
+
 :::{index} list ➔ sentence block
 printable block
+pixels library
 :::
 
-The {index}`pixels library` has one block:
+:::{index} `snap` block
+:::
+
+(sec-pixels-library)=
+The **pixels library** has one block:
 
 ![image395.png](images/01-blocks-scripts-and-sprites/image395.png{.image-4x} <!-- {width=0.77917in height=0.62986in} -->
 
-Costumes are first class data
-in Snap<em>!</em>. Most of the processing of costume data is done by primitive
-blocks in the Looks category. (See page
-@sec-media-computation-with-costumes).) This library provides snap
-, which takes a picture using your computer’s camera
-and reports it as a costume.
-:::{index} snap block
-:::
+Costumes are first class data in Snap<em>!</em>. Most of the processing of
+costume data is done by primitive blocks in the Looks category. (See page
+@sec-media-computation-with-costumes).) This library provides Snap<em>!</em>,
+which takes a picture using your computer’s camera and reports it as a costume.
 
 The bar charts library has these blocks:
 :::{index} bar charts library
@@ -1625,15 +1614,17 @@ switch in C
 else if block
 :::
 
-###
+:::{index} variadic library
+sum block
+all of block
+any of block
+:::
+### The Variadic Library
 
-The {index}`variadic library` has these blocks:
+The variadic library has these blocks:
 
 ![image398.png](images/01-blocks-scripts-and-sprites/image398.png) <!-- {width=1.19653in height=0.41667in} -->
 
-:::{index}
-
-:::
 These are versions of the associative
 operators `and`, and `or` that take any number of inputs
 instead of exactly two inputs. As with any variadic input,
@@ -1642,11 +1633,14 @@ instead of providing the inputs one at a time
 As of version 8.0, the arithmetic operators sum, product, minimum, and
 maximum are no longer included, because the primitive operators `+` `x`,
 `min`, and `max` are themselves variadic.
-:::{index} sum block
-all of block
-any of block
-:::
 
+:::{index} `set pen` block
+HSL color
+X11/W3C color names
+color from block
+from color block
+:::
+### The Color and Crayons Library
 The colors and {index}`crayons library` has these blocks:
 
 It is intended as a more powerful replacement for the primitive `set pen`
@@ -1659,27 +1653,17 @@ hexadecimal`; a linear color scale (as in the old days, but better) based
 on fair hues and including shades (darker colors) and grayscale. Another
 linear scale is a curated set of 100 “crayons,” explained further on the
 next page.
-:::{index} set pen block
-HSL color
-X11/W3C color names
-:::
 
 ![image412.png](images/01-blocks-scripts-and-sprites/image412.png) <!--  style="width:1.13333in;height:0.23333in" -->
 
-Colors are
-created by the <img class="image-inline" src="images/01-blocks-scripts-and-sprites/image414.png" alt="image414.png"> <!--  style="width:0.95in;height:0.225in" --> block (for direct user selection), the `color from`
- to specify a color numerically, or by <img class="image-inline" src="images/01-blocks-scripts-and-sprites/image413.png" alt="image413.png"> <!-- style="width:1.13333in;height:0.23333in" --> , which
+Colors are created by the <img class="image-inline" src="images/01-blocks-scripts-and-sprites/image414.png" alt="image414.png"> <!--  style="width:0.95in;height:0.225in" --> block (for direct user selection), the `color from`
+to specify a color numerically, or by <img class="image-inline" src="images/01-blocks-scripts-and-sprites/image413.png" alt="image413.png"> <!-- style="width:1.13333in;height:0.23333in" --> , which
 reports the color currently in use by the pen. The `from color` block
- reports names or numbers associated with a
-color:
-:::{index} color from block
-from color block
-:::
+reports names or numbers associated with a color:
 
 ![image411.png](images/01-blocks-scripts-and-sprites/image411.png){.image-4x} <!--  style="width:0.95in;height:0.225in" -->
 
-Colors can be created from
-other colors:
+Colors can be created from other colors:
 ![image415.png](images/01-blocks-scripts-and-sprites/image415.png) <!-- {width=4.83333in height=0.43056in} -->
 :::{index} mix colors block
 :::
@@ -1690,11 +1674,8 @@ example, could be implemented using a (hypothetical) `set pen` to color
 composed with the `color from` block, but in fact `set pen` benefits from
 knowing how the pen color was set in its previous invocation, so it’s
 implemented separately from `color from`. Details in Appendix A.
-:::{index} set pen block
-:::
 
-The
-recommended way to choose a color is from one of two linear scales: the
+The recommended way to choose a color is from one of two linear scales: the
 continuous *color numbers* and the discrete *crayons:*
 
 ![image416.png](images/01-blocks-scripts-and-sprites/image416.png) <!-- {width=7.5in height=0.25in} -->
@@ -2057,7 +2038,7 @@ in a (listified) JSON dictionary. The `key:value:` block
  is just a constructor for an abstract data
 type used with the other blocks
 :::{index} value at key block
-`key:value:` block
+single: `key\:value\:` block
 :::
 
 The {index}`database library` contains these blocks:
@@ -2065,14 +2046,13 @@ The {index}`database library` contains these blocks:
 ![image472.png](images/01-blocks-scripts-and-sprites/image472.png)
 
 It is used to keep data that persist from one Snap<em>!</em> session
- to the next, if you use the same browser and the same login.
+to the next, if you use the same browser and the same login.
 
 The world {index}`map library` has these blocks:
 
 ![image473.png](images/01-blocks-scripts-and-sprites/image473.png) <!-- {width=2.44236in height=3.40278in} -->
 
-Using any of the command
-blocks puts a map on the screen, in a layer in front of the stage’s
+Using any of the command blocks puts a map on the screen, in a layer in front of the stage’s
 background but behind the pen trails layer (which is in turn behind all
 the sprites). The first block asks your browser for your current
 physical location, for which you may be asked to give permission. The
@@ -2152,6 +2132,14 @@ to take lists as inputs. See @sec-ask-lists.
 :::{index} menus library
 :::
 
+:::{index}
+library; SciSnap
+library; TuneScope
+SciSnap! library
+TuneScope library
+:::
+
+### Extensions Libraries
 ![image486.png](images/01-blocks-scripts-and-sprites/image486.png)
 
 The **SciSnap<em>!</em> library** and the
@@ -2160,9 +2148,3 @@ documented sepa, library; MQTTqqrately at
 <http://emu-online.de/ProgrammingWithSciSnap.pdf> and
 <https://maketolearn.org/creating-art-animations-and-music/>
 respectively.
-:::{index}
-library; SciSnap
-library; TuneScope
-SciSnap! library
-TuneScope library
-:::

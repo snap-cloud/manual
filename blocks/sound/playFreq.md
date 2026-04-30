@@ -1,5 +1,4 @@
 ---
-toc: false
 ---
 
 # `Play Frequency Hz`

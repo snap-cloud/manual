@@ -38,7 +38,8 @@ choose "`Export project`" from the File menu.
 cloud
 save your project in the cloud
 Terms of Service
-Cloud, Account
+cloud, Account
+cloud, save your project in the cloud
 :::
 ## Creating a Cloud Account
 
