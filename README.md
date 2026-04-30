@@ -118,7 +118,9 @@ It is also recommended to install the [MyST VSCode extension][myst_vscode].
 **While writing content (live preview):**
 
 ```shell
-myst start
+npm run dev
+# OR
+jupyter-book start
 ```
 
 This builds the web version and opens it in the browser.
@@ -127,7 +129,7 @@ The page reloads automatically as you save changes.
 **To build the final HTML:**
 
 ```shell
-myst build --html
+jupyter-book build --html
 ```
 
 Output is placed in `_build/html/`.
@@ -135,7 +137,7 @@ Output is placed in `_build/html/`.
 **To build the PDFs (requires a TeX Live install):**
 
 ```shell
-myst build --pdf
+jupyter-book build --pdf
 ```
 
 This produces three PDFs in `output/`:
