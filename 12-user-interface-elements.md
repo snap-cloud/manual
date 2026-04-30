@@ -13,36 +13,51 @@ the map of the Snap<em>!</em> window:
 
 ![An annotated screenshot of blank Snap! editor](images/12-user-interface-elements/snap-ide-annotated.png)
 
+:::{index} tool bar features
+shift-clicking
+secrets
+:::
+
 ## Tool Bar Features
 
 <!-- TODO: Describe where the toolbar is. -->
 
-Holding down the <kdd>Shift<kdd> key\index{tool bar features} (<kbd>⇧</kbd>)
- while clicking \index{shift-clicking} on any of the menu buttons gives access to an
+Holding down the <kdd>Shift<kdd> key (<kbd>⇧</kbd>)
+ while clicking on any of the menu buttons gives access to an
 extended menu with options, shown in red, that are experimental or for
 use by the developers. We’re not listing those extra options here
 because they change frequently and you shouldn’t rely on them. But
-they’re not secrets\index{secrets}.
+they’re not secrets.
+
+:::{index} Snap; logo menu
+About option
+license
+AGPL
+Reference manual option
+Snap! website option
+snap.berkeley.edu
+`Download source` option
+source files for Snap!
+:::
 
 ### The Snap<em>!</em> Logo Menu
 
-The Snap<em>!</em> logo\index{Snap! logo menu} at the left end of the tool bar
+The Snap<em>!</em> logo at the left end of the tool bar
 is clickable. It shows a menu of options about Snap<em>!</em> itself:
 
 ![Snap! logo menu showing options: About, Reference Manual, Snap! Website and Download Source](images/12-user-interface-elements/image994.png) <!--  style="width:2.32922in;height:1.02in" / -->
 
-The "`About`" option\index{About option} displays information about Snap<em>!</em>
+The "`About`" option displays information about Snap<em>!</em>
 itself, including version numbers for the source modules, the
-implementors, and the license\index{license} (AGPL\index{AGPL} : you
+implementors, and the license (AGPL: you
 can do anything with it except create proprietary versions, basically).
 
-The "`Reference manual`" option\index{Reference manual option} is a link to latest revision of this manual as a web page.
+The "`Reference manual`" option is a link to latest revision of this manual as a web page.
 
-The "`Snap! website`" option\index{"Snap! website option"} opens a browser
-window pointing to [https://snap.berkeley.edu](https://snap.berkeley.edu)\index{snap.berkeley.edu}, the community site for Snap<em>!</em>.
+The "`Snap! website`" option opens a browser
+window pointing to [https://snap.berkeley.edu](https://snap.berkeley.edu), the community site for Snap<em>!</em>.
 
-The "`Download source`" option\index{Download source option@\texttt{Download source} option} opens a
-browser window displaying the [GitHub repository][github] of the source files for Snap<em>!</em>.\index{"source files for Snap\!"} At the bottom of the page
+The "`Download source`" option opens a browser window displaying the [GitHub repository][github] of the source files for Snap<em>!</em>. At the bottom of the page
 are links to download the latest official release. Or you can navigate
 around the site to find the current development version. You can read
 the code to learn how Snap<em>!</em> is implemented, host a copy on your own
@@ -52,20 +67,52 @@ accounts is limited to the official version hosted at Berkeley.)
 
 [github]: https://github.com/jmoenig/Snap
 
+:::{index} file icon menu
+Project notes option
+New option
+shortcuts; keyboard
+`Open…` option
+Cloud button
+Examples button
+Save option
+Save as… option
+Import… option
+Export project… option
+Export summary… option
+Advanced Placement Computer Science Principles
+AP CSP
+Export blocks… option
+Unused blocks… option
+Hide blocks… option
+New category… option
+Remove a category… option
+scenes
+Scenes… option
+New scene option
+Add scene… option
+Libraries… option
+Costumes… option
+Backgrounds… option
+bitmap
+vector
+Sounds… option
+Undelete sprites… option
+:::
+
 ### The File Menu
 
-The file icon\index{file icon menu} (![the file icon](images/12-user-interface-elements/image384.png))
+The file icon (![the file icon](images/12-user-interface-elements/image384.png))
 shows a menu mostly about saving and loading projects. You
 may not see all these options, if you don’t have multiple sprites,
 scenes, custom blocks, and custom categories.
 
-The "`Notes`" option\index{Project notes option} opens a window in which
+The "`Notes`" option opens a window in which
 you can type notes about the project: How to use it, what it does, whose
 project you modified to create it, if any, what other sources of ideas
 you used, or any other information about the project. This text is saved
 with the project, and is useful if you share it with other users.
 
-The "`New`" option\index{New option} starts a new, empty project. Any
+The "`New`" option starts a new, empty project. Any
 project you were working on before disappears, so you are asked to
 confirm that this is really what you want. (It disappears only from the
 current working Snap<em>!</em> window; you should save the current project, if
@@ -76,17 +123,17 @@ control-N as a shortcut for this menu item. Alas, this is not the case
 in every browser. Some Mac browsers require command-N (<kbd>⌘N</kbd>)
 instead, while others open a new browser window instead of a new project.
 You’ll have to experiment. In general, the keyboard shortcuts
-\index{shortcuts!keyboard} in Snap<em>!</em> are the standard ones you expect
+in Snap<em>!</em> are the standard ones you expect
 in other software.
 
-The "`Open…`" option\index{Open…@\texttt{Open…} option} shows a project open dialog box in
+The "`Open…`" option shows a project open dialog box in
 which you can choose a project to open:
 
 ![The Open Project Dialog in Snap!](images/12-user-interface-elements/image995.png) <!--  style="width:2.88958in;height:2.09792in" / -->
 
 In this dialog, the three large buttons at the left select a source of
-projects: "`Cloud`"\index{Cloud button} means your Snap<em>!</em> account’s cloud
-storage. "`Examples`"\index{Examples button} means a collection of sample
+projects: "`Cloud`" means your Snap<em>!</em> account’s cloud
+storage. "`Examples`" means a collection of sample
 projects we provide. "`Computer`" is for projects saved on your own
 computer; when you click it, this dialog is replaced with your
 computer’s system dialog for opening files. The text box to the right of
@@ -140,13 +187,13 @@ Finally, the "`Cancel`" button closes the dialog box without opening a
 project. (It does not undo any sharing, unsharing, or deletion you’ve
 done.)
 
-Back to the File menu, the "`Save`" menu option\index{Save option} saves
+Back to the File menu, the "`Save`" menu option saves
 the project to the same source and same name that was used when opening
 the project. (If you opened another user’s shared project or an example
 project, the project will be saved to your own cloud account. You must
 be logged in to save to the cloud.)
 
-The "`Save as…`" menu option\index{Save as… option} opens a dialog box in
+The "`Save as…`" menu option opens a dialog box in
 which you can specify where to save the project:
 
 ![The "Save as…" dialog in Snap!](images/12-user-interface-elements/image998.png) <!--  style="width:3.23611in;height:2.34931in" / -->
@@ -156,7 +203,7 @@ the top, into which you type a name for the project. You can also
 publish, unpublish, share, unshare, and delete projects from here. There
 is no "`Recover`" button.
 
-The "`Import…`" menu option\index{Import… option} is for bringing some
+The "`Import…`" menu option is for bringing some
 external resource into the current project, or it can load an entirely
 separate project, from your local disk. You can import costumes (any
 picture format that your browser supports), sounds (again, any format
@@ -168,7 +215,7 @@ file from your desktop onto the Snap<em>!</em> window.
 
 <!-- TODO: Update to default to downloading an XML file. -->
 Depending on your browser, the "`Export project…`" option either directly
-saves to your disk or\index{Export project… option} opens a new browser
+saves to your disk or opens a new browser
 tab containing your complete project in XML notation (a plain text
 format). You can then use the browser’s Save feature to save the project
 as an XML file, which should be named _`something`_`.xml` so that Snap<em>!</em>
@@ -177,17 +224,17 @@ window. This is an alternative to saving the project to your cloud
 account: keeping it on your own computer. It is equivalent to choosing
 "`Computer`" from the Save dialog described earlier.
 
-The "`Export summary…`" option\index{Export summary… option} creates a web
+The "`Export summary…`" option creates a web
 page, in HTML, with all of the information about your project: its name,
 its project notes, a picture of what’s on its stage, definitions of
 global blocks, and then per-sprite information: name, wardrobe (list of
 costumes), and local variables and block definitions. The page can be
 converted to PDF by the browser; it’s intended to meet the documentation
 requirements of the Advanced Placement Computer Science Principles
-\index{Advanced Placement Computer Science Principles}\index{AP CSP} create task.
+create task.
 
 <!-- TODO: Update to default to downloading an XML file. -->
-The "`Export blocks…`" option\index{Export blocks… option} is used to
+The "`Export blocks…`" option is used to
 create a {index}`block library`. It presents a list of all
 the global (for all sprites) blocks in your project, and lets you select
 which to export. It then opens a browser tab with those blocks in XML
@@ -196,13 +243,13 @@ project`" option. Block libraries can be imported with the "`Import`" option
 or by dragging the file onto the Snap<em>!</em> window. This option is shown
 only if you have defined custom blocks.
 
-The "`Unused blocks…`" option\index{Unused blocks… option} presents a
+The "`Unused blocks…`" option presents a
 listing of all the global custom blocks in your project that aren’t used
 anywhere, and offers to delete them. As with "`Export blocks`", you can
 choose a subset to delete with checkboxes. This option is shown only if
 you have defined custom blocks.
 
-The "`Hide blocks…`" option\index{Hide blocks… option} shows *all* blocks,
+The "`Hide blocks…`" option shows *all* blocks,
 including primitives, with checkboxes. This option does not remove any
 blocks from your project, but it does hide selected block in your
 palette. The purpose of the option is to allow teachers to present
@@ -213,36 +260,35 @@ users can always unhide blocks by choosing this option and unclicking
 all the checkboxes. (Right-click in the background of the dialog box to
 get a menu from which you can check all boxes or uncheck all boxes.)
 
-The "`New category…`" option\index{New category… option} allows you to add
+The "`New category…`" option allows you to add
 your own categories to the palette. It opens a dialog box in which you
 specify a name *and a color* for the category. (A lighter version of the
 same color will be used for the zebra coloring feature.)
 
-The "`Remove a category…`" option\index{Remove a category… option} appears
+The "`Remove a category…`" option appears
 only if you’ve created custom categories. It opens a very small,
 easy-to-miss menu of category names just under the file icon in the menu
 bar. If you remove a category that has blocks in it, all those blocks
 are also removed.
 
 <!-- cut: , new in Snap<em>!</em> 7.0 -->
-The next group of options concern the *scenes*\index{scenes} feature. A scene
+The next group of options concern the *scenes* feature. A scene
 is a complete project, with its own stage, sprites, and code, but
 several can be merged into one project, using the ![switch to scene block](images/12-user-interface-elements/image999.png){ .image-4x .image-inline } <!--  style="width:1.16667in;height:0.19792in" / -->  block to bring another
-scene onscreen. The "`Scenes…`" option\index{Scenes… option} presents a
+scene onscreen. The "`Scenes…`" option presents a
 menu of all the scenes in your project, where the File menu was before
-you clicked it. The "`New scene`" option\index{New scene option} creates a
+you clicked it. The "`New scene`" option creates a
 new, empty scene, which you can rename as you like from its context
 menu.
 
-"`Add scene…`"\index{Add scene… option} is like "`Import…`" but for
+"`Add scene…`" is like "`Import…`" but for
 scenes. (A complete project can be imported as a scene into another
 project, so you have to specify that you’re importing the project *as a
 scene* rather than replacing the current project.)
 
-The "`Libraries…`" option\index{Libraries… option} presents a menu of
+The "`Libraries…`" option presents a menu of
 useful, optional block libraries:
 
-<!-- TODO: Need screenshot. -->
 ![The libraries import dialog](images/12-user-interface-elements/image992.png) <!--  style="width:1.16667in;height:0.19792in" / -->
 
 **The following sections of the libraries dialog are out of date. (8/1/2025)**
@@ -274,7 +320,7 @@ the actual blocks in the library and a longer explanation of its
 purpose. You can browse the libraries to find one that will satisfy your
 needs. The libraries are described in detail in Section I.H, @sec-libraries.
 
- The "`Costumes…`" option \index{Costumes… option} opens a browser into the costume library:
+The "`Costumes…`" option opens a browser into the costume library:
 
 ![image1000.png](images/12-user-interface-elements/image1000.png) <!--  style="width:4.28125in;height:3.23958in" / -->
 
@@ -286,41 +332,47 @@ vector-format costumes that are not (yet) editable within Snap<em>!</em>.
 
 If you have the stage selected in the sprite corral, rather than a
 sprite, the Costumes… option changes to a Backgrounds… option
-\index{Backgrounds… option}, with different choices in the browser:
+, with different choices in the browser:
 
 ![image1001.png](images/12-user-interface-elements/image1001.png) <!--  style="width:4.28125in;height:3.23958in" / -->
 
 The costume and background
-libraries include both bitmap\index{bitmap} (go jagged if enlarged) and
-vector\index{vector} (enlarge smoothly) images. Thanks to Scratch
+libraries include both bitmap (go jagged if enlarged) and
+vector (enlarge smoothly) images. Thanks to Scratch
 2.0/3.0 for most of these images! Some older browsers refuse to import a
 vector image, but instead convert it to bitmap.
 
-The Sounds… option\index{Sounds… option} opens the third kind of media
+The Sounds… option opens the third kind of media
 browser:
 
 ![image1002.png](images/12-user-interface-elements/image1002.png) <!--  style="width:4.28125in;height:3.23958in" / -->
 
-The Play buttons can be used
-to preview the sounds.
+The Play buttons can be used to preview the sounds.
 
-Finally, the Undelete sprites… option\index{Undelete sprites… option}
+Finally, the Undelete sprites… option
 appears only if you have deleted a sprite; it allows you to recover a
 sprite that was deleted by accident (perhaps intending to delete only a
 costume).
 
+:::{index} cloud icon
+Login… option
+Signup… option
+Reset Password… option
+Open in Community Site option
+Logout option
+Change password… option
+:::
+
 ### The Cloud Menu
 
- The cloud icon\index{cloud
-icon}  ![image1008.png](images/12-user-interface-elements/image1008.png) <!--  style="width:0.29167in;height:0.16667in" / --> ![image1004.png](images/12-user-interface-elements/image1004.png) <!--  style="width:0.29167in;height:0.16667in" / --> shows a menu of options relating to your Snap<em>!</em> cloud account. If
+The cloud icon ![image1008.png](images/12-user-interface-elements/image1008.png) <!--  style="width:0.29167in;height:0.16667in" / --> ![image1004.png](images/12-user-interface-elements/image1004.png) <!--  style="width:0.29167in;height:0.16667in" / --> shows a menu of options relating to your Snap<em>!</em> cloud account. If
 you are not logged in, you see the outline icon  ![image1004.png](images/12-user-interface-elements/image1004.png) <!--  style="width:0.29167in;height:0.16667in" / --> and get this menu:
 
 ![image1003.png](images/12-user-interface-elements/image1003.png) <!--  style="width:1.43681in;height:0.75972in" / -->
 
-Choose Login…\index{Login… option} if you have a Snap<em>!</em> account and
-remember your password. Choose Signup…\index{Signup… option} if you
-don’t have an account. Choose Reset Password…\index{Reset Password…
-option} if you’ve forgotten your password or just want to change it. You
+Choose Login… if you have a Snap<em>!</em> account and
+remember your password. Choose Signup… if you
+don’t have an account. Choose Reset Password… if you’ve forgotten your password or just want to change it. You
 will then get an email, at the address you gave when you created your
 account, with a new temporary password. Use that password to log in,
 then you can choose your own password, as shown below. Choose Resend
@@ -328,35 +380,65 @@ Verification Email… if you have just created a Snap<em>!</em> account but can�
 find the email we sent you with the link to verify that it’s really your
 email. (If you still can’t find it, check your spam folder. If you are
 using a school email address, your school may block incoming email from
-outside the school.) The Open in Community Site option\index{Open in
-Community Site option} appears only if you have a project open; it takes
-you to the community site page about that project.
+outside the school.) The Open in Community Site option appears only if you have a project open; it takes you to the community site page about that project.
 
- If you are already logged in,
+If you are already logged in,
 you’ll see the solid icon ![image1008.png](images/12-user-interface-elements/image1008.png) <!--  style="width:0.29167in;height:0.16667in" / -->  and get this menu:
 
 ![image1007.png](images/12-user-interface-elements/image1007.png) <!--  style="width:1.61111in;height:0.65278in" / -->
 
-Logout\index{Logout option} is obvious, but has the additional benefit
-of showing you who’s logged in. Change password…\index{Change password…
-option} will ask for your old password (the temporary one if you’re
+Logout is obvious, but has the additional benefit
+of showing you who’s logged in. Change password… will ask for your old password (the temporary one if you’re
 resetting your password) and the new password you want, entered twice
 because it doesn’t echo. Open in Community Site is the same as above.
 
-###  The Settings Menu
+:::{index} settings icon
+Language… option
+translation
+Zoom blocks... option
+Fade blocks… option
+Stage size… option
+JavaScript extensions option
+JavaScript function block
+Extension blocks option
+Input sliders option
+Execute on slider change option
+Turbo mode option
+glide block
+visible stepping option
+Long form input dialog option
+Plain prototype labels option
+Clicking sound option
+Flat design option
+Thread safe scripts option
+flat line ends option
+codification support option
+text-based language
+map to code block
+Single palette option
+Parsons problems
+Show categories option
+Show buttons option
+HSL pen color model option
+lightness option
+pen block
+Disable click-to-run option
+:::
+
+### The Settings Menu
 
 The settings icon ![image1010.png](images/12-user-interface-elements/image1010.png) <!--  style="width:0.29167in;height:0.16667in" / -->
-\index{settings icon} shows a menu of Snap<em>!</em> options, either for the
+shows a menu of Snap<em>!</em> options, either for the
 current project or for you permanently, depending on the option:
 
 ![image1009.png](images/12-user-interface-elements/image1009.png) <!--  style="width:1.24792in;height:2.58333in" / -->
 
-The Language… option\index{Language… option} lets you see the Snap<em>!</em>
+The Language… option lets you see the Snap<em>!</em>
 user interface (blocks and messages) in a language other than English.
-(Note: Translations\index{translation} have been provided by Snap<em>!</em>
+(Note: Translations have been provided by Snap<em>!</em>
 users. If your native language is missing, send us an email!)
 
-The Zoom blocks... option\index{Zoom blocks... option} lets you change
+The Zoom blocks... option lets you change
 the size of blocks, both in the palettes and in scripts. The standard
 size is 1.0 units. The main purpose of this option is to let you take
 very high-resolution pictures of scripts for use on posters. It can also
@@ -365,7 +447,7 @@ lecturing, but bear in mind that it doesn’t make the palette or script
 areas any wider, so your computer’s command-option-+ feature may be more
 practical. Note that a zoom of 2 is gigantic! Don’t even try 10.
 
-The Fade blocks… option\index{Fade blocks… option} opens a dialog in
+The Fade blocks… option opens a dialog in
 which you can change the appearance of blocks:
 
 ![image1011.png](images/12-user-interface-elements/image1011.png) <!--  style="width:0.29167in;height:0.16667in" / -->
@@ -377,7 +459,7 @@ pulldown menu for preselected fadings, use the slider to see the result
 as you change the fading amount, or type a number into the text box once
 you’ve determined your favorite value.
 
-The Stage size… option\index{Stage size… option} lets you set the size
+The Stage size… option lets you set the size
 of the *full-size* stage in pixels. If the stage is in half-size or
 double-size (presentation mode), the stage size values don’t change;
 they always reflect the full-size stage.
@@ -392,16 +474,13 @@ The remaining options let you turn various features on and off. There
 are three groups of checkboxes. The first is for temporary settings not
 saved in your project nor in your user preferences.
 
-The JavaScript extensions option\index{JavaScript extensions option}
-enables the use of the JavaScript function block\index{JavaScript
-function block} . Because malicious projects could use JavaScript to
+The JavaScript extensions option
+enables the use of the JavaScript function block. Because malicious projects could use JavaScript to
 collect private information about you, or to delete or modify your saved
 projects, you must enable JavaScript *each time* you load a project that
 uses it.
 
-The
-Extension blocks option\index{Extension blocks option} adds two blocks
-to the palette:
+The Extension blocks option adds two blocks to the palette:
 
 ![image1021.png](images/12-user-interface-elements/image1021.png) <!--  style="width:1.18958in;height:0.18958in" alt="Graphical user interface, application Description automatically generated" / -->
 ![image1022.png](images/12-user-interface-elements/image1022.png) <!--  style="width:1.22986in;height:0.25972in" alt="Graphical user interface, text, application Description automatically generated" / -->
@@ -411,8 +490,7 @@ were formerly implemented with the JavaScript function block. This
 allows these libraries to run without requiring the JavaScript
 extensions option. Details are subject to change.
 
-Input sliders\index{Input
-sliders option} provides an alternate way to put values in numeric input
+Input sliders provides an alternate way to put values in numeric input
 slots; if you click in such a slot, a slider appears that you can
 control with the mouse:
 
@@ -430,7 +508,7 @@ still doesn’t work perfectly on Android devices, so sliders provide a
 workaround. It has since found another use in providing “lively”
 response to input changes; if Input sliders is checked, reopening the
 settings menu will show an additional option called Execute on slider
-change\index{Execute on slider change option}. If this option is also
+change. If this option is also
 checked, then changing a slider in the scripting area automatically runs
 the script in which that input appears. The project live-tree in the
 Examples collection shows how this can be used; it features a fractal
@@ -439,12 +517,12 @@ affects the picture by moving a slider.
 
 ![image1023.png](images/12-user-interface-elements/image1023.png) <!--  style="width:1.10486in;height:2.08333in" / -->
 
-Turbo mode\index{Turbo mode option} makes many projects run much
+Turbo mode makes many projects run much
 faster, at the cost of not keeping the stage display up to date.
 (Snap<em>!</em> ordinarily spends most of its time drawing sprites and updating
 variable watchers, rather than actually carrying out the instructions in
 your scripts.) So turbo mode isn’t a good idea for a project with glide
-block\index{glide block} s or one in which the user interacts with
+block s or one in which the user interacts with
 animated characters, but it’s great for drawing a complicated fractal,
 or computing the first million digits of 𝜋, so that you don’t need to
 see anything until the final result. While in turbo mode, the button
@@ -452,13 +530,13 @@ that normally shows a green flag instead shows a green lightning bolt.
 (But when ⚑ clicked hat blocks still activate when the button is
 clicked.)
 
-Visible stepping\index{visible stepping option} enables the slowed-down
+Visible stepping enables the slowed-down
 script evaluation described in Chapter I. Checking this option is
 equivalent to clicking the footprint button above the scripting area.
 You don’t want this on except when you’re actively debugging, because
 even the fastest setting of the slider is still slowed a lot.
 
- (sec-para-log-pen-vectors)=
+(sec-para-log-pen-vectors)=
 `Log pen vectors` tells Snap<em>!</em> to remember lines drawn by sprites as
 exact vectors, rather than remember only the pixels that the drawing leaves on the
 stage. This remembered vector picture can be used in two ways: First, right-clicking
@@ -470,8 +548,7 @@ in vector format. Only lines are logged, not color regions made with the
 fill block.
 
 The next group of four are user preference options, preserved when you
-load a new project. Long form input dialog\index{Long form input dialog
-option} , if checked, means that whenever a custom block input name is
+load a new project. Long form input dialog, if checked, means that whenever a custom block input name is
 created or edited, you immediately see the version of the input name
 dialog that includes the type options, default value setting, etc.,
 instead of the short form with just the name and the choice between
@@ -479,22 +556,22 @@ input name and title text. The default (unchecked) setting is definitely
 best for beginners, but more experienced Snap<em>!</em> programmers may find it
 more convenient always to see the long form.
 
-Plain prototype labels\index{Plain prototype labels option} eliminates
-the plus signs between words in the Block Editor prototype block. This
+Plain prototype labels eliminates the plus signs between words in the
+Block Editor prototype block. This
 makes it harder to add an input to a custom block; you have to hover the
 mouse where the plus sign would have been, until a single plus sign
 appears temporarily for you to click on. It’s intended for people making
 pictures of scripts in the block editor for use in documentation, such
 as this manual. You probably won’t need it otherwise.
 
-Clicking sound\index{Clicking sound option} causes a really annoying
+Clicking sound causes a really annoying
 sound effect whenever one block snaps next to another in a script.
 Certain very young children, and our colleague Dan Garcia, like this,
 but if you are such a child you should bear in mind that driving your
 parents or teachers crazy will result in you not being allowed to use
 Snap<em>!</em>. It might, however, be useful for visually impaired users.
 
-Flat design\index{Flat design option} changes the “skin” of the Snap<em>!</em>
+Flat design changes the “skin” of the Snap<em>!</em>
 window to a really hideous design with white and pale-grey background,
 rectangular rather than rounded buttons, and monochrome blocks (rather
 than the shaded, somewhat 3D-looking normal blocks). The monochrome
@@ -508,7 +585,7 @@ ago, though.)
 The final group of settings change the way Snap<em>!</em> interprets your
 program; they are saved with the project, so anyone who runs your
 project will experience the same behavior. Thread safe scripts
-\index{Thread safe scripts option} changes the way Snap<em>!</em> responds when
+changes the way Snap<em>!</em> responds when
 an event (clicking the green flag, say) starts a script, and then, while
 the script is still running, the same event happens again. Ordinarily,
 the running process stops where it is, ignoring the remaining commands
@@ -527,17 +604,17 @@ remembered and the script run again as soon as it finishes. We’ll
 probably get around to adding that choice eventually.) Keyboard events
 (when \_\_ key pressed) are always thread-safe.
 
-Flat line ends\index{flat line ends option} affects the drawing of
+Flat line ends affects the drawing of
 thick lines (large pen width). Usually the ends are rounded, which looks
 best when turning corners. With this option selected, the ends are flat.
 It’s useful for drawing a brick wall or a filled rectangle.
 
-Codification support\index{codification support option} enables a
+Codification support enables a
 feature that can translate a Snap<em>!</em> project to a text-based
-\index{text-based language} (rather than block-based) programming
+(rather than block-based) programming
 language. The feature doesn’t know about any particular other language;
 instead, you can provide a translation for each primitive block using
-these special blocks\index{map to code block} :
+these special blocks:
 
 ![image1025.png](images/12-user-interface-elements/image1025.png) <!--  style="width:1.10486in;height:2.08333in" / -->
 
@@ -551,28 +628,26 @@ provide translations for blocks.
 ![image1028.png](images/12-user-interface-elements/image1028.png){ .image-4x } <!--  style="width:1.38in;height:4.79in" alt="Graphical user interface, application, Teams Description automatically generated" / -->
 ![image1027.png](images/12-user-interface-elements/image1027.png){.image-4x } <!--  style="width:2.20972in;height:4.96944in" -->
 
-The Single palette option\index{Single palette option} puts all blocks,
+The Single palette option puts all blocks,
 regardless of category, into a single palette. It’s intended mainly for
-use by curriculum developers building *Parsons problems*\index{Parsons
-problems} *:* projects in which only a small set of blocks are provided,
+use by curriculum developers building *Parsons problems* *:* projects in which only a small set of blocks are provided,
 and the task is to arrange those blocks to achieve a set goal. In that
 application, this option is combined with the hiding of almost all
 primitive blocks. (See @sec-context-menus-for-palette-blocks.) When
 Single palette is turned on, two additional options (initially on)
-appear in the settings menu; the Show categories option\index{Show
-categories option} controls the appearance of the palette category names
+appear in the settings menu; the Show categories option controls the appearance of the palette category names
 such as ![image1029.png](images/12-user-interface-elements/image1029.png){.image-inline} and
 ![image1030.png](images/12-user-interface-elements/image1030.png){.image-inline},
-while the Show buttons option\index{Show buttons option} controls the
+while the Show buttons option controls the
 appearance of the ![image1031.png](images/12-user-interface-elements/image1031.png){.image-inline} and
 ![image1032.png](images/12-user-interface-elements/image1032.png){.image-inline} buttons in the palette.
 
-The HSL pen color model option\index{HSL pen color model option}
+The HSL pen color model option
 changes the set pen, change pen, and pen blocks to provide menu options
-hue, saturation, and lightness\index{lightness option} instead of hue,
+hue, saturation, and lightness instead of hue,
 saturation, and brightness (a/k/a value). Note: the name “saturation”
 means something different in HSL from in HSV! See Appendix A for all the
-information you need about colors.\index{pen block}
+information you need about colors.
 
 The Disable click-to-run option tells Snap<em>!</em> to ignore user mouse
 clicks on blocks and scripts if it would ordinarily run the block or
@@ -580,22 +655,28 @@ script. (Right-clicking and dragging still work, and so does clicking in
 an input slot to edit it.) This is another Parsons problem feature; the
 idea is that there will be buttons displayed that run code only in
 teacher-approved ways. But kids can uncheck the checkbox. ☺︎
-\index{Disable click-to-run option}
+
+
+:::{index} footprint button
+visible stepping
+:::
 
 ### Visible Stepping Controls
 
-After the menu
-buttons you’ll see the project name. After that comes the footprint
-button ![image121.png](images/12-user-interface-elements/image121.png) <!--  style="width:0.37917in;height:0.21667in" --> \index{footprint button} used to turn on visible stepping
-\index{visible stepping} and, when it’s on, the slider to control the
-speed of stepping.
+After the menu buttons you’ll see the project name. After that comes the footprint
+button ![image121.png](images/12-user-interface-elements/image121.png) <!--  style="width:0.37917in;height:0.21667in" --> used to turn on visible stepping
+and, when it’s on, the slider to control the speed of stepping.
+
+:::{index} Stage resizing buttons
+shrink/grow button
+presentation mode button
+:::
 
 ### Stage Resizing Buttons
 
-Still in the tool bar, but
-\index{Stage resizing buttons} above the left edge of the stage, are two
+Still in the tool bar, but above the left edge of the stage, are two
 buttons that change the size of the stage. The first is the shrink/grow
-button\index{shrink/grow button}. Normally it looks like this: ![image1033.png](images/12-user-interface-elements/image1033.png) <!--  style="width:0.37917in;height:0.21667in" / -->
+button. Normally it looks like this: ![image1033.png](images/12-user-interface-elements/image1033.png) <!--  style="width:0.37917in;height:0.21667in" / -->
 Clicking the button displays the stage at half-normal size horizontally
 and vertically (so it takes up ¼ of its usual area). When the stage is
 half size the button looks like this: ![image1036.png](images/12-user-interface-elements/image1036.png) <!--  style="width:0.37917in;height:0.21667in" / -->  and clicking it returns the stage
@@ -603,22 +684,29 @@ to normal size. The main reason you’d want a half size stage is during
 the development process, when you’re assembling scripts with wide input
 expressions and the normal scripting area isn’t wide enough to show the
 complete script. You’d typically then switch back to normal size to try
-out the project. The next presentation mode button\index{presentation
-mode button} normally looks like this: ![image1035.png](images/12-user-interface-elements/image1035.png) <!--  style="width:0.37917in;height:0.21667in" / -->  Clicking the button makes the
+out the project. The next presentation mode button normally looks like this: ![image1035.png](images/12-user-interface-elements/image1035.png) <!--  style="width:0.37917in;height:0.21667in" / -->  Clicking the button makes the
 stage double size in both dimensions and eliminates most of the other
 user interface elements (the palette, the scripting area, the sprite
 corral, and most of the tool bar). When you open a shared project using
 a link someone has sent you, the project starts in presentation mode.
-While in presentation mode, the button looks like this: ![image1034.png](images/12-user-interface-elements/image1034.png) <!--  style="width:0.37917in;height:0.21667in" / -->  Clicking it
-returns to normal (project development) mode.
+While in presentation mode, the button looks like this: ![image1034.png](images/12-user-interface-elements/image1034.png) <!--  style="width:0.37917in;height:0.21667in" / -->  Clicking it returns to normal (project development) mode.
+
+:::{index} project control buttons
+green flag button
+pause button
+pause all block
+breakpoint
+debugging
+stop button
+stop all block
+:::
 
 ### Project Control Buttons
 
-Above\index{project control buttons} the right edge of the stage are
-three buttons that control the running of the project.
+Above the right edge of the stage are three buttons that control the running of the project.
 
 Technically,
-the green flag ![image1037.png](images/12-user-interface-elements/image1037.png) <!--  style="width:0.38in;height:0.22in" / --> \index{green flag button} is no more a project control
+the green flag ![image1037.png](images/12-user-interface-elements/image1037.png) <!--  style="width:0.38in;height:0.22in" / --> is no more a project control
 than anything else that can trigger a hat block: typing on the keyboard
 or clicking on a sprite. But it’s a convention that clicking the flag
 should start the action of the project from the beginning. It’s only a
@@ -626,37 +714,31 @@ convention; some projects have no flag-controlled scripts at all, but
 respond to keyboard controls instead. Clicking the green flag also
 deletes temporary clones.
 
-Whenever
-any script is running (not necessarily in the current sprite), the green
+Whenever any script is running (not necessarily in the current sprite), the green
 flag is lit: ![image1038.png](images/12-user-interface-elements/image1038.png) <!--  style="width:0.35in;height:0.2in" / --> .
 
-Shift-clicking
-the button enters Turbo mode, and the button then looks like a lightning
+Shift-clicking the button enters Turbo mode, and the button then looks like a lightning
 bolt: ![image1039.png](images/12-user-interface-elements/image1039.png) <!--  style="width:0.35in;height:0.2in" / -->  . Shift-clicking again turns Turbo mode off.
 
-Scripts can simulate clicking
-the green flag by broadcasting the special message
+Scripts can simulate clicking the green flag by broadcasting the special message
 ![image1045.png](images/12-user-interface-elements/image1045.png) <!--  style="width:0.30556in;height:0.30556in" / --> .
 
-The pause button ![image1044.png](images/12-user-interface-elements/image1044.png) <!--  style="width:0.37917in;height:0.21667in" / --> \index{pause
-button} suspends running all scripts. If clicked while scripts are
+The pause button ![image1044.png](images/12-user-interface-elements/image1044.png) <!--  style="width:0.37917in;height:0.21667in" / --> suspends running all scripts. If clicked while scripts are
 running, the button changes shape to become a play button: ![image1046.png](images/12-user-interface-elements/image1046.png) <!--  style="width:0.37917in;height:0.21667in" / --> Clicking it
 while in this form resumes the suspended scripts. There is also a pause
-all block\index{pause all block} in the Control palette that can be
+all block in the Control palette that can be
 inserted in a script to suspend all scripts; this provides the essence
-of a breakpoint\index{breakpoint} debugging\index{debugging}
+of a breakpoint debugging
 capability. The use of the pause button is slightly different in visible
 stepping mode, described in Chapter I.
 
-The stop button ![image1047.png](images/12-user-interface-elements/image1047.png) <!--  style="width:0.37917in;height:0.21667in" / -->\index{stop
-button} stops all scripts, like the stop all block\index{stop all
-block} . It does *not* prevent a script from starting again in response
+The stop button ![image1047.png](images/12-user-interface-elements/image1047.png) <!--  style="width:0.37917in;height:0.21667in" / --> stops all scripts, like the stop all block. It does *not* prevent a script from starting again in response
 to a click or keystroke; the user interface is always active. There is
 one exception: generic when blocks ![image1048.png](images/12-user-interface-elements/image1048.png) <!--  style="width:0.54861in;height:0.17708in" / -->  will not fire after a stop until some
 non-generic event starts a script. The stop button also deletes all
 temporary clones.
 
-##  The Palette Area
+## The Palette Area
 
 At the top of the {index}`palette area` are the eight
 buttons that select which palette (which block category) is shown:
@@ -664,46 +746,52 @@ Motion, Looks, Sound, Pen, Control, Sensing, Operators, and Variables
 (which also includes the List and Other blocks). There are no menus
 behind these buttons.
 
+:::{index} search button
+Make a block button
+:::
+
 ### Buttons in the Palette
 
- Under the
-eight palette selector buttons, at the top of the actual palette, are
-two semi-transparent buttons. The first is the *search* button ![image1049.png](images/12-user-interface-elements/image1049.png) <!--  style="width:0.26042in;height:0.26042in" -->
-\index{search button}, which is equivalent to typing control-F: It
+Under the eight palette selector buttons, at the top of the actual palette, are
+two semi-transparent buttons. The first is the *search* button ![image1049.png](images/12-user-interface-elements/image1049.png), <!--  style="width:0.26042in;height:0.26042in" -->
+which is equivalent to typing control-F: It
 replaces the palette with a search bar into which you can type part of
 the title text of the block you’re trying to find. To leave this search
 mode, click one of the eight palette selectors, or type the Escape key.
 
-The other
-button ![image1050.png](images/12-user-interface-elements/image1050.png) <!--  style="width:0.26042in;height:0.26042in" --> is equivalent to the “Make a block” button\index{Make a block
-button} , except that the dialog window that it opens has the current
+The other button ![image1050.png](images/12-user-interface-elements/image1050.png) <!--  style="width:0.26042in;height:0.26042in" --> is equivalent to the “Make a block” button, except that the dialog window that it opens has the current
 palette (color) preselected.
+
+:::{index} context menus for palette blocks
+context menu
+help… option
+help… option for custom block
+delete block definition… option
+duplicate block definition… option
+export block definition… option
+Undefined; blocks
+edit… option
+:::
 
 (sec-context-menus-for-palette-blocks)=
 ### Context Menus for Palette Blocks
 
- Most elements\index{context
-menus for palette blocks} of the Snap<em>!</em> display can be
-control-clicked/right-clicked to show a *context menu*\index{context
-menu} *,* with items relevant to that element. If you
-control-click/right-click a *primitive* block in the palette, you see
+Most elements of the Snap<em>!</em> display can be
+control-clicked/right-clicked to show a *context menu* *,* with items relevant to that element. If youcontrol-click/right-click a *primitive* block in the palette, you see
 this menu:
 
 ![image1051.png](images/12-user-interface-elements/image1051.png) <!--  style="width:0.86111in;height:0.45903in" / -->
 
-The help… option\index{help… option} displays a box with documentation
-about the block. Here’s an example:
+The help… option displays a box with documentation about the block. Here’s an example:
 
 ![image1053.png](images/12-user-interface-elements/image1053.png) <!--  style="width:3.32222in;height:2.42778in" / -->
 
-If you
-control-click/right-click a *custom* (user-defined) block in the
+If you control-click/right-click a *custom* (user-defined) block in the
 palette, you see this menu:
 
 ![image1052.png](images/12-user-interface-elements/image1052.png) <!--  style="width:1.62292in;height:0.88889in" / -->
 
-The help… option for a custom block\index{help… option for custom
-block} displays the comment, if any, attached to the custom block’s hat
+The help… option for a custom block displays the comment, if any, attached to the custom block’s hat
 block in the Block Editor. Here is an example of a block with a comment
 and its help display:
 
@@ -712,63 +800,64 @@ and its help display:
 If the help text includes a URL, it is clickable and will open the page
 in a new tab.
 
-The delete block definition… option\index{delete block definition…
-option} asks for confirmation, then deletes the custom block and removes
+The delete block definition… option asks for confirmation, then deletes the custom block and removes
 it from any scripts in which it appears. (The result of this removal may
 not leave a sensible script; it’s best to find and correct such scripts
 *before* deleting a block.) Note that there is no option to *hide* a
 custom block; this can be done in the Block Editor by right-clicking on
 the hat block.
 
-The duplicate block definition… option\index{duplicate block
-definition… option} makes a *copy* of the block and opens that copy in
+The duplicate block definition… option makes a *copy* of the block and opens that copy in
 the Block Editor. Since you can’t have two custom blocks with the same
 title text and input types, the copy is created with “(2)” (or a higher
 number if necessary) at the end of the block prototype.
 
-The export block definition… option\index{export block definition…
-option} writes a file in your browser’s downloads directory containing
+The export block definition… option writes a file in your browser’s downloads directory containing
 the definition of this block and any other custom blocks that this block
 invokes, directly or indirectly. So the resulting file can be loaded
 later without the risk of red Undefined! blocks because of missing
-dependencies.\index{Undefined! blocks}
+dependencies.
 
-The `edit…` option\index{edit… option} opens a Block Editor with the
+The `edit…` option opens a Block Editor with the
 definition of the custom block.
+
+:::{index} context menu for the palette background
+`find blocks… `  option
+hide blocks option
+show primitives option
+SciSnap!
+:::
 
 ### Context Menu for the Palette Background
 
-Right-click/control-click on \index{context menu for the palette background} the grey
+Right-click/control-click on the grey
 *background* of the palette area shows this menu:
 
 ![image1058.png](images/12-user-interface-elements/image1058.png) <!--  style="width:0.98958in;height:0.58958in" / -->
 
-The `find blocks…` option\index{$find blocks… $  option} does the same thing as
-the magnifying-glass button. The hide blocks… option\index{hide blocks
-option} opens a dialog box in which you can choose which blocks (custom
+The `find blocks…` option does the same thing as
+the magnifying-glass button. The hide blocks… option opens a dialog box in which you can choose which blocks (custom
 as well as primitive) should be hidden. (Within that dialog box, the
 context menu of the background allows you to check or uncheck all the
 boxes at once.)
 
 ![image1059.png](images/12-user-interface-elements/image1059.png) <!--  style="width:1.6in;height:2.15972in" -->
 
-The make a category… option\index{show primitives option}, which is
+The make a category… option, which is
 intended mainly for authors of snap extensions, lets you add custom
 *categories* to the palette. It opens a small dialog window in which you
 specify a name *and a color* for the new category:
 
 ![image1061.png](images/12-user-interface-elements/image1061.png) <!--  style="width:1.53in;height:1.13in" alt="Graphical user interface, text Description automatically generated" / -->
 
-Pick
-a dark color, because it will be lightened for zebra coloring when users
+Pick a dark color, because it will be lightened for zebra coloring when users
 nest blocks of the same category. Custom categories are shown below the
 built-in categories in the category selector:
 
 ![image1060.png](images/12-user-interface-elements/image1060.png) <!--  style="width:1.42986in;height:2.90972in" alt="Graphical user interface, application Description automatically generated" / -->
 
-This
-example comes {index}`from Eckart<single: Eckart, from>` Modrow’s SciSnap<em>!</em>
-\index{"SciSnap!"} library. Note that the custom category list has its own
+This example comes {index}`from Eckart<single: Eckart, from>` Modrow’s SciSnap<em>!</em>
+library. Note that the custom category list has its own
 scroll bar, which appears if you have more than six custom categories.
 Note also that the buttons to select a custom category occupy the full
 width of the palette area, unlike the built-in categories, which occupy
@@ -795,24 +884,30 @@ of the palette below its standard value.
 
 ![image1063.png](images/12-user-interface-elements/image1063.png) <!--  style="width:1.41667in;height:1.51389in" / -->
 
+:::{index} current sprite
+thumbnail
+:::
+
 ## The Scripting Area
 
 The {index}`scripting area` is the middle vertical region
 of the Snap<em>!</em> window, containing scripts and also some controls for the
 appearance and behavior of a sprite. There is always a *current sprite*
-\index{current sprite} *,* whose scripts are shown in the scripting
+*,* whose scripts are shown in the scripting
 area. A dark grey rounded rectangle in the sprite corral shows which
 sprite (or the stage) is current. Note that it’s only the visible
 *display* of the scripting area that is “current” for a sprite; all
 scripts of all sprites may be running at the same time. Clicking on a
-sprite thumbnail\index{thumbnail} in the sprite corral makes it
+sprite thumbnail in the sprite corral makes it
 current. The stage itself can be selected as current, in which case the
 appearance is different, with some primitives not shown.
 
+:::{index} sprite appearance and behavior controls
+:::
+
 ### Sprite Appearance and Behavior Controls
 
-At the top of the scripting area\index{sprite appearance and behavior
-controls} are a picture of the sprite and some controls for it:
+At the top of the scripting area are a picture of the sprite and some controls for it:
 
 ![image1064.png](images/12-user-interface-elements/image1064.png) <!--  style="width:3.48611in;height:1.04167in" / -->
 
@@ -847,6 +942,41 @@ in the scripting area:
 
 ![image1065.png](images/12-user-interface-elements/image1065.png) <!--  style="width:3.09722in;height:0.25in" / -->
 
+:::{index} clicking on a script
+green halo
+halo
+red halo
+undo button
+keyboard editing button
+primitive block within a script
+help… option
+relabel… option
+compile menu option
+lightning bolt symbol
+block picture option
+shift-click on block
+add comment option
+script pic… option
+picture of script
+Snap; manual
+result pic… option
+picture with speech balloon
+smart picture
+ringify option
+unringify option
+custom block in a script
+broadcast and wait block
+receivers… option
+senders… option
+scripting area background context menu
+redrop option
+clean up option
+comment box
+scripts pic… option
+make a block… option
+shortcut
+:::
+
 ### Scripts and Blocks Within Scripts
 
 Most of what’s described in this section also applies to blocks and
@@ -854,37 +984,36 @@ scripts in a Block Editor.
 
 Clicking on a script (which includes a single unattached block) runs it.
 If the script starts with a hat block, clicking on the script
-\index{clicking on a script} runs it even if the event in the hat block
+runs it even if the event in the hat block
 doesn’t happen. (This is a useful debugging technique when you have a
 dozen sprites and they each have five scripts with green-flag hat
 blocks, and you want to know what a single one of those scripts does.)
-The script will have a green “halo”\index{green halo} around it while
+The script will have a green “halo” around it while
 it’s running. If the script is shared with clones, then while it has the
 green halo it will also have a count of how many instances of the script
-are running. Clicking a script with such a halo\index{halo} *stops* the
+are running. Clicking a script with such a halo *stops* the
 script. (If the script includes a {index}`warp block`, which
 might be inside a custom block used in the script, then Snap<em>!</em> may not
 respond immediately to clicks.)
 
 If a script is shown with a
-*red* halo\index{red halo}, that means that an error was caught in
+*red* halo, that means that an error was caught in
 that script, such as using a list where a number was needed, or vice
 versa. Clicking the script will turn off the halo.
 
 
 
-If any blocks have been
-dragged into the scripting area, then in its top right corner you’ll see
-an *undo* ![image1066.png](images/12-user-interface-elements/image1066.png) <!--  style="width:0.33333in;height:0.26042in" / -->  and/or *redo* ![image1068.png](images/12-user-interface-elements/image1068.png) <!--  style="width:0.33333in;height:0.26042in" / -->  button\index{undo button} that can be used to
+If any blocks have been dragged into the scripting area, then in its top right corner you’ll see
+an *undo* ![image1066.png](images/12-user-interface-elements/image1066.png) <!--  style="width:0.33333in;height:0.26042in" / -->  and/or *redo* ![image1068.png](images/12-user-interface-elements/image1068.png) <!--  style="width:0.33333in;height:0.26042in" / -->  button that can be used to
 undo or redo block and script drops. When you undo a drop into an input
 slot, whatever used to be in the slot is restored. The redo button
 appears once you’ve used undo.
 
-The third button ![image1067.png](images/12-user-interface-elements/image1067.png){.image-inline} starts keyboard editing\index{keyboard editing button}
+The third button ![image1067.png](images/12-user-interface-elements/image1067.png){.image-inline} starts keyboard editing
 mode (See @sec-keyboard-editing).
 
 Control-click/right-clicking a primitive block within a script
-\index{primitive block within a script} shows a menu like this one:
+shows a menu like this one:
 
 command block:
 ![image1070.png](images/12-user-interface-elements/image1070.png) <!--  style="width:0.62639in;height:1.09028in" / -->
@@ -893,12 +1022,12 @@ command block:
 reporter block:
 ![image1069.png](images/12-user-interface-elements/image1069.png) <!--  style="width:0.62083in;height:1.0625in" / -->
 
-The help… option\index{help… option} shows the help screen for the
+The help… option shows the help screen for the
 block, just as in the palette. The other options appear only when a
 block is right-clicked/control-clicked in the scripting area.
 
 Not
-every primitive block has a relabel… option\index{relabel… option}.
+every primitive block has a relabel… option.
 When present, it allows the block to be replaced by another, similar
 block, keeping the input expressions in place. For example, here’s what
 happens when you choose relabel… for an arithmetic operator:
@@ -911,9 +1040,9 @@ outside the menu to keep the original block. Note that the last three
 choices are not available in the palette; you must use the relabel
 feature to access them.
 
-Not every reporter has a compile option\index{compile menu option}; it
+Not every reporter has a compile option; it
 exists only for the higher order functions. When selected, a lightning
-bolt\index{lightning bolt symbol} appears before the block name:
+bolt appears before the block name:
 ![image1072.png](images/12-user-interface-elements/image1072.png) <!--  style="width:1.40278in;height:0.20139in" -->  and Snap<em>!</em> tries
 to compile the function inside the ring to JavaScript, so it runs at
 primitive speed. This works only for simple functions (but the higher
@@ -932,7 +1061,7 @@ attached to the mouse, and you can drag it to another script (or even to
 another Block Editor window), even though you are no longer holding down
 the mouse button. Click the mouse to drop the script copy.
 
-The block picture\index{block picture option} underneath the word
+The block picture underneath the word
 duplicate for a command block is another duplication option, but it
 duplicates only the selected block, not everything under it in the
 script. Note that if the selected block is a C-shaped control block, the
@@ -945,78 +1074,75 @@ words, it’s like the block picture option, but it doesn’t leave a copy
 of the block in the original script. If the block is at the end of its
 script, this option does not appear. (Just grab the block with the
 mouse.) A shorthand for this operation is to *shift-click*
-\index{shift-click on block} and drag out the block.
+and drag out the block.
 
 The {index}`delete option` deletes the selected block from
 the script.
 
-The add comment option\index{add comment option} creates a comment,
+The add comment option creates a comment,
 like the same option in the background of the scripting area, but
 attaches it to the block you clicked.
 
-The script pic…\index{script pic… option} option saves a picture of the
-entire script\index{picture of script}, not just from the selected
+The script pic… option saves a picture of the
+entire script, not just from the selected
 block to the end, into your download folder; or, in some browsers, opens
 a new browser tab containing the picture. In the latter case, you can
 use the browser’s Save feature to put the picture in a file. This is a
 super useful feature if you happen to be writing a Snap<em>!</em> manual
-\index{Snap! manual} ! (If you have a Retina display, consider turning
+! (If you have a Retina display, consider turning
 off Retina support before making script pictures; if not, they end up
 huge.) For reporters not inside a script, there is an additional result
-pic… option\index{result pic… option} that calls the reporter and
-includes a speech balloon\index{picture with speech balloon} with the
+pic… option that calls the reporter and
+includes a speech balloon with the
 result in the picture. Note: The downloaded file is a “smart picture
-\index{smart picture} ”: It also contains the code of the script, as if
+”: It also contains the code of the script, as if
 you’d exported the project. If you later drag the file into the costumes
 tab, it will be loaded as a costume. But if you drag it into the
 *scripts* tab, it will be loaded as a script, which you can drop
 wherever you want it in the scripting area.
 
 If the script does *not* start with a hat block, or you clicked on a
-reporter, then there’s one more option: ringify\index{ringify option}
+reporter, then there’s one more option: ringify
 (and, if there is already a grey ring around the block or script,
-unringify)\index{unringify option}. Ringify surrounds the block
+unringify). Ringify surrounds the block
 (reporter) or the entire script (command) with a grey ring, meaning that
 the block(s) inside the ring are themselves data, as an input to a
 higher order procedure, rather than something to be evaluated within the
 script. See Chapter VI, Procedures as Data.
 
 Clicking a *custom* block in
-a script\index{custom block in a script} gives a similar but different
+a script gives a similar but different
 menu:
 
 ![image1073.png](images/12-user-interface-elements/image1073.png) <!--  style="width:0.97361in;height:1.29861in" / -->
 
-The relabel… option\index{relabel… option} for custom blocks shows a
+The relabel… option for custom blocks shows a
 menu of other same-shape custom blocks with the same inputs. At present
 you can’t relabel a custom block to a primitive block or vice versa. The
 two options at the bottom, for custom blocks only, are the same as in
 the palette. The other options are the same as for primitive commands.
 
- If a reporter block is in the
+If a reporter block is in the
 scripting area, possibly with inputs included, but not itself serving as
 input to another block, then the menu is a little different again:
 
 ![image1074.png](images/12-user-interface-elements/image1074.png) <!--  style="width:0.88125in;height:1.08333in" / -->
 
-What’s new here is the result pic… option\index{result pic… option}.
+What’s new here is the result pic… option.
 It’s like script pic… but it includes in the picture a speech balloon
 with the result of calling the block.
 
-Broadcast and broadcast and wait block\index{broadcast and wait block}
-s in the scripting area have an additional option: receivers…
-\index{receivers… option}. When clicked, it causes a momentary (be
+Broadcast and broadcast and wait block
+s in the scripting area have an additional option: receivers…. When clicked, it causes a momentary (be
 looking for it when you click!) halo around the picture in the sprite
 corral of those sprites that have a when I receive hat block for the
 same message. Similarly, when I receive blocks have a senders… option
-\index{senders… option} that light up the sprite corral icons of sprites
+that light up the sprite corral icons of sprites
 that broadcast the same message.
 
 **Scripting Area Background Context Menu**
 
-Control-click/right-click on
-\index{scripting area background context menu} the grey striped
-background of the scripting area gives this menu:
+Control-click/right-click on the grey striped background of the scripting area gives this menu:
 
 ![image1075.png](images/12-user-interface-elements/image1075.png) <!--  style="width:1.28958in;height:1.27778in" / -->
 
@@ -1027,17 +1153,16 @@ sprite’s scripting area (that is, other sprites have their own separate
 drop memory), and undoes the most recent, returning the block to its
 former position, and restoring the previous value in the relevant input
 slot, if any. Once you’ve undropped something, the redrop option
-\index{redrop option} appears, and allows you to repeat the operation
+appears, and allows you to repeat the operation
 you just undid. These menu options are equivalent to the and buttons
 described earlier.
 
-The clean up option\index{clean up option} rearranges the position of
+The clean up option rearranges the position of
 scripts so that they are in a single column, with the same left margin,
 and with uniform spacing between scripts. This is a good idea if you
 can’t read your own project!
 
- The add comment option
-\index{add comment option} puts a comment box,\index{comment box} like
+The add comment option puts a comment box, like
 the picture below, in the scripting area. It’s attached to the
 mouse, as with duplicating scripts, so you position the mouse where you
 want the comment and click to release it. You can then edit the text in
@@ -1058,15 +1183,14 @@ attached to the block with a yellow line:
 
 ![image1081.png](images/12-user-interface-elements/image1081.png) <!--  style="width:3.33333in;height:0.93333in" / -->
 
- Comments have their own
-context menu, with obvious meanings:
+Comments have their own context menu, with obvious meanings:
 
 ![image1080.png](images/12-user-interface-elements/image1080.png) <!--  style="width:1.48611in;height:0.84722in" / -->
 
 Back to the options in the menu for the background of the scripting area
 (picture on the previous page):
 
-The scripts pic… option saves, or\index{scripts pic… option} opens a
+The scripts pic… option saves, or opens a
 new browser tab with, a picture of *all* scripts in the scripting area,
 just as they appear, but without the grey striped background. Note that
 “all scripts in the scripting area” means just the top-level scripts of
@@ -1075,32 +1199,45 @@ definitions. This is also a “smart picture”; if you drag it into the
 scripting area, it will *create a new sprite* with those scripts in its
 scripting area.
 
-Finally, the make a block… option\index{make a block… option} does the
+Finally, the make a block… option does the
 same thing as the “Make a block” button in the palettes. It’s a shortcut
-\index{shortcut} so that you don’t have to keep scrolling down the
+so that you don’t have to keep scrolling down the
 palette if you make a lot of blocks.
+
+:::{index} Costumes tab
+turtle costume
+paint brush icon
+Paint Editor
+camera icon
+HTTPS
+turtle’s rotation point
+tip option
+middle option
+duplicate option
+delete option
+get blocks option
+:::
 
 ### Controls in the Costumes Tab
 
-If you click\index{Costumes
-tab} on the word “Costumes” under the sprite controls, you’ll see
+If you click on the word “Costumes” under the sprite controls, you’ll see
 something like this:
 
 ![image1082.png](images/12-user-interface-elements/image1082.png) <!--  style="width:1.96319in;height:2.13194in" / -->
 
 The Turtle costume
-\index{turtle costume} is always present in every sprite; it is costume
+is always present in every sprite; it is costume
 number 0. Other costumes can be painted within Snap<em>!</em> or imported from
 files or other browser tabs if your browser supports that. Clicking on a
 costume selects it; that is, the sprite will look like the selected
-costume. Clicking on the paint brush icon ![image1084.png](images/12-user-interface-elements/image1084.png) <!--  style="width:0.29167in;height:0.16667in" / -->\index{paint brush icon}
-opens the *Paint Editor*\index{Paint Editor} *,* in which you can
-create a new costume. Clicking on the camera icon ![image1083.png](images/12-user-interface-elements/image1083.png) <!--  style="width:0.37917in;height:0.21667in" --> \index{camera icon}
+costume. Clicking on the paint brush icon ![image1084.png](images/12-user-interface-elements/image1084.png) <!--  style="width:0.29167in;height:0.16667in" / -->
+opens the *Paint Editor* *,* in which you can
+create a new costume. Clicking on the camera icon ![image1083.png](images/12-user-interface-elements/image1083.png) <!--  style="width:0.37917in;height:0.21667in" -->
 opens a window in which you see what your computer’s camera is seeing,
 and you can take a picture (which will be the full size of the stage
 unless you shrink it in the Paint Editor). This works only if you give
 Snap<em>!</em> permission to use the camera, and maybe only if you opened
-Snap<em>!</em> in secure (HTTPS\index{HTTPS} ) mode, and then only if your
+Snap<em>!</em> in secure (HTTPS) mode, and then only if your
 browser loves you.
 
 ![image1085.png](images/12-user-interface-elements/image1085.png) <!--  style="width:3.56944in;height:3.18056in" -->
@@ -1110,12 +1247,11 @@ Control-clicking/right-clicking on the turtle picture gives this menu:
 
 ![image1086.png](images/12-user-interface-elements/image1086.png) <!--  style="width:1.05556in;height:0.90278in" / -->
 
-In this menu, you choose the
-turtle’s *rotation point*\index{turtle’s rotation point} *,* which is
+In this menu, you choose the turtle’s *rotation point* which is
 also the point from which the turtle draws lines. The two pictures below
 show what the stage looks like after drawing a square in each mode; tip
-\index{tip option} (otherwise known as “Jens mode”) is on the left in
-the pictures below, middle\index{middle option} (“Brian mode”) on the
+(otherwise known as “Jens mode”) is on the left in
+the pictures below, middle (“Brian mode”) on the
 right:
 
 ![image1087.png](images/12-user-interface-elements/image1087.png) <!--  style="width:1.05556in;height:0.90278in" / -->
@@ -1141,10 +1277,10 @@ The {index}`edit option` opens the Paint Editor on this
 costume. The {index}`rename option` opens a dialog box in
 which you can rename the costume. (A costume’s initial name comes from
 the file from which it was imported, if any, or is something like
-costume5.) Duplicate\index{duplicate option} makes a copy of the
+costume5.) Duplicate makes a copy of the
 costume, in the same sprite. (Presumably you’d do that because you
-intend to edit one of the copies.) Delete\index{delete option} is
-obvious. The get blocks option\index{get blocks option} appears only
+intend to edit one of the copies.) Delete is
+obvious. The get blocks option appears only
 for a smart costume, and brings its script to the scripting area. The
 {index}`export option` saves the costume as a file on your
 computer, in your usual downloads folder.
@@ -1158,14 +1294,26 @@ includes code:
 
 ![image1088.png](images/12-user-interface-elements/image1088.png) <!--  style="width:0.98333in;height:1.31944in" / -->
 
-Its right-click menu will have an extra get blocks option\index{get
-blocks option} that switches to the Scripts tab with the script ready to
+Its right-click menu will have an extra get blocks option that switches to the Scripts tab with the script ready to
 be dropped there.
+
+:::{index} Paint Editor window
+rectangle tool
+rotation point tool
+line drawing tool
+solid rectangle tool
+solid ellipse tool
+floodfill tool,
+eyedropper tool
+clear button
+vector editor
+edge color
+:::
 
 (sec-the-paint-editor)=
 ### The Paint Editor
 
-Here is a picture of a Paint Editor window\index{Paint Editor window}:
+Here is a picture of a Paint Editor window:
 
 ![The Paint Editor showing an Alonzo costume](images/12-user-interface-elements/image1094.png)
 
@@ -1178,13 +1326,8 @@ window can be open at a time.
 
 The ten square buttons in two rows of five near the top left of the
 window are the *tools.* The top row, from left to right, are the
-{index}`paintbrush tool`, the outlined rectangle tool
-\index{rectangle tool}, the outlined {index}`ellipse tool`, the {index}`eraser tool`, and the rotation point tool
-\index{rotation point tool}. The bottom row tools are the line drawing
-tool\index{line drawing tool}, the solid rectangle tool\index{solid
-rectangle tool} , the solid ellipse tool\index{solid ellipse tool},
-the floodfill tool,\index{floodfill tool,} and the eyedropper tool
-\index{eyedropper tool}. Below the tools is a row of four buttons that
+{index}`paintbrush tool`, the outlined rectangle tool, the outlined {index}`ellipse tool`, the {index}`eraser tool`, and the rotation point tool. The bottom row tools are the line drawing tool, the solid rectangle tool, the solid ellipse tool,
+the floodfill tool, and the eyedropper tool. Below the tools is a row of four buttons that
 immediately change the picture. The first two change its overall size;
 the next two flip the picture around horizontally or vertically. Below
 these are a {index}`color palette`, a greyscale tape, and
@@ -1200,8 +1343,7 @@ check appear in the box as long as you hold it down. (But the Caps Lock
 key doesn’t affect it.)
 
 You can correct errors with the {index}`undo button`, which
-removes the last thing you drew, or the clear button\index{clear
-button} , which erases the entire picture. (Note, it does *not* revert
+removes the last thing you drew, or the clear button, which erases the entire picture. (Note, it does *not* revert
 to what the costume looked like before you started editing it! If that’s
 what you want, click the {index}`Cancel button` at the
 bottom of the editor.) When you’re finished editing, to keep your
@@ -1228,9 +1370,7 @@ Editor. You can only do this once, because the Paint Editor
 automatically selects the paintbrush when you choose a color. (Of course
 you can click on the eyedropper tool button again.)
 
-The only other non-obvious tool is the rotation point tool
-\index{rotation point tool}. It shows in the Paint Editor where the
-sprite’s current rotation center is (the point around which it turns
+The only other non-obvious tool is the rotation point tool. It shows in the Paint Editor where the sprite’s current rotation center is (the point around which it turns
 when you use a turn block); if you click or drag in the picture, the
 rotation point will move where you click. (You’d want to do this, for
 example, if you want a character to be able to wave its arm, so you use
@@ -1238,13 +1378,10 @@ two sprites connected together. You want the rotation point of the arm
 sprite to be at the end where it joins the body, so it remains attached
 to the shoulder while waving.)
 
-The vector editor
-\index{vector editor} ’s controls are much like those in the bitmap
+The vector editor’s controls are much like those in the bitmap
 editor. One point of difference is that the bitmap editor has two
 buttons for solid ![image1098.png](images/12-user-interface-elements/image1098.png) <!--  style="width:0.21528in;height:0.21528in" / -->  and outline ![image1097.png](images/12-user-interface-elements/image1097.png) <!--  style="width:0.21528in;height:0.21528in" / -->  rectangles, and similarly for ellipses,
-but in the vector editor there is always an edge color\index{edge
-color} and a {index}`fill color`, even if the latter is
-“{index}`transparent paint`,” and so only one button
+but in the vector editor there is always an edge color and a {index}`fill color`, even if the latter is “{index}`transparent paint`,” and so only one button
 per shape is needed. Since each shape that you draw is a separate layer
 (like sprites on the stage), there are controls to move the selected
 shape up (frontward) or down (rearward) relative to other shapes. There
@@ -1254,10 +1391,12 @@ shapes within that area.
 ![image1095.png](images/12-user-interface-elements/image1095.png) <!--  style="width:3.83611in;height:2.54861in" / -->
 
 
+:::{index} controls in the Sounds tab
+:::
+
 ### Controls in the Sounds Tab
 
-There is no
-Sound Editor\index{controls in the Sounds tab} in Snap<em>!</em>, and also no
+There is no sound editor in Snap<em>!</em>, and also no
 current sound the way there’s a current costume for each sprite. (The
 sprite always has an appearance unless hidden, but it doesn’t sing
 unless explicitly asked.) So the context menu for sounds has only
@@ -1267,8 +1406,7 @@ appears if you click the red record button (![image1099.png](images/12-user-inte
 
 ![image1100.png](images/12-user-interface-elements/image1100.png) <!--  style="width:2.325in;height:1.03333in" -->
 
-The first,
-round button starts recording. The second, square button stops
+The first, round button starts recording. The second, square button stops
 recording. The third, triangular button plays back a recorded sound. If
 you don’t like the result, click the round button again to re-record.
 When you’re satisfied, push the Save button. If you need a sound editor,
@@ -1288,16 +1426,19 @@ synthesizer. This is an area in which we know we have a long way to go!
 But it’s a start. The keyboard editor may also be useful to anyone who
 can type faster than they can drag blocks.
 
+:::{index} keyboard editor
+Shift-click (keyboard editor)
+shift-enter (keyboard editor)
+escape key (keyboard editor)
+:::
+
 ### Starting and stopping the keyboard editor
 
-There are three ways to start the keyboard editor\index{keyboard
-editor} . Shift-clicking\index{Shift-click (keyboard editor)} anywhere
+There are three ways to start the keyboard editor. Shift-clicking anywhere
 in the scripting area will start the editor at that point: either
 editing an existing script or, if you shift-click on the background of
 the scripting area, editing a new script at the mouse position.
-Alternatively, typing shift-enter\index{shift-enter (keyboard editor)}
-will start the editor on an existing script, and you can use the tab key
-to switch to another script. Or you can click the keyboard button at the
+Alternatively, typing shift-enter will start the editor on an existing script, and you can use the tab key to switch to another script. Or you can click the keyboard button at the
 top of the scripting area.
 
 When the script editor is running, its position is represented by a
@@ -1305,24 +1446,27 @@ blinking white bar:
 
 ![image1101.png](images/12-user-interface-elements/image1101.png) <!--  style="width:2.20833in;height:1.59375in" / -->
 
-To leave the keyboard editor,
-type the escape key\index{escape key (keyboard editor)}, or just click
-on the background of the scripting area.
+To leave the keyboard editor, type the escape key, or just click on the background of the scripting area.
+
+:::{index} tab key (keyboard editor)
+Shift-tab (keyboard editor)
+up arrow (keyboard editor)
+down arrow (keyboard editor)
+left arrow (keyboard editor)
+right arrow (keyboard editor)
+shift-arrow keys (keyboard editor)
+:::
 
 ### Navigating in the keyboard editor
 
-To move to a different script, type the tab key\index{tab key (keyboard
-editor)} . Shift-tab\index{Shift-tab (keyboard editor)} to move through
+To move to a different script, type the tab key. Shift-tab to move through
 the scripts in reverse order.
 
 A script is a vertical stack of command blocks. A command block may have
 input slots, and each input slot may have a reporter block in it; the
 reporter may itself have input slots that may have other reporters. You
-can navigate through a script quickly by using the up arrow\index{up
-arrow (keyboard editor)} and down arrow\index{down arrow (keyboard
-editor)} keys to move between command blocks. Once you find the command
-block that you want to edit, the left\index{left arrow (keyboard
-editor)} and right arrow\index{right arrow (keyboard editor)} keys move
+can navigate through a script quickly by using the up arrow and down arrow keys to move between command blocks. Once you find the command
+block that you want to edit, the left and right arrow keys move
 between editable items within that command. (Left and right arrow when
 there are no more editable items within the current command block will
 move up or down to another command block, respectively.) Here is a
@@ -1332,11 +1476,17 @@ starting from the position shown above:
 ![image1101.png](images/12-user-interface-elements/image1101.png) <!--  style="width:2.20833in;height:1.59375in" / -->
 
 You can rearrange scripts within the scripting area from the keyboard.
-Typing shift-arrow keys\index{shift-arrow keys (keyboard editor)}
+Typing shift-arrow keys
 (left, right, up, or down) will move the current script. If you move it
 onto another script, the two won’t snap together; the one you’re moving
 will overlap the one already there. This means that you can move across
 another script to get to a free space.
+
+:::{index} backspace key (keyboard editor)
+focus (keyboard editor)
+enter key (keyboard editor)
+space key (keyboard editor)
+:::
 
 ### Editing a script
 
@@ -1344,8 +1494,7 @@ Note that the keyboard editor *focus,* the point shown as a white bar or
 halo, is either *between* two command blocks or *on* an input slot. The
 editing keys do somewhat different things in each of those two cases.
 
-The backspace key\index{backspace key (keyboard editor)} deletes a
-block. If the focus\index{focus (keyboard editor)} is between two
+The backspace key deletes a block. If the focus is between two
 commands, the one *before* (above) the blinking bar is deleted. If the
 focus is on an input slot, the reporter in that slot is deleted. (If
 that input slot has a default value, it will appear in the slot.) If the
@@ -1358,7 +1507,7 @@ when it covers the entire thing.)
 
 The enter key does nothing if the focus is between commands, or on a
 reporter. If the focus is on a variadic input, the enter key
-\index{enter key (keyboard editor)} adds one more input slot. If the
+adds one more input slot. If the
 focus is on a white input slot (one that doesn’t have a reporter in it),
 then the enter key selects that input slot for *editing;* that is, you
 can type into it, just as if you’d clicked on the input slot. (Of
@@ -1371,7 +1520,7 @@ if you decide not to change the value already in the slot.
 The space key is used to see a menu of possibilities for the input slot
 in focus. It does nothing unless the focus is on a single input slot. If
 the focus is on a slot with a pulldown menu of options, then the space
-key\index{space key (keyboard editor)} shows that menu. (If it’s a
+key shows that menu. (If it’s a
 block-colored slot, meaning that only the choices in the menu can be
 used, the enter key will do the same thing. But if it’s a white slot
 with a menu, such as in the turn blocks, then enter lets you type a
@@ -1415,9 +1564,12 @@ variable name entered in this way may or may not already exist in the
 script. Only round and the ones in the pulldown menu of the sqrt block
 can be used as function names.)
 
+:::{index} control-shift-enter (keyboard editor)
+:::
+
 ### Running the selected script
 
-Type control-shift-enter\index{control-shift-enter (keyboard editor)}
+Type control-shift-enter
 to run the script with the editor focus, like clicking the script.
 
 ## Controls on the Stage\index{controls on the stage}
@@ -1425,11 +1577,18 @@ to run the script with the editor focus, like clicking the script.
 The stage is the area in the top right of the Snap<em>!</em> window in which
 sprites move.
 
+:::{index} draggable checkbox
+edit option
+move option
+pivot option
+export option
+:::
+
 ### Sprites
 
 Most sprites can be moved by
 clicking and dragging them. (If you have unchecked the draggable
-checkbox\index{draggable checkbox} for a sprite, then dragging it has
+checkbox for a sprite, then dragging it has
 no effect.) Control-clicking/right-clicking a sprite shows this context
 menu:
 
@@ -1446,12 +1605,12 @@ attributes, and selects it.
 The {index}`delete option` deletes the sprite. It’s not
 just hidden; it’s gone for good. (But you can undelete it by clicking
 the wastebasket just below the right edge of the stage.) The edit option
-\index{edit option} selects the sprite. It doesn’t actually change
+selects the sprite. It doesn’t actually change
 anything about the sprite, despite the name; it’s just that making
 changes in the scripting area will change this sprite.
 
 The move
-option\index{move option} shows a “move handle” inside the sprite (the
+option shows a “move handle” inside the sprite (the
 diagonal striped square in the middle):
 
 ![image1113.png](images/12-user-interface-elements/image1113.png) <!--  style="width:0.65278in;height:0.88889in" -->
@@ -1472,7 +1631,7 @@ direction block) or use the mouse to rotate the handle on the dial in
 15° increments.
 
 The pivot
-option\index{pivot option} shows a crosshair inside the sprite:
+option shows a crosshair inside the sprite:
 
 ![image1115.png](images/12-user-interface-elements/image1115.png) <!--  style="width:0.65278in;height:0.84722in" -->
 
@@ -1489,12 +1648,25 @@ highlighting it in the sprite corral and showing its scripting area. If
 the sprite was a {index}`temporary clone`, it becomes
 permanent.
 
-The export… option\index{export option} saves, or opens a new browser
+The export… option saves, or opens a new browser
 tab containing, the XML text representation of the sprite. (Not just its
 costume, but all of its costumes, scripts, local variables and blocks,
 and other properties.) You can save this tab into a file on your
 computer, and later import the sprite into another project. (In some
 browsers, the sprite is directly saved into a file.)
+
+:::{index} normal option
+large option
+slider option
+slider min… option
+slider max… option
+import… option
+`.csv` file
+`.json` file
+raw data… option
+export… option
+`.txt` file
+:::
 
 ### Variable watchers
 
@@ -1507,27 +1679,26 @@ visualizations of the watcher:
 
 ![image1117.png](images/12-user-interface-elements/image1117.png) <!--  style="width:0.95833in;height:1.44792in" -->
 
-The first (normal)\index{normal option} visualization is for debugging.
-The second (large)\index{large option} is for displaying information to
+The first (normal) visualization is for debugging.
+The second (large) is for displaying information to
 the user of a project, often the score in a game. And the third (slider)
-\index{slider option} is for allowing the user to control the program
+is for allowing the user to control the program
 behavior interactively. When the watcher is displayed as a slider, the
 middle section of the menu allows you to control the range of values
-possible in the slider. It will take the minimum value\index{slider
-min… option} when the slider is all the way to the left, the maximum
-value\index{slider max… option} when all the way to the right.
+possible in the slider. It will take the minimum value when the slider is all the way to the left, the maximum
+value when all the way to the right.
 
 The third section of the menu allows data to be passed between your
-computer and the variable. The import… option\index{import… option}
+computer and the variable. The import… option
 will read a computer text file. Its name must end with .txt, in which
-case the text is read into the variable as is, or .csv\index{.csv file}
-or .json\index{.json file}, in which case the text is converted into a
+case the text is read into the variable as is, or .csv
+or .json, in which case the text is converted into a
 list structure, which will always be a two-dimensional array for csv
 (comma-separated values) data, but can be any shape for json data. The
-raw data… option\index{raw data… option} prevents that conversion to
-list form. The export… option\index{export… option} does the opposite
+raw data… option prevents that conversion to
+list form. The export… option does the opposite
 conversion, passing a text-valued variable value into a .txt file
-\index{.txt file} unchanged, but converting a list value into csv format
+unchanged, but converting a list value into csv format
 if the list is one- or two-dimensional, or into json format if the list
 is more complicated. (The scalar values within the list must be numbers
 and/or text; lists of blocks, sprites, costumes, etc. cannot be
@@ -1543,6 +1714,13 @@ generate an expression with nested list blocks that, if evaluated, will
 reconstruct the list. It’s useful if you imported a list and then want
 to write code that will construct the same list later.
 
+:::{index} edit option
+show all option
+pic… option
+pen trails option
+svg… option
+:::
+
 ###  The stage itself
 
 Control-clicking/right-clicking on the stage background (that is,
@@ -1552,30 +1730,39 @@ own context menu:
 ![image1123.png](images/12-user-interface-elements/image1123.png) <!--  style="width:0.82153in;height:0.84722in" / -->
 
 The stage’s edit option
-\index{edit option} selects the stage, so the stage’s scripts and
+selects the stage, so the stage’s scripts and
 backgrounds are seen in the scripting area. Note that when the stage is
 selected, some blocks, especially the Motion ones, are not in the
 palette area because the stage can’t move.
 
-The show all option\index{show all option} makes all sprites visible,
+The show all option makes all sprites visible,
 both in the sense of the show block and by bringing the sprite onstage
 if it has moved past the edge of the stage.
 
-The pic… option saves, or\index{pic… option} opens a browser tab with,
+The pic… option saves, or opens a browser tab with,
 a picture of everything on the stage: its background, lines drawn with
 the pen, and any visible sprites. What you see is what you get. (If you
 want a picture of just the background, select the stage, open its
 costumes tab, control-click/right-click on a background, and export it.)
 
-The pen trails option\index{pen trails option} creates a new costume
+The pen trails option creates a new costume
 for the currently selected sprite consisting of all lines drawn on the
 stage by the pen of any sprite. The costume’s rotation center will be
 the current position of the sprite.
 
 If you previously turned on the log pen vectors option, and there are
-logged vectors, the menu includes an extra option, svg…\index{svg…
-option} , that exports a picture of the stage in vector format. Only
+logged vectors, the menu includes an extra option, svg…, that exports a picture of the stage in vector format. Only
 lines are logged, not color regions made with the fill block.
+
+:::{index} shortcut
+show option
+parent… option
+release option
+permanent clone
+export… option
+pic… option
+scenes
+:::
 
 ## The {index}`Sprite Corral`  and Sprite Creation Buttons\index{sprite creation buttons}
 
@@ -1588,7 +1775,7 @@ color. (If you hold down the Shift key while clicking, the new sprite’s
 direction will also be random.) The second button ![image1125.png](images/12-user-interface-elements/image1125.png) <!--  style="width:0.29167in;height:0.16667in" / --> makes a sprite and
 opens the Paint Editor so that you can make your own costume for it. (Of
 course you could click the first button and then click the paint button
-in its costumes tab; this paint button is a shortcut\index{shortcut}
+in its costumes tab; this paint button is a shortcut
 for all that.) Similarly, the third button ![image1083.png](images/12-user-interface-elements/image1083.png) <!--  style="width:0.37917in;height:0.20556in" --> uses your camera, if
 possible, to make a costume for the new sprite.
 
@@ -1610,50 +1797,57 @@ context menu:
 
 ![image1127.png](images/12-user-interface-elements/image1127.png) <!--  style="width:0.67708in;height:1.10903in" / -->
 
-The show option\index{show
-option} makes the sprite visible, if it was hidden, and also brings it
+The show option makes the sprite visible, if it was hidden, and also brings it
 onto the stage, if it had moved past the stage boundary. The next three
 options are the same as in the context menu of the actual sprite on the
 stage, discussed above.
 
-The parent… option\index{parent… option} displays a menu of all other
+The parent… option displays a menu of all other
 sprites, showing which if any is this sprite’s parent, and allowing you
 to choose another sprite (replacing any existing parent). The release
-option\index{release option} is shown only if this sprite is a
-(permanent\index{permanent clone}, or it wouldn’t be in the sprite
+option is shown only if this sprite is a
+(permanent, or it wouldn’t be in the sprite
 corral) clone; it changes the sprite to a temporary clone. (The name is
 supposed to mean that the sprite is released from the corral.) The
-export… option\index{export… option} exports the sprite, like the same
+export… option exports the sprite, like the same
 option on the stage.
 
-The context menu for the stage thumbnail has only one option, pic…
-\index{pic… option}, which takes a picture of everything on the stage,
+The context menu for the stage thumbnail has only one option, pic…, which takes a picture of everything on the stage,
 just like the same option in the context menu of the stage background.
 If pen trails are being logged, there will also be an svg… option.
 
-If your project includes scenes\index{scenes}, then under the stage
+If your project includes scenes, then under the stage
 icon in the sprite corral will be the *scene corral:*
 
 ![image1128.png](images/12-user-interface-elements/image1128.png) <!--  style="width:3.33333in;height:1.70833in" -->
 
-Clicking on a
-scene will select it; right-clicking will present a menu in which you
+Clicking on a scene will select it; right-clicking will present a menu in which you
 can rename, delete, or export the scene.
+
+:::{index} starting Snap!
+open (startup option)
+run (startup option)
+cloud (startup option)
+present (startup option)
+dl (startup option)
+editMode (startup option)
+noRun (startup option)
+hideControls (startup option)
+lang= (startup option)
+noExitWarning (startup option)
+:::
 
 ## Preloading a Project\index{preloading a project}  when Starting Snap<em>!</em>
 
 There are several ways to include a pointer to a project in the URL when
-starting Snap<em>!</em>\index{"starting Snap!"} in order to load a project
+starting Snap<em>!</em> in order to load a project
 automatically. You can think of such a URL as just running the project
 rather than as running Snap<em>!</em>, especially if the URL says to start in
 presentation mode and click the green flag. The general form is
 
 https://snap.berkeley.edu/run#***verb***:***project***&***flag***&***flag***…
 
-The “verb” above can be any of open\index{open (startup option)}, run
-\index{run (startup option)}, cloud\index{cloud (startup option)},
-present\index{present (startup option)}, or dl\index{dl (startup
-option)} . The last three are for shared projects in the Snap<em>!</em> cloud;
+The “verb” above can be any of open, run, cloud, present, or dl. The last three are for shared projects in the Snap<em>!</em> cloud;
 the first two are for projects that have been exported and made
 available anywhere on the Internet.
 
@@ -1673,21 +1867,21 @@ keyboard or by clicking a sprite.)
 If the verb is run, then you can also use any subset of the following
 flags:
 
-- &editMode\index{editMode (startup option)} : Start in edit mode, not
+- &editMode: Start in edit mode, not
 presentation mode.
 
-- &noRun\index{noRun (startup option)} : Don’t click the green flag.
+- &noRun: Don’t click the green flag.
 
-- &hideControls\index{hideControls (startup option)} : Don’t show the row
+- &hideControls: Don’t show the row
 of buttons above the stage (edit mode, green flag, pause, stop).
 
-- &lang=\index{lang= (startup option)} : fr Set language to (in this
+- &lang=: fr Set language to (in this
 example) French.
 
 - &noCloud : Don’t allow cloud operations from this project (for running
 projects from unknown sources that include JavaScript code)
 
-- &noExitWarning\index{noExitWarning (startup option)} : When closing the
+- &noExitWarning: When closing the
 window or loading a different URL, don’t show the browser “are you sure you want to leave this page” message.
 
 - &blocksZoom=n : Like the Zoom blocks option in the Settings menu.
@@ -1713,11 +1907,14 @@ computer as an .xml file. This is useful for debugging; sometimes a
 defective project that Snap<em>!</em> won’t run can be downloaded, edited, and
 then re-saved to the cloud.
 
+:::{index} bjc.edc.org
+cs10.org
+:::
+
 ## Mirror Sites
 
 If the site snap.berkeley.edu is ever unavailable, you can load Snap<em>!</em>
 at the following {index}`mirror sites` :
 
-- https://bjc.edc.org\index{bjc.edc.org} /snapsource/snap.html
-
-- https://cs10.org\index{cs10.org} /snap
+- [https://bjc.edc.org/snapsource/snap.html](https://bjc.edc.org/snapsource/snap.html)
+- [https://cs10.org/snap](https://cs10.org/snap)
