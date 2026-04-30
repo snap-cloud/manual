@@ -29,29 +29,22 @@
   --purple-light: #D9CEFF;
   --gray-medium: #808080;
   --gray-light: #F2F2F2;
-
-  // Bootstrap Variables
-  --bs-navbar-color: #FFF;
-  --bs-navbar-hover-color: rgba(150.45, 150.45, 150.45, 0.8);
-  // --bs-navbar-disabled-color: rgba(150.45, 150.45, 150.45, 0.75);
-  --bs-navbar-active-color: #FFF;
-  --bs-navbar-brand-color: #FFF;
-  --bs-navbar-brand-hover-color: #FFF;
-  --bs-navbar-toggler-border-color: #FFF;
 }
 
-.navbar {
-  background-color: var(--berkeley-blue);
-  color: #FFF;
+// JupyterBook 2 top navigation. The book-theme uses Tailwind utilities
+// (bg-white/80, backdrop-blur, shadow) on a `.myst-top-nav` div; we override
+// them here rather than forking the theme. !important is needed to defeat
+// the Tailwind utility classes also targeting these elements.
+.myst-top-nav {
+  background-color: var(--berkeley-blue) !important;
+  backdrop-filter: none !important;
+  box-shadow: none !important;
 
-  .navbar-brand {
-    color: #FFF;
-
-    &:hover, &:focus {
-      color: #FFF;
-    }
+  // Force light foreground on top of berkeley-blue, regardless of the
+  // theme-supplied text-stone-* / dark:text-white utilities on children.
+  &, a, button, svg {
+    color: #FFF !important;
   }
-
 }
 
 /* Designed to be the last element in a section / nav
@@ -64,6 +57,9 @@
   border-right: 9px solid transparent;
   height: 0;
   width: 64px;
+  margin-top: -14px;
+  top: 14px;
+  z-index: 1000;
   color: var(--berkeley-blue);
 }
 
@@ -124,6 +120,7 @@ figure.image-inline-tall {
   padding: 0;
 
   &, img {
+    display: inline;
     width: auto;
     max-width: none;
     max-height: 1.6em;
@@ -138,6 +135,7 @@ figure.image-inline-tall {
   padding: 0;
 
   &, img {
+    display: inline;
     width: auto;
     max-width: none;
     max-height: 2.4em;
