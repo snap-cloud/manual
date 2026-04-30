@@ -48,12 +48,10 @@ jobs:
 
       - name: Stage PDFs for publishing
         run: |
-          # PDF locations are configured in myst.yml under exports.output.
+          # PDF locations are configured in toc_pdf*.yml under exports.output.
           # Copy them into the HTML output so they ship alongside the site.
           mkdir -p _build/html
-          cp output/snap-manual.pdf              _build/html/snap-manual.pdf
-          cp output/snap-manual-blocks-ref.pdf _build/html/snap-manual-no-blocks-ref.pdf
-          cp output/snap-blocks-ref.pdf          _build/html/snap-blocks-ref.pdf
+          cp output/snap-*.pdf _build/html/ 2>/dev/null || true
 
       # On PRs, attach all three PDFs as workflow artifacts so reviewers can
       # grab a preview without running the build locally. Kept for 10 days to
@@ -64,9 +62,7 @@ jobs:
         with:
           name: snap-manual-pdfs
           path: |
-            output/snap-manual.pdf
-            output/snap-manual-no-blocks-ref.pdf
-            output/snap-blocks-ref.pdf
+            output/snap-*.pdf
           retention-days: 10
           # TODO: Ignore for now while secondary files are disabled.
           if-no-files-found: ignore
