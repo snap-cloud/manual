@@ -796,6 +796,6 @@ sound. But the <code>microphone ( )</code> block has other, simpler options also
 of the array in which data are collected (typically 512, must be a power
 of 2).
 
-The block for sounds that corresponds to <code>new picture</code> for pictures is ![image258.png](images/07-object-oriented-programming-with-sprites/image258.png) <!--  style="width:2.91667in;height:0.28125in" -->
-. Its first input is a list of samples, and its second input specifies how
+The block for sounds that corresponds to <code>new picture</code> for pictures is ![image258.png](images/07-object-oriented-programming-with-sprites/image258.png). <!--  style="width:2.91667in;height:0.28125in" -->
+Its first input is a list of samples, and its second input specifies how
 many samples occupy one second.
