@@ -10,13 +10,13 @@ data type
 
 ## Scratch’s Type Notation
 
-Prior to version 3, Scratch block inputs came in two types: [Text-or-number]{.mono} type and [Number]{.mono} type. The former is
+Prior to version 3, Scratch block inputs came in two types: {span .mono}[Text-or-number] type and {span .mono}[Number] type. The former is
 indicated by a rectangular box, the latter by a rounded box: ![image654.png](images/05-typed-inputs/image654.png){.image-inline}. A third
-Scratch type, [Boolean]{.mono} (true/false), can be used in certain [Control]{.mono}
+Scratch type, {span .mono}[Boolean] (true/false), can be used in certain {span .mono}[Control]
 blocks with hexagonal slots.
 
-The Snap<em>!</em> types are an expanded collection including [Procedure]{.mono}, [List]{.mono},
-and [Object]{.mono} types. Note that, with the exception of [Procedure]{.mono} types, all
+The Snap<em>!</em> types are an expanded collection including {span .mono}[Procedure], {span .mono}[List],
+and {span .mono}[Object] types. Note that, with the exception of {span .mono}[Procedure] types, all
 of the input type shapes are just reminders to the user of what the
 block expects; they are not enforced by the language.
 
@@ -56,31 +56,31 @@ find the type you want.
 ![image659.png](images/05-typed-inputs/image659.png) <!--  style="width:6.82222in;height:2.75694in" / -->
 
 The second row of input types
-contains the ones found in Scratch: [Number]{.mono}, [Any]{.mono}, and [Boolean]{.mono}. (The
+contains the ones found in Scratch: {span .mono}[Number], {span .mono}[Any], and {span .mono}[Boolean]. (The
 reason these are in the second row rather than the ﬁrst will become
 clear when we look at the column arrangement.) The ﬁrst row contains the
-new Snap<em>!</em> types other than procedures: [Object]{.mono}, [Text]{.mono}, and [List]{.mono}. The last two rows are the types related to procedures, discussed more fully below.
+new Snap<em>!</em> types other than procedures: {span .mono}[Object], {span .mono}[Text], and {span .mono}[List]. The last two rows are the types related to procedures, discussed more fully below.
 
-The [List]{.mono} type is used for ﬁrst class lists, discussed
+The {span .mono}[List] type is used for ﬁrst class lists, discussed
 in Chapter IV. The red rectangles inside the input slot are meant
 to resemble the appearance of lists as Snap<em>!</em> displays them on the
 stage: each element in a red rectangle.
 
-The [Object]{.mono} type is for sprites, costumes, sounds,
+The {span .mono}[Object] type is for sprites, costumes, sounds,
 and similar data types.
 
-The [Text]{.mono} type is really just a variant form of the Any
+The {span .mono}[Text] type is really just a variant form of the Any
 type, using a shape that suggests a text input.[^5]
 
-[^5]: In Scratch, every block that takes a [Text-type]{.mono} input has a default
+[^5]: In Scratch, every block that takes a {span .mono}[Text-type] input has a default
 value that makes the rectangles for text wider than tall. The blocks
-that aren’t specifically about text either are of [Number]{.mono} type
+that aren’t specifically about text either are of {span .mono}[Number] type
 or have no default value, so those rectangles are
-taller than wide. At ﬁrst some of us (bh) thought that [Text]{.mono} was a
+taller than wide. At ﬁrst some of us (bh) thought that {span .mono}[Text] was a
 separate type that always had a wide input slot; it turns out that this
 isn’t true in Scratch (delete the default text and the rectangle
 narrows), but we thought it a good idea anyway, so we allow Text-shaped
-boxes even for empty input slots. (This is why [Text]{.mono} comes just above [Any]{.mono}
+boxes even for empty input slots. (This is why {span .mono}[Text] comes just above {span .mono}[Any]
 in the input type selection box.)
 
 :::{index} jigsaw-piece blocks
@@ -139,8 +139,8 @@ in an arbitrary input instead of using the pulldown menu.
 
 Custom blocks can
 also have such inputs. To make a pulldown input, open the long form
-input dialog, choose a text type ([Any]{.mono}, [Text]{.mono}, or [Number]{.mono}) and click the ![image658.png](images/05-typed-inputs/image658.png) <!--  style="width:0.13194in;height:0.13194in" -->
-icon in the bottom right corner, or [control/right-click]{.mono} in the dialog.
+input dialog, choose a text type ({span .mono}[Any], {span .mono}[Text], or {span .mono}[Number]) and click the ![image658.png](images/05-typed-inputs/image658.png) <!--  style="width:0.13194in;height:0.13194in" -->
+icon in the bottom right corner, or {span .mono}[control/right-click] in the dialog.
 You will see this menu:
 
 Click
@@ -211,7 +211,7 @@ type array.
 
 The "`single input`" option: In Scratch, all inputs are in this category.
 There is one input slot in the block as it appears in its palette. If a
-single input is of type [Any]{.mono}, [Number]{.mono}, [Text]{.mono}, or [Boolean]{.mono}, then you can
+single input is of type {span .mono}[Any], {span .mono}[Number], {span .mono}[Text], or {span .mono}[Boolean], then you can
 specify a {index}`default value` that will be shown in that
 slot in the palette, like the “10” in the <code>move (10) steps block</code>. In the
 prototype block at the top of the script in the Block editor, an an input with
@@ -225,7 +225,7 @@ The "`Multiple inputs`" option:
 The <code>list</code> block introduced earlier accepts any number of inputs to
 specify the items of the new list. To allow this, Snap<em>!</em> introduces the
 arrowhead notation (⏴⏵) that expands and contracts the block, adding and
-removing input slots. ([Shift-clicking]{.mono} on an arrowhead adds or removes
+removing input slots. ({span .mono}[Shift-clicking] on an arrowhead adds or removes
 three input slots at once.) Custom blocks made by the Snap<em>!</em> user have
 that capability, too. If you choose the "`Multiple inputs`" button, then
 arrowheads will appear after the input slot in the

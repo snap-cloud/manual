@@ -53,7 +53,7 @@ variable, so it remains active. (The <code>script variables</code> block makes v
 in a sprite’s script area or in the Block Editor. Script variables can
 be “exported” by being used in a reported procedure, as here.)
 
-In this approach to [OOP]{.mono}, we are representing both classes and instances
+In this approach to {span .mono}[OOP], we are representing both classes and instances
 as procedures. The <code>make a counter</code> block represents the class, while each
 instance is represented by a nameless script created each time <code>make a
 counter</code> is called. The script variables created inside the <code>make a

@@ -20,7 +20,7 @@ just more data) that you interact with by sending it a
 *message* (just a name, maybe in the form of a text string, and perhaps
 additional inputs). The object responds to the message by carrying out a
 method, which may or may not report a value back to the asker. Some
-people {index}`emphasize the` *data hiding* aspect of [OOP]{.mono}
+people {index}`emphasize the` *data hiding* aspect of {span .mono}[OOP]
 (because each object has local variables that other objects can access
 only by sending request messages to the owning object) while others
 emphasize the *simulation* aspect (in which each object abstractly
@@ -29,7 +29,7 @@ the program model real interactions of real people or things). Data
 hiding is important for large multi-programmer industrial projects, but
 for Snap<em>!</em> users it’s the simulation aspect that’s
 important. Our approach is therefore less restrictive than that of some
-other [OOP]{.mono} languages; we give objects easy access to each others’ data
+other {span .mono}[OOP] languages; we give objects easy access to each others’ data
 and methods.
 
 Technically, object oriented programming rests on three legs:
@@ -64,10 +64,10 @@ sprites. Each sprite can own local variables; each
 sprite has its own scripts (methods). A Scratch animation is plainly a
 simulation of the interaction of characters in a play. There are two
 ways in which Scratch sprites are less versatile than the objects of an
-[OOP]{.mono}language. First, Scratch message passing is weak in three respects:
+{span .mono}[OOP]language. First, Scratch message passing is weak in three respects:
 Messages can only be <code>broadcast</code>, not addressed
 to an individual sprite; messages can’t take inputs; and methods can’t
-return values to their caller. Second, and more basic, in the [OOP]{.mono}
+return values to their caller. Second, and more basic, in the {span .mono}[OOP]
 paradigm objects are *data;* they can be the value of a variable, an
 element of a list, and so on, but that’s not the case for Scratch
 sprites.
@@ -116,7 +116,7 @@ number of essentially identical sprites that behave like the example.
 copies any more. (As we’ll see, “copies” is the wrong word because the
 parent and the children *share* a lot of properties. That’s why we use
 the word “clones” to describe the children rather than “copies.”) These
-are *[temporary]{.mono}* clones. They are automatically
+are *{span .mono}[temporary]* clones. They are automatically
 deleted when the user presses either the "`green flag`" or the "`red stop sign`". In Scratch 2.0 and later, all clones are
 temporary.
 
@@ -134,7 +134,7 @@ of <var>Cocker Spaniel</var> (so there are four altogether) and two clones of
 <var>Rottweiler</var>. Maybe you hide the <var>Dog</var> sprite after all this, since it’s no
 breed in particular. Each dog has its own position, special behaviors,
 and so on. You want to save all of these dogs in the project. These are
-*[permanent]{.mono}* clones. In [BYOB 3.1]{.mono}, the
+*{span .mono}[permanent]* clones. In {span .mono}[BYOB 3.1], the
 predecessor to Snap<em>!</em>, all clones are
 permanent.
 
@@ -194,7 +194,7 @@ continue without waiting. For this purpose we have the <code>launch ( )</code> b
 
 <code>Launch ( )</code> is analogous to <code>broadcast</code> without the “wait.”
 
-Snap<em>!</em> [4.1]{.mono}, following [BYOB 3.1]{.mono}, used an extension of the of block to
+Snap<em>!</em> {span .mono}[4.1], following {span .mono}[BYOB 3.1], used an extension of the of block to
 provide access to other sprites’ methods. That interface was designed
 back when we were trying hard to avoid adding new primitive blocks; it
 allowed us to write <code>ask ( ) and wait</code> and <code>tell ( )</code> as tool procedures in Snap<em>!</em> itself.
@@ -208,13 +208,13 @@ map-pin symbol
 
 ### Polymorphism\index{polymorphism}
 
-Suppose you have a [Dog]{.mono} sprite
-with two clones CockerSpaniel and PitBull. In the [Dog]{.mono} sprite you define
+Suppose you have a {span .mono}[Dog] sprite
+with two clones CockerSpaniel and PitBull. In the {span .mono}[Dog] sprite you define
 this method ("`For this sprite only`" block):
 
 ![image763.png](images/07-object-oriented-programming-with-sprites/image763.png) <!--  style="width:1.67361in;height:1.40208in" / -->
 
-Note the *loca*tion ([map-pin]{.mono}) symbol before the
+Note the *loca*tion ({span .mono}[map-pin]) symbol before the
 block’s name. The symbol is not part of the block title; it’s a visual
 reminder that this is a sprite-*loca*l block. Sprite-local variables are
 similarly marked.
@@ -227,15 +227,15 @@ And here’s what a PitBull does:
 
 ![image765.png](images/07-object-oriented-programming-with-sprites/image765.png) <!--  style="width:1.67361in;height:1.40208in" / -->
 
-<code>Greet ( )</code> is defined in the [Dog]{.mono} sprite.
+<code>Greet ( )</code> is defined in the {span .mono}[Dog] sprite.
 If Fido is a particular cocker
 spaniel, and you ask Fido to <code>greet</code> someone, Fido inherits the <code>greet ( )</code>
-method from [Dog]{.mono}, but [Dog]{.mono} itself couldn’t actually run that method,
-because [Dog]{.mono} doesn’t have <code>greet ( ) as friend</code> or <code>greet ( ) as enemy</code>. And perhaps
+method from {span .mono}[Dog], but {span .mono}[Dog] itself couldn’t actually run that method,
+because {span .mono}[Dog] doesn’t have <code>greet ( ) as friend</code> or <code>greet ( ) as enemy</code>. And perhaps
 only individual dogs such as Fido have <code>friend? ( )</code> methods. Even though the
-<code>greet ( )</code> method is defined in the [Dog]{.mono} sprite, when it’s running it
+<code>greet ( )</code> method is defined in the {span .mono}[Dog] sprite, when it’s running it
 remembers what specific dog sprite called it, so it knows which <code>greet ( ) as
-friend</code> to use. [Dog]{.mono}’s <code>greet ( )</code> block is called a *polymorphic* method,
+friend</code> to use. {span .mono}[Dog]’s <code>greet ( )</code> block is called a *polymorphic* method,
 because it means different things to different dogs, even though they
 all share the same script.
 
@@ -292,7 +292,7 @@ parent attribute
 
 ## Prototyping: Parents and Children
 
-Most current [OOP]{.mono} languages use a *class/instance* approach to creating
+Most current {span .mono}[OOP] languages use a *class/instance* approach to creating
 objects. A class is a particular *kind of object,* and an instance is an
 *actual object* of that type. For example, there might be a Dog class,
 and several instances Fido, Spot, and Runt. The class typically
@@ -313,7 +313,7 @@ expressive system, because you can easily simulate a class/instance
 hierarchy by hiding the prototype sprite! Prototyping is also a better
 fit with the Scratch {index}`design principle` that
 everything in a project should be concrete and visible on the stage; in
-class/instance [OOP]{.mono} the programming process begins with an abstract,
+class/instance {span .mono}[OOP] the programming process begins with an abstract,
 invisible entity, the class, that must be designed before any concrete
 objects can be made.[^7]
 
@@ -332,11 +332,11 @@ Programming Languages, Systems, and Applications \[OOPSLA-86\], ACM
 SigCHI, Portland, OR, September, 1986. Also in *Object-Oriented
 Computing,* Gerald Peterson, Ed., IEEE Computer Society Press, 1987.\]
 
-There are three ways to make a child sprite. If you [control-click]{.mono} or
-[right-click]{.mono} on a sprite in the “sprite corral” at the bottom right
+There are three ways to make a child sprite. If you {span .mono}[control-click] or
+{span .mono}[right-click] on a sprite in the “sprite corral” at the bottom right
 corner of the window, you get a menu that includes "`clone`" as one of the
 choices. There is an <code>a new clone of ( )</code> block
-in the [Control]{.mono} palette that creates and reports a child sprite. And
+in the {span .mono}[Control] palette that creates and reports a child sprite. And
 sprites have a “parent” attribute that can be
 set, like any attribute, thereby *changing* the parent of an existing
 sprite.
@@ -367,7 +367,7 @@ changed in the parent, then the children see the new value. If the
 value of a shared property is changed in the *child*, then the sharing
 link is broken, and a new private version is created in that child.
 (This is the mechanism by which a child chooses not to share a property with its parent.) “Changed” in this context means using the
-<code>set ( ) to ( )</code> or <code>change ( ) by ( )</code> block for a variable, editing a block in the Block Editor, editing a costume or sound, or inserting, deleting, or reordering costumes or sounds. To change a property from unshared to shared, the child uses the <code>inherit</code> command block. The pulldown menu in the block lists all the things this sprite can inherit from its parent (which might be nothing, if this sprite has no parent) and is not already inheriting. But that would prevent <code>tell</code>ing a child to inherit, so if the <code>inherit</code> block is inside a <code>ring</code>, its pulldown menu includes all the things a child could inherit from this sprite. [Right-clicking]{.mono} on the scripting area of a permanent clone gives a menu option to share the entire collection of scripts from its parent, as a temporary clone does.
+<code>set ( ) to ( )</code> or <code>change ( ) by ( )</code> block for a variable, editing a block in the Block Editor, editing a costume or sound, or inserting, deleting, or reordering costumes or sounds. To change a property from unshared to shared, the child uses the <code>inherit</code> command block. The pulldown menu in the block lists all the things this sprite can inherit from its parent (which might be nothing, if this sprite has no parent) and is not already inheriting. But that would prevent <code>tell</code>ing a child to inherit, so if the <code>inherit</code> block is inside a <code>ring</code>, its pulldown menu includes all the things a child could inherit from this sprite. {span .mono}[Right-clicking] on the scripting area of a permanent clone gives a menu option to share the entire collection of scripts from its parent, as a temporary clone does.
 
 The rules are full of details, but the basic idea is simple: Parents can
 change their children, but children can’t directly change their parents.
