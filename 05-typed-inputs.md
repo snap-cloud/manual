@@ -4,10 +4,13 @@
 (sec-ch05)=
 # 5. Typed Inputs
 
+:::{index} Scratch
+data type
+:::
+
 ## Scratch’s Type Notation
 
-Prior to version 3, Scratch\index{Scratch} block inputs came in two types
-\index{data type} : [Text-or-number]{.mono} type and [Number]{.mono} type. The former is
+Prior to version 3, Scratch block inputs came in two types: [Text-or-number]{.mono} type and [Number]{.mono} type. The former is
 indicated by a rectangular box, the latter by a rounded box: ![image654.png](images/05-typed-inputs/image654.png){.image-inline}. A third
 Scratch type, [Boolean]{.mono} (true/false), can be used in certain [Control]{.mono}
 blocks with hexagonal slots.
@@ -17,29 +20,35 @@ and [Object]{.mono} types. Note that, with the exception of [Procedure]{.mono} t
 of the input type shapes are just reminders to the user of what the
 block expects; they are not enforced by the language.
 
+:::{index} input name dialog
+long input name dialog
+input-type shapes
+List type
+Object type
+Text type
+Number type
+:::
+
 ## The Snap<em>!</em> Input Type Dialog
 
-In the {index}`Block Editor` input name dialog\index{input
-name dialog}, there is a right-facing arrowhead after the "`Input name`"
-option:
+In the {index}`Block Editor` input name dialog, there is a right-facing arrowhead after the "`Input name`" option:
 
 ![image692.png](images/05-typed-inputs/image692.png)
 
-Clicking that arrowhead opens the “long” input name dialog\index{long
-input name dialog} :
+Clicking that arrowhead opens the “long” input name dialog:
 
 ![image657.png](images/05-typed-inputs/image657.png)
 
-There are twelve input type shapes\index{input-type shapes}, plus
-three mutually exclusive modifiers, listed in addition to the basic choice between title text and
+There are twelve input type shapes, plus three mutually exclusive modifiers,
+listed in addition to the basic choice between title text and
 an input name. The default type, the one you get if you don’t choose
 anything else, is "`Any`", meaning that this input slot is meant to accept
 any value of {index}`any type`. If the <var>size</var> input in your block
 should be an oval-shaped numeric slot rather than a generic rectangle,
 click "`Number`"
 
-The arrangement of the input
-types is systematic. As the pictures on this and the next page show,
+The arrangement of the input types is systematic. As the pictures on this
+and the next page show,
 each row of types is a category, and parts of each column form a
 category. Understanding the arrangement will make it a little easier to
 find the type you want.
@@ -50,25 +59,23 @@ The second row of input types
 contains the ones found in Scratch: [Number]{.mono}, [Any]{.mono}, and [Boolean]{.mono}. (The
 reason these are in the second row rather than the ﬁrst will become
 clear when we look at the column arrangement.) The ﬁrst row contains the
-new Snap<em>!</em> types other than procedures: [Object]{.mono}, [Text]{.mono}, and [List]{.mono}. The
-last two rows are the types related to procedures, discussed more fully
-below.
+new Snap<em>!</em> types other than procedures: [Object]{.mono}, [Text]{.mono}, and [List]{.mono}. The last two rows are the types related to procedures, discussed more fully below.
 
-The [List]{.mono} type\index{List type} is used for ﬁrst class lists, discussed
-in Chapter IV above. The red rectangles inside the input slot are meant
+The [List]{.mono} type is used for ﬁrst class lists, discussed
+in Chapter IV. The red rectangles inside the input slot are meant
 to resemble the appearance of lists as Snap<em>!</em> displays them on the
 stage: each element in a red rectangle.
 
-The [Object]{.mono} type\index{Object type} is for sprites, costumes, sounds,
+The [Object]{.mono} type is for sprites, costumes, sounds,
 and similar data types.
 
-The [Text]{.mono} type\index{Text type} is really just a variant form of the Any
+The [Text]{.mono} type is really just a variant form of the Any
 type, using a shape that suggests a text input.[^5]
 
 [^5]: In Scratch, every block that takes a [Text-type]{.mono} input has a default
 value that makes the rectangles for text wider than tall. The blocks
 that aren’t specifically about text either are of [Number]{.mono} type
-\index{Number type} or have no default value, so those rectangles are
+or have no default value, so those rectangles are
 taller than wide. At ﬁrst some of us (bh) thought that [Text]{.mono} was a
 separate type that always had a wide input slot; it turns out that this
 isn’t true in Scratch (delete the default text and the rectangle
@@ -76,14 +83,19 @@ narrows), but we thought it a good idea anyway, so we allow Text-shaped
 boxes even for empty input slots. (This is why [Text]{.mono} comes just above [Any]{.mono}
 in the input type selection box.)
 
+:::{index} jigsaw-piece blocks
+oval blocks
+hexagonal blocks
+unevaluated procedure types
+:::
+
 ### Procedure Types
 
 Although the procedure types are discussed more fully later, they are
 the key to understanding the column arrangement in the input types. Like
-Scratch, Snap<em>!</em> has three {index}`block shapes` :
-jigsaw-piece\index{jigsaw-piece blocks} for command blocks, oval
-\index{oval blocks} for reporters, and hexagonal\index{hexagonal
-blocks} for predicates. (A *predicate* is a reporter that always reports
+Scratch, Snap<em>!</em> has three {index}`block shapes`:
+jigsaw-piece for command blocks, oval
+for reporters, and hexagonal for predicates. (A *predicate* is a reporter that always reports
 true or false.) In Snap<em>!</em> these blocks are ﬁrst class data; an input to
 a block can be of Command type, Reporter type, or Predicate type. Each
 of these types is directly below the type of value that that kind of
@@ -91,7 +103,7 @@ block reports, except for Commands, which don’t report a value at all.
 Thus, oval Reporters are related to the Any type, while hexagonal
 Predicates are related to the Boolean (true or false) type.
 
-The unevaluated procedure types\index{unevaluated procedure types} in
+The unevaluated procedure types in
 the fourth row are explained in Section VI.E below. In one handwavy
 sentence, they combine the *meaning* of the procedure types with the
 *appearance* of the reported value types two rows higher. (Of course,
@@ -101,15 +113,22 @@ later that it’s true in spirit.)
 
 ![image660.png](images/05-typed-inputs/image660.png) <!--  style="width:3.64583in;height:3.11389in" / -->
 
+:::{index} pulldown input
+read-only pulldown input
+writeable pulldown inputs
+separator; menu
+submenu
+:::
+
 ### Pulldown inputs
 
-Certain primitive blocks have *pulldown* inputs\index{pulldown input},
-either *read-only*\index{read-only pulldown input} *,* like the input
+Certain primitive blocks have *pulldown* inputs,
+either *read-only*, like the input
 to the <code>is ( ) touching</code> block:
 
 ![image661.png](images/05-typed-inputs/image661.png) <!--  style="width:1.68056in;height:0.94097in" / -->
 
-(indicated by the input slot being the same (cyan, in this case) color as the body of the block), or *writeable*\index{writeable pulldown inputs}, like the input to the <code>point in direction ( )</code> block:
+(indicated by the input slot being the same (cyan, in this case) color as the body of the block), or *writeable*, like the input to the <code>point in direction ( )</code> block:
 
 ![image662.png](images/05-typed-inputs/image662.png) <!--  style="width:1.90208in;height:1.32292in" / -->
 
@@ -140,14 +159,14 @@ appears in the input slot if that entry is chosen, and is also the value
 of the input as seen by the procedure.
 
 If the line consists of a tilde "`~`", then it represents a separator
-\index{separator!menu} (a horizontal line) in the menu, used to divide
+(a horizontal line) in the menu, used to divide
 long menus into visible categories. There should be nothing else on the
 line. This separator is not choosable, so there is no input value
 corresponding to it.
 
 If the line ends with the two characters equal sign and open brace "`={`",
 then it represents a *submenu.* The text before the equal sign is a name
-for the submenu\index{submenu}, and will be displayed in the menu with
+for the submenu, and will be displayed in the menu with
 an arrowhead ► at the end of the line. This line is not clickable, but
 hovering the mouse over it displays the submenu next to the original
 menu. A line containing a close brace "`}`" ends the submenu; nothing else
@@ -166,28 +185,29 @@ blocks, by choosing from the "`menu`" submenu:
 Finally, you can make the input box accept more than one line of text
 (that is, text including a newline character) from the "`special`" submenu,
 either "`multi-line`" for regular
-text or "`code`"
-for monospace-font computer code.
+text or "`code`" for monospace-font computer code.
 
- If the
-input type is something other than text, then clicking the ![image670.png](images/05-typed-inputs/image670.png){.image-inline} <!--  style="width:0.13056in;height:0.1375in" --> button will
-instead show this menu:
+If the input type is something other than text, then clicking the ![image670.png](images/05-typed-inputs/image670.png){.image-inline} <!--  style="width:0.13056in;height:0.1375in" --> button will instead show this menu:
 
 ![image669.png](images/05-typed-inputs/image669.png) <!--  style="width:0.60417in;height:0.31944in" -->
 
-As an example, we want to make this block: ![image671.png](images/05-typed-inputs/image671.png){.image-inline} <!--  style="width:0.60417in;height:0.31944in" -->  The second input must be a
-read-only object menu:
+As an example, we want to make this block: ![image671.png](images/05-typed-inputs/image671.png){.image-inline} <!--  style="width:0.60417in;height:0.31944in" -->  The second input must be a read-only object menu:
 
 ![image694.png](images/05-typed-inputs/image694.png){.image-4x} <!--  style="width:0.60417in;height:0.31944in" -->
 
-
-
+:::{index} arrowheads
+ellipsis
+variadic input
+internal variable
+make internal variable visible
+upward-pointing arrow
+upvar
+:::
 
 ### Input variants
 
 We now turn to the three mutually exclusive options that come below the
 type array.
-
 
 The "`single input`" option: In Scratch, all inputs are in this category.
 There is one input slot in the block as it appears in its palette. If a
@@ -208,23 +228,20 @@ arrowhead notation (⏴⏵) that expands and contracts the block, adding and
 removing input slots. ([Shift-clicking]{.mono} on an arrowhead adds or removes
 three input slots at once.) Custom blocks made by the Snap<em>!</em> user have
 that capability, too. If you choose the "`Multiple inputs`" button, then
-arrowheads\index{arrowheads} will appear after the input slot in the
+arrowheads will appear after the input slot in the
 block. More or fewer slots (as few as zero) may be used. When the block
 runs, all of the values in all of the slots for this input name are
 collected into a list, and the value of the input as seen inside the
 script is that list of values:
 
-The ellipsis\index{ellipsis} (…) in the orange input slot name box in
-the prototype indicates a multiple or *variadic* input\index{variadic
-input} .
+The ellipsis (…) in the orange input slot name box in
+the prototype indicates a multiple or *variadic* input.
 
-The third category, "`Upvar - make internal variable`\index{internal
-variable} `visible to caller`"\index{make internal variable visible},
+The third category, "`Upvar - make internal variable` `visible to caller`",
 isn’t really an input at all, but rather a sort of output from the block
 to its user. It appears as an orange variable oval in the block, rather
 than as an input slot. Here’s an example; the uparrow (**↑**)
-\index{upward-pointing arrow} in the prototype indicates this kind of
-internal variable name:
+in the prototype indicates this kind of internal variable name:
 
 <!-- Referred to at the top of chapter 6. -->
 ![Definition of `my for` block and the block created.](images/05-typed-inputs/image695.png)
@@ -234,7 +251,7 @@ The variable <var>i</var> (in the block on the right above) can be dragged from 
 slot. Also, by clicking on the orange <var>i</var>, the user can change the name of
 the variable as seen in the calling script (although the name hasn’t
 changed inside the block’s definition). This kind of variable is called
-an *upvar*\index{upvar} for short, because it is passed *upward* from
+an *upvar* for short, because it is passed *upward* from
 the custom block to the script that uses it.
 
 Note about the example: <code>for</code> is a primitive block, but it doesn’t need to
@@ -260,32 +277,32 @@ complete list of such notations:
 - ¶ multi-line text
 - ![image686.png](images/05-typed-inputs/image686.png) <!--  style="width:0.16319in;height:0.13542in" / --> object
 
+:::{index} icons in title text
+new line character
+:::
+
 ### Title Text and Symbols
 
-Some primitive blocks have
-symbols\index{icons in title text} as part of the block name: ![image687.png](images/05-typed-inputs/image687.png){.image-inline} <!--  style="width:1.21875in;height:0.23472in" / -->. Custom
-blocks can use symbols too. In the Block Editor, click the plus sign in
+Some primitive blocks have symbols as part of the block name: ![image687.png](images/05-typed-inputs/image687.png){.image-inline} <!--  style="width:1.21875in;height:0.23472in" / -->
+Custom blocks can use symbols too. In the Block Editor, click the plus sign in
 the prototype at the point where you want to insert the symbol. Then
 click the "`title text`" picture below the text box that’s expecting an
 input slot name. The dialog will then change to look like this:
 
- ![image689.png](images/05-typed-inputs/image689.png) <!--  style="width:2.03472in;height:1.26389in" / -->
+![image689.png](images/05-typed-inputs/image689.png) <!--  style="width:2.03472in;height:1.26389in" / -->
 
-The important part to notice
-is the arrowhead that has appeared at the right end of the text box.
-Click it to see the menu shown here at the left.
+The important part to notice is the arrowhead that has appeared at the right
+end of the text box. Click it to see the menu shown here at the left.
 
 Choose one of the symbols. The result will have the symbol you want: ![image688.png](images/05-typed-inputs/image688.png){.image-inline}. The
 available symbols are, pretty much, the ones that are used in Snap<em>!</em>
 icons.
 
- But I’d like the arrow symbol
-bigger, and yellow, so I edit its name:
+But I’d like the arrow symbol bigger, and yellow, so I edit its name:
 
 ![image690.png](images/05-typed-inputs/image690.png) <!--  style="width:2.03472in;height:1.26389in" / -->
 
- This makes the symbol 1.5
-times as big as the letters in the block text, using a color with
+This makes the symbol 1.5 times as big as the letters in the block text, using a color with
 red-green-blue values of 255-255-150 (each between 0 and 255). Here’s
 the result:
 
@@ -294,7 +311,6 @@ the result:
 The size and color controls can also be used with text: <code>$foo-8-255-120-0</code>
 will make a huge orange <code>foo</code>.
 
-Note the last entry in the symbol menu: "`new line`"\index{new line
-character}. This can be used in a block with many inputs to control
+Note the last entry in the symbol menu: "`new line`". This can be used in a block with many inputs to control
 where the text continues on another line, instead of letting Snap<em>!</em>
 choose the line break itself.

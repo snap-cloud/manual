@@ -180,9 +180,10 @@ def strip_index_from_line(line: str) -> tuple[str, list[str], bool]:
         terms.insert(0, term)
         review = review or term_review
         # If there's a space immediately before and after the \index{}, keep only one.
+        # Don't insert a space when the following character is punctuation.
         pre  = result[:start].rstrip(' ')
         post = result[end:].lstrip(' ')
-        if pre and post:
+        if pre and post and not post[:1] in '.,):_-;':
             result = pre + ' ' + post
         else:
             result = (pre + post).strip()
