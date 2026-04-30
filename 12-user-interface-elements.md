@@ -168,7 +168,7 @@ private and nobody can see it except you, its owner. If it is shared
 (**boldface** in the project list), then when you open it you’ll see a URL
 like this one:
 
-[`https://snap.berkeley.edu/snapsource/snap.html#present:Username=bh&ProjectName=count%20change`](ttps://snap.berkeley.edu/snapsource/snap.html#present:Username=bh&ProjectName=count%20change){.mono}
+{span .mono}[https://snap.berkeley.edu/snapsource/snap.html#present:Username=bh&ProjectName=count%20change](https://snap.berkeley.edu/snapsource/snap.html#present:Username=bh&ProjectName=count%20change)
 
 but with your username and project name. (“{span .mono}[`%20`]” in the project name
 represents a space, which can’t be part of a URL.) Anyone who knows this
@@ -1572,7 +1572,9 @@ can be used as function names.)
 Type control-shift-enter
 to run the script with the editor focus, like clicking the script.
 
-## Controls on the Stage\index{controls on the stage}
+:::{index} controls on the stage
+:::
+## Controls on the Stage
 
 The stage is the area in the top right of the Snap<em>!</em> window in which
 sprites move.
@@ -1586,11 +1588,8 @@ export option
 
 ### Sprites
 
-Most sprites can be moved by
-clicking and dragging them. (If you have unchecked the draggable
-checkbox for a sprite, then dragging it has
-no effect.) Control-clicking/right-clicking a sprite shows this context
-menu:
+Most sprites can be moved by clicking and dragging them. (If you have unchecked the draggable
+checkbox for a sprite, then dragging it has no effect.) Control-clicking/right-clicking a sprite shows this context menu:
 
 ![image1112.png](images/12-user-interface-elements/image1112.png) <!--  style="width:0.60139in;height:1.08333in" / -->
 
@@ -1729,8 +1728,7 @@ own context menu:
 
 ![image1123.png](images/12-user-interface-elements/image1123.png) <!--  style="width:0.82153in;height:0.84722in" / -->
 
-The stage’s edit option
-selects the stage, so the stage’s scripts and
+The stage’s edit option selects the stage, so the stage’s scripts and
 backgrounds are seen in the scripting area. Note that when the stage is
 selected, some blocks, especially the Motion ones, are not in the
 palette area because the stage can’t move.
@@ -1751,10 +1749,12 @@ stage by the pen of any sprite. The costume’s rotation center will be
 the current position of the sprite.
 
 If you previously turned on the log pen vectors option, and there are
-logged vectors, the menu includes an extra option, svg…, that exports a picture of the stage in vector format. Only
-lines are logged, not color regions made with the fill block.
+logged vectors, the menu includes an extra option, svg…, that exports a picture of the stage in vector format. Only lines are logged, not color regions made with the fill block.
 
-:::{index} shortcut
+:::{index}
+sprite corral
+sprite creation buttons
+shortcut
 show option
 parent… option
 release option
@@ -1764,12 +1764,10 @@ pic… option
 scenes
 :::
 
-## The {index}`Sprite Corral`  and Sprite Creation Buttons\index{sprite creation buttons}
+## The Sprite Corral and Sprite Creation Buttons
 
-Between the stage and the
-sprite corral at the bottom right of the Snap<em>!</em> window is a dark grey
-bar containing three buttons at the left and one at the right. The first
-three are used to create a new sprite. The first button  ![image1124.png](images/12-user-interface-elements/image1124.png) <!--  style="width:0.29167in;height:0.16667in" / -->  makes a sprite
+Between the stage and the sprite corral at the bottom right of the Snap<em>!</em> window is a dark grey bar containing three buttons at the left and one at the right. The first
+three are used to create a new sprite. The first button ![image1124.png](images/12-user-interface-elements/image1124.png) <!--  style="width:0.29167in;height:0.16667in" / -->  makes a sprite
 with just the turtle costume, with a randomly chosen position and pen
 color. (If you hold down the Shift key while clicking, the new sprite’s
 direction will also be random.) The second button ![image1125.png](images/12-user-interface-elements/image1125.png) <!--  style="width:0.29167in;height:0.16667in" / --> makes a sprite and
@@ -1825,19 +1823,20 @@ Clicking on a scene will select it; right-clicking will present a menu in which 
 can rename, delete, or export the scene.
 
 :::{index} starting Snap!
-open (startup option)
-run (startup option)
-cloud (startup option)
-present (startup option)
-dl (startup option)
-editMode (startup option)
-noRun (startup option)
-hideControls (startup option)
-lang= (startup option)
-noExitWarning (startup option)
+preloading a project
+`open`; startup option
+`run`; startup option
+`cloud`; startup option
+`present`; startup option
+`dl`; startup option
+`editMode`; startup option
+`noRun`; startup option
+`hideControls`; startup option
+`lang`=; startup option
+`noExitWarning`; startup option
 :::
 
-## Preloading a Project\index{preloading a project}  when Starting Snap<em>!</em>
+## Preloading a Project when Starting Snap<em>!</em>
 
 There are several ways to include a pointer to a project in the URL when
 starting Snap<em>!</em> in order to load a project

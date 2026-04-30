@@ -1,0 +1,191 @@
+# Building the Snap! Manual PDFs
+
+The Snap! Reference Manual is authored in MyST Markdown and rendered to:
+
+1. The HTML site, served at [docs.snap.berkeley.edu][website].
+2. Three PDF variants, all served alongside the HTML site:
+   * [`snap-manual.pdf`][pdf] &mdash; the full manual.
+   * [`snap-manual-no-blocks-ref.pdf`][no_blocks_pdf] &mdash; the manual
+     with the per-block reference section removed.
+   * [`snap-blocks-ref.pdf`][blocks_pdf] &mdash; only the per-block
+     reference.
+
+All three PDFs share the same LaTeX template, fonts, and indexing setup;
+the only difference is the article list each one is built from.
+
+[website]: https://docs.snap.berkeley.edu/
+[pdf]: https://docs.snap.berkeley.edu/snap-manual.pdf
+[no_blocks_pdf]: https://docs.snap.berkeley.edu/snap-manual-no-blocks-ref.pdf
+[blocks_pdf]: https://docs.snap.berkeley.edu/snap-blocks-ref.pdf
+
+## Pipeline overview
+
+```
+MyST Markdown  ──myst build --pdf──▶  LaTeX (.tex)  ──latexmk──▶  snap-manual.pdf
+```
+
+`myst build --pdf` does both halves of the pipeline:
+
+1. It renders the project's Markdown into one LaTeX document per export,
+   using the [jtex][jtex] template at [`_latex-template/`](../_latex-template/)
+   (see below).
+2. It invokes [`latexmk`][latexmk] in a temporary build directory to compile
+   each `.tex` into a PDF, runs `makeindex` so the index resolves, and
+   re-runs LaTeX as needed.
+
+The PDF exports are configured in [`myst.yml`](../myst.yml). The full manual
+uses the project toc directly:
+
+```yaml
+exports:
+  - format: tex+pdf
+    title: Snap\textit{!} Reference Manual
+    template: ./_latex-template/
+    output: output/snap-manual.pdf
+```
+
+The two filtered variants (`snap-manual-no-blocks-ref.pdf` and
+`snap-blocks-ref.pdf`) live in the same `exports:` list but each carries an
+explicit `articles:` block listing the files (and section/part titles) that
+go into them. Those `articles:` blocks are generated from `toc.yml` by
+[`_support/scripts/generate-pdf-exports.py`](../_support/scripts/generate-pdf-exports.py)
+and live between the `# === BEGIN/END GENERATED PDF VARIANTS ===` sentinel
+comments in `myst.yml`. Re-run the generator after editing `toc.yml`:
+
+```shell
+python3 _support/scripts/generate-pdf-exports.py
+```
+
+After a successful build, the PDFs are at:
+
+* `output/snap-manual.pdf`
+* `output/snap-manual-no-blocks-ref.pdf`
+* `output/snap-blocks-ref.pdf`
+
+[jtex]: https://mystmd.org/jtex
+[latexmk]: https://ctan.org/pkg/latexmk
+
+## Local LaTeX template
+
+The PDF uses a local copy of MyST's `plain_latex_book` ("common book")
+template, vendored at [`_latex-template/`](../_latex-template/). The directory
+contains:
+
+- `template.tex` &mdash; the jtex template (with `[- IMPORTS -]` and
+  `[- CONTENT -]` placeholders that MyST fills in).
+- `template.yml` &mdash; jtex template metadata (declared LaTeX packages,
+  bundled files, declared doc fields).
+- `index-style.ist` &mdash; `makeindex` style file (bold letter-group
+  headings, small entries, page numbers right-aligned via `\hfill`).
+- `latexmkrc` &mdash; tells `latexmk` to invoke `makeindex` with
+  `-s index-style.ist` so the style file is applied.
+- `README.md` &mdash; describes the vendored copy and the Snap!-specific
+  adaptations.
+
+Snap!-specific adaptations on top of upstream `plain_latex_book`:
+
+- KOMA-Script `scrbook` document class at 12pt, oneside.
+- US Letter page geometry (8.5&times;11in) with tighter Snap-style margins.
+- `imakeidx` is loaded with the `noautomatic` option (which disables its
+  shell-escape `makeindex` run) and we issue `\makeindex[options=-s
+  index-style.ist]` ourselves. That delegates the actual `makeindex`
+  invocation to `latexmk`, which we configure via `latexmkrc` to apply
+  our [`index-style.ist`][ist] style file. `\printindex` is rendered as
+  part of [`manual-index.md`][mi], the last chapter in the toc.
+
+[ist]: ../_latex-template/index-style.ist
+[mi]: ../manual-index.md
+- Snap! brand colors (`snapblue`, `snaporange`) defined for use in custom
+  LaTeX content.
+
+These adaptations were carried over from the legacy Quarto preamble at
+`_support/tex/latex-preamble.tex` and the PDF section of
+`_support/quarto/_quarto.yml` (both retained on the `quarto` branch for
+reference).
+
+## Building the PDF locally
+
+You need a working LaTeX install with `latexmk`. On Debian/Ubuntu:
+
+```shell
+sudo apt-get install -y latexmk \
+  texlive-latex-recommended texlive-latex-extra \
+  texlive-fonts-recommended texlive-fonts-extra \
+  texlive-luatex texlive-xetex
+```
+
+On macOS, install [MacTeX][mactex] (or the smaller [BasicTeX][basictex] plus
+`tlmgr install latexmk imakeidx koma-script ...`).
+
+Then, from the project root:
+
+```shell
+myst build --pdf
+```
+
+The first run can take several minutes per PDF (LaTeX compiles all chapters
+and runs `makeindex`); MyST builds the three exports sequentially.
+Subsequent runs in the same checkout are faster because MyST caches
+intermediate files under `_build/`.
+
+Outputs are placed at:
+
+* `output/snap-manual.pdf`
+* `output/snap-manual-no-blocks-ref.pdf`
+* `output/snap-blocks-ref.pdf`
+
+[mactex]: https://www.tug.org/mactex/
+[basictex]: https://www.tug.org/mactex/morepackages.html
+
+### Useful flags
+
+- `myst build --tex` &mdash; render the LaTeX document only, without invoking
+  `latexmk`. Useful when iterating on the template or debugging
+  `[- IMPORTS -]` output.
+- `myst build --pdf --force` &mdash; rebuild from scratch, ignoring caches.
+- `myst clean --all` &mdash; remove `_build/` and other cache directories.
+
+### Troubleshooting
+
+- **Missing LaTeX packages.** The packages listed in
+  [`_latex-template/template.yml`](../_latex-template/template.yml) under
+  `packages:` are the ones MyST will warn about if missing. Install them via
+  `tlmgr` (TeX Live) or your distro package manager.
+- **Index entries not appearing.** The index is generated by `latexmk`
+  invoking `makeindex -s index-style.ist`, configured via the bundled
+  `latexmkrc`. If `\printindex` shows up empty in the PDF, confirm
+  `latexmkrc` is in the temp build directory and that `imakeidx` is
+  loaded with the `noautomatic` option (otherwise its shell-escape
+  `makeindex` runs and races with latexmk's).
+- **Fonts or characters look wrong.** MyST drives the PDF build with
+  `xelatex` by default, which is what the GitHub Actions workflow installs.
+  If you want to switch to `lualatex` locally, set `$pdf_mode = 4` in a
+  `.latexmkrc` and override MyST's engine (currently not configurable from
+  `myst.yml`, so this requires manual `latexmk` invocations on the
+  generated `.tex`).
+
+## CI
+
+The [`myst.yml`](../.github/workflows/myst.yml) GitHub Actions workflow runs
+on push to `main`, on pull requests, and via `workflow_dispatch`. Each run:
+
+1. Installs Node.js, MyST, and TeX Live.
+2. Runs `myst build --html` to build the site.
+3. Runs `myst build --pdf` to build all three PDFs into `output/`.
+4. Copies each PDF into `_build/html/` so they're published alongside the
+   site.
+
+The remaining steps depend on the trigger:
+
+- **Push to `main` / `workflow_dispatch`**: pushes `_build/html/` to the
+  `gh-pages` branch via [`peaceiris/actions-gh-pages`][gh-pages-action]. The
+  result is served at <https://docs.snap.berkeley.edu/>, with the three
+  PDFs at `/snap-manual.pdf`, `/snap-manual-no-blocks-ref.pdf`, and
+  `/snap-blocks-ref.pdf`.
+- **Pull request**: uploads all three PDFs as a single workflow artifact
+  named `snap-manual-pdfs` (retention 10 days) and stops there &mdash;
+  nothing is published to `gh-pages` from a PR. Reviewers can download the
+  artifact from the run's **Artifacts** section, or via
+  `gh run download --name snap-manual-pdfs --repo snap-cloud/manual`.
+
+[gh-pages-action]: https://github.com/peaceiris/actions-gh-pages

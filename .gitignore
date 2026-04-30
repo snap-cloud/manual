@@ -13,6 +13,9 @@ env/
 # JupyterBook
 _build
 
+# MyST PDF output (configured in myst.yml exports)
+output/
+
 # Compiled Python Output
 # Mostly used for block pages, which use Jupyter envs.
 # Commited for now, just to speed up publishing time.

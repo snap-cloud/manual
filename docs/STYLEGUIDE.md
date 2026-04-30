@@ -5,13 +5,15 @@
 
 * Write UI elements inside quoted code blocks. e.g. ```"`Open`"```
 * Monospaced text should use the CSS class `.mono` e.g. `{span .mono}[text here]`
-* Do not put spaces around index entries. `text\index{text},`
+* Do not put spaces around index entries. See [Indexes](#indexes) below.
 * To write Snap! as stylized text write: `Snap<em>!</em>`
-* Chapters are included at the top level of the repo, named 'NN-chapter'
-  * Each contains an `index.md` file, which is the chapter's main content.
-  * The `assets/` folder contains images used in the chapter.
+* Chapters are included at the top level of the repo, named 'NN-chapter.md'
+  * This md file is the content for the chapter.
+  * The `images/` folder contains images used in the manual, organized by chapter.
 * The `appendix/` folder contains additional chapters, which are subfolders within the `appendix/` folder.
-* The `blocks/` folder contains 1 markdown file per block, organized by palette.
+* The `blocks/` folder contains 1 markdown file per block, organized by palette.\
+  * `blocks/<palette>/<selector>.md` is the reference for block with selector `x` in palette `palette`.
+  * `blocks/<palette>/<selector>.yml` is the metadata for that block, which is used to render the block's help page. You should primarily edit these pages.
   * `blocks/images/` one image per block, named `block_x.png` where `x` is the block *selector*.
   * `blocks/help/` is the help screen for each block, named `selector.png`.
 
@@ -59,20 +61,6 @@ automatically.
 * If you are refercing an individual block image, try to reference `/blocks/images/block_x.png` to indicate it is a "standard" block used as a default.
 * If an image is the exact same in multiple chapters, try to save it in the _chapter where it is first used_. Then reference that image as `[...](/01-.../assets/myimage.png)`
 
-## Indexing and Index Entries
-
-https://en.wikibooks.org/wiki/LaTeX/Indexing
-
-* Write an index entry by writing `text\index{text},` at the end of a term.
-* Do not put spaces around the `\index{}` command.
-* Use *LaTeX* inside the `\index` command.
-* `!` denotes sub-terms in the index.
-* Use `""` to escape special characters in the index.
-* Use `$$` for verabatim text in the index, mostly for block names.
-* The format is `\index{sortkey@entrytext}`
-  * You will need to use this when you are trying to index a block name.
-  * e.g. `\index{block name@$Block Name$ block}`
-
 ## Making new CSS classes
 
 Add all CSS to the file `snap-manual.scss`. All "image" related CSS should be prefixed with `image-`
@@ -92,6 +80,119 @@ You may want to replace images on text with a callout block.
 This is an example of a callout with a title.
 :::
 ```
+
+---
+
+# Indexes
+
+The manual ships with an alphabetical index that's compiled into the PDF (and
+will eventually be a search-friendly listing in the HTML). Index entries are
+the most common annotation in the manual — most pages have several — and the
+syntax is the place new contributors are most likely to get stuck.
+
+> [!IMPORTANT]
+> If something isn't indexed, it effectively isn't in the manual. Index
+> *names* (blocks, menu options, dropdown values) and *ideas* (every
+> significant word; e.g. both `lexical scope` and `scope, lexical`). People
+> are indexed by family name only.
+
+## Marking an index entry
+
+The manual uses MyST's `index` role and directive. Both forms are
+supported; prefer the role for entries that mark a specific word and the
+directive when you want to attach several index terms to a paragraph or
+figure without changing the visible text.
+
+### Inline role (preferred for most entries)
+
+The basic form puts an entry on whatever word you want indexed:
+
+```md
+This chapter describes the {index}`Scratch` features inherited by Snap!
+```
+
+Here "Scratch" both stays as visible text and becomes an index entry under
+"Scratch".
+
+To index something *under a different term* than the visible text, separate
+the visible text and the index term with `<...>`:
+
+```md
+arrangement of {index}`regions <layout, window>` in the window
+```
+
+That displays "regions" but produces two index entries, **layout** and
+**window**, both pointing at this page. Use `;` (semicolons) to express a
+sub-entry hierarchy:
+
+```md
+{index}`hat block <block; hat>`
+```
+
+This produces "block, hat" (a sub-entry under "block") in the index.
+
+### Block directive (for several terms at once)
+
+When you want to attach index entries to a span of text without altering
+the visible content, use the directive form:
+
+```md
+:::{index}
+Snap! program
+script
+costume
+block; command
+:::
+```
+
+Each line is one entry. Sub-entries use `;` the same way as in the role
+form.
+
+### Avoid surrounding spaces
+
+Don't put spaces between an index annotation and the word it's attached to:
+
+```md
+✅  the {index}`palette` area at the left edge
+❌  the palette {index}`palette` area at the left edge
+❌  the {index}`palette`  area at the left edge   (extra space inside the line)
+```
+
+## LaTeX `\index{...}` (legacy, **do not use**)
+
+The original Word -> Markdown conversion used LaTeX's `\index{...}` syntax for index entries, which is not rendered by MyST but is still supported by our LaTeX template. When converting legacy entries, you may encounter this syntax. Here's how it compares to the MyST role:
+
+| Goal | MyST | LaTeX |
+| ---- | ---- | ----- |
+| Simple entry on a word | <code>{index}\`palette\`</code> | `palette\index{palette}` |
+| Different visible text vs. index term | <code>{index}\`regions &lt;layout&gt;\`</code> | `regions\index{layout}` |
+| Multiple terms at one location | <code>{index}\`regions &lt;layout, window&gt;\`</code> | `regions\index{layout}\index{window}` |
+| Sub-entry | <code>{index}\`hat block &lt;block; hat&gt;\`</code> | `hat block\index{block!hat}` |
+| Sort key vs. display text | (use sub-entry form) | `\index{block name@$Block Name$ block}` |
+
+LaTeX-specific quirks worth knowing about if you're reading or editing
+existing entries:
+
+* `!` denotes sub-entries (`\index{block!hat}`).
+* `""` escapes special characters in the entry (e.g. `"!`).
+* `@` separates a sort key from the displayed text. The form
+  `\index{sortkey@entrytext}` is mostly used to keep block names in the
+  right alphabetical position even when the display includes typesetting
+  like math mode.
+* See <https://en.wikibooks.org/wiki/LaTeX/Indexing> for the full reference.
+
+When converting a legacy entry, prefer the MyST role and let the index term
+do the heavy lifting via `<term>` rather than reaching for sort keys.
+
+## How the index gets rendered
+
+The index appears as the last chapter of the manual, [`manual-index.md`](../manual-index.md),
+which calls `\printindex`. In the PDF build, our local LaTeX template
+([`_latex-template/`](../_latex-template/)) runs `makeindex` with the
+[`index-style.ist`](../_latex-template/index-style.ist) style file, which
+produces the bold letter-group headings (A, B, C, …), small index entries,
+and right-aligned page numbers. See
+[`docs/latex.md`](./latex.md) for the full PDF pipeline.
 
 ---
 
