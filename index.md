@@ -8,7 +8,7 @@
 ```
 -->
 
-# The Snap! Reference Manual
+<!-- # The Snap! Reference Manual -->
 
 <!--
   This is the first page of the Snap! Manual.

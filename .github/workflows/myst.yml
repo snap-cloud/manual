@@ -22,8 +22,10 @@ jobs:
         with:
           node-version: '20'
 
-      - name: Install MyST
-        run: npm install -g mystmd
+      - name: Install MyST and dependencies
+        run: |
+          npm install
+          npm install -g mystmd
 
       - name: Print MyST version
         run: myst --version
@@ -40,8 +42,9 @@ jobs:
             texlive-luatex \
             texlive-xetex
 
+      # Run npm build to compile the custom SASS
       - name: Build HTML
-        run: myst build --html
+        run: npm run build
 
       - name: Build PDF
         run: myst build --pdf
