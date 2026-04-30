@@ -120,6 +120,7 @@ figure.image-inline-tall {
   padding: 0;
 
   &, img {
+    display: inline;
     width: auto;
     max-width: none;
     max-height: 1.6em;
@@ -134,6 +135,7 @@ figure.image-inline-tall {
   padding: 0;
 
   &, img {
+    display: inline;
     width: auto;
     max-width: none;
     max-height: 2.4em;
