@@ -1,16 +1,22 @@
-# Building the Snap! Manual PDF
+# Building the Snap! Manual PDFs
 
-The Snap! Reference Manual is authored in MyST Markdown and rendered to two
-output formats:
+The Snap! Reference Manual is authored in MyST Markdown and rendered to:
 
 1. The HTML site, served at [docs.snap.berkeley.edu][website].
-2. A single-volume PDF, `snap-manual.pdf`, served alongside the HTML site at
-   [`/snap-manual.pdf`][pdf].
+2. Three PDF variants, all served alongside the HTML site:
+   * [`snap-manual.pdf`][pdf] &mdash; the full manual.
+   * [`snap-manual-no-blocks-ref.pdf`][no_blocks_pdf] &mdash; the manual
+     with the per-block reference section removed.
+   * [`snap-blocks-ref.pdf`][blocks_pdf] &mdash; only the per-block
+     reference.
 
-This document describes how the PDF is produced.
+All three PDFs share the same LaTeX template, fonts, and indexing setup;
+the only difference is the article list each one is built from.
 
 [website]: https://docs.snap.berkeley.edu/
 [pdf]: https://docs.snap.berkeley.edu/snap-manual.pdf
+[no_blocks_pdf]: https://docs.snap.berkeley.edu/snap-manual-no-blocks-ref.pdf
+[blocks_pdf]: https://docs.snap.berkeley.edu/snap-blocks-ref.pdf
 
 ## Pipeline overview
 
@@ -20,14 +26,15 @@ MyST Markdown  ──myst build --pdf──▶  LaTeX (.tex)  ──latexmk─�
 
 `myst build --pdf` does both halves of the pipeline:
 
-1. It renders the project's Markdown into a single LaTeX document, using the
-   [jtex][jtex] template at [`_latex-template/`](../_latex-template/) (see
-   below).
+1. It renders the project's Markdown into one LaTeX document per export,
+   using the [jtex][jtex] template at [`_latex-template/`](../_latex-template/)
+   (see below).
 2. It invokes [`latexmk`][latexmk] in a temporary build directory to compile
-   that `.tex` into a PDF, runs `makeindex` so the index resolves, and re-runs
-   LaTeX as needed.
+   each `.tex` into a PDF, runs `makeindex` so the index resolves, and
+   re-runs LaTeX as needed.
 
-The PDF location is configured in [`myst.yml`](../myst.yml):
+The PDF exports are configured in [`myst.yml`](../myst.yml). The full manual
+uses the project toc directly:
 
 ```yaml
 exports:
@@ -37,8 +44,23 @@ exports:
     output: output/snap-manual.pdf
 ```
 
-After a successful build, the PDF is at `output/snap-manual.pdf` relative to
-the project root.
+The two filtered variants (`snap-manual-no-blocks-ref.pdf` and
+`snap-blocks-ref.pdf`) live in the same `exports:` list but each carries an
+explicit `articles:` block listing the files (and section/part titles) that
+go into them. Those `articles:` blocks are generated from `toc.yml` by
+[`_support/scripts/generate-pdf-exports.py`](../_support/scripts/generate-pdf-exports.py)
+and live between the `# === BEGIN/END GENERATED PDF VARIANTS ===` sentinel
+comments in `myst.yml`. Re-run the generator after editing `toc.yml`:
+
+```shell
+python3 _support/scripts/generate-pdf-exports.py
+```
+
+After a successful build, the PDFs are at:
+
+* `output/snap-manual.pdf`
+* `output/snap-manual-no-blocks-ref.pdf`
+* `output/snap-blocks-ref.pdf`
 
 [jtex]: https://mystmd.org/jtex
 [latexmk]: https://ctan.org/pkg/latexmk
@@ -101,11 +123,16 @@ Then, from the project root:
 myst build --pdf
 ```
 
-The first run can take several minutes (LaTeX compiles all chapters and
-runs `makeindex`). Subsequent runs in the same checkout are faster because
-MyST caches intermediate files under `_build/`.
+The first run can take several minutes per PDF (LaTeX compiles all chapters
+and runs `makeindex`); MyST builds the three exports sequentially.
+Subsequent runs in the same checkout are faster because MyST caches
+intermediate files under `_build/`.
 
-The output is placed at `output/snap-manual.pdf`.
+Outputs are placed at:
+
+* `output/snap-manual.pdf`
+* `output/snap-manual-no-blocks-ref.pdf`
+* `output/snap-blocks-ref.pdf`
 
 [mactex]: https://www.tug.org/mactex/
 [basictex]: https://www.tug.org/mactex/morepackages.html
@@ -144,20 +171,21 @@ on push to `main`, on pull requests, and via `workflow_dispatch`. Each run:
 
 1. Installs Node.js, MyST, and TeX Live.
 2. Runs `myst build --html` to build the site.
-3. Runs `myst build --pdf` to build `output/snap-manual.pdf`.
-4. Copies the PDF to `_build/html/snap-manual.pdf` so it is published
-   alongside the site.
+3. Runs `myst build --pdf` to build all three PDFs into `output/`.
+4. Copies each PDF into `_build/html/` so they're published alongside the
+   site.
 
 The remaining steps depend on the trigger:
 
 - **Push to `main` / `workflow_dispatch`**: pushes `_build/html/` to the
   `gh-pages` branch via [`peaceiris/actions-gh-pages`][gh-pages-action]. The
-  result is served at <https://docs.snap.berkeley.edu/>, and the PDF is at
-  <https://docs.snap.berkeley.edu/snap-manual.pdf>.
-- **Pull request**: uploads `output/snap-manual.pdf` as a workflow artifact
-  named `snap-manual-pdf` (retention 10 days) and stops there &mdash; nothing
-  is published to `gh-pages` from a PR. Reviewers can download the artifact
-  from the run's **Artifacts** section, or via
-  `gh run download --name snap-manual-pdf --repo snap-cloud/manual`.
+  result is served at <https://docs.snap.berkeley.edu/>, with the three
+  PDFs at `/snap-manual.pdf`, `/snap-manual-no-blocks-ref.pdf`, and
+  `/snap-blocks-ref.pdf`.
+- **Pull request**: uploads all three PDFs as a single workflow artifact
+  named `snap-manual-pdfs` (retention 10 days) and stops there &mdash;
+  nothing is published to `gh-pages` from a PR. Reviewers can download the
+  artifact from the run's **Artifacts** section, or via
+  `gh run download --name snap-manual-pdfs --repo snap-cloud/manual`.
 
 [gh-pages-action]: https://github.com/peaceiris/actions-gh-pages

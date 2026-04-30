@@ -46,22 +46,27 @@ jobs:
       - name: Build PDF
         run: myst build --pdf
 
-      - name: Stage PDF for publishing
+      - name: Stage PDFs for publishing
         run: |
-          # The PDF location is configured in myst.yml under exports.output.
-          # Copy it into the HTML output so it ships alongside the site.
+          # PDF locations are configured in myst.yml under exports.output.
+          # Copy them into the HTML output so they ship alongside the site.
           mkdir -p _build/html
-          cp output/snap-manual.pdf _build/html/snap-manual.pdf
+          cp output/snap-manual.pdf              _build/html/snap-manual.pdf
+          cp output/snap-manual-no-blocks-ref.pdf _build/html/snap-manual-no-blocks-ref.pdf
+          cp output/snap-blocks-ref.pdf          _build/html/snap-blocks-ref.pdf
 
-      # On PRs, attach the PDF as a workflow artifact so reviewers can grab a
-      # preview without needing to run the build locally. Kept for 10 days to
+      # On PRs, attach all three PDFs as workflow artifacts so reviewers can
+      # grab a preview without running the build locally. Kept for 10 days to
       # avoid filling up artifact storage.
-      - name: Upload PDF artifact
+      - name: Upload PDF artifacts
         if: github.event_name == 'pull_request'
         uses: actions/upload-artifact@v4
         with:
-          name: snap-manual-pdf
-          path: output/snap-manual.pdf
+          name: snap-manual-pdfs
+          path: |
+            output/snap-manual.pdf
+            output/snap-manual-no-blocks-ref.pdf
+            output/snap-blocks-ref.pdf
           retention-days: 10
           if-no-files-found: error
 
