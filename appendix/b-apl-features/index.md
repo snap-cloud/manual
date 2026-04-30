@@ -1,5 +1,5 @@
-(sec-appendix-b-apl)=
-# Appendix B. APL features
+(sec-apl-features)=
+# B. APL features
 
 The book *A Programming Language*\index{A Programming Language} was
 published by mathematician Kenneth E. Iverson\index{Iverson, Kenneth

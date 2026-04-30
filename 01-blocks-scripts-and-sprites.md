@@ -2100,7 +2100,7 @@ The {index}`APL primitives library` contains these blocks:
 
 ![image475.png](images/01-blocks-scripts-and-sprites/image475.png)
 
-For more information about APL, see @sec-appendix-b-apl).
+For more information about APL, see @sec-apl-features).
 
 The **list comprehension library** has one block, `zip`:
 :::{index} list comprehension library
