@@ -74,29 +74,29 @@ shortcuts; keyboard
 `Open…` option
 Cloud button
 Examples button
-Save option
-Save as… option
-Import… option
-Export project… option
-Export summary… option
+`Save` option
+`Save as…` option
+`import…` option
+`Export project…` option
+`Export summary…` option
 Advanced Placement Computer Science Principles
 AP CSP
-Export blocks… option
-Unused blocks… option
-Hide blocks… option
-New category… option
-Remove a category… option
+`Export blocks…` option
+`Unused blocks…` option
+`Hide blocks…` option
+`New category…` option
+`Remove a category…` option
 scenes
-Scenes… option
-New scene option
-Add scene… option
-Libraries… option
-Costumes… option
-Backgrounds… option
+`Scenes…` option
+`New scene` option
+`Add scene…` option
+`Libraries…` option
+`Costumes…` option
+`Backgrounds…` option
 bitmap
 vector
-Sounds… option
-Undelete sprites… option
+`Sounds…` option
+`Undelete sprites…` option
 :::
 
 ### The File Menu
@@ -1205,7 +1205,7 @@ so that you don’t have to keep scrolling down the
 palette if you make a lot of blocks.
 
 :::{index} Costumes tab
-turtle costume
+Turtle costume
 paint brush icon
 Paint Editor
 camera icon
@@ -1225,8 +1225,7 @@ something like this:
 
 ![image1082.png](images/12-user-interface-elements/image1082.png) <!--  style="width:1.96319in;height:2.13194in" / -->
 
-The Turtle costume
-is always present in every sprite; it is costume
+The Turtle costume is always present in every sprite; it is costume
 number 0. Other costumes can be painted within Snap<em>!</em> or imported from
 files or other browser tabs if your browser supports that. Clicking on a
 costume selects it; that is, the sprite will look like the selected
@@ -1297,13 +1296,14 @@ includes code:
 Its right-click menu will have an extra get blocks option that switches to the Scripts tab with the script ready to
 be dropped there.
 
-:::{index} Paint Editor window
+:::{index}
+Paint Editor window
 rectangle tool
 rotation point tool
 line drawing tool
 solid rectangle tool
 solid ellipse tool
-floodfill tool,
+floodfill tool
 eyedropper tool
 clear button
 vector editor

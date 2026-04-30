@@ -1,5 +1,4 @@
 ---
-toc: false
 ---
 
 # `Glide Secs to Position`

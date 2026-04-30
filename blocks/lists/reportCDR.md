@@ -1,5 +1,4 @@
 ---
-toc: false
 ---
 
 # `all but first of`

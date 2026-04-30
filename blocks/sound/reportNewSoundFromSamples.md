@@ -1,5 +1,4 @@
 ---
-toc: false
 ---
 
 # `New Sound Rate Hz`

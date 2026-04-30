@@ -245,9 +245,11 @@ or just drag the {span .mono}[XML] file into the Snap<em>!</em> window.
 Several block libraries are included with Snap<em>!</em>; for details about
 them, see @sec-libraries.
 
+:::{index} visible stepping
+:::
 ## Custom blocks and Visible Stepping
 
-{index}`Visible stepping` normally treats a call to a
+Visible stepping normally treats a call to a
 custom block as a single step. If you want to see stepping inside a
 custom block you must take these steps *in order:*
 

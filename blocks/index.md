@@ -1,5 +1,4 @@
 ---
-toc: false
 ---
 
 (sec-all-blocks)=

@@ -1,0 +1,62 @@
+version: 1
+project:
+  exports:
+  - id: output-pdf-primary
+    format: tex+pdf
+    title: Snap\textit{!} Reference Manual
+    template: ./_latex-template/
+    cover: images/cover-image.png
+    logo: images/snap-logo.png
+    logo_width: 10
+    output: output/snap-manual.pdf
+    toc_depth: 2
+    # Level 4 is a hack to supress inclusion in the TOC
+    articles:
+      - file: 00-acknowledgements.md
+        level: 4
+      - file: index.md
+        level: 4
+      - file: 01-blocks-scripts-and-sprites.md
+        level: 0
+      - file: 02-saving-and-loading-projects-and.md
+        level: 0
+      - file: 03-building-a-block.md
+        level: 0
+      - file: 04-first-class-lists.md
+        level: 0
+      - file: 05-typed-inputs.md
+        level: 0
+      - file: 06-procedures-as-data.md
+        level: 0
+      - file: 07-object-oriented-programming-with-sprites.md
+        level: 0
+      - file: 08-oop-with-procedures.md
+        level: 0
+      - file: 09-the-outside-world.md
+        level: 0
+      - file: 10-continuations.md
+        level: 0
+      - file: 11-metaprogramming.md
+        level: 0
+      - file: 12-user-interface-elements.md
+        level: 0
+      - title: Appendix
+        level: 0
+      - file: appendix/a-snap-color-library.md
+        level: 1
+      - file: appendix/b-apl-features.md
+        level: 1
+      - title: Community
+        level: 1
+      - file: appendix/community/index.md
+        level: 2
+      - file: appendix/community/students.md
+        level: 2
+      - file: appendix/community/teachers.md
+        level: 2
+      - title: Libraries
+        level: 1
+      - file: appendix/libraries/index.md
+        level: 2
+      - file: manual-index.md
+        level: 0
