@@ -1,10 +1,15 @@
 ---
 ---
 
+:::{index} first class data type
+Scratch
+`Make a list`
+:::
+
 (sec-ch04)=
 # 4. First Class Lists
 
-A data type is *ﬁrst class*\index{first class data type} in a
+A data type is *ﬁrst class* in a
 programming language if data of that type can be
 
 - the value of a variable
@@ -17,12 +22,12 @@ programming language if data of that type can be
 
 - anonymous (not named)
 
-In Scratch\index{Scratch}, numbers and text strings are ﬁrst class.
+In Scratch , numbers and text strings are ﬁrst class.
 You can put a number in a variable, use one as the input to a block,
 call a reporter that reports a number, or put a number into a list.
 
 But Scratch’s lists are not ﬁrst class. You create one using the “`Make a
-list`\index{`Make a list`}” button, which requires that you give the list
+list` ” button, which requires that you give the list
 a name. You can’t put the list into a variable, into an input slot of a
 block, or into a list item—you can’t have lists of lists. None of the
 Scratch reporters reports a list value. (You can use a reduction of the
@@ -42,34 +47,44 @@ are ﬁrst class, period.
 
 ![Snap! banner reading "Everything first class," with Alonzo waving beside the logo.](images/04-first-class-lists/1-banner-everything-first-class.png){width=2.84in}
 
-##  The `list` Block
+:::{index} anonymous list
+`list` block
+arrowheads
+Scratch
+:::
+
+## The `list` Block
 
 At the heart of providing first class lists is the ability to make an
-“anonymous” list\index{anonymous list}—to make a list without
-simultaneously giving it a name. The `list` reporter block \index{`list`
-block} does that.
+“anonymous” list —to make a list without
+simultaneously giving it a name. The `list` reporter block does that.
 
 ![The `list` reporter block, shown empty as it appears in the Variables palette, then filled with the words "She Loves You," then with a nested list and the number 41 (showing items can be of mixed types), and finally with the left arrowhead clicked to leave it empty.](images/04-first-class-lists/2-block-list.png){.image-4x width=2.84in}
 
-At the right end of the block are two left-and-right arrowheads
-\index{arrowheads}. Clicking on these changes the number of inputs to
+At the right end of the block are two left-and-right arrowheads.
+Clicking on these changes the number of inputs to
 list, i.e., the number of elements in the list you are building.
 Shift-clicking changes by three at a time.
 
-You can use this block as
-input to many other blocks:
+You can use this block as input to many other blocks:
 
 ![Examples of the `list` block being used as input to other blocks: a `say` block speaking the list, a `length of` reporter returning 3, and a `vowel?` predicate that uses `list a e i o u` as input to `contains`.](images/04-first-class-lists/3-script-list-as-input.png){width=5.79in}
 
-Snap<em>!</em> does not have a “`Make
-a list`” button like the one in Scratch \index{Scratch}. If you want a
-global “named list,” make a global variable and use the `set` block to put
+Snap<em>!</em> does not have a “`Make a list`” button like the one in Scratch.
+If you want a global “named list,” make a global variable and use the `set` block to put
 a list into the variable.
+
+:::{index} data structure
+lists of lists
+constructors
+selectors
+mutators
+binary tree
+:::
 
 ## Lists of Lists
 
-Lists can be inserted as
-elements in larger lists. We can easily create ad hoc structures as
+Lists can be inserted as elements in larger lists. We can easily create ad hoc structures as
 needed:
 
 ![A list of four sublists pairing the Beatles' first and last names, with its watcher rendered as a 4-row, 2-column table view.](images/04-first-class-lists/4-script-lists-of-lists-beatles.png){width=5.89in}
@@ -80,22 +95,36 @@ by default shown in *table view.* We’ll have more to say about this
 later.
 
 We can also build any classic computer science data structure
-\index{data structure} out of lists of lists\index{lists of lists}, by
-defining *constructors* \index{constructors} (blocks to make an instance
-of the structure), *selectors* \index{selectors} (blocks to pull out a
-piece of the structure), and *mutators* \index{mutators} (blocks to
+out of lists of lists , by
+defining *constructors* (blocks to make an instance
+of the structure), *selectors* (blocks to pull out a
+piece of the structure), and *mutators* (blocks to
 change the contents of the structure) as needed. Here we create binary
-tree\index{binary tree}s with selectors that check for input of the
+tree s with selectors that check for input of the
 correct data type; only one selector is shown but the ones for left and
 right children are analogous.
 
 ![Two custom block definitions: a `binary tree` constructor that reports `list "binary-tree" datum left right`, and a `bt-datum` selector that checks the input is a tagged binary-tree list before returning item 2, otherwise saying that the input isn't a binary tree.](images/04-first-class-lists/5-script-binary-tree-block-defs.png){width=5.89in}
 
+:::{index} Scratch
+imperative programming style
+parallelism
+mutation
+functional programming style
+`in front of` block
+`item 1 of` block
+`all but first of` block
+array, dynamic
+dynamic array
+list, linked
+linked list
+:::
+
 ##  Functional and Imperative List Programming
 
 There are two ways to create a list inside a program. Scratch
-\index{Scratch} users will be familiar with the *imperative* programming
-style\index{imperative programming style}, which is based on a set of
+users will be familiar with the *imperative* programming
+style , which is based on a set of
 command blocks that modify a list:
 
 ![The four imperative list-mutation blocks: `add thing to`, `delete 1 of`, `insert thing at 1 of`, and `replace item 1 of with thing`.](images/04-first-class-lists/6-blocks-imperative-list-mutators.png){.image-4x width=3.5in}
@@ -114,34 +143,29 @@ list in it, then go through the items of the input list using the `add
 time, and finally report the result.
 
 *Functional* programming is a different approach that is becoming
-important in “real world” programming because of parallelism
-\index{parallelism}, i.e., the fact that different processors can be
+important in “real world” programming because of parallelism, i.e., the fact that different processors can be
 manipulating the same data at the same time. This makes the use of
-mutation\index{mutation} (changing the value associated with a
+mutation (changing the value associated with a
 variable, or the items of a list) problematic because with parallelism
 it’s impossible to know the exact sequence of events, so the result of
 mutation may not be what the programmer expected. Even without
-parallelism, though, functional programming\index{functional
-programming style} is sometimes a simpler and more effective technique,
-especially when dealing with recursively defined data structures. It
-uses reporter blocks, not command blocks, to build up a list value:
+parallelism, though, functional programming is sometimes a simpler
+and more effective technique, especially when dealing with recursively defined data
+structures. It uses reporter blocks, not command blocks, to build up a list value:
 
 ![The three functional list reporters used to build new lists without mutation: `in front of`, `item 1 of`, and `all but first of`.](images/04-first-class-lists/8-blocks-functional-list.png){.image-4x width=3in}
 
 In a functional program, we often use recursion to construct a list, one
-item at a time. The `in front of` block \index{`in front of` block} makes a
+item at a time. The `in front of` block makes a
 list that has one item added to the front of an existing list, *without
 changing the value of the original list.* A nonempty list is processed
-by dividing it into its first item (`item 1 of`\index{`item 1 of` block})
-and all the rest of the items (`all but first of`\index{`all but first of`
-block}), which are handled through a recursive call:
+by dividing it into its first item (`item 1 of` )
+and all the rest of the items (`all but first of` ), which are handled through a recursive call:
 
 ![A recursive functional `evens` block definition. If `data` is empty, report the empty list. Otherwise, if `item 1 of data mod 2 = 0`, report `item 1 of data` in front of `evens (all but first of data)`; else recurse on `evens (all but first of data)`.](images/04-first-class-lists/9-script-evens-recursive.png){width=4.75in}
 
-Snap<em>!</em>
-uses two different internal representations of lists, one (dynamic
-\index{array, dynamic} array\index{dynamic array}) for imperative
-programming and the other (linked\index{list, linked} list\index{linked list})
+Snap<em>!</em> uses two different internal representations of lists, one (dynamic
+array) for imperative programming and the other (linked list)
 for functional programming. Each representation
 makes the corresponding built-in list blocks (commands or reporters,
 respectively) most efficient. It’s possible to mix styles in the same
@@ -152,6 +176,10 @@ representation.) You don’t have to know the details of the internal
 representations, but it’s worthwhile to use each list in a consistent
 way.
 
+:::{index} ring, gray
+higher order function
+:::
+
 ## Higher Order List Operations and Rings
 
 There’s an even easier way to select the even numbers from a list:
@@ -161,7 +189,7 @@ There’s an even easier way to select the even numbers from a list:
 The `keep` block takes a Predicate expression as its first input, and a list
 as its second input. It reports a list containing those elements of the
 input list for which the predicate returns `true`. Notice two things about
-the predicate input: First, it has a grey ring \index{ring, gray} around
+the predicate input: First, it has a grey ring around
 it. Second, the `mod` block has an empty input. `Keep` puts each item of its
 input list, one at a time, into that empty input before evaluating the
 predicate. (The empty input is supposed to remind you of the “box”
@@ -180,8 +208,7 @@ Evaluating the `=` block without a ring reports `true` or `false`; evaluating
 the block *with* a ring reports the block itself. This allows `keep` to
 evaluate the `=` predicate repeatedly, once for each list item. A block
 that takes another block as input is called a *higher order* block (or
-higher order procedure, or higher order function\index{higher order
-function}).
+higher order procedure, or higher order function ).
 
 ![A diagram contrasting `map` (each input shape is replaced with a corresponding output shape), `keep` (each shape is either preserved or struck through), and `combine` (all shapes are folded together into a single result).](images/04-first-class-lists/13-diagram-map-keep-combine.png){width=4.5in}
 
@@ -191,17 +218,27 @@ lists:
 
 ![The four higher-order list blocks: `map () over ()`, `keep items () from ()`, `find first item () in ()`, and `combine () using ()`.](images/04-first-class-lists/14-blocks-higher-order.png){.image-4x width=2.5in}
 
+:::{index} `find first` block
+`map` block
+shallow copy of a list
+deep copy of a list
+`id of` block
+`combine` block
+function, associative
+associative function
+:::
+
 (sec-map)=
 ### The `map` block
 
 You’ve already seen `keep`. `Find first` is
-\index{`find first` block} similar, but it reports just the first item that
+similar, but it reports just the first item that
 satisfies the predicate, not a list of all the matching items. It’s
 equivalent to ![item 1 of (keep items () from ())](images/04-first-class-lists/15-script-find-first-equivalent.png){.image-inline width=1.6in} but faster because it
 stops looking as soon as it finds a match. If there are no matching
 items, it returns an empty string.
 
-`Map` \index{`map` block} takes a Reporter block and a list as inputs. It
+`Map` takes a Reporter block and a list as inputs. It
 reports a new list in which each item is the value reported by the
 Reporter block as applied to one item from the input list. That’s a
 mouthful, but an example will make its meaning clear:
@@ -221,14 +258,13 @@ An *empty* gray ring represents the *identity function,* which just
 reports its input. Leaving the ring in `map` empty is the most concise way
 to make a shallow copy of a list (that is, in the case of a list of
 lists, the result is a new toplevel list whose items are the same
-(uncopied) lists that are items of the toplevel input list)
-\index{shallow copy of a list}. To make a deep copy of a list
-\index{deep copy of a list} (that is, one in which all the sublists,
+(uncopied) lists that are items of the toplevel input list). To make a deep copy of a list
+(that is, one in which all the sublists,
 sublists of sublists, etc. are copied), use the list as input to the
 ![the `id of` reporter](images/04-first-class-lists/18-block-id-of.png){.image-4x .image-inline width=0.74in}  block (one of the variants
-of the `sqrt of` block). This works because `id of`\index{`id of` block} is a @sec-hyperblock.
+of the `sqrt of` block). This works because `id of` is a @sec-hyperblock.
 
-The third higher order block, `combine`\index{`combine` block}, computes a
+The third higher order block, `combine` , computes a
 single result from *all* the items of a list, using a *two-input*
 reporter as its second input. In practice, there are only a few blocks
 you’ll ever use with `combine`:
@@ -245,8 +281,7 @@ the items is true, find the smallest, or find the largest.
 
 Why `+` but not `−`? It only
 makes sense to combine list items using an *associative*
-\index{function, associative} function\index{associative function}:
-one that doesn’t care in what order the items are combined (left to
+function: one that doesn’t care in what order the items are combined (left to
 right or right to left). (2+3)+4 = 2+(3+4), but (2−3)−4 ≠ 2−(3−4).
 
 <!-- TODO: See if we can remove the (see ...) -->
@@ -254,8 +289,7 @@ right or right to left). (2+3)+4 = 2+(3+4), but (2−3)−4 ≠ 2−(3−4).
 The functions `map`, `keep`, and
 `find first` have an advanced mode with rarely-used features: If their
 function input is given explicit input names (see @sec-formal-parameters)
-(by clicking the arrowhead
-at the right end of the gray ring),
+(by clicking the arrowhead at the right end of the gray ring),
 then it will be called for each list item with *three* inputs: the
 item’s value (as usual), the item’s position in the input list (its
 index), and the entire input list. No more than three input names can be
@@ -263,8 +297,10 @@ used in this context.
 
 ![Advanced-mode `map` whose function input has three named parameters (value, index, list); applied to `list now here after math`, it joins each item to its position+1 to produce nowhere, hereafter, aftermath, math.](images/04-first-class-lists/22-script-map-three-input-names.png){width=5.81in}
 
-
-## {index}`Table View`  vs. {index}`List View`
+:::{index} table view
+list view
+:::
+## Table View vs. List View
 
 We mentioned earlier that there are two ways of representing lists
 visually. For one-dimensional lists (lists whose items are not
@@ -358,8 +394,7 @@ to say the row first or the column first. (“Cell B4” is the same as
 program, you have to say `item 2 of`, not `item B of`. So it’s useful to be
 able to find out a column number by hovering over its letter.
 
- Any value that can appear in
-a program can be displayed in a table cell:
+Any value that can appear in a program can be displayed in a table cell:
 
 ![A list of five sublists pairing labels with values of different types — text, number, text, a `repeat 10` block, and the sprite "my self" — and the corresponding table view, where the block in row 4 is partially clipped by the standard cell size.](images/04-first-class-lists/26-watcher-table-with-block-cell.png){width=3.82in}
 
@@ -369,10 +404,9 @@ the second column and all the rows, we can make the result fit:
 
 ![The same list-of-lists as the previous figure, but with the speech balloon, second column, and all rows enlarged so the embedded `repeat 10` block and Alonzo costume fit fully inside their cells.](images/04-first-class-lists/27-watcher-table-expanded-cells.png){width=3.34in}
 
- But we make an exception for
-cases in which the value in a cell is a list (so that the entire table
-is three-dimensional). Because lists are visually very big, we don’t try
-to fit the entire value in a cell:
+But we make an exception for cases in which the value in a cell is a list
+(so that the entire table is three-dimensional). Because lists are visually
+very big, we don’t try to fit the entire value in a cell:
 
 ![A three-row list of [name, address, phone] sublists with the corresponding table view: the first column shows the labels and the second column shows small list icons rather than expanding the inner sublists.](images/04-first-class-lists/28-watcher-table-with-sublists.png){width=3.34in}
 
@@ -382,7 +416,7 @@ inner sublists: You can switch to list view, or you can double-click on
 a list icon in the table to open a dialog box showing just that
 sub-sub-list in table view.
 
- One last detail: If the first
+One last detail: If the first
 item of a list is a list (so table view is used), but a later item
 *isn’t* a list, that later item will be displayed on a red background,
 like an item of a single-column list:
@@ -392,13 +426,17 @@ like an item of a single-column list:
 So, in particular, if only the first item is a list, the display will
 look almost like a one-column display.
 
+:::{index}
+`.csv` file
+CSV (comma-separated values)
+:::
+
 (sec-csv)=
 ### Comma-Separated Values
 
 Spreadsheet and database programs generally offer the option to export
-their data as CSV (comma-separated values)\index{CSV (comma-separated
-values)} lists. You can import these files into Snap<em>!</em> and turn them
-into tables (lists of lists), and you can export tables in CSV format.
+their data as CSV (comma-separated values) lists. You can import these files into
+Snap<em>!</em> and turn them into tables (lists of lists), and you can export tables in CSV format.
 Snap<em>!</em> recognizes a CSV file by the extension .csv in its filename.
 
 A CSV file has one line per table row, with the fields separated by
@@ -418,8 +456,7 @@ Here’s what the corresponding table looks like:
 
 Here’s how to read a spreadsheet into Snap<em>!</em>:
 
-1. Make a variable
-with a watcher on stage: ![A `my database` variable watcher initialised with the value 0.](images/04-first-class-lists/32-watcher-my-database.png){.image-inline width=1.21in}
+1. Make a variable with a watcher on stage: ![A `my database` variable watcher initialised with the value 0.](images/04-first-class-lists/32-watcher-my-database.png){.image-inline width=1.21in}
 
 <!-- The background of this picture should be transparent, not white. bh  -->
 
@@ -445,13 +482,15 @@ If you want to export a list, put a variable watcher containing the list
 on the stage, right-click its border, and choose “`Export`.” (Don’t
 right-click an item instead of the border; that gives a different menu.)
 
+:::{index} JSON (JavaScript Object Notation) file
+:::
+
 (sec-multi-dimensional-lists-and-json)=
 ### Multi-dimensional lists and JSON
 
 CSV format is easy to read, but works only for one- or two-dimensional
 lists. If you have a list of lists of lists, Snap<em>!</em> will instead export
-your list as a JSON (JavaScript Object Notation) file\index{JSON
-(JavaScript Object Notation) file} . I modified my list:
+your list as a JSON (JavaScript Object Notation) file. I modified my list:
 
 ![A `replace item 1 of (item 2 of band) with (list James Paul)` script that replaces "Paul" inside the second sublist with the two-name list ["James","Paul"].](images/04-first-class-lists/33-script-replace-item-band.png){width=6.33in}
 
@@ -468,6 +507,28 @@ can import plain text from a `.txt` file.) Drag and drop works for these
 formats also.
 
 <!-- Two section entires to handle plurals more easily -->
+:::{index} scalar function
+list, multi-dimensional
+media computation
+Alonzo
+`reshape` block
+`item of` block
+`length of` block
+`rank of` block
+`dimensions of` block
+`flatten of` block
+`columns of` block
+atomic data
+`lines of` block
+`split by line` block
+`csv of` block
+`json of` block
+APL
+Smalltalk
+Lisp
+Prolog
+:::
+
 (sec-hyperblock)=
 (sec-hyperblocks)=
 ## Hyperblocks
@@ -477,27 +538,23 @@ formats also.
 
 A *scalar* is anything other than a list. The name comes from
 mathematics, where it means a magnitude without direction, as opposed to
-a vector, which points toward somewhere. A scalar function\index{scalar
-function} is one whose domain and range are scalars, so all the
-arithmetic operations are scalar functions, but so are the text ones
+a vector, which points toward somewhere. A scalar function is one whose domain and range are scalars, so all the arithmetic operations are scalar functions, but so are the text ones
 such as `letter` and the Boolean ones such as `not`.
 
 The major new feature in Snap<em>!</em> 6.0 is that the domain and range of
 most scalar function blocks is extended to multi-dimensional
-\index{list, multi-dimensional} lists, with the underlying scalar
-function applied termwise:
+lists, with the underlying scalar function applied termwise:
 
 ![Hyperblock addition: `(list 7 8 1) + (list 40 20 30)` returns the list 47, 28, 31 (termwise sum).](images/04-first-class-lists/34-script-hyperblock-list-plus-list.png){width=3.34in}  ![Hyperblock exponent: `2^ of (list 7 8 1)` returns the list 128, 256, 2.](images/04-first-class-lists/35-script-hyperblock-2-to-the-n.png){width=2.56in}  ![Hyperblock multiplication on two-row tables: `(list (list 7 8 1) (list 40 20 30)) × (list (list 3 5 4) (list 6 10 20))` returns a 2×3 table of termwise products (21, 40, 4 / 240, 200, 600).](images/04-first-class-lists/36-script-hyperblock-multiply-table.png){width=4.94in}
 
 Mathematicians, note in the last example above that the result is just a termwise
 application of the underlying function (7×3, 8×5, etc.), *not* matrix
-multiplication. See @sec-appendix-b-apl for that. For a dyadic (two-input) function, if the lengths don’t agree, the length of the result (in each
+multiplication. See @sec-apl-features for that. For a dyadic (two-input) function, if the lengths don’t agree, the length of the result (in each
 dimension) is the length of the shorter input:
 
 ![Hyperblock multiplication where the two operands have rows of unequal length: the result is the size of the shorter input in each dimension, leaving the third column of column C empty in row 1.](images/04-first-class-lists/37-script-hyperblock-mismatched-lengths.png){width=5.74in}
 
-However, if
-the *number of dimensions* differs in the two inputs, then the number of
+However, if the *number of dimensions* differs in the two inputs, then the number of
 dimensions in the result agrees with the *higher-*dimensional input; the
 lower-dimensional one is used repeatedly in the missing dimension(s):
 
@@ -508,26 +565,18 @@ input is paired with every scalar in the other input:
 
 ![Two examples of `letter` applied with hyperblock indices over the word "world": a flat list of indices returns the list d,r,o,l,l, and a list-of-lists of indices returns a 2×3 table of letters (l,o,w / r,o,d).](images/04-first-class-lists/39-script-hyperblock-letter-of-indices.png){width=7.48in}
 
-One important
-motivation for this feature is how it simplifies and speeds up media
-computation\index{media computation}, as in this shifting of the
-Alonzo\index{Alonzo} costume to be bluer:
+One important motivation for this feature is how it simplifies and speeds up media
+computation, as in this shifting of the Alonzo costume to be bluer:
 
 ![A `new costume ((pixels of costume alonzo) × (list .75 .75 3 1)) width (current) height (current)` script and the resulting bluer Alonzo costume thumbnail.](images/04-first-class-lists/40-script-costume-color-shift.png){width=7.48in}
 
-
-
- Each
-pixel of the result has ¾ of its original red and green, and three times
+Each pixel of the result has ¾ of its original red and green, and three times
 its original blue (with its transparency unchanged). By putting some
 sliders on the stage, you can play with colors dynamically:
 
 ![A `forever` loop with `switch to costume ((pixels of costume alonzo) × (list red green blue 100) / 100)`, multiplying each pixel by current values of the red/green/blue stage variables.](images/04-first-class-lists/41-script-color-slider-loop.png){width=5.19in}![Three on-stage sliders labelled red (23), green (69), blue (277), next to a recoloured blue Alonzo sprite.](images/04-first-class-lists/42-watcher-rgb-sliders-alonzo.png){width=1.69in}
 
-
-
- There
-are a few naturally scalar functions that have already had specific
+There are a few naturally scalar functions that have already had specific
 meanings when applied to lists and therefore are not hyperblocks: `=` and
 `identical to` (because they compare entire structures, not just scalars,
 always reporting a single Boolean result), `and` and `or` (because they
@@ -557,8 +606,7 @@ the product of the lengths of the inputs.
 
 ![A `combinations (list a b) (list x y z)` reporter and the resulting 6-row, 2-column table: a/x, a/y, a/z, b/x, b/y, b/z.](images/04-first-class-lists/47-script-combinations-example.png){width=5.24in}
 
-![the `item 1 of` reporter](images/04-first-class-lists/48-block-item-of.png){.image-inline width=1.34in}  The `item of` block
-\index{`item of` block} has a special set of rules, designed to preserve
+![the `item 1 of` reporter](images/04-first-class-lists/48-block-item-of.png){.image-inline width=1.34in}  The `item of` block has a special set of rules, designed to preserve
 its pre-hyperblock meaning and also provide a useful behavior when given
 a list as its first (index) input:
 
@@ -587,13 +635,12 @@ a list as its first (index) input:
 
     ![`item (list (list 4) (list)) of` the Beatles list — using an empty inner list as wildcard — returns all columns of row 4: Ringo Starr.](images/04-first-class-lists/52-script-item-empty-sublist-of-band.png){width=6.01in}
 
- To
-get a column or columns of a spreadsheet, use an empty list in the row
+To get a column or columns of a spreadsheet, use an empty list in the row
 selector (as of Snap<em>!</em> 6.6):
 
 ![`item (list (list) (list 2 1 2)) of` the Beatles list selects every row across columns 2, 1, 2, producing a 4×3 table of last-names/first-names/last-names.](images/04-first-class-lists/53-script-item-column-of-spreadsheet.png){width=6.60in}
 
-The `length of` block \index{`length of` block} is extended to provide
+The `length of` block is extended to provide
 various ways of looking at the shape and contents of a list. The options
 other than `length` are mainly useful for *lists of lists,* to any depth.
 These new options work well with hyperblocks and the APL library.
@@ -603,18 +650,18 @@ These new options work well with hyperblocks and the APL library.
 
 - `length`: reports the number of (toplevel) items in the list, as always.
 
-- `rank` \index{`rank of` block}: reports the number of *dimensions* of the
+- `rank` : reports the number of *dimensions* of the
 list, i.e., the maximum depth of lists of lists of lists of lists. (That
 example would be rank 4.)
 
-- `dimensions` \index{`dimensions of` block}: reports a list of numbers, each
+- `dimensions` : reports a list of numbers, each
 of which is the maximum length in one dimension, so a spreadsheet of
 1000 records, each with 4 fields, would report the list \[1000 4\].
 
-- `flatten` \index{`flatten of` block}: reports a flat, one-dimensional list
+- `flatten` : reports a flat, one-dimensional list
 containing the *atomic* (non-list) items anywhere in the input list.
 
-- `columns` \index{`columns of` block}: reports a list in which the rows and
+- `columns` : reports a list in which the rows and
 columns of the input list are interchanged, so the shape of the
 transpose of a shape \[1000 4\] list would be \[4 1000\]. This option
 works only for lists whose rank is at most 2. The name reflects the fact
@@ -625,17 +672,15 @@ original table.
 are in reverse order.
 
 The remaining three options report a (generally multi-line) text string.
-The input list may not include any atomic (non-list) data \index{atomic
-data} other than text or numbers. The `lines` \index{`lines of` block}
+The input list may not include any atomic (non-list) data other than text or numbers. The `lines`
 option is intended for use with rank-one lists of text strings; it
 reports a string in which each list item becomes a line of text. You can
-think of it as the opposite of the `split by line` block \index{`split by
-line` block} . The `csv` \index{`csv of` block} option (comma-separated
+think of it as the opposite of the `split by line` block . The `csv` option (comma-separated
 values) is intended for rank-two lists that represent a spreadsheet or
 other tabular data. Each item of the input list should be a list of
 atoms; the block reports a text string in which each item of the big
 list becomes a line of text in which the items of that sublist are
-separated by commas. The `json` \index{`json of` block} option is for lists
+separated by commas. The `json` option is for lists
 of any rank; it reports a text string in which the list structure is
 explicitly represented using square brackets. These are the opposites of
 `split by csv` and `split by json`.
@@ -643,14 +688,13 @@ explicitly represented using square brackets. These are the opposites of
 ![Each `length of` option applied to the same 4×3 table `[[1,2,3],[4,5,6],[7,8,9],[10,11,12]]`: length=4, rank=2, dimensions=[4,3], flatten=12-item flat list, columns=3×4 transpose, reverse=row-reversed table, plus the multi-line text outputs of lines, csv, and json.](images/04-first-class-lists/55-script-length-of-options-applied.png){width=6.60in}
 
 The idea of extending the domain and range of scalar functions to
-include arrays comes from the language APL\index{APL}. (All the great
+include arrays comes from the language APL. (All the great
 programming languages are based on mathematical ideas. Our primary
-ancestors are Smalltalk\index{Smalltalk}, based on models, and Lisp
-\index{Lisp}, based on lambda calculus. Prolog\index{Prolog}, a great
+ancestors are Smalltalk, based on models, and Lisp, based on lambda calculus. Prolog , a great
 language not (so far) influencing Snap<em>!</em>, is based on logic. And APL,
 now joining our family, is based on linear algebra, which studies
 vectors and matrices. Those *other* programming languages are based on
 the weaknesses of computer hardware.) Hyperblocks are not the whole
 story about APL, which also has mixed-domain functions and higher order
 functions. Some of what’s missing is provided in the APL library. (See
-[Appendix B](../14-appendix-b-apl-features).)
+@sec=apl-features.)
