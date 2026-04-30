@@ -204,9 +204,10 @@ it, and now we have the more straightforward primitives.
 :::{index} method
 block; sprite-local
 map-pin symbol
+polymorphism
 :::
 
-### Polymorphism\index{polymorphism}
+### Polymorphism
 
 Suppose you have a {span .mono}[Dog] sprite
 with two clones CockerSpaniel and PitBull. In the {span .mono}[Dog] sprite you define

@@ -106,7 +106,10 @@ optionally project notes; your project will be saved online and can be
 loaded from anywhere with net access. The project notes will be visible
 to other users if you publish your project.
 
-## Loading Saved Projects\index{loading saved projects}
+:::{index} loading saved projects
+:::
+
+## Loading Saved Projects
 
 Once you’ve saved a project, you want to be able to load it back into
 Snap<em>!</em>. There are two ways to do this:

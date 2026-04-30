@@ -17,8 +17,14 @@ const blockHelp = {
     } = partial;
     const title = partial.title ?? label;
 
+    const isImage = (name) => /\.(png|jpe?g|gif|svg|webp|avif)$/i.test(name ?? "");
     const examples = example_images.length
-      ? example_images.map(img => `![${img.description ?? "Example"}](${img.image})`).join("\n\n")
+      ? example_images.map(img => {
+          const desc = img.description ?? "Example";
+          return isImage(img.image)
+            ? `![${desc}](${img.image})`
+            : `[${desc}](${img.image})`;
+        }).join("\n\n")
       : "No examples yet.";
     const projects = example_projects.length
       ? example_projects.map(p => `- [${p.title ?? "Untitled Project"}](${p.url ?? "#"})`).join("\n")

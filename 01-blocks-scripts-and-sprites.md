@@ -1268,15 +1268,17 @@ is a grayscale value 0-255; a two-number list, grayscale plus opacity
 :::
 
 <!-- TODO: Images like this should have index entries defined after this image. -->
+(sec-pen-hue-block-options)=
 ![image358.png](images/01-blocks-scripts-and-sprites/image358.png)
+
+:::{index} `of` block (sensing)
+`ask and wait` block
+:::
 
 (sec-ask-lists)=
 ### Using Lists with the Ask Block
 These ask features and more in the Menus
 library.
-:::{index} ask and wait block
-:::
-
 ![image359.png](images/01-blocks-scripts-and-sprites/image359.png)
 
 ![image360.png](images/01-blocks-scripts-and-sprites/image360.png)
@@ -1302,18 +1304,17 @@ list of the names of all variables in scope (global, sprite-local, and
 script variables if the right input is a script.)
 :::
 ::::
-:::{index} of block (sensing)
-:::
 
 :::{index} `for` block
-item 1 of stream block
-all but first of stream block
+`item 1 of stream` block
+`all but first of stream` block
 letter (1) of (world) block
 visual representation of a sentence
 bar chart block
 conditional library:multiple-branch
 setting block
 infinite precision integer library
+Libraries… option
 :::
 
 (sec-libraries)=
@@ -1323,8 +1324,7 @@ There are several collections of useful procedures that aren’t Snap<em>!</em>
 primitives, but are provided as libraries. To include a library in your
 project, choose the Libraries… option in the
 file (<img class="image-inline" src="images/01-blocks-scripts-and-sprites/image384.png" alt="file menu icon">) menu.
-:::{index} Libraries… option
-:::
+
 
 ![The import libraries dialog](images/01-blocks-scripts-and-sprites/image385.png)
 
