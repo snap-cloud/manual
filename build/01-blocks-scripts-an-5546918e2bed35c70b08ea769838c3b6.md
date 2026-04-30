@@ -292,6 +292,8 @@ Scratch
 :::
 
 ::: {.callout-tip}
+Protip: {img .image-inline}![Switch to costumer (() - 1)](images/01-blocks-scripts-and-sprites/image33.png) switches to the *previous* costume, wrapping like `next costume`.
+
 Protip: <img class="image-inline" src="images/01-blocks-scripts-and-sprites/image33.png" alt="Switch to costumer (() - 1)"> switches to the *previous* costume, wrapping like `next costume`.
 :::
 
