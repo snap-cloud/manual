@@ -1,0 +1,20 @@
+<script>
+  <block s="reportCombine">
+    <block s="reportNewList">
+      <list>
+        <l>7</l>
+        <l>8</l>
+        <l>1</l>
+      </list>
+    </block>
+    <block s="reifyReporter">
+      <autolambda>
+        <block s="reportSum">
+          <l/>
+          <l/>
+        </block>
+      </autolambda>
+      <list/>
+    </block>
+  </block>
+</script>

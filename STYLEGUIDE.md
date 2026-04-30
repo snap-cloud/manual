@@ -36,6 +36,23 @@ Write markdown like this:
 ![alt text](filename.png){.image-inline}
 ![alt text](filename.png){.image-4x .image-inline} <!-- You probably don't need to combine these classes-->
 ```
+
+### Paper-output sizing for PDF/LaTeX
+
+The `.image-Nx` classes only control HTML scaling. To pass an explicit
+paper-output size to LaTeX (and to MyST's HTML renderer), add a `width`
+attribute in the same braces:
+
+```md
+![alt text](filename.png){width=2.84in}
+![alt text](filename.png){.image-4x width=3in}
+```
+
+MyST forwards `width=Xin` to `\includegraphics[width=Xin]{...}`, so the
+chapter sources can carry the same dimensions the Word/PDF originals used.
+Prefer `in` units rounded to two decimals; height follows the aspect ratio
+automatically.
+
 ### Linkining to Images
 
 * Most images are contained within an `assets/` folder _within_ each chapter.

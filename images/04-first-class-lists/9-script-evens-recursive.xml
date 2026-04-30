@@ -1,0 +1,59 @@
+<blocks app="Snap! 10" version="2">
+  <block-definition s="evens %&apos;data&apos;" type="reporter" category="lists">
+    <inputs>
+      <input type="%l"></input>
+    </inputs>
+    <script>
+      <block s="doIfElse">
+        <block s="reportListIsEmpty">
+          <block var="data"/>
+        </block>
+        <script>
+          <block s="doReport">
+            <block s="reportNewList">
+              <list/>
+            </block>
+          </block>
+        </script>
+        <script>
+          <block s="doIfElse">
+            <block s="reportEquals">
+              <block s="reportModulus">
+                <block s="reportListItem">
+                  <l>1</l>
+                  <block var="data"/>
+                </block>
+                <l>2</l>
+              </block>
+              <l>0</l>
+            </block>
+            <script>
+              <block s="doReport">
+                <block s="reportCONS">
+                  <block s="reportListItem">
+                    <l>1</l>
+                    <block var="data"/>
+                  </block>
+                  <custom-block s="evens %s">
+                    <block s="reportCDR">
+                      <block var="data"/>
+                    </block>
+                  </custom-block>
+                </block>
+              </block>
+            </script>
+            <script>
+              <block s="doReport">
+                <custom-block s="evens %s">
+                  <block s="reportCDR">
+                    <block var="data"/>
+                  </block>
+                </custom-block>
+              </block>
+            </script>
+          </block>
+        </script>
+      </block>
+    </script>
+  </block-definition>
+</blocks>

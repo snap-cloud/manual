@@ -1,0 +1,25 @@
+<script>
+  <block s="reportKeep">
+    <block s="reifyPredicate">
+      <autolambda>
+        <block s="reportEquals">
+          <block s="reportModulus">
+            <l/>
+            <l>2</l>
+          </block>
+          <l>0</l>
+        </block>
+      </autolambda>
+      <list/>
+    </block>
+    <block s="reportNewList">
+      <list>
+        <l>9</l>
+        <l>4</l>
+        <l>7</l>
+        <l>2</l>
+        <l>0</l>
+      </list>
+    </block>
+  </block>
+</script>
