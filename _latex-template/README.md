@@ -30,11 +30,12 @@ template:
 
 - KOMA-Script `scrbook` (instead of plain `book`) at 12pt, oneside.
 - US Letter paper geometry with tighter Snap-style margins.
-- `imakeidx` is loaded and `\printindex` is emitted at the end of the document
-  so the index renders. MyST also injects a `\makeindex` call inside the
-  `[- IMPORTS -]` block when the document contains index entries; that call
-  triggers `makeindex` via shell-escape and produces the `.ind` file that
-  `\printindex` reads.
+- `imakeidx` is loaded with `noautomatic`, which disables its shell-escape
+  `makeindex` run and lets `latexmk` invoke `makeindex` instead. We pass
+  `-s index-style.ist` via the bundled `latexmkrc`, so the rendered index
+  uses our custom style (bold letter-group headings, small items,
+  right-aligned page numbers). `\printindex` itself is rendered by the
+  [`manual-index.md`](../manual-index.md) chapter.
 - Snap! brand colors (`snapblue`, `snaporange`) are defined for use in custom
   LaTeX content.
 
@@ -44,11 +45,10 @@ template:
   and `[- CONTENT -]` are filled in by MyST.
 - `template.yml` &mdash; jtex template metadata (declared packages, doc
   fields, files to bundle).
-- `index-style.ist` &mdash; reference `makeindex` style file inherited from
-  the legacy Quarto build. Not currently wired into the MyST pipeline because
-  `imakeidx`'s shell-escape `\makeindex` call overrides any custom options;
-  preserved as a starting point if/when we want bold letter headings or other
-  index polish in the future.
+- `index-style.ist` &mdash; `makeindex` style file applied by `latexmk`
+  (see `latexmkrc`).
+- `latexmkrc` &mdash; configures `latexmk`'s `$makeindex` so the style file
+  above is actually used.
 
 ## Updating from upstream
 

@@ -10,10 +10,18 @@
    left=1.5cm,
    right=1.5cm]{geometry}
 
-% Indexing: imakeidx + makeindex (run via shell-escape) + \printindex at the
-% end of the document. MyST also emits a `\makeindex` call inside the
-% IMPORTS block (further down) when index entries are present.
-\usepackage{imakeidx}
+% Indexing.
+%
+% MyST hard-codes a `\makeindex` call inside the IMPORTS block whenever the
+% document contains index entries. We can't suppress that, but we *can*
+% disable imakeidx's automatic shell-escape `makeindex` run via the
+% `noautomatic` package option, and then call our own `\makeindex[...]`
+% with the options we want before MyST's IMPORTS arrives. With
+% `noautomatic`, the actual makeindex invocation is delegated to latexmk
+% (configured in `latexmkrc` next to this template), which picks up the
+% custom options in our \makeindex call.
+\usepackage[noautomatic]{imakeidx}
+\makeindex[intoc, columns=2, options={-s index-style.ist}]
 
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
@@ -91,6 +99,6 @@
 \bibliography{[- doc.bibliography | join(", ") -]}
 [# endif #]
 
-\printindex
+% \printindex is emitted by `manual-index.md`, the last chapter in the toc.
 
 \end{document}
