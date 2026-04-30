@@ -89,6 +89,7 @@ scripts. Also, a sprite doesn’t have to look like an arrowhead, but can
 have any picture as a *costume.* The shape of the
 move block is meant to remind you of a Lego™ brick; a {index}`script` is a stack of blocks. (The word “block” denotes both the graphical shape on the screen and the procedure,
 the action, that the block carries out.)
+
 :::{index} stack of blocks
 procedure
 costume
@@ -193,6 +194,10 @@ blocks into the desired slot.)
 
 ![image24.png](images/01-blocks-scripts-and-sprites/image24.png)
 
+:::{index} new sprite button
+sprite corral
+parallelism
+:::
 (sec-sprites-parallelism)=
 ## Sprites and Parallelism
 
@@ -200,16 +205,12 @@ Just below the stage is the “new sprite button”
 <img class="image-inline" src="images/01-blocks-scripts-and-sprites/image25.png" alt="image25.png">. Click the button to add a new sprite to the stage. The new
 sprite will appear in a random position on the stage, with a random
 color, but always facing to the right.
-:::{index} new sprite button
-:::
 
 Each sprite has its own scripts. To see the scripts for a particular
 sprite in the scripting area, click on the picture of that sprite in the
 *sprite corral* in the bottom right corner of the
 window. Try putting one of the following scripts in each sprite’s
 scripting area:
-:::{index} sprite corral
-:::
 
 ::::{grid} 2
 :gutter: 3
@@ -228,8 +229,6 @@ the other moves back and forth. This experiment illustrates the way
 different scripts can run in parallel. The turning and the moving happen
 together. Parallelism can be seen with multiple
 scripts of a single sprite also. Try this example:
-:::{index} parallelism
-:::
 
 ::::{grid} 2
 :gutter: 3
@@ -266,18 +265,18 @@ way is quicker if the file you want is visible on the desktop: Just drag
 the file onto the Snap<em>!</em> window. In any of these cases, the scripting
 area will be replaced by something like this:
 :::{index} costume
+Costumes tab
 :::
 
 ![image31.png](images/01-blocks-scripts-and-sprites/image31.png)
 
 Just above this part of the window is a set of three tabs: Scripts,
-Costumes, and Sounds. You’ll see that the {index}`Costumes
-tab` is now selected. In this view, the sprite’s *wardrobe,*
- you can choose whether the sprite should wear its
+Costumes, and Sounds. You’ll see that the Costumes
+tab is now selected. In this view, the sprite’s *wardrobe*,
+you can choose whether the sprite should wear its
 Turtle costume or its Alonzo costume. (Alonzo, the
 Snap<em>!</em> mascot, is named after {index}`Alonzo Church<single: Church, Alonzo>`, a
-mathematician who invented the idea of procedures as data
-, the most important way in which Snap<em>!</em> is
+mathematician who invented the idea of procedures as data, the most important way in which Snap<em>!</em> is
 different from Scratch.) You can give a sprite as many
 costumes as you like, and then choose which it will wear either by
 clicking in its wardrobe or by using the <img class="image-inline" src="./blocks/images/block_doSwitchToCostume.png" alt="image35.png"> or <img class="image-inline" src="./blocks/images/block_doWearNextCostume.png" alt="Next Costume"> block in a script.
@@ -381,7 +380,7 @@ Sometimes it’s desirable to make a sort of “super-sprite” composed of
 pieces that can move together but can also be separately articulated.
 The classic example is a person’s body made up of a torso, limbs, and a
 head. Snap<em>!</em> allows one sprite to be designated as the *anchor*
- of the combined shape, with other sprites as its *parts.*
+of the combined shape, with other sprites as its *parts.*
 
 :::{index} anchor
 parts (of nested sprite)
@@ -397,8 +396,7 @@ will be the attachment point of the part on the anchor.
 Sprite nesting is shown in the sprite corral icons of both anchors and parts:
 ![image47.png](images/01-blocks-scripts-and-sprites/image47.png) <!-- {width=1.63056in height=0.96528in} -->
 
-In
-this illustration, it is desired to animate Alonzo’s arm. (The arm has
+In this illustration, it is desired to animate Alonzo’s arm. (The arm has
 been colored green in this picture to make the relationship of the two
 sprites clearer, but in a real project they’d be the same color,
 probably.) Sprite, representing Alonzo’s body, is the anchor; Sprite(2)
@@ -425,14 +423,15 @@ dangling rotation
 *Top: turning the part: the green arm. Bottom: turning the anchor, with
 the arm synchronous (left) and dangling (right).*
 
+:::{index} zebra coloring
+expression
+:::
 ## Reporter Blocks and Expressions
 
-So
-far, we’ve used two kinds of blocks: hat blocks
-and command blocks. Another kind is the *reporter* block, which has an oval shape: ![image66.png](images/01-blocks-scripts-and-sprites/image66.png) <!-- {width=0.72917in height=0.15625in} --> . It’s called a “reporter” because
+So far, we’ve used two kinds of blocks: hat blocks
+and command blocks. Another kind is the *reporter* block, which has an oval shape: ![image66.png](images/01-blocks-scripts-and-sprites/image66.png). <!-- {width=0.72917in height=0.15625in} --> It’s called a “reporter” because
 when it’s run, instead of carrying out an action, it reports a value
-that can be used as an input to another block. If you drag a <img class="image-inline" src="images/01-blocks-scripts-and-sprites/image65.png" alt="image65.png"> <!-- {width=1.47in height=0.52in} --> reporter
-into the scripting area by itself and click on it, the value it reports
+that can be used as an input to another block. If you drag a <img class="image-inline" src="images/01-blocks-scripts-and-sprites/image65.png" alt="image65.png"> <!-- {width=1.47in height=0.52in} --> reporter into the scripting area by itself and click on it, the value it reports
 will appear in a speech balloon next to the block:
 :::{index} block; reporter
 reporter block
@@ -462,8 +461,7 @@ to the center of the stage. Similarly, the {index}`Y position`
 is measured vertically, in steps above (positive) or below (negative)
 the center.)
 
-You can do arithmetic using reporters in the
-Operators palette:
+You can do arithmetic using reporters in the Operators palette:
 :::{index} arithmetic
 :::
 
@@ -477,14 +475,14 @@ block is nested inside another block from the same palette:
 
 ![image80.png](images/01-blocks-scripts-and-sprites/image80.png) <!-- {width=4.85417in height=1.90625in} -->
 
-This
-aid to readability is called *zebra coloring.*
+This aid to readability is called *zebra coloring.*
 A reporter block with its inputs, maybe including other reporter
 blocks, such as ![image81.png](images/01-blocks-scripts-and-sprites/image81.png) <!-- {width=1.91667in height=0.23958in} -->, is called an *expression.*
-:::{index} zebra coloring
-expression
-:::
 
+:::{index} block; predicate
+Predicate block
+hexagonal shape
+:::
 (sec-predicates-and-conditional-evaluation)=
 ## Predicates and Conditional Evaluation
 
@@ -493,10 +491,7 @@ or a text string, like
 <img class="image-inline" src="./blocks/images/block_reportJoinWords.png" alt="image83.png">.
 A *predicate* is a special kind of reporter that
 always reports true or false. Predicates have a
-{index}`hexagonal shape`: <img class="image-inline" src="./blocks/images/block_reportMouseDown.png" alt="image85.png">
-:::{index} block; predicate
-Predicate block
-:::
+hexagonal shape: <img class="image-inline" src="./blocks/images/block_reportMouseDown.png" alt="image85.png">
 
 The special shape is a reminder that predicates don’t generally make sense
 in an input slot of blocks that are expecting a number or text. You
@@ -558,15 +553,18 @@ and click on the control that appears:
 
 <img class="image-inline" src="images/01-blocks-scripts-and-sprites/image91.png" alt="image91.png"> <!--  style="width:1.375in;height:0.24306in" --> <img class="image-inline" src="images/01-blocks-scripts-and-sprites/image92.png" alt="image92.png"> <!--  style="width:1.375in;height:0.24306in" -->
 
+
+:::{index} `for` block
+variable
+squiral
+:::
 ## Variables
 
-Try
-this script:
+Try this script:
 ![image93.png](images/01-blocks-scripts-and-sprites/image93.png) <!-- {width=1.58333in height=1.41667in} -->
 
-The
-input to the move block is an orange oval. To get it there, drag the
-orange oval that’s part of the {index}`\`for\` block<`for` block>` :
+The input to the move block is an orange oval. To get it there, drag the
+orange oval that’s part of the `for` block:
 ![image94.png](images/01-blocks-scripts-and-sprites/image94.png) <!-- {width=1.88542in height=1.4375in} -->
 
 The {index}`orange oval` is a *variable:* a symbol that
@@ -575,7 +573,7 @@ number input to the `for` block from the default 10 to 200, and before
 dragging in a `turn` block.)
 `For` runs its script input repeatedly, just
 like `repeat`, but before each repetition it sets the variable
- <var>i</var> to a number starting with its first numeric input,
+<var>i</var> to a number starting with its first numeric input,
 adding 1 for each repetition, until it reaches the second numeric input.
 In this case, there will be 200 repetitions, first with <var>i</var>=1, then with
 <var>i</var>=2, then <var>i</var>=3, and so on until <var>i</var>=200 for the final repetition. The result
@@ -583,12 +581,8 @@ is that each move draws a longer and longer line segment, and that’s why
 the picture you see is a kind of spiral. (If you try again with a turn
 of 90 degrees instead of 92, you’ll see why this picture is called a
 “squiral.”)
-:::{index} variable
-squiral
-:::
 
-The
-variable <var>i</var> is created by the `for` block, and it can only be used in the
+The variable <var>i</var> is created by the `for` block, and it can only be used in the
 script inside the block’s C-slot. (By the way, if you don’t like the
 name <var>i</var>, you can change it by clicking on the orange oval without
 dragging it, which will pop up a dialog window in which you can enter a
@@ -601,16 +595,18 @@ tend to use letters between <var>i</var> and <var>n</var> to represent integer v
 programming languages we don’t have to restrict ourselves to
 single-letter variable names.)
 
-### Global Variables
+:::{index} variable watcher
+:::
+
 :::{index} variable; global
 global variable
+Make a variable
 :::
+### Global Variables
 
 You can create variables “by hand” that aren’t limited to being used
 within a single block. At the top of the Variables palette, click the
 “Make a variable” button:
-:::{index} Make a variable
-:::
 
 ![image97.png](images/01-blocks-scripts-and-sprites/image97.png) <!-- {width=2.05208in height=2.27083in} -->
 
@@ -631,43 +627,37 @@ value for that variable name.
 :::{index} sprite-local variable
 :::
 
-If
-you give your variable the name “name” then the Variables palette will
+If you give your variable the name “name” then the Variables palette will
 look like this:
 
 ![image98.png](images/01-blocks-scripts-and-sprites/image98.png) <!-- {width=1.65833in height=2.29167in} -->
 
-There’s
-now a “Delete a variable” button, and there’s
+There’s now a “Delete a variable” button, and there’s
 an orange oval with the variable name in it, just like the orange oval
 in the for block. You can drag the variable into any script in the
 scripting area. Next to the oval is a checkbox, initially checked. When
-it’s checked, you’ll also see a *variable watcher*\index{variable
-watcher} on the stage: ![image99.png](images/01-blocks-scripts-and-sprites/image99.png) <!-- {width=1.04167in height=0.40625in} -->
+it’s checked, you’ll also see a *variable watcher* on the stage: ![image99.png](images/01-blocks-scripts-and-sprites/image99.png) <!-- {width=1.04167in height=0.40625in} -->
 :::{index} Delete a variable
 :::
 
 When you give the variable a value, the orange box in its watcher
- will display the value.
+will display the value.
 :::{index} watcher
 :::
 
-How *do* you give it a value?
-You use the {index}`\`set\` block<`set` block>` :
+How *do* you give it a value? You use the {index}`\`set\` block<`set` block>` :
 ![image100.png](images/01-blocks-scripts-and-sprites/image100.png) <!-- {width=1.92708in height=0.47917in} -->
 
 Note that you *don’t* drag the variable’s oval into the `set` block! You
 click on the downarrow in the first input slot, and you get a menu of
 all the available variable names.
 
-If you do choose “For this sprite only ”
+If you do choose “For this sprite only”
 when creating a variable, its block in the palette looks like this:![image101.png](images/01-blocks-scripts-and-sprites/image101.png) <!--  style="width:0.65833in;height:0.14167in" -->
 :::{index} For this sprite only
 :::
 
-The *location*-pin
- icon is a bit of a pun on a sprite-*local* variable
-. It’s shown only in the palette.
+The *location*-pin icon is a bit of a pun on a sprite-*local* variable. It’s shown only in the palette.
 :::{index} location-pin
 variable; sprite-local
 :::
@@ -699,7 +689,9 @@ end of the block to add another variable oval:
 
 ![image106.png](images/01-blocks-scripts-and-sprites/image106.png) <!-- {width=2.08333in height=0.30208in} -->
 
-### {index}`Renaming variables`
+:::{index} Renaming variables
+:::
+### Renaming variables
 
 There are several reasons why you might want to change the name of a
 variable:
@@ -736,18 +728,14 @@ the previous case:
 
 ![image103.png](images/01-blocks-scripts-and-sprites/image103.png) <!-- {width=2.08333in height=0.30208in} -->
 
-But if you choose “rename
-all,” then the name will be changed throughout the scope of the variable
+But if you choose “rename all,” then the name will be changed throughout the scope of the variable
 (the script for a script variable, or everywhere for a global variable):
 
-
-
-### Transient variables
 :::{index} variable; transient
 :::
+### Transient variables
 
-So far we’ve talked about
-variables with numeric values, or with short text strings such as
+So far we’ve talked about variables with numeric values, or with short text strings such as
 someone’s name. But there’s no limit to the amount of information you
 can put in a variable; in Chapter IV you’ll see how to use *lists* to
 collect many values in one data structure, and in Chapter VIII you’ll
@@ -755,8 +743,7 @@ see how to read information from web sites.
 
 ![image102.png](images/01-blocks-scripts-and-sprites/image102.png) <!-- {width=2.08333in height=0.30208in} -->
 
-When you use these
-capabilities, your project may take up a lot of memory in
+When you use these capabilities, your project may take up a lot of memory in
 the computer. If you get close to the amount of memory available to
 Snap<em>!</em>, then it may become impossible to save your project. (Extra
 space is needed temporarily to convert from Snap<em>!</em>’s internal
@@ -778,9 +765,10 @@ the variable to it.
 :::{index} help
 :::
 
-## Debugging
 :::{index} Debugging
 :::
+
+## Debugging
 
 Snap<em>!</em> provides several tools to help you debug a program. They center
 around the idea of *pausing* the running of a script partway through, so
@@ -788,8 +776,7 @@ that you can examine the values of variables.
 
 ### The pause button
 
-The simplest way to pause a
-program is manually, by clicking the pause button ![image116.png](images/01-blocks-scripts-and-sprites/image116.png) <!-- {width=0.29167in height=0.16667in} -->
+The simplest way to pause a program is manually, by clicking the pause button ![image116.png](images/01-blocks-scripts-and-sprites/image116.png) <!-- {width=0.29167in height=0.16667in} -->
 in the top right corner of the window. While the program is paused, you
 can run other scripts by clicking on them, show variables on stage with
 the checkbox next to the variable in the Variables palette or with the
@@ -801,11 +788,11 @@ again resumes the paused scripts.
 hide variable block
 :::
 
-(sec-pause-all)=
-### Breakpoints : the `pause all` block
 :::{index} breakpoint
 pause all block
 :::
+(sec-pause-all)=
+### Breakpoints : the `pause all` block
 
 The pause button is great if your program seems to be in an infinite loop,
 but more often you’ll want
@@ -855,6 +842,9 @@ show variable block
 hide and show primitives
 :::
 
+:::{index} single stepping
+:::
+
 ### {index}`Visible stepping`
 
 Sometimes you’re not exactly sure where the error is, or you don’t
@@ -881,8 +871,7 @@ The speed of stepping is
 controlled by the slider. If you move the
 slider all the way to the left, the speed is zero, the pause button
 turns into a step button ![image134.png](images/01-blocks-scripts-and-sprites/image134.png) <!-- {width=0.29167in height=0.16667in} --> , and the script takes a single step each time
-you push it. The name for this is *single stepping.*\index{single
-stepping}
+you push it. The name for this is *single stepping.*
 :::{index} slider; stepping speed
 :::
 
@@ -898,9 +887,16 @@ bottom of its loop for the longer script to catch up.
 When we talk about custom blocks in @sec-ch03, we’ll have more to say
 about visible stepping as it affects those blocks.
 
+:::{index} `pen trails` block
+`if else` reporter block
+index variable
+script variables block
+newline character
+:::
+
 ## Etcetera
 
-This manual doesn’t (yet)explain every block in detail. There are many more
+This manual doesn’t (yet) explain every block in detail. There are many more
 motion blocks, sound blocks, costume and graphics effects blocks, and so
 on. If you would like to find information on specific blocks, go to @sec-all-blocks. You can also learn what they all do by experimentation, and by
 reading the “help screens” that you can get by right-clicking or
@@ -911,8 +907,7 @@ at least part of its name, type <kbd>control-F</kbd> and enter the name in the t
 Here are some of the primitive blocks that don’t exist in Scratch:
 
 ![image136.png](images/01-blocks-scripts-and-sprites/image136.png)
-reports\index{pen trails
-block}, a new costume consisting of everything
+reports, a new costume consisting of everything
 that’s drawn on the stage by any sprite. Right-clicking the block in the
 scripting area gives the option to change it to ![image135.png](images/01-blocks-scripts-and-sprites/image135.png) if vector logging is enabled. See @sec-para-log-pen-vectors.
 :::{index} pen vectors block
@@ -941,19 +936,16 @@ Takes a sprite as input. Erases from that sprite’s costume the area that overl
 <img class="image-inline" src="images/01-blocks-scripts-and-sprites/image140.png" alt="image140.png"> Runs only this script until finished. In the Control palette even though it’s gray.
 
 <img class="image-inline" src="images/01-blocks-scripts-and-sprites/image143.png" alt="image143.png"> <!--  style="width:1.71in;height:0.23in" --> Reporter
-version of the `if/else` primitive command block\index{if else reporter
-block} . Only one of the two branches is evaluated, depending on the
+version of the `if/else` primitive command block. Only one of the two branches is evaluated, depending on the
 value of the first input.
 
 <img class="image-inline" src="images/01-blocks-scripts-and-sprites/image144.png" alt="image144.png"> <!--  style="width:1.83in;height:0.61in" --> Looping block like
-`repeat` but with an index variable\index{index
-variable} .
+`repeat` but with an index variable.
 :::{index} for block
 :::
 
 <img class="image-inline" src="images/01-blocks-scripts-and-sprites/image145.png" alt="image145.png"> <!--  style="width:1.37986in;height:0.28958in" alt="Graphical user interface, application, logo Description automatically generated" / --> Declare
-{index}`local variables` in a script.\index{script
-variables block}
+{index}`local variables` in a script.
 
 <img class="image-inline" src="images/01-blocks-scripts-and-sprites/image148.png" alt="image148.png"> See @sec-ch09.
 
@@ -1023,8 +1015,7 @@ delimiter, indicated by the brown dot in the input slot, is a single
 space character. "Letter" puts each character of the text in its own
 list item. "Word" puts each word in an item. ( Words
 are separated by any number of consecutive space, tab, carriage return,
-or newline characters.) "Line" is a newline character\index{newline
-character} (0xa); "tab" is a {index}`tab character` (0x9);
+or newline characters.) "Line" is a newline character (0xa); "tab" is a {index}`tab character` (0x9);
 "cr" is a carriage return (0xd). "Csv"
  and "json" split formatted text
 into lists of lists; see @sec-csv. "Blocks"
@@ -1073,6 +1064,10 @@ and scripts as data. This is not the same as manipulating procedures
 the actual blocks, what you see on the screen, are the data. This
 capability is new in version 8.0.
 
+:::{index} broadcast block
+of block (operators)
+:::
+
 ### First class list blocks (see @sec-ch04):
 
 <!-- TODO: welp. this needs to be remade -->
@@ -1101,7 +1096,7 @@ vector (x,y).
 
  ![image229.png](images/01-blocks-scripts-and-sprites/image229.png)
 
- Object is a hyperblock.
+Object is a hyperblock.
 
 **Scenes:**
 
@@ -1116,8 +1111,7 @@ current one.
 
 Nothing is automatically shared between scenes: no sprites, no blocks,
 no variables. But the old scene can send a message to the new one, to
-start it running, with optional payload as in broadcast\index{broadcast
-block} (See @sec-broadcast).
+start it running, with optional payload as in broadcast (See @sec-broadcast).
 
 ![image282.png](images/01-blocks-scripts-and-sprites/image282.png){.image-4x}
 
@@ -1177,8 +1171,7 @@ snapshot and reports it as a costume. It is hyperized with respect to its second
 :::
 
 :::{grid-item}
-<img class="image-inline" src="images/01-blocks-scripts-and-sprites/image304.png" alt="image304.png"> The "neg" option is a monadic\index{of block
-(operators)} negation operator
+<img class="image-inline" src="images/01-blocks-scripts-and-sprites/image304.png" alt="image304.png"> The "neg" option is a monadic negation operator
 , equivalent to "lg" is log<sub>2</sub>.
 "id" is the identity function, which reports its input. "sign" reports 1
 for positive input, 0 for zero input, or -1 for negative input.
@@ -1312,6 +1305,17 @@ script variables if the right input is a script.)
 :::{index} of block (sensing)
 :::
 
+:::{index} `for` block
+item 1 of stream block
+all but first of stream block
+letter (1) of (world) block
+visual representation of a sentence
+bar chart block
+conditional library:multiple-branch
+setting block
+infinite precision integer library
+:::
+
 (sec-libraries)=
 ## Libraries
 
@@ -1440,8 +1444,7 @@ giving all four combinations of whether the first test happens before or
 after the first repetition, and whether the condition must be true or
 false to continue repeating. The last repeat block is like the `repeat`
 primitive, but makes the number of repetitions so far available to the
-repeated script. The next two blocks are variations on `for`\index{$for$
-block} : the first allows an explicit step instead of using ±1, and the
+repeated script. The next two blocks are variations on `for`: the first allows an explicit step instead of using ±1, and the
 second allows any values, not just numbers; inside the script you say <img class="image-inline" src="images/01-blocks-scripts-and-sprites/image390.png" alt="image390.png"> <!-- {width=3.15278in height=0.29861in} -->
 replacing the grey block in the picture with an expression to give the next
 desired value for the loop index.
@@ -1466,9 +1469,7 @@ integers. The first five blocks are stream versions of the list blocks.
 :::{index} stream list
 :::
 
-`in front of`, `item 1 of`\index{item 1
-of stream block}, `all but first of`\index{all but first of stream
-block}, `map`, and `keep`. `Show stream`
+`in front of`, `item 1 of`, `all but first of`, `map`, and `keep`. `Show stream`
  takes a stream and a number as inputs, and
 reports an ordinary list of the first *n* items of the stream. `Stream`
  is like the primitive list; it makes a finite
@@ -1515,12 +1516,10 @@ stores a sentence as a list of words, and a word as a string of letters.
 Inexplicably, the designers of Scratch chose to abandon that tradition,
 and to focus on the representation of text as a string of characters.
 The one vestige of the {index}`Logo tradition` from which
-Scratch developed is the block named letter (1) of (world)\index{letter
-(1) of (world) block} , rather than character (1) of (world). Snap<em>!</em>
+Scratch developed is the block named letter (1) of (world), rather than character (1) of (world). Snap<em>!</em>
 inherits its text handling from Scratch.
 
-In Logo, the visual representation of a sentence\index{visual
-representation of a sentence} (a list of words) looks like a natural
+In Logo, the visual representation of a sentence (a list of words) looks like a natural
 language sentence: a string of words with spaces between them. In
 Snap<em>!</em>, the visual representation of a list looks nothing at all like
 natural language. On the other hand, representing a sentence as a string
@@ -1576,8 +1575,7 @@ The bar charts library has these blocks:
 
 ![image396.png](images/01-blocks-scripts-and-sprites/image396.png) <!-- {width=3.43056in height=1.91667in} -->
 
-`Bar chart of table`\index{bar chart
-block} takes a table (typically from a CSV data set) as input and
+`Bar chart of table` takes a table (typically from a CSV data set) as input and
 reports a summary of the table grouped by the field in the specified
 column number. The remaining three inputs are used only if the field
 values are numbers, in which case they can be grouped into buckets
@@ -1602,8 +1600,7 @@ If your buckets aren't of constant width, or you want to group by some
 function of more than one field, load the "Frequency Distribution
 Analysis" library instead.
 
-The multi-branched conditional library\index{conditional
-library:multiple-branch} has these blocks:
+The multi-branched conditional library has these blocks:
 
 ![image397.png](images/01-blocks-scripts-and-sprites/image397.png) <!-- {width=1.85in height=2.47986in} -->
 
@@ -1889,8 +1886,7 @@ blocks:
 
 The purpose of this library
 is to allow program access to the settings controlled by user interface
-elements, such as the settings menu ![image453.png](images/01-blocks-scripts-and-sprites/image453.png). The `setting` block\index{setting
-block} reports a setting; the `set flag` block sets
+elements, such as the settings menu ![image453.png](images/01-blocks-scripts-and-sprites/image453.png). The `setting` block reports a setting; the `set flag` block sets
 yes-or-no options that have checkboxes in the user interface, while the
 `set value` block controls settings with numeric
 or text values, such as project name.
@@ -1905,8 +1901,7 @@ library is loaded. No permanent changes are made. Note: this library has
 not been converted for version 7.0, so you’ll have to enable Javascript
 extensions to use it.
 
-The bignums, rationals, complex \#s library\index{infinite precision
-integer library} has these blocks:
+The bignums, rationals, complex \#s library has these blocks:
 :::{index} library; infinite precision integers
 :::
 
