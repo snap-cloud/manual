@@ -141,13 +141,9 @@ Don't put spaces between an index annotation and the word it's attached to:
 ❌  the {index}`palette`  area at the left edge   (extra space inside the line)
 ```
 
-## LaTeX `\index{...}` (legacy, still works)
+## LaTeX `\index{...}` (legacy, **do not use**)
 
-The manual was originally authored in Word/LaTeX with `\index{...}` markers,
-and a fair number of those still survive in the source. They continue to work
-because `latexmk` runs `makeindex` over the rendered `.tex`, but new content
-should use the MyST forms above. For reference, here's how the legacy
-syntax maps onto the MyST forms:
+The original Word -> Markdown conversion used LaTeX's `\index{...}` syntax for index entries, which is not rendered by MyST but is still supported by our LaTeX template. When converting legacy entries, you may encounter this syntax. Here's how it compares to the MyST role:
 
 | Goal | MyST | LaTeX |
 | ---- | ---- | ----- |
