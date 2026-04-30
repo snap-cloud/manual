@@ -1,5 +1,8 @@
 # Block reference pages
 
+> [!NOTE]
+> _Individual pages for each block are new. Most blocks don't yet additional links and images. If you have any questions, please post in the Snap<em>!</em> [forum](https://forum.snap.berkeley.edu/c/help/snap-help/49)._
+
 Each Snap! block has a one-page entry under this directory. A page is two
 files sharing a basename:
 
@@ -144,35 +147,30 @@ a lot of it is written...
   returns: None
 -->
 
----
+```
+    {{ block_description }}
 
+    ![The "{{ label }}" block](/blocks/images/block_{{ selector }}.png)
 
-{{ block_description }}
+    ![help screen for the block "{{ label }}"](../help/{{ help_screen }})
 
-![The "{{ label }}" block](/blocks/images/block_{{ selector }}.png)
+    ## Example Images
 
-![help screen for the block "{{ label }}"](../help/{{ help_screen }})
+    {{ #example_images }}
+      ![{{ description }}]({{ image }})
+    {{ /example_images }}
+    {{ ^example_images }}
+    No examples yet.
+    {{ /example_images}}
 
-## Example Images
+    ## Example Projects
 
-{{ #example_images }}
-  ![{{ description }}]({{ image }})
-{{ /example_images }}
-{{ ^example_images }}
-No examples yet.
-{{ /example_images}}
+    These example projects show the block in the context of a larger project. They will contain other blcoks, too.
 
-## Example Projects
-
-These example projects show the block in the context of a larger project. They will contain other blcoks, too.
-
-{{ #example_projects }}
-  * [{{ title }}]({{ url }})
-{{ /example_projects }}
-{{ ^example_projects }}
-No examples yet.
-{{ /example_projects}}
-
----
-
-_Individual pages for each block are new. Most blocks don't yet additional links and images. If you have any questions, please post in the Snap<em>!</em> [forum](https://forum.snap.berkeley.edu/c/help/snap-help/49)._
+    {{ #example_projects }}
+      * [{{ title }}]({{ url }})
+    {{ /example_projects }}
+    {{ ^example_projects }}
+    No examples yet.
+    {{ /example_projects}}
+```

@@ -1,3 +1,7 @@
+% Snap! Reference Manual
+% Vendored from https://github.com/myst-templates/plain_latex_book
+% See README.md in this directory for the list of local adaptations.
+
 \documentclass[12pt,oneside]{scrbook}
 \usepackage[paperheight=11in,
    paperwidth=8.5in,
@@ -6,28 +10,39 @@
    left=1.5cm,
    right=1.5cm]{geometry}
 
-% https://www.overleaf.com/learn/latex/Indices
-\usepackage{imakeidx}
+% Indexing.
+%
+% MyST hard-codes a `\makeindex` call inside the IMPORTS block whenever the
+% document contains index entries. We can't suppress that, but we *can*
+% disable imakeidx's automatic shell-escape `makeindex` run via the
+% `noautomatic` package option, and then call our own `\makeindex[...]`
+% with the options we want before MyST's IMPORTS arrives. With
+% `noautomatic`, the actual makeindex invocation is delegated to latexmk
+% (configured in `latexmkrc` next to this template), which picks up the
+% custom options in our \makeindex call.
+\usepackage[noautomatic]{imakeidx}
+\makeindex[intoc, columns=2, options={-s index-style.ist}]
 
-% \usepackage[top=2cm, bottom=2cm, left=2cm, right=2cm]{geometry}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage{lmodern}
 \usepackage{graphicx}
 \usepackage{caption}
 \usepackage{natbib}
-\usepackage{xcolor}
+\usepackage[dvipsnames]{xcolor}
 \usepackage{changepage}
 \usepackage{framed}
 \usepackage{hyperref}
 \usepackage{amssymb}
 \bibliographystyle{abbrvnat}
 
+% Snap! brand colors, available for custom LaTeX content.
+\definecolor{snapblue}{RGB}{52,101,164}
+\definecolor{snaporange}{RGB}{255,140,0}
+
 % Make list items more compact
 \usepackage{enumitem}
 \setlist[itemize]{noitemsep, topsep=0pt}
-
-\makeindex[intoc=true, columns=2, options=-s _support/tex/index-style.ist]
 
 [- IMPORTS -]
 
@@ -77,9 +92,6 @@
 
 \mainmatter
 
-% \include{preface.tex}
-% \include{acknowledgements.tex}
-
 [- CONTENT -]
 
 
@@ -87,5 +99,6 @@
 \bibliography{[- doc.bibliography | join(", ") -]}
 [# endif #]
 
+% \printindex is emitted by `manual-index.md`, the last chapter in the toc.
 
 \end{document}

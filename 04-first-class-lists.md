@@ -1,10 +1,15 @@
 ---
 ---
 
+:::{index} first class data type
+Scratch
+`Make a list`
+:::
+
 (sec-ch04)=
 # 4. First Class Lists
 
-A data type is *ﬁrst class*\index{first class data type} in a
+A data type is *ﬁrst class* in a
 programming language if data of that type can be
 
 - the value of a variable
@@ -17,12 +22,12 @@ programming language if data of that type can be
 
 - anonymous (not named)
 
-In Scratch\index{Scratch}, numbers and text strings are ﬁrst class.
+In Scratch , numbers and text strings are ﬁrst class.
 You can put a number in a variable, use one as the input to a block,
 call a reporter that reports a number, or put a number into a list.
 
 But Scratch’s lists are not ﬁrst class. You create one using the “`Make a
-list`\index{`Make a list`}” button, which requires that you give the list
+list` ” button, which requires that you give the list
 a name. You can’t put the list into a variable, into an input slot of a
 block, or into a list item—you can’t have lists of lists. None of the
 Scratch reporters reports a list value. (You can use a reduction of the
@@ -42,34 +47,44 @@ are ﬁrst class, period.
 
 ![image523.png](images/04-first-class-lists/image523.png) <!--  style="width:2.83958in;height:0.41597in" / -->
 
-##  The `list` Block
+:::{index} anonymous list
+`list` block
+arrowheads
+Scratch
+:::
+
+## The `list` Block
 
 At the heart of providing first class lists is the ability to make an
-“anonymous” list\index{anonymous list}—to make a list without
-simultaneously giving it a name. The `list` reporter block \index{`list`
-block} does that.
+“anonymous” list —to make a list without
+simultaneously giving it a name. The `list` reporter block does that.
 
 ![image628.png](images/04-first-class-lists/image628.png){.image-4x} <!--  style="width:2.83958in;height:0.41597in" / -->
 
-At the right end of the block are two left-and-right arrowheads
-\index{arrowheads}. Clicking on these changes the number of inputs to
+At the right end of the block are two left-and-right arrowheads.
+Clicking on these changes the number of inputs to
 list, i.e., the number of elements in the list you are building.
 Shift-clicking changes by three at a time.
 
-You can use this block as
-input to many other blocks:
+You can use this block as input to many other blocks:
 
 ![image629.png](images/04-first-class-lists/image629.png) <!--  style="width:2.83958in;height:0.41597in" / -->
 
-Snap<em>!</em> does not have a “`Make
-a list`” button like the one in Scratch \index{Scratch}. If you want a
-global “named list,” make a global variable and use the `set` block to put
+Snap<em>!</em> does not have a “`Make a list`” button like the one in Scratch.
+If you want a global “named list,” make a global variable and use the `set` block to put
 a list into the variable.
+
+:::{index} data structure
+lists of lists
+constructors
+selectors
+mutators
+binary tree
+:::
 
 ## Lists of Lists
 
-Lists can be inserted as
-elements in larger lists. We can easily create ad hoc structures as
+Lists can be inserted as elements in larger lists. We can easily create ad hoc structures as
 needed:
 
 ![image538.png](images/04-first-class-lists/image538.png) <!--  style="width:5.88889in;height:1.04861in" / -->
@@ -80,22 +95,36 @@ by default shown in *table view.* We’ll have more to say about this
 later.
 
 We can also build any classic computer science data structure
-\index{data structure} out of lists of lists\index{lists of lists}, by
-defining *constructors* \index{constructors} (blocks to make an instance
-of the structure), *selectors* \index{selectors} (blocks to pull out a
-piece of the structure), and *mutators* \index{mutators} (blocks to
+out of lists of lists , by
+defining *constructors* (blocks to make an instance
+of the structure), *selectors* (blocks to pull out a
+piece of the structure), and *mutators* (blocks to
 change the contents of the structure) as needed. Here we create binary
-tree\index{binary tree}s with selectors that check for input of the
+tree s with selectors that check for input of the
 correct data type; only one selector is shown but the ones for left and
 right children are analogous.
 
 ![image630.png](images/04-first-class-lists/image630.png) <!--  style="width:5.88889in;height:1.04861in" / -->
 
+:::{index} Scratch
+imperative programming style
+parallelism
+mutation
+functional programming style
+`in front of` block
+`item 1 of` block
+`all but first of` block
+array, dynamic
+dynamic array
+list, linked
+linked list
+:::
+
 ##  Functional and Imperative List Programming
 
 There are two ways to create a list inside a program. Scratch
-\index{Scratch} users will be familiar with the *imperative* programming
-style\index{imperative programming style}, which is based on a set of
+users will be familiar with the *imperative* programming
+style , which is based on a set of
 command blocks that modify a list:
 
 ![image631.png](images/04-first-class-lists/image631.png){.image-4x} <!--  style="width:5.88889in;height:1.04861in" / -->
@@ -114,34 +143,29 @@ list in it, then go through the items of the input list using the `add
 time, and finally report the result.
 
 *Functional* programming is a different approach that is becoming
-important in “real world” programming because of parallelism
-\index{parallelism}, i.e., the fact that different processors can be
+important in “real world” programming because of parallelism, i.e., the fact that different processors can be
 manipulating the same data at the same time. This makes the use of
-mutation\index{mutation} (changing the value associated with a
+mutation (changing the value associated with a
 variable, or the items of a list) problematic because with parallelism
 it’s impossible to know the exact sequence of events, so the result of
 mutation may not be what the programmer expected. Even without
-parallelism, though, functional programming\index{functional
-programming style} is sometimes a simpler and more effective technique,
-especially when dealing with recursively defined data structures. It
-uses reporter blocks, not command blocks, to build up a list value:
+parallelism, though, functional programming is sometimes a simpler
+and more effective technique, especially when dealing with recursively defined data
+structures. It uses reporter blocks, not command blocks, to build up a list value:
 
 ![image633.png](images/04-first-class-lists/image633.png){.image-4x} <!--  style="width:5.88889in;height:1.04861in" / -->
 
 In a functional program, we often use recursion to construct a list, one
-item at a time. The `in front of` block \index{`in front of` block} makes a
+item at a time. The `in front of` block makes a
 list that has one item added to the front of an existing list, *without
 changing the value of the original list.* A nonempty list is processed
-by dividing it into its first item (`item 1 of`\index{`item 1 of` block})
-and all the rest of the items (`all but first of`\index{`all but first of`
-block}), which are handled through a recursive call:
+by dividing it into its first item (`item 1 of` )
+and all the rest of the items (`all but first of` ), which are handled through a recursive call:
 
 ![image555.png](images/04-first-class-lists/image555.png) <!--  style="width:4.75in;height:2.24097in" / -->
 
-Snap<em>!</em>
-uses two different internal representations of lists, one (dynamic
-\index{array, dynamic} array\index{dynamic array}) for imperative
-programming and the other (linked\index{list, linked} list\index{linked list})
+Snap<em>!</em> uses two different internal representations of lists, one (dynamic
+array) for imperative programming and the other (linked list)
 for functional programming. Each representation
 makes the corresponding built-in list blocks (commands or reporters,
 respectively) most efficient. It’s possible to mix styles in the same
@@ -152,6 +176,10 @@ representation.) You don’t have to know the details of the internal
 representations, but it’s worthwhile to use each list in a consistent
 way.
 
+:::{index} ring, gray
+higher order function
+:::
+
 ## Higher Order List Operations and Rings
 
 There’s an even easier way to select the even numbers from a list:
@@ -161,7 +189,7 @@ There’s an even easier way to select the even numbers from a list:
 The `keep` block takes a Predicate expression as its first input, and a list
 as its second input. It reports a list containing those elements of the
 input list for which the predicate returns `true`. Notice two things about
-the predicate input: First, it has a grey ring \index{ring, gray} around
+the predicate input: First, it has a grey ring around
 it. Second, the `mod` block has an empty input. `Keep` puts each item of its
 input list, one at a time, into that empty input before evaluating the
 predicate. (The empty input is supposed to remind you of the “box”
@@ -181,8 +209,7 @@ Evaluating the `=` block without a ring reports `true` or `false`; evaluating
 the block *with* a ring reports the block itself. This allows `keep` to
 evaluate the `=` predicate repeatedly, once for each list item. A block
 that takes another block as input is called a *higher order* block (or
-higher order procedure, or higher order function\index{higher order
-function}).
+higher order procedure, or higher order function ).
 
 ![image635.png](images/04-first-class-lists/image635.png) <!--  style="width:2.375in;height:0.27778in" / -->
 
@@ -192,17 +219,27 @@ lists:
 
 ![image636.png](images/04-first-class-lists/image636.png){.image-4x}
 
+:::{index} `find first` block
+`map` block
+shallow copy of a list
+deep copy of a list
+`id of` block
+`combine` block
+function, associative
+associative function
+:::
+
 (sec-map)=
 ### The `map` block
 
 You’ve already seen `keep`. `Find first` is
-\index{`find first` block} similar, but it reports just the first item that
+similar, but it reports just the first item that
 satisfies the predicate, not a list of all the matching items. It’s
 equivalent to ![image562.png](images/04-first-class-lists/image562.png) but faster because it
 stops looking as soon as it finds a match. If there are no matching
 items, it returns an empty string.
 
-`Map` \index{`map` block} takes a Reporter block and a list as inputs. It
+`Map` takes a Reporter block and a list as inputs. It
 reports a new list in which each item is the value reported by the
 Reporter block as applied to one item from the input list. That’s a
 mouthful, but an example will make its meaning clear:
@@ -222,14 +259,13 @@ An *empty* gray ring represents the *identity function,* which just
 reports its input. Leaving the ring in `map` empty is the most concise way
 to make a shallow copy of a list (that is, in the case of a list of
 lists, the result is a new toplevel list whose items are the same
-(uncopied) lists that are items of the toplevel input list)
-\index{shallow copy of a list}. To make a deep copy of a list
-\index{deep copy of a list} (that is, one in which all the sublists,
+(uncopied) lists that are items of the toplevel input list). To make a deep copy of a list
+(that is, one in which all the sublists,
 sublists of sublists, etc. are copied), use the list as input to the
 ![image576.png](images/04-first-class-lists/image576.png){.image-4x} <!--  style="width:0.74306in;height:0.19444in" -->  block (one of the variants
-of the `sqrt of` block). This works because `id of`\index{`id of` block} is a @sec-hyperblock.
+of the `sqrt of` block). This works because `id of` is a @sec-hyperblock.
 
-The third higher order block, `combine`\index{`combine` block}, computes a
+The third higher order block, `combine` , computes a
 single result from *all* the items of a list, using a *two-input*
 reporter as its second input. In practice, there are only a few blocks
 you’ll ever use with `combine`:
@@ -246,8 +282,7 @@ the items is true, find the smallest, or find the largest.
 
 Why `+` but not `−`? It only
 makes sense to combine list items using an *associative*
-\index{function, associative} function\index{associative function}:
-one that doesn’t care in what order the items are combined (left to
+function: one that doesn’t care in what order the items are combined (left to
 right or right to left). (2+3)+4 = 2+(3+4), but (2−3)−4 ≠ 2−(3−4).
 
 <!-- TODO: See if we can remove the (see ...) -->
@@ -255,8 +290,7 @@ right or right to left). (2+3)+4 = 2+(3+4), but (2−3)−4 ≠ 2−(3−4).
 The functions `map`, `keep`, and
 `find first` have an advanced mode with rarely-used features: If their
 function input is given explicit input names (see @sec-formal-parameters)
-(by clicking the arrowhead
-at the right end of the gray ring),
+(by clicking the arrowhead at the right end of the gray ring),
 then it will be called for each list item with *three* inputs: the
 item’s value (as usual), the item’s position in the input list (its
 index), and the entire input list. No more than three input names can be
@@ -264,8 +298,10 @@ used in this context.
 
 ![image587.png](images/04-first-class-lists/image587.png) <!--  style="width:5.80833in;height:1.19097in" / -->
 
-
-## {index}`Table View`  vs. {index}`List View`
+:::{index} table view
+list view
+:::
+## Table View vs. List View
 
 We mentioned earlier that there are two ways of representing lists
 visually. For one-dimensional lists (lists whose items are not
@@ -359,8 +395,7 @@ to say the row first or the column first. (“Cell B4” is the same as
 program, you have to say `item 2 of`, not `item B of`. So it’s useful to be
 able to find out a column number by hovering over its letter.
 
- Any value that can appear in
-a program can be displayed in a table cell:
+Any value that can appear in a program can be displayed in a table cell:
 
 ![image596.png](images/04-first-class-lists/image596.png) <!--  style="width:3.81736in;height:0.81111in" / -->
 
@@ -370,10 +405,9 @@ the second column and all the rows, we can make the result fit:
 
 ![image642.png](images/04-first-class-lists/image642.png) <!--  style="width:3.34097in;height:0.57708in" / -->
 
- But we make an exception for
-cases in which the value in a cell is a list (so that the entire table
-is three-dimensional). Because lists are visually very big, we don’t try
-to fit the entire value in a cell:
+But we make an exception for cases in which the value in a cell is a list
+(so that the entire table is three-dimensional). Because lists are visually
+very big, we don’t try to fit the entire value in a cell:
 
 ![image601.png](images/04-first-class-lists/image601.png) <!--  style="width:3.34097in;height:0.57708in" / -->
 
@@ -383,7 +417,7 @@ inner sublists: You can switch to list view, or you can double-click on
 a list icon in the table to open a dialog box showing just that
 sub-sub-list in table view.
 
- One last detail: If the first
+One last detail: If the first
 item of a list is a list (so table view is used), but a later item
 *isn’t* a list, that later item will be displayed on a red background,
 like an item of a single-column list:
@@ -393,13 +427,17 @@ like an item of a single-column list:
 So, in particular, if only the first item is a list, the display will
 look almost like a one-column display.
 
+:::{index}
+`.csv` file
+CSV (comma-separated values)
+:::
+
 (sec-csv)=
 ### Comma-Separated Values
 
 Spreadsheet and database programs generally offer the option to export
-their data as CSV (comma-separated values)\index{CSV (comma-separated
-values)} lists. You can import these files into Snap<em>!</em> and turn them
-into tables (lists of lists), and you can export tables in CSV format.
+their data as CSV (comma-separated values) lists. You can import these files into
+Snap<em>!</em> and turn them into tables (lists of lists), and you can export tables in CSV format.
 Snap<em>!</em> recognizes a CSV file by the extension .csv in its filename.
 
 A CSV file has one line per table row, with the fields separated by
@@ -423,8 +461,7 @@ Here’s what the corresponding table looks like:
 
 Here’s how to read a spreadsheet into Snap<em>!</em>:
 
-1. Make a variable
-with a watcher on stage: ![image607.png](images/04-first-class-lists/image607.png) <!-- style="width:1.20833in;height:0.27083in" -->
+1. Make a variable with a watcher on stage: ![image607.png](images/04-first-class-lists/image607.png) <!-- style="width:1.20833in;height:0.27083in" -->
 
 <!-- The background of this picture should be transparent, not white. bh  -->
 
@@ -450,13 +487,15 @@ If you want to export a list, put a variable watcher containing the list
 on the stage, right-click its border, and choose “`Export`.” (Don’t
 right-click an item instead of the border; that gives a different menu.)
 
+:::{index} JSON (JavaScript Object Notation) file
+:::
+
 (sec-multi-dimensional-lists-and-json)=
 ### Multi-dimensional lists and JSON
 
 CSV format is easy to read, but works only for one- or two-dimensional
 lists. If you have a list of lists of lists, Snap<em>!</em> will instead export
-your list as a JSON (JavaScript Object Notation) file\index{JSON
-(JavaScript Object Notation) file} . I modified my list:
+your list as a JSON (JavaScript Object Notation) file. I modified my list:
 
 ![image608.png](images/04-first-class-lists/image608.png) <!--  style="width:6.33333in;height:0.44792in" / -->
 
@@ -473,6 +512,28 @@ can import plain text from a `.txt` file.) Drag and drop works for these
 formats also.
 
 <!-- Two section entires to handle plurals more easily -->
+:::{index} scalar function
+list, multi-dimensional
+media computation
+Alonzo
+`reshape` block
+`item of` block
+`length of` block
+`rank of` block
+`dimensions of` block
+`flatten of` block
+`columns of` block
+atomic data
+`lines of` block
+`split by line` block
+`csv of` block
+`json of` block
+APL
+Smalltalk
+Lisp
+Prolog
+:::
+
 (sec-hyperblock)=
 (sec-hyperblocks)=
 ## Hyperblocks
@@ -482,27 +543,23 @@ formats also.
 
 A *scalar* is anything other than a list. The name comes from
 mathematics, where it means a magnitude without direction, as opposed to
-a vector, which points toward somewhere. A scalar function\index{scalar
-function} is one whose domain and range are scalars, so all the
-arithmetic operations are scalar functions, but so are the text ones
+a vector, which points toward somewhere. A scalar function is one whose domain and range are scalars, so all the arithmetic operations are scalar functions, but so are the text ones
 such as `letter` and the Boolean ones such as `not`.
 
 The major new feature in Snap<em>!</em> 6.0 is that the domain and range of
 most scalar function blocks is extended to multi-dimensional
-\index{list, multi-dimensional} lists, with the underlying scalar
-function applied termwise:
+lists, with the underlying scalar function applied termwise:
 
 ![image610.png](images/04-first-class-lists/image610.png) <!--  style="width:3.34028in;height:0.91667in" -->  ![image609.png](images/04-first-class-lists/image609.png) <!--  style="width:2.5625in;height:0.91667in" -->  ![image611.png](images/04-first-class-lists/image611.png) <!--  style="width:4.94444in;height:0.69444in" -->
 
 Mathematicians, note in the last example above that the result is just a termwise
 application of the underlying function (7×3, 8×5, etc.), *not* matrix
-multiplication. See @sec-appendix-b-apl for that. For a dyadic (two-input) function, if the lengths don’t agree, the length of the result (in each
+multiplication. See @sec-apl-features for that. For a dyadic (two-input) function, if the lengths don’t agree, the length of the result (in each
 dimension) is the length of the shorter input:
 
 ![image612.png](images/04-first-class-lists/image612.png) <!--  style="width:5.74306in;height:0.69444in" -->
 
-However, if
-the *number of dimensions* differs in the two inputs, then the number of
+However, if the *number of dimensions* differs in the two inputs, then the number of
 dimensions in the result agrees with the *higher-*dimensional input; the
 lower-dimensional one is used repeatedly in the missing dimension(s):
 
@@ -513,26 +570,18 @@ input is paired with every scalar in the other input:
 
 ![image644.png](images/04-first-class-lists/image644.png) <!--  style="width:7.48333in;height:0.63125in" -->
 
-One important
-motivation for this feature is how it simplifies and speeds up media
-computation\index{media computation}, as in this shifting of the
-Alonzo\index{Alonzo} costume to be bluer:
+One important motivation for this feature is how it simplifies and speeds up media
+computation, as in this shifting of the Alonzo costume to be bluer:
 
 ![image614.png](images/04-first-class-lists/image614.png) <!--  style="width:7.48333in;height:0.63125in" -->
 
-
-
- Each
-pixel of the result has ¾ of its original red and green, and three times
+Each pixel of the result has ¾ of its original red and green, and three times
 its original blue (with its transparency unchanged). By putting some
 sliders on the stage, you can play with colors dynamically:
 
 ![image620.png](images/04-first-class-lists/image620.png) <!--  style="width:5.19444in;height:1.04861in" alt="Graphical user interface, application Description automatically generated" / -->![image619.png](images/04-first-class-lists/image619.png) <!--  style="width:1.6875in;height:1.04861in" -->
 
-
-
- There
-are a few naturally scalar functions that have already had specific
+There are a few naturally scalar functions that have already had specific
 meanings when applied to lists and therefore are not hyperblocks: `=` and
 `identical to` (because they compare entire structures, not just scalars,
 always reporting a single Boolean result), `and` and `or` (because they
@@ -542,8 +591,7 @@ inputs to text string form), and `is a (type)` (because it applies to its
 input as a whole). Blocks whose inputs are “natively” lists, such as ![image193.png](images/04-first-class-lists/image193.png){.image-4x .image-inline} <!--  style="width:0.88958in;height:0.2in" / --> and
 ![image621.png](images/04-first-class-lists/image621.png) <!--  style="width:1.02986in;height:0.18958in" --> , are never hyperblocks.
 
-![image205.png](images/04-first-class-lists/image205.png){.image-inline} <!--  style="width:2.09917in;height:0.2475in" alt="Application Description automatically generated with low confidence" / --> The
-`reshape` block\index{`reshape` block} takes a list (of any depth) as its
+![image205.png](images/04-first-class-lists/image205.png){.image-inline} <!--  style="width:2.09917in;height:0.2475in" alt="Application Description automatically generated with low confidence" / --> The `reshape` block takes a list (of any depth) as its
 first input, and then takes zero or more sizes along the dimensions of
 an array. In the example it will report a table (a matrix) of four rows
 and three columns. If no sizes are given, the result is an empty list.
@@ -553,8 +601,7 @@ block starts again at the head of the list, using values more than once.
 If more values are provided than needed, the extras are ignored; this
 isn’t an error.
 
-![image203.png](images/04-first-class-lists/image203.png){.image-inline} <!--  style="width:1.76in;height:0.2in" / -->  The
-`combinations` block takes any number of lists as input; it reports a list
+![image203.png](images/04-first-class-lists/image203.png){.image-inline} <!--  style="width:1.76in;height:0.2in" / --> The `combinations` block takes any number of lists as input; it reports a list
 in which each item is a list whose length is the number of inputs; item
 *i* of a sublist is an item of input *i.* Every possible combination of
 items of the inputs is included, so the length of the reported list is
@@ -563,7 +610,7 @@ the product of the lengths of the inputs.
 ![image622.png](images/04-first-class-lists/image622.png) <!--  style="width:5.23958in;height:1.67986in" alt="Graphical user interface, text, application Description automatically generated" / -->
 
 ![image204.png](images/04-first-class-lists/image204.png){.image-inline} <!--  style="width:1.34in;height:0.25in" alt="Icon Description automatically generated" / -->  The `item of` block
-\index{`item of` block} has a special set of rules, designed to preserve
+has a special set of rules, designed to preserve
 its pre-hyperblock meaning and also provide a useful behavior when given
 a list as its first (index) input:
 
@@ -592,13 +639,12 @@ a list as its first (index) input:
 
     ![image626.png](images/04-first-class-lists/image626.png) <!--  style="width:6.00694in;height:0.6875in" / -->
 
- To
-get a column or columns of a spreadsheet, use an empty list in the row
+To get a column or columns of a spreadsheet, use an empty list in the row
 selector (as of Snap<em>!</em> 6.6):
 
 ![image627.png](images/04-first-class-lists/image627.png) <!--  style="width:6.60417in;height:1.04861in" alt="Graphical user interface, application, website Description automatically generated" / -->
 
-The `length of` block \index{`length of` block} is extended to provide
+The `length of` block is extended to provide
 various ways of looking at the shape and contents of a list. The options
 other than `length` are mainly useful for *lists of lists,* to any depth.
 These new options work well with hyperblocks and the APL library.
@@ -608,18 +654,18 @@ These new options work well with hyperblocks and the APL library.
 
 - `length`: reports the number of (toplevel) items in the list, as always.
 
-- `rank` \index{`rank of` block}: reports the number of *dimensions* of the
+- `rank` : reports the number of *dimensions* of the
 list, i.e., the maximum depth of lists of lists of lists of lists. (That
 example would be rank 4.)
 
-- `dimensions` \index{`dimensions of` block}: reports a list of numbers, each
+- `dimensions` : reports a list of numbers, each
 of which is the maximum length in one dimension, so a spreadsheet of
 1000 records, each with 4 fields, would report the list \[1000 4\].
 
-- `flatten` \index{`flatten of` block}: reports a flat, one-dimensional list
+- `flatten` : reports a flat, one-dimensional list
 containing the *atomic* (non-list) items anywhere in the input list.
 
-- `columns` \index{`columns of` block}: reports a list in which the rows and
+- `columns` : reports a list in which the rows and
 columns of the input list are interchanged, so the shape of the
 transpose of a shape \[1000 4\] list would be \[4 1000\]. This option
 works only for lists whose rank is at most 2. The name reflects the fact
@@ -630,17 +676,15 @@ original table.
 are in reverse order.
 
 The remaining three options report a (generally multi-line) text string.
-The input list may not include any atomic (non-list) data \index{atomic
-data} other than text or numbers. The `lines` \index{`lines of` block}
+The input list may not include any atomic (non-list) data other than text or numbers. The `lines`
 option is intended for use with rank-one lists of text strings; it
 reports a string in which each list item becomes a line of text. You can
-think of it as the opposite of the `split by line` block \index{`split by
-line` block} . The `csv` \index{`csv of` block} option (comma-separated
+think of it as the opposite of the `split by line` block . The `csv` option (comma-separated
 values) is intended for rank-two lists that represent a spreadsheet or
 other tabular data. Each item of the input list should be a list of
 atoms; the block reports a text string in which each item of the big
 list becomes a line of text in which the items of that sublist are
-separated by commas. The `json` \index{`json of` block} option is for lists
+separated by commas. The `json` option is for lists
 of any rank; it reports a text string in which the list structure is
 explicitly represented using square brackets. These are the opposites of
 `split by csv` and `split by json`.
@@ -648,14 +692,13 @@ explicitly represented using square brackets. These are the opposites of
 ![image646.png](images/04-first-class-lists/image646.png) <!--  style="width:6.60417in;height:1.04861in" / -->
 
 The idea of extending the domain and range of scalar functions to
-include arrays comes from the language APL\index{APL}. (All the great
+include arrays comes from the language APL. (All the great
 programming languages are based on mathematical ideas. Our primary
-ancestors are Smalltalk\index{Smalltalk}, based on models, and Lisp
-\index{Lisp}, based on lambda calculus. Prolog\index{Prolog}, a great
+ancestors are Smalltalk, based on models, and Lisp, based on lambda calculus. Prolog , a great
 language not (so far) influencing Snap<em>!</em>, is based on logic. And APL,
 now joining our family, is based on linear algebra, which studies
 vectors and matrices. Those *other* programming languages are based on
 the weaknesses of computer hardware.) Hyperblocks are not the whole
 story about APL, which also has mixed-domain functions and higher order
 functions. Some of what’s missing is provided in the APL library. (See
-[Appendix B](../14-appendix-b-apl-features).)
+@sec=apl-features.)

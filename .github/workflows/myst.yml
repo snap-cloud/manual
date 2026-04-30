@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+  pull_request:
   workflow_dispatch:
 
 jobs:
@@ -27,10 +28,52 @@ jobs:
       - name: Print MyST version
         run: myst --version
 
+      - name: Install LaTeX
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends \
+            latexmk \
+            texlive-latex-recommended \
+            texlive-latex-extra \
+            texlive-fonts-recommended \
+            texlive-fonts-extra \
+            texlive-luatex \
+            texlive-xetex
+
       - name: Build HTML
         run: myst build --html
 
+      - name: Build PDF
+        run: myst build --pdf
+
+      - name: Stage PDFs for publishing
+        run: |
+          # PDF locations are configured in myst.yml under exports.output.
+          # Copy them into the HTML output so they ship alongside the site.
+          mkdir -p _build/html
+          cp output/snap-manual.pdf              _build/html/snap-manual.pdf
+          cp output/snap-manual-no-blocks-ref.pdf _build/html/snap-manual-no-blocks-ref.pdf
+          cp output/snap-blocks-ref.pdf          _build/html/snap-blocks-ref.pdf
+
+      # On PRs, attach all three PDFs as workflow artifacts so reviewers can
+      # grab a preview without running the build locally. Kept for 10 days to
+      # avoid filling up artifact storage.
+      - name: Upload PDF artifacts
+        if: github.event_name == 'pull_request'
+        uses: actions/upload-artifact@v4
+        with:
+          name: snap-manual-pdfs
+          path: |
+            output/snap-manual.pdf
+            output/snap-manual-no-blocks-ref.pdf
+            output/snap-blocks-ref.pdf
+          retention-days: 10
+          if-no-files-found: error
+
+      # Only publish to gh-pages from main (or workflow_dispatch). PRs stop
+      # after building + uploading the artifact above.
       - name: Publish HTML to gh-pages
+        if: github.event_name != 'pull_request'
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}

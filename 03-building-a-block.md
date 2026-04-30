@@ -1,18 +1,31 @@
 ---
 ---
 
+:::{index}
+BYOB
+Build Your Own Blocks
+Scratch
+:::
+
 (sec-ch03)=
 # 3. Building a Block
 
-The first version of Snap<em>!</em> was called BYOB, for “Build Your Own Blocks\index{Build Your Own Blocks}.” This was the first and is still the
-most important capability we added to Scratch\index{Scratch}. (The
+The first version of Snap<em>!</em> was called BYOB, for “Build Your Own Blocks .” This was the first and is still the
+most important capability we added to Scratch . (The
 name was changed because a few teachers have no sense of humor. ☹ You
 pick your battles.) Scratch 2.0 and later also has a partial custom
 block capability.
 
+:::{index} Make a block
+color of blocks
+shapes of blocks
+jigsaw-piece blocks
+prototype
+:::
+
 ## Simple Blocks
 
-In every palette, at or near the bottom, is a button labeled "`Make a block`"\index{Make a block}. Also, floating near the top of the palette
+In every palette, at or near the bottom, is a button labeled "`Make a block`" . Also, floating near the top of the palette
 is a plus sign (+). Also, the menu you get by right-clicking on the
 background of the scripting area has a "`make a block`" option.
 
@@ -26,28 +39,28 @@ all sprites, or only to the current sprite and its children.
 ![image501.png](images/03-building-a-block/image501.png) <!--  style="width:2.27083in;height:2.34722in" / -->
 
 In this dialog box, you can choose the block's palette, shape, and name.
-With one exception, there is one color\index{color of blocks} per
-palette, e.g., all [Motion]{.mono} blocks are blue. But the [Variables]{.mono} palette
+With one exception, there is one color per
+palette, e.g., all {span .mono}[Motion] blocks are blue. But the {span .mono}[Variables] palette
 includes the orange variable-related blocks and the red list-related
 blocks. Both colors are available, along with an "`Other`" option that
-makes grey blocks in the [Variables]{.mono} palette for blocks that don’t fit any
+makes grey blocks in the {span .mono}[Variables] palette for blocks that don’t fit any
 category.
 
-There are three block shapes\index{shapes of blocks}, following a
+There are three block shapes , following a
 convention that should be familiar to Scratch users: The
-jigsaw-puzzle-piece shaped blocks\index{jigsaw-piece blocks} are
+jigsaw-puzzle-piece shaped blocks are
 Commands, and don’t report a value. The {index}`oval blocks`
 are Reporters, and the {index}`hexagonal blocks` are
 Predicates, which is the technical term for reporters that report
 Boolean (true or false) values.
 
 Suppose you want to make a block named “square” that draws a square. You
-would choose [Motion]{.mono}, Command, and type “square” into the name field.
+would choose {span .mono}[Motion], Command, and type “square” into the name field.
 When you click "`OK`", you enter the {index}`Block Editor`.
 This works just like making a script in the sprite’s scripting area,
 except that the “hat” block at the top, instead of saying something like
 <code>when I am clicked</code>, has a picture of the block you’re building. This
-{index}`hat block` is called the *prototype*\index{prototype}
+{index}`hat block` is called the *prototype*
 of your custom block.[^3] You drag blocks under the hat to program your
 custom block, then click OK:
 
@@ -55,7 +68,7 @@ custom block, then click OK:
 
 ![image503.png](images/03-building-a-block/image503.png) <!--  style="width:4.61556in;height:3.64778in" / -->
 
-Your block appears at the bottom of the [Motion]{.mono} palette. Here’s the block
+Your block appears at the bottom of the {span .mono}[Motion] palette. Here’s the block
 and the result of using it:
 
 ![image524.png](images/03-building-a-block/image524.png) <!--  style="width:2.27083in;height:2.34722in" / -->
@@ -63,24 +76,27 @@ and the result of using it:
 [^3]: This use of the word “prototype” is unrelated to the *prototyping
 object oriented programming* discussed later.
 
+:::{index} Block Editor
+input name dialog
+title text
+:::
+
 ### Custom Blocks with Inputs
 
 But suppose you want to be able to draw squares of different sizes.
 "`Control-click`" or "`right click`" on the block, choose "`edit`", and the Block
-Editor\index{Block Editor} will open. Notice the plus signs before and
+Editor will open. Notice the plus signs before and
 after the word square in the prototype block. If you hover the mouse
 over one, it lights up:
 
 ![image508.png](images/03-building-a-block/image508.png) <!--  style="width:3.44444in;height:2.72222in" / -->
 
-Click on the plus on the
-right. You will then see the “input name” dialog\index{input name
-dialog}:
+Click on the plus on the right. You will then see the “input name” dialog :
 
 ![image509.png](images/03-building-a-block/image509.png) <!--  style="width:2.58333in;height:1.60417in" / -->
 
 Type in the name “size” and click "`OK`" There are other options in this
-dialog; you can choose "`title text`"\index{title text} if you want to
+dialog; you can choose "`title text`" if you want to
 add words to the block name, so it can have text after an input slot,
 like the <code>move ( ) steps</code> block. Or you can select a more extensive
 dialog with a lot of options about your input name. But we’ll leave that
@@ -89,20 +105,22 @@ prototype:
 
 ![image510.png](images/03-building-a-block/image510.png) <!--  style="width:1.47917in;height:1.48958in" / -->
 
-You can now drag the orange
-variable down into the script, then click okay:
+You can now drag the orange variable down into the script, then click okay:
 
 ![image511.png](images/03-building-a-block/image511.png) <!--  style="width:1.47472in;height:1.4955in" / -->
 
-Your
-block now appears in the [Motion]{.mono} palette with an input box: ![image512.png](images/03-building-a-block/image512.png) <!--  style="width:0.69792in;height:0.25in" / --> You can draw
+Your block now appears in the {span .mono}[Motion] palette with an input box: ![image512.png](images/03-building-a-block/image512.png) <!--  style="width:0.69792in;height:0.25in" / --> You can draw
 any size square by entering the length of its side in the box and
 running the block as usual, by clicking it or by putting it in a script.
 
+:::{index}
+script pic
+translations option
+:::
+
 ### Editing Block Properties
 
-What if you change your mind
-about a block’s color (palette) or shape (command, reporter, predicate)?
+What if you change your mind about a block’s color (palette) or shape (command, reporter, predicate)?
 If you click in the hat block at the top that holds the prototype, but
 not in the prototype itself, you’ll see a window in which you can change
 the color, and *sometimes* the shape, namely, if the block is not used
@@ -116,8 +134,8 @@ If you "`right-click/control-click`" the hat block, you get this menu:
 
 ![image513.png](images/03-building-a-block/image513.png) <!--  style="width:0.99931in;height:0.76042in" / -->
 
-"`Script pic`" \index{script pic} exports a picture of the script. (Many of
-the illustrations in this manual were made that way.) "`Translations`" \index{translations option} opens a window in which you can specify how
+"`Script pic`" exports a picture of the script. (Many of
+the illustrations in this manual were made that way.) "`Translations`" opens a window in which you can specify how
 your block should be translated if the user chooses a language other
 than the one in which you are programming. "`Block variables`" lets you
 create a variant of script variables for this block: A script variable
@@ -135,21 +153,30 @@ checked, but you may want to hide custom blocks if you’re a curriculum
 writer creating a Parsons problem. To unhide blocks, choose "`Hide Blocks`" from the File menu and uncheck the checkboxes. "`Edit`" does the
 same thing as regular clicking, as described earlier.
 
+:::{index} recursion
+drag from prototype
+base case
+factorial
+report block
+stop block
+stop script block
+Thinking Recursively
+:::
+
 ## Recursion
 
-Since the new custom\index{recursion} block appears in its palette as soon as you *start*
+Since the new custom block appears in its palette as soon as you *start*
 editing it, you can write recursive blocks (blocks that call themselves)
 by dragging the block into its own definition:
 
 ![image514.png](images/03-building-a-block/image514.png) <!--  style="width:2.96528in;height:2.36319in" / --> ![image515.png](images/03-building-a-block/image515.png) <!--  style="width:1.95833in;height:2.35417in" / --> ![image516.png](images/03-building-a-block/image516.png) <!--  style="width:1.42361in;height:0.91181in" / -->
 
 (If you added inputs to the block since opening the editor, click "`Apply`"
-before finding the block in the palette, or drag the\index{drag from
-prototype} block from the top of the block editor rather than from the
+before finding the block in the palette, or drag the block from the top of the block editor rather than from the
 palette.)
 
 If recursion is new to you, here are a few brief hints: It’s crucial
-that the recursion have a *base case*\index{base case} *,* that is,
+that the recursion have a *base case* *,* that is,
 some small(est) case that the block can handle without using recursion.
 In this example, it’s the case <code>depth=0</code>, for which the block does nothing
 at all, because of the enclosing <code>if</code>. Without a base case, the recursion
@@ -164,33 +191,32 @@ Tammy and Tallulah, and so on. Each {index}`little person`
 has his or her own local variables "`size`" and "`depth`", each with different
 values.
 
-You can also write {index}`recursive reporters<single: reporters, recursive>`,
-like this block to compute the factorial\index{factorial} function:
+You can also write {index}`recursive reporters<reporters, recursive>`,
+like this block to compute the factorial function:
 
 ![image520.png](images/03-building-a-block/image520.png) <!--  style="width:4.29167in;height:0.86458in" / -->
 
-Note the use of the <code>report</code> block\index{report block}. When a reporter
+Note the use of the <code>report</code> block . When a reporter
 block uses this block, the reporter finishes its work and reports the
 value given; any further blocks in the script are not evaluated. Thus,
 the <code>if else</code> block in the script above could have been just an <code>if</code>, with
 the second report block below it instead of inside it, and the result
 would be the same, because when the first <code>report</code> is seen in the base
 case, that finishes the block invocation, and the second <code>report</code> is
-ignored. There is also a <code>stop this block</code> block\index{stop block block}
+ignored. There is also a <code>stop this block</code> block
 that has a similar purpose, ending the block invocation early, for
-command blocks. (By contrast, the <code>stop this script</code> block\index{stop
-script block} stops not only the current block invocation, but also the
+command blocks. (By contrast, the <code>stop this script</code> block stops not only the current block invocation, but also the
 entire toplevel script that called it.)
 
-Here’s a slightly more
-compact way to write the <code>factorial</code> function:
+Here’s a slightly more compact way to write the <code>factorial</code> function:
 
 ![image521.png](images/03-building-a-block/image521.png) <!--  style="width:4.29167in;height:0.86458in" / -->
 
-For more on recursion, see *Thinking Recursively*\index{Thinking
-Recursively} by {index}`Eric Roberts<single: Roberts, Eric>`. (The original
-edition is ISBN 978‑0471816522; a more recent *Thinking Recursively in
+For more on recursion, see *Thinking Recursively* by {index}`Eric Roberts<single: Roberts, Eric>`. (The originaledition is ISBN 978‑0471816522; a more recent *Thinking Recursively in
 Java* is ISBN 978-0471701460.) <!-- Do we want to link to something like https://books.google.com/books/about/Thinking_Recursively.html?id=oH9QAAAAMAAJ&source=kp_book_description --MF -->
+
+:::{index} library; block
+:::
 
 ## Block Libraries
 
@@ -201,8 +227,7 @@ your blocks implement a particular data structure (a stack, or a
 dictionary, etc.), or they’re the framework for building a multilevel
 game. Such a collection of blocks is called a *block library.*
 
-To create a block library,\index{library!block} choose "`Export
-blocks…`" from the
+To create a block library, choose "`Export blocks…`" from the
 "`File`" menu. You then see a window like this:
 
 ![image522.png](images/03-building-a-block/image522.png) <!--  style="width:2.02153in;height:2.72222in" / -->
@@ -211,11 +236,11 @@ The window shows all of your
 global custom blocks. You can uncheck some of the checkboxes to select
 exactly which blocks you want to include in your library. (You can
 "`right-click`" or "`control-click`" on the export window for a menu that lets
-you check or uncheck all the boxes at once.) Then press "`OK`" An [XML]{.mono} file
+you check or uncheck all the boxes at once.) Then press "`OK`" An {span .mono}[XML] file
 containing the blocks will appear in your Downloads location.
 
 To import a block library, use the "`Import…`" command in the "`File`" menu,
-or just drag the [XML]{.mono} file into the Snap<em>!</em> window.
+or just drag the {span .mono}[XML] file into the Snap<em>!</em> window.
 
 Several block libraries are included with Snap<em>!</em>; for details about
 them, see @sec-libraries.

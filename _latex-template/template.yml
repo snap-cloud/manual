@@ -1,24 +1,26 @@
 jtex: v1
 title: Snap! Manual
-description: '{{cookiecutter.description}}'
+description: >
+  A locally vendored copy of the MyST plain_latex_book template, adapted for
+  the Snap! Reference Manual (US Letter, scrbook, indexed, Snap! brand colors).
 version: 1.0.0
-license: BSD
+license: BSD-2-Clause
 source: https://snap.berkeley.edu
-# thumbnail: ./thumbnail.png
 authors:
   - name: Michael Ball
     website: https://mball.co
 tags:
-  - paper
+  - book
 parts:
   - id: abstract
     required: false
     description: >
-      A good abstract will begin with a short description of the problem being
-      addressed, briefly describe the new data or analyses, then briefly states
-      the main conclusion(s) and how they are supported and uncertainties.
+      A short description of the manual.
 doc:
   - id: title
+    required: true
+  - id: subtitle
+  - id: authors
     required: true
   - id: bibliography
 options:
@@ -27,6 +29,8 @@ options:
     description: Mark the document as draft
 files:
   - template.tex
+  - index-style.ist
+  - latexmkrc
 packages:
   - imakeidx
   - fontenc
@@ -41,3 +45,4 @@ packages:
   - hyperref
   - amssymb
   - enumitem
+  - geometry

@@ -34,12 +34,18 @@ project has a name, that name will be the default filename if you don’t
 give a different name. Another, equivalent way to save to disk is to
 choose "`Export project`" from the File menu.
 
-## Creating a {index}`Cloud Account`
+:::{index}
+cloud
+save your project in the cloud
+Terms of Service
+Cloud, Account
+:::
+## Creating a Cloud Account
 
 The other possibility is to
-save your project "`in the cloud`",\index{save your project in the cloud}
+save your project "`in the cloud`",
 at the Snap<em>!</em> web site. In order to do this, you need an account with
-us. Click on the {index}`Cloud button` (![image489.png](images/02-saving-and-loading-projects-and/image489.png) <!--  style="width:0.29167in;height:0.16667in" / --> ) in the Tool Bar.
+us. Click on the {index}`Cloud button` (![image489.png](images/02-saving-and-loading-projects-and/image489.png)) in the Tool Bar.
 Choose the “`Signup…`” option. This will show you a window that looks like
 the picture below:
 
@@ -72,8 +78,7 @@ marketing emails of any kind through this site, neither from us nor from
 third parties. If, nevertheless, you are worried about providing this
 information, do a web search for “temporary email.”
 
-Finally, you must read and agree to the Terms of Service\index{Terms of
-Service}. A quick summary: Don’t interfere with anyone else’s use of
+Finally, you must read and agree to the Terms of Service . A quick summary: Don’t interfere with anyone else’s use of
 the web site, and don’t put copyrighted media or personally identifiable
 information in projects that you share with other users. And we’re not
 responsible if something goes wrong. (Not that we *expect* anything to
@@ -101,7 +106,10 @@ optionally project notes; your project will be saved online and can be
 loaded from anywhere with net access. The project notes will be visible
 to other users if you publish your project.
 
-## Loading Saved Projects\index{loading saved projects}
+:::{index} loading saved projects
+:::
+
+## Loading Saved Projects
 
 Once you’ve saved a project, you want to be able to load it back into
 Snap<em>!</em>. There are two ways to do this:
@@ -134,12 +142,15 @@ If you saved projects in an earlier version of Snap<em>!</em> using the
 to allow you to retrieve those projects. But you can save them only with
 the Computer and Cloud options.
 
+:::{index} Restore unsaved project option
+:::
+
 ## If you lose your project, do this first!
 
 If you are still in **Snap<em>!</em>** and realize that you’ve loaded another
-project without saving the one you were working on: ***Don’t edit the
-new project.*** From the File menu ![image384.png](images/02-saving-and-loading-projects-and/image384.png) <!--  style="width:0.31944in;height:0.18056in" --> choose the "`Restore unsaved project`"
-option\index{Restore unsaved project option}.
+project without saving the one you were working on: _**Don’t edit the new project.**_
+From the File menu ![image384.png](images/02-saving-and-loading-projects-and/image384.png) <!--  style="width:0.31944in;height:0.18056in" --> choose the "`Restore unsaved project`"
+option .
 
 Restore unsaved project will also work if you log out of Snap<em>!</em> and
 later log back in, as long as you don’t edit another project meanwhile.
