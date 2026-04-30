@@ -9,7 +9,7 @@ Scratch Team
 Morphic
 Lifelong Kindergarten Group
 MIT, MIT Media Lab
-MIT Artificial Intelligence Lab
+MIT, Artificial Intelligence Lab
 Stanford Artificial Intelligence Lab
 Scheme
 single: Sussman, Gerald J.
@@ -56,7 +56,7 @@ Scratch.</strong>
 
 Four people have made such massive contributions to the implementation
 of Snap<em>!</em> that we have officially declared them members of the team:
-{index}`Michael Ball<Ball, Michael>` and Bernat Romagosa, in addition to
+{index}`Michael Ball<single: Ball, Michael>` and Bernat Romagosa, in addition to
 contributions throughout the project, have primary responsibility for
 the web site and {index}`cloud storage<storage, cloud>`. Joan Guillén i
 Pelegay has contributed very careful and
@@ -79,9 +79,9 @@ Contributors of translations are too numerous to list here, but they're
 in the "About…" box in Snap<em>!</em> itself.
 
 This material is based upon work supported in part by the National
-Science Foundation under Grants No.
-1138596, 1143566, and 1441075; and in part by MioSoft, Arduino.org, SAP,
-and YC Research. Any opinions, findings, and conclusions or
+Science Foundation under Grants No. 1138596, 1143566, and 1441075;
+and in part by MioSoft, Arduino.org, SAP, and YC Research.
+Any opinions, findings, and conclusions or
 recommendations expressed in this material are those of the author(s)
 and do not necessarily reflect the views of the National Science
 Foundation or other funders.
