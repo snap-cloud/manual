@@ -1,0 +1,43 @@
+jtex: v1
+title: Snap! Manual
+description: '{{cookiecutter.description}}'
+version: 1.0.0
+license: BSD
+source: https://snap.berkeley.edu
+# thumbnail: ./thumbnail.png
+authors:
+  - name: Michael Ball
+    website: https://mball.co
+tags:
+  - paper
+parts:
+  - id: abstract
+    required: false
+    description: >
+      A good abstract will begin with a short description of the problem being
+      addressed, briefly describe the new data or analyses, then briefly states
+      the main conclusion(s) and how they are supported and uncertainties.
+doc:
+  - id: title
+    required: true
+  - id: bibliography
+options:
+  - type: boolean
+    id: draft
+    description: Mark the document as draft
+files:
+  - template.tex
+packages:
+  - imakeidx
+  - fontenc
+  - inputenc
+  - lmodern
+  - graphicx
+  - caption
+  - natbib
+  - xcolor
+  - changepage
+  - framed
+  - hyperref
+  - amssymb
+  - enumitem

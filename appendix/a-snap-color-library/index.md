@@ -1,6 +1,15 @@
-# Appendix A. [Snap]{.snap} color library {#sec-appendix-a-colors}
+---
+---
 
-The Colors and Crayons library\index{Colors and Crayons library}
+:::{index} Colors and Crayons library
+color numbers
+crayons
+:::
+
+(sec-appendix-a-colors)=
+# A. Snap! Color Library
+
+The Colors and Crayons library
 provides several tools for manipulating color. Although its main purpose
 is controlling a sprite’s pen color, it also establishes colors as a
 first class data type:
@@ -8,39 +17,46 @@ first class data type:
 ![image401.png](assets/image401.png)
 
 For people who just want colors in their projects without having to be color experts, we
-provide two simple mechanisms: a *color number*\index{color numbers}
+provide two simple mechanisms: a *color number*
 scale with a broad range of continuous color variation and a set of 100
 *crayons* organized by color family (ten reds, ten oranges, etc.) The
-crayons\index{crayons} include the block colors:
+crayons include the block colors:
 
 ![image1135.png](assets/image1135.png)
 
 
 For experts, we provide color selection by RGB, HSL, HSV, X11/W3C names, and variants on those scales.
 
-![image1136.png](assets/image1136.png) <!--  style="width:7.16667in;height:1.1in" alt="Macintosh HD:Users:bh:Desktop:hsl-from-x11.png" / -->
+![image1136.png](assets/image1136.png) <!--  style="width:7.16667in;height:1.1in" -->
+
+:::{index} RGB
+CMY
+CMYK
+HSL
+HSV
+color theory
+:::
 
 ## Introduction to Color
 
 Your computer monitor can display millions of colors, but you probably can’t
 distinguish that many. For example, here’s red 57, green 180, blue 200: ![a teal color swatch](assets/image1137.png){.image-inline}
-And here’s red 57, green *182,* blue 200:  ![image1138.png](assets/image1138.png) <!--  style="width:0.23611in;height:0.23611in" alt="Macintosh HD:Users:bh:Desktop:Google Chrome001.png" / --> You might be able to tell them
-apart if you see them side by side: ![image1137.png](assets/image1137.png) <!--  style="width:0.23611in;height:0.23611in" alt="Macintosh HD:Users:bh:Desktop:Google Chrome002.png" / --> ![image1138.png](assets/image1138.png) <!--  style="width:0.23611in;height:0.23611in" alt="Macintosh HD:Users:bh:Desktop:Google Chrome001.png" / --> but maybe not even then.
+And here’s red 57, green *182,* blue 200:  ![image1138.png](assets/image1138.png) <!--  style="width:0.23611in;height:0.23611in" --> You might be able to tell them
+apart if you see them side by side: ![image1137.png](assets/image1137.png) <!--  style="width:0.23611in;height:0.23611in" --> ![image1138.png](assets/image1138.png) <!--  style="width:0.23611in;height:0.23611in" --> but maybe not even then.
 
-Color space\index{color space}—the collection of all possible
+{index}`Color space`—the collection of all possible
 colors—is three-dimensional, but there are many ways to choose the
-dimensions. RGB\index{RGB} (red-green-blue), the one most commonly used
+dimensions. RGB (red-green-blue), the one most commonly used
 in computers, matches the way TVs and displays produce color. Behind
 every dot on the screen are three tiny lights: a red one, a green one,
 and a blue one. But if you want to print colors on paper, your printer
-probably uses a different set of three colors: CMY\index{CMY}
-(cyan-magenta-yellow). You may have seen the abbreviation CMYK
-\index{CMYK}, which represents the common technique of adding black ink
+probably uses a different set of three colors: CMY
+(cyan-magenta-yellow). You may have seen the abbreviation CMYK, which represents the common technique of adding black ink
 to the collection. (Mixing cyan, magenta, and yellow in equal amounts is
 supposed to result in black ink, but typically it comes out a muddy
 brown instead, because chemistry.) Other systems that try to mimic human
-perception are HSL\index{HSL} (hue-saturation-lightness) and HSV
-\index{HSV} (hue-saturation-value). There are many, many more, each
+perception are HSL (hue-saturation-lightness) and HSV
+(hue-saturation-value). There are many, many more, each
 designed for a particular purpose.
 
 If you are a color professional—a printer, a web designer, a graphic
@@ -48,9 +64,43 @@ designer, an artist—then you need to understand all this. It can also be
 interesting to learn about. For example, there are colors that you can
 see but your computer display can’t generate. If that intrigues you,
 look up [color theory](https://en.wikipedia.org/wiki/Color_theory)
-\index{color theory} in Wikipedia.
+in Wikipedia.
 
-### Crayons and Color Numbers {#sec-crayons-and-color-numbers}
+:::{index} pumpkin
+denim
+crayons
+sepia
+set pen block
+box of ten crayons
+box of twenty crayons
+gray
+Black Hole problem
+change pen block
+transparency
+color from block
+hue
+rainbow
+magenta
+spectral colors
+rods and cones
+indigo
+shade
+tint
+dark candy apple red
+maroon
+pink
+white background
+white
+purple
+violet
+teal
+cyan
+from color block
+nearest color number
+:::
+
+(sec-crayons-and-color-numbers)=
+### Crayons and Color Numbers
 
 But if you just want some colors in your project, we provide a simple,
 one-dimensional subset of the available colors. Two subsets, actually:
@@ -59,36 +109,34 @@ one-dimensional subset of the available colors. Two subsets, actually:
 ![image1139.png](assets/image1139.png)
 
 The first row shows 100 distinct colors. They have names; this is pumpkin
-![image1145.png](assets/image1145.png)\index{pumpkin},
-and this is denim ![image1146.png](assets/image1146.png)\index{denim}.
-You’re supposed to think of them as a big box of 100 crayons\index{crayons}. They’re
+![image1145.png](assets/image1145.png),
+and this is denim ![image1146.png](assets/image1146.png).
+You’re supposed to think of them as a big box of 100 crayons. They’re
 arranged in families: grays, pinks, reds, browns, oranges, etc. But
 they’re not consistently ordered within a family; you’d be unlikely to
-say “next crayon” in a project. (But look at the crayon spiral on page
-[145](#spirals).) Instead, you’d think “I want this to look like a
-really old-fashioned photo” and so you’d find sepia ![image1144.png](assets/image1144.png){.image-inline}\index{sepia} as
+say “next crayon” in a project. (But look at the crayon spiral, @sec-spirals.)
+Instead, you’d think “I want this to look like a
+really old-fashioned photo” and so you’d find sepia ![image1144.png](assets/image1144.png){.image-inline} as
 crayon number 33. You don’t have to memorize the numbers! You can find
-them in a menu with a submenu for each family.\index{set pen block}
+them in a menu with a submenu for each family.
 
 ![image1140.png](assets/image1140.png) <!--  style="width:5.79306in;height:0.3in" / -->
 
 Or, if you
-know the crayon name, just ![image1147.png](assets/image1147.png) <!--  style="width:2.15972in;height:0.25694in" alt="Macintosh HD:Users:bh:Desktop:set-crayon-name.png" / -->.
+know the crayon name, just ![image1147.png](assets/image1147.png) <!--  style="width:2.15972in;height:0.25694in" -->.
 
- The
-crayon numbers are chosen so that skipping by 10 gives a sensible box of
-ten crayons\index{box of ten crayons} :
+The crayon numbers are chosen so that skipping by 10 gives a sensible box of ten crayons:
 
 ![image1154.png](assets/image1154.png) <!--  style="width:5.79306in;height:0.3in" / -->
 
 Alternatively, skipping by 5 gives a still-sensible set of twenty
-crayons\index{box of twenty crayons} :
+crayons:
 
 ![image1155.png](assets/image1155.png) <!--  style="width:5.8in;height:0.3in" / -->
 
 The set of *color numbers* is arranged so that each color number is
 visually near each of its neighbors. Bright and dark colors alternate
-for each family. Color numbers\index{color numbers} range from 0 to 99,
+for each family. {index}`Color numbers` range from 0 to 99,
 like crayon numbers, but you can use fractional numbers to get as tiny a
 step as you like:
 
@@ -97,12 +145,12 @@ step as you like:
 (“As tiny as you like” isn’t *quite* true because in the end, your color
 has to be rounded to integer RGB values for display.)
 
-Both of these scales include the range of shades of gray\index{gray},
+Both of these scales include the range of shades of gray,
 from black to white. Since black is the initial pen color, and black
-isn’t a hue, Scratch and [Snap]{.snap} users would traditionally try to use
+isn’t a hue, Scratch and Snap<em>!</em> users would traditionally try to use
 set color to escape from black, and it wouldn’t work. By including black
 in the same scale as other colors, we eliminate the Black Hole problem
-\index{Black Hole problem} if people use only the recommended color
+if people use only the recommended color
 scales.
 
 We are making a point of saying “color number” for what was sometimes
@@ -120,7 +168,7 @@ They have the same names as three of the primitive Pen blocks:
 The first (Pen block-colored) input slot is used to select which color
 scale you want to use. (These blocks also allow reading or setting two
 block properties that are not colors: the pen size and its
-transparency.) The pen reporter\index{pen block} requires no other
+transparency.) The {index}`pen reporter` requires no other
 inputs; it reports the state of the pen in whatever dimension you
 choose.
 
@@ -130,12 +178,12 @@ As the last example shows, you can’t ask for the pen color in a scale
 incompatible with how you set it, unless the block can deduce what you
 want from what it knows about the current pen color.
 
-The change pen block\index{change pen block} applies only to numeric
+The change pen block applies only to numeric
 scales (including vectors of three or four numbers). It adds its numeric
 or list input to the current pen value(s), doing vector (item-by-item)
 addition for vector scales.
 
-The set pen block\index{set pen block} changes the pen color to the
+The set pen block changes the pen color to the
 value(s) you specify. The meaning of the white input slots depends on
 which attribute of the pen you’re setting:
 
@@ -144,7 +192,7 @@ which attribute of the pen you’re setting:
 In the last example, the number 37 sets the *transparency,* on the scale
 0=opaque, 100=invisible. (All color attributes are on a 0–100 scale
 except for RGB components, which are 0–255.) A transparency
-\index{transparency} value can be combined with any of these attribute
+value can be combined with any of these attribute
 scales.
 
 The library also includes two constructors and a selector for colors as
@@ -154,7 +202,7 @@ a data type:
 
 The latter two
 are inverses of each other, translating between colors and their
-attributes. The color from block’s\index{color from block} attribute
+attributes. The color from block’s attribute
 menu has fewer choices than the similar set pen block because you can,
 for example, set the Red value of the existing pen color leaving the
 rest unchanged, but when creating a color out of nothing you have to
@@ -166,9 +214,9 @@ small subset of the millions of colors your computer can generate.) If
 you have a color and want another color that’s the same except for one
 number, as in the Red example, you can use this block:
 
-![image402.png](assets/image402.png) <!--  style="width:1.80556in;height:0.19444in" alt="Macintosh HD:Users:bh:Desktop:color-from-and.png" / -->
+![image402.png](assets/image402.png) <!--  style="width:1.80556in;height:0.19444in" -->
 
-Finally, the library includes the mix block\index{mix block} and a
+Finally, the library includes the {index}`mix block` and a
 helper:
 
 ![image1160.png](assets/image1160.png) <!--  style="width:5.79306in;height:0.3in" / -->
@@ -183,13 +231,13 @@ If not, stop here. (But look at the samples of the different scales in @sec-tldr
 **More about Colors: Fair Hues and Shades**
 
 Several of the three-dimensional arrangements of colors use the concept
-of “hue\index{hue},” which more or less means where a color would
-appear in a rainbow\index{rainbow} (magenta\index{magenta}, near the
+of “hue,” which more or less means where a color would
+appear in a rainbow (magenta, near the
 right, is [a long story](https://en.wikipedia.org/wiki/Magenta)):
 
 ![image1189.png](assets/image1189.png) <!--  style="width:5.80667in;height:0.30667in" / -->
 
-These are called “spectral\index{spectral colors} ” colors, after the
+These are called “spectral ” colors, after the
 *spectrum* of rainbow colors. But these colors aren’t equally
 distributed. There’s an awful lot of green, hardly any yellow, and just
 a sliver of orange. And no brown at all.
@@ -202,8 +250,7 @@ all the gory details.
 
 This isn’t a problem with the physics of rainbows. It’s in the human eye
 and the human brain that certain ranges of wavelength of light waves are
-lumped together as named colors. The eye is just “tuned”\index{rods and
-cones} to recognize a wide range of colors as green. (See [Rods and
+lumped together as named colors. The eye is just “tuned” to recognize a wide range of colors as green. (See [Rods and
 Cones](https://en.wikipedia.org/w/index.php?title=Rods_and_cones).) And
 different human cultures give names to different color ranges.
 Nevertheless, in old Scratch projects, you’d say change pen color by 1
@@ -223,29 +270,23 @@ In this scale, each of the
 seven rainbow colors and brown get an equal share. (Red’s looks too
 small, but that’s because it’s split between the two ends: hue 0 is pure
 red, brownish reds are to its right, and purplish reds are wrapped
-around to the right end.) We call this scale “fair hue\index{fair hue}
-” because each color family gets a fair share of the total hue range.
-(By the way, you were probably taught “… green, blue, indigo
-\index{indigo}, violet” in school, but it turns out that color names
+around to the right end.) We call this scale “{index}`fair hue`” because each color family gets a fair share of the total hue range.
+(By the way, you were probably taught “… green, blue, indigo, violet” in school, but it turns out that color names
 were different in Isaac Newton’s day, and the color he called “blue” is
 more like modern cyan, while his “indigo” is more like modern blue. See
 Wikipedia [Indigo](https://en.wikipedia.org/wiki/Indigo).)
 
-Our *color number* scale
-is based on fair hues, adding a range of grays from black (color number
-0 ) to white (color number 14) and also adding *shades* of the spectral
+Our *color number* scale is based on fair hues, adding a range of grays from black (color number 0) to white (color number 14) and also adding *shades* of the spectral
 colors. (In color terminology, a *shade* is a darker version of a color;
 a lighter version is called a *tint.*) Why do we add shades
-\index{shade} but not tints\index{tint} ? Partly because I find shades
-more exciting. A shade of red ![image1195.png](assets/image1195.png) <!--  style="width:0.23611in;height:0.23611in" alt="Macintosh HD:Users:bh:Desktop:red.png" / --> can be dark candy apple red ![image1194.png](assets/image1194.png) <!--  style="width:0.23611in;height:0.23611in" alt="Macintosh HD:Users:bh:Desktop:candy.png" / -->\index{dark
-candy apple red} or maroon ![image1193.png](assets/image1193.png) <!--  style="width:0.23611in;height:0.23611in" alt="Macintosh HD:Users:bh:Desktop:maroon.png" / --> \index{maroon}, but a tint is just some kind
-of pink ![image1192.png](assets/image1192.png) <!--  style="width:0.23611in;height:0.23611in" alt="Macintosh HD:Users:bh:Desktop:pink.png" / --> \index{pink}. This admitted prejudice is supported by an
-objective fact: Most projects are made on a white background
-\index{white background}, so dark colors stand out better than light
+but not tints ? Partly because I find shades
+more exciting. A shade of red ![image1195.png](assets/image1195.png) <!--  style="width:0.23611in;height:0.23611in" --> can be dark candy apple red ![image1194.png](assets/image1194.png) <!--  style="width:0.23611in;height:0.23611in" --> or maroon ![image1193.png](assets/image1193.png) <!--  style="width:0.23611in;height:0.23611in" -->, but a tint is just some kind
+of pink ![image1192.png](assets/image1192.png) <!--  style="width:0.23611in;height:0.23611in" -->. This admitted prejudice is supported by an
+objective fact: Most projects are made on a white background, so dark colors stand out better than light
 ones.
 
-So, in our color number scale, color numbers 0 to 14 are kinds of gray
-\index{gray}; the remaining color numbers go through the fair hues, but
+So, in our color number scale, color numbers 0 to 14 are kinds of gray;
+the remaining color numbers go through the fair hues, but
 alternating full-strength colors with shades.
 
 crayons by 10
@@ -262,9 +303,9 @@ color numbers by 5
 
 color numbers by 10
 
-![image1197.png](assets/image1197.png) <!--  style="width:0.23611in;height:0.23611in" alt="Macintosh HD:Users:bh:Desktop:pink.png" / -->
+![image1197.png](assets/image1197.png) <!--  style="width:0.23611in;height:0.23611in" -->
 
-This chart shows how the color scales\index{color scales} discussed so
+This chart shows how the {index}`color scales` discussed so
 far are related. Note that all scales range from 0 to 100; the fair hues
 scale has been compressed in the chart so that similar colors line up
 vertically. (Its dimensions are different because it doesn’t include the
@@ -275,15 +316,14 @@ fair hues are at multiples of 100/8=12.5, starting with red=0.)
 White is crayon 14 and color number 14. This value was deliberately chosen
 *not* to be a multiple of 5 so that the every-fifth-crayon and
 every-tenth-crayon selections don’t include it, so that all of the
-crayons in those smaller boxes are visible against a white\index{white}
+crayons in those smaller boxes are visible against a white
 stage background.
 
 ::: {.evenly-spaced-images layout-ncol="2"}
 ![(attribution: Wikipedia user Andys. CC BY-SA.)](assets/image1198.png "(attribution: Wikipedia user Andys. CC BY-SA.)"){#fig-rainbow}
 
-Among purples\index{purple}, the official spectral violet
-\index{violet} (crayon 90) is the end of the spectrum. Magenta
-\index{magenta}, brighter than violet, isn’t a spectral color at all.
+Among purples, the official spectral violet
+(crayon 90) is the end of the spectrum. Magenta, brighter than violet, isn’t a spectral color at all.
 (In the picture at the left, the top part is the spectrum of white light spread out through a prism; the middle part is a photograph of a rainbow, and the bottom part is a digital simulation of a rainbow.) Magenta is a mixture of red and blue.
 :::
 
@@ -300,8 +340,8 @@ colors, e.g., the yellow at color number 50 is (255, 255, 0) in RGB.
 
 The color numbers at odd multiples of five are generally darker shades
 than the corresponding crayons. The latter are often official named
-shades, e.g., teal\index{teal}, crayon 65, is a half-intensity shade
-of cyan\index{cyan}. The odd-five *color numbers,* though, are often
+shades, e.g., teal, crayon 65, is a half-intensity shade
+of cyan. The odd-five *color numbers,* though, are often
 darker, since they are chosen to be the darkest color in a given family
 that’s visibly different from black. The pink at color number 15,
 though, is quite different from crayon 15, because the former is a pure
@@ -310,19 +350,31 @@ little magenta mixed in. Color numbers at multiples of five are looked
 up in a table; other color values are determined by linear interpolation
 in RGB space. (*Crayons* are of course all found by table lookup.)
 
-The from color block\index{from color block} behaves specially when you
+The from color block behaves specially when you
 ask for the *color number* of a color. Most colors don’t exactly match a
 color number, and for other attributes of a color (crayon number, X11
 name) you don’t get an answer unless the color exactly matches one of
 the names or numbers in that attribute. But for color number, the block
-tries to find the *nearest color number*\index{nearest color number} to
+tries to find the *nearest color number* to
 the color you specify. The result will be only approximate; you can’t
 use the number you get to recreate the input color. But you can start
 choosing nearby color numbers as you animate the sprite.
 
+:::{index} HSV
+saturation
+value
+HSL
+lightness
+color picker
+fair hue
+JavaScript
+L\*u\*v\*
+L\*a\*b\*
+:::
+
 ### Perceptual Spaces: HSV and HSL
 
-![image1199.png](assets/image1199.png) <!--  style="width:0.73611in;height:0.72222in" alt="Macintosh HD:Users:bh:Desktop:blues.png" / -->
+![image1199.png](assets/image1199.png) <!--  style="width:0.73611in;height:0.72222in" -->
 
 RGB is the right way to
 think about colors if you’re building or programming a display monitor;
@@ -338,16 +390,15 @@ pure blue, you can tell at a glance that no other spectral color is
 mixed with the blue.
 
 ![image1200.png](assets/image1200.png) <!--  style="width:2.69167in;height:1.19028in" / -->
+attribution: Wikipedia user SharkD, CC BY-SA 3.0
 
-Aside from hue, the other two
-dimensions of a color space have to represent how much white and/or
+Aside from hue, the other two dimensions of a color space have to represent how much white and/or
 black is mixed with the spectral color. (Bear in mind that “mixing
 black” is a metaphor when it comes to monitors. There really is black
-paint, but there’s no such thing as black light.) One such space, HSV
-\index{HSV}, has one dimension for the amount of color (vs. white),
+paint, but there’s no such thing as black light.) One such space, HSV, has one dimension for the amount of color (vs. white),
 called *saturation,* and one for the amount of black, imaginatively
-called *value.* HSV stands for Hue-Saturation\index{saturation} -Value
-\index{value}. (Value is also called *brightness.*) The *value* is
+called *value.* HSV stands for Hue-Saturation-Value.
+(Value is also called *brightness.*) The *value* is
 actually measured backward from the above description; that is, if value
 is 0, the color is pure black; if value is 100, then a saturation of 0
 means all white, no spectral color; a saturation of 100 means no white
@@ -361,19 +412,14 @@ the saturation of the sprite’s costume. (I speculate that the Scratch
 designers, like me, thought tints were less vivid than shades against a
 white background, so they made it harder to control tinting.)
 
-attribution: Wikipedia user SharkD, CC BY-SA 3.0
 
-But if you’re looking
-at colors on a computer display, HSV isn’t really a good match for human
+But if you’re looking at colors on a computer display, HSV isn’t really a good match for human
 perception. Intuitively, black and white should be treated
-symmetrically. This is the HSL\index{HSL} (hue-saturation-lightness
-\index{lightness} ) color space.
+symmetrically. This is the HSL (hue-saturation-lightness) color space.
 
-![image1203.png](assets/image1203.png) <!--  style="width:0.76389in;height:0.76389in" alt="Macintosh HD:Users:bh:Desktop:HSL-blue.png" / -->
+![image1203.png](assets/image1203.png) <!--  style="width:0.76389in;height:0.76389in" -->
 
-*Saturation,* in HSL, is a measure of
-the *grayness* or *dullness* of a color (how close it comes to being on
-a black-and-white scale) and *lightness* measures *spectralness* with
+*Saturation,* in HSL, is a measure of the *grayness* or *dullness* of a color (how close it comes to being on a black-and-white scale) and *lightness* measures *spectralness* with
 pure white at one end, pure black at the other end, and spectral color
 in the middle. The *saturation* number is actually the opposite of
 grayness: 0 means pure gray, and 100 means pure spectral color, provided
@@ -410,9 +456,9 @@ more coherent than jumping around Wikipedia if you’re interested.
 ![image1204.png](assets/image1204.png) <!--  style="width:1.64375in;height:0.84167in" / -->
 
 Although traditional Scratch
-and [Snap]{.snap} use HSV in programs, they use HSL in the color picker
-\index{color picker}. The horizontal axis is hue (fair hue\index{fair
-hue} , in this version) and the vertical axis is *lightness,* the scale
+and Snap<em>!</em> use HSV in programs, they use HSL in the color picker.
+The horizontal axis is hue (fair hue, in this version) and the vertical axis
+is *lightness*, the scale
 with black at one end and white at the other end. It would make no sense
 to have only the bottom half of this selector (HSV Value) or only the
 top half (HSV Saturation). And, given that you can only fit two
@@ -424,19 +470,27 @@ lightness) of red or orange, and shades of those browns.)
 Software that isn’t
 primarily about colors (so, *not* including Photoshop, for example)
 typically use HSV or HSL, with web-based software more likely to use HSV
-because that’s what’s built into the JavaScript\index{JavaScript}
+because that’s what’s built into the JavaScript
 programming language provided by browsers. But if the goal is to model
 human color perception, neither of these color spaces is satisfactory,
 because they assume that all full-intensity spectral colors are equally
-bright. But if you’re like most people, you see spectral yellow ![image1206.png](assets/image1206.png) <!--  style="width:0.18889in;height:0.18889in" alt="Macintosh HD:Users:bh:Desktop:yellow.png" / --> as much
+bright. But if you’re like most people, you see spectral yellow ![image1206.png](assets/image1206.png) <!--  style="width:0.18889in;height:0.18889in" --> as much
 brighter than spectral blue ![image1205.png](assets/image1205.png) <!--  style="width:0.20278in;height:0.20278in" / --> . There are better perceptual color spaces
-with names like L\*u\*v\*\index{L\*u\*v\*} and L\*a\*b\*
-\index{L\*a\*b\*} that are based on research with human subjects to
+with names like L\*u\*v\* and L\*a\*b\*
+that are based on research with human subjects to
 determine true perceived brightness. Wikipedia explains all this and
 more at [HSL and HSV](https://en.wikipedia.org/wiki/HSL_and_HSV), where
 they recommend ditching both of these simplistic color spaces. ☺
 
-###  Mixing Colors
+:::{index} additive mixing
+subtractive mixing
+mixing paints
+paints
+reflectance graph
+color at weight block
+:::
+
+### Mixing Colors
 
 Given first class colors, the next question is, what operations apply to
 them, the way arithmetic operators apply to numbers and higher order
@@ -449,8 +503,7 @@ which is what happens when you shine two colored lights onto a (white)
 wall. It’s also what happens in your computer screen, where each dot
 (pixel) of an image is created by a tiny red light, a tiny green light,
 and a tiny blue light that can be combined at different strengths to
-make different colors. Essentially, additive mixing\index{additive
-mixing} of two colors is computed by adding the two red components, the
+make different colors. Essentially, additive mixing of two colors is computed by adding the two red components, the
 two green components, and the two blue components. It’s not *quite* that
 simple only because each component of the result must be in the range 0
 to 255. So, red (255, 0, 0) mixed with green (0, 255, 0) gives (255,
@@ -478,16 +531,15 @@ add light, so this is called *subtractive* mixing:
 ![image1208.png](assets/image1208.png) <!--  style="width:0.20278in;height:0.20278in" / -->
 
 Perhaps confusingly, the numerical computation of subtractive mixing
-\index{subtractive mixing} is done by *multiplying* the RGB values,
+is done by *multiplying* the RGB values,
 taken as fractions of the maximum 255, so red (1, 0, 0) times yellow (1,
 1, 0) is red again.
 
 Those are both straightforward to compute. Much, much more complicated
-is trying to simulate the result of mixing *paints*\index{mixing
-paints} *.* It’s not just that we’d have to compute a more complicated
+is trying to simulate the result of mixing *paints* *.* It’s not just that we’d have to compute a more complicated
 function of the red, green, and blue values; it’s that RGB values (or
 any other three-dimensional color space) are inadequate to describe the
-behavior of paints\index{paints}. Two paints can look identical, and
+behavior of paints. Two paints can look identical, and
 have the same RGB values, but may still behave very differently when
 mixed with other colors. The differences are mostly due to the chemistry
 of the paints, but are also affected by exactly how the colors are
@@ -497,7 +549,7 @@ isn’t absorbed by the colors being mixed. But there can be an additive
 component also.
 
 The proper mathematical abstraction to describe a paint is a
-*reflectance* graph\index{reflectance graph}, like this:
+*reflectance* graph, like this:
 
 ![image1209.png](assets/image1209.png) <!--  style="width:0.20278in;height:0.20278in" / -->
 
@@ -514,7 +566,7 @@ inputs and converts them into what we hope are *typical* paint
 reflectance spectra that would look like those colors, and then mixes
 those spectra and converts back to RGB.
 
-![image1230.png](assets/image1230.png) <!--  style="width:4.34028in;height:0.65278in" alt="Macintosh HD:Users:bh:Desktop:5R-3G-paint.png" / -->
+![image1230.png](assets/image1230.png) <!--  style="width:4.34028in;height:0.65278in" -->
 
 But unlike the other two kinds of mixing, in this case we can’t say that
 these colors are “the right answer”; what would happen with real paints
@@ -525,43 +577,51 @@ to real-world color mixing.
 The mix block will
 accept any number of colors, and will mix them in equal proportion. If
 (for any kind of mixing) you want more of one color than another, use
-the color at weight block\index{color at weight block} to make a
+the color at weight block to make a
 “weighted color”:
 
-![image1232.png](assets/image1232.png) <!--  style="width:5.16667in;height:0.43056in" alt="Macintosh HD:Users:bh:Desktop:4R-1G-paint.png" / -->
+![image1232.png](assets/image1232.png) <!--  style="width:5.16667in;height:0.43056in" -->
 
 This mixes four
 parts red paint to one part green paint. All colors in a mixture can be
 weighted:
 
-![image1231.png](assets/image1231.png) <!--  style="width:4.34028in;height:0.65278in" alt="Macintosh HD:Users:bh:Desktop:5R-3G-paint.png" / -->
+![image1231.png](assets/image1231.png) <!--  style="width:4.34028in;height:0.65278in" -->
 
-(Thanks to [Scott Burns\index{Burns, Scott}
+(Thanks to [{index}`Scott Burns<single: Burns, Scott>`
 ](http://scottburns.us/subtractive-color-mixture/) for his help in
-understanding paint mixing, along with [David Briggs\index{Briggs, David}](http://www.huevaluechroma.com/061.php)’s tutorial. Remaining
+understanding paint mixing, along with [{index}`David Briggs<single: Briggs, David>`](http://www.huevaluechroma.com/061.php)’s tutorial. Remaining
 mistakes are bh’s.)
 
-### tl;dr {#sec-tldr-spirals}
+(sec-tldr-spirals)=
+### tl;dr
 
-For normal people\index{normal people}, [Snap]{.snap} provides three simple,
+For {index}`normal people`, Snap<em>!</em> provides three simple,
 one-dimensional scales: *<u>crayons</u>* for specific interesting
 colors, *<u>color numbers</u>* for a continuum of high-contrast colors
 with a range of hues and shading, and *<u>fair hues</u>* for a continuum
-without shading. For color nerds\index{color nerds}, it provides
+without shading. For {index}`color nerds`, it provides
 three-dimensional color spaces RGB, HSL, HSV, and fair-hue variants of
-the latter two. We recommend “fair HSL\index{fair HSL} ” for zeroing in on a desired color.
+the latter two. We recommend “{index}`fair HSL` ” for zeroing in on a desired color.
 
 <!-- Image hidden because it is included as part of the next image. -->
+<!-- TODO: Verify section and link location -->
 <!-- ![image1241.png](assets/image1241.png) -->
 
+(sec-spirals)=
 ![image1242.png](assets/image1242.png)
+
+:::{index} fair hue
+fair value
+fair hue table
+:::
 
 ### Subappendix: Geeky details on fair hue
 
 ![image1243.png](assets/image1243.png)
 
 The left graph shows that, unsurprisingly, all of the brown fair hue
-\index{fair hue} s make essentially no progress in real hue, with the
+s make essentially no progress in real hue, with the
 orange-brown section actually a little retrograde, since browns are
 really shades of orange and so the real hues overlap between fair browns
 and fair oranges. Green makes up some of the distance, because there are
@@ -590,8 +650,7 @@ expected, falls substantially in the browns, to a low of about 56%
 curve is smooth, without inflection points other than that minimum-value
 pure brown.
 
-“Fair saturation\index{fair saturation} ” and “fair value\index{fair
-value} ” are by definition 100% for the entire range of fair hues. This
+“{index}`Fair saturation`” and “fair value ” are by definition 100% for the entire range of fair hues. This
 means that in the browns, the real saturation and value are the product
 (in percent) of the innate shading of the specific brown fair hue and
 the user’s fair saturation/value setting. When the user’s previous color
@@ -605,9 +664,7 @@ to us directly from the JavaScript color management implementation.)
 This is why the set pen block includes options for “fair saturation” and
 so on.
 
-For the extra-geeky, here are
-the exact table lookup points (fair hue\index{fair hue table},
-\[0,100\]):
+For the extra-geeky, here are the exact table lookup points (fair hue, \[0,100\]):
 
 ![image1258.png](assets/image1258.png) <!--  style="width:5.9875in;height:0.37847in" / -->
 
@@ -617,10 +674,9 @@ and here are the RGB settings at those points:
 
 ### Subappendix: Geeky details on color numbers
 
-![image1260.png](assets/image1260.png) <!--  style="width:2.08333in;height:2.29167in" alt="Macintosh HD:Users:bh:Desktop:integers.png" / -->
+![image1260.png](assets/image1260.png) <!--  style="width:2.08333in;height:2.29167in" -->
 
-Here is a picture of
-integer color numbers, but remember that color numbers are continuous.
+Here is a picture of integer color numbers, but remember that color numbers are continuous.
 (As usual, “continuous” values are ultimately converted to integer RGB
 values, so there’s really some granularity.) Color numbers 0-14 are
 continuously varying grayscale, from 0=black to 14=white. Color numbers
@@ -655,11 +711,11 @@ increase, so we get brighter and greener colors.
 
 - (65,70) Shades of green-cyan mixtures.
 
-In the color number chart\index{color chart}, all the dark color
+In the color {index}`number chart`, all the dark color
 numbers look a lot like black, but they’re quite different. Here are the
 darkest colors in each color number family.
 
-![image1261.png](assets/image1261.png) <!--  style="width:1.38889in;height:1.38889in" alt="Macintosh HD:Users:bh:Desktop:darkest.png" / -->
+![image1261.png](assets/image1261.png) <!--  style="width:1.38889in;height:1.38889in" -->
 
 Darkest yellow doesn’t
 look entirely yellow. You might see it as greenish or brownish. As it
@@ -702,4 +758,4 @@ five, except for item 4, which is used for color 14, not color 15:
 The very pale three-input list blocks are for color numbers that are odd
 multiples of five, generally the “darkest” members of each color family.
 (The block colors were adjusted in Photoshop; don’t ask how to get
-blocks this color in [Snap]{.snap}.)
+blocks this color in Snap<em>!</em>.)

@@ -1,17 +1,18 @@
-# The Snap<em>!</em> Community Site {.unnumbered}
+(sec-appendix-community)=
+# The Snap<em>!</em> Community Site
 
-The [Snap]{.snap} [community website]{#sec-appendix-community} is what you see when you visit [https://snap.berkeley.edu](https://snap.berkeley.edu). {#sec-appendix-community}
+The Snap<em>!</em> [community website](https://snap.berkeley.edu) is what you see when you visit [https://snap.berkeley.edu](https://snap.berkeley.edu).
 
-## User Accounts {.unnumbered .unlisted}
+## User Accounts
 
-## Saving and Loading Projects {.unnumbered .unlisted}
+## Saving and Loading Projects
 
-## Sharing and Publishing Projects {.unnumbered .unlisted}
+## Sharing and Publishing Projects
 
-## Creating Project Collections {.unnumbered .unlisted}
+## Creating Project Collections
 
-### Sharing and Publishing Collections {.unnumbered .unlisted}
+### Sharing and Publishing Collections
 
-### Collaborating on Collections {.unnumbered .unlisted}
+### Collaborating on Collections
 
-### "Free for All" Collections {.unnumbered .unlisted}
+### "Free for All" Collections

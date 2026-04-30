@@ -1,0 +1,50 @@
+# See docs at: https://mystmd.org/guide/frontmatter
+version: 1
+project:
+  id: e2e8108c-f6b3-443e-8192-e9f0a4b5e752
+  title: Snap! Reference Manual
+  description: A manual for the Snap! programming language
+  keywords:
+    - Snap!
+    - programming languages
+    - blocks-based programming
+    - visual programming
+  authors:
+    - Brian Harvey
+    - Jens Mönig
+    - Michael Ball
+    - Jadga Hügle
+    - Victoria Phelps
+    - Bernat Romagosa
+  github: https://github.com/snap-cloud/manual
+  exclude:
+    - '**/*.qmd'
+    - '**/*.tex'
+  plugins:
+    - https://github.com/choldgraf/myst-substitutions/releases/download/v0.1/index.mjs
+    - _support/plugins/inline-image.mjs
+    - _support/plugins/block-help.mjs
+    - _support/plugins/snap-role.mjs
+  # Note this does not get rendered as native HTML / it is escaped.
+  substitutions:
+    Snap: Snap!
+    # Snap: 'Snap<em>!</em>'
+  exports:
+  - format: tex+pdf
+    title: Snap\textit{!} Reference Manual
+    template: ./_latex-template/
+    output: output/snap-manual.pdf
+
+extends:
+  - toc.yml
+
+site:
+  template: book-theme
+  numbered-references: true
+  hide_authors: true
+  options:
+    folders: true
+    style: _support/styles/snap-manual.css
+    favicon: images/favicon.png
+    logo: images/snap-logo.png
+    logo_alt: Snap! logo

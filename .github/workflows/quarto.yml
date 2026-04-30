@@ -2,7 +2,6 @@ on:
   workflow_dispatch:
   push:
     branches:
-      - main
       - quarto
 
 name: Quarto Publish
