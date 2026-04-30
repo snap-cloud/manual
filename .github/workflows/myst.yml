@@ -68,7 +68,8 @@ jobs:
             output/snap-manual-no-blocks-ref.pdf
             output/snap-blocks-ref.pdf
           retention-days: 10
-          if-no-files-found: error
+          # TODO: Ignore for now while secondary files are disabled.
+          if-no-files-found: ignore
 
       # Only publish to gh-pages from main (or workflow_dispatch). PRs stop
       # after building + uploading the artifact above.
