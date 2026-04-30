@@ -179,9 +179,15 @@ def strip_index_from_line(line: str) -> tuple[str, list[str], bool]:
         term, term_review = convert_index_term(raw_term)
         terms.insert(0, term)
         review = review or term_review
-        result = result[:start] + result[end:]
+        # If there's a space immediately before and after the \index{}, keep only one.
+        # Don't insert a space when the following character is punctuation.
+        pre  = result[:start].rstrip(' ')
+        post = result[end:].lstrip(' ')
+        if pre and post and not post[:1] in '.,):_-;':
+            result = pre + ' ' + post
+        else:
+            result = (pre + post).strip()
 
-    result = re.sub(r'  +', ' ', result).rstrip()
     return result, terms, review
 
 
@@ -195,9 +201,43 @@ def make_index_block(terms: list[str]) -> list[str]:
 
 # ── File processing ───────────────────────────────────────────────────────────
 
+def _collapse_multiline_index(lines: list[str]) -> list[str]:
+    """Join lines where \\index{ is opened but not closed before EOL."""
+    result = []
+    buf: str | None = None
+    for line in lines:
+        if buf is not None:
+            buf = buf.rstrip() + ' ' + line.lstrip()
+            depth = buf.count('{') - buf.count('}')
+            if depth <= 0:
+                result.append(buf)
+                buf = None
+        else:
+            depth_in_index = 0
+            pos = 0
+            in_index = False
+            for m in re.finditer(r'\\index\{', line):
+                in_index = True
+                depth_in_index = 1
+                for ch in line[m.end():]:
+                    if ch == '{':
+                        depth_in_index += 1
+                    elif ch == '}':
+                        depth_in_index -= 1
+                        if depth_in_index == 0:
+                            break
+            if in_index and depth_in_index > 0:
+                buf = line
+            else:
+                result.append(line)
+    if buf is not None:
+        result.append(buf)
+    return result
+
+
 def process_file(filepath: Path, apply: bool, interactive: bool = False) -> int:
     text = filepath.read_text(encoding='utf-8')
-    orig_lines = text.splitlines()
+    orig_lines = _collapse_multiline_index(text.splitlines())
 
     print(f'\n{"=" * 64}')
     print(f'File: {filepath}')
@@ -205,130 +245,196 @@ def process_file(filepath: Path, apply: bool, interactive: bool = False) -> int:
 
     in_code_fence = False
 
-    # Paragraph-level buffers
+    # ── Pass 1: build clean_lines, collect changed-paragraph records ──────────
+    # clean_lines has \index{} stripped from all paragraph text (no blocks added).
+    # heading_indices records which positions in clean_lines are headings.
+
+    clean_lines:    list[str]  = []
+    heading_indices: list[int] = []
+
     para_orig:  list[str] = []
-    para_new:   list[str] = []
+    para_clean: list[str] = []
     para_terms: list[str] = []
     para_start  = 1
     para_review = False
 
-    new_lines:  list[str] = []
-    change_count = 0
-    accepted = 0
-    quit_all = False
+    changed_paras: list[dict] = []
 
-    def flush_para(next_lineno: int) -> None:
-        nonlocal change_count, accepted, quit_all
+    def flush_para() -> None:
+        nonlocal para_start, para_review
         if not para_orig:
             return
-
-        if not para_terms or quit_all:
-            new_lines.extend(para_orig)
-            return
-
-        block = make_index_block(para_terms)
-        change_count += 1
-
-        if not interactive:
-            rev_flag = '  ⚠ REVIEW' if para_review else ''
-            print(f'\n  L{para_start}{rev_flag}')
-            for ln in para_orig:
-                print(f'    {DIM}{ln}{RESET}')
-            print(f'    {DIM}→{RESET}')
-            for ln in para_new:
-                print(f'    {ln}')
-            for ln in block:
-                print(f'    {BOLD}{ln}{RESET}')
-            new_lines.extend(para_new)
-            new_lines.extend(block)
-        else:
-            rev_flag = '  ⚠ REVIEW' if para_review else ''
-            print(f'\n  L{para_start}{rev_flag}')
-            print(f'  {RED}BEFORE:{RESET}')
-            for ln in para_orig:
-                print(f'    {ln}')
-            print(f'  {GREEN}AFTER:{RESET}')
-            for ln in para_new:
-                print(f'    {ln}')
-            for ln in block:
-                print(f'    {BOLD}{ln}{RESET}')
-
-            raw = input(f'  {DIM}[Enter=accept  s=skip  q=quit]{RESET} ').strip()
-            print()
-
-            if raw == 'q':
-                quit_all = True
-                new_lines.extend(para_orig)
-            elif raw == 's':
-                new_lines.extend(para_orig)
-            else:
-                new_lines.extend(para_new)
-                new_lines.extend(block)
-                accepted += 1
-
-    def reset_para() -> None:
-        para_orig.clear()
-        para_new.clear()
-        para_terms.clear()
-        nonlocal para_start, para_review
-        para_start = 0
-        para_review = False
+        first_idx = len(clean_lines)
+        clean_lines.extend(para_clean)
+        if para_terms:
+            changed_paras.append({
+                'clean_idx': first_idx,
+                'clean_len': len(para_clean),
+                'terms':     list(para_terms),
+                'orig':      list(para_orig),
+                'clean':     list(para_clean),
+                'review':    para_review,
+                'lineno':    para_start,
+            })
+        para_orig.clear(); para_clean.clear(); para_terms.clear()
+        para_start = 0; para_review = False
 
     for lineno, line in enumerate(orig_lines, 1):
         stripped = line.strip()
 
-        # Track fenced code blocks
         if re.match(r'^(`{3,}|~{3,})', stripped):
             in_code_fence = not in_code_fence
 
         if not stripped and not in_code_fence:
-            # Blank line → end of paragraph
-            flush_para(lineno)
-            reset_para()
-            new_lines.append(line)
+            flush_para()
+            clean_lines.append(line)
             continue
 
         if not para_orig:
             para_start = lineno
 
+        if not in_code_fence and re.match(r'^#{1,6}\s', line):
+            flush_para()
+            heading_indices.append(len(clean_lines))
+            clean_lines.append(line)
+            continue
+
         if in_code_fence or r'\index{' not in line:
             para_orig.append(line)
-            para_new.append(line)
+            para_clean.append(line)
         else:
             clean, terms, review = strip_index_from_line(line)
             para_orig.append(line)
-            para_new.append(clean)
+            para_clean.append(clean)
             for t in terms:
                 if t not in para_terms:
                     para_terms.append(t)
             if review:
                 para_review = True
 
-    # Flush final paragraph (no trailing blank line)
-    flush_para(len(orig_lines) + 1)
+    flush_para()
+
+    change_count = len(changed_paras)
+
+    if not change_count:
+        print('  (nothing to convert)')
+        print(f'\n(0 paragraphs with index entries)')
+        return 0
+
+    # ── Pass 2: interactive review (per paragraph) ────────────────────────────
+
+    accepted_set: set[int] = set()
+    quit_all = False
 
     if not interactive:
-        count = change_count
-        rev_count = 0  # already printed inline
-        if not count:
-            print('  (nothing to convert)')
-        print(f'\n({count} paragraph{"s" if count != 1 else ""} with index entries)')
-        if apply and count > 0:
-            out = '\n'.join(new_lines)
-            if text.endswith('\n') and not out.endswith('\n'):
-                out += '\n'
-            filepath.write_text(out, encoding='utf-8')
-            print('  -> Written.')
-        return count
+        for rec in changed_paras:
+            rev_flag = '  ⚠ REVIEW' if rec['review'] else ''
+            print(f'\n  L{rec["lineno"]}{rev_flag}')
+            for ln in rec['orig']:
+                print(f'    {DIM}{ln}{RESET}')
+            print(f'    {DIM}→{RESET}')
+            for ln in rec['clean']:
+                print(f'    {ln}')
+        accepted_set = set(range(change_count))
     else:
-        print(f'  {accepted} accepted.')
-        if accepted > 0:
+        for i, rec in enumerate(changed_paras):
+            if quit_all:
+                break
+            rev_flag = '  ⚠ REVIEW' if rec['review'] else ''
+            print(f'\n  L{rec["lineno"]}{rev_flag}')
+            print(f'  {RED}BEFORE:{RESET}')
+            for ln in rec['orig']:
+                print(f'    {ln}')
+            print(f'  {GREEN}AFTER:{RESET}')
+            for ln in rec['clean']:
+                print(f'    {ln}')
+            raw = input(f'  {DIM}[Enter=accept  s=skip  q=quit]{RESET} ').strip()
+            print()
+            if raw == 'q':
+                quit_all = True
+            elif raw != 's':
+                accepted_set.add(i)
+
+    accepted_count = len(accepted_set)
+
+    # Revert rejected paragraphs in clean_lines to their original text.
+    for i, rec in enumerate(changed_paras):
+        if i not in accepted_set:
+            start = rec['clean_idx']
+            for j, orig_ln in enumerate(rec['orig']):
+                clean_lines[start + j] = orig_ln
+
+    # ── Pass 3: assign accepted terms to their closest preceding heading ───────
+    # heading_index -1 is a sentinel meaning "before the first heading".
+
+    terms_at_heading: dict[int, list[str]] = {}
+
+    for i, rec in enumerate(changed_paras):
+        if i not in accepted_set:
+            continue
+        h_idx = -1
+        for hi in heading_indices:
+            if hi <= rec['clean_idx']:
+                h_idx = hi
+            else:
+                break
+        if h_idx not in terms_at_heading:
+            terms_at_heading[h_idx] = []
+        for t in rec['terms']:
+            if t not in terms_at_heading[h_idx]:
+                terms_at_heading[h_idx].append(t)
+
+    # Show placement summary.
+    if terms_at_heading:
+        print(f'\n  Index blocks → before heading:')
+        for h_idx in sorted(terms_at_heading):
+            label = '(start of file)' if h_idx == -1 else clean_lines[h_idx].strip()
+            print(f'    {BOLD}{label}{RESET}')
+            for t in terms_at_heading[h_idx]:
+                print(f'      {t}')
+
+    # ── Pass 4: build output ──────────────────────────────────────────────────
+    # Insert each block immediately before its heading (and before any MyST
+    # cross-reference labels "(name)=" that must sit directly above the heading).
+
+    new_lines: list[str] = []
+
+    if -1 in terms_at_heading:
+        new_lines.extend(make_index_block(terms_at_heading[-1]))
+        new_lines.append('')
+
+    for i, line in enumerate(clean_lines):
+        if i in terms_at_heading:
+            # Step back past any (label)= anchors already appended so the block
+            # lands before them, keeping the label adjacent to its heading.
+            labels: list[str] = []
+            while new_lines and re.match(r'^\([^)]+\)=$', new_lines[-1].strip()):
+                labels.insert(0, new_lines.pop())
+            new_lines.extend(make_index_block(terms_at_heading[i]))
+            new_lines.append('')
+            new_lines.extend(labels)
+        new_lines.append(line)
+
+    # ── Write / report ────────────────────────────────────────────────────────
+
+    if not interactive:
+        if apply and accepted_count > 0:
             out = '\n'.join(new_lines)
             if text.endswith('\n') and not out.endswith('\n'):
                 out += '\n'
             filepath.write_text(out, encoding='utf-8')
             print('  -> Written.')
-        return accepted
+        print(f'\n({change_count} paragraph{"s" if change_count != 1 else ""} with index entries)')
+        return change_count
+    else:
+        print(f'  {accepted_count} accepted.')
+        if accepted_count > 0:
+            out = '\n'.join(new_lines)
+            if text.endswith('\n') and not out.endswith('\n'):
+                out += '\n'
+            filepath.write_text(out, encoding='utf-8')
+            print('  -> Written.')
+        return accepted_count
 
 
 # ── File discovery ────────────────────────────────────────────────────────────

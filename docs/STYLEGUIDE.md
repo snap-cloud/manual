@@ -4,14 +4,16 @@
   unlike the rest of the manual. -->
 
 * Write UI elements inside quoted code blocks. e.g. ```"`Open`"```
-* Monospaced text should use the CSS class `.mono` e.g. `[text here]{.mono}`
+* Monospaced text should use the CSS class `.mono` e.g. `{span .mono}[text here]`
 * Do not put spaces around index entries. See [Indexes](#indexes) below.
 * To write Snap! as stylized text write: `Snap<em>!</em>`
-* Chapters are included at the top level of the repo, named 'NN-chapter'
-  * Each contains an `index.md` file, which is the chapter's main content.
-  * The `assets/` folder contains images used in the chapter.
+* Chapters are included at the top level of the repo, named 'NN-chapter.md'
+  * This md file is the content for the chapter.
+  * The `images/` folder contains images used in the manual, organized by chapter.
 * The `appendix/` folder contains additional chapters, which are subfolders within the `appendix/` folder.
-* The `blocks/` folder contains 1 markdown file per block, organized by palette.
+* The `blocks/` folder contains 1 markdown file per block, organized by palette.\
+  * `blocks/<palette>/<selector>.md` is the reference for block with selector `x` in palette `palette`.
+  * `blocks/<palette>/<selector>.yml` is the metadata for that block, which is used to render the block's help page. You should primarily edit these pages.
   * `blocks/images/` one image per block, named `block_x.png` where `x` is the block *selector*.
   * `blocks/help/` is the help screen for each block, named `selector.png`.
 

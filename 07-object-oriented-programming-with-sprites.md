@@ -1,88 +1,107 @@
 ---
 ---
 
+:::{index} OOP
+object oriented programming
+method
+message
+simulation
+message passing
+local state
+inheritance
+:::
+
 (sec-ch07)=
 # 7. Object Oriented Programming with Sprites
 
-Object oriented programming\index{object oriented programming} is a
-style based around the abstraction *object:* a collection of *data* and
-\index{method} *methods* (procedures, which from our point of view are
-just more data) that you interact with by sending it a\index{message}
+Object oriented programming is a style based around the abstraction *object:* a collection of *data* and
+*methods* (procedures, which from our point of view are
+just more data) that you interact with by sending it a
 *message* (just a name, maybe in the form of a text string, and perhaps
 additional inputs). The object responds to the message by carrying out a
 method, which may or may not report a value back to the asker. Some
-people {index}`emphasize the` *data hiding* aspect of [OOP]{.mono}
+people {index}`emphasize the` *data hiding* aspect of {span .mono}[OOP]
 (because each object has local variables that other objects can access
 only by sending request messages to the owning object) while others
 emphasize the *simulation* aspect (in which each object abstractly
 represents something in the world, and the interactions of objects in
 the program model real interactions of real people or things). Data
 hiding is important for large multi-programmer industrial projects, but
-for Snap<em>!</em> users it’s the simulation\index{simulation} aspect that’s
+for Snap<em>!</em> users it’s the simulation aspect that’s
 important. Our approach is therefore less restrictive than that of some
-other [OOP]{.mono} languages; we give objects easy access to each others’ data
+other {span .mono}[OOP] languages; we give objects easy access to each others’ data
 and methods.
 
 Technically, object oriented programming rests on three legs:
 
-1. \index{message passing} *Message passing:* There is a notation by which
+1. *Message passing:* There is a notation by which
 any object can send a message to another object.
 
-2. \index{local state}
-
-*Local state:* Each object can remember the important past history of
+2. *Local state:* Each object can remember the important past history of
 the computation it has performed. (“Important” means that it need not
 remember every message it has handled, but only the lasting effects of
 those messages that will affect later computation.)
 
-3. \index{inheritance} *Inheritance:* It would be impractical if each
+3. *Inheritance:* It would be impractical if each
 individual object had to contain methods, many of them identical to
 those of other objects, for all of the messages it can accept. Instead,
 we need a way to say that this new object is just like that old object
 except for a few differences, so that only those differences need be
 programmed explicitly.
 
-##  First Class Sprites
+:::{index} sprite
+broadcast block
+first class sprites
+my
+stage
+my block
+:::
+
+## First Class Sprites
 
 Like Scratch, Snap<em>!</em> comes with things that are natural objects: its
-sprites\index{sprite}. Each sprite can own local variables; each
+sprites. Each sprite can own local variables; each
 sprite has its own scripts (methods). A Scratch animation is plainly a
 simulation of the interaction of characters in a play. There are two
 ways in which Scratch sprites are less versatile than the objects of an
-[OOP]{.mono}language. First, Scratch message passing is weak in three respects:
-Messages can only be <code>broadcast</code>\index{broadcast block}, not addressed
+{span .mono}[OOP]language. First, Scratch message passing is weak in three respects:
+Messages can only be <code>broadcast</code>, not addressed
 to an individual sprite; messages can’t take inputs; and methods can’t
-return values to their caller. Second, and more basic, in the [OOP]{.mono}
+return values to their caller. Second, and more basic, in the {span .mono}[OOP]
 paradigm objects are *data;* they can be the value of a variable, an
 element of a list, and so on, but that’s not the case for Scratch
 sprites.
 
-Snap<em>!</em> sprites are first class\index{first class sprites} data. They can
+Snap<em>!</em> sprites are first class data. They can
 be created and deleted by a script, stored in a variable or list, and
 sent messages individually. The children of a sprite can inherit
 sprite-local variables, methods (sprite-local procedures), and other
 attributes (e.g., <code>x position</code>).
 
 The fundamental means by which programs get access to sprites is the <code>my ( )</code> reporter
-block\index{my}. It has a dropdown-menu input slot that, when clicked,
-gives access to all the sprites, plus the stage\index{stage}.
+block. It has a dropdown-menu input slot that, when clicked,
+gives access to all the sprites, plus the stage.
 ![my self](images/07-object-oriented-programming-with-sprites/image745.png){.image-inline} reports a
 single sprite, the one asking the question. ![image744.png](images/07-object-oriented-programming-with-sprites/image744.png) <!--  style="width:1.08333in;height:0.19444in" / -->   reports a list of all
 sprites other than the one asking the question. ![image743.png](images/07-object-oriented-programming-with-sprites/image743.png) <!--  style="width:0.96528in;height:0.19444in" / -->  reports a list of all
 sprites that are *near* the one asking—the ones that are candidates for
-having collided with this one, for example. The <code>my ( )</code> block\index{my
-block} has many other options, discussed below. If you know the name of
+having collided with this one, for example. The <code>my ( )</code> block has many other options, discussed below. If you know the name of
 a particular sprite, the object reporter will report the sprite itself.
 
 <!-- ![image746.png](images/07-object-oriented-programming-with-sprites/image746.png) style="width:3.55208in;height:0.51042in" / ![image747.png](images/07-object-oriented-programming-with-sprites/image747.png)   style="width:2.69143in;height:1.25in" -->
 
-An object or
-list of objects reported by <code>my ( )</code> or <code>object ( )</code> can be used as input to any
+An object or list of objects reported by <code>my ( )</code> or <code>object ( )</code> can be used as input to any
 block that accepts any input type, such as set’s (<code>set ( ) to ( )</code>) second input. If you
 <code>say ( )</code> an object, the resulting speech balloon will contain a smaller image
 of the object’s costume or (for the stage) background.
 
 ![image742.png](images/07-object-oriented-programming-with-sprites/image742.png) <!--  style="width:3.54514in;height:0.82639in" / -->
+
+:::{index} temporary clone
+clone temporary
+permanent clone
+clone; permanent
+:::
 
 ##  Permanent and Temporary Clones
 
@@ -97,8 +116,8 @@ number of essentially identical sprites that behave like the example.
 copies any more. (As we’ll see, “copies” is the wrong word because the
 parent and the children *share* a lot of properties. That’s why we use
 the word “clones” to describe the children rather than “copies.”) These
-are *[temporary]{.mono}* clones\index{temporary clone}. They are automatically
-deleted when the user presses either the "`green flag`" or the "`red stop sign`". In Scratch 2.0 and later, all clones\index{clone temporary} are
+are *{span .mono}[temporary]* clones. They are automatically
+deleted when the user presses either the "`green flag`" or the "`red stop sign`". In Scratch 2.0 and later, all clones are
 temporary.
 
 The other kind of situation is what happens when you want
@@ -115,26 +134,24 @@ of <var>Cocker Spaniel</var> (so there are four altogether) and two clones of
 <var>Rottweiler</var>. Maybe you hide the <var>Dog</var> sprite after all this, since it’s no
 breed in particular. Each dog has its own position, special behaviors,
 and so on. You want to save all of these dogs in the project. These are
-*[permanent]{.mono}* clones\index{permanent clone}. In [BYOB 3.1]{.mono}, the
-predecessor to Snap<em>!</em>, all clones\index{clone!permanent} are
+*{span .mono}[permanent]* clones. In {span .mono}[BYOB 3.1], the
+predecessor to Snap<em>!</em>, all clones are
 permanent.
 
- One advantage
-of temporary clones is that they don’t slow down Snap<em>!</em> even when you
+One advantage of temporary clones is that they don’t slow down Snap<em>!</em> even when you
 have a lot of them. (If you’re curious, one reason is that permanent
 clones appear in the sprite corral, where their pictures have to be
 updated to reflect the clone’s current costume, direction, and so on.)
 We have tried to anticipate your needs, as follows: When you make a
 clone in a script, using the ![image748.png](images/07-object-oriented-programming-with-sprites/image748.png) <!--  style="width:1.51389in;height:0.19444in" --> block, it is “born” temporary. But when you
 make a clone from the user interface, for example by right-clicking on a
-sprite and choosing "`cline`", it is born permanent. The reason this makes
+sprite and choosing "`clone`", it is born permanent. The reason this makes
 sense is that you don’t create 100 *kinds* of dogs automatically. Each
 kind has many different characteristics, programmed by hand. But when
 your project is running, it might create 100 rottweilers, and those will
 be identical unless you change them in the program.
 
-You can change a
-temporary sprite to permanent by right-clicking it and choosing "`edit.`"
+You can change a temporary sprite to permanent by right-clicking it and choosing "`edit.`"
 (It’s called "`edit`" rather than, say, “permanent” because it also shifts
 the scripting area to reflect that sprite, as if you’d pressed its
 button in the sprite corral.) You can change a permanent sprite to
@@ -142,7 +159,7 @@ temporary by right-clicking it and choosing "`release.`" You can also
 change the status of a clone in your program with ![image749.png](images/07-object-oriented-programming-with-sprites/image749.png) <!--  style="width:1.51389in;height:0.25694in" --> with true or false as
 the second input.
 
-##  Sending Messages to Sprites
+## Sending Messages to Sprites
 
 The messages that a sprite accepts are the blocks in its palettes,
 including both "`all sprites`" and "`this sprite only`" blocks. (For custom
@@ -158,8 +175,7 @@ block (for command messages) or the <code>say ( )</code> block (for reporter mes
 
 A small point to note in the examples above: all dropdown menus include
 an empty entry at the top, which can be selected for use in higher order
-procedures like the <code>for each</code> and <code>map</code> examples. Each of the sprites in <code>my
-(neighbors)</code> or <code>my (other sprites)</code> is used to fill the blank space in turn.
+procedures like the <code>for each</code> and <code>map</code> examples. Each of the sprites in <code>my (neighbors)</code> or <code>my (other sprites)</code> is used to fill the blank space in turn.
 
 By the way, if you want a list of *all* the sprites, including this
 sprite, you can use either of these:
@@ -178,29 +194,32 @@ continue without waiting. For this purpose we have the <code>launch ( )</code> b
 
 <code>Launch ( )</code> is analogous to <code>broadcast</code> without the “wait.”
 
-Snap<em>!</em> [4.1]{.mono}, following [BYOB 3.1]{.mono}, used an extension of the of block to
+Snap<em>!</em> {span .mono}[4.1], following {span .mono}[BYOB 3.1], used an extension of the of block to
 provide access to other sprites’ methods. That interface was designed
 back when we were trying hard to avoid adding new primitive blocks; it
 allowed us to write <code>ask ( ) and wait</code> and <code>tell ( )</code> as tool procedures in Snap<em>!</em> itself.
 That technique still works, but is deprecated, because nobody understood
 it, and now we have the more straightforward primitives.
 
+:::{index} method
+block; sprite-local
+map-pin symbol
+:::
+
 ### Polymorphism\index{polymorphism}
 
-Suppose you have a [Dog]{.mono} sprite
-with two clones CockerSpaniel and PitBull. In the [Dog]{.mono} sprite you define
-this method\index{method} ("`For this sprite only` block
-\index{block!sprite-local} ):
+Suppose you have a {span .mono}[Dog] sprite
+with two clones CockerSpaniel and PitBull. In the {span .mono}[Dog] sprite you define
+this method ("`For this sprite only`" block):
 
 ![image763.png](images/07-object-oriented-programming-with-sprites/image763.png) <!--  style="width:1.67361in;height:1.40208in" / -->
 
-Note the *loca*tion ([map-pin]{.mono}) symbol\index{map-pin symbol} before the
+Note the *loca*tion ({span .mono}[map-pin]) symbol before the
 block’s name. The symbol is not part of the block title; it’s a visual
 reminder that this is a sprite-*loca*l block. Sprite-local variables are
 similarly marked.
 
-But you don’t define <code>greet ( ) as friend</code> or <code>greet ( ) as enemy</code> in Dog. Each kind
-of dog has a different behavior. Here’s what a CockerSpaniel does:
+But you don’t define <code>greet ( ) as friend</code> or <code>greet ( ) as enemy</code> in Dog. Each kind of dog has a different behavior. Here’s what a CockerSpaniel does:
 
 ![image764.png](images/07-object-oriented-programming-with-sprites/image764.png) <!--  style="width:1.67361in;height:1.40208in" / -->
 
@@ -208,23 +227,29 @@ And here’s what a PitBull does:
 
 ![image765.png](images/07-object-oriented-programming-with-sprites/image765.png) <!--  style="width:1.67361in;height:1.40208in" / -->
 
-<code>Greet ( )</code> is defined in the [Dog]{.mono} sprite.
+<code>Greet ( )</code> is defined in the {span .mono}[Dog] sprite.
 If Fido is a particular cocker
 spaniel, and you ask Fido to <code>greet</code> someone, Fido inherits the <code>greet ( )</code>
-method from [Dog]{.mono}, but [Dog]{.mono} itself couldn’t actually run that method,
-because [Dog]{.mono} doesn’t have <code>greet ( ) as friend</code> or <code>greet ( ) as enemy</code>. And perhaps
+method from {span .mono}[Dog], but {span .mono}[Dog] itself couldn’t actually run that method,
+because {span .mono}[Dog] doesn’t have <code>greet ( ) as friend</code> or <code>greet ( ) as enemy</code>. And perhaps
 only individual dogs such as Fido have <code>friend? ( )</code> methods. Even though the
-<code>greet ( )</code> method is defined in the [Dog]{.mono} sprite, when it’s running it
+<code>greet ( )</code> method is defined in the {span .mono}[Dog] sprite, when it’s running it
 remembers what specific dog sprite called it, so it knows which <code>greet ( ) as
-friend</code> to use. [Dog]{.mono}’s <code>greet ( )</code> block is called a *polymorphic* method,
+friend</code> to use. {span .mono}[Dog]’s <code>greet ( )</code> block is called a *polymorphic* method,
 because it means different things to different dogs, even though they
 all share the same script.
 
-##  Local State in Sprites: Variables and Attributes
+:::{index} variable
+attribute
+getter
+setter
+:::
+
+## Local State in Sprites: Variables and Attributes
 
 A sprite’s memory of its own past history takes two main forms. It has
 *variables,* created explicitly by the user with the "`Make a variable`"
-\index{variable} button; it also has *attributes,* the qualities every
+button; it also has *attributes,* the qualities every
 sprite has automatically, such as <code>position</code>, <code>direction</code>, and <code>pen color</code>.
 Each variable can be examined using its own orange oval block; there is
 one <code>set ( ) to ( )</code> block to modify all variables. Attributes, however, have a less
@@ -243,9 +268,9 @@ uniform programming interface in Scratch:
   displays the name, above the scripting area.
 
 The block, if any, that examines a variable or attribute
-\index{attribute} is called its\index{getter} *getter;* a block (there
+is called its *getter;* a block (there
 may be more than one, as in the direction example above) that modifies a
-variable or attribute is called a\index{setter} *setter.*
+variable or attribute is called a *setter.*
 
 In Snap<em>!</em> we allow virtually all attributes to be examined. But instead
 of adding dozens of reporters, we use a more uniform interface for
@@ -259,9 +284,15 @@ used to set variable values allows setting some sprite attributes.
 
 ![image766.png](images/07-object-oriented-programming-with-sprites/image766.png) <!--  style="width:1.67361in;height:1.40208in" / -->
 
-##  Prototyping: Parents and Children
+:::{index} prototyping
+class/instance
+a new clone of block
+parent attribute
+:::
 
-Most current [OOP]{.mono} languages use a *class/instance* approach to creating
+## Prototyping: Parents and Children
+
+Most current {span .mono}[OOP] languages use a *class/instance* approach to creating
 objects. A class is a particular *kind of object,* and an instance is an
 *actual object* of that type. For example, there might be a Dog class,
 and several instances Fido, Spot, and Runt. The class typically
@@ -269,20 +300,20 @@ specifies the methods shared by all dogs (RollOver, SitUpAndBeg, Fetch,
 and so on), and the instances contain data such as species, color, and
 friendliness. Snap<em>!</em> uses a different approach called *prototyping,* in
 which there is no distinction between classes and instances. Prototyping
-\index{prototyping} is better suited to an experimental, tinkering style
+is better suited to an experimental, tinkering style
 of work: You make a single dog sprite, with both methods (blocks) and
 data (variables); you can actually watch it and interact with it on the
 stage; and when you like it, you use it as the prototype from which to
 clone other dogs. If you later discover a bug in the behavior of dogs,
 you can edit a method in the parent, and all of the children will
 automatically share the new version of the method block. Experienced
-class/instance\index{class/instance} programmers may find prototyping
-\index{prototyping} strange at first, but it is actually a more
+class/instance programmers may find prototyping
+strange at first, but it is actually a more
 expressive system, because you can easily simulate a class/instance
 hierarchy by hiding the prototype sprite! Prototyping is also a better
 fit with the Scratch {index}`design principle` that
 everything in a project should be concrete and visible on the stage; in
-class/instance [OOP]{.mono} the programming process begins with an abstract,
+class/instance {span .mono}[OOP] the programming process begins with an abstract,
 invisible entity, the class, that must be designed before any concrete
 objects can be made.[^7]
 
@@ -294,22 +325,26 @@ programming); that has, in some circles, given prototyping a bad name.
 Our prototyping design comes from {index}`Object Logo`, and
 before that, from {index}`Henry Lieberman<single: Lieberman, Henry>`.
 
+<!-- TODO: Bibtex entry -->
 \[Lieberman, H., Using Prototypical Objects to Implement Shared Behavior
 in Object-Oriented Systems, First Conference on Object-Oriented
 Programming Languages, Systems, and Applications \[OOPSLA-86\], ACM
 SigCHI, Portland, OR, September, 1986. Also in *Object-Oriented
 Computing,* Gerald Peterson, Ed., IEEE Computer Society Press, 1987.\]
 
-There are three ways to make a child sprite. If you [control-click]{.mono} or
-[right-click]{.mono} on a sprite in the “sprite corral” at the bottom right
+There are three ways to make a child sprite. If you {span .mono}[control-click] or
+{span .mono}[right-click] on a sprite in the “sprite corral” at the bottom right
 corner of the window, you get a menu that includes "`clone`" as one of the
-choices. There is an <code>a new clone of ( )</code> block\index{a new clone of block}
-in the [Control]{.mono} palette that creates and reports a child sprite. And
-sprites have a “parent” attribute\index{parent attribute} that can be
+choices. There is an <code>a new clone of ( )</code> block
+in the {span .mono}[Control] palette that creates and reports a child sprite. And
+sprites have a “parent” attribute that can be
 set, like any attribute, thereby *changing* the parent of an existing
 sprite.
 
 ![image766.png](images/07-object-oriented-programming-with-sprites/image766.png) <!--  style="width:1.67361in;height:1.40208in" / -->
+
+:::{index} inherit block
+:::
 
 ## Inheritance by Delegation
 
@@ -332,7 +367,7 @@ changed in the parent, then the children see the new value. If the
 value of a shared property is changed in the *child*, then the sharing
 link is broken, and a new private version is created in that child.
 (This is the mechanism by which a child chooses not to share a property with its parent.) “Changed” in this context means using the
-<code>set ( ) to ( )</code> or <code>change ( ) by ( )</code> block for a variable, editing a block in the Block Editor, editing a costume or sound, or inserting, deleting, or reordering costumes or sounds. To change a property from unshared to shared, the child uses the <code>inherit</code> command block. The pulldown menu in the block lists all the things this sprite can inherit from its parent (which might be nothing, if this sprite has no parent) and is not already inheriting. But that would prevent <code>tell</code>ing a child to inherit, so if the <code>inherit</code> block\index{inherit block} is inside a <code>ring</code>, its pulldown menu includes all the things a child could inherit from this sprite. [Right-clicking]{.mono} on the scripting area of a permanent clone gives a menu option to share the entire collection of scripts from its parent, as a temporary clone does.
+<code>set ( ) to ( )</code> or <code>change ( ) by ( )</code> block for a variable, editing a block in the Block Editor, editing a costume or sound, or inserting, deleting, or reordering costumes or sounds. To change a property from unshared to shared, the child uses the <code>inherit</code> command block. The pulldown menu in the block lists all the things this sprite can inherit from its parent (which might be nothing, if this sprite has no parent) and is not already inheriting. But that would prevent <code>tell</code>ing a child to inherit, so if the <code>inherit</code> block is inside a <code>ring</code>, its pulldown menu includes all the things a child could inherit from this sprite. {span .mono}[Right-clicking] on the scripting area of a permanent clone gives a menu option to share the entire collection of scripts from its parent, as a temporary clone does.
 
 The rules are full of details, but the basic idea is simple: Parents can
 change their children, but children can’t directly change their parents.
@@ -356,61 +391,82 @@ the message was delegated.
 
 ![image780.png](images/07-object-oriented-programming-with-sprites/image780.png) <!--  style="width:0.78958in;height:3.46806in" -->
 
+:::{index} attributes, list of
+self (in my block)
+neighbors (in my block)
+other sprites (in my block)
+stage (in my block)
+clones (in my block)
+other clones (in my block)
+parts (in my block)
+children (in my block)
+anchor (in my block)
+parent (in my block)
+name (in my block)
+costumes (in my block)
+sounds (in my block)
+dangling? (in my block)
+rotation x (in my block)
+rotation y</code> (in my block)
+center x (in my block)
+center y (in my block)
+:::
+
 ##  List of attributes
 
 <!-- ![image781.png](images/07-object-oriented-programming-with-sprites/image781.png) ![image782.png](images/07-object-oriented-programming-with-sprites/image782.png)  -->
 
-At the right is a picture of the dropdown menu of attributes\index{attributes, list of} in the <code>my ( )</code> block.
+At the right is a picture of the dropdown menu of attributes in the <code>my ( )</code> block.
 
 ![image770.png](images/07-object-oriented-programming-with-sprites/image770.png) <!--  style="width:5.07292in;height:0.58333in" / -->
 
 Several of these are not real attributes, but things related to
 attributes:
 
-- <code>self</code>\index{self (in my block)} : this sprite
+- <code>self</code>: this sprite
 
-- <code>neighbors</code>\index{neighbors (in my block)} : a list of *nearby*
+- <code>neighbors</code>: a list of *nearby*
   sprites[^8]
 
-- <code>other sprites</code>\index{other sprites (in my block)} : a list of all
+- <code>other sprites</code>: a list of all
   sprites except myself
 
-- <code>stage</code>\index{stage (in my block)} : the stage, which is first-class,
+- <code>stage</code>: the stage, which is first-class,
   like a sprite
 
-- <code>clones</code>\index{clones (in my block)} : a list of my *temporary* clones
+- <code>clones</code>: a list of my *temporary* clones
 
-- <code>other clones</code>\index{other clones (in my block)} : a list of my
+- <code>other clones</code>: a list of my
   *temporary* siblings
 
-- <code>parts</code>\index{parts (in my block)} : a list of sprites whose anchor
+- <code>parts</code>: a list of sprites whose anchor
   attribute is this sprite
 
-- <code>children</code>\index{children (in my block)} : a list of all my clones,
+- <code>children</code>: a list of all my clones,
   temporary and permanent
 
 The others are individual attributes:
 
-- <code>anchor</code>\index{anchor (in my block)} : the sprite of which I am a
+- <code>anchor</code>: the sprite of which I am a
   (nested) part
 
-- <code>parent</code>\index{parent (in my block)} : the sprite of which I am a clone
+- <code>parent</code>: the sprite of which I am a clone
 
 - <code>temporary?</code>: am I a temporary clone?
 
-- <code>name</code>\index{name (in my block)} : my name (same as parent’s name if
+- <code>name</code>: my name (same as parent’s name if
   I’m temporary)
 
-- <code>costumes</code>\index{costumes (in my block)} : a list of the sprite’s
+- <code>costumes</code>: a list of the sprite’s
   costumes
 
-- <code>sounds</code>\index{sounds (in my block)} : a list of the sprite’s sounds
+- <code>sounds</code>: a list of the sprite’s sounds
 
 - <code>blocks</code>: a list of the blocks visible in this sprite
 
 - <code>categories</code>: a list of all the block category names
 
-- <code>dangling?</code>\index{dangling? (in my block)} : True if I am a part and
+- <code>dangling?</code>: True if I am a part and
   not in synchronous orbit
 
 - <code>draggable?</code>: True if the user can move me with the mouse
@@ -419,32 +475,43 @@ The others are individual attributes:
   costume *as seen right now,* or the left, etc., edge of my bounding
   box, taking rotation into account.
 
-- <code>rotation x\index{rotation x (in my block)}, rotation y
- \index{rotation y</code> (in my block)} : when reading with <code>my ( )</code>, the same as <code>x
+- <code>rotation x, rotation y
+: when reading with <code>my ( )</code>, the same as <code>x
   position, y position</code>. When <code>set ( ) to ( )</code>, changes the sprite’s rotation center
   *without moving the sprite,* like dragging the rotation center in the
   paint editor.
 
-- <code>center x\index{center x (in my block)}, center y\index{center y (in
-  my block)}</code>: the x and y position of the center of my bounding box, rounded off–the geometric center of the costume.
+- <code>center x, center y </code>: the x and y position of the center of my bounding box, rounded off–the geometric center of the costume.
 
 [^8]: *<code>Neighbors</code>* are all other sprites whose bounding boxes intersect the
 doubled dimensions of the requesting sprite's bounds.
 
+:::{index} costumes, first class
+:::
+
 ## First Class Costumes and Sounds
 
 Costumes and sounds don’t have methods, as sprites do; you can’t ask
-them to do things. But they *are* first class:\index{costumes, first
-class} you can make a list of them, put them in variables, use them as
+them to do things. But they *are* first class: you can make a list of them, put them in variables, use them as
 input to a procedure, and so on. <code>My (costumes)</code> and <code>my (sounds)</code>
 report lists of them.
+
+:::{index} of costume block
+bitmap
+pixel
+transparency
+jaggies
+new costume block
+stretch block
+video on block
+:::
 
 (sec-media-computation-with-costumes)=
 ### Media Computation with Costumes
 
 The components of a costume are its name, width, height, and pixels.
 The ![image783.png](images/07-object-oriented-programming-with-sprites/image783.png) <!--  style="width:1.63194in;height:0.1875in" --> block gives access
-to these components\index{of costume block} using its left menu. From
+to these components using its left menu. From
 its right menu you can choose the current costume, the Turtle costume,
 or any costume in the sprite’s wardrobe. Since costumes are first class,
 you can also drop an expression whose value is a costume, or a list of
@@ -456,11 +523,11 @@ of the sprite’s current direction. (This is different from the
 *sprite’s* width and height, reported by the <code>my ( )</code> block.)
 
 But the really interesting part of a costume is its bitmap
-\index{bitmap}, a list of *pixels*. (A pixel\index{pixel}, short for
+, a list of *pixels*. (A pixel, short for
 “picture element,” represents one dot on your display.) Each pixel is
 itself a list of four items, the red, green, and blue components of its
 color (in the range 0-255) and what is standardly called its
-“transparency\index{transparency} ” but should be called its opacity,
+“transparency ” but should be called its opacity,
 also in the range 0-255, in which 0 means that the pixel is invisible
 and 255 means that it’s fully opaque: you can’t see anything from a
 rearward layer at that point on the stage. (Costume pixels typically
@@ -469,7 +536,7 @@ costume but not actually part of the costume; points in the interior of
 a costume typically have an opacity of 255.) Intermediate values appear
 mainly at the edge of a costume, or at sharp boundaries between colors
 inside the costume, where they are used to reduce “jaggies
-\index{jaggies} ”: the stairstep-like shape of a diagonal line displayed
+”: the stairstep-like shape of a diagonal line displayed
 on an array of discrete rectangular screen coordinates. Note that the
 opacity of a *sprite* pixel is determined by combining the costume’s
 opacity with the sprite’s <code>ghost effect</code>. (The latter really is a measure
@@ -499,7 +566,7 @@ the corner of its picture), it will be converted to pixels first.
 
 One important
 point to see here is that a bitmap (list of pixels) is not, by itself, a
-costume. The <code>new costume ( ) width ( ) height ( )</code> block\index{new costume block} creates a
+costume. The <code>new costume ( ) width ( ) height ( )</code> block creates a
 costume by combining a bitmap, a width, and a height. But, as in the
 example above, <code>switch to costume ( )</code> will accept a bitmap as input and will
 automatically use the width and height of the current costume. Note that
@@ -533,7 +600,7 @@ because the latter is always a red apple, so this little program would
 get stuck turning it green, instead of alternating colors.
 
 The <code>stretch</code> block
-\index{stretch block} takes a costume as its first input, either by
+takes a costume as its first input, either by
 selecting a costume from the menu or by dropping a costume-valued
 expression such as ![image809.png](images/07-object-oriented-programming-with-sprites/image809.png) <!--  style="width:1.72222in;height:0.22917in" -->  onto it. The other two inputs are percents of the
 original width and height, as advertised, so you can make fun house
@@ -547,9 +614,7 @@ Finally, you can use pictures from your computer’s camera in your
 projects using these blocks:
 
 
-
-Using the
-<code>video (motion) on (myself)</code> block\index{video on block} turns on the camera and displays
+Using the <code>video (motion) on (myself)</code> block turns on the camera and displays
 what it sees on the stage, regardless of the inputs given. The camera
 remains on until you click the red stop button, your program runs the
 <code>stop all</code> block, or you turn it off explicitly with the  ![image814.png](images/07-object-oriented-programming-with-sprites/image814.png) <!--  style="width:1.40278in;height:0.24306in" --> block. The video
@@ -561,16 +626,14 @@ you raise your left hand, your image raises its right hand. You can
 control this mirroring with
 the block.
 
-The
-<code>video snap on</code> block then takes a still picture from the camera, and
+The <code>video snap on</code> block then takes a still picture from the camera, and
 trims it to fit on the selected sprite. (<code>Video snap on</code> stage means to
 use the entire stage-sized rectangle.) For example, here’s a camera
 snapshot trimmed to fit Alonzo:
 
 ![image815.png](images/07-object-oriented-programming-with-sprites/image815.png) <!--  style="width:1.20417in;height:1.6125in" / -->
 
-The
-“Video Capture” project in the Examples collection repeatedly takes such
+The “Video Capture” project in the Examples collection repeatedly takes such
 trimmed snapshots and has the Alonzo sprite use the current snapshot as
 its costume, so it looks like this:
 
@@ -578,7 +641,7 @@ its costume, so it looks like this:
 
 ![image818.png](images/07-object-oriented-programming-with-sprites/image818.png) <!--  style="width:3.33333in;height:2.5in" -->
 
- (The picture above was
+(The picture above was
 actually taken with transparency set to 50, to make the background more
 visible for printing.) Because the sprite is always still in the place
 where the snapshot was taken, its costume exactly fits in with the rest
@@ -595,8 +658,8 @@ What you *would* want to do is push the sprite around the stage:
 
 ![image819.png](images/07-object-oriented-programming-with-sprites/image819.png) <!--  style="width:2.66667in;height:2in" -->
 
-(Really these
-should be Jens’s picture; it’s his project. But he’s vacationing. ☺)
+<!-- Remove this? -->
+(Really these should be Jens’s picture; it’s his project. But he’s vacationing. ☺)
 <code>Video (motion) on ( )</code> compares two snapshots a moment apart, looking only at the
 part within the given trim (here <code>myself</code>, meaning the current sprite, not
 the person looking into the camera), to detect a difference between
@@ -609,11 +672,19 @@ significant amount of motion is found; otherwise the sprite would jiggle
 around too much. And yes, you can run the second script without the
 first to push a balloon around the stage.
 
+:::{index} sound
+microphone block
+microphone
+sample
+sine wave
+new sound block
+:::
+
 ### Media Computation with Sounds
 
-The starting point for computation with sound\index{sound} is the
-<code>microphone ( )</code> block\index{microphone block}. It starts by recording a
-brief burst of sound from your microphone\index{microphone}. (How
+The starting point for computation with sound is the
+<code>microphone ( )</code> block. It starts by recording a
+brief burst of sound from your microphone. (How
 brief? On my computer, 0.010667 seconds, but you’ll see shortly how to
 ﬁnd out or control the sample size on your computer.)
 
@@ -622,7 +693,7 @@ brief? On my computer, 0.010667 seconds, but you’ll see shortly how to
 Just as the *pixel* is
 the smallest piece of a picture, the *sample* is the smallest piece of a
 sound ![image826.png](images/07-object-oriented-programming-with-sprites/image826.png) <!--  style="width:1.96528in;height:0.25694in" --> . It says here: that on my computer, 48,000 samples are recorded
-per second, so each sample\index{sample} is 1/48,000 of a second. The
+per second, so each sample is 1/48,000 of a second. The
 value of a sample is between -1 and 1, and represents the sound pressure
 on the microphone—how hard the air is pushing—at that instant. (You can
 skip the next page or so if you know about Fourier analysis.) Here’s a
@@ -637,7 +708,7 @@ downs. The most basic up-and-down function is the *sine wave:*
 
 Every periodic function (more or less, any sample that sounds like music
 rather than sounding like static) is composed of a sum of sine wave
-\index{sine wave} s of different frequencies.
+s of different frequencies.
 
 ![image829.png](images/07-object-oriented-programming-with-sprites/image829.png) <!--  style="width:2.78472in;height:1.04861in" -->
 
@@ -725,6 +796,6 @@ sound. But the <code>microphone ( )</code> block has other, simpler options also
 of the array in which data are collected (typically 512, must be a power
 of 2).
 
-The block for sounds that corresponds to <code>new picture</code> for pictures is ![image258.png](images/07-object-oriented-programming-with-sprites/image258.png) <!--  style="width:2.91667in;height:0.28125in" -->
-\index{new sound block}. Its first input is a list of samples, and its second input specifies how
+The block for sounds that corresponds to <code>new picture</code> for pictures is ![image258.png](images/07-object-oriented-programming-with-sprites/image258.png). <!--  style="width:2.91667in;height:0.28125in" -->
+Its first input is a list of samples, and its second input specifies how
 many samples occupy one second.
