@@ -1,0 +1,7 @@
+---
+---
+
+# `hide variable`
+
+```{block-help}
+```
