@@ -150,7 +150,6 @@ figure.image-inline-tall {
     margin: 0 !important;
     position: relative;
     top: -0.1rem;
-
   }
 }
 
@@ -190,7 +189,7 @@ figure.image-inline-tall {
 // TODO: Not sure if we want to combine these two classes
 // Slightly smaller than 100% for inline blocks.
 .image-4x.image-inline {
-  &, img { width: 20%; max-height: none; }
+  &, img { width: 20%; max-height: auto; }
 }
 
 // TODO: make latex command
@@ -212,6 +211,12 @@ p code:not(.sourceCode) {
   font-size: 1.1em;
   // Should we reuse the same font from the word doc?
   // font-family: monospace;
+}
+
+body.dark\:bg-stone-900 code,
+body.dark\:bg-stone-900 p code:not(.sourceCode) {
+  color: white;
+  background-color: unset;
 }
 
 .mono {

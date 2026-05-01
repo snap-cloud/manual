@@ -103,7 +103,8 @@ permanent clone
 clone; permanent
 :::
 
-##  Permanent and Temporary Clones
+(sec-permanent-and-temporary-clones)=
+## Permanent and Temporary Clones
 
 The {inline alt="image748.png"}`images/07-object-oriented-programming-with-sprites/image748.png` <!--  style="width:1.51389in;height:0.19444in" --> block is
 used to create and report an instance (a clone) of any sprite. (There is

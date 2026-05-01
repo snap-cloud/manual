@@ -4,8 +4,6 @@
 (sec-ch01)=
 # 1. Blocks, Scripts, and Sprites
 
-{{ Snap }}
-
 This chapter describes the Snap<em>!</em> features inherited from {index}`Scratch`; experienced Scratch users can skip to @sec-sprites-parallelism.
 
 Snap<em>!</em> is a programming language—a notation in which you can tell a
@@ -366,21 +364,23 @@ pictures that fill the entire stage area. The sprites appear in front of
 the current background. In a complicated project, it’s often convenient
 to use a script in the stage’s scripting area as the overall director of
 the action.
+
 :::{index} backgrounds
+Nesting Sprites
+anchor
+parts (of nested sprite)
+synchronous rotation
+dangling rotation
 :::
 
 (nesting-sprites-anchors-and-parts)=
-## {index}`Nesting Sprites`: Anchors and Parts
+## Nesting Sprites: Anchors and Parts
 
 Sometimes it’s desirable to make a sort of “super-sprite” composed of
 pieces that can move together but can also be separately articulated.
 The classic example is a person’s body made up of a torso, limbs, and a
 head. Snap<em>!</em> allows one sprite to be designated as the *anchor*
 of the combined shape, with other sprites as its *parts.*
-
-:::{index} anchor
-parts (of nested sprite)
-:::
 
 To set up sprite nesting , drag the sprite corral icon of a *part* sprite
 onto the stage display (not the sprite corral icon!) of the desired
@@ -407,12 +407,10 @@ arrow, and indicates that when the anchor sprite rotates, the part
 sprite revolves around it, but does not rotate, keeping its original
 orientation. (The part can also be rotated separately, using its turn
 blocks.) Any change in the position or size of the anchor is always
-extended to its parts. Also, cloning the anchor (see Section VII. B)
+extended to its parts. Also, cloning the anchor (see Section @sec-permanent-and-temporary-clones)
 will also clone all its parts.
-:::{index} synchronous rotation
-dangling rotation
-:::
 
+<!-- TODO: Figure w/caption -->
 ![image56.png](images/01-blocks-scripts-and-sprites/image56.png) <!-- {width=1.44444in height=1.5625in} --> ![image48.png](images/01-blocks-scripts-and-sprites/image48.png) <!-- {width=1.63056in height=0.96528in} -->
 ![image49.png](images/01-blocks-scripts-and-sprites/image49.png) <!-- {width=1.63056in height=0.96528in} -->
 
@@ -428,9 +426,9 @@ reporter block
 ## Reporter Blocks and Expressions
 
 So far, we’ve used two kinds of blocks: hat blocks
-and command blocks. Another kind is the *reporter* block, which has an oval shape: ![image66.png](images/01-blocks-scripts-and-sprites/image66.png). <!-- {width=0.72917in height=0.15625in} --> It’s called a “reporter” because
+and command blocks. Another kind is the *reporter* block, which has an oval shape: {inline alt="image66.png"}`images/01-blocks-scripts-and-sprites/image66.png`. It’s called a “reporter” because
 when it’s run, instead of carrying out an action, it reports a value
-that can be used as an input to another block. If you drag a {inline alt="image65.png"}`images/01-blocks-scripts-and-sprites/image65` <!-- {width=1.47in height=0.52in} --> reporter into the scripting area by itself and click on it, the value it reports
+that can be used as an input to another block. If you drag a {inline alt="image65.png"}`images/01-blocks-scripts-and-sprites/image65` reporter into the scripting area by itself and click on it, the value it reports
 will appear in a speech balloon next to the block:
 
 When you drag a reporter block over another block’s input slot, a white
@@ -497,14 +495,16 @@ in an input slot of blocks that are expecting a number or text. You
 wouldn’t say {inline alt="image84.png"}`images/01-blocks-scripts-and-sprites/image84.png`, although (as you can see from the picture) Snap<em>!</em> lets you do it if you really want. Instead, you normally use predicates in
 special hexagonal input slots like this one:
 
-{inline alt="image86.png" class="image-4x"}`./blocks/images/block_doIf.png`
+{inline alt="image86.png" class="image-2x"}`./blocks/images/block_doIf.png`
 
 The C-shaped `if` block runs its input script if (and only
 if) the expression in its hexagonal input reports true.
+
 ![image87.png](images/01-blocks-scripts-and-sprites/image87.png)
 
 A really useful block in animations runs its input script *repeatedly* until a predicate
-is satisfied: ![image89.png](images/01-blocks-scripts-and-sprites/image89.png)
+is satisfied:
+![image89.png](images/01-blocks-scripts-and-sprites/image89.png)
 
 If, while working on a project, you want to omit temporarily some commands
 in a script, but you don’t want to forget where they belong, you can say
