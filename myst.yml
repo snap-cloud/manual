@@ -27,11 +27,15 @@ project:
     - _support/plugins/inline-image.mjs
     - _support/plugins/block-help.mjs
     - _support/plugins/snap-role.mjs
+    - _support/plugins/img-role.mjs
     # - _support/plugins/latex-shims.mjs
   # Note this does not get rendered as native HTML / it is escaped.
   substitutions:
-    Snap: Snap!
-    # Snap: 'Snap<em>!</em>'
+    # Snap: Snap!
+    Snap: 'Snap<em>!</em>'
+  settings:
+    parser:
+      allowDangerousHtml: true
 
 # The PDF builds -- Each PDF file specifies it's own list of pages.
 # See: https://github.com/jupyter-book/mystmd/pull/2806/changes

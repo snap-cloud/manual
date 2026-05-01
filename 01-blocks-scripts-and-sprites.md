@@ -4,6 +4,8 @@
 (sec-ch01)=
 # 1. Blocks, Scripts, and Sprites
 
+{{ Snap }}
+
 This chapter describes the Snap<em>!</em> features inherited from {index}`Scratch`; experienced Scratch users can skip to @sec-sprites-parallelism.
 
 Snap<em>!</em> is a programming language—a notation in which you can tell a
@@ -250,8 +252,20 @@ circle, because the move and turn blocks are run in parallel. (To stop
 the program, click the red {index}`stop sign` at the right end
 of the tool bar.)
 
-### Costumes and Sounds
+:::{index} jukebox
+play sound block
+costume
+Costumes tab
+playing sounds
+single: Church, Alonzo
+wardrobe
+Turtle costume
+Alonzo
+procedures as data
+Scratch
+:::
 
+### Costumes and Sounds
 To change the appearance of a sprite, paint or import a new *costume* for it. To paint a costume, click on the Costumes tab above the
 scripting area, and click the paint button ![image32.png](images/01-blocks-scripts-and-sprites/image32.png) The *Paint Editor* that
 appears is explained in @sec-the-paint-editor. There are three
@@ -265,9 +279,6 @@ picture format (PNG, JPEG, etc.) supported by your browser. The third
 way is quicker if the file you want is visible on the desktop: Just drag
 the file onto the Snap<em>!</em> window. In any of these cases, the scripting
 area will be replaced by something like this:
-:::{index} costume
-Costumes tab
-:::
 
 ![image31.png](images/01-blocks-scripts-and-sprites/image31.png)
 
@@ -275,8 +286,7 @@ Just above this part of the window is a set of three tabs: Scripts,
 Costumes, and Sounds. You’ll see that the Costumes
 tab is now selected. In this view, the sprite’s *wardrobe*,
 you can choose whether the sprite should wear its
-Turtle costume or its Alonzo costume. (Alonzo, the
-Snap<em>!</em> mascot, is named after {index}`Alonzo Church<single: Church, Alonzo>`, a
+Turtle costume or its Alonzo costume. (Alonzo, the Snap<em>!</em> mascot, is named after Alonzo Church, a
 mathematician who invented the idea of procedures as data, the most important way in which Snap<em>!</em> is
 different from Scratch.) You can give a sprite as many
 costumes as you like, and then choose which it will wear either by
@@ -284,32 +294,20 @@ clicking in its wardrobe or by using the <img class="image-inline" src="./blocks
 (Every costume has a number as well as a name. The `next` costume block
 selects the next costume by number; after the highest-numbered costume it
 switches to costume 1. The Turtle, costume 0, is never chosen by next
-costume.) The {index}`Turtle costume` is the only one that
+costume.) The Turtle costume is the only one that
 changes color to match a change in the sprite’s pen color.
-:::{index} wardrobe
-Alonzo
-procedures as data
-Scratch
-:::
 
 ::: {.callout-tip}
-Protip: {img .image-inline}![Switch to costumer (() - 1)](images/01-blocks-scripts-and-sprites/image33.png) switches to the *previous* costume, wrapping like `next costume`.
-
-Protip: <img class="image-inline" src="images/01-blocks-scripts-and-sprites/image33.png" alt="Switch to costumer (() - 1)"> switches to the *previous* costume, wrapping like `next costume`.
+{inline alt="Switch to costumer (() - 1)"}`images/01-blocks-scripts-and-sprites/image33.png` switches to the *previous* costume, wrapping like `next costume`.
 :::
+<!-- Protip: <img class="image-inline" src="images/01-blocks-scripts-and-sprites/image33.png" alt="Switch to costumer (() - 1)"> switches to the *previous* costume, wrapping like `next costume`.
+-->
 
-In addition to its costumes, a sprite can have *sounds;* the equivalent for
-sounds of the sprite’s wardrobe is called its *jukebox.*
-Sound files can be imported in any format
-(WAV, OGG, MP3, etc.) supported by your browser. Two blocks accomplish
-the task of {index}`playing sounds`. If you would like a
-script to continue running while the sound is playing, use the block ![image39.png](images/01-blocks-scripts-and-sprites/image39.png).
-In contrast, you can use the block ![image38.png](images/01-blocks-scripts-and-sprites/image38.png) to wait for the sound's completion
-before continuing the rest of the script.
-:::{index} jukebox
-play sound block
+In addition to its costumes, a sprite can have *sounds;* the equivalent for sounds of the sprite’s wardrobe is called its *jukebox.* Sound files can be imported in any format (WAV, OGG, MP3, etc.) supported by your browser. Two blocks accomplish the task of playing sounds. If you would like a script to continue running while the sound is playing, use the block ![image39.png](images/01-blocks-scripts-and-sprites/image39.png). In contrast, you can use the block ![image38.png](images/01-blocks-scripts-and-sprites/image38.png) to wait for the sound's completion before continuing the rest of the script.
+
+:::{index} `broadcast and wait` block
+`broadcast` block
 :::
-
 (sec-broadcast)=
 ### Inter-Sprite Communication with Broadcast
 
@@ -319,7 +317,6 @@ to tell a story, play a game, etc. Often one sprite will have to tell
 another sprite to run a script. Here’s a simple example:
 
 (fig-broadcast-dog)=
-
 ::::{grid} 4
 :::{grid-item}
 ![image41.png](images/01-blocks-scripts-and-sprites/image41.png)
@@ -345,8 +342,7 @@ click on the downward arrowhead in that input slot, one of the choices
 enter a name for the new broadcast. When this block is run, the chosen
 message is sent to *every* sprite, which is why the block is called
 “broadcast.” (But if you click the right arrow after the message name,
-the block becomes <img class="image-inline" src="images/01-blocks-scripts-and-sprites/image45.png" alt="image45.png">, and you can change it to <img class="image-inline" src="images/01-blocks-scripts-and-sprites/image46.png" alt="image46.png"> to send the message just
-to one sprite.) In this program, though, only one sprite has a script to
+the block becomes <img class="image-inline" src="images/01-blocks-scripts-and-sprites/image45.png" alt="image45.png">, and you can change it to <img class="image-inline" src="images/01-blocks-scripts-and-sprites/image46.png" alt="image46.png"> to send the message just to one sprite.) In this program, though, only one sprite has a script to
 run when that broadcast is sent, namely the dog. Because the boy’s
 script uses `broadcast and wait` rather
 than just broadcast, the boy doesn’t go on to his next say block until
@@ -354,8 +350,6 @@ the dog’s script finishes. That’s why the two sprites take turns
 talking, instead of both talking at once. In @sec-ch07 you’ll see a more flexible
 way to send a message to a specific sprite using the tell and ask
 blocks.
-:::{index} broadcast and wait block
-:::
 
 Notice, by the way, that the say block’s first input slot is rectangular
 rather than oval. This means the input can be any text string, not only
@@ -427,6 +421,9 @@ the arm synchronous (left) and dangling (right).*
 
 :::{index} zebra coloring
 expression
+halo
+block; reporter
+reporter block
 :::
 ## Reporter Blocks and Expressions
 
@@ -435,15 +432,10 @@ and command blocks. Another kind is the *reporter* block, which has an oval shap
 when it’s run, instead of carrying out an action, it reports a value
 that can be used as an input to another block. If you drag a <img class="image-inline" src="images/01-blocks-scripts-and-sprites/image65.png" alt="image65.png"> <!-- {width=1.47in height=0.52in} --> reporter into the scripting area by itself and click on it, the value it reports
 will appear in a speech balloon next to the block:
-:::{index} block; reporter
-reporter block
-:::
 
 When you drag a reporter block over another block’s input slot, a white
-“halo ” appears around that input slot, analogous to the
+“halo” appears around that input slot, analogous to the
 white line that appears when snapping command blocks together:
-:::{index} halo
-:::
 
 ![image67.png](images/01-blocks-scripts-and-sprites/image67.png) <!-- {width=1.47in height=0.52in} -->
 
@@ -457,9 +449,9 @@ Here’s a simple script that uses a reporter block:
 ![image72.png](images/01-blocks-scripts-and-sprites/image72.png) <!--  style="width:2.11111in;height:0.61806in" -->
 
 Here the `x position` reporter provides the first input to the say block.
-(The sprite’s {index}`X position` is its horizontal position,
+(The sprite’s {index}`x position` is its horizontal position,
 how far left (negative values) or right (positive values) it is compared
-to the center of the stage. Similarly, the {index}`Y position`
+to the center of the stage. Similarly, the {index}`y position`
 is measured vertically, in steps above (positive) or below (negative)
 the center.)
 
