@@ -27,7 +27,7 @@ project:
     - _support/plugins/inline-image.mjs
     - _support/plugins/block-help.mjs
     - _support/plugins/snap-role.mjs
-    - _support/plugins/latex-shims.mjs
+    # - _support/plugins/latex-shims.mjs
   # Note this does not get rendered as native HTML / it is escaped.
   substitutions:
     Snap: Snap!

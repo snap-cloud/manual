@@ -81,19 +81,33 @@ nav a[href*="/blocks/"] { font-family: ui-monospace, monospace; }
 }
 
 // TODO: make latex env
-.image-2x {
-  height: 50%;
-  width: auto;
+.image-1-5x {
+  &, img {
+    height: 70%;
+    width: auto;
+  }
+}
+
+.image-2x,
+img[src$="image-2x"] {
+  &, img {
+    height: 50%;
+    width: auto;
+  }
 }
 
 .image-3x {
-  height: 33.33%;
-  width: auto;
+    &, img {
+    height: 33.33%;
+    width: auto;
+  }
 }
 
 .image-4x {
-  height: 25%;
-  width: auto;
+  &, img {
+    height: 25%;
+    width: auto;
+  }
 }
 
 /* In the markdown table this class is applied to the link */
@@ -115,14 +129,20 @@ figure.image-inline-tall {
   margin: 0;
 }
 
-.article p img,
+.article p img {
+  display: inline !important;
+  margin: unset;
+  vertical-align: middle;
+}
+
 .image-inline {
   display: inline;
   padding: 0;
 
   &, img {
     display: inline;
-    width: auto;
+    // Need to override MyST's default of width: 80% on images.
+    width: auto !important;
     max-width: none;
     max-height: 1.5em;
     line-height: 1.8;

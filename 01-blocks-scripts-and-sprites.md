@@ -253,7 +253,7 @@ of the tool bar.)
 ### Costumes and Sounds
 
 To change the appearance of a sprite, paint or import a new *costume* for it. To paint a costume, click on the Costumes tab above the
-scripting area, and click the paint button ![image32.png](images/01-blocks-scripts-and-sprites/image32.png). The *Paint Editor* that
+scripting area, and click the paint button ![image32.png](images/01-blocks-scripts-and-sprites/image32.png) The *Paint Editor* that
 appears is explained in @sec-the-paint-editor. There are three
 ways to import a costume. First select the desired sprite in the sprite
 corral. Then, one way is to click on the file icon in the tool bar,
@@ -319,6 +319,7 @@ to tell a story, play a game, etc. Often one sprite will have to tell
 another sprite to run a script. Here’s a simple example:
 
 (fig-broadcast-dog)=
+
 ::::{grid} 4
 :::{grid-item}
 ![image41.png](images/01-blocks-scripts-and-sprites/image41.png)
@@ -869,11 +870,10 @@ reporter blocks, each of those would light up as they are called. Note
 that the input to a block is evaluated before the block itself is
 called, so, for example, the 100 lights up before the move.
 
-The speed of stepping is
-controlled by the slider. If you move the
+The speed of stepping is controlled by the slider. If you move the
 slider all the way to the left, the speed is zero, the pause button
-turns into a step button ![image134.png](images/01-blocks-scripts-and-sprites/image134.png) <!-- {width=0.29167in height=0.16667in} --> , and the script takes a single step each time
-you push it. The name for this is *single stepping.*
+turns into a step button ![image134.png](images/01-blocks-scripts-and-sprites/image134.png),
+and the script takes a single step each time you push it. The name for this is *single stepping.*
 :::{index} slider; stepping speed
 :::
 
@@ -895,7 +895,6 @@ index variable
 script variables block
 newline character
 :::
-
 ## Etcetera
 
 This manual doesn’t (yet) explain every block in detail. There are many more
@@ -906,14 +905,37 @@ control-clicking a block and selecting “`help…`” from the menu that
 appears. If you forget what palette (color) a block is, but you remember
 at least part of its name, type <kbd>control-F</kbd> and enter the name in the text block that appears in the palette area.
 
+
+:::{index} pen vectors block
+write block
+`for` block
+local variables
+false
+`false` block
+`true` block
+true
+graphics effect
+JavaScript
+pen down? block
+at\` block
+screen pixel
+RGBA option
+`is \_ a \_ ?` block
+stage blocks
+type
+set flag block
+`split` block
+:::
+(sec-primitives-not-in-scratch)=
 Here are some of the primitive blocks that don’t exist in Scratch:
 
-![image136.png](images/01-blocks-scripts-and-sprites/image136.png)
-reports, a new costume consisting of everything
+![image135.png](images/01-blocks-scripts-and-sprites/image135.png) reports, a new costume consisting of everything
 that’s drawn on the stage by any sprite. Right-clicking the block in the
-scripting area gives the option to change it to ![image135.png](images/01-blocks-scripts-and-sprites/image135.png) if vector logging is enabled. See @sec-para-log-pen-vectors.
-:::{index} pen vectors block
-:::
+scripting area gives the option to change it to ![image136.png](images/01-blocks-scripts-and-sprites/image136.png) if vector logging is enabled. See @sec-para-log-pen-vectors.
+
+<!-- <img class="image-inline" src="images/01-blocks-scripts-and-sprites/image136.png" alt="image136.png"> reports, a new costume consisting of everything
+that’s drawn on the stage by any sprite. Right-clicking the block in the
+scripting area gives the option to change it to <img class="image-inline" src="images/01-blocks-scripts-and-sprites/image135.png" alt="image135.png"> if vector logging is enabled. See @sec-para-log-pen-vectors. -->
 
 <img class="image-inline" src="images/01-blocks-scripts-and-sprites/image137.png" alt="image137.png"> Print
 characters in the given point size on the stage, at
@@ -922,8 +944,6 @@ of the text. (That’s not always what you want, but you can save the
 sprite’s position before using it, and sometimes you need to know how
 big the text turned out to be, in turtle steps.) If the pen is down, the
 text will be underlined.
-:::{index} write block
-:::
 
 <img class="image-inline" src="images/01-blocks-scripts-and-sprites/image138.png" alt="image138.png">
 Takes a sprite as input. Like stamp except that the costume is stamped onto the selected sprite instead of onto the stage. (Does nothing if the current sprite doesn’t overlap the chosen sprite.)
@@ -937,43 +957,30 @@ Takes a sprite as input. Erases from that sprite’s costume the area that overl
 
 <img class="image-inline" src="images/01-blocks-scripts-and-sprites/image140.png" alt="image140.png"> Runs only this script until finished. In the Control palette even though it’s gray.
 
-<img class="image-inline" src="images/01-blocks-scripts-and-sprites/image143.png" alt="image143.png"> <!--  style="width:1.71in;height:0.23in" --> Reporter
-version of the `if/else` primitive command block. Only one of the two branches is evaluated, depending on the
-value of the first input.
+<img class="image-inline" src="images/01-blocks-scripts-and-sprites/image143.png" alt="image143.png"> <!--  style="width:1.71in;height:0.23in" --> Reporter version of the `if/else` primitive command block. Only one of the two branches is evaluated, depending on the value of the first input.
 
-<img class="image-inline" src="images/01-blocks-scripts-and-sprites/image144.png" alt="image144.png"> <!--  style="width:1.83in;height:0.61in" --> Looping block like
-`repeat` but with an index variable.
-:::{index} for block
-:::
+<img class="image-inline" src="images/01-blocks-scripts-and-sprites/image144.png" alt="image144.png"> <!--  style="width:1.83in;height:0.61in" --> Looping block like `repeat` but with an index variable.
 
-<img class="image-inline" src="images/01-blocks-scripts-and-sprites/image145.png" alt="image145.png"> <!--  style="width:1.37986in;height:0.28958in" alt="Graphical user interface, application, logo Description automatically generated" / --> Declare
-{index}`local variables` in a script.
+<img class="image-inline" src="images/01-blocks-scripts-and-sprites/image145.png" alt="image145.png"> <!--  style="width:1.37986in;height:0.28958in" alt="Graphical user interface, application, logo Description automatically generated" / --> Declare local variables in a script.
 
 <img class="image-inline" src="images/01-blocks-scripts-and-sprites/image148.png" alt="image148.png"> See @sec-ch09.
 
-<img class="image-inline" src="images/01-blocks-scripts-and-sprites/image146.png" alt="image146.png"> reports the value of a {index}`graphics effect`.
+<img class="image-inline" src="images/01-blocks-scripts-and-sprites/image146.png" alt="image146.png"> reports the value of a graphics effect.
 
-<img class="image-inline" src="images/01-blocks-scripts-and-sprites/image147.png" alt="image147.png"> Constant {index}`true <true block>` or {index}`false<false block>` value. See @sec-predicates-and-conditional-evaluation.
+<img class="image-inline" src="images/01-blocks-scripts-and-sprites/image147.png" alt="image147.png"> Constant true or false value. See @sec-predicates-and-conditional-evaluation.
 
-<img class="image-inline" src="images/01-blocks-scripts-and-sprites/image149.png" alt="image149.png">
+<img class="image-2x" src="images/01-blocks-scripts-and-sprites/image149.png" alt="image149.png">
 
-<img class="image-inline" src="images/01-blocks-scripts-and-sprites/image153.png" alt="image153.png">
-Create a primitive using JavaScript. (This block is
-disabled by default; the user must check “Javascript extensions” in the
-setting menu *each time* a project is loaded.)
-:::{index} JavaScript
-pen down? block
-:::
+<img class="image-inline" src="images/01-blocks-scripts-and-sprites/image153.png" alt="image153.png"> Create a primitive using JavaScript. (This block is disabled by default; the user must check “Javascript extensions” in the setting menu *each time* a project is loaded.)
 
 ::::{grid} 2
 
 :::{grid-item}
-<img class="image-inline" src="images/01-blocks-scripts-and-sprites/image150.png" alt="image150.png">
+<img class="image-1-5x" src="images/01-blocks-scripts-and-sprites/image150.png" alt="image150.png">
 :::
 
 :::{grid-item}
-The {index}`\`at\` block<`at` block>` lets you examine the screen pixel
- directly behind the rotation center of a sprite,
+The `at` block lets you examine the screen pixel directly behind the rotation center of a sprite,
 the mouse, or an arbitrary (x,y) coordinate pair dropped onto the second
 menu slot. The first five items of the left menu let you examine the
 color visible at the position. (The "RGBA" option
@@ -983,54 +990,41 @@ center (behind or in front). This is a hyperblock with respect to its
 second input.
 :::
 ::::
-:::{index} screen pixel
-RGBA option
-:::
 
 <!-- This needs 2 columns ??? -->
-![image154.png](images/01-blocks-scripts-and-sprites/image154.png){.image-4x}
-
-Checks the data type of a value.
-:::{index} `is \_ a \_ ?` block
-stage blocks
-type
-:::
+![image154.png](images/01-blocks-scripts-and-sprites/image154.png){.image-4x} Checks the data type of a value.
 
 <!-- These two need to be remade as text -->
 ![image151.png](images/01-blocks-scripts-and-sprites/image151.png){.image-4x}
 ![image152.png](images/01-blocks-scripts-and-sprites/image152.png){.image-4x}
 
-::::{grid} 2
-
-:::{grid-item}
-![image155.png](images/01-blocks-scripts-and-sprites/image155.png){.image-4x}
-:::
-:::{index} set flag block
-:::
-
-:::{grid-item}
-{index}`Turn the` text into a list,
-using the second input as the delimiter between items. The default
-delimiter, indicated by the brown dot in the input slot, is a single
-space character. "Letter" puts each character of the text in its own
-list item. "Word" puts each word in an item. ( Words
-are separated by any number of consecutive space, tab, carriage return,
-or newline characters.) "Line" is a newline character (0xa); "tab" is a {index}`tab character` (0x9);
-"cr" is a carriage return (0xd). "Csv"
- and "json" split formatted text
-into lists of lists; see @sec-csv. "Blocks"
-takes a script as the first input, reporting a list structure
-representing the structure of the script. See Chapter XI.
-:::
-::::
 :::{index} whitespace
 carriage return character
 CSV format
 JSON format
 :::
+(sec-split-block)=
+::::{grid} 2
+:::{grid-item}
+![image155.png](images/01-blocks-scripts-and-sprites/image155.png){.image-4x}
+:::
+
+:::{grid-item}
+Turn the text into a list, using the second input as the delimiter between items. The default
+delimiter, indicated by the brown dot in the input slot, is a single
+space character. "Letter" puts each character of the text in its own
+list item. "Word" puts each word in an item. ( Words
+are separated by any number of consecutive space, tab, carriage return,
+or newline characters.) "Line" is a newline character (0xa); "tab" is a {index}`tab character` (0x9);
+"cr" is a carriage return (0xd). "Csv" and "json" split formatted text
+into lists of lists; see @sec-csv. "Blocks"
+takes a script as the first input, reporting a list structure
+representing the structure of the script. See Chapter XI.
+:::
+::::
 
 <img class="image-inline" src="images/01-blocks-scripts-and-sprites/image170.png" alt="image170.png"> For lists,
- reports true only if its two input values are the
+reports true only if its two input values are the
 very same list, so changing an item in one of them is visible in the
 other. (For `=`, lists that look the same are the same.) For text strings,
 uses case-sensitive comparison, unlike `=`, which is case-independent.

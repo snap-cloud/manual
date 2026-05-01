@@ -36,15 +36,15 @@ const latexShimsTransform = {
     //    Simplest: unwrap into a `block`, which myst-to-tex passes through
     //    so children render sequentially. Replace with a multicol/minipage
     //    construction if you actually want columns.
-    utils.selectAll('grid', tree).forEach((gridNode) => {
-      gridNode.type = 'block';
-      // Optionally also flatten card wrappers inside the grid:
-      (gridNode.children || []).forEach((child) => {
-        if (child.type === 'card' || child.type === 'gridItem') {
-          child.type = 'block';
-        }
-      });
-    });
+    // utils.selectAll('grid', tree).forEach((gridNode) => {
+    //   gridNode.type = 'block';
+    //   // Optionally also flatten card wrappers inside the grid:
+    //   (gridNode.children || []).forEach((child) => {
+    //     if (child.type === 'card' || child.type === 'gridItem') {
+    //       child.type = 'block';
+    //     }
+    //   });
+    // });
 
     // 3. Image customization. Example: force every figure image to 0.8\linewidth
     //    and add a \centering. Tweak as needed; or replace entirely with a raw

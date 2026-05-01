@@ -1,4 +1,5 @@
 ---
+title: "The Snap! Reference Manual"
 ---
 
 <!-- Supress including this file in the PDF table of contents -->
