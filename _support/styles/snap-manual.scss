@@ -88,8 +88,7 @@ nav a[href*="/blocks/"] { font-family: ui-monospace, monospace; }
   }
 }
 
-.image-2x,
-img[src$="image-2x"] {
+.image-2x {
   &, img {
     height: 50%;
     width: auto;
@@ -111,7 +110,8 @@ img[src$="image-2x"] {
 }
 
 /* In the markdown table this class is applied to the link */
-td .link picture img {
+td .link picture img,
+td .link img {
   height: 55% !important;
   margin: unset !important;
 }
@@ -129,11 +129,11 @@ figure.image-inline-tall {
   margin: 0;
 }
 
-.article p img {
-  // display: inline !important;
-  margin: unset;
-  vertical-align: middle;
-}
+// .article p img {
+//   // display: inline !important;
+//   margin: unset;
+//   vertical-align: middle;
+// }
 
 .image-inline {
   display: inline;
@@ -237,6 +237,3 @@ body.dark\:bg-stone-900 p code:not(.sourceCode) {
   content: '!';
   font-style: italic;
 }
-
-// TODO: Style paragraph indents?
-// hX + p ? p+p

@@ -549,10 +549,12 @@ squiral
 ## Variables
 
 Try this script:
+
 ![image93.png](images/01-blocks-scripts-and-sprites/image93.png) <!-- {width=1.58333in height=1.41667in} -->
 
 The input to the move block is an orange oval. To get it there, drag the
 orange oval that’s part of the `for` block:
+
 ![image94.png](images/01-blocks-scripts-and-sprites/image94.png) <!-- {width=1.88542in height=1.4375in} -->
 
 The {index}`orange oval` is a *variable:* a symbol that
@@ -575,6 +577,7 @@ script inside the block’s C-slot. (By the way, if you don’t like the
 name <var>i</var>, you can change it by clicking on the orange oval without
 dragging it, which will pop up a dialog window in which you can enter a
 different name:
+
 ![image95.png](images/01-blocks-scripts-and-sprites/image95.png) <!-- {width=3.1875in height=1.5in} -->
 
 “<var>I</var>” isn’t a very descriptive name; you might prefer “length” to indicate
