@@ -1,92 +1,207 @@
-# The Snap*!* Reference Manual
-> by Brian Harvey, Jens Mönig
-
 ![Snap! Logo](./images/snap-logo.png)
 
-## [Read the Manual][webiste] ([PDF - coming soon][pdf]) (Original PDF)[orginal_pdf]
+# The Snap<em>!</em> Reference Manual
+## [Read online at docs.snap.berkeley.edu][website] &middot; [Download the PDF][pdf]
 
-[![GitHub Pages](https://img.shields.io/badge/website-GitHub%20Pages-blue.svg)](https://snap-cloud.github.io/manual/)
+[![GitHub Pages](https://img.shields.io/badge/website-GitHub%20Pages-blue.svg)](https://docs.snap.berkeley.edu/)
 
+The latest production build of the manual is published from `main` to
+GitHub Pages on every push:
 
-[webiste]: https://snap-cloud.github.io/manual/
-[pdf]: https://snap-cloud.github.io/manual/snap-manual.pdf
-[orginal_pdf]: ./SnapManual.pdf
+| Format | URL |
+| ------ | --- |
+| HTML site | <https://docs.snap.berkeley.edu/> |
+| Full manual (PDF) | <https://docs.snap.berkeley.edu/snap-manual.pdf> |
+| Manual without block reference (PDF) | <https://docs.snap.berkeley.edu/snap-manual-no-blocks-ref.pdf> |
+| Block reference only (PDF) | <https://docs.snap.berkeley.edu/snap-blocks-ref.pdf> |
+| Original Snap! 8 PDF (legacy reference) | <https://snap.berkeley.edu/snap/help/SnapManual.pdf> |
 
-The reference manual for the [Snap<em>!</em> programming language][sbe]. ([GitHub][snap_gh])
+For PRs, an unmerged-but-built copy of the PDFs is attached to each CI run
+as a GitHub Actions artifact (kept for 10 days). See ["Previewing the PDFs
+for a PR"](#previewing-the-pdfs-for-a-pr) below.
 
-[sbe]: https://snap.berkeley.edu
+[website]: https://docs.snap.berkeley.edu
+[pdf]: https://docs.snap.berkeley.edu/snap-manual.pdf
+[no_blocks_pdf]: https://docs.snap.berkeley.edu/snap-manual-no-blocks-ref.pdf
+[blocks_pdf]: https://docs.snap.berkeley.edu/snap-blocks-ref.pdf
+[legacy_pdf]: https://snap.berkeley.edu/snap/help/SnapManual.pdf
+
+The reference manual for the [Snap<em>!</em> programming language][snap]. ([GitHub][snap_gh])
+
+[snap]: https://snap.berkeley.edu
 [snap_gh]: https://github.com/jmoenig/snap/
 
-## Authors
-Brian Harvey, Jens Mönig, Michael Ball, Jadge Hügle, Victoria Phelps
+> [!NOTE]
+> The web manual is a "translation" of the [original PDF][legacy_pdf], which
+> was last largely updated for Snap<em>!</em> 8. We're first working on
+> making the web version readable, then we'll update the content to match
+> recent Snap<em>!</em> releases.
 
-## Quarto
-This version of the Snap! manual is built using [Quarto][quarto].
+## Citing Snap! and the Snap! Manual
 
-[quarto]: https://quarto.org/docs/
+To cite the _manual_ specifically:
 
-### Brief installation guide
+DOI: https://doi.org/10.5281/zenodo.16892852
 
-You need:
-* Quarto
-* Pandoc
-* LaTeX
-
-macOS:
-```shell
-brew install quarto
-brew install pandoc
-brew install mactex-no-gui
+```
+Harvey, B., & Mönig, J. (2022). Snap! Reference Manual. Zenodo. https://doi.org/10.5281/zenodo.16892852
 ```
 
-It is also recommended to install the [Quarto VSCode extension][quarto_vscode].
-[quarto_vscode]: https://marketplace.visualstudio.com/items?itemName=quarto.quarto
+```bibtex
+@book{harvey_2022_16892853,
+  author       = {Harvey, Brian and
+                  Mönig, Jens},
+  title        = {Snap! Reference Manual},
+  publisher    = {Zenodo},
+  year         = 2022,
+  month        = aug,
+  doi          = {10.5281/zenodo.16892852},
+  url          = {https://doi.org/10.5281/zenodo.16892852},
+}
+```
+To cite Snap<em>!</em> in general, please use the following citation:
+
+DOI: https://doi.org/10.5281/zenodo.15460068
+
+```
+Mönig, J., & Harvey, B. (2025). Snap! (latest). Zenodo. https://doi.org/10.5281/zenodo.15460068
+```
+
+```bibtex
+@software{monig_2025_15460069,
+  author       = {Mönig, Jens and
+                  Harvey, Brian},
+  title        = {Snap!},
+  month        = may,
+  year         = 2025,
+  publisher    = {Zenodo},
+  version      = {latest},
+  doi          = {10.5281/zenodo.15460068},
+  url          = {https://doi.org/10.5281/zenodo.15460068},
+}
+```
+
+These DOI's always point to the latest version of the manual and Snap! software, respectively. You can visit Zenodo to cite a specific version if you need to.
+
+## Authors
+Brian Harvey, Jens Mönig, Michael Ball, Jadge Hügle, Victoria Phelps, Mary Fries
+
+## Jupyter Book 2 (MyST)
+
+This version of the Snap! manual is built using [Jupyter Book 2][jb2] via [MyST Markdown][myst].
+
+[jb2]: https://jupyterbook.org
+[myst]: https://mystmd.org
+
+### Installation
+
+You need [Node.js][nodejs] (v18+) to install MyST:
+
+```shell
+npm install -g mystmd
+```
+
+[nodejs]: https://nodejs.org
+
+macOS (via Homebrew):
+```shell
+brew install node
+npm install -g mystmd
+```
+
+It is also recommended to install the [MyST VSCode extension][myst_vscode].
+
+[myst_vscode]: https://marketplace.visualstudio.com/items?itemName=ExecutableBookProject.myst-highlight
 
 ### Building the book
 
-**While writing content:**
+**While writing content (live preview):**
 
 ```shell
-quarto preview
+npm run dev
+# OR
+jupyter-book start
 ```
 
-This will automatically build the web version and display it in the browser.
-Your webpage will automatically refresh as you save changes to files.
+This builds the web version and opens it in the browser.
+The page reloads automatically as you save changes.
 
-**To compile the PDF and final version:**
+**To build the final HTML:**
 
 ```shell
-quarto render
+jupyter-book build --html
 ```
+
+Output is placed in `_build/html/`.
+
+**To build the PDFs (requires a TeX Live install):**
+
+```shell
+jupyter-book build --pdf
+```
+
+This produces three PDFs in `output/`:
+
+* `snap-manual.pdf` &mdash; the full manual.
+* `snap-manual-no-blocks-ref.pdf` &mdash; the manual without the per-block
+  reference section.
+* `snap-blocks-ref.pdf` &mdash; only the per-block reference.
+
+See [`docs/latex.md`](./docs/latex.md) for details on the PDF pipeline and
+the local LaTeX template at [`_latex-template/`](./_latex-template/). The
+two filtered variants are configured by `articles:` lists in `myst.yml`,
+generated from `toc.yml` by
+[`_support/scripts/generate-pdf-exports.py`](./_support/scripts/generate-pdf-exports.py)
+&mdash; rerun that script after editing the toc.
 
 ## Writing Style
 
-* The `content/` folder contains the markdown files, organized by chapter.
-    * Images sho
-* The `blockly/` folder contains 1 markdown file per block, organized by palette.
-  * `blocks/images/` one image per block.
+Please read [`docs/STYLEGUIDE.md`](./docs/STYLEGUIDE.md). Other developer
+docs live in [`docs/`](./docs/).
 
 ## VSCode and Editing
 
-* Use the GitHub Codespace link to edit the book in the browser.
-https://quarto.org/docs/visual-editor/vscode/
-
+Install the [MyST VSCode extension][myst_vscode] for syntax highlighting and live preview.
 
 ## Document Conversion
 If you are making large updates to the md structure, it may be worth working on the script to convert the Word document to markdown.
 The script assumes you have `pandoc` installed and available in your path.
 
 ```
-cd conversion
+cd _support/conversion
 ruby convert-word-doc.rb
 ```
 
-This conversion script dumps content into `conversion/chapters/` and then copies it into the `content/` folder.
-
 ## Published Book
 
-The website is hosted on GitHub pages, compiled by the `quarto.yml` workflow.
+The website is hosted on GitHub Pages at [docs.snap.berkeley.edu][website].
+On every push to `main`, the [`myst.yml`](./.github/workflows/myst.yml)
+workflow builds the HTML site and three PDFs (`snap-manual.pdf`,
+`snap-manual-no-blocks-ref.pdf`, `snap-blocks-ref.pdf`), then publishes
+them together to the `gh-pages` branch. All three PDFs are therefore
+available at the URLs in the table at the top of this README.
 
-## Credits
+### Previewing the PDFs for a PR
+
+The same workflow also runs on pull requests. It does **not** publish to
+`gh-pages`, but it does attach the freshly built PDFs to the workflow run
+as a GitHub Actions artifact named `snap-manual-pdfs` with a 10-day
+retention. The artifact contains all three PDFs.
+
+To grab the PR's PDFs:
+
+1. Open the PR on GitHub and click **Checks** &rarr; **Deploy MyST /
+   Jupyter Book to GitHub Pages**.
+2. On the run page, scroll to the **Artifacts** section at the bottom.
+3. Download `snap-manual-pdfs` &mdash; it expands to a zip with all three
+   PDFs.
+
+Or from the CLI:
+
+```shell
+gh run download --name snap-manual-pdfs --repo snap-cloud/manual
+```
 
 ## License
+
+AGPL, CC-BY-NC-SA

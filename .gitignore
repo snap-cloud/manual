@@ -2,41 +2,100 @@
 Thumbs.db
 ~*
 
+# CSS Compilation
+node_modules/
+_support/styles/snap-manual.css
+_support/styles/*.map
+
 # Basic Python-y things
 env/
 
 # JupyterBook
-_build/
-# MyST build outputs
 _build
+
+# MyST PDF output (configured in myst.yml exports)
+output/
+
+# Compiled Python Output
+# Mostly used for block pages, which use Jupyter envs.
+# Commited for now, just to speed up publishing time.
+# _freeze
 
 # Quarto
 /env/
-.quarto
 _book
+.quarto/
+.quarto
+.jupyter_cache
+*.quarto_ipynb
+*_files/
+
+# The final Snap! manual compiled.
+snap-manual.tex
+
+# JupyterBook 2 Compilations
+snap-manual_pdf_logs/
+snap-manual_pdf_tex/
 
 # Custom Index Rendering Files.
 _index_entries.txt
-content/**/*.pdf
-content/**/*.tex
-content/**/*.html
-site_libs/
+# Temporary rendering files.
+# This seems like a giant hack... investigate later.
+*.synctex*
+index.pdf
+index.tex
+index.html
+0*/**/*.pdf
+0*/**/*.tex
+0*/**/*.html
+1*/**/*.pdf
+1*/**/*.tex
+1*/**/*.html
+2*/**/*.pdf
+2*/**/*.tex
+2*/**/*.html
+3*/**/*.pdf
+3*/**/*.tex
+3*/**/*.html
+4*/**/*.pdf
+4*/**/*.tex
+4*/**/*.html
+5*/**/*.pdf
+5*/**/*.tex
+5*/**/*.html
+6*/**/*.pdf
+6*/**/*.tex
+6*/**/*.html
+7*/**/*.pdf
+7*/**/*.tex
+7*/**/*.html
+8*/**/*.pdf
+8*/**/*.tex
+8*/**/*.html
+9*/**/*.pdf
+9*/**/*.tex
+9*/**/*.html
+appendix/**/*.pdf
+appendix/**/*.tex
+appendix/**/*.html
+blocks/**/*.pdf
+blocks/**/*.tex
+blocks/**/*.html
 
+site_libs/
 
 # LaTex Complication Messes
 *.aux
 *.log
-content/*.tex
 *.toc
 *.idx
 *.ilg
 *.ind
 *.out
-# Ignore all intermediate tex files
-# TODO: this may be too broad
-*.tex
-content/*.pdf
-content/*_files/**
+*.xdv
+*.fdb_latexmk
+*.fls
+*.synctex.gz
 
 # Conversion
 conversion/chapters/*

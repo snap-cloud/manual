@@ -1,0 +1,239 @@
+// Adobe Fonts -- Michael's UC Berkeley Adobe Account
+// TODO: Move to Adobe Fonts
+@import url('https://fonts.googleapis.com/css2?family=Freight+Text+Pro:wght@400;700&display=swap');
+
+:root,
+:root[data-theme='dark'] {
+  // Berkeley Color Palette
+  // https://brand.berkeley.edu/visual-identity/colors/
+  // School Colors
+  --berkeley-blue: #002676;
+  --california-gold: #FDB515;
+  //  Primary Colors
+  --blue-dark: #010133;
+  --gold-dark: #FC9313;
+  --green-dark: #00553A;
+  --rose-dark: #770747;
+  --purple-dark: #431170;
+  // alternatives (medium)
+  --blue-medium: #004AAE;
+  --gold-medium: #FFC31B;
+  --green-medium: #018943;
+  --rose-medium: #E7115E;
+  --purple-medium: #8236C7;
+  // alternatives (light)
+  --blue-light: #9FD1FF;
+  --gold-light: #FFE88D;
+  --green-light: #B3E59A;
+  --rose-light: #FFCFE5;
+  --purple-light: #D9CEFF;
+  --gray-medium: #808080;
+  --gray-light: #F2F2F2;
+}
+
+// JupyterBook 2 top navigation. The book-theme uses Tailwind utilities
+// (bg-white/80, backdrop-blur, shadow) on a `.myst-top-nav` div; we override
+// them here rather than forking the theme. !important is needed to defeat
+// the Tailwind utility classes also targeting these elements.
+.myst-top-nav {
+  background-color: var(--berkeley-blue) !important;
+  backdrop-filter: none !important;
+  box-shadow: none !important;
+
+  // Force light foreground on top of berkeley-blue, regardless of the
+  // theme-supplied text-stone-* / dark:text-white utilities on children.
+  &, a, button, svg {
+    color: #FFF !important;
+  }
+}
+
+/* Designed to be the last element in a section / nav
+/ Makes a little "puzzle piece" connector. */
+.trapezoid {
+  position: relative;
+  margin-left: 60px;
+  border-top: 14px solid;
+  border-left: 9px solid transparent;
+  border-right: 9px solid transparent;
+  height: 0;
+  width: 64px;
+  margin-top: -14px;
+  top: 14px;
+  z-index: 1000;
+  color: var(--berkeley-blue);
+}
+
+.trapezoid-footer {
+  top: -14px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Freight Text Pro', serif;
+}
+
+nav a[href*="/blocks/"] { font-family: ui-monospace, monospace; }
+
+// Block (page) titles cannot have their own classes added to them directly.
+.title code,
+.menu-text code {
+  color: #000;
+  background-color: unset;
+}
+
+// TODO: make latex env
+.image-1-5x {
+  &, img {
+    height: 70%;
+    width: auto;
+  }
+}
+
+.image-2x {
+  &, img {
+    height: 50%;
+    width: auto;
+  }
+}
+
+.image-3x {
+    &, img {
+    height: 33.33%;
+    width: auto;
+  }
+}
+
+.image-4x {
+  &, img {
+    height: 25%;
+    width: auto;
+  }
+}
+
+/* In the markdown table this class is applied to the link */
+td .link picture img,
+td .link img {
+  height: 55% !important;
+  margin: unset !important;
+}
+
+// TODO: make latex command
+// Review the vertical alignment of reporters vs hats/
+// .image-inline may be on an <img> directly or on a MyST-generated <picture>
+// wrapper. Shared layout rules live on the element; sizing/alignment rules are
+// applied to both the element itself and any nested <img>.
+// MyST wraps images in <picture> or <figure> and applies margin: auto.
+// Override for all three possible wrapper elements + bare <img>.
+figure.image-inline,
+figure.image-inline-tall {
+  display: inline;
+  margin: 0;
+}
+
+// .article p img {
+//   // display: inline !important;
+//   margin: unset;
+//   vertical-align: middle;
+// }
+
+.image-inline {
+  display: inline;
+  padding: 0 1px;
+
+  &, img {
+    display: inline;
+    // Need to override MyST's default of width: 80% on images.
+    width: auto !important;
+    max-width: none;
+    max-height: 1.5em;
+    line-height: 1.8;
+    vertical-align: middle;
+    margin: 0 !important;
+    position: relative;
+    top: -0.1rem;
+  }
+}
+
+.image-inline-tall {
+  display: inline;
+  padding: 0;
+
+  &, img {
+    display: inline;
+    width: auto;
+    max-width: none;
+    max-height: 2.4em;
+    line-height: 2.4;
+    vertical-align: bottom;
+    margin: 0;
+  }
+}
+
+// MyST grid: make items fill their column and center images
+.sd-row .sd-col {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+.evenly-spaced-images {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+// TODO: Not sure if we want to combine these two classes
+// Slightly smaller than 100% for inline blocks.
+.image-4x.image-inline {
+  &, img { width: 20%; max-height: auto; }
+}
+
+// TODO: make latex command
+// Less padding than bootstrap default.
+kbd {
+  line-height: 1.6;
+  padding: 2px;
+}
+
+code,
+// A Bootstrap definition we need to override
+p code:not(.sourceCode) {
+  color: black;
+  background-color: unset;
+  font-family: "tekton-pro", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1.1em;
+  // Should we reuse the same font from the word doc?
+  // font-family: monospace;
+}
+
+body.dark\:bg-stone-900 code,
+body.dark\:bg-stone-900 p code:not(.sourceCode) {
+  color: white;
+  background-color: unset;
+}
+
+.mono {
+  font-family: 'source-code-pro', 'Monaco', courier, monospace;
+}
+
+// TODO: make latex command
+// This is the font used in the Word document.`
+// TODO: load Candara font.
+.snap {
+  font-size: 1.1em;
+  font-family: "candara", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.snap::after {
+  content: '!';
+  font-style: italic;
+}

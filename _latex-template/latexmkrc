@@ -1,0 +1,10 @@
+# Read by latexmk when MyST runs the PDF build from the temp build directory.
+# This file is bundled alongside the rendered .tex file via template.yml's
+# `files:` list, so it ends up next to snap-manual.tex.
+#
+# We pair this with `\usepackage[noautomatic]{imakeidx}` in template.tex,
+# which disables imakeidx's own shell-escape makeindex run and hands the
+# job to latexmk. That lets us pass `-s index-style.ist` so the index uses
+# our custom makeindex style file (bold letter-group headings, small items,
+# right-aligned page numbers).
+$makeindex = 'makeindex %O -s index-style.ist -o %D %S';

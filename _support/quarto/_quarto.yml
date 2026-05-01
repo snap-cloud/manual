@@ -1,0 +1,432 @@
+project:
+  type: book
+  execute-dir: project
+  output-dir: _book
+  preview:
+    port: 8081
+    browser: true
+    watch-inputs: true
+    navigate: false
+  # These files are included in the published website.
+  resources:
+    - CNAME
+    - LICENSE
+    - README.md
+    - SnapManual.pdf
+  # pre-render:
+  #   - blocks/render-block-files.py
+  # post-render:
+
+execute:
+  daemon: true
+  freeze: true
+  # We can't use the cache since all code cells (in blocks/) are indentical.
+  cache: false
+
+bibliography: references.bib
+brand: _brand.yml
+# Don't number subsections as chapters.
+# number-depth: 1
+# Setting toc-depth to 1 disables displaying the pre-page toc
+# toc-depth: 1
+appendix-style: none
+
+# Allow other types of content to be cross-referenced in the book.
+# https://quarto.org/docs/authoring/cross-references-custom.html
+crossref:
+  custom:
+    - kind: float
+      reference-prefix: Section
+      key: para
+      latex-env: pararef
+    - kind: float
+      reference-prefix: Project
+      key: proj
+      latex-env: snapproject
+format:
+  html:
+    # pandoc:
+    #   implicit-figures: false
+    aria: true # requires quarto-dev / v1.8+
+    toc: true
+    filters:
+      - _support/scripts/collect-index.lua
+      - _support/scripts/exclude-blocks-toc.lua
+    link-external-icon: true
+    link-external-newwindow: true
+    smooth-scroll: true
+    theme:
+      - default
+      - _support/styles/snap-manual.scss
+      - _support/styles/quarto-overrides.scss
+    fontsize: 16px
+    # mainfont:
+    # monofont:
+    respect-user-color-scheme: true
+    strip-comment: true
+    html-math-method: katex
+    # TODO: Add link to s.b.e
+    navbar:
+      logo: images/snap-logo.png
+      logo-alt: Snap! Logo
+    include-in-header:
+      - text: |
+          <link rel="stylesheet" href="https://use.typekit.net/brw3qiw.css">
+    #   - file: analytics.html
+    #   - comments.html
+    include-after-body:
+      - text: |
+          <script>
+            const nav = document.querySelector('nav');
+            nav.insertAdjacentHTML('afterend', '<div class="trapezoid"></div>');
+          </script>
+    # TODO: Customize footer. Add berkeley + SAP links.
+  # epub:
+  #   css: _support/styles/epub.css
+  #   cover-image: cover.png
+  pdf:
+    # pandoc:
+    #   implicit-figures: false
+    lang: en
+    dir: ltr
+    # https://quarto.org/docs/reference/formats/pdf.html
+    output-file: snap-manual.pdf
+    # cover-image: images/cover-image.png
+    pdf-engine: lualatex
+    # pdf-engine-opt:
+    # latex-makeindex-opts:
+    keep-tex: true
+    filters:
+      - _support/scripts/replace-snap.lua
+      - _support/scripts/exclude-blocks-toc.lua
+    # https://www.overleaf.com/learn/latex/Indices
+    include-in-header: _support/tex/latex-preamble.tex
+    include-after-body:
+      text: |
+        \printindex
+    toc: true
+    toc-depth: 2
+    number-sections: true
+    number-depth: 2
+    # https://ctan.math.utah.edu/ctan/tex-archive/macros/latex/contrib/koma-script/doc/scrguide-en.pdf
+    documentclass: scrbook
+    # documentclass: scrreport
+    classoption:
+      - 11pt
+      # These should be disabled for the final version.
+      # - draft=true
+      # - overfullrule=true
+    papersize: letter
+    # font options are passed to fontenc
+    # https://ctan.math.illinois.edu/macros/unicodetex/latex/fontspec/fontspec.pdf
+    # TODO: In order to enable fonts, they need to be added to the GitHub Workflow.
+    # 'Times New Roman', 'Times' do not work...
+    # We may need to use a profile to set different options for GitHub.
+    mainfont: baskerville
+    # monofont: Source Code Pro
+    # sansfont: Helvetica
+    resource-path:
+      - ./
+      - images/
+      - assets/images/
+      - blocks/images/
+      - blocks/help/
+    # Options which override others...
+    # This is still not showing an italic !
+    title: Snap\\textit{!} Reference Manual
+    # shown below the title.
+    # subtitle:
+    authors: Brian Harvey, Jens Mönig, Michael Ball, Jadga Hügle, \newline Victoria Phelps, Bernat Romagosa
+    # Shows on page 2...
+    # abstract: Abstract test
+    # Ads an * after the title.
+    # thanks: thanks test
+# TODO: Investigate mapping CSS to latex envs
+# https://github.com/quarto-ext/latex-environment
+# https://github.com/quarto-ext/latex-environment?tab=readme-ov-file#example
+# filters:
+#    - latex-environment
+# environments:
+#   center: center-env
+
+book:
+  title: Snap<em>!</em> Reference Manual
+  output-file: snap-manual
+  author: Brian Harvey, Jens Mönig, Michael Ball, Jadga Hügle, Victoria Phelps, Bernat Romagosa
+  date: September 1, 2025
+  description: A manual for the Snap! programming language
+  references: references.bib
+  cover-image: images/cover-image.png
+  cover-image-alt: Snap! Manual Cover Image
+  favicon: images/favicon.png
+  language: en
+  edition: 11
+  license: CC-BY-NC-SA 4.0
+  url: https://docs.snap.berkeley.edu/
+  public-url: https://docs.snap.berkeley.edu/
+  pdf-url: https://snap.berkeley.edu/snap/help/SnapManual.pdf
+  doi: https://doi.org/10.5281/zenodo.16892852
+  # abstract:
+  downloads:
+    - pdf
+    # - epub
+  page-navigation: true
+  search: true
+  navbar:
+    pinned: true
+    logo: images/snap-logo.png
+    logo-alt: Snap! Logo
+    logo-href: https://docs.snap.berkeley.edu/
+    # tools:
+  sidebar:
+    style: "docked"
+    search: true
+  repo-url: https://github.com/snap-cloud/manual/
+  issue-url: https://forum.snap.berkeley.edu/c/manual/77
+  repo-actions: none # [edit]
+  # TODO: Consider a _quarto-withblocks.yml which includes all the blocks
+  # which would allow us to have 2 separate compilation paths.
+  chapters:
+    - index.qmd
+    - 00-acknowledgements/index.md
+    - 01-blocks-scripts-and-sprites/index.md
+    - 02-saving-and-loading-projects-and/index.md
+    - 03-building-a-block/index.md
+    - 04-first-class-lists/index.md
+    - 05-typed-inputs/index.md
+    - 06-procedures-as-data/index.md
+    - 07-object-oriented-programming-with-sprites/index.md
+    - 08-oop-with-procedures/index.md
+    - 09-the-outside-world/index.md
+    - 10-continuations/index.md
+    - 11-metaprogramming/index.md
+    - 12-user-interface-elements/index.md
+  appendices:
+    - appendix/libraries/index.md
+    - appendix/a-snap-color-library/index.md
+    - appendix/b-apl-features/index.md
+    # TODO: SciSnap! and TuneScope libraries
+    - appendix/community/index.md
+    - blocks/index.md
+    - part: Motion Blocks
+      chapters:
+        - blocks/motion/forward.qmd
+        - blocks/motion/turn.qmd
+        - blocks/motion/turnLeft.qmd
+        - blocks/motion/setHeading.qmd
+        - blocks/motion/doFaceTowards.qmd
+        - blocks/motion/gotoXY.qmd
+        - blocks/motion/doGotoObject.qmd
+        - blocks/motion/doGlide.qmd
+        - blocks/motion/changeXPosition.qmd
+        - blocks/motion/setXPosition.qmd
+        - blocks/motion/changeYPosition.qmd
+        - blocks/motion/setYPosition.qmd
+        - blocks/motion/bounceOffEdge.qmd
+        - blocks/motion/getPosition.qmd
+        - blocks/motion/xPosition.qmd
+        - blocks/motion/yPosition.qmd
+        - blocks/motion/direction.qmd
+    - part: Looks Blocks
+      chapters:
+        - blocks/looks/doSwitchToCostume.qmd
+        - blocks/looks/doWearNextCostume.qmd
+        - blocks/looks/getCostumeIdx.qmd
+        - blocks/looks/doSayFor.qmd
+        - blocks/looks/bubble.qmd
+        - blocks/looks/doThinkFor.qmd
+        - blocks/looks/doThink.qmd
+        - blocks/looks/reportGetImageAttribute.qmd
+        - blocks/looks/reportNewCostumeStretched.qmd
+        - blocks/looks/reportNewCostumeSkewed.qmd
+        - blocks/looks/reportNewCostume.qmd
+        - blocks/looks/changeEffect.qmd
+        - blocks/looks/setEffect.qmd
+        - blocks/looks/clearEffects.qmd
+        - blocks/looks/getEffect.qmd
+        - blocks/looks/changeScale.qmd
+        - blocks/looks/setScale.qmd
+        - blocks/looks/getScale.qmd
+        - blocks/looks/show.qmd
+        - blocks/looks/hide.qmd
+        - blocks/looks/reportShown.qmd
+        - blocks/looks/goToLayer.qmd
+        - blocks/looks/goBack.qmd
+    - part: Sound Blocks
+      chapters:
+        - blocks/sound/playSound.qmd
+        - blocks/sound/doPlaySoundUntilDone.qmd
+        - blocks/sound/doStopAllSounds.qmd
+        - blocks/sound/doPlaySoundAtRate.qmd
+        - blocks/sound/reportGetSoundAttribute.qmd
+        - blocks/sound/reportNewSoundFromSamples.qmd
+        - blocks/sound/doRest.qmd
+        - blocks/sound/doPlayNote.qmd
+        - blocks/sound/doSetInstrument.qmd
+        - blocks/sound/doChangeTempo.qmd
+        - blocks/sound/doSetTempo.qmd
+        - blocks/sound/getTempo.qmd
+        - blocks/sound/changeVolume.qmd
+        - blocks/sound/setVolume.qmd
+        - blocks/sound/getVolume.qmd
+        - blocks/sound/changePan.qmd
+        - blocks/sound/setPan.qmd
+        - blocks/sound/getPan.qmd
+        - blocks/sound/playFreq.qmd
+        - blocks/sound/stopFreq.qmd
+    - part: Pen Blocks
+      chapters:
+        - blocks/pen/clear.qmd
+        - blocks/pen/down.qmd
+        - blocks/pen/up.qmd
+        - blocks/pen/getPenDown.qmd
+        - blocks/pen/setColor.qmd
+        - blocks/pen/changePenColorDimension.qmd
+        - blocks/pen/setPenColorDimension.qmd
+        - blocks/pen/getPenAttribute.qmd
+        - blocks/pen/changeSize.qmd
+        - blocks/pen/setSize.qmd
+        - blocks/pen/doStamp.qmd
+        - blocks/pen/floodFill.qmd
+        - blocks/pen/write.qmd
+        - blocks/pen/reportPenTrailsAsCostume.qmd
+        - blocks/pen/doPasteOn.qmd
+        - blocks/pen/doCutFrom.qmd
+        - blocks/pen/reportColor.qmd
+        - blocks/pen/reportColorAttribute.qmd
+        - blocks/pen/reportNewColor.qmd
+    - part: Control Blocks
+      chapters:
+        - blocks/control/receiveGo.qmd
+        - blocks/control/receiveUserEdit.qmd
+        - blocks/control/receiveOnClone.qmd
+        - blocks/control/receiveMessage.qmd
+        - blocks/control/receiveKey.qmd
+        - blocks/control/receiveConditionEvent.qmd
+        - blocks/control/receiveInteraction.qmd
+        - blocks/control/doBroadcast.qmd
+        - blocks/control/doBroadcastAndWait.qmd
+        - blocks/other/doWarp.qmd
+        - blocks/control/doWait.qmd
+        - blocks/control/doWaitUntil.qmd
+        - blocks/control/doForever.qmd
+        - blocks/control/doRepeat.qmd
+        - blocks/control/doUntil.qmd
+        - blocks/control/doFor.qmd
+        - blocks/control/doIf.qmd
+        - blocks/control/doIfElse.qmd
+        - blocks/control/reportIfElse.qmd
+        - blocks/control/doReport.qmd
+        - blocks/control/doStopThis.qmd
+        - blocks/control/doRun.qmd
+        - blocks/control/fork.qmd
+        - blocks/control/evaluate.qmd
+        - blocks/control/reportPipe.qmd
+        - blocks/control/doTellTo.qmd
+        - blocks/control/reportAskFor.qmd
+        - blocks/control/createClone.qmd
+        - blocks/control/newClone.qmd
+        - blocks/control/removeClone.qmd
+        - blocks/control/doPauseAll.qmd
+        - blocks/control/doSwitchToScene.qmd
+        - blocks/control/doDefineBlock.qmd
+        - blocks/control/doDeleteBlock.qmd
+        - blocks/control/doSetBlockAttribute.qmd
+        - blocks/control/reportBlockAttribute.qmd
+        - blocks/control/reportEnvironment.qmd
+        - blocks/control/doSetSlot.qmd
+    - part: Sensing Blocks
+      chapters:
+        - blocks/sensing/reportTouchingObject.qmd
+        - blocks/sensing/reportTouchingColor.qmd
+        - blocks/sensing/reportColorIsTouchingColor.qmd
+        - blocks/sensing/doAsk.qmd
+        - blocks/sensing/getLastAnswer.qmd
+        - blocks/sensing/reportMousePosition.qmd
+        - blocks/sensing/reportMouseX.qmd
+        - blocks/sensing/reportMouseY.qmd
+        - blocks/sensing/reportMouseDown.qmd
+        - blocks/sensing/reportKeyPressed.qmd
+        - blocks/sensing/reportRelationTo.qmd
+        - blocks/sensing/reportAspect.qmd
+        - blocks/sensing/doResetTimer.qmd
+        - blocks/sensing/getTimer.qmd
+        - blocks/sensing/reportDate.qmd
+        - blocks/sensing/reportAttributeOf.qmd
+        - blocks/sensing/reportGet.qmd
+        - blocks/sensing/reportObject.qmd
+        - blocks/sensing/reportURL.qmd
+        - blocks/sensing/reportAudio.qmd
+        - blocks/sensing/reportVideo.qmd
+        - blocks/sensing/doSetVideoTransparency.qmd
+        - blocks/sensing/reportGlobalFlag.qmd
+        - blocks/sensing/doSetGlobalFlag.qmd
+    - part: Operators Blocks
+      chapters:
+        - blocks/other/reifyScript.qmd
+        - blocks/other/reifyReporter.qmd
+        - blocks/other/reifyPredicate.qmd
+        - blocks/operators/reportVariadicSum.qmd
+        - blocks/operators/reportDifference.qmd
+        - blocks/operators/reportVariadicProduct.qmd
+        - blocks/operators/reportQuotient.qmd
+        - blocks/operators/reportPower.qmd
+        - blocks/operators/reportModulus.qmd
+        - blocks/operators/reportVariadicMin.qmd
+        - blocks/operators/reportVariadicMax.qmd
+        - blocks/operators/reportRound.qmd
+        - blocks/operators/reportMonadic.qmd
+        - blocks/operators/reportAtan2.qmd
+        - blocks/operators/reportRandom.qmd
+        - blocks/operators/reportVariadicLessThan.qmd
+        - blocks/operators/reportVariadicEquals.qmd
+        - blocks/operators/reportVariadicGreaterThan.qmd
+        - blocks/operators/reportVariadicAnd.qmd
+        - blocks/operators/reportVariadicOr.qmd
+        - blocks/operators/reportNot.qmd
+        - blocks/operators/reportBoolean.qmd
+        - blocks/operators/reportJoinWords.qmd
+        - blocks/operators/reportTextSplit.qmd
+        - blocks/operators/reportLetter.qmd
+        - blocks/operators/reportTextAttribute.qmd
+        - blocks/operators/reportUnicode.qmd
+        - blocks/operators/reportUnicodeAsLetter.qmd
+        - blocks/operators/reportIsA.qmd
+        - blocks/operators/reportVariadicIsIdentical.qmd
+    - part: Variables Blocks
+      chapters:
+        - blocks/variables/doSetVar.qmd
+        - blocks/variables/doChangeVar.qmd
+        - blocks/variables/doShowVar.qmd
+        - blocks/variables/doHideVar.qmd
+        - blocks/other/doDeclareVariables.qmd
+        - blocks/variables/doDeleteAttr.qmd
+        - blocks/lists/reportNewList.qmd
+        - blocks/lists/reportNumbers.qmd
+        - blocks/lists/reportCONS.qmd
+        - blocks/lists/reportListItem.qmd
+        - blocks/lists/reportCDR.qmd
+        - blocks/lists/reportListAttribute.qmd
+        - blocks/lists/reportListIndex.qmd
+        - blocks/lists/reportListContainsItem.qmd
+        - blocks/lists/reportListIsEmpty.qmd
+        - blocks/lists/reportMap.qmd
+        - blocks/lists/reportKeep.qmd
+        - blocks/lists/reportFindFirst.qmd
+        - blocks/lists/reportCombine.qmd
+        - blocks/lists/doForEach.qmd
+        - blocks/lists/doAddToList.qmd
+        - blocks/lists/doDeleteFromList.qmd
+        - blocks/lists/doInsertInList.qmd
+        - blocks/lists/doReplaceInList.qmd
+        - blocks/lists/reportConcatenatedLists.qmd
+        - blocks/lists/reportReshape.qmd
+        - blocks/lists/reportCrossproduct.qmd
+    # - part: Advanced and Hidden Blocks
+    #   chapters:
+    #     - blocks/operators/reportJSFunction.qmd
+    #     - blocks/other/doPrimitive.qmd
+    #     - blocks/other/doApplyExtension.qmd
+    #     - blocks/other/reportApplyExtension.qmd
+    # - references.qmd
+    # - content/index-list.qmd

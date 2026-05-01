@@ -1,0 +1,12 @@
+# GitHub CI profile for the Quarto Book.
+# This assumes _quarto.yml is already loaded.
+# Values here override the main config.
+
+format:
+  # html:
+  pdf:
+    # pdf-engine-opt:
+    classoption:
+      - 11pt
+    mainfont: Lato
+    # mainfont: baskerville

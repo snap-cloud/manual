@@ -1,0 +1,58 @@
+# See docs at: https://mystmd.org/guide/frontmatter
+version: 1
+project:
+  id: e2e8108c-f6b3-443e-8192-e9f0a4b5e752
+  title: Snap! Reference Manual
+  description: A manual for the Snap! programming language
+  keywords:
+    - Snap!
+    - programming languages
+    - blocks-based programming
+    - visual programming
+  authors:
+    - Brian Harvey
+    - Jens Mönig
+    - Michael Ball
+    - Jadga Hügle
+    - Victoria Phelps
+    - Bernat Romagosa
+  github: https://github.com/snap-cloud/manual
+  exclude:
+    - '**/*.qmd'
+    - '**/*.tex'
+  downloads:
+    - id: output-pdf-primary
+  plugins:
+    - https://github.com/choldgraf/myst-substitutions/releases/download/v0.1/index.mjs
+    - _support/plugins/inline-image.mjs
+    - _support/plugins/block-help.mjs
+    - _support/plugins/snap-role.mjs
+    - _support/plugins/img-role.mjs
+    - _support/plugins/latex-shims.mjs
+  # Note this does not get rendered as native HTML / it is escaped.
+  substitutions:
+    # Snap: Snap!
+    Snap: 'Snap<em>!</em>'
+  settings:
+    parser:
+      allowDangerousHtml: true
+
+# The PDF builds -- Each PDF file specifies it's own list of pages.
+# See: https://github.com/jupyter-book/mystmd/pull/2806/changes
+# Commnet out the _pdf files if you do not wish to build all 3 copies.
+# The _alternates file builds the book with the blocks reference, and just the blocks reference.
+extends:
+  - toc.yml
+  - toc_pdf.yml
+  # - toc_pdf_alternates.yml
+
+site:
+  template: book-theme
+  options:
+    numbered-references: true
+    hide_authors: true
+    folders: true
+    style: _support/styles/snap-manual.css
+    favicon: images/favicon.png
+    logo: images/snap-logo.png
+    logo_alt: Snap! logo

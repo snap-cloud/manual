@@ -1,0 +1,7 @@
+---
+---
+
+# `report extension`
+
+```{block-help}
+```

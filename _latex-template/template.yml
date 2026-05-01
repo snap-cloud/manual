@@ -1,0 +1,60 @@
+jtex: v1
+title: Snap! Manual
+description: >
+  A locally vendored copy of the MyST plain_latex_book template, adapted for
+  the Snap! Reference Manual (US Letter, scrbook, indexed, Snap! brand colors,
+  custom Snap! cover page).
+version: 1.0.0
+license: BSD-2-Clause
+source: https://snap.berkeley.edu
+authors:
+  - name: Michael Ball
+    website: https://mball.co
+tags:
+  - book
+parts:
+  - id: abstract
+    required: false
+    description: >
+      A short description of the manual.
+doc:
+  - id: title
+    required: true
+  - id: subtitle
+  - id: authors
+    required: true
+  - id: bibliography
+options:
+  - type: boolean
+    id: draft
+    description: Mark the document as draft
+files:
+  - template.tex
+  - index-style.ist
+  - latexmkrc
+  # Symlinks back to ../images/. They're copied next to snap-manual.tex so
+  # the cover page \includegraphics calls resolve.
+  - cover-image.png
+  - snap-logo.png
+packages:
+  - imakeidx
+  - fontenc
+  - inputenc
+  - lmodern
+  - sourceserifpro
+  - graphicx
+  - caption
+  - natbib
+  - xcolor
+  - changepage
+  - framed
+  - hyperref
+  - amssymb
+  - enumitem
+  - geometry
+  - ifthen
+  - calc
+  - tikz
+  - textpos
+  - titlesec
+  - multicol

@@ -1,0 +1,75 @@
+% This file is loaded at the beginning of the Snap! manual PDF.
+
+% TODO: Image and font customizations.
+% \usepackage[fontsize=11bp]{scrextend}
+\usepackage{fontspec}
+\usepackage[paperheight=11in,
+   paperwidth=8.5in,
+   top=1.5cm,
+   bottom=2cm,
+   left=1.5cm,
+   right=1.5cm]{geometry}
+
+% https://www.overleaf.com/learn/latex/Indices
+\usepackage{imakeidx}
+% \usepackage{tocbibind}
+% \fontsize{12}{13.5}\selectfont
+
+% \usepackage{pdfpages}
+% \includepdf[pages=1]{_support/cover-page-snap-8.pdf}
+\usepackage{tikz}
+\usepackage{graphicx}
+\usepackage[dvipsnames]{xcolor}
+% \usepackage{geometry}
+\definecolor{snapblue}{RGB}{52,101,164}
+\definecolor{snaporange}{RGB}{255,140,0}
+
+% \begin{titlepage}
+% \newgeometry{margin=0pt}
+% \begin{tikzpicture}[remember picture,overlay]
+%   % Background - left white, right blue
+%   \fill[white] (current page.north west) rectangle ([xshift=8.5cm]current page.south west);
+%   \fill[snapblue] ([xshift=8.5cm]current page.north west) rectangle (current page.south east);
+
+%   % Logo and title (top left)
+%   \node[anchor=north west] at ([xshift=1cm,yshift=-1.5cm]current page.north west) {
+%     \includegraphics[width=3cm]{images/snap-logo.png}
+%   };
+%   \node[anchor=north west] at ([xshift=1cm,yshift=-4cm]current page.north west) {
+%     \fontsize{24}{28}\selectfont Build Your Own Blocks
+%   };
+
+%   % Version number (top right)
+%   \node[anchor=north east,white] at ([xshift=-1cm,yshift=-3cm]current page.north east) {
+%     \fontsize{72}{86}\selectfont\bfseries 8.0
+%   };
+
+%   % Orange banner with title
+%   \fill[snaporange] ([yshift=-7cm]current page.north west) rectangle ([yshift=-9cm]current page.north east);
+%   \node[white] at ([yshift=-8cm]current page.north) {
+%     \fontsize{36}{43}\selectfont\bfseries SNAP! Reference Manual
+%   };
+
+%   % Code screenshot (center)
+%   \node at ([yshift=-15cm]current page.north) {
+%     \includegraphics[width=12cm]{images/cover-image.png}
+%   };
+
+%   % Authors (bottom right)
+%   \node[anchor=south east,white] at ([xshift=-2cm,yshift=3cm]current page.south east) {
+%     \begin{tabular}{r}
+%     \fontsize{18}{22}\selectfont Brian Harvey \\[0.3cm]
+%     \fontsize{18}{22}\selectfont Jens Mönig
+%     \end{tabular}
+%   };
+% \end{tikzpicture}
+% \end{titlepage}
+
+\makeindex[intoc=true, columns=2, options=-s _support/tex/index-style.ist]
+% \makeindex[intoc=true, columns=2, options=-s ./index-style.ist]
+
+% \flushbottom
+
+% \begin{multicols}{2}
+%    \tableofcontents
+% \end{multicols}

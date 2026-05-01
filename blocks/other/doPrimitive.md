@@ -1,0 +1,7 @@
+---
+---
+
+# `enable primitive`
+
+```{block-help}
+```

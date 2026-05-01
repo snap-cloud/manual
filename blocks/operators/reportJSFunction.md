@@ -1,0 +1,7 @@
+---
+---
+
+# `JavaScript Function`
+
+```{block-help}
+```

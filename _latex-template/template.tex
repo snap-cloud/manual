@@ -1,0 +1,311 @@
+% Snap! Reference Manual
+% Vendored from https://github.com/myst-templates/plain_latex_book
+% See README.md in this directory for the list of local adaptations.
+
+% Body font size 11pt; TOC and footnotes drop to 10pt below.
+\documentclass[11pt,oneside]{scrbook}
+\usepackage[paperheight=11in,
+   paperwidth=8.5in,
+   top=0.5in,
+   bottom=0.5in,
+   left=0.5in,
+   right=0.5in,
+   headsep=10pt,
+   footskip=24pt,
+   includehead, includefoot]{geometry}
+
+% Indexing.
+%
+% MyST hard-codes a `\makeindex` call inside the IMPORTS block whenever the
+% document contains index entries. We can't suppress that, but we *can*
+% disable imakeidx's automatic shell-escape `makeindex` run via the
+% `noautomatic` package option, and then call our own `\makeindex[...]`
+% with the options we want before MyST's IMPORTS arrives. With
+% `noautomatic`, the actual makeindex invocation is delegated to latexmk
+% (configured in `latexmkrc` next to this template), which picks up the
+% custom options in our \makeindex call.
+\usepackage[noautomatic]{imakeidx}
+\makeindex[intoc, columns=2, options={-s index-style.ist}]
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+% Body font: Adobe Source Serif (the texlive `sourceserifpro` package
+% ships Source Serif Pro, the same family as Source Serif 4). Source
+% Serif is designed for screen + body legibility and reads well at
+% small sizes. Latin Modern stays loaded as the typewriter fallback
+% since Source Serif doesn't ship a monospaced family.
+\usepackage[default]{sourceserifpro}
+\usepackage{lmodern}
+% Slightly relaxed line spacing (1.07x) — a touch easier on the eyes
+% than the default 1.0 without adding a meaningful number of pages.
+\linespread{1.07}
+
+% Footnotes one size smaller than body (10pt when body is 11pt).
+\setkomafont{footnote}{\small}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{natbib}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{changepage}
+\usepackage{framed}
+\usepackage{hyperref}
+\usepackage{amssymb}
+\usepackage{ifthen}
+\usepackage{calc}
+\usepackage{tikz}
+\usepackage[absolute,overlay]{textpos}
+\bibliographystyle{abbrvnat}
+
+% Snap! brand colors, available for custom LaTeX content.
+\definecolor{snapblue}{RGB}{52,101,164}
+\definecolor{snaporange}{RGB}{255,140,0}
+% A second, slightly darker blue used for the cover page side panel
+% (closer to the "Berkeley blue" used elsewhere in the project).
+\definecolor{snapcoverblue}{RGB}{52,101,164}
+
+% Make list items more compact
+\usepackage{enumitem}
+\setlist[itemize]{noitemsep, topsep=0pt}
+
+% --- Heading style: smaller chapter/section titles, underlined. ---------
+% titlesec [explicit] requires a format for every sectioning command
+% MyST emits, so we cover all of \chapter ... \subparagraph below.
+% A horizontal rule below the heading replaces \underline (which renders
+% too tight against the descenders to read clearly at small sizes).
+%
+% The chapter pages omit the \thechapter prefix in the on-page title
+% because MyST already bakes a leading "1.", "2.", ... into each chapter
+% title (so the JupyterBook 2 sidebar shows numbers). The chapter number
+% is still emitted to the TOC entry via the standard \addcontentsline /
+% \numberline path, so the table of contents continues to show "1
+% Blocks, Scripts, and Sprites" / "2 Saving and Loading...".
+\usepackage[explicit]{titlesec}
+\newcommand{\snapheadingrule}{\vspace{-0.25\baselineskip}\noindent\rule{\linewidth}{0.4pt}}
+% Chapter: smaller than the KOMA default \huge, with a rule beneath.
+\titleformat{\chapter}[hang]
+  {\normalfont\Large\bfseries}{}{0pt}{#1}[\snapheadingrule]
+\titlespacing*{\chapter}{0pt}{0pt}{12pt}
+% Sections / subsections: keep the \thesection prefix (these are not
+% manually numbered in the source).
+\titleformat{\section}[hang]
+  {\normalfont\large\bfseries}{\thesection\quad}{0pt}{#1}[\snapheadingrule]
+\titleformat{\subsection}[hang]
+  {\normalfont\normalsize\bfseries}{\thesubsection\quad}{0pt}{#1}[\snapheadingrule]
+\titleformat{\subsubsection}[hang]
+  {\normalfont\normalsize\bfseries}{\thesubsubsection\quad}{0pt}{#1}
+\titleformat{\paragraph}[runin]
+  {\normalfont\normalsize\bfseries}{}{0pt}{#1}
+\titleformat{\subparagraph}[runin]
+  {\normalfont\normalsize\bfseries}{}{0pt}{#1}
+
+% Drop the chapter-number prefix from the running header too: KOMA's
+% `\chaptermarkformat` is what prepends "1   " to the page header.
+\renewcommand*{\chaptermarkformat}{}
+
+% --- Two-column table of contents ---------------------------------------
+% Wrap \tableofcontents in a multicols block so entries flow across two
+% columns rather than running down a single 8-inch column. The TOC is
+% limited to 2 levels (chapter + section) — subsections and below are
+% omitted. Chapter entries also drop their auto-numbered prefix
+% (\numberline{N}) since each chapter title already begins with a
+% manually-written "1.", "2.", etc. for the JupyterBook 2 sidebar.
+\usepackage{multicol}
+\setcounter{tocdepth}{1}
+\makeatletter
+% Drop the \numberline{N} prefix from chapter TOC entries by overriding
+% KOMA's \addchaptertocentry, which is what \@chapter calls to register
+% the chapter in the TOC. Section / subsection entries are unaffected,
+% so "1.1 Hat Blocks" etc. keep their numbers.
+\renewcommand*{\addchaptertocentry}[2]{%
+  \addcontentsline{toc}{chapter}{#2}%
+}
+\renewcommand\tableofcontents{%
+  \chapter*{\contentsname}%
+  \@mkboth{\MakeUppercase\contentsname}{\MakeUppercase\contentsname}%
+  \begin{multicols}{2}\small
+    \@starttoc{toc}%
+  \end{multicols}%
+}
+\makeatother
+
+% --- Inline / block image rendering -------------------------------------
+% The `latex-shims` MyST plugin tags inline images with sentinel widths
+% (0.001\linewidth and 0.002\linewidth) so that the standard
+% `\includegraphics[width=...]{...}` myst-to-tex emits can be intercepted
+% here and rendered as height-scaled, raisebox'd inline images.
+%
+% Note: jtex block-tag delimiters collide with LaTeX's
+% argument-pass-through brackets, so any literal occurrence of the
+% latter is emitted via a jtex string-variable substitution.
+\let\snaporigincludegraphics\includegraphics
+% Render an image inline with the surrounding text at a given multiple
+% of \baselineskip. The raisebox depth is roughly height*0.16 so the
+% image sits on the baseline rather than the descender line.
+\newcommand{\snapinlineimgsize}[2]{%
+  \raisebox{-0.16\dimexpr#1\baselineskip\relax}{%
+    \snaporigincludegraphics[height=#1\baselineskip]{#2}%
+  }%
+}
+\makeatletter
+\def\snap@inline@a{width=0.001\linewidth}% image-inline      -> 1.5x
+\def\snap@inline@b{width=0.002\linewidth}% image-inline-tall -> 2.4x
+\def\snap@inline@c{width=0.003\linewidth}% image-1-5x        -> 1.7x
+\def\snap@inline@d{width=0.004\linewidth}% image-2x          -> 2.0x
+\def\snap@inline@e{width=0.005\linewidth}% image-3x          -> 2.5x
+\def\snap@inline@f{width=0.006\linewidth}% image-4x          -> 3.0x
+\renewcommand*{\includegraphics}[2][]{%
+  \def\snap@opts{#1}%
+  \ifx\snap@opts\snap@inline@a\snapinlineimgsize{1.5}{#2}%
+  \else\ifx\snap@opts\snap@inline@b\snapinlineimgsize{2.4}{#2}%
+  \else\ifx\snap@opts\snap@inline@c\snapinlineimgsize{1.7}{#2}%
+  \else\ifx\snap@opts\snap@inline@d\snapinlineimgsize{2.0}{#2}%
+  \else\ifx\snap@opts\snap@inline@e\snapinlineimgsize{2.5}{#2}%
+  \else\ifx\snap@opts\snap@inline@f\snapinlineimgsize{3.0}{#2}%
+  \else\snap@fallback@includegraphics{#1}{#2}%
+  \fi\fi\fi\fi\fi\fi
+}
+% Block images go through the fallback. Wrap with \centerline so the
+% image is horizontally centered (myst-to-tex emits a bare
+% \includegraphics with no surrounding center environment).
+\def\snap@fallback@includegraphics#1#2{\par\centerline{\snaporigincludegraphics[-"[#1]"-]{#2}}\par}
+\makeatother
+
+% --- <kbd> rendering ----------------------------------------------------
+% Used by the latex-shims plugin to render the MyST `keyboard` node.
+\newcommand{\kbd}[1]{%
+  \tikz[baseline=(K.base)]{%
+    \node[rectangle, rounded corners=2pt, draw=black!60, fill=black!5,
+          inner sep=2pt, font=\small\ttfamily] (K) {#1};%
+  }%
+}
+
+% --- :::{grid} rendering -----------------------------------------------
+% A simple side-by-side layout of minipages. Children flow in the order
+% they appear and wrap to a new line once total width exceeds \linewidth.
+% \snapgridsep is rendered between siblings.
+\newenvironment{snapgrid}{%
+  \par\medskip\noindent
+  \setlength{\parskip}{0pt}%
+  \ignorespaces
+}{%
+  \par\medskip
+}
+\newcommand{\snapgriditem}[2]{%
+  \begin{minipage}[t]{#1\linewidth}\centering #2\end{minipage}%
+}
+\newcommand{\snapgridsep}{\hfill\ignorespaces}
+
+[- IMPORTS -]
+
+\hypersetup{
+  colorlinks,
+  linkcolor={black},
+  citecolor={black},
+  urlcolor={black}
+}
+
+% Style quotes
+\definecolor{darkblue}{rgb}{0.0, 0.0, 0.55}
+\definecolor{quoteshade}{rgb}{0.95, 0.95, 1}
+\renewenvironment{quote}{%
+  \def\FrameCommand{%
+    \hspace{1pt}%
+    {\color{darkblue}\vrule width 2pt}%
+    {\color{quoteshade}\vrule width 4pt}%
+    \colorbox{quoteshade}%
+  }%
+  \MakeFramed {\advance\hsize-\width \FrameRestore}%
+  \noindent\hspace{-8pt}% disable indenting first paragraph
+  \begin{adjustwidth}{0pt}{0pt}% adjust as needed
+  \vspace{2pt}\vspace{2pt}%
+}
+{%
+  \vspace{2pt}\end{adjustwidth}\endMakeFramed%
+}
+
+\title{[-doc.title-][# if doc.subtitle #] \\ \huge [-doc.subtitle-][# endif #]}
+
+\author{[# for author in doc.authors #][-author.name-][# if not loop.last #] \\ [# endif #][# endfor #]}
+
+% --- Cover page ---------------------------------------------------------
+% Rebuilds the classic Snap! cover: white left panel, blue right panel
+% separated by a vertical dotted line, the Snap! logo + "Build Your Own
+% Blocks" subtitle in the upper left, the version "8.0" on the blue
+% panel, an orange "Snap! Reference Manual" banner across the middle,
+% the cover image of Snap! code below the banner, and the authors stacked
+% in the lower right.
+\newcommand{\snapcoverpage}{%
+  \begin{titlepage}%
+  \thispagestyle{empty}%
+  \begin{tikzpicture}[remember picture, overlay]
+    % Right blue panel (about 38% of the page width).
+    \fill[snapcoverblue]
+      ([xshift=0.62\paperwidth]current page.north west) rectangle
+      (current page.south east);
+    % Vertical dotted divider just left of the blue panel.
+    \draw[snapcoverblue!80, line width=0.6pt, dotted]
+      ([xshift=0.61\paperwidth, yshift=-0.6cm]current page.north west) --
+      ([xshift=0.61\paperwidth, yshift=0.6cm]current page.south west);
+
+    % Snap! logo (upper left).
+    \node[anchor=north west, inner sep=0pt]
+      at ([xshift=1.6cm, yshift=-1.6cm]current page.north west)
+      {\snaporigincludegraphics[width=4cm]{snap-logo.png}};
+
+    % Subtitle "Build Your Own Blocks" beneath the logo (pushed down
+    % a half line-height so the descenders don't kiss the logo).
+    \node[anchor=north west, font=\Large, text=black]
+      at ([xshift=1.6cm, yshift=-4cm]current page.north west)
+      {Build Your Own Blocks};
+
+    % Version on the blue panel.
+    \node[anchor=north east, text=white, font=\fontsize{60}{60}\selectfont]
+      at ([xshift=-1.5cm, yshift=-3cm]current page.north east)
+      {8.0};
+
+    % Orange banner with the manual title (about 35% from top of
+    % page). The title is bold italic and right-justified inside the
+    % orange band.
+    \fill[snaporange]
+      ([yshift=-0.34\paperheight, xshift=-0.2cm]current page.north west) rectangle
+      ([yshift=-0.42\paperheight, xshift=0.95\paperwidth]current page.north west);
+    \node[anchor=east, text=white, font=\Huge\bfseries\itshape]
+      at ([yshift=-0.38\paperheight, xshift=0.93\paperwidth]current page.north west)
+      {Snap\textit{!}\ Reference Manual};
+
+    % Cover image of Snap! code, sitting below the orange banner and
+    % straddling the divider.
+    \node[anchor=north, inner sep=0pt]
+      at ([yshift=-0.45\paperheight, xshift=-0.05\paperwidth]current page.north)
+      {\snaporigincludegraphics[width=0.55\paperwidth]{cover-image.png}};
+
+    % Authors in the lower right of the blue panel.
+    \node[anchor=south east, text=white, font=\Large, align=right]
+      at ([xshift=-1.5cm, yshift=2.5cm]current page.south east)
+      {[# for author in doc.authors #][-author.name-][# if not loop.last #] \\ [# endif #][# endfor #]};
+  \end{tikzpicture}%
+  \end{titlepage}%
+}
+
+\begin{document}
+\sloppy
+
+\frontmatter
+\snapcoverpage
+
+\tableofcontents
+% \listoffigures
+% \listoftables
+
+\mainmatter
+
+[- CONTENT -]
+
+
+[# if doc.bibliography #]
+\bibliography{[- doc.bibliography | join(", ") -]}
+[# endif #]
+
+% \printindex is emitted by `manual-index.md`, the last chapter in the toc.
+
+\end{document}
