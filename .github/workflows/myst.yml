@@ -46,10 +46,10 @@ jobs:
       - name: Build HTML
         run: |
           npm run styles:build
-          myst build --html
+          myst build --html --ci --max-size-webp 0
 
       - name: Build PDF
-        run: myst build --pdf
+        run: myst build --pdf --ci
 
       - name: Enforce CNAME file for GitHub Pages
         run: echo "docs.snap.berkeley.edu" > _build/html/CNAME
@@ -73,7 +73,7 @@ jobs:
             output/snap-*.pdf
           retention-days: 10
           # TODO: Ignore for now while secondary files are disabled.
-          if-no-files-found: ignore
+          if-no-files-found: error
 
       # Only publish to gh-pages from main (or workflow_dispatch). PRs stop
       # after building + uploading the artifact above.
