@@ -51,6 +51,9 @@ jobs:
       - name: Build PDF
         run: myst build --pdf
 
+      - name: Enforce CNAME file for GitHub Pages
+        run: echo "docs.snap.berkeley.edu" > _build/html/CNAME
+
       - name: Stage PDFs for publishing
         run: |
           # PDF locations are configured in toc_pdf*.yml under exports.output.
