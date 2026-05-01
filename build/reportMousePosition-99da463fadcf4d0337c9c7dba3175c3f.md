@@ -1,7 +1,0 @@
----
----
-
-# `mouse position`
-
-```{block-help}
-```

@@ -1,7 +1,0 @@
----
----
-
-# `mouse down?`
-
-```{block-help}
-```
