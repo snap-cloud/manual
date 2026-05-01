@@ -44,7 +44,9 @@ jobs:
 
       # Run npm build to compile the custom SASS
       - name: Build HTML
-        run: npm run build
+        run: |
+          npm run styles:build
+          myst build --html
 
       - name: Build PDF
         run: myst build --pdf
