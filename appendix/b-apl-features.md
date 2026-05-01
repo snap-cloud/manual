@@ -128,7 +128,7 @@ left, a=b reports an array of Booleans (represented in APL as 0 for
 False, 1 for True); the comma operator turns the shape of the array into
 a simple vector; and **∧**/ means “reduce with and”; “reduce” is our
 combine function. That six-character program is much less effort than
-the equivalent ![image1263.png](images/b-apl-features/image1263.png) <!--  style="width:4.45139in;height:0.52083in" / --> in Snap<em>!</em>. Note in passing
+the equivalent {inline alt="image1263.png"}`images/b-apl-features/image1263.png` <!--  style="width:4.45139in;height:0.52083in" / --> in Snap<em>!</em>. Note in passing
 that if you wanted to know *how many* corresponding elements of the two
 arrays are equal, you’d just use +/ instead of **∧**/. Note also that
 our APLish blocks are a little verbose, because they include up to three
@@ -223,7 +223,7 @@ hyperblock that extends termwise to arrays. Join, the only non-predicate
 non-hyper scalar primitive, has its own scalar join block. 7 deal 52 reports a random vector of
 seven numbers from 1 to 52 with no repetitions, as in dealing a hand of
 cards. Signum of a number reports 1 if the number
-is positive, 0 if it’s zero, or -1 if it’s negative. Roll 6 reports a random roll of a six-sided die. To roll 8 dice, use ![image1266.png](images/b-apl-features/image1266.png) <!--  style="width:2.56667in;height:0.21667in" --> ,
+is positive, 0 if it’s zero, or -1 if it’s negative. Roll 6 reports a random roll of a six-sided die. To roll 8 dice, use {inline alt="image1266.png"}`images/b-apl-features/image1266.png` <!--  style="width:2.56667in;height:0.21667in" --> ,
 which would look much more pleasant as ?8⍴6. But perhaps our version is
 more instantly readable by someone who didn’t grow up with APL. All the
 library functions have help messages available.

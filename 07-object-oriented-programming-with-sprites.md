@@ -81,7 +81,7 @@ attributes (e.g., <code>x position</code>).
 The fundamental means by which programs get access to sprites is the <code>my ( )</code> reporter
 block. It has a dropdown-menu input slot that, when clicked,
 gives access to all the sprites, plus the stage.
-![my self](images/07-object-oriented-programming-with-sprites/image745.png){.image-inline} reports a
+{inline alt="my self" class="image-inline"}`images/07-object-oriented-programming-with-sprites/image745.png` reports a
 single sprite, the one asking the question. ![image744.png](images/07-object-oriented-programming-with-sprites/image744.png) <!--  style="width:1.08333in;height:0.19444in" / -->   reports a list of all
 sprites other than the one asking the question. ![image743.png](images/07-object-oriented-programming-with-sprites/image743.png) <!--  style="width:0.96528in;height:0.19444in" / -->  reports a list of all
 sprites that are *near* the one asking—the ones that are candidates for
@@ -105,7 +105,7 @@ clone; permanent
 
 ##  Permanent and Temporary Clones
 
-The ![image748.png](images/07-object-oriented-programming-with-sprites/image748.png) <!--  style="width:1.51389in;height:0.19444in" --> block is
+The {inline alt="image748.png"}`images/07-object-oriented-programming-with-sprites/image748.png` <!--  style="width:1.51389in;height:0.19444in" --> block is
 used to create and report an instance (a clone) of any sprite. (There is
 also a command version, for historical reasons.) There are two different
 kinds of situations in which clones are used. One is that you’ve made an
@@ -143,7 +143,7 @@ have a lot of them. (If you’re curious, one reason is that permanent
 clones appear in the sprite corral, where their pictures have to be
 updated to reflect the clone’s current costume, direction, and so on.)
 We have tried to anticipate your needs, as follows: When you make a
-clone in a script, using the ![image748.png](images/07-object-oriented-programming-with-sprites/image748.png) <!--  style="width:1.51389in;height:0.19444in" --> block, it is “born” temporary. But when you
+clone in a script, using the {inline alt="image748.png"}`images/07-object-oriented-programming-with-sprites/image748.png` <!--  style="width:1.51389in;height:0.19444in" --> block, it is “born” temporary. But when you
 make a clone from the user interface, for example by right-clicking on a
 sprite and choosing "`clone`", it is born permanent. The reason this makes
 sense is that you don’t create 100 *kinds* of dogs automatically. Each
@@ -156,7 +156,7 @@ You can change a temporary sprite to permanent by right-clicking it and choosing
 the scripting area to reflect that sprite, as if you’d pressed its
 button in the sprite corral.) You can change a permanent sprite to
 temporary by right-clicking it and choosing "`release.`" You can also
-change the status of a clone in your program with ![image749.png](images/07-object-oriented-programming-with-sprites/image749.png) <!--  style="width:1.51389in;height:0.25694in" --> with true or false as
+change the status of a clone in your program with {inline alt="image749.png"}`images/07-object-oriented-programming-with-sprites/image749.png` <!--  style="width:1.51389in;height:0.25694in" --> with true or false as
 the second input.
 
 ## Sending Messages to Sprites
@@ -511,7 +511,7 @@ video on block
 ### Media Computation with Costumes
 
 The components of a costume are its name, width, height, and pixels.
-The ![image783.png](images/07-object-oriented-programming-with-sprites/image783.png) <!--  style="width:1.63194in;height:0.1875in" --> block gives access
+The {inline alt="image783.png"}`images/07-object-oriented-programming-with-sprites/image783.png` <!--  style="width:1.63194in;height:0.1875in" --> block gives access
 to these components using its left menu. From
 its right menu you can choose the current costume, the Turtle costume,
 or any costume in the sprite’s wardrobe. Since costumes are first class,
@@ -592,7 +592,7 @@ Here’s one way to exchange red and green values:
 
 ![image798.png](images/07-object-oriented-programming-with-sprites/image798.png) <!--  style="width:2.25694in;height:0.28472in" -->
 
-It’s the ![image804.png](images/07-object-oriented-programming-with-sprites/image804.png) <!--  style="width:0.95833in;height:0.18056in" --> list that
+It’s the {inline alt="image804.png"}`images/07-object-oriented-programming-with-sprites/image804.png` <!--  style="width:0.95833in;height:0.18056in" --> list that
 determines the rearrangement of colors: green➔red, red➔green, and the
 other two unchanged. That <code>list</code> is inside another <code>list</code> because otherwise
 it would be selecting *rows* of the pixel array, and we want to select
@@ -603,7 +603,7 @@ get stuck turning it green, instead of alternating colors.
 The <code>stretch</code> block
 takes a costume as its first input, either by
 selecting a costume from the menu or by dropping a costume-valued
-expression such as ![image809.png](images/07-object-oriented-programming-with-sprites/image809.png) <!--  style="width:1.72222in;height:0.22917in" -->  onto it. The other two inputs are percents of the
+expression such as {inline alt="image809.png"}`images/07-object-oriented-programming-with-sprites/image809.png` <!--  style="width:1.72222in;height:0.22917in" -->  onto it. The other two inputs are percents of the
 original width and height, as advertised, so you can make fun house
 mirror versions of costumes:
 
@@ -619,7 +619,7 @@ Using the <code>video (motion) on (myself)</code> block turns on the camera and 
 what it sees on the stage, regardless of the inputs given. The camera
 remains on until you click the red stop button, your program runs the
 <code>stop all</code> block, or you turn it off explicitly with the  ![image814.png](images/07-object-oriented-programming-with-sprites/image814.png) <!--  style="width:1.40278in;height:0.24306in" --> block. The video
-image on the stage is partly ghosted, to an extent determined by the ![image813.png](images/07-object-oriented-programming-with-sprites/image813.png) <!--  style="width:1.47222in;height:0.24306in" --> <code>set
+image on the stage is partly ghosted, to an extent determined by the {inline alt="image813.png"}`images/07-object-oriented-programming-with-sprites/image813.png` <!--  style="width:1.47222in;height:0.24306in" --> <code>set
 video transparency to ( )</code> block, whose input really is transparency and not
 opacity. (Small numbers make the video more visible.) By default, the
 video image is mirrored, like the selfie camera on your cell phone: When
@@ -693,7 +693,7 @@ brief? On my computer, 0.010667 seconds, but you’ll see shortly how to
 
 Just as the *pixel* is
 the smallest piece of a picture, the *sample* is the smallest piece of a
-sound ![image826.png](images/07-object-oriented-programming-with-sprites/image826.png) <!--  style="width:1.96528in;height:0.25694in" --> . It says here: that on my computer, 48,000 samples are recorded
+sound {inline alt="image826.png"}`images/07-object-oriented-programming-with-sprites/image826.png` <!--  style="width:1.96528in;height:0.25694in" --> . It says here: that on my computer, 48,000 samples are recorded
 per second, so each sample is 1/48,000 of a second. The
 value of a sample is between -1 and 1, and represents the sound pressure
 on the microphone—how hard the air is pushing—at that instant. (You can
@@ -797,6 +797,6 @@ sound. But the <code>microphone ( )</code> block has other, simpler options also
 of the array in which data are collected (typically 512, must be a power
 of 2).
 
-The block for sounds that corresponds to <code>new picture</code> for pictures is ![image258.png](images/07-object-oriented-programming-with-sprites/image258.png). <!--  style="width:2.91667in;height:0.28125in" -->
+The block for sounds that corresponds to <code>new picture</code> for pictures is {inline alt="image258.png"}`images/07-object-oriented-programming-with-sprites/image258.png`. <!--  style="width:2.91667in;height:0.28125in" -->
 Its first input is a list of samples, and its second input specifies how
 many samples occupy one second.

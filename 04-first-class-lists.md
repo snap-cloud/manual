@@ -59,7 +59,7 @@ At the heart of providing first class lists is the ability to make an
 “anonymous” list —to make a list without
 simultaneously giving it a name. The `list` reporter block does that.
 
-![The `list` reporter block, shown empty as it appears in the Variables palette, then filled with the words "She Loves You," then with a nested list and the number 41 (showing items can be of mixed types), and finally with the left arrowhead clicked to leave it empty.](images/04-first-class-lists/2-block-list.png){.image-4x width=2.84in}
+{inline alt="The `list` reporter block, shown empty as it appears in the Variables palette, then filled with the words "She Loves You," then with a nested list and the number 41 (showing items can be of mixed types), and finally with the left arrowhead clicked to leave it empty." class="image-4x width=2.84in"}`images/04-first-class-lists/2-block-list.png`
 
 At the right end of the block are two left-and-right arrowheads.
 Clicking on these changes the number of inputs to
@@ -127,7 +127,7 @@ users will be familiar with the *imperative* programming
 style , which is based on a set of
 command blocks that modify a list:
 
-![The four imperative list-mutation blocks: `add thing to`, `delete 1 of`, `insert thing at 1 of`, and `replace item 1 of with thing`.](images/04-first-class-lists/6-blocks-imperative-list-mutators.png){.image-4x width=3.5in}
+{inline alt="The four imperative list-mutation blocks: `add thing to`, `delete 1 of`, `insert thing at 1 of`, and `replace item 1 of with thing`." class="image-4x width=3.5in"}`images/04-first-class-lists/6-blocks-imperative-list-mutators.png`
 
 As an example, here are two blocks that take a list of numbers as input,
 and report a new list containing only the even numbers from the original
@@ -153,7 +153,7 @@ parallelism, though, functional programming is sometimes a simpler
 and more effective technique, especially when dealing with recursively defined data
 structures. It uses reporter blocks, not command blocks, to build up a list value:
 
-![The three functional list reporters used to build new lists without mutation: `in front of`, `item 1 of`, and `all but first of`.](images/04-first-class-lists/8-blocks-functional-list.png){.image-4x width=3in}
+{inline alt="The three functional list reporters used to build new lists without mutation: `in front of`, `item 1 of`, and `all but first of`." class="image-4x width=3in"}`images/04-first-class-lists/8-blocks-functional-list.png`
 
 In a functional program, we often use recursion to construct a list, one
 item at a time. The `in front of` block makes a
@@ -216,7 +216,7 @@ higher order procedure, or higher order function ).
 Snap<em>!</em> provides four higher order function blocks for operating on
 lists:
 
-![The four higher-order list blocks: `map () over ()`, `keep items () from ()`, `find first item () in ()`, and `combine () using ()`.](images/04-first-class-lists/14-blocks-higher-order.png){.image-4x width=2.5in}
+{inline alt="The four higher-order list blocks: `map () over ()`, `keep items () from ()`, `find first item () in ()`, and `combine () using ()`." class="image-4x width=2.5in"}`images/04-first-class-lists/14-blocks-higher-order.png`
 
 :::{index} `find first` block
 `map` block
@@ -234,7 +234,7 @@ associative function
 You’ve already seen `keep`. `Find first` is
 similar, but it reports just the first item that
 satisfies the predicate, not a list of all the matching items. It’s
-equivalent to ![item 1 of (keep items () from ())](images/04-first-class-lists/15-script-find-first-equivalent.png){.image-inline width=1.6in} but faster because it
+equivalent to {inline alt="item 1 of (keep items () from ())" class="image-inline width=1.6in"}`images/04-first-class-lists/15-script-find-first-equivalent.png` but faster because it
 stops looking as soon as it finds a match. If there are no matching
 items, it returns an empty string.
 
@@ -261,7 +261,7 @@ lists, the result is a new toplevel list whose items are the same
 (uncopied) lists that are items of the toplevel input list). To make a deep copy of a list
 (that is, one in which all the sublists,
 sublists of sublists, etc. are copied), use the list as input to the
-![the `id of` reporter](images/04-first-class-lists/18-block-id-of.png){.image-4x .image-inline width=0.74in}  block (one of the variants
+{inline alt="the `id of` reporter" class="image-4x .image-inline width=0.74in"}`images/04-first-class-lists/18-block-id-of.png`  block (one of the variants
 of the `sqrt of` block). This works because `id of` is a @sec-hyperblock.
 
 The third higher order block, `combine` , computes a
@@ -306,7 +306,7 @@ We mentioned earlier that there are two ways of representing lists
 visually. For one-dimensional lists (lists whose items are not
 themselves lists) the visual differences are small:
 
-![The same 250-item list shown as a watcher in list view (left, with delete and add buttons) and table view (right, flatter cells).](images/04-first-class-lists/23-watcher-list-vs-table-view.png){.image-4x width=3in}
+{inline alt="The same 250-item list shown as a watcher in list view (left, with delete and add buttons) and table view (right, flatter cells)." class="image-4x width=3in"}`images/04-first-class-lists/23-watcher-list-vs-table-view.png`
 
 For one-dimensional lists, it’s not really the appearance that’s
 important. What matters is that the *list view* allows very versatile
@@ -322,7 +322,7 @@ slow. As a partial workaround, the list view can only contain 100 items
 at a time; the downward-pointing arrowhead opens a menu in which you can
 choose which 100 to display.
 
-![Bottom of a list view watcher with the paging menu open, showing the choices "1...", "101...", and "201..." for selecting which 100-item window to display.](images/04-first-class-lists/24-watcher-list-paging.png){.image-4x width=2in}
+{inline alt="Bottom of a list view watcher with the paging menu open, showing the choices "1...", "101...", and "201..." for selecting which 100-item window to display." class="image-4x width=2in"}`images/04-first-class-lists/24-watcher-list-paging.png`
 
 By contrast, because it doesn’t allow direct editing, the *table view*
 watcher can hold hundreds of thousands of items and still scroll through
@@ -456,7 +456,7 @@ Here’s what the corresponding table looks like:
 
 Here’s how to read a spreadsheet into Snap<em>!</em>:
 
-1. Make a variable with a watcher on stage: ![A `my database` variable watcher initialised with the value 0.](images/04-first-class-lists/32-watcher-my-database.png){.image-inline width=1.21in}
+1. Make a variable with a watcher on stage: {inline alt="A `my database` variable watcher initialised with the value 0." class="image-inline width=1.21in"}`images/04-first-class-lists/32-watcher-my-database.png`
 
 <!-- The background of this picture should be transparent, not white. bh  -->
 
@@ -583,10 +583,10 @@ always reporting a single Boolean result), `and` and `or` (because they
 don’t evaluate their second input at all if the first input determines
 the result), `join` (because it converts non-scalar (and other non-text)
 inputs to text string form), and `is a (type)` (because it applies to its
-input as a whole). Blocks whose inputs are “natively” lists, such as ![the `length of` reporter](images/04-first-class-lists/43-block-length-of.png){.image-4x .image-inline width=0.89in} and
-![the `in front of` reporter](images/04-first-class-lists/44-block-in-front-of.png){.image-inline width=1.03in} , are never hyperblocks.
+input as a whole). Blocks whose inputs are “natively” lists, such as {inline alt="the `length of` reporter" class="image-4x .image-inline width=0.89in"}`images/04-first-class-lists/43-block-length-of.png` and
+{inline alt="the `in front of` reporter" class="image-inline width=1.03in"}`images/04-first-class-lists/44-block-in-front-of.png` , are never hyperblocks.
 
-![the `reshape () to 4 3` reporter](images/04-first-class-lists/45-block-reshape.png){.image-inline width=2.10in} The
+{inline alt="the `reshape () to 4 3` reporter" class="image-inline width=2.10in"}`images/04-first-class-lists/45-block-reshape.png` The
 `reshape` block\index{`reshape` block} takes a list (of any depth) as its
 first input, and then takes zero or more sizes along the dimensions of
 an array. In the example it will report a table (a matrix) of four rows
@@ -597,7 +597,7 @@ block starts again at the head of the list, using values more than once.
 If more values are provided than needed, the extras are ignored; this
 isn’t an error.
 
-![the `combinations` reporter taking two list inputs](images/04-first-class-lists/46-block-combinations.png){.image-inline width=1.76in}  The
+{inline alt="the `combinations` reporter taking two list inputs" class="image-inline width=1.76in"}`images/04-first-class-lists/46-block-combinations.png`  The
 `combinations` block takes any number of lists as input; it reports a list
 in which each item is a list whose length is the number of inputs; item
 *i* of a sublist is an item of input *i.* Every possible combination of
@@ -606,7 +606,7 @@ the product of the lengths of the inputs.
 
 ![A `combinations (list a b) (list x y z)` reporter and the resulting 6-row, 2-column table: a/x, a/y, a/z, b/x, b/y, b/z.](images/04-first-class-lists/47-script-combinations-example.png){width=5.24in}
 
-![the `item 1 of` reporter](images/04-first-class-lists/48-block-item-of.png){.image-inline width=1.34in}  The `item of` block has a special set of rules, designed to preserve
+{inline alt="the `item 1 of` reporter" class="image-inline width=1.34in"}`images/04-first-class-lists/48-block-item-of.png`  The `item of` block has a special set of rules, designed to preserve
 its pre-hyperblock meaning and also provide a useful behavior when given
 a list as its first (index) input:
 

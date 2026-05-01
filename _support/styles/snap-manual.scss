@@ -130,14 +130,14 @@ figure.image-inline-tall {
 }
 
 .article p img {
-  display: inline !important;
+  // display: inline !important;
   margin: unset;
   vertical-align: middle;
 }
 
 .image-inline {
   display: inline;
-  padding: 0;
+  padding: 0 1px;
 
   &, img {
     display: inline;
@@ -148,6 +148,9 @@ figure.image-inline-tall {
     line-height: 1.8;
     vertical-align: middle;
     margin: 0 !important;
+    position: relative;
+    top: -0.1rem;
+
   }
 }
 

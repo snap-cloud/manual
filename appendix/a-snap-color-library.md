@@ -40,7 +40,7 @@ color theory
 ## Introduction to Color
 
 Your computer monitor can display millions of colors, but you probably can’t
-distinguish that many. For example, here’s red 57, green 180, blue 200: ![a teal color swatch](images/a-snap-color-library/image1137.png){.image-inline}
+distinguish that many. For example, here’s red 57, green 180, blue 200: {inline alt="a teal color swatch" class="image-inline"}`images/a-snap-color-library/image1137.png`
 And here’s red 57, green *182,* blue 200:  ![image1138.png](images/a-snap-color-library/image1138.png) <!--  style="width:0.23611in;height:0.23611in" --> You might be able to tell them
 apart if you see them side by side: ![image1137.png](images/a-snap-color-library/image1137.png) <!--  style="width:0.23611in;height:0.23611in" --> ![image1138.png](images/a-snap-color-library/image1138.png) <!--  style="width:0.23611in;height:0.23611in" --> but maybe not even then.
 
@@ -110,20 +110,20 @@ one-dimensional subset of the available colors. Two subsets, actually:
 
 The first row shows 100 distinct colors. They have names; this is pumpkin
 ![image1145.png](images/a-snap-color-library/image1145.png),
-and this is denim ![image1146.png](images/a-snap-color-library/image1146.png).
+and this is denim {inline alt="image1146.png"}`images/a-snap-color-library/image1146.png`.
 You’re supposed to think of them as a big box of 100 crayons. They’re
 arranged in families: grays, pinks, reds, browns, oranges, etc. But
 they’re not consistently ordered within a family; you’d be unlikely to
 say “next crayon” in a project. (But look at the crayon spiral, @sec-spirals.)
 Instead, you’d think “I want this to look like a
-really old-fashioned photo” and so you’d find sepia ![image1144.png](images/a-snap-color-library/image1144.png){.image-inline} as
+really old-fashioned photo” and so you’d find sepia {inline alt="image1144.png" class="image-inline"}`images/a-snap-color-library/image1144.png` as
 crayon number 33. You don’t have to memorize the numbers! You can find
 them in a menu with a submenu for each family.
 
 ![image1140.png](images/a-snap-color-library/image1140.png) <!--  style="width:5.79306in;height:0.3in" / -->
 
 Or, if you
-know the crayon name, just ![image1147.png](images/a-snap-color-library/image1147.png) <!--  style="width:2.15972in;height:0.25694in" -->.
+know the crayon name, just {inline alt="image1147.png"}`images/a-snap-color-library/image1147.png` <!--  style="width:2.15972in;height:0.25694in" -->.
 
 The crayon numbers are chosen so that skipping by 10 gives a sensible box of ten crayons:
 
@@ -280,8 +280,8 @@ Our *color number* scale is based on fair hues, adding a range of grays from bla
 colors. (In color terminology, a *shade* is a darker version of a color;
 a lighter version is called a *tint.*) Why do we add shades
 but not tints ? Partly because I find shades
-more exciting. A shade of red ![image1195.png](images/a-snap-color-library/image1195.png) <!--  style="width:0.23611in;height:0.23611in" --> can be dark candy apple red ![image1194.png](images/a-snap-color-library/image1194.png) <!--  style="width:0.23611in;height:0.23611in" --> or maroon ![image1193.png](images/a-snap-color-library/image1193.png) <!--  style="width:0.23611in;height:0.23611in" -->, but a tint is just some kind
-of pink ![image1192.png](images/a-snap-color-library/image1192.png) <!--  style="width:0.23611in;height:0.23611in" -->. This admitted prejudice is supported by an
+more exciting. A shade of red {inline alt="image1195.png"}`images/a-snap-color-library/image1195.png` <!--  style="width:0.23611in;height:0.23611in" --> can be dark candy apple red {inline alt="image1194.png"}`images/a-snap-color-library/image1194.png` <!--  style="width:0.23611in;height:0.23611in" --> or maroon {inline alt="image1193.png"}`images/a-snap-color-library/image1193.png` <!--  style="width:0.23611in;height:0.23611in" -->, but a tint is just some kind
+of pink {inline alt="image1192.png"}`images/a-snap-color-library/image1192.png` <!--  style="width:0.23611in;height:0.23611in" -->. This admitted prejudice is supported by an
 objective fact: Most projects are made on a white background, so dark colors stand out better than light
 ones.
 
@@ -474,8 +474,8 @@ because that’s what’s built into the JavaScript
 programming language provided by browsers. But if the goal is to model
 human color perception, neither of these color spaces is satisfactory,
 because they assume that all full-intensity spectral colors are equally
-bright. But if you’re like most people, you see spectral yellow ![image1206.png](images/a-snap-color-library/image1206.png) <!--  style="width:0.18889in;height:0.18889in" --> as much
-brighter than spectral blue ![image1205.png](images/a-snap-color-library/image1205.png) <!--  style="width:0.20278in;height:0.20278in" / --> . There are better perceptual color spaces
+bright. But if you’re like most people, you see spectral yellow {inline alt="image1206.png"}`images/a-snap-color-library/image1206.png` <!--  style="width:0.18889in;height:0.18889in" --> as much
+brighter than spectral blue {inline alt="image1205.png"}`images/a-snap-color-library/image1205.png` <!--  style="width:0.20278in;height:0.20278in" / --> . There are better perceptual color spaces
 with names like L\*u\*v\* and L\*a\*b\*
 that are based on research with human subjects to
 determine true perceived brightness. Wikipedia explains all this and

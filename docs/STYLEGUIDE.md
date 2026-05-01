@@ -34,9 +34,9 @@ Some images do not need custom CSS classes, but images used as inline examples a
 Write markdown like this:
 
 ```md
-![alt text](filename.png){.image-4x}
-![alt text](filename.png){.image-inline}
-![alt text](filename.png){.image-4x .image-inline} <!-- You probably don't need to combine these classes-->
+{inline alt="alt text" class="image-4x"}`filename.png`
+{inline alt="alt text" class="image-inline"}`filename.png`
+{inline alt="alt text" class="image-4x .image-inline"}`filename.png` <!-- You probably don't need to combine these classes-->
 ```
 
 ### Paper-output sizing for PDF/LaTeX
@@ -47,7 +47,7 @@ attribute in the same braces:
 
 ```md
 ![alt text](filename.png){width=2.84in}
-![alt text](filename.png){.image-4x width=3in}
+{inline alt="alt text" class="image-4x width=3in"}`filename.png`
 ```
 
 MyST forwards `width=Xin` to `\includegraphics[width=Xin]{...}`, so the

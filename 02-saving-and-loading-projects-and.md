@@ -46,7 +46,7 @@ cloud, save your project in the cloud
 The other possibility is to
 save your project "`in the cloud`",
 at the Snap<em>!</em> web site. In order to do this, you need an account with
-us. Click on the {index}`Cloud button` (![image489.png](images/02-saving-and-loading-projects-and/image489.png)) in the Tool Bar.
+us. Click on the {index}`Cloud button` ({inline alt="image489.png"}`images/02-saving-and-loading-projects-and/image489.png`) in the Tool Bar.
 Choose the “`Signup…`” option. This will show you a window that looks like
 the picture below:
 
@@ -150,7 +150,7 @@ the Computer and Cloud options.
 
 If you are still in **Snap<em>!</em>** and realize that you’ve loaded another
 project without saving the one you were working on: _**Don’t edit the new project.**_
-From the File menu ![image384.png](images/02-saving-and-loading-projects-and/image384.png) <!--  style="width:0.31944in;height:0.18056in" --> choose the "`Restore unsaved project`"
+From the File menu {inline alt="image384.png"}`images/02-saving-and-loading-projects-and/image384.png` <!--  style="width:0.31944in;height:0.18056in" --> choose the "`Restore unsaved project`"
 option .
 
 Restore unsaved project will also work if you log out of Snap<em>!</em> and

@@ -101,7 +101,7 @@ vector
 
 ### The File Menu
 
-The file icon (![the file icon](images/12-user-interface-elements/image384.png))
+The file icon ({inline alt="the file icon"}`images/12-user-interface-elements/image384.png`)
 shows a menu mostly about saving and loading projects. You
 may not see all these options, if you don’t have multiple sprites,
 scenes, custom blocks, and custom categories.
@@ -274,7 +274,7 @@ are also removed.
 <!-- cut: , new in Snap<em>!</em> 7.0 -->
 The next group of options concern the *scenes* feature. A scene
 is a complete project, with its own stage, sprites, and code, but
-several can be merged into one project, using the ![switch to scene block](images/12-user-interface-elements/image999.png){ .image-4x .image-inline } <!--  style="width:1.16667in;height:0.19792in" / -->  block to bring another
+several can be merged into one project, using the {inline alt="switch to scene block"}`images/12-user-interface-elements/image999.png`{ .image-4x .image-inline } <!--  style="width:1.16667in;height:0.19792in" / -->  block to bring another
 scene onscreen. The "`Scenes…`" option presents a
 menu of all the scenes in your project, where the File menu was before
 you clicked it. The "`New scene`" option creates a
@@ -365,7 +365,7 @@ Change password… option
 
 ### The Cloud Menu
 
-The cloud icon ![image1008.png](images/12-user-interface-elements/image1008.png) <!--  style="width:0.29167in;height:0.16667in" / --> ![image1004.png](images/12-user-interface-elements/image1004.png) <!--  style="width:0.29167in;height:0.16667in" / --> shows a menu of options relating to your Snap<em>!</em> cloud account. If
+The cloud icon {inline alt="image1008.png"}`images/12-user-interface-elements/image1008.png` <!--  style="width:0.29167in;height:0.16667in" / --> ![image1004.png](images/12-user-interface-elements/image1004.png) <!--  style="width:0.29167in;height:0.16667in" / --> shows a menu of options relating to your Snap<em>!</em> cloud account. If
 you are not logged in, you see the outline icon  ![image1004.png](images/12-user-interface-elements/image1004.png) <!--  style="width:0.29167in;height:0.16667in" / --> and get this menu:
 
 ![image1003.png](images/12-user-interface-elements/image1003.png) <!--  style="width:1.43681in;height:0.75972in" / -->
@@ -383,7 +383,7 @@ using a school email address, your school may block incoming email from
 outside the school.) The Open in Community Site option appears only if you have a project open; it takes you to the community site page about that project.
 
 If you are already logged in,
-you’ll see the solid icon ![image1008.png](images/12-user-interface-elements/image1008.png) <!--  style="width:0.29167in;height:0.16667in" / -->  and get this menu:
+you’ll see the solid icon {inline alt="image1008.png"}`images/12-user-interface-elements/image1008.png` <!--  style="width:0.29167in;height:0.16667in" / -->  and get this menu:
 
 ![image1007.png](images/12-user-interface-elements/image1007.png) <!--  style="width:1.61111in;height:0.65278in" / -->
 
@@ -427,7 +427,7 @@ Disable click-to-run option
 
 ### The Settings Menu
 
-The settings icon ![image1010.png](images/12-user-interface-elements/image1010.png) <!--  style="width:0.29167in;height:0.16667in" / -->
+The settings icon {inline alt="image1010.png"}`images/12-user-interface-elements/image1010.png` <!--  style="width:0.29167in;height:0.16667in" / -->
 shows a menu of Snap<em>!</em> options, either for the
 current project or for you permanently, depending on the option:
 
@@ -626,7 +626,7 @@ map to Smalltalk, map to JavaScript, etc., to see examples of how to
 provide translations for blocks.
 
 ![image1028.png](images/12-user-interface-elements/image1028.png){ .image-4x } <!--  style="width:1.38in;height:4.79in" alt="Graphical user interface, application, Teams Description automatically generated" / -->
-![image1027.png](images/12-user-interface-elements/image1027.png){.image-4x } <!--  style="width:2.20972in;height:4.96944in" -->
+{inline alt="image1027.png" class="image-4x "}`images/12-user-interface-elements/image1027.png` <!--  style="width:2.20972in;height:4.96944in" -->
 
 The Single palette option puts all blocks,
 regardless of category, into a single palette. It’s intended mainly for
@@ -636,11 +636,11 @@ application, this option is combined with the hiding of almost all
 primitive blocks. (See @sec-context-menus-for-palette-blocks.) When
 Single palette is turned on, two additional options (initially on)
 appear in the settings menu; the Show categories option controls the appearance of the palette category names
-such as ![image1029.png](images/12-user-interface-elements/image1029.png){.image-inline} and
-![image1030.png](images/12-user-interface-elements/image1030.png){.image-inline},
+such as {inline alt="image1029.png" class="image-inline"}`images/12-user-interface-elements/image1029.png` and
+{inline alt="image1030.png" class="image-inline"}`images/12-user-interface-elements/image1030.png`,
 while the Show buttons option controls the
-appearance of the ![image1031.png](images/12-user-interface-elements/image1031.png){.image-inline} and
-![image1032.png](images/12-user-interface-elements/image1032.png){.image-inline} buttons in the palette.
+appearance of the {inline alt="image1031.png" class="image-inline"}`images/12-user-interface-elements/image1031.png` and
+{inline alt="image1032.png" class="image-inline"}`images/12-user-interface-elements/image1032.png` buttons in the palette.
 
 The HSL pen color model option
 changes the set pen, change pen, and pen blocks to provide menu options
@@ -664,7 +664,7 @@ visible stepping
 ### Visible Stepping Controls
 
 After the menu buttons you’ll see the project name. After that comes the footprint
-button ![image121.png](images/12-user-interface-elements/image121.png) <!--  style="width:0.37917in;height:0.21667in" --> used to turn on visible stepping
+button {inline alt="image121.png"}`images/12-user-interface-elements/image121.png` <!--  style="width:0.37917in;height:0.21667in" --> used to turn on visible stepping
 and, when it’s on, the slider to control the speed of stepping.
 
 :::{index} Stage resizing buttons
@@ -706,7 +706,7 @@ stop all block
 Above the right edge of the stage are three buttons that control the running of the project.
 
 Technically,
-the green flag ![image1037.png](images/12-user-interface-elements/image1037.png) <!--  style="width:0.38in;height:0.22in" / --> is no more a project control
+the green flag {inline alt="image1037.png"}`images/12-user-interface-elements/image1037.png` <!--  style="width:0.38in;height:0.22in" / --> is no more a project control
 than anything else that can trigger a hat block: typing on the keyboard
 or clicking on a sprite. But it’s a convention that clicking the flag
 should start the action of the project from the beginning. It’s only a
@@ -723,7 +723,7 @@ bolt: ![image1039.png](images/12-user-interface-elements/image1039.png) <!--  st
 Scripts can simulate clicking the green flag by broadcasting the special message
 ![image1045.png](images/12-user-interface-elements/image1045.png) <!--  style="width:0.30556in;height:0.30556in" / --> .
 
-The pause button ![image1044.png](images/12-user-interface-elements/image1044.png) <!--  style="width:0.37917in;height:0.21667in" / --> suspends running all scripts. If clicked while scripts are
+The pause button {inline alt="image1044.png"}`images/12-user-interface-elements/image1044.png` <!--  style="width:0.37917in;height:0.21667in" / --> suspends running all scripts. If clicked while scripts are
 running, the button changes shape to become a play button: ![image1046.png](images/12-user-interface-elements/image1046.png) <!--  style="width:0.37917in;height:0.21667in" / --> Clicking it
 while in this form resumes the suspended scripts. There is also a pause
 all block in the Control palette that can be
@@ -732,9 +732,9 @@ of a breakpoint debugging
 capability. The use of the pause button is slightly different in visible
 stepping mode, described in Chapter I.
 
-The stop button ![image1047.png](images/12-user-interface-elements/image1047.png) <!--  style="width:0.37917in;height:0.21667in" / --> stops all scripts, like the stop all block. It does *not* prevent a script from starting again in response
+The stop button {inline alt="image1047.png"}`images/12-user-interface-elements/image1047.png` <!--  style="width:0.37917in;height:0.21667in" / --> stops all scripts, like the stop all block. It does *not* prevent a script from starting again in response
 to a click or keystroke; the user interface is always active. There is
-one exception: generic when blocks ![image1048.png](images/12-user-interface-elements/image1048.png) <!--  style="width:0.54861in;height:0.17708in" / -->  will not fire after a stop until some
+one exception: generic when blocks {inline alt="image1048.png"}`images/12-user-interface-elements/image1048.png` <!--  style="width:0.54861in;height:0.17708in" / -->  will not fire after a stop until some
 non-generic event starts a script. The stop button also deletes all
 temporary clones.
 
@@ -753,13 +753,13 @@ Make a block button
 ### Buttons in the Palette
 
 Under the eight palette selector buttons, at the top of the actual palette, are
-two semi-transparent buttons. The first is the *search* button ![image1049.png](images/12-user-interface-elements/image1049.png), <!--  style="width:0.26042in;height:0.26042in" -->
+two semi-transparent buttons. The first is the *search* button {inline alt="image1049.png"}`images/12-user-interface-elements/image1049.png`, <!--  style="width:0.26042in;height:0.26042in" -->
 which is equivalent to typing control-F: It
 replaces the palette with a search bar into which you can type part of
 the title text of the block you’re trying to find. To leave this search
 mode, click one of the eight palette selectors, or type the Escape key.
 
-The other button ![image1050.png](images/12-user-interface-elements/image1050.png) <!--  style="width:0.26042in;height:0.26042in" --> is equivalent to the “Make a block” button, except that the dialog window that it opens has the current
+The other button {inline alt="image1050.png"}`images/12-user-interface-elements/image1050.png` <!--  style="width:0.26042in;height:0.26042in" --> is equivalent to the “Make a block” button, except that the dialog window that it opens has the current
 palette (color) preselected.
 
 :::{index} context menus for palette blocks
@@ -1009,7 +1009,7 @@ undo or redo block and script drops. When you undo a drop into an input
 slot, whatever used to be in the slot is restored. The redo button
 appears once you’ve used undo.
 
-The third button ![image1067.png](images/12-user-interface-elements/image1067.png){.image-inline} starts keyboard editing
+The third button {inline alt="image1067.png" class="image-inline"}`images/12-user-interface-elements/image1067.png` starts keyboard editing
 mode (See @sec-keyboard-editing).
 
 Control-click/right-clicking a primitive block within a script
@@ -1229,9 +1229,9 @@ The Turtle costume is always present in every sprite; it is costume
 number 0. Other costumes can be painted within Snap<em>!</em> or imported from
 files or other browser tabs if your browser supports that. Clicking on a
 costume selects it; that is, the sprite will look like the selected
-costume. Clicking on the paint brush icon ![image1084.png](images/12-user-interface-elements/image1084.png) <!--  style="width:0.29167in;height:0.16667in" / -->
+costume. Clicking on the paint brush icon {inline alt="image1084.png"}`images/12-user-interface-elements/image1084.png` <!--  style="width:0.29167in;height:0.16667in" / -->
 opens the *Paint Editor* *,* in which you can
-create a new costume. Clicking on the camera icon ![image1083.png](images/12-user-interface-elements/image1083.png) <!--  style="width:0.37917in;height:0.21667in" -->
+create a new costume. Clicking on the camera icon {inline alt="image1083.png"}`images/12-user-interface-elements/image1083.png` <!--  style="width:0.37917in;height:0.21667in" -->
 opens a window in which you see what your computer’s camera is seeing,
 and you can take a picture (which will be the full size of the stage
 unless you shrink it in the Paint Editor). This works only if you give
@@ -1380,12 +1380,12 @@ to the shoulder while waving.)
 
 The vector editor’s controls are much like those in the bitmap
 editor. One point of difference is that the bitmap editor has two
-buttons for solid ![image1098.png](images/12-user-interface-elements/image1098.png) <!--  style="width:0.21528in;height:0.21528in" / -->  and outline ![image1097.png](images/12-user-interface-elements/image1097.png) <!--  style="width:0.21528in;height:0.21528in" / -->  rectangles, and similarly for ellipses,
+buttons for solid {inline alt="image1098.png"}`images/12-user-interface-elements/image1098.png` <!--  style="width:0.21528in;height:0.21528in" / -->  and outline {inline alt="image1097.png"}`images/12-user-interface-elements/image1097.png` <!--  style="width:0.21528in;height:0.21528in" / -->  rectangles, and similarly for ellipses,
 but in the vector editor there is always an edge color and a {index}`fill color`, even if the latter is “{index}`transparent paint`,” and so only one button
 per shape is needed. Since each shape that you draw is a separate layer
 (like sprites on the stage), there are controls to move the selected
 shape up (frontward) or down (rearward) relative to other shapes. There
-is a selection tool ![image1096.png](images/12-user-interface-elements/image1096.png) <!--  style="width:0.21528in;height:0.21528in" / -->  to drag out a rectangular area and select all the
+is a selection tool {inline alt="image1096.png"}`images/12-user-interface-elements/image1096.png` <!--  style="width:0.21528in;height:0.21528in" / -->  to drag out a rectangular area and select all the
 shapes within that area.
 
 ![image1095.png](images/12-user-interface-elements/image1095.png) <!--  style="width:3.83611in;height:2.54861in" / -->
@@ -1402,7 +1402,7 @@ sprite always has an appearance unless hidden, but it doesn’t sing
 unless explicitly asked.) So the context menu for sounds has only
 rename, delete, and export options, and it has a clickable button
 labeled Play or Stop as appropriate. There is a sound *recorder,* which
-appears if you click the red record button (![image1099.png](images/12-user-interface-elements/image1099.png) <!--  style="width:0.35in;height:0.2in" --> ):
+appears if you click the red record button ({inline alt="image1099.png"}`images/12-user-interface-elements/image1099.png` <!--  style="width:0.35in;height:0.2in" --> ):
 
 ![image1100.png](images/12-user-interface-elements/image1100.png) <!--  style="width:2.325in;height:1.03333in" -->
 
@@ -1767,17 +1767,17 @@ scenes
 ## The Sprite Corral and Sprite Creation Buttons
 
 Between the stage and the sprite corral at the bottom right of the Snap<em>!</em> window is a dark grey bar containing three buttons at the left and one at the right. The first
-three are used to create a new sprite. The first button ![image1124.png](images/12-user-interface-elements/image1124.png) <!--  style="width:0.29167in;height:0.16667in" / -->  makes a sprite
+three are used to create a new sprite. The first button {inline alt="image1124.png"}`images/12-user-interface-elements/image1124.png` <!--  style="width:0.29167in;height:0.16667in" / -->  makes a sprite
 with just the turtle costume, with a randomly chosen position and pen
 color. (If you hold down the Shift key while clicking, the new sprite’s
-direction will also be random.) The second button ![image1125.png](images/12-user-interface-elements/image1125.png) <!--  style="width:0.29167in;height:0.16667in" / --> makes a sprite and
+direction will also be random.) The second button {inline alt="image1125.png"}`images/12-user-interface-elements/image1125.png` <!--  style="width:0.29167in;height:0.16667in" / --> makes a sprite and
 opens the Paint Editor so that you can make your own costume for it. (Of
 course you could click the first button and then click the paint button
 in its costumes tab; this paint button is a shortcut
-for all that.) Similarly, the third button ![image1083.png](images/12-user-interface-elements/image1083.png) <!--  style="width:0.37917in;height:0.20556in" --> uses your camera, if
+for all that.) Similarly, the third button {inline alt="image1083.png"}`images/12-user-interface-elements/image1083.png` <!--  style="width:0.37917in;height:0.20556in" --> uses your camera, if
 possible, to make a costume for the new sprite.
 
-The trash can button ![image1126.png](images/12-user-interface-elements/image1126.png) <!--  style="width:0.29167in;height:0.17361in" / -->  at the right has two uses.
+The trash can button {inline alt="image1126.png"}`images/12-user-interface-elements/image1126.png` <!--  style="width:0.29167in;height:0.17361in" / -->  at the right has two uses.
 You can drag a sprite thumbnail onto it from the sprite corral to delete
 that sprite, or you can click it to undelete a sprite you deleted by
 accident.

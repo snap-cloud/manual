@@ -11,7 +11,7 @@ data type
 ## Scratch’s Type Notation
 
 Prior to version 3, Scratch block inputs came in two types: {span .mono}[Text-or-number] type and {span .mono}[Number] type. The former is
-indicated by a rectangular box, the latter by a rounded box: ![image654.png](images/05-typed-inputs/image654.png){.image-inline}. A third
+indicated by a rectangular box, the latter by a rounded box: {inline alt="image654.png" class="image-inline"}`images/05-typed-inputs/image654.png`. A third
 Scratch type, {span .mono}[Boolean] (true/false), can be used in certain {span .mono}[Control]
 blocks with hexagonal slots.
 
@@ -139,7 +139,7 @@ in an arbitrary input instead of using the pulldown menu.
 
 Custom blocks can
 also have such inputs. To make a pulldown input, open the long form
-input dialog, choose a text type ({span .mono}[Any], {span .mono}[Text], or {span .mono}[Number]) and click the ![image658.png](images/05-typed-inputs/image658.png) <!--  style="width:0.13194in;height:0.13194in" -->
+input dialog, choose a text type ({span .mono}[Any], {span .mono}[Text], or {span .mono}[Number]) and click the {inline alt="image658.png"}`images/05-typed-inputs/image658.png` <!--  style="width:0.13194in;height:0.13194in" -->
 icon in the bottom right corner, or {span .mono}[control/right-click] in the dialog.
 You will see this menu:
 
@@ -187,13 +187,13 @@ Finally, you can make the input box accept more than one line of text
 either "`multi-line`" for regular
 text or "`code`" for monospace-font computer code.
 
-If the input type is something other than text, then clicking the ![image670.png](images/05-typed-inputs/image670.png){.image-inline} <!--  style="width:0.13056in;height:0.1375in" --> button will instead show this menu:
+If the input type is something other than text, then clicking the {inline alt="image670.png" class="image-inline"}`images/05-typed-inputs/image670.png` <!--  style="width:0.13056in;height:0.1375in" --> button will instead show this menu:
 
 ![image669.png](images/05-typed-inputs/image669.png) <!--  style="width:0.60417in;height:0.31944in" -->
 
-As an example, we want to make this block: ![image671.png](images/05-typed-inputs/image671.png){.image-inline} <!--  style="width:0.60417in;height:0.31944in" -->  The second input must be a read-only object menu:
+As an example, we want to make this block: {inline alt="image671.png" class="image-inline"}`images/05-typed-inputs/image671.png` <!--  style="width:0.60417in;height:0.31944in" -->  The second input must be a read-only object menu:
 
-![image694.png](images/05-typed-inputs/image694.png){.image-4x} <!--  style="width:0.60417in;height:0.31944in" -->
+{inline alt="image694.png" class="image-4x"}`images/05-typed-inputs/image694.png` <!--  style="width:0.60417in;height:0.31944in" -->
 
 :::{index} arrowheads
 ellipsis
@@ -283,7 +283,7 @@ new line character
 
 ### Title Text and Symbols
 
-Some primitive blocks have symbols as part of the block name: ![image687.png](images/05-typed-inputs/image687.png){.image-inline} <!--  style="width:1.21875in;height:0.23472in" / -->
+Some primitive blocks have symbols as part of the block name: {inline alt="image687.png" class="image-inline"}`images/05-typed-inputs/image687.png` <!--  style="width:1.21875in;height:0.23472in" / -->
 Custom blocks can use symbols too. In the Block Editor, click the plus sign in
 the prototype at the point where you want to insert the symbol. Then
 click the "`title text`" picture below the text box that’s expecting an
@@ -294,7 +294,7 @@ input slot name. The dialog will then change to look like this:
 The important part to notice is the arrowhead that has appeared at the right
 end of the text box. Click it to see the menu shown here at the left.
 
-Choose one of the symbols. The result will have the symbol you want: ![image688.png](images/05-typed-inputs/image688.png){.image-inline}. The
+Choose one of the symbols. The result will have the symbol you want: {inline alt="image688.png" class="image-inline"}`images/05-typed-inputs/image688.png`. The
 available symbols are, pretty much, the ones that are used in Snap<em>!</em>
 icons.
 
