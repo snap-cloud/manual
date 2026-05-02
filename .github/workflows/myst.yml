@@ -65,6 +65,7 @@ jobs:
             tagpdf
             textpos
             titlesec
+            ulem
 
       # Run npm build to compile the custom SASS
       - name: Build HTML
