@@ -3,7 +3,7 @@
 # The Snap<em>!</em> Reference Manual
 ## [Read online at docs.snap.berkeley.edu][website] &middot; [Download the PDF][pdf]
 
-[![GitHub Pages](https://img.shields.io/badge/website-GitHub%20Pages-blue.svg)](https://docs.snap.berkeley.edu/)
+[![GitHub Pages](https://img.shields.io/badge/website-GitHub%20Pages-blue.svg)](https://docs.snap.berkeley.edu/) [![Build Status](https://github.com/snap-cloud/manual/actions/workflows/myst.yml/badge.svg)](https://github.com/snap-cloud/manual/actions/workflows/myst.yml) [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.16892852.svg)](https://doi.org/10.5281/zenodo.16892852)
 
 The latest production build of the manual is published from `main` to
 GitHub Pages on every push:
