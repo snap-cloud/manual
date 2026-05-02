@@ -60,7 +60,9 @@ jobs:
             framed
             iftex
             imakeidx
+            pdfmanagement-testphase
             sourceserifpro
+            tagpdf
             textpos
             titlesec
 
@@ -71,7 +73,16 @@ jobs:
           myst build --html --ci --max-size-webp 0
 
       - name: Build PDF
-        run: myst build --pdf --ci
+        run: |
+          myst build --pdf --ci
+          # myst-cli swallows latexmk's non-zero exit, so verify the
+          # expected PDF actually landed in output/. Without this the
+          # workflow only fails at upload time, far away from the
+          # latex error in the log.
+          if [ ! -s output/snap-manual.pdf ]; then
+            echo "::error::output/snap-manual.pdf was not produced; check the latexmk log above."
+            exit 1
+          fi
 
       - name: Enforce CNAME file for GitHub Pages
         run: echo "docs.snap.berkeley.edu" > _build/html/CNAME
