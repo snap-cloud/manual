@@ -58,5 +58,6 @@ project:
         level: 1
       - file: appendix/libraries/index.md
         level: 2
-      - file: manual-index.md
-        level: 0
+      # The index is rendered by \printindex from the LaTeX template;
+      # listing manual-index.md here would render the show-index entries
+      # as a definition list *and* the makeindex output stacked together.

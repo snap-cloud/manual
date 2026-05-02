@@ -30,17 +30,22 @@ jobs:
       - name: Print MyST version
         run: myst --version
 
-      - name: Install LaTeX
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y --no-install-recommends \
-            latexmk \
-            texlive-latex-recommended \
-            texlive-latex-extra \
-            texlive-fonts-recommended \
-            texlive-fonts-extra \
-            texlive-luatex \
-            texlive-xetex
+      # The PDF builds compile under LuaLaTeX and rely on
+      # \DocumentMetadata's tagged-PDF hooks, which require TeX Live
+      # 2024+. Ubuntu's apt packages still ship 2023, so install
+      # TeX Live 2025 from upstream via teatimeguest's action.
+      - name: Install TeX Live 2025
+        uses: teatimeguest/setup-texlive-action@v3
+        with:
+          version: 2025
+          packages: >-
+            scheme-basic latexmk
+            collection-latexrecommended collection-latexextra
+            collection-fontsrecommended collection-fontsextra
+            collection-luatex collection-xetex
+            imakeidx fontawesome5 sourceserifpro koma-script
+            iftex hyperref tikz textpos titlesec multicol
+            fontspec luaotfload
 
       # Run npm build to compile the custom SASS
       - name: Build HTML

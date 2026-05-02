@@ -2,6 +2,19 @@
 % Vendored from https://github.com/myst-templates/plain_latex_book
 % See README.md in this directory for the list of local adaptations.
 
+% Declare the PDF version and document language up front so the LaTeX
+% kernel (TeX Live 2022+) can emit XMP metadata, structure roots, and
+% the /Lang attribute that screen readers rely on. We deliberately
+% don't enable the LaTeX team's experimental `testphase` keys here:
+% in TeX Live 2023/2024 they trigger spurious "tag/tool/<x>" key
+% errors when chapter titles contain commas (e.g. "Blocks, Scripts,
+% and Sprites"). The lang + pdfversion declarations alone already
+% improve assistive-tech behaviour without breaking the build.
+\DocumentMetadata{
+  pdfversion = 2.0,
+  lang       = en-US,
+}
+
 % Body font size 11pt; TOC and footnotes drop to 10pt below.
 \documentclass[11pt,oneside]{scrbook}
 \usepackage[paperheight=11in,
@@ -27,8 +40,15 @@
 \usepackage[noautomatic]{imakeidx}
 \makeindex[intoc, columns=2, options={-s index-style.ist}]
 
-\usepackage[T1]{fontenc}
-\usepackage[utf8]{inputenc}
+% Engine-aware font setup. We build with LuaLaTeX, which is native
+% UTF-8 and uses fontspec; pdflatex still works as a fallback (used
+% in some local debug runs) and needs the legacy fontenc/inputenc
+% pair plus T1 encoding.
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+\fi
 % Body font: Adobe Source Serif (the texlive `sourceserifpro` package
 % ships Source Serif Pro, the same family as Source Serif 4). Source
 % Serif is designed for screen + body legibility and reads well at
@@ -36,6 +56,13 @@
 % since Source Serif doesn't ship a monospaced family.
 \usepackage[default]{sourceserifpro}
 \usepackage{lmodern}
+% \snaplightning renders the lightning-bolt symbol used as a marker
+% for "compiled" / experimental Snap! blocks. Source Serif (and most
+% of the body fonts that ship with TeX Live) have no glyph for ⚡, so
+% the latex-shims plugin substitutes \snaplightning{} for ⚡ in the
+% rendered text and we draw a fontawesome bolt icon here.
+\usepackage{fontawesome5}
+\newcommand{\snaplightning}{\faBolt}
 % Slightly relaxed line spacing (1.07x) — a touch easier on the eyes
 % than the default 1.0 without adding a meaningful number of pages.
 \linespread{1.07}
@@ -50,6 +77,9 @@
 \usepackage{framed}
 \usepackage{hyperref}
 \usepackage{amssymb}
+% myst-to-tex emits \uline{...} for underlined text; ulem provides it
+% (and the [normalem] option keeps \emph behaving the LaTeX-standard way).
+\usepackage[normalem]{ulem}
 \usepackage{ifthen}
 \usepackage{calc}
 \usepackage{tikz}
@@ -201,7 +231,19 @@
   colorlinks,
   linkcolor={black},
   citecolor={black},
-  urlcolor={black}
+  urlcolor={black},
+  % Accessibility / discoverability metadata. pdfdisplaydoctitle makes
+  % readers show the document title rather than the file name; pdflang
+  % announces the document language to assistive tech.
+  unicode=true,
+  pdftitle={[-doc.title-]},
+  pdfauthor={[# for author in doc.authors #][-author.name-][# if not loop.last #], [# endif #][# endfor #]},
+  pdfsubject={Reference manual for the Snap! programming language},
+  pdfkeywords={Snap!, programming languages, blocks-based programming, visual programming, computer science education},
+  pdflang={en-US},
+  pdfdisplaydoctitle=true,
+  bookmarksnumbered=true,
+  bookmarksopen=true,
 }
 
 % Style quotes
@@ -306,6 +348,11 @@
 \bibliography{[- doc.bibliography | join(", ") -]}
 [# endif #]
 
-% \printindex is emitted by `manual-index.md`, the last chapter in the toc.
+% The index is emitted directly here rather than via a "manual-index.md"
+% chapter so we don't end up with both myst's `show-index` definition
+% list and \printindex's makeindex output stacked back-to-back. The
+% `intoc` option to \makeindex (set above) adds the "Index" heading to
+% the TOC.
+\printindex
 
 \end{document}

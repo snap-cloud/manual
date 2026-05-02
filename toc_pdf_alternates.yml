@@ -466,7 +466,7 @@ project:
         level: 3
       - file: blocks/lists/reportCrossproduct.md
         level: 3
-      - file: manual-index.md
+      # \printindex emits the index from the LaTeX template directly.
   - format: tex+pdf
     title: Snap\textit{!} Blocks Reference
     template: ./_latex-template/

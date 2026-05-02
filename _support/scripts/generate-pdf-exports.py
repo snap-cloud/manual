@@ -34,6 +34,9 @@ TOC = ROOT / "toc.yml"
 MYST_YML = ROOT / "myst.yml"
 
 BLOCKS_TITLE = "Blocks"
+# Filtered from the toc when present: the LaTeX template now emits
+# \printindex itself, so listing this file alongside \printindex would
+# render the index twice.
 INDEX_FILE = "manual-index.md"
 
 BEGIN_MARK = "  # === BEGIN GENERATED PDF VARIANTS ==="
@@ -80,13 +83,15 @@ def main() -> int:
         print(f"error: could not find '{BLOCKS_TITLE}' branch in {TOC}", file=sys.stderr)
         return 1
 
-    # No-blocks variant: everything except the Blocks branch, plus the index.
-    no_blocks = flatten(other_entries) + [{"file": INDEX_FILE}]
+    # No-blocks variant: everything except the Blocks branch. The LaTeX
+    # template's \printindex emits the index itself, so manual-index.md is
+    # not appended here.
+    no_blocks = flatten(other_entries)
 
-    # Blocks-only variant: just the Blocks branch (rooted at level 0), plus
-    # the index. We expose the Blocks subtree's *children* directly so the
-    # palette parts (Motion Blocks, Looks Blocks, …) sit at the top level.
-    blocks_only = flatten(blocks_entry.get("children", [])) + [{"file": INDEX_FILE}]
+    # Blocks-only variant: just the Blocks branch (rooted at level 0). We
+    # expose the Blocks subtree's *children* directly so the palette parts
+    # (Motion Blocks, Looks Blocks, …) sit at the top level.
+    blocks_only = flatten(blocks_entry.get("children", []))
 
     block = render_variants(no_blocks, blocks_only)
     if not patch_myst_yml(block):
