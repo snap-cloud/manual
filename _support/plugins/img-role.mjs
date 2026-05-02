@@ -21,7 +21,7 @@ const imgRole = {
         url: data.body.trim(),
         alt,
         class: className || 'image-inline',
-        width: width ?? '100%',
+        width:,
         height,
         title,
       },
