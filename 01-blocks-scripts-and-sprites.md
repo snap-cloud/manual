@@ -391,8 +391,7 @@ will be the attachment point of the part on the anchor.
 
 Sprite nesting is shown in the sprite corral icons of both anchors and parts:
 
-![image47.png](images/01-blocks-scripts-and-sprites/image47.png)
-<!-- {width=1.63056in height=0.96528in} -->
+{img alt="image47.png" width="1.63056in"}`images/01-blocks-scripts-and-sprites/image47.png`
 
 In this illustration, it is desired to animate Alonzo’s arm. (The arm has
 been colored green in this picture to make the relationship of the two
@@ -440,16 +439,16 @@ When you drag a reporter block over another block’s input slot, a white
 “halo” appears around that input slot, analogous to the
 white line that appears when snapping command blocks together:
 
-![image67.png](images/01-blocks-scripts-and-sprites/image67.png) <!-- {width=1.47in height=0.52in} -->
+{img alt="image67.png" width="1.47in"}`images/01-blocks-scripts-and-sprites/image67.png`
 
 Don’t drop the input over a *red* halo:
-![image71.png](images/01-blocks-scripts-and-sprites/image71.png) <!--  style="width:2.11111in;height:0.61806in" -->
+{img alt="image71.png" width="2.11111in"}`images/01-blocks-scripts-and-sprites/image71.png`
 
 That’s used for a purpose explained in @sec-recursive-calls-to-multiple-input-blocks.
 
 Here’s a simple script that uses a reporter block:
 
-![image72.png](images/01-blocks-scripts-and-sprites/image72.png) <!--  style="width:2.11111in;height:0.61806in" -->
+{img alt="image72.png" width="2.11111in"}`images/01-blocks-scripts-and-sprites/image72.png`
 
 Here the `x position` reporter provides the first input to the say block.
 (The sprite’s {index}`x position` is its horizontal position,
@@ -462,7 +461,7 @@ You can do arithmetic using reporters in the Operators palette:
 :::{index} arithmetic
 :::
 
-![image73.png](images/01-blocks-scripts-and-sprites/image73.png) <!--  style="width:2.11111in;height:0.61806in" -->
+{img alt="image73.png" width="2.11111in"}`images/01-blocks-scripts-and-sprites/image73.png`
 
 The `round` block rounds 35.3905… to 35, and the `+` block adds 100 to that.
 (By the way, the `round` block is in the Operators palette, just like `+`,
@@ -470,7 +469,7 @@ but in this script it’s a lighter color with black lettering because
 Snap<em>!</em> alternates light and dark versions of the palette colors when a
 block is nested inside another block from the same palette:
 
-![image80.png](images/01-blocks-scripts-and-sprites/image80.png) <!-- {width=4.85417in height=1.90625in} -->
+{img alt="image80.png" width="4.85417in"}`images/01-blocks-scripts-and-sprites/image80.png`
 
 This aid to readability is called *zebra coloring.*
 A reporter block with its inputs, maybe including other reporter
@@ -514,13 +513,13 @@ is satisfied:
 If, while working on a project, you want to omit temporarily some commands
 in a script, but you don’t want to forget where they belong, you can say
 
-![image88.png](images/01-blocks-scripts-and-sprites/image88.png) <!-- {width=2.28194in height=1.46875in} -->
+{img alt="image88.png" width="2.28194in"}`images/01-blocks-scripts-and-sprites/image88.png`
 
 Sometimes you want to take the same action whether some condition is
 true or false, but with a different input value. For this purpose you
 can use the *reporter* `if` block:
 
-![image90.png](images/01-blocks-scripts-and-sprites/image90.png) <!-- {width=4.20833in height=0.38542in} -->
+{img alt="image90.png" width="4.20833in"}`images/01-blocks-scripts-and-sprites/image90.png`
 
 The technical term for a true or false value is a “Boolean”
 value; it has a capital B because it’s named after a person, George
@@ -555,12 +554,12 @@ squiral
 
 Try this script:
 
-![image93.png](images/01-blocks-scripts-and-sprites/image93.png) <!-- {width=1.58333in height=1.41667in} -->
+{img alt="image93.png" width="1.58333in"}`images/01-blocks-scripts-and-sprites/image93.png`
 
 The input to the move block is an orange oval. To get it there, drag the
 orange oval that’s part of the `for` block:
 
-![image94.png](images/01-blocks-scripts-and-sprites/image94.png) <!-- {width=1.88542in height=1.4375in} -->
+{img alt="image94.png" width="1.88542in"}`images/01-blocks-scripts-and-sprites/image94.png`
 
 The {index}`orange oval` is a *variable:* a symbol that
 represents a value. (I took this screenshot before changing the second
@@ -583,7 +582,7 @@ name <var>i</var>, you can change it by clicking on the orange oval without
 dragging it, which will pop up a dialog window in which you can enter a
 different name:
 
-![image95.png](images/01-blocks-scripts-and-sprites/image95.png) <!-- {width=3.1875in height=1.5in} -->
+{img alt="image95.png" width="3.1875in"}`images/01-blocks-scripts-and-sprites/image95.png`
 
 “<var>I</var>” isn’t a very descriptive name; you might prefer “length” to indicate
 its purpose in the script. “<var>I</var>” is traditional because mathematicians
@@ -604,12 +603,12 @@ You can create variables “by hand” that aren’t limited to being used
 within a single block. At the top of the Variables palette, click the
 “Make a variable” button:
 
-![image97.png](images/01-blocks-scripts-and-sprites/image97.png) <!-- {width=2.05208in height=2.27083in} -->
+{img alt="image97.png" width="2.05208in"}`images/01-blocks-scripts-and-sprites/image97.png`
 
 This will bring up a dialog window in which you can give your variable a
 name:
 
-![image96.png](images/01-blocks-scripts-and-sprites/image96.png) <!-- {width=3.1875in height=1.84375in} -->
+{img alt="image96.png" width="3.1875in"}`images/01-blocks-scripts-and-sprites/image96.png`
 
 The dialog also gives you a choice to make the variable available to all
 sprites (which is almost always what you want) or to make it visible
@@ -626,13 +625,13 @@ value for that variable name.
 If you give your variable the name “name” then the Variables palette will
 look like this:
 
-![image98.png](images/01-blocks-scripts-and-sprites/image98.png) <!-- {width=1.65833in height=2.29167in} -->
+{img alt="image98.png" width="1.65833in"}`images/01-blocks-scripts-and-sprites/image98.png`
 
 There’s now a “Delete a variable” button, and there’s
 an orange oval with the variable name in it, just like the orange oval
 in the for block. You can drag the variable into any script in the
 scripting area. Next to the oval is a checkbox, initially checked. When
-it’s checked, you’ll also see a *variable watcher* on the stage: ![image99.png](images/01-blocks-scripts-and-sprites/image99.png) <!-- {width=1.04167in height=0.40625in} -->
+it’s checked, you’ll also see a *variable watcher* on the stage: {img alt="image99.png" width="1.04167in"}`images/01-blocks-scripts-and-sprites/image99.png`
 :::{index} Delete a variable
 :::
 
@@ -642,14 +641,14 @@ will display the value.
 :::
 
 How *do* you give it a value? You use the {index}`\`set\` block<`set` block>` :
-![image100.png](images/01-blocks-scripts-and-sprites/image100.png) <!-- {width=1.92708in height=0.47917in} -->
+{img alt="image100.png" width="1.92708in"}`images/01-blocks-scripts-and-sprites/image100.png`
 
 Note that you *don’t* drag the variable’s oval into the `set` block! You
 click on the downarrow in the first input slot, and you get a menu of
 all the available variable names.
 
 If you do choose “For this sprite only”
-when creating a variable, its block in the palette looks like this:![image101.png](images/01-blocks-scripts-and-sprites/image101.png) <!--  style="width:0.65833in;height:0.14167in" -->
+when creating a variable, its block in the palette looks like this:{img alt="image101.png" width="0.65833in"}`images/01-blocks-scripts-and-sprites/image101.png`
 :::{index} For this sprite only
 :::
 
@@ -676,14 +675,14 @@ variable; script-local
 script variables block
 :::
 
-![image105.png](images/01-blocks-scripts-and-sprites/image105.png) <!-- {width=2.08333in height=0.30208in} -->
+{img alt="image105.png" width="2.08333in"}`images/01-blocks-scripts-and-sprites/image105.png`
 
 As in the `for` block, you can click on an orange oval in the script
 variables block without dragging to change its name. You can also make
 more than one temporary variable by clicking on the right arrow at the
 end of the block to add another variable oval:
 
-![image106.png](images/01-blocks-scripts-and-sprites/image106.png) <!-- {width=2.08333in height=0.30208in} -->
+{img alt="image106.png" width="2.08333in"}`images/01-blocks-scripts-and-sprites/image106.png`
 
 :::{index} Renaming variables
 :::
@@ -712,7 +711,7 @@ If you right-click on an
 orange oval in a context in which the variable is *used,* then you are
 able to rename just that one orange oval:
 
-![image104.png](images/01-blocks-scripts-and-sprites/image104.png) <!-- {width=2.08333in height=0.30208in} -->
+{img alt="image104.png" width="2.08333in"}`images/01-blocks-scripts-and-sprites/image104.png`
 
 If you right-click on the
 place where the variable is *defined* (a script variables block, the
@@ -722,7 +721,7 @@ given two renaming options, “rename” and “rename all.” If you choose
 “rename,” then the name is changed only in that one orange oval, as in
 the previous case:
 
-![image103.png](images/01-blocks-scripts-and-sprites/image103.png) <!-- {width=2.08333in height=0.30208in} -->
+{img alt="image103.png" width="2.08333in"}`images/01-blocks-scripts-and-sprites/image103.png`
 
 But if you choose “rename all,” then the name will be changed throughout the scope of the variable
 (the script for a script variable, or everywhere for a global variable):
@@ -738,7 +737,7 @@ can put in a variable; in Chapter IV you’ll see how to use *lists* to
 collect many values in one data structure, and in Chapter VIII you’ll
 see how to read information from web sites.
 
-![image102.png](images/01-blocks-scripts-and-sprites/image102.png) <!-- {width=2.08333in height=0.30208in} -->
+{img alt="image102.png" width="2.08333in"}`images/01-blocks-scripts-and-sprites/image102.png`
 
 When you use these capabilities, your project may take up a lot of memory in
 the computer. If you get close to the amount of memory available to
@@ -816,7 +815,7 @@ show variable block
 hide and show primitives
 :::
 ### Hide and show variables
-![image119.png](images/01-blocks-scripts-and-sprites/image119.png) <!-- {width=1.19444in height=1.33333in} -->
+{img alt="image119.png" width="1.19444in"}`images/01-blocks-scripts-and-sprites/image119.png`
 
 (In this contrived example, variable <var>zot</var> comes from outside the script but is relevant to its
 behavior.) When you continue (with the pause button), the temporary
@@ -849,7 +848,7 @@ while the script is paused. The button will light up ({inline alt="image123.png"
 control slider {inline alt="image122.png"}`images/01-blocks-scripts-and-sprites/image122.png` <!-- {width=0.54563in height=0.15278in} --> will appear in the toolbar. When you start or continue
 the script, its blocks and input slots will light up cyan one at a time:
 
-![image124.png](images/01-blocks-scripts-and-sprites/image124.png) <!-- {width=0.54563in height=0.15278in} -->
+{img alt="image124.png" width="0.54563in"}`images/01-blocks-scripts-and-sprites/image124.png`
 
 In this simple example, the inputs to the blocks are constant values,
 but if an input were a more complicated expression involving several
@@ -1395,8 +1394,8 @@ reports a compact representation of the list as a text string.
 The iteration, {index}`composition library` has these
 blocks:
 
-![image388.png](images/01-blocks-scripts-and-sprites/image388.png) <!-- {width=1.68889in height=4.75in} -->
-![image389.png](images/01-blocks-scripts-and-sprites/image389.png) <!-- {width=1.04444in height=0.16111in} -->
+{img alt="image388.png" width="1.68889in"}`images/01-blocks-scripts-and-sprites/image388.png`
+{img alt="image389.png" width="1.04444in"}`images/01-blocks-scripts-and-sprites/image389.png`
 
 `Catch` and `throw` provide a nonlocal exit facility. You can drag the tag from a `catch` block to a `throw` inside
 its C-slot, and the throw will then jump directly out to the matching
@@ -1444,7 +1443,7 @@ desired value for the loop index.
 :::{index} `pipe` block
 :::
 
-![image392.png](images/01-blocks-scripts-and-sprites/image392.png) <!--  style="width:3.70972in;height:1.17153in" --> ![image391.png](images/01-blocks-scripts-and-sprites/image391.png) <!--  style="width:3.44097in;height:1.36111in" -->
+{img alt="image392.png" width="3.70972in"}`images/01-blocks-scripts-and-sprites/image392.png` {img alt="image391.png" width="3.44097in"}`images/01-blocks-scripts-and-sprites/image391.png`
 
 
 :::{index}
@@ -1459,7 +1458,7 @@ Stream with numbers from block
 (sec-stream-library)=
 The {index}`stream library` has these blocks:
 
-![image393.png](images/01-blocks-scripts-and-sprites/image393.png) <!-- {width=3.16111in height=2.15347in} -->
+{img alt="image393.png" width="3.16111in"}`images/01-blocks-scripts-and-sprites/image393.png`
 
 *Streams* are a special kind of list whose items are not computed until they are needed. This makes
 certain computations more efficient, and also allows the creation of
@@ -1563,7 +1562,7 @@ The bar charts library has these blocks:
 :::{index} bar charts library
 :::
 
-![image396.png](images/01-blocks-scripts-and-sprites/image396.png) <!-- {width=3.43056in height=1.91667in} -->
+{img alt="image396.png" width="3.43056in"}`images/01-blocks-scripts-and-sprites/image396.png`
 
 `Bar chart of table` takes a table (typically from a CSV data set) as input and
 reports a summary of the table grouped by the field in the specified
@@ -1592,7 +1591,7 @@ Analysis" library instead.
 
 The multi-branched conditional library has these blocks:
 
-![image397.png](images/01-blocks-scripts-and-sprites/image397.png) <!-- {width=1.85in height=2.47986in} -->
+{img alt="image397.png" width="1.85in"}`images/01-blocks-scripts-and-sprites/image397.png`
 
 The `catch` and `throw` blocks duplicate ones in the iteration library, and are
 included because they are used to implement the others. The `cases: if/then` block
@@ -1622,7 +1621,7 @@ any of block
 
 The variadic library has these blocks:
 
-![image398.png](images/01-blocks-scripts-and-sprites/image398.png) <!-- {width=1.19653in height=0.41667in} -->
+{img alt="image398.png" width="1.19653in"}`images/01-blocks-scripts-and-sprites/image398.png`
 
 These are versions of the associative
 operators `and`, and `or` that take any number of inputs
@@ -1653,7 +1652,7 @@ on fair hues and including shades (darker colors) and grayscale. Another
 linear scale is a curated set of 100 “crayons,” explained further on the
 next page.
 
-![image412.png](images/01-blocks-scripts-and-sprites/image412.png) <!--  style="width:1.13333in;height:0.23333in" -->
+{img alt="image412.png" width="1.13333in"}`images/01-blocks-scripts-and-sprites/image412.png`
 
 Colors are created by the {inline alt="image414.png"}`images/01-blocks-scripts-and-sprites/image414` <!--  style="width:0.95in;height:0.225in" --> block (for direct user selection), the `color from`
 to specify a color numerically, or by {inline alt="image413.png"}`images/01-blocks-scripts-and-sprites/image413` <!-- style="width:1.13333in;height:0.23333in" --> , which
@@ -1663,7 +1662,7 @@ reports names or numbers associated with a color:
 {inline alt="image411.png" class="image-4x"}`images/01-blocks-scripts-and-sprites/image411.png` <!--  style="width:0.95in;height:0.225in" -->
 
 Colors can be created from other colors:
-![image415.png](images/01-blocks-scripts-and-sprites/image415.png) <!-- {width=4.83333in height=0.43056in} -->
+{img alt="image415.png" width="4.83333in"}`images/01-blocks-scripts-and-sprites/image415.png`
 :::{index} mix colors block
 :::
 
@@ -1677,24 +1676,24 @@ implemented separately from `color from`. Details in Appendix A.
 The recommended way to choose a color is from one of two linear scales: the
 continuous *color numbers* and the discrete *crayons:*
 
-![image416.png](images/01-blocks-scripts-and-sprites/image416.png) <!-- {width=7.5in height=0.25in} -->
+{img alt="image416.png" width="7.5in"}`images/01-blocks-scripts-and-sprites/image416.png`
 
-![image417.png](images/01-blocks-scripts-and-sprites/image417.png) <!-- {width=7.5in height=0.25in} -->
+{img alt="image417.png" width="7.5in"}`images/01-blocks-scripts-and-sprites/image417.png`
 
 {index}`Color numbers` are based on *fair hues,* a modification
 of the spectrum (rainbow) hue scale that devotes less space to green and
 more to orange and yellow, as well as promoting brown to a real color.
 Here is the normal hue scale, for reference:
 
-![image418.png](images/01-blocks-scripts-and-sprites/image418.png) <!-- {width=4in height=0.20833in} -->
+{img alt="image418.png" width="4in"}`images/01-blocks-scripts-and-sprites/image418.png`
 
 Here is the fair hue scale:
 
-![image419.png](images/01-blocks-scripts-and-sprites/image419.png) <!-- {width=4in height=0.20833in} -->
+{img alt="image419.png" width="4in"}`images/01-blocks-scripts-and-sprites/image419.png`
 
 Here is the color number scale:
 
-![image416.png](images/01-blocks-scripts-and-sprites/image416.png) <!-- {width=5in height=0.20833in} -->
+{img alt="image416.png" width="5in"}`images/01-blocks-scripts-and-sprites/image416.png`
 
 (The picture is wider so that pure spectral colors line up with the fair
 hue scale.)
@@ -1704,21 +1703,21 @@ here are the 100 crayons :
 :::{index} crayons
 :::
 
-![image417.png](images/01-blocks-scripts-and-sprites/image417.png) <!-- {width=5in height=0.20833in} -->
+{img alt="image417.png" width="5in"}`images/01-blocks-scripts-and-sprites/image417.png`
 
 The `color from` block, for example, provides different pulldown menus
 depending on which scale you choose:
 
-![image410.png](images/01-blocks-scripts-and-sprites/image410.png) <!--  style="width:2.41667in;height:0.34444in" -->
+{img alt="image410.png" width="2.41667in"}`images/01-blocks-scripts-and-sprites/image410.png`
 
  You can also
 type the crayon name:
 
-![image420.png](images/01-blocks-scripts-and-sprites/image420.png) <!--  style="width:2.41667in;height:0.34444in" -->
+{img alt="image420.png" width="2.41667in"}`images/01-blocks-scripts-and-sprites/image420.png`
 
 There are many scales:
 
-![image427.png](images/01-blocks-scripts-and-sprites/image427.png) <!-- {width=4.29167in height=1.90972in} -->
+{img alt="image427.png" width="4.29167in"}`images/01-blocks-scripts-and-sprites/image427.png`
 
 The white slot at the end of some of the blocks has two purposes. It can
 be used to add a transparency to a color (0=opaque,
@@ -1726,12 +1725,12 @@ be used to add a transparency to a color (0=opaque,
 :::{index} transparency
 :::
 
-![image428.png](images/01-blocks-scripts-and-sprites/image428.png) <!-- {width=4.29167in height=1.90972in} -->
+{img alt="image428.png" width="4.29167in"}`images/01-blocks-scripts-and-sprites/image428.png`
 
 or it can be expanded to enter three or four numbers for a vector
 directly into the block, so these are equivalent:
 
-![image429.png](images/01-blocks-scripts-and-sprites/image429.png) <!-- {width=4.29167in height=1.90972in} -->
+{img alt="image429.png" width="4.29167in"}`images/01-blocks-scripts-and-sprites/image429.png`
 
 But note that a transparency number in a four-number RGBA vector is on
 the scale 255=opaque, 0=transparent, so the following are *not*
@@ -1796,7 +1795,7 @@ blocks:
 :::{index} text costume library
 :::
 
- ![image446.png](images/01-blocks-scripts-and-sprites/image446.png) <!--  style="width:1.92in;height:0.45078in" -->
+ {img alt="image446.png" width="1.92in"}`images/01-blocks-scripts-and-sprites/image446.png`
  {inline alt="image447.png" class="image-4x"}`images/01-blocks-scripts-and-sprites/image447.png` <!-- {width=3.25972in height=0.18958in} -->
 
 `Costume from text`
@@ -1806,7 +1805,7 @@ button:
 :::{index} costume from text block
 :::
 
-![image445.png](images/01-blocks-scripts-and-sprites/image445.png) <!--  style="width:0.53472in;height:0.20833in" -->
+{img alt="image445.png" width="0.53472in"}`images/01-blocks-scripts-and-sprites/image445.png`
 
 `Costume with background` reports a
 costume made from another costume by coloring its background, taking a
@@ -1816,14 +1815,14 @@ work together to make even better buttons:
 :::{index} costume with background block
 :::
 
-![image448.png](images/01-blocks-scripts-and-sprites/image448.png) <!-- {width=5.51in height=0.68in} -->
+{img alt="image448.png" width="5.51in"}`images/01-blocks-scripts-and-sprites/image448.png`
 
 The text to speech library has these
 blocks:
 :::{index} speech synthesis library
 :::
 
-![image449.png](images/01-blocks-scripts-and-sprites/image449.png) <!--  style="width:2.275in;height:0.8in" -->
+{img alt="image449.png" width="2.275in"}`images/01-blocks-scripts-and-sprites/image449.png`
 
 This library
 interfaces with a capability in up-to-date browsers, so it might not
@@ -1835,7 +1834,7 @@ the text!
 The {index}`parallelization library` contains
 these blocks:
 
-![image450.png](images/01-blocks-scripts-and-sprites/image450.png) <!-- {width=1.17986in height=1.25972in} -->
+{img alt="image450.png" width="1.17986in"}`images/01-blocks-scripts-and-sprites/image450.png`
 
 The two `do in parallel`blocks
  take any number of scripts as inputs.
@@ -1851,7 +1850,7 @@ The create variables library
 does var exist block
 :::
 
-![image451.png](images/01-blocks-scripts-and-sprites/image451.png) <!-- {width=1.37778in height=1.48333in} -->
+{img alt="image451.png" width="1.37778in"}`images/01-blocks-scripts-and-sprites/image451.png`
 
 These blocks allow a program to perform the same operation as the
 button, making global, sprite local, or script variables, but allowing
@@ -1864,7 +1863,7 @@ blocks:
 :::{index} getter/setter library
 :::
 
-![image452.png](images/01-blocks-scripts-and-sprites/image452.png) <!-- {width=1.875in height=1.05in} -->
+{img alt="image452.png" width="1.875in"}`images/01-blocks-scripts-and-sprites/image452.png`
 
 The purpose of this library is to allow program access to the settings controlled by user interface
 elements, such as the settings menu {inline alt="image453.png"}`images/01-blocks-scripts-and-sprites/image453.png`. The `setting` block reports a setting; the `set flag` block sets
@@ -1907,11 +1906,11 @@ The `!` block computes the factorial function, useful to test whether bignums ar
 factorial
 :::
 
-![image455.png](images/01-blocks-scripts-and-sprites/image455.png) <!-- {width=0.29167in height=0.16667in} -->
+{img alt="image455.png" width="0.29167in"}`images/01-blocks-scripts-and-sprites/image455.png`
 
 With bignums:
 
-![image456.png](images/01-blocks-scripts-and-sprites/image456.png) <!-- {width=0.29167in height=0.16667in} -->
+{img alt="image456.png" width="0.29167in"}`images/01-blocks-scripts-and-sprites/image456.png`
 
 The 375-digit value of 200! isn’t readable on this page, but if you
 right-click on the block and choose “result pic,” you can open the
@@ -1930,7 +1929,7 @@ provides these blocks:
 case-independent comparisons block
 :::
 
-![image463.png](images/01-blocks-scripts-and-sprites/image463.png) <!-- {width=3.9375in height=2.04167in} -->
+{img alt="image463.png" width="3.9375in"}`images/01-blocks-scripts-and-sprites/image463.png`
 
 All of these could be written in Snap<em>!</em> itself, but these are implemented
 using the corresponding JavaScript library functions directly, so they
@@ -1941,7 +1940,7 @@ a text input that can include newline characters.
 
 The {index}`animation library` has these blocks:
 
-![image464.png](images/01-blocks-scripts-and-sprites/image464.png) <!-- {width=4.0125in height=2.33125in} -->
+{img alt="image464.png" width="4.0125in"}`images/01-blocks-scripts-and-sprites/image464.png`
 
 Despite the name, this isn’t only about graphics; you can animate the values
 of a variable, or anything else that’s expressed numerically.
@@ -1969,11 +1968,11 @@ The getter and setter inputs are best explained by example:
 :::{index} animate block
 :::
 
-![image466.png](images/01-blocks-scripts-and-sprites/image466.png) <!--  style="width:4.63194in;height:0.63194in" -->
+{img alt="image466.png" width="4.63194in"}`images/01-blocks-scripts-and-sprites/image466.png`
 
 is equivalent to
 
-![image467.png](images/01-blocks-scripts-and-sprites/image467.png) <!--  style="width:3.40972in;height:0.25694in" -->
+{img alt="image467.png" width="3.40972in"}`images/01-blocks-scripts-and-sprites/image467.png`
 
 The other blocks in the library are helpers for these four.
 
@@ -1982,14 +1981,14 @@ blocks:
 :::{index} serial-ports library
 :::
 
-![image468.png](images/01-blocks-scripts-and-sprites/image468.png) <!--  style="width:1.73264in;height:1.03472in" -->
+{img alt="image468.png" width="1.73264in"}`images/01-blocks-scripts-and-sprites/image468.png`
 
 It is used to allow hardware developers to control devices such as robots
 that are connected to your computer via a serial port.
 
 The {index}`frequency distribution analysis library` has these blocks:
 
-![image469.png](images/01-blocks-scripts-and-sprites/image469.png) <!-- {width=4.02708in height=2.39583in} -->
+{img alt="image469.png" width="4.02708in"}`images/01-blocks-scripts-and-sprites/image469.png`
 
 This is a collection of tools for analyzing large data sets and plotting
 histogram s of how often some value is found in some
@@ -2006,7 +2005,7 @@ blocks:
 :::{index} sound manipulation library
 :::
 
-![image470.png](images/01-blocks-scripts-and-sprites/image470.png) <!-- {width=3.54167in height=2.98125in} -->
+{img alt="image470.png" width="3.54167in"}`images/01-blocks-scripts-and-sprites/image470.png`
 
 This library takes a sound,
 one that you record or one from our collection of sounds, and
@@ -2048,7 +2047,7 @@ to the next, if you use the same browser and the same login.
 
 The world {index}`map library` has these blocks:
 
-![image473.png](images/01-blocks-scripts-and-sprites/image473.png) <!-- {width=2.44236in height=3.40278in} -->
+{img alt="image473.png" width="2.44236in"}`images/01-blocks-scripts-and-sprites/image473.png`
 
 Using any of the command blocks puts a map on the screen, in a layer in front of the stage’s
 background but behind the pen trails layer (which is in turn behind all
