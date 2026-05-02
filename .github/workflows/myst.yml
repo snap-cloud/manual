@@ -31,13 +31,13 @@ jobs:
         run: myst --version
 
       # The PDF builds compile under LuaLaTeX and rely on
-      # \DocumentMetadata's tagged-PDF hooks, which require TeX Live
-      # 2024+. Ubuntu's apt packages still ship 2023, so install
-      # TeX Live 2025 from upstream via teatimeguest's action.
+      # \DocumentMetadata, which the LaTeX kernel only ships with
+      # TeX Live 2022+. Ubuntu's apt packages still ship 2023, so
+      # install TeX Live 2025 from upstream via zauguin's action.
       - name: Install TeX Live 2025
-        uses: teatimeguest/setup-texlive-action@v3
+        uses: zauguin/install-texlive@v4
         with:
-          version: 2025
+          texlive_version: 2025
           packages: >-
             scheme-basic latexmk
             collection-latexrecommended collection-latexextra
@@ -45,7 +45,7 @@ jobs:
             collection-luatex collection-xetex
             imakeidx fontawesome5 sourceserifpro koma-script
             iftex hyperref tikz textpos titlesec multicol
-            fontspec luaotfload
+            fontspec luaotfload ulem
 
       # Run npm build to compile the custom SASS
       - name: Build HTML
