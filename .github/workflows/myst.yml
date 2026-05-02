@@ -77,15 +77,16 @@ jobs:
           npm run styles:build
           myst build --html --ci --max-size-webp 0
 
-      # Halve the source images before the PDF build. The HTML output
-      # in _build/html/ is already self-contained at this point so it
-      # keeps original-resolution images; only the PDF picks up the
-      # smaller copies.
-      - name: Shrink source images for PDF
-        run: |
-          sudo apt-get update -qq
-          sudo apt-get install -y --no-install-recommends imagemagick
-          _support/scripts/shrink-images.sh images blocks/images
+      # Image shrinking is currently disabled. The 75% downscale was
+      # still visibly blurry on block screenshots; we accept the
+      # larger PDF for now in exchange for keeping image fidelity.
+      # Re-enable by uncommenting the step below.
+      #
+      # - name: Shrink source images for PDF
+      #   run: |
+      #     sudo apt-get update -qq
+      #     sudo apt-get install -y --no-install-recommends imagemagick
+      #     _support/scripts/shrink-images.sh images blocks/images
 
       - name: Build PDF
         run: |
