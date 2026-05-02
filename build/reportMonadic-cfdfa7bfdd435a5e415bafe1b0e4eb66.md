@@ -1,7 +1,0 @@
----
----
-
-# `Math Functions`
-
-```{block-help}
-```

@@ -1,7 +1,0 @@
----
----
-
-# `Change Balance`
-
-```{block-help}
-```

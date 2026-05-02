@@ -1,7 +1,0 @@
----
----
-
-# `next costume`
-
-```{block-help}
-```

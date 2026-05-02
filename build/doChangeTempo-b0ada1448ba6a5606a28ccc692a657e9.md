@@ -1,7 +1,0 @@
----
----
-
-# `Change Tempo`
-
-```{block-help}
-```

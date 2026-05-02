@@ -1,7 +1,0 @@
----
----
-
-# `List Contains`
-
-```{block-help}
-```

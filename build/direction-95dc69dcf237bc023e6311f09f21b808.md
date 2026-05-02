@@ -1,7 +1,0 @@
----
----
-
-# `direction`
-
-```{block-help}
-```

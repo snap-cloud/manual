@@ -1,7 +1,0 @@
----
----
-
-# `Report Balance`
-
-```{block-help}
-```

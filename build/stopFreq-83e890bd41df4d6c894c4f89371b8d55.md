@@ -1,0 +1,7 @@
+---
+---
+
+# `Stop Frequency`
+
+```{block-help}
+```
