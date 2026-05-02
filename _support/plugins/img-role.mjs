@@ -21,7 +21,7 @@ const imgRole = {
         url: data.body.trim(),
         alt,
         class: className || 'image-inline',
-        width:,
+        width,
         height,
         title,
       },
@@ -66,6 +66,7 @@ const blockImgRole = {
         width,
         height,
         title,
+        align: 'center',
       },
     ];
   },

@@ -74,11 +74,18 @@ h1, h2, h3, h4, h5, h6 {
 nav a[href*="/blocks/"] { font-family: ui-monospace, monospace; }
 
 // Block (page) titles cannot have their own classes added to them directly.
-.title code,
-.menu-text code {
+html.light .title code,
+html.light .menu-text code {
   color: #000;
   background-color: unset;
 }
+
+html.dark .title code,
+html.dark .menu-text code {
+  color: #FFF;
+  background-color: unset;
+}
+
 
 // TODO: make latex env
 .image-1-5x {
@@ -213,8 +220,8 @@ p code:not(.sourceCode) {
   // font-family: monospace;
 }
 
-body.dark\:bg-stone-900 code,
-body.dark\:bg-stone-900 p code:not(.sourceCode) {
+html.dark code,
+html.dark p code:not(.sourceCode) {
   color: white;
   background-color: unset;
 }

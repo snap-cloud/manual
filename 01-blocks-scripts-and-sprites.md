@@ -390,7 +390,9 @@ will be the attachment point of the part on the anchor.
 :::
 
 Sprite nesting is shown in the sprite corral icons of both anchors and parts:
-![image47.png](images/01-blocks-scripts-and-sprites/image47.png) <!-- {width=1.63056in height=0.96528in} -->
+
+![image47.png](images/01-blocks-scripts-and-sprites/image47.png)
+<!-- {width=1.63056in height=0.96528in} -->
 
 In this illustration, it is desired to animate Alonzo’s arm. (The arm has
 been colored green in this picture to make the relationship of the two
@@ -411,8 +413,11 @@ extended to its parts. Also, cloning the anchor (see Section @sec-permanent-and-
 will also clone all its parts.
 
 <!-- TODO: Figure w/caption -->
-![image56.png](images/01-blocks-scripts-and-sprites/image56.png) <!-- {width=1.44444in height=1.5625in} --> ![image48.png](images/01-blocks-scripts-and-sprites/image48.png) <!-- {width=1.63056in height=0.96528in} -->
-![image49.png](images/01-blocks-scripts-and-sprites/image49.png) <!-- {width=1.63056in height=0.96528in} -->
+![image56.png](images/01-blocks-scripts-and-sprites/image56.png)
+
+![image48.png](images/01-blocks-scripts-and-sprites/image48.png)
+
+![image49.png](images/01-blocks-scripts-and-sprites/image49.png)
 
 *Top: turning the part: the green arm. Bottom: turning the anchor, with
 the arm synchronous (left) and dangling (right).*
@@ -495,7 +500,7 @@ in an input slot of blocks that are expecting a number or text. You
 wouldn’t say {inline alt="image84.png"}`images/01-blocks-scripts-and-sprites/image84.png`, although (as you can see from the picture) Snap<em>!</em> lets you do it if you really want. Instead, you normally use predicates in
 special hexagonal input slots like this one:
 
-{inline alt="image86.png" class="image-2x"}`./blocks/images/block_doIf.png`
+{img alt="image86.png" class="image-2x"}`./blocks/images/block_doIf.png`
 
 The C-shaped `if` block runs its input script if (and only
 if) the expression in its hexagonal input reports true.
@@ -1243,7 +1248,8 @@ word or phrase, e.g., “enter” or “up arrow,” then the value of key
 will be that word or phrase, *except for* the space character, which
 is represented as itself in key.)
 
-{inline alt="image356.png" class="image-4x"}`images/01-blocks-scripts-and-sprites/image356.png` <!--  style="width:2.25in;height:0.41944in"   alt="Website Description automatically generated with medium confidence" -->
+{inline alt="image356.png" class="image-4x"}`images/01-blocks-scripts-and-sprites/image356.png`
+<!--  style="width:2.25in;height:0.41944in"   alt="Website Description automatically generated with medium confidence" -->
 
 The RGB(A) option accepts a single number, which
 is a grayscale value 0-255; a two-number list, grayscale plus opacity
