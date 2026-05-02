@@ -31,21 +31,41 @@ jobs:
         run: myst --version
 
       # The PDF builds compile under LuaLaTeX and rely on
-      # \DocumentMetadata's tagged-PDF hooks, which require TeX Live
-      # 2024+. Ubuntu's apt packages still ship 2023, so install
-      # TeX Live 2025 from upstream via teatimeguest's action.
+      # \DocumentMetadata, which the LaTeX kernel only ships with
+      # TeX Live 2022+. Ubuntu's apt packages still ship 2023, so
+      # install TeX Live 2025 from upstream via zauguin's action.
+      #
+      # Package list rationale: the *recommended* collections cover
+      # nearly everything we need (geometry, hyperref, koma-script,
+      # natbib, pgf/tikz, ulem, fontspec, xcolor, lualatex-math, …);
+      # collection-luatex pulls in luaotfload + the LuaLaTeX engine
+      # itself. The standalone packages below are the ones not in
+      # those collections. We deliberately avoid collection-latexextra
+      # / collection-fontsextra (~2,700 extra packages, ~12 min, and
+      # one of them tripped up format-file generation in TL 2025).
       - name: Install TeX Live 2025
-        uses: teatimeguest/setup-texlive-action@v3
+        uses: zauguin/install-texlive@v4
         with:
-          version: 2025
+          texlive_version: 2025
           packages: >-
-            scheme-basic latexmk
-            collection-latexrecommended collection-latexextra
-            collection-fontsrecommended collection-fontsextra
-            collection-luatex collection-xetex
-            imakeidx fontawesome5 sourceserifpro koma-script
-            iftex hyperref tikz textpos titlesec multicol
-            fontspec luaotfload
+            scheme-basic
+            collection-latexrecommended
+            collection-fontsrecommended
+            collection-luatex
+            latexmk
+            caption
+            changepage
+            enumitem
+            fontawesome5
+            framed
+            iftex
+            imakeidx
+            pdfmanagement-testphase
+            sourceserifpro
+            tagpdf
+            textpos
+            titlesec
+            ulem
 
       # Run npm build to compile the custom SASS
       - name: Build HTML
@@ -54,7 +74,16 @@ jobs:
           myst build --html --ci --max-size-webp 0
 
       - name: Build PDF
-        run: myst build --pdf --ci
+        run: |
+          myst build --pdf --ci
+          # myst-cli swallows latexmk's non-zero exit, so verify the
+          # expected PDF actually landed in output/. Without this the
+          # workflow only fails at upload time, far away from the
+          # latex error in the log.
+          if [ ! -s output/snap-manual.pdf ]; then
+            echo "::error::output/snap-manual.pdf was not produced; check the latexmk log above."
+            exit 1
+          fi
 
       - name: Enforce CNAME file for GitHub Pages
         run: echo "docs.snap.berkeley.edu" > _build/html/CNAME
