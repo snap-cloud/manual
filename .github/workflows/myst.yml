@@ -47,6 +47,10 @@ jobs:
         uses: zauguin/install-texlive@v4
         with:
           texlive_version: 2025
+          # Pin a known-reliable US CTAN mirror. zauguin's default
+          # mirror probe has been failing intermittently with
+          # "No mirror available"; hardcoding RIT bypasses it.
+          repository: https://mirrors.rit.edu/CTAN/systems/texlive/tlnet/
           packages: >-
             scheme-basic
             collection-latexrecommended
