@@ -3,13 +3,9 @@ title: "The Snap! Reference Manual"
 ---
 
 <!-- Supress including this file in the PDF table of contents -->
-<!--
-```{raw} latex
-\addtocontents{toc}{\protect\setcounter{tocdepth}{-1}}
+```{raw:latex}
+\chapter*{The Snap\texit{!} Reference Manual}
 ```
--->
-
-<!-- # The Snap! Reference Manual -->
 
 <!--
   This is the first page of the Snap! Manual.
@@ -52,7 +48,9 @@ The manual is roughly organized into a few sections.
 * Chapters 1 to 11 cover the primary features for writing programings in
 Snap<em>!</em>. They are organized from introductory to advanced topics.
 * Chapters 12 and 13 cover the user interface components of both the Snap<em>!</em> editor and the community site.
++++{"no-pdf": true}
 * The appendicies provide [documentation for every block in Snap<em>!</em> block][blocks], as well as some of libraries provided.
++++
 
 [blocks]: /blocks/
 
@@ -63,8 +61,3 @@ You'll find the table of contents on the left side of each page. At the bottom o
 
 A search function is included in the upper right hand corner. If you which you can type <kbd>/</kbd> (or <kbd>?</kbd>) to jump to the search function.
 +++
-
-
-## The 'New' PDF Manual
-
-This is currently a work in progress.

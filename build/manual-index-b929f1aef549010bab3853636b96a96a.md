@@ -5,7 +5,3 @@
 
 ```{show-index}
 ```
-
-```{raw:latex}
-\printindex
-```
