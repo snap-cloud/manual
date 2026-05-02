@@ -12,6 +12,11 @@ authors:
     website: https://mball.co
 tags:
   - book
+build:
+  # Compile under LuaLaTeX. Required by \DocumentMetadata's tagged-PDF
+  # hooks and by fontawesome5's modern font-loading path. MyST's
+  # default is xelatex; this flag is forwarded to latexmk verbatim.
+  engine: -lualatex
 parts:
   - id: abstract
     required: false
@@ -38,10 +43,12 @@ files:
   - snap-logo.png
 packages:
   - imakeidx
+  - iftex
   - fontenc
   - inputenc
   - lmodern
   - sourceserifpro
+  - fontawesome5
   - graphicx
   - caption
   - natbib
@@ -50,6 +57,7 @@ packages:
   - framed
   - hyperref
   - amssymb
+  - ulem
   - enumitem
   - geometry
   - ifthen

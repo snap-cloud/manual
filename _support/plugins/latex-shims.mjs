@@ -116,6 +116,103 @@ function walkImages(root, fn) {
   if (root.children) walkImages(root.children, fn);
 }
 
+// Apply `fn` to every node in the tree (mutating in place). Unlike
+// walkImages this visits every node type, not just images.
+function walkAll(node, fn) {
+  if (!node) return;
+  if (Array.isArray(node)) {
+    node.forEach((c) => walkAll(c, fn));
+    return;
+  }
+  fn(node);
+  if (Array.isArray(node.children)) walkAll(node.children, fn);
+}
+
+// makeindex treats `! @ " |` as control characters; literal occurrences
+// inside an \index{...} argument must be prefixed with `"` (the default
+// quote char) so makeindex doesn't try to split them into sub-entries
+// or alternate-rendering markers.
+function quoteForMakeindex(s) {
+  return s.replace(/(["@!|])/g, '"$1');
+}
+
+// Convert a single index entry string so that runs of `code` render as
+// \texttt{...} in the printed index, while still sorting on the plain
+// text. We rewrite the string into makeindex's `sort@display` form,
+// which tells makeindex to alphabetize on the part before the `@` but
+// typeset the part after it. Without this, leading backticks would
+// sort the entry under "Symbols" and render as curly quotes.
+//
+// `⚡` (and the variation-selector form `⚡️`) is similarly recoded so
+// it sorts under "lightning bolt" and is typeset via \snaplightning,
+// which is defined in the preamble (the body font has no glyph for
+// ⚡, so passing it through verbatim renders as a missing-glyph box).
+
+function rewriteIndexEntry(value) {
+  if (typeof value !== 'string') return value;
+  // Trailing backslashes on index entries (sometimes left over from
+  // markdown line-continuation syntax in the source) would escape the
+  // closing brace of \index{...} when written to LaTeX. Strip them
+  // unconditionally — there's never a legitimate use for them inside
+  // an index term.
+  value = value.replace(/\\+\s*$/, '').trim();
+  const hasCode = value.includes('`');
+  const hasBolt = /[⚡]/.test(value);
+  if (!hasCode && !hasBolt) return value;
+  // Display: `set` -> \texttt{set}; ⚡ (with optional VS-16) -> \snaplightning{}.
+  // # / % / & are parameter / comment / tab-alignment characters in LaTeX
+  // and would break the .ind file makeindex emits if left bare inside the
+  // \texttt{...} group. _ is already typically escaped by myst upstream
+  // but we double-escape defensively.
+  const display = quoteForMakeindex(
+    value
+      .replace(/`([^`]+)`/g, (_m, code) =>
+        `\\texttt{${code.replace(/(?<!\\)([#%&_])/g, '\\$1')}}`,
+      )
+      .replace(/⚡️?/g, '\\snaplightning{}'),
+  );
+  // Sort key: drop the formatting markers entirely, collapse the
+  // resulting whitespace, and substitute "lightning bolt" for ⚡ so
+  // the entry alphabetizes near "L" rather than the symbol section.
+  const sort = quoteForMakeindex(
+    value
+      .replace(/`/g, '')
+      .replace(/⚡️?\s*/g, 'lightning bolt ')
+      .replace(/\s+/g, ' ')
+      .trim(),
+  );
+  return `${sort}@${display}`;
+}
+
+// Replace ⚡ (with optional VS-16) inside a text node with raw TeX
+// pointing at \snaplightning. Returns either the original node, a
+// single replacement, or an array of nodes when the bolt appears
+// in the middle of a longer string.
+function expandLightningInTextNode(node) {
+  if (node.type !== 'text' || typeof node.value !== 'string') return null;
+  if (!/[⚡]/.test(node.value)) return null;
+  const parts = node.value.split(/⚡️?/);
+  const out = [];
+  parts.forEach((part, idx) => {
+    if (part) out.push({ type: 'text', value: part });
+    if (idx < parts.length - 1) {
+      out.push({ type: 'raw', lang: 'tex', tex: '\\snaplightning{}' });
+    }
+  });
+  return out;
+}
+
+function rewriteLightningInChildren(parent) {
+  if (!Array.isArray(parent.children)) return;
+  for (let i = 0; i < parent.children.length; i++) {
+    const replacement = expandLightningInTextNode(parent.children[i]);
+    if (replacement) {
+      parent.children.splice(i, 1, ...replacement);
+      i += replacement.length - 1;
+    }
+  }
+}
+
 const latexShimsTransform = {
   name: 'latex-shims',
   stage: 'document',
@@ -184,7 +281,29 @@ const latexShimsTransform = {
       gridNode.children = newChildren;
     });
 
-    // 3. Image sizing.
+    // 3. Index entries: rewrite `code` and ⚡ inside index entries into
+    //    a makeindex sort@display string so the printed index uses
+    //    \texttt{...} / \snaplightning instead of literal backticks
+    //    or missing-glyph boxes (and so the entries sort properly).
+    walkAll(tree, (node) => {
+      if (!Array.isArray(node.indexEntries)) return;
+      node.indexEntries.forEach((ie) => {
+        if (typeof ie?.entry === 'string') {
+          ie.entry = rewriteIndexEntry(ie.entry);
+        }
+        if (ie?.subEntry && typeof ie.subEntry.value === 'string') {
+          ie.subEntry.value = rewriteIndexEntry(ie.subEntry.value);
+        }
+      });
+    });
+
+    // 4. Lightning bolt in body text. Source Serif Pro has no glyph
+    //    for ⚡, so we splice in a \snaplightning{} raw-TeX node
+    //    wherever the emoji appears. Index-entry strings were already
+    //    handled above.
+    walkAll(tree, (node) => rewriteLightningInChildren(node));
+
+    // 5. Image sizing.
     //    Inline images get a sentinel width that the custom \includegraphics
     //    redefinition in the preamble decodes back into a height-based,
     //    raisebox'd \includegraphics. Block images that have no explicit
@@ -207,6 +326,6 @@ const latexShimsTransform = {
 };
 
 export default {
-  name: 'LaTeX shims (kbd, grid, image)',
+  name: 'LaTeX shims (kbd, grid, image, index, lightning)',
   transforms: [latexShimsTransform],
 };
