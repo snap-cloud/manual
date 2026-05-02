@@ -1,4 +1,15 @@
-# The Snap! Reference Manual
+---
+title: "The Snap! Reference Manual"
+---
+
+<!-- Supress including this file in the PDF table of contents -->
+<!--
+```{raw} latex
+\addtocontents{toc}{\protect\setcounter{tocdepth}{-1}}
+```
+-->
+
+<!-- # The Snap! Reference Manual -->
 
 <!--
   This is the first page of the Snap! Manual.

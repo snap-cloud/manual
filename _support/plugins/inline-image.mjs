@@ -27,6 +27,7 @@ const inlineImageAlignTransform = {
     walk(tree, (node) => {
       if (node.type === 'image' && hasInlineClass(node)) {
         node.align = undefined;
+        node.style = undefined;
       }
     });
   },

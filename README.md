@@ -1,13 +1,30 @@
 ![Snap! Logo](./images/snap-logo.png)
 
 # The Snap<em>!</em> Reference Manual
-## [Read at docs.snap.berkeley.edu][website] ([Original PDF][original_pdf])
+## [Read online at docs.snap.berkeley.edu][website] &middot; [Download the PDF][pdf]
 
 [![GitHub Pages](https://img.shields.io/badge/website-GitHub%20Pages-blue.svg)](https://docs.snap.berkeley.edu/)
 
+The latest production build of the manual is published from `main` to
+GitHub Pages on every push:
+
+| Format | URL |
+| ------ | --- |
+| HTML site | <https://docs.snap.berkeley.edu/> |
+| Full manual (PDF) | <https://docs.snap.berkeley.edu/snap-manual.pdf> |
+| Manual without block reference (PDF) | <https://docs.snap.berkeley.edu/snap-manual-no-blocks-ref.pdf> |
+| Block reference only (PDF) | <https://docs.snap.berkeley.edu/snap-blocks-ref.pdf> |
+| Original Snap! 8 PDF (legacy reference) | <https://snap.berkeley.edu/snap/help/SnapManual.pdf> |
+
+For PRs, an unmerged-but-built copy of the PDFs is attached to each CI run
+as a GitHub Actions artifact (kept for 10 days). See ["Previewing the PDFs
+for a PR"](#previewing-the-pdfs-for-a-pr) below.
+
 [website]: https://docs.snap.berkeley.edu
 [pdf]: https://docs.snap.berkeley.edu/snap-manual.pdf
-[original_pdf]: ./SnapManual.pdf
+[no_blocks_pdf]: https://docs.snap.berkeley.edu/snap-manual-no-blocks-ref.pdf
+[blocks_pdf]: https://docs.snap.berkeley.edu/snap-blocks-ref.pdf
+[legacy_pdf]: https://snap.berkeley.edu/snap/help/SnapManual.pdf
 
 The reference manual for the [Snap<em>!</em> programming language][snap]. ([GitHub][snap_gh])
 
@@ -15,9 +32,10 @@ The reference manual for the [Snap<em>!</em> programming language][snap]. ([GitH
 [snap_gh]: https://github.com/jmoenig/snap/
 
 > [!NOTE]
-> The web manual is a "translation" of the original PDF, which was last largely updated for
-> Snap<em>!</em> 8. We're first working on the making the web version readable, then we'll
-> update the content to match recent Snap<em>!</em> releases.
+> The web manual is a "translation" of the [original PDF][legacy_pdf], which
+> was last largely updated for Snap<em>!</em> 8. We're first working on
+> making the web version readable, then we'll update the content to match
+> recent Snap<em>!</em> releases.
 
 ## Citing Snap! and the Snap! Manual
 
@@ -100,7 +118,9 @@ It is also recommended to install the [MyST VSCode extension][myst_vscode].
 **While writing content (live preview):**
 
 ```shell
-myst start
+npm run dev
+# OR
+jupyter-book start
 ```
 
 This builds the web version and opens it in the browser.
@@ -109,27 +129,35 @@ The page reloads automatically as you save changes.
 **To build the final HTML:**
 
 ```shell
-myst build --html
+jupyter-book build --html
 ```
 
 Output is placed in `_build/html/`.
 
-**To build a PDF (requires LaTeX):**
+**To build the PDFs (requires a TeX Live install):**
 
 ```shell
-myst build --pdf
+jupyter-book build --pdf
 ```
 
-### Quarto (legacy)
+This produces three PDFs in `output/`:
 
-The original Quarto build system is preserved on the `quarto` branch.
-The `quarto.yml` GitHub Actions workflow still targets that branch.
+* `snap-manual.pdf` &mdash; the full manual.
+* `snap-manual-no-blocks-ref.pdf` &mdash; the manual without the per-block
+  reference section.
+* `snap-blocks-ref.pdf` &mdash; only the per-block reference.
 
-[quarto]: https://quarto.org/docs/
+See [`docs/latex.md`](./docs/latex.md) for details on the PDF pipeline and
+the local LaTeX template at [`_latex-template/`](./_latex-template/). The
+two filtered variants are configured by `articles:` lists in `myst.yml`,
+generated from `toc.yml` by
+[`_support/scripts/generate-pdf-exports.py`](./_support/scripts/generate-pdf-exports.py)
+&mdash; rerun that script after editing the toc.
 
 ## Writing Style
 
-Please read [`STYLEGUIDE.md`](./STYLEGUIDE.md)
+Please read [`docs/STYLEGUIDE.md`](./docs/STYLEGUIDE.md). Other developer
+docs live in [`docs/`](./docs/).
 
 ## VSCode and Editing
 
@@ -146,7 +174,33 @@ ruby convert-word-doc.rb
 
 ## Published Book
 
-The website is hosted on GitHub Pages, compiled by the `myst.yml` workflow and deployed to the `gh-pages` branch.
+The website is hosted on GitHub Pages at [docs.snap.berkeley.edu][website].
+On every push to `main`, the [`myst.yml`](./.github/workflows/myst.yml)
+workflow builds the HTML site and three PDFs (`snap-manual.pdf`,
+`snap-manual-no-blocks-ref.pdf`, `snap-blocks-ref.pdf`), then publishes
+them together to the `gh-pages` branch. All three PDFs are therefore
+available at the URLs in the table at the top of this README.
+
+### Previewing the PDFs for a PR
+
+The same workflow also runs on pull requests. It does **not** publish to
+`gh-pages`, but it does attach the freshly built PDFs to the workflow run
+as a GitHub Actions artifact named `snap-manual-pdfs` with a 10-day
+retention. The artifact contains all three PDFs.
+
+To grab the PR's PDFs:
+
+1. Open the PR on GitHub and click **Checks** &rarr; **Deploy MyST /
+   Jupyter Book to GitHub Pages**.
+2. On the run page, scroll to the **Artifacts** section at the bottom.
+3. Download `snap-manual-pdfs` &mdash; it expands to a zip with all three
+   PDFs.
+
+Or from the CLI:
+
+```shell
+gh run download --name snap-manual-pdfs --repo snap-cloud/manual
+```
 
 ## License
 

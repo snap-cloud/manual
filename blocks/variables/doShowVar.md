@@ -1,5 +1,4 @@
 ---
-toc: false
 ---
 
 # `show variable`

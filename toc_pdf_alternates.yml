@@ -1,0 +1,879 @@
+version: 1
+project:
+  exports:
+  - format: tex+pdf
+    title: Snap\textit{!} Reference Manual \& Blocks Reference
+    template: ./_latex-template/
+    output: output/snap-manual-blocks-ref.pdf
+    articles:
+      - file: index.md
+        level: 0
+      - file: 00-acknowledgements.md
+        level: 0
+      - file: 01-blocks-scripts-and-sprites.md
+        level: 0
+      - file: 02-saving-and-loading-projects-and.md
+        level: 0
+      - file: 03-building-a-block.md
+        level: 0
+      - file: 04-first-class-lists.md
+        level: 0
+      - file: 05-typed-inputs.md
+        level: 0
+      - file: 06-procedures-as-data.md
+        level: 0
+      - file: 07-object-oriented-programming-with-sprites.md
+        level: 0
+      - file: 08-oop-with-procedures.md
+        level: 0
+      - file: 09-the-outside-world.md
+        level: 0
+      - file: 10-continuations.md
+        level: 0
+      - file: 11-metaprogramming.md
+        level: 0
+      - file: 12-user-interface-elements.md
+        level: 0
+      - title: Appendix
+        level: 0
+      - file: appendix/a-snap-color-library.md
+        level: 2
+      - file: appendix/b-apl-features.md
+        level: 2
+      - title: Community
+        level: 2
+      - file: appendix/community/index.md
+        level: 3
+      - file: appendix/community/students.md
+        level: 3
+      - file: appendix/community/teachers.md
+        level: 3
+      - title: Libraries
+        level: 2
+      - file: appendix/libraries/index.md
+        level: 3
+      - file: blocks/index.md
+        level: 1
+      - title: Motion Blocks
+        level: 2
+      - file: blocks/motion/forward.md
+        level: 3
+      - file: blocks/motion/turn.md
+        level: 3
+      - file: blocks/motion/turnLeft.md
+        level: 3
+      - file: blocks/motion/setHeading.md
+        level: 3
+      - file: blocks/motion/doFaceTowards.md
+        level: 3
+      - file: blocks/motion/gotoXY.md
+        level: 3
+      - file: blocks/motion/doGotoObject.md
+        level: 3
+      - file: blocks/motion/doGlide.md
+        level: 3
+      - file: blocks/motion/changeXPosition.md
+        level: 3
+      - file: blocks/motion/setXPosition.md
+        level: 3
+      - file: blocks/motion/changeYPosition.md
+        level: 3
+      - file: blocks/motion/setYPosition.md
+        level: 3
+      - file: blocks/motion/bounceOffEdge.md
+        level: 3
+      - file: blocks/motion/getPosition.md
+        level: 3
+      - file: blocks/motion/xPosition.md
+        level: 3
+      - file: blocks/motion/yPosition.md
+        level: 3
+      - file: blocks/motion/direction.md
+        level: 3
+      - title: Looks Blocks
+        level: 2
+      - file: blocks/looks/doSwitchToCostume.md
+        level: 3
+      - file: blocks/looks/doWearNextCostume.md
+        level: 3
+      - file: blocks/looks/getCostumeIdx.md
+        level: 3
+      - file: blocks/looks/doSayFor.md
+        level: 3
+      - file: blocks/looks/bubble.md
+        level: 3
+      - file: blocks/looks/doThinkFor.md
+        level: 3
+      - file: blocks/looks/doThink.md
+        level: 3
+      - file: blocks/looks/reportGetImageAttribute.md
+        level: 3
+      - file: blocks/looks/reportNewCostumeStretched.md
+        level: 3
+      - file: blocks/looks/reportNewCostumeSkewed.md
+        level: 3
+      - file: blocks/looks/reportNewCostume.md
+        level: 3
+      - file: blocks/looks/changeEffect.md
+        level: 3
+      - file: blocks/looks/setEffect.md
+        level: 3
+      - file: blocks/looks/clearEffects.md
+        level: 3
+      - file: blocks/looks/getEffect.md
+        level: 3
+      - file: blocks/looks/changeScale.md
+        level: 3
+      - file: blocks/looks/setScale.md
+        level: 3
+      - file: blocks/looks/getScale.md
+        level: 3
+      - file: blocks/looks/show.md
+        level: 3
+      - file: blocks/looks/hide.md
+        level: 3
+      - file: blocks/looks/reportShown.md
+        level: 3
+      - file: blocks/looks/goToLayer.md
+        level: 3
+      - file: blocks/looks/goBack.md
+        level: 3
+      - title: Sound Blocks
+        level: 2
+      - file: blocks/sound/playSound.md
+        level: 3
+      - file: blocks/sound/doPlaySoundUntilDone.md
+        level: 3
+      - file: blocks/sound/doStopAllSounds.md
+        level: 3
+      - file: blocks/sound/doPlaySoundAtRate.md
+        level: 3
+      - file: blocks/sound/reportGetSoundAttribute.md
+        level: 3
+      - file: blocks/sound/reportNewSoundFromSamples.md
+        level: 3
+      - file: blocks/sound/doRest.md
+        level: 3
+      - file: blocks/sound/doPlayNote.md
+        level: 3
+      - file: blocks/sound/doSetInstrument.md
+        level: 3
+      - file: blocks/sound/doChangeTempo.md
+        level: 3
+      - file: blocks/sound/doSetTempo.md
+        level: 3
+      - file: blocks/sound/getTempo.md
+        level: 3
+      - file: blocks/sound/changeVolume.md
+        level: 3
+      - file: blocks/sound/setVolume.md
+        level: 3
+      - file: blocks/sound/getVolume.md
+        level: 3
+      - file: blocks/sound/changePan.md
+        level: 3
+      - file: blocks/sound/setPan.md
+        level: 3
+      - file: blocks/sound/getPan.md
+        level: 3
+      - file: blocks/sound/playFreq.md
+        level: 3
+      - file: blocks/sound/stopFreq.md
+        level: 3
+      - title: Pen Blocks
+        level: 2
+      - file: blocks/pen/clear.md
+        level: 3
+      - file: blocks/pen/down.md
+        level: 3
+      - file: blocks/pen/up.md
+        level: 3
+      - file: blocks/pen/getPenDown.md
+        level: 3
+      - file: blocks/pen/setColor.md
+        level: 3
+      - file: blocks/pen/changePenColorDimension.md
+        level: 3
+      - file: blocks/pen/setPenColorDimension.md
+        level: 3
+      - file: blocks/pen/getPenAttribute.md
+        level: 3
+      - file: blocks/pen/changeSize.md
+        level: 3
+      - file: blocks/pen/setSize.md
+        level: 3
+      - file: blocks/pen/doStamp.md
+        level: 3
+      - file: blocks/pen/floodFill.md
+        level: 3
+      - file: blocks/pen/write.md
+        level: 3
+      - file: blocks/pen/reportPenTrailsAsCostume.md
+        level: 3
+      - file: blocks/pen/doPasteOn.md
+        level: 3
+      - file: blocks/pen/doCutFrom.md
+        level: 3
+      - file: blocks/pen/reportColor.md
+        level: 3
+      - file: blocks/pen/reportColorAttribute.md
+        level: 3
+      - file: blocks/pen/reportNewColor.md
+        level: 3
+      - title: Control Blocks
+        level: 2
+      - file: blocks/control/receiveGo.md
+        level: 3
+      - file: blocks/control/receiveUserEdit.md
+        level: 3
+      - file: blocks/control/receiveOnClone.md
+        level: 3
+      - file: blocks/control/receiveMessage.md
+        level: 3
+      - file: blocks/control/receiveKey.md
+        level: 3
+      - file: blocks/control/receiveConditionEvent.md
+        level: 3
+      - file: blocks/control/receiveInteraction.md
+        level: 3
+      - file: blocks/control/doBroadcast.md
+        level: 3
+      - file: blocks/control/doBroadcastAndWait.md
+        level: 3
+      - file: blocks/other/doWarp.md
+        level: 3
+      - file: blocks/control/doWait.md
+        level: 3
+      - file: blocks/control/doWaitUntil.md
+        level: 3
+      - file: blocks/control/doForever.md
+        level: 3
+      - file: blocks/control/doRepeat.md
+        level: 3
+      - file: blocks/control/doUntil.md
+        level: 3
+      - file: blocks/control/doFor.md
+        level: 3
+      - file: blocks/control/doIf.md
+        level: 3
+      - file: blocks/control/doIfElse.md
+        level: 3
+      - file: blocks/control/reportIfElse.md
+        level: 3
+      - file: blocks/control/doReport.md
+        level: 3
+      - file: blocks/control/doStopThis.md
+        level: 3
+      - file: blocks/control/doRun.md
+        level: 3
+      - file: blocks/control/fork.md
+        level: 3
+      - file: blocks/control/evaluate.md
+        level: 3
+      - file: blocks/control/reportPipe.md
+        level: 3
+      - file: blocks/control/doTellTo.md
+        level: 3
+      - file: blocks/control/reportAskFor.md
+        level: 3
+      - file: blocks/control/createClone.md
+        level: 3
+      - file: blocks/control/newClone.md
+        level: 3
+      - file: blocks/control/removeClone.md
+        level: 3
+      - file: blocks/control/doPauseAll.md
+        level: 3
+      - file: blocks/control/doSwitchToScene.md
+        level: 3
+      - file: blocks/control/doDefineBlock.md
+        level: 3
+      - file: blocks/control/doDeleteBlock.md
+        level: 3
+      - file: blocks/control/doSetBlockAttribute.md
+        level: 3
+      - file: blocks/control/reportBlockAttribute.md
+        level: 3
+      - file: blocks/control/reportEnvironment.md
+        level: 3
+      - file: blocks/control/doSetSlot.md
+        level: 3
+      - title: Sensing Blocks
+        level: 2
+      - file: blocks/sensing/reportTouchingObject.md
+        level: 3
+      - file: blocks/sensing/reportTouchingColor.md
+        level: 3
+      - file: blocks/sensing/reportColorIsTouchingColor.md
+        level: 3
+      - file: blocks/sensing/doAsk.md
+        level: 3
+      - file: blocks/sensing/getLastAnswer.md
+        level: 3
+      - file: blocks/sensing/reportMousePosition.md
+        level: 3
+      - file: blocks/sensing/reportMouseX.md
+        level: 3
+      - file: blocks/sensing/reportMouseY.md
+        level: 3
+      - file: blocks/sensing/reportMouseDown.md
+        level: 3
+      - file: blocks/sensing/reportKeyPressed.md
+        level: 3
+      - file: blocks/sensing/reportRelationTo.md
+        level: 3
+      - file: blocks/sensing/reportAspect.md
+        level: 3
+      - file: blocks/sensing/doResetTimer.md
+        level: 3
+      - file: blocks/sensing/getTimer.md
+        level: 3
+      - file: blocks/sensing/reportDate.md
+        level: 3
+      - file: blocks/sensing/reportAttributeOf.md
+        level: 3
+      - file: blocks/sensing/reportGet.md
+        level: 3
+      - file: blocks/sensing/reportObject.md
+        level: 3
+      - file: blocks/sensing/reportURL.md
+        level: 3
+      - file: blocks/sensing/reportAudio.md
+        level: 3
+      - file: blocks/sensing/reportVideo.md
+        level: 3
+      - file: blocks/sensing/doSetVideoTransparency.md
+        level: 3
+      - file: blocks/sensing/reportGlobalFlag.md
+        level: 3
+      - file: blocks/sensing/doSetGlobalFlag.md
+        level: 3
+      - title: Operators Blocks
+        level: 2
+      - file: blocks/other/reifyScript.md
+        level: 3
+      - file: blocks/other/reifyReporter.md
+        level: 3
+      - file: blocks/other/reifyPredicate.md
+        level: 3
+      - file: blocks/operators/reportVariadicSum.md
+        level: 3
+      - file: blocks/operators/reportDifference.md
+        level: 3
+      - file: blocks/operators/reportVariadicProduct.md
+        level: 3
+      - file: blocks/operators/reportQuotient.md
+        level: 3
+      - file: blocks/operators/reportPower.md
+        level: 3
+      - file: blocks/operators/reportModulus.md
+        level: 3
+      - file: blocks/operators/reportVariadicMin.md
+        level: 3
+      - file: blocks/operators/reportVariadicMax.md
+        level: 3
+      - file: blocks/operators/reportRound.md
+        level: 3
+      - file: blocks/operators/reportMonadic.md
+        level: 3
+      - file: blocks/operators/reportAtan2.md
+        level: 3
+      - file: blocks/operators/reportRandom.md
+        level: 3
+      - file: blocks/operators/reportVariadicLessThan.md
+        level: 3
+      - file: blocks/operators/reportVariadicEquals.md
+        level: 3
+      - file: blocks/operators/reportVariadicGreaterThan.md
+        level: 3
+      - file: blocks/operators/reportVariadicAnd.md
+        level: 3
+      - file: blocks/operators/reportVariadicOr.md
+        level: 3
+      - file: blocks/operators/reportNot.md
+        level: 3
+      - file: blocks/operators/reportBoolean.md
+        level: 3
+      - file: blocks/operators/reportJoinWords.md
+        level: 3
+      - file: blocks/operators/reportTextSplit.md
+        level: 3
+      - file: blocks/operators/reportLetter.md
+        level: 3
+      - file: blocks/operators/reportTextAttribute.md
+        level: 3
+      - file: blocks/operators/reportUnicode.md
+        level: 3
+      - file: blocks/operators/reportUnicodeAsLetter.md
+        level: 3
+      - file: blocks/operators/reportIsA.md
+        level: 3
+      - file: blocks/operators/reportVariadicIsIdentical.md
+        level: 3
+      - title: Variables Blocks
+        level: 2
+      - file: blocks/variables/doSetVar.md
+        level: 3
+      - file: blocks/variables/doChangeVar.md
+        level: 3
+      - file: blocks/variables/doShowVar.md
+        level: 3
+      - file: blocks/variables/doHideVar.md
+        level: 3
+      - file: blocks/other/doDeclareVariables.md
+        level: 3
+      - file: blocks/variables/doDeleteAttr.md
+        level: 3
+      - file: blocks/lists/reportNewList.md
+        level: 3
+      - file: blocks/lists/reportNumbers.md
+        level: 3
+      - file: blocks/lists/reportCONS.md
+        level: 3
+      - file: blocks/lists/reportListItem.md
+        level: 3
+      - file: blocks/lists/reportCDR.md
+        level: 3
+      - file: blocks/lists/reportListAttribute.md
+        level: 3
+      - file: blocks/lists/reportListIndex.md
+        level: 3
+      - file: blocks/lists/reportListContainsItem.md
+        level: 3
+      - file: blocks/lists/reportListIsEmpty.md
+        level: 3
+      - file: blocks/lists/reportMap.md
+        level: 3
+      - file: blocks/lists/reportKeep.md
+        level: 3
+      - file: blocks/lists/reportFindFirst.md
+        level: 3
+      - file: blocks/lists/reportCombine.md
+        level: 3
+      - file: blocks/lists/doForEach.md
+        level: 3
+      - file: blocks/lists/doAddToList.md
+        level: 3
+      - file: blocks/lists/doDeleteFromList.md
+        level: 3
+      - file: blocks/lists/doInsertInList.md
+        level: 3
+      - file: blocks/lists/doReplaceInList.md
+        level: 3
+      - file: blocks/lists/reportConcatenatedLists.md
+        level: 3
+      - file: blocks/lists/reportReshape.md
+        level: 3
+      - file: blocks/lists/reportCrossproduct.md
+        level: 3
+      - file: manual-index.md
+  - format: tex+pdf
+    title: Snap\textit{!} Blocks Reference
+    template: ./_latex-template/
+    output: output/snap-blocks-ref.pdf
+    articles:
+      - file: blocks/index.md
+      - title: Motion Blocks
+      - file: blocks/motion/forward.md
+        level: 1
+      - file: blocks/motion/turn.md
+        level: 1
+      - file: blocks/motion/turnLeft.md
+        level: 1
+      - file: blocks/motion/setHeading.md
+        level: 1
+      - file: blocks/motion/doFaceTowards.md
+        level: 1
+      - file: blocks/motion/gotoXY.md
+        level: 1
+      - file: blocks/motion/doGotoObject.md
+        level: 1
+      - file: blocks/motion/doGlide.md
+        level: 1
+      - file: blocks/motion/changeXPosition.md
+        level: 1
+      - file: blocks/motion/setXPosition.md
+        level: 1
+      - file: blocks/motion/changeYPosition.md
+        level: 1
+      - file: blocks/motion/setYPosition.md
+        level: 1
+      - file: blocks/motion/bounceOffEdge.md
+        level: 1
+      - file: blocks/motion/getPosition.md
+        level: 1
+      - file: blocks/motion/xPosition.md
+        level: 1
+      - file: blocks/motion/yPosition.md
+        level: 1
+      - file: blocks/motion/direction.md
+        level: 1
+      - title: Looks Blocks
+      - file: blocks/looks/doSwitchToCostume.md
+        level: 1
+      - file: blocks/looks/doWearNextCostume.md
+        level: 1
+      - file: blocks/looks/getCostumeIdx.md
+        level: 1
+      - file: blocks/looks/doSayFor.md
+        level: 1
+      - file: blocks/looks/bubble.md
+        level: 1
+      - file: blocks/looks/doThinkFor.md
+        level: 1
+      - file: blocks/looks/doThink.md
+        level: 1
+      - file: blocks/looks/reportGetImageAttribute.md
+        level: 1
+      - file: blocks/looks/reportNewCostumeStretched.md
+        level: 1
+      - file: blocks/looks/reportNewCostumeSkewed.md
+        level: 1
+      - file: blocks/looks/reportNewCostume.md
+        level: 1
+      - file: blocks/looks/changeEffect.md
+        level: 1
+      - file: blocks/looks/setEffect.md
+        level: 1
+      - file: blocks/looks/clearEffects.md
+        level: 1
+      - file: blocks/looks/getEffect.md
+        level: 1
+      - file: blocks/looks/changeScale.md
+        level: 1
+      - file: blocks/looks/setScale.md
+        level: 1
+      - file: blocks/looks/getScale.md
+        level: 1
+      - file: blocks/looks/show.md
+        level: 1
+      - file: blocks/looks/hide.md
+        level: 1
+      - file: blocks/looks/reportShown.md
+        level: 1
+      - file: blocks/looks/goToLayer.md
+        level: 1
+      - file: blocks/looks/goBack.md
+        level: 1
+      - title: Sound Blocks
+      - file: blocks/sound/playSound.md
+        level: 1
+      - file: blocks/sound/doPlaySoundUntilDone.md
+        level: 1
+      - file: blocks/sound/doStopAllSounds.md
+        level: 1
+      - file: blocks/sound/doPlaySoundAtRate.md
+        level: 1
+      - file: blocks/sound/reportGetSoundAttribute.md
+        level: 1
+      - file: blocks/sound/reportNewSoundFromSamples.md
+        level: 1
+      - file: blocks/sound/doRest.md
+        level: 1
+      - file: blocks/sound/doPlayNote.md
+        level: 1
+      - file: blocks/sound/doSetInstrument.md
+        level: 1
+      - file: blocks/sound/doChangeTempo.md
+        level: 1
+      - file: blocks/sound/doSetTempo.md
+        level: 1
+      - file: blocks/sound/getTempo.md
+        level: 1
+      - file: blocks/sound/changeVolume.md
+        level: 1
+      - file: blocks/sound/setVolume.md
+        level: 1
+      - file: blocks/sound/getVolume.md
+        level: 1
+      - file: blocks/sound/changePan.md
+        level: 1
+      - file: blocks/sound/setPan.md
+        level: 1
+      - file: blocks/sound/getPan.md
+        level: 1
+      - file: blocks/sound/playFreq.md
+        level: 1
+      - file: blocks/sound/stopFreq.md
+        level: 1
+      - title: Pen Blocks
+      - file: blocks/pen/clear.md
+        level: 1
+      - file: blocks/pen/down.md
+        level: 1
+      - file: blocks/pen/up.md
+        level: 1
+      - file: blocks/pen/getPenDown.md
+        level: 1
+      - file: blocks/pen/setColor.md
+        level: 1
+      - file: blocks/pen/changePenColorDimension.md
+        level: 1
+      - file: blocks/pen/setPenColorDimension.md
+        level: 1
+      - file: blocks/pen/getPenAttribute.md
+        level: 1
+      - file: blocks/pen/changeSize.md
+        level: 1
+      - file: blocks/pen/setSize.md
+        level: 1
+      - file: blocks/pen/doStamp.md
+        level: 1
+      - file: blocks/pen/floodFill.md
+        level: 1
+      - file: blocks/pen/write.md
+        level: 1
+      - file: blocks/pen/reportPenTrailsAsCostume.md
+        level: 1
+      - file: blocks/pen/doPasteOn.md
+        level: 1
+      - file: blocks/pen/doCutFrom.md
+        level: 1
+      - file: blocks/pen/reportColor.md
+        level: 1
+      - file: blocks/pen/reportColorAttribute.md
+        level: 1
+      - file: blocks/pen/reportNewColor.md
+        level: 1
+      - title: Control Blocks
+      - file: blocks/control/receiveGo.md
+        level: 1
+      - file: blocks/control/receiveUserEdit.md
+        level: 1
+      - file: blocks/control/receiveOnClone.md
+        level: 1
+      - file: blocks/control/receiveMessage.md
+        level: 1
+      - file: blocks/control/receiveKey.md
+        level: 1
+      - file: blocks/control/receiveConditionEvent.md
+        level: 1
+      - file: blocks/control/receiveInteraction.md
+        level: 1
+      - file: blocks/control/doBroadcast.md
+        level: 1
+      - file: blocks/control/doBroadcastAndWait.md
+        level: 1
+      - file: blocks/other/doWarp.md
+        level: 1
+      - file: blocks/control/doWait.md
+        level: 1
+      - file: blocks/control/doWaitUntil.md
+        level: 1
+      - file: blocks/control/doForever.md
+        level: 1
+      - file: blocks/control/doRepeat.md
+        level: 1
+      - file: blocks/control/doUntil.md
+        level: 1
+      - file: blocks/control/doFor.md
+        level: 1
+      - file: blocks/control/doIf.md
+        level: 1
+      - file: blocks/control/doIfElse.md
+        level: 1
+      - file: blocks/control/reportIfElse.md
+        level: 1
+      - file: blocks/control/doReport.md
+        level: 1
+      - file: blocks/control/doStopThis.md
+        level: 1
+      - file: blocks/control/doRun.md
+        level: 1
+      - file: blocks/control/fork.md
+        level: 1
+      - file: blocks/control/evaluate.md
+        level: 1
+      - file: blocks/control/reportPipe.md
+        level: 1
+      - file: blocks/control/doTellTo.md
+        level: 1
+      - file: blocks/control/reportAskFor.md
+        level: 1
+      - file: blocks/control/createClone.md
+        level: 1
+      - file: blocks/control/newClone.md
+        level: 1
+      - file: blocks/control/removeClone.md
+        level: 1
+      - file: blocks/control/doPauseAll.md
+        level: 1
+      - file: blocks/control/doSwitchToScene.md
+        level: 1
+      - file: blocks/control/doDefineBlock.md
+        level: 1
+      - file: blocks/control/doDeleteBlock.md
+        level: 1
+      - file: blocks/control/doSetBlockAttribute.md
+        level: 1
+      - file: blocks/control/reportBlockAttribute.md
+        level: 1
+      - file: blocks/control/reportEnvironment.md
+        level: 1
+      - file: blocks/control/doSetSlot.md
+        level: 1
+      - title: Sensing Blocks
+      - file: blocks/sensing/reportTouchingObject.md
+        level: 1
+      - file: blocks/sensing/reportTouchingColor.md
+        level: 1
+      - file: blocks/sensing/reportColorIsTouchingColor.md
+        level: 1
+      - file: blocks/sensing/doAsk.md
+        level: 1
+      - file: blocks/sensing/getLastAnswer.md
+        level: 1
+      - file: blocks/sensing/reportMousePosition.md
+        level: 1
+      - file: blocks/sensing/reportMouseX.md
+        level: 1
+      - file: blocks/sensing/reportMouseY.md
+        level: 1
+      - file: blocks/sensing/reportMouseDown.md
+        level: 1
+      - file: blocks/sensing/reportKeyPressed.md
+        level: 1
+      - file: blocks/sensing/reportRelationTo.md
+        level: 1
+      - file: blocks/sensing/reportAspect.md
+        level: 1
+      - file: blocks/sensing/doResetTimer.md
+        level: 1
+      - file: blocks/sensing/getTimer.md
+        level: 1
+      - file: blocks/sensing/reportDate.md
+        level: 1
+      - file: blocks/sensing/reportAttributeOf.md
+        level: 1
+      - file: blocks/sensing/reportGet.md
+        level: 1
+      - file: blocks/sensing/reportObject.md
+        level: 1
+      - file: blocks/sensing/reportURL.md
+        level: 1
+      - file: blocks/sensing/reportAudio.md
+        level: 1
+      - file: blocks/sensing/reportVideo.md
+        level: 1
+      - file: blocks/sensing/doSetVideoTransparency.md
+        level: 1
+      - file: blocks/sensing/reportGlobalFlag.md
+        level: 1
+      - file: blocks/sensing/doSetGlobalFlag.md
+        level: 1
+      - title: Operators Blocks
+      - file: blocks/other/reifyScript.md
+        level: 1
+      - file: blocks/other/reifyReporter.md
+        level: 1
+      - file: blocks/other/reifyPredicate.md
+        level: 1
+      - file: blocks/operators/reportVariadicSum.md
+        level: 1
+      - file: blocks/operators/reportDifference.md
+        level: 1
+      - file: blocks/operators/reportVariadicProduct.md
+        level: 1
+      - file: blocks/operators/reportQuotient.md
+        level: 1
+      - file: blocks/operators/reportPower.md
+        level: 1
+      - file: blocks/operators/reportModulus.md
+        level: 1
+      - file: blocks/operators/reportVariadicMin.md
+        level: 1
+      - file: blocks/operators/reportVariadicMax.md
+        level: 1
+      - file: blocks/operators/reportRound.md
+        level: 1
+      - file: blocks/operators/reportMonadic.md
+        level: 1
+      - file: blocks/operators/reportAtan2.md
+        level: 1
+      - file: blocks/operators/reportRandom.md
+        level: 1
+      - file: blocks/operators/reportVariadicLessThan.md
+        level: 1
+      - file: blocks/operators/reportVariadicEquals.md
+        level: 1
+      - file: blocks/operators/reportVariadicGreaterThan.md
+        level: 1
+      - file: blocks/operators/reportVariadicAnd.md
+        level: 1
+      - file: blocks/operators/reportVariadicOr.md
+        level: 1
+      - file: blocks/operators/reportNot.md
+        level: 1
+      - file: blocks/operators/reportBoolean.md
+        level: 1
+      - file: blocks/operators/reportJoinWords.md
+        level: 1
+      - file: blocks/operators/reportTextSplit.md
+        level: 1
+      - file: blocks/operators/reportLetter.md
+        level: 1
+      - file: blocks/operators/reportTextAttribute.md
+        level: 1
+      - file: blocks/operators/reportUnicode.md
+        level: 1
+      - file: blocks/operators/reportUnicodeAsLetter.md
+        level: 1
+      - file: blocks/operators/reportIsA.md
+        level: 1
+      - file: blocks/operators/reportVariadicIsIdentical.md
+        level: 1
+      - title: Variables Blocks
+      - file: blocks/variables/doSetVar.md
+        level: 1
+      - file: blocks/variables/doChangeVar.md
+        level: 1
+      - file: blocks/variables/doShowVar.md
+        level: 1
+      - file: blocks/variables/doHideVar.md
+        level: 1
+      - file: blocks/other/doDeclareVariables.md
+        level: 1
+      - file: blocks/variables/doDeleteAttr.md
+        level: 1
+      - file: blocks/lists/reportNewList.md
+        level: 1
+      - file: blocks/lists/reportNumbers.md
+        level: 1
+      - file: blocks/lists/reportCONS.md
+        level: 1
+      - file: blocks/lists/reportListItem.md
+        level: 1
+      - file: blocks/lists/reportCDR.md
+        level: 1
+      - file: blocks/lists/reportListAttribute.md
+        level: 1
+      - file: blocks/lists/reportListIndex.md
+        level: 1
+      - file: blocks/lists/reportListContainsItem.md
+        level: 1
+      - file: blocks/lists/reportListIsEmpty.md
+        level: 1
+      - file: blocks/lists/reportMap.md
+        level: 1
+      - file: blocks/lists/reportKeep.md
+        level: 1
+      - file: blocks/lists/reportFindFirst.md
+        level: 1
+      - file: blocks/lists/reportCombine.md
+        level: 1
+      - file: blocks/lists/doForEach.md
+        level: 1
+      - file: blocks/lists/doAddToList.md
+        level: 1
+      - file: blocks/lists/doDeleteFromList.md
+        level: 1
+      - file: blocks/lists/doInsertInList.md
+        level: 1
+      - file: blocks/lists/doReplaceInList.md
+        level: 1
+      - file: blocks/lists/reportConcatenatedLists.md
+        level: 1
+      - file: blocks/lists/reportReshape.md
+        level: 1
+      - file: blocks/lists/reportCrossproduct.md
+        level: 1

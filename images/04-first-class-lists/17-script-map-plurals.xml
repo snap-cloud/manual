@@ -1,0 +1,22 @@
+<script>
+  <block s="reportMap">
+    <block s="reifyReporter">
+      <autolambda>
+        <block s="reportJoinWords">
+          <list>
+            <l/>
+            <l>s</l>
+          </list>
+        </block>
+      </autolambda>
+      <list/>
+    </block>
+    <block s="reportNewList">
+      <list>
+        <l>book</l>
+        <l>computer</l>
+        <l>bagel</l>
+      </list>
+    </block>
+  </block>
+</script>

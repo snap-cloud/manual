@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+  pull_request:
   workflow_dispatch:
 
 jobs:
@@ -21,16 +22,63 @@ jobs:
         with:
           node-version: '20'
 
-      - name: Install MyST
-        run: npm install -g mystmd
+      - name: Install MyST and dependencies
+        run: |
+          npm install
+          npm install -g mystmd
 
       - name: Print MyST version
         run: myst --version
 
-      - name: Build HTML
-        run: myst build --html
+      - name: Install LaTeX
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends \
+            latexmk \
+            texlive-latex-recommended \
+            texlive-latex-extra \
+            texlive-fonts-recommended \
+            texlive-fonts-extra \
+            texlive-luatex \
+            texlive-xetex
 
+      # Run npm build to compile the custom SASS
+      - name: Build HTML
+        run: |
+          npm run styles:build
+          myst build --html --ci --max-size-webp 0
+
+      - name: Build PDF
+        run: myst build --pdf --ci
+
+      - name: Enforce CNAME file for GitHub Pages
+        run: echo "docs.snap.berkeley.edu" > _build/html/CNAME
+
+      - name: Stage PDFs for publishing
+        run: |
+          # PDF locations are configured in toc_pdf*.yml under exports.output.
+          # Copy them into the HTML output so they ship alongside the site.
+          mkdir -p _build/html
+          cp output/snap-*.pdf _build/html/ 2>/dev/null || true
+
+      # On PRs, attach all three PDFs as workflow artifacts so reviewers can
+      # grab a preview without running the build locally. Kept for 10 days to
+      # avoid filling up artifact storage.
+      - name: Upload PDF artifacts
+        if: github.event_name == 'pull_request'
+        uses: actions/upload-artifact@v4
+        with:
+          name: snap-manual-pdfs
+          path: |
+            output/snap-*.pdf
+          retention-days: 10
+          # TODO: Ignore for now while secondary files are disabled.
+          if-no-files-found: error
+
+      # Only publish to gh-pages from main (or workflow_dispatch). PRs stop
+      # after building + uploading the artifact above.
       - name: Publish HTML to gh-pages
+        if: github.event_name != 'pull_request'
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}

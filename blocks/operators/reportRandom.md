@@ -1,5 +1,4 @@
 ---
-toc: false
 ---
 
 # `pick random  to`

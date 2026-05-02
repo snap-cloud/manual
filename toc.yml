@@ -17,8 +17,8 @@ project:
     - file: 12-user-interface-elements.md
     - title: Appendix
       children:
-        - file: appendix/a-snap-color-library/index.md
-        - file: appendix/b-apl-features/index.md
+        - file: appendix/a-snap-color-library.md
+        - file: appendix/b-apl-features.md
         - title: Community
           children:
             - file: appendix/community/index.md

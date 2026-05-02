@@ -29,29 +29,22 @@
   --purple-light: #D9CEFF;
   --gray-medium: #808080;
   --gray-light: #F2F2F2;
-
-  // Bootstrap Variables
-  --bs-navbar-color: #FFF;
-  --bs-navbar-hover-color: rgba(150.45, 150.45, 150.45, 0.8);
-  // --bs-navbar-disabled-color: rgba(150.45, 150.45, 150.45, 0.75);
-  --bs-navbar-active-color: #FFF;
-  --bs-navbar-brand-color: #FFF;
-  --bs-navbar-brand-hover-color: #FFF;
-  --bs-navbar-toggler-border-color: #FFF;
 }
 
-.navbar {
-  background-color: var(--berkeley-blue);
-  color: #FFF;
+// JupyterBook 2 top navigation. The book-theme uses Tailwind utilities
+// (bg-white/80, backdrop-blur, shadow) on a `.myst-top-nav` div; we override
+// them here rather than forking the theme. !important is needed to defeat
+// the Tailwind utility classes also targeting these elements.
+.myst-top-nav {
+  background-color: var(--berkeley-blue) !important;
+  backdrop-filter: none !important;
+  box-shadow: none !important;
 
-  .navbar-brand {
-    color: #FFF;
-
-    &:hover, &:focus {
-      color: #FFF;
-    }
+  // Force light foreground on top of berkeley-blue, regardless of the
+  // theme-supplied text-stone-* / dark:text-white utilities on children.
+  &, a, button, svg {
+    color: #FFF !important;
   }
-
 }
 
 /* Designed to be the last element in a section / nav
@@ -64,6 +57,9 @@
   border-right: 9px solid transparent;
   height: 0;
   width: 64px;
+  margin-top: -14px;
+  top: 14px;
+  z-index: 1000;
   color: var(--berkeley-blue);
 }
 
@@ -85,23 +81,37 @@ nav a[href*="/blocks/"] { font-family: ui-monospace, monospace; }
 }
 
 // TODO: make latex env
+.image-1-5x {
+  &, img {
+    height: 70%;
+    width: auto;
+  }
+}
+
 .image-2x {
-  height: 50%;
-  width: auto;
+  &, img {
+    height: 50%;
+    width: auto;
+  }
 }
 
 .image-3x {
-  height: 33.33%;
-  width: auto;
+    &, img {
+    height: 33.33%;
+    width: auto;
+  }
 }
 
 .image-4x {
-  height: 25%;
-  width: auto;
+  &, img {
+    height: 25%;
+    width: auto;
+  }
 }
 
 /* In the markdown table this class is applied to the link */
-td .link picture img {
+td .link picture img,
+td .link img {
   height: 55% !important;
   margin: unset !important;
 }
@@ -119,17 +129,27 @@ figure.image-inline-tall {
   margin: 0;
 }
 
+// .article p img {
+//   // display: inline !important;
+//   margin: unset;
+//   vertical-align: middle;
+// }
+
 .image-inline {
   display: inline;
-  padding: 0;
+  padding: 0 1px;
 
   &, img {
-    width: auto;
+    display: inline;
+    // Need to override MyST's default of width: 80% on images.
+    width: auto !important;
     max-width: none;
-    max-height: 1.6em;
+    max-height: 1.5em;
     line-height: 1.8;
     vertical-align: middle;
-    margin: 0;
+    margin: 0 !important;
+    position: relative;
+    top: -0.1rem;
   }
 }
 
@@ -138,6 +158,7 @@ figure.image-inline-tall {
   padding: 0;
 
   &, img {
+    display: inline;
     width: auto;
     max-width: none;
     max-height: 2.4em;
@@ -168,7 +189,7 @@ figure.image-inline-tall {
 // TODO: Not sure if we want to combine these two classes
 // Slightly smaller than 100% for inline blocks.
 .image-4x.image-inline {
-  &, img { width: 20%; max-height: none; }
+  &, img { width: 20%; max-height: auto; }
 }
 
 // TODO: make latex command
@@ -192,6 +213,12 @@ p code:not(.sourceCode) {
   // font-family: monospace;
 }
 
+body.dark\:bg-stone-900 code,
+body.dark\:bg-stone-900 p code:not(.sourceCode) {
+  color: white;
+  background-color: unset;
+}
+
 .mono {
   font-family: 'source-code-pro', 'Monaco', courier, monospace;
 }
@@ -210,6 +237,3 @@ p code:not(.sourceCode) {
   content: '!';
   font-style: italic;
 }
-
-// TODO: Style paragraph indents?
-// hX + p ? p+p

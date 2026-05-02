@@ -220,7 +220,7 @@ We can improve upon this by capturing the continuation of the top-level call to 
 
 ![image913.png](images/10-continuations/image913.png) <!--  style="width:4.03819in;height:1.92569in" / --> ![image914.png](images/10-continuations/image914.png) <!--  style="width:3.94514in;height:1.09792in" / -->
 
-The ![image916.png](images/10-continuations/image916.png) <!--  style="width:1.59125in;height:0.18611in" / --> block takes as its input a
+The {inline alt="image916.png"}`images/10-continuations/image916.png` <!--  style="width:1.59125in;height:0.18611in" / --> block takes as its input a
 one-input script, as shown in the product example. It calls that script
 with *the continuation of the* call-with-continuation *block itself* as
 its input. In this case, that continuation is
