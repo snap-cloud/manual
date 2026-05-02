@@ -196,8 +196,14 @@
 }
 % Block images go through the fallback. Wrap with \centerline so the
 % image is horizontally centered (myst-to-tex emits a bare
-% \includegraphics with no surrounding center environment).
-\def\snap@fallback@includegraphics#1#2{\par\centerline{\snaporigincludegraphics[-"[#1]"-]{#2}}\par}
+% \includegraphics with no surrounding center environment). The
+% \vspace pulls the image and following paragraph up by ~0.4 baselines
+% each so the layout stays tight.
+\def\snap@fallback@includegraphics#1#2{%
+  \par\vspace{-0.4\baselineskip}%
+  \centerline{\snaporigincludegraphics[-"[#1]"-]{#2}}%
+  \par\vspace{-0.4\baselineskip}%
+}
 \makeatother
 
 % --- <kbd> rendering ----------------------------------------------------
@@ -306,12 +312,16 @@
       {8.0};
 
     % Orange banner with the manual title (about 35% from top of
-    % page). The title is bold italic and right-justified inside the
-    % orange band.
+    % page). The title is bold small-caps (with the ! kept italic
+    % for brand consistency) and right-justified inside the orange
+    % band, which carries a 2pt white outline.
     \fill[snaporange]
       ([yshift=-0.34\paperheight, xshift=-0.2cm]current page.north west) rectangle
       ([yshift=-0.42\paperheight, xshift=0.95\paperwidth]current page.north west);
-    \node[anchor=east, text=white, font=\Huge\bfseries\itshape]
+    \draw[white, line width=2pt]
+      ([yshift=-0.34\paperheight, xshift=-0.2cm]current page.north west) rectangle
+      ([yshift=-0.42\paperheight, xshift=0.95\paperwidth]current page.north west);
+    \node[anchor=east, text=white, font=\Huge\bfseries\scshape]
       at ([yshift=-0.38\paperheight, xshift=0.93\paperwidth]current page.north west)
       {Snap\textit{!}\ Reference Manual};
 

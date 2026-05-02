@@ -18,7 +18,7 @@ if [[ $# -lt 1 ]]; then
   exit 2
 fi
 
-PCT="${SHRINK_IMAGES_PERCENT:-50}"
+PCT="${SHRINK_IMAGES_PERCENT:-75}"
 
 # ImageMagick 7 ships `magick`; older distros expose `mogrify` directly.
 if command -v magick >/dev/null 2>&1; then
