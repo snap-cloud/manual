@@ -1,16 +1,11 @@
 ---
 ---
 
-<!-- Supress including this file in the PDF table of contents -->
-```{raw:latex}
-\chapter*{The Snap\texit{!} Reference Manual}
-```
-
 <!--
-  This is the first page of the Snap! Manual.
-  The manual title is already included on the top of this page by Quarto.
-
-  We need to include some title, but don't want it to be redundant.
+  Title intentionally omitted. The PDF cover page already carries
+  "Snap! Reference Manual"; emitting a frontmatter title here (or
+  the previous \chapter*{...} raw LaTeX call) caused a near-blank
+  duplicate-title page after the acknowledgements.
 -->
 
 ::: {.callout-note}

@@ -181,9 +181,14 @@ The [`myst.yml`](../.github/workflows/myst.yml) GitHub Actions workflow runs
 on push to `main`, on pull requests, and via `workflow_dispatch`. Each run:
 
 1. Installs Node.js, MyST, and TeX Live.
-2. Runs `myst build --html` to build the site.
-3. Runs `myst build --pdf` to build all three PDFs into `output/`.
-4. Copies each PDF into `_build/html/` so they're published alongside the
+2. Runs `myst build --html` to build the site (HTML keeps original-resolution images).
+3. Runs [`_support/scripts/shrink-images.sh`](../_support/scripts/shrink-images.sh)
+   on `images/` and `blocks/images/`, halving each PNG/JPG via ImageMagick's
+   `mogrify -resize 50%`. The HTML output in `_build/html/` is already
+   self-contained so it isn't affected; only the PDF picks up the smaller
+   copies. Set `SHRINK_IMAGES_PERCENT=N` to use a different scale.
+4. Runs `myst build --pdf` to build all three PDFs into `output/`.
+5. Copies each PDF into `_build/html/` so they're published alongside the
    site.
 
 The remaining steps depend on the trigger:

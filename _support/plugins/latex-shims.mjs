@@ -36,7 +36,7 @@ const SENTINEL_WIDTHS = {
 };
 
 // Block images that don't carry their own `width` attribute default to
-// 40% of \linewidth. Per-image overrides can be set in markdown:
+// 30% of \linewidth. Per-image overrides can be set in markdown:
 //
 //     ![alt](path){width=1.5in}
 //     ![alt](path){width=30%}
@@ -44,7 +44,7 @@ const SENTINEL_WIDTHS = {
 // Inch widths are converted to a percentage of the assumed text width
 // below (BLOCK_LINEWIDTH_INCHES) so they fall through the standard
 // myst-to-tex `width=N\linewidth` path.
-const BLOCK_DEFAULT_WIDTH = '40%';
+const BLOCK_DEFAULT_WIDTH = '30%';
 
 // Linewidth in inches assumed when converting `Xin` widths to a
 // percentage of \linewidth. With 8.5"-wide US Letter and 0.5" margins

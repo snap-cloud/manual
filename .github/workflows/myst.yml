@@ -47,6 +47,10 @@ jobs:
         uses: zauguin/install-texlive@v4
         with:
           texlive_version: 2025
+          # Pin a known-reliable US CTAN mirror. zauguin's default
+          # mirror probe has been failing intermittently with
+          # "No mirror available"; hardcoding RIT bypasses it.
+          repository: https://mirrors.rit.edu/CTAN/systems/texlive/tlnet/
           packages: >-
             scheme-basic
             collection-latexrecommended
@@ -72,6 +76,17 @@ jobs:
         run: |
           npm run styles:build
           myst build --html --ci --max-size-webp 0
+
+      # Image shrinking is currently disabled. The 75% downscale was
+      # still visibly blurry on block screenshots; we accept the
+      # larger PDF for now in exchange for keeping image fidelity.
+      # Re-enable by uncommenting the step below.
+      #
+      # - name: Shrink source images for PDF
+      #   run: |
+      #     sudo apt-get update -qq
+      #     sudo apt-get install -y --no-install-recommends imagemagick
+      #     _support/scripts/shrink-images.sh images blocks/images
 
       - name: Build PDF
         run: |

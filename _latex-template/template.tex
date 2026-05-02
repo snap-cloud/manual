@@ -196,8 +196,14 @@
 }
 % Block images go through the fallback. Wrap with \centerline so the
 % image is horizontally centered (myst-to-tex emits a bare
-% \includegraphics with no surrounding center environment).
-\def\snap@fallback@includegraphics#1#2{\par\centerline{\snaporigincludegraphics[-"[#1]"-]{#2}}\par}
+% \includegraphics with no surrounding center environment). The
+% \vspace pulls the image and following paragraph up by ~0.1 baselines
+% each so the layout stays a touch tighter without crowding.
+\def\snap@fallback@includegraphics#1#2{%
+  \par\vspace{-0.1\baselineskip}%
+  \centerline{\snaporigincludegraphics[-"[#1]"-]{#2}}%
+  \par\vspace{-0.1\baselineskip}%
+}
 \makeatother
 
 % --- <kbd> rendering ----------------------------------------------------
@@ -306,12 +312,16 @@
       {8.0};
 
     % Orange banner with the manual title (about 35% from top of
-    % page). The title is bold italic and right-justified inside the
-    % orange band.
+    % page). The title is bold small-caps (with the ! kept italic
+    % for brand consistency) and right-justified inside the orange
+    % band, which carries a 2pt white outline.
     \fill[snaporange]
       ([yshift=-0.34\paperheight, xshift=-0.2cm]current page.north west) rectangle
       ([yshift=-0.42\paperheight, xshift=0.95\paperwidth]current page.north west);
-    \node[anchor=east, text=white, font=\Huge\bfseries\itshape]
+    \draw[white, line width=2pt]
+      ([yshift=-0.34\paperheight, xshift=-0.2cm]current page.north west) rectangle
+      ([yshift=-0.42\paperheight, xshift=0.95\paperwidth]current page.north west);
+    \node[anchor=east, text=white, font=\Huge\bfseries\scshape]
       at ([yshift=-0.38\paperheight, xshift=0.93\paperwidth]current page.north west)
       {Snap\textit{!}\ Reference Manual};
 
@@ -341,6 +351,11 @@
 
 \mainmatter
 
+% Plain page style on content pages: just the page number in the
+% footer, no running head. Suppresses the centered chapter title
+% the default `headings` style adds at the top of every page.
+\pagestyle{plain}
+
 [- CONTENT -]
 
 
@@ -350,9 +365,13 @@
 
 % The index is emitted directly here rather than via a "manual-index.md"
 % chapter so we don't end up with both myst's `show-index` definition
-% list and \printindex's makeindex output stacked back-to-back. The
-% `intoc` option to \makeindex (set above) adds the "Index" heading to
-% the TOC.
+% list and \printindex's makeindex output stacked back-to-back.
+% `imakeidx`'s `intoc` option doesn't survive our chapter-TOC
+% redefinition above, so add the entry by hand. \phantomsection
+% gives hyperref a real anchor so the TOC link lands on the index page.
+\cleardoublepage
+\phantomsection
+\addcontentsline{toc}{chapter}{\indexname}
 \printindex
 
 \end{document}
