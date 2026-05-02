@@ -1,5 +1,4 @@
 ---
-title: "The Snap! Reference Manual"
 ---
 
 <!-- Supress including this file in the PDF table of contents -->
@@ -61,3 +60,23 @@ You'll find the table of contents on the left side of each page. At the bottom o
 
 A search function is included in the upper right hand corner. If you which you can type <kbd>/</kbd> (or <kbd>?</kbd>) to jump to the search function.
 +++
+
+### Reference the Snap! Manual
+
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.16892852.svg)](https://doi.org/10.5281/zenodo.16892852)
+
+If you're writing a paper or book and want to reference the manual, please use the following citation:
+
+```
+@book{harvey_2025_17241865,
+  author       = {Harvey, Brian and
+                  Mönig, Jens and
+                  Ball, Michael},
+  title        = {Snap! Reference Manual},
+  publisher    = {Zenodo},
+  year         = 2025,
+  month        = sep,
+  doi          = {10.5281/zenodo.16892852},
+  url          = {https://doi.org/10.5281/zenodo.16892852},
+}
+```

@@ -1,6 +1,12 @@
-// Adobe Fonts -- Michael's UC Berkeley Adobe Account
-// TODO: Move to Adobe Fonts
-@import url('https://fonts.googleapis.com/css2?family=Freight+Text+Pro:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap');
+// <weight>: Use a value from 200 to 900
+// <uniquifier>: Use a unique and descriptive class name
+.source-serif-4-400 {
+  font-family: "Source Serif 4", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
 
 :root,
 :root[data-theme='dark'] {
@@ -30,6 +36,7 @@
   --gray-medium: #808080;
   --gray-light: #F2F2F2;
 }
+
 
 // JupyterBook 2 top navigation. The book-theme uses Tailwind utilities
 // (bg-white/80, backdrop-blur, shadow) on a `.myst-top-nav` div; we override
@@ -68,7 +75,7 @@
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Freight Text Pro', serif;
+  font-family: 'Source Serif 4', 'Baskerville', 'Times New Roman', serif;
 }
 
 nav a[href*="/blocks/"] { font-family: ui-monospace, monospace; }
@@ -211,13 +218,21 @@ code,
 p code:not(.sourceCode) {
   color: black;
   background-color: unset;
-  font-family: "tekton-pro", sans-serif;
+  // font-family: "tekton-pro", '', sans-serif;
   font-weight: 700;
   font-style: normal;
   font-weight: bold;
   font-size: 1.1em;
   // Should we reuse the same font from the word doc?
   // font-family: monospace;
+}
+
+// TODO: Unify code font across the site
+// Do we need to address colors in pre blocks?
+pre code {
+  font-family: 'source-code-pro', 'Monaco', courier, monospace;
+  font-weight: normal;
+  font-size: 1em;
 }
 
 html.dark code,
