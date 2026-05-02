@@ -80,10 +80,12 @@ jobs:
       # Halve the source images before the PDF build. The HTML output
       # in _build/html/ is already self-contained at this point so it
       # keeps original-resolution images; only the PDF picks up the
-      # smaller copies. ImageMagick is preinstalled on
-      # ubuntu-latest, so no extra apt step.
+      # smaller copies.
       - name: Shrink source images for PDF
-        run: _support/scripts/shrink-images.sh images blocks/images
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y --no-install-recommends imagemagick
+          _support/scripts/shrink-images.sh images blocks/images
 
       - name: Build PDF
         run: |
