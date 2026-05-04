@@ -4,7 +4,7 @@
   unlike the rest of the manual. -->
 
 * Write UI elements inside quoted code blocks. e.g. ```"`Open`"```
-* Monospaced text should use the CSS class `.mono` e.g. `{span .mono}[text here]`
+* Monospaced text should use the CSS class `.mono` e.g. `{span .mono}`text here``
 * Do not put spaces around index entries. See [Indexes](#indexes) below.
 * To write Snap! as stylized text write: `Snap<em>!</em>`
 * Chapters are included at the top level of the repo, named 'NN-chapter.md'
@@ -47,7 +47,7 @@ attribute in the same braces:
 
 ```md
 ![alt text](filename.png){width=2.84in}
-{inline alt="alt text" class="image-4x width=3in"}`filename.png`
+{inline alt="alt text" class="image-4x" width="3in"}`filename.png`
 ```
 
 MyST forwards `width=Xin` to `\includegraphics[width=Xin]{...}`, so the

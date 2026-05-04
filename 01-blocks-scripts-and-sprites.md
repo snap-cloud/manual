@@ -15,7 +15,7 @@ interface familiar to computer users.
 Start Snap<em>!</em>. You should see the following
 arrangement of {index}`regions <layout, window>` in the window:
 
-![An annotated screenshot of blank Snap! editor](images/12-user-interface-elements/snap-ide-annotated.png)
+{img alt="An annotated screenshot of blank Snap! editor" width="4.5in"}`images/12-user-interface-elements/snap-ide-annotated.png`
 
 (The proportions of these areas may be different, depending on the size
 and shape of your browser window.)
@@ -28,7 +28,7 @@ script
 :::
 
 (fig-draw-square)=
-![image6.png](images/01-blocks-scripts-and-sprites/image6.png)
+{img alt="image6.png" width="1.48in"}`images/01-blocks-scripts-and-sprites/image6.png`
 
 The five {index}`blocks <block>` that make up this script have three different colors,
 corresponding to three of the eight *palettes* in which blocks
@@ -46,11 +46,11 @@ is near the tab of the one above it:
 ::::{grid} 2
 
 :::{grid-item}
-![image7.png](images/01-blocks-scripts-and-sprites/image7.png)
+{img alt="image7.png" width="2.25in"}`images/01-blocks-scripts-and-sprites/image7.png`
 :::
 
 :::{grid-item}
-![image8.png](images/01-blocks-scripts-and-sprites/image8.png)
+{img alt="image8.png" width="2.21in"}`images/01-blocks-scripts-and-sprites/image8.png`
 :::
 ::::
 
@@ -129,7 +129,7 @@ In the sample script
 :::
 
 :::{grid-item}
-![image6.png](images/01-blocks-scripts-and-sprites/image6.png)
+{img alt="image6.png" width="1.48in"}`images/01-blocks-scripts-and-sprites/image6.png`
 :::
 
 :::{grid-item}
@@ -137,7 +137,7 @@ the `repeat` block has two inputs: the number 4 and the script
 :::
 
 :::{grid-item}
-![image11.png](images/01-blocks-scripts-and-sprites/image11.png)
+{img alt="image11.png" width="1.41in"}`images/01-blocks-scripts-and-sprites/image11.png`
 :::
 ::::
 
@@ -148,11 +148,11 @@ command block:
 ::::{grid} 2
 
 :::{grid-item}
-![image12.png](images/01-blocks-scripts-and-sprites/image12.png)
+{img alt="image12.png" width="5.70in"}`images/01-blocks-scripts-and-sprites/image12.png`
 :::
 
 :::{grid-item}
-![image13.png](images/01-blocks-scripts-and-sprites/image13.png)
+{img alt="image13.png" width="5.70in"}`images/01-blocks-scripts-and-sprites/image13.png`
 :::
 ::::
 
@@ -164,11 +164,11 @@ the haloed blocks:
 ::::{grid} 2
 
 :::{grid-item}
-![image16.png](images/01-blocks-scripts-and-sprites/image16.png)
+{img alt="image16.png" width="5.50in"}`images/01-blocks-scripts-and-sprites/image16.png`
 :::
 
 :::{grid-item}
-![image17.png](images/01-blocks-scripts-and-sprites/image17.png)
+{img alt="image17.png" width="5.50in"}`images/01-blocks-scripts-and-sprites/image17.png`
 :::
 ::::
 
@@ -195,7 +195,7 @@ will wrap around existing blocks in a script, and only if that C-shaped
 slot is empty before wrapping. (You can fill the other slots by dragging
 blocks into the desired slot.)
 
-![image24.png](images/01-blocks-scripts-and-sprites/image24.png)
+{img alt="image24.png" width="2.31in"}`images/01-blocks-scripts-and-sprites/image24.png`
 
 :::{index} new sprite button
 sprite corral
@@ -218,11 +218,11 @@ scripting area:
 ::::{grid} 2
 
 :::{grid-item}
-![image26.png](images/01-blocks-scripts-and-sprites/image26.png)
+{img alt="image26.png" width="1.55in"}`images/01-blocks-scripts-and-sprites/image26.png`
 :::
 
 :::{grid-item}
-![image27.png](images/01-blocks-scripts-and-sprites/image27.png)
+{img alt="image27.png" width="1.54in"}`images/01-blocks-scripts-and-sprites/image27.png`
 :::
 ::::
 
@@ -235,11 +235,11 @@ scripts of a single sprite also. Try this example:
 ::::{grid} 2
 
 :::{grid-item}
-![image28.png](images/01-blocks-scripts-and-sprites/image28.png)
+{img alt="image28.png" width="1.73in"}`images/01-blocks-scripts-and-sprites/image28.png`
 :::
 
 :::{grid-item}
-![image29.png](images/01-blocks-scripts-and-sprites/image29.png)
+{img alt="image29.png" width="1.73in"}`images/01-blocks-scripts-and-sprites/image29.png`
 :::
 ::::
 
@@ -278,7 +278,7 @@ way is quicker if the file you want is visible on the desktop: Just drag
 the file onto the Snap<em>!</em> window. In any of these cases, the scripting
 area will be replaced by something like this:
 
-![image31.png](images/01-blocks-scripts-and-sprites/image31.png)
+{img alt="image31.png" width="1.77in"}`images/01-blocks-scripts-and-sprites/image31.png`
 
 Just above this part of the window is a set of three tabs: Scripts,
 Costumes, and Sounds. You’ll see that the Costumes
@@ -317,19 +317,19 @@ another sprite to run a script. Here’s a simple example:
 (fig-broadcast-dog)=
 ::::{grid} 4
 :::{grid-item}
-![image41.png](images/01-blocks-scripts-and-sprites/image41.png)
+{img alt="image41.png" width="0.57in"}`images/01-blocks-scripts-and-sprites/image41.png`
 :::
 
 :::{grid-item}
-![image42.png](images/01-blocks-scripts-and-sprites/image42.png)
+{img alt="image42.png" width="2.78in"}`images/01-blocks-scripts-and-sprites/image42.png`
 :::
 
 :::{grid-item}
-![image43.png](images/01-blocks-scripts-and-sprites/image43.png)
+{img alt="image43.png" width="1.24in"}`images/01-blocks-scripts-and-sprites/image43.png`
 :::
 
 :::{grid-item}
-![image44.png](images/01-blocks-scripts-and-sprites/image44.png)
+{img alt="image44.png" width="1.52in"}`images/01-blocks-scripts-and-sprites/image44.png`
 :::
 ::::
 
@@ -412,11 +412,11 @@ extended to its parts. Also, cloning the anchor (see Section @sec-permanent-and-
 will also clone all its parts.
 
 <!-- TODO: Figure w/caption -->
-![image56.png](images/01-blocks-scripts-and-sprites/image56.png)
+{img alt="image56.png" width="1.44in"}`images/01-blocks-scripts-and-sprites/image56.png`
 
-![image48.png](images/01-blocks-scripts-and-sprites/image48.png)
+{img alt="image48.png" width="4.88in"}`images/01-blocks-scripts-and-sprites/image48.png`
 
-![image49.png](images/01-blocks-scripts-and-sprites/image49.png)
+{img alt="image49.png" width="4.88in"}`images/01-blocks-scripts-and-sprites/image49.png`
 
 *Top: turning the part: the green arm. Bottom: turning the anchor, with
 the arm synchronous (left) and dangling (right).*
@@ -504,11 +504,11 @@ special hexagonal input slots like this one:
 The C-shaped `if` block runs its input script if (and only
 if) the expression in its hexagonal input reports true.
 
-![image87.png](images/01-blocks-scripts-and-sprites/image87.png)
+{img alt="image87.png" width="1.59in"}`images/01-blocks-scripts-and-sprites/image87.png`
 
 A really useful block in animations runs its input script *repeatedly* until a predicate
 is satisfied:
-![image89.png](images/01-blocks-scripts-and-sprites/image89.png)
+{img alt="image89.png" width="2.29in"}`images/01-blocks-scripts-and-sprites/image89.png`
 
 If, while working on a project, you want to omit temporarily some commands
 in a script, but you don’t want to forget where they belong, you can say
@@ -750,7 +750,7 @@ containing a lot of data removed from memory before saving the project.
 To do this, right-click or control-click on the orange oval in the
 Variables palette, to see this menu:
 
-![image114.png](images/01-blocks-scripts-and-sprites/image114.png)
+{img alt="image114.png" width="1.29in"}`images/01-blocks-scripts-and-sprites/image114.png`
 
 You already know about the rename options, and "help…" displays a help
 screen about variables in general. Here we’re interested in the check
@@ -801,7 +801,7 @@ The `pause all` block turns bright cyan while paused. Also, during the pause, yo
 a running script and the menu that appears will give you the option to
 show watchers for temporary variables of the script:
 
-![image118.png](images/01-blocks-scripts-and-sprites/image118.png)
+{img alt="image118.png" width="1.88in"}`images/01-blocks-scripts-and-sprites/image118.png`
 
 But what if the block with the error is run many times in a loop, and it
 only errors when a particular condition is true — for example, when the value of some
@@ -928,7 +928,7 @@ sprite’s position before using it, and sometimes you need to know how
 big the text turned out to be, in turtle steps.) If the pen is down, the
 text will be underlined.
 
-{inline alt="image138.png"}`images/01-blocks-scripts-And-sprites/image138`
+{inline alt="image138.png"}`images/01-blocks-scripts-and-sprites/image138`
 Takes a sprite as input. Like stamp except that the costume is stamped onto the selected sprite instead of onto the stage. (Does nothing if the current sprite doesn’t overlap the chosen sprite.)
 
 {inline alt="image139.png"}`images/01-blocks-scripts-and-sprites/image139`
@@ -1049,7 +1049,7 @@ Similarly, these hidden predicates can be found by relabeling the relational pre
 
 ### Metaprogramming (see @sec-ch11)
 
-![image172.png](images/01-blocks-scripts-and-sprites/image172.png)
+{img alt="image172.png" width="0.88in"}`images/01-blocks-scripts-and-sprites/image172.png`
 
 These blocks support *metaprogramming,* which means manipulating blocks
 and scripts as data. This is not the same as manipulating procedures
@@ -1064,7 +1064,7 @@ of block (operators)
 ### First class list blocks (see @sec-ch04):
 
 <!-- TODO: welp. this needs to be remade -->
-![image173.png](images/01-blocks-scripts-and-sprites/image173.png)
+{img alt="image173.png" width="0.85in"}`images/01-blocks-scripts-and-sprites/image173.png`
 
 `Numbers from` will
 count up or down.
@@ -1078,16 +1078,16 @@ vector (x,y).
 :::
 
 **First class procedure blocks (see @sec-ch06):**
- ![image226.png](images/01-blocks-scripts-and-sprites/image226.png)
+ {img alt="image226.png" width="5.99in"}`images/01-blocks-scripts-and-sprites/image226.png`
 
 **First class continuation blocks (see @sec-ch10):**
- ![image227.png](images/01-blocks-scripts-and-sprites/image227.png)
+ {img alt="image227.png" width="5.99in"}`images/01-blocks-scripts-and-sprites/image227.png`
 
 **First class sprite, costume, and sound blocks (see @sec-ch07):**
 
- ![image228.png](images/01-blocks-scripts-and-sprites/image228.png)
+ {img alt="image228.png" width="5.99in"}`images/01-blocks-scripts-and-sprites/image228.png`
 
- ![image229.png](images/01-blocks-scripts-and-sprites/image229.png)
+ {img alt="image229.png" width="5.99in"}`images/01-blocks-scripts-and-sprites/image229.png`
 
 Object is a hyperblock.
 
@@ -1123,7 +1123,7 @@ two-item (x,y) lists
 to block
 :::
 
-![image283.png](images/01-blocks-scripts-and-sprites/image283.png)
+{img alt="image283.png" width="3.13in"}`images/01-blocks-scripts-and-sprites/image283.png`
 
 “Center” means the center of the stage, the
 point at (0,0). “Direction” is in the point in direction sense, the
@@ -1181,7 +1181,7 @@ set background block
 The {inline alt="length of text block"}`./blocks/images/block_reportTextAttribute` name was changed to clarify it is different from {inline alt="length of text block"}`./blocks/images/block_reportListAttribute`
 <!-- ::: -->
 
-![image308.png](images/01-blocks-scripts-and-sprites/image308.png)
+{img alt="image308.png" width="1.42in"}`images/01-blocks-scripts-and-sprites/image308.png`
 
 `+` and `×` are *variadic*: they take two or more inputs. If
 you drop a list on the arrowheads, the block name
@@ -1258,7 +1258,7 @@ is a grayscale value 0-255; a two-number list, grayscale plus opacity
 
 <!-- TODO: Images like this should have index entries defined after this image. -->
 (sec-pen-hue-block-options)=
-![image358.png](images/01-blocks-scripts-and-sprites/image358.png)
+{img alt="image358.png" width="2.41in"}`images/01-blocks-scripts-and-sprites/image358.png`
 
 :::{index} `of` block (sensing)
 `ask and wait` block
@@ -1268,13 +1268,13 @@ is a grayscale value 0-255; a two-number list, grayscale plus opacity
 ### Using Lists with the Ask Block
 These ask features and more in the Menus
 library.
-![image359.png](images/01-blocks-scripts-and-sprites/image359.png)
+{img alt="image359.png" width="0.60in"}`images/01-blocks-scripts-and-sprites/image359.png`
 
 ![image360.png](images/01-blocks-scripts-and-sprites/image360.png)
 
 ![image361.png](images/01-blocks-scripts-and-sprites/image361.png)
 
-![image362.png](images/01-blocks-scripts-and-sprites/image362.png)
+{img alt="image362.png" width="4.55in"}`images/01-blocks-scripts-and-sprites/image362.png`
 
 ::::{grid} 2
 
@@ -1316,7 +1316,7 @@ project, choose the Libraries… option in the
 file ({inline alt="file menu icon"}`images/01-blocks-scripts-and-sprites/image384`) menu.
 
 
-![The import libraries dialog](images/01-blocks-scripts-and-sprites/image385.png)
+{img alt="The import libraries dialog" width="3.27in"}`images/01-blocks-scripts-and-sprites/image385.png`
 
 <!-- TODO: This is out of date. It is somewhat redudant with chapter 12. -->
 The library menu is divided into five broad categories. The first is,
@@ -1484,7 +1484,7 @@ of numbers.
 The **word and sentence library** has these blocks:
 
 <!-- TODO: Index Entries for all these blocks -->
-![image394.png](images/01-blocks-scripts-and-sprites/image394.png)
+{img alt="image394.png" width="1.68in"}`images/01-blocks-scripts-and-sprites/image394.png`
 
 This library has the goal of recreating the Logo approach to handling text:
 A text isn’t best viewed as a string of characters, but rather as a *sentence*, made of *words*,
@@ -1747,11 +1747,11 @@ basic set of ten colors:
 :::{index} set pen to crayon block
 :::
 
-![image440.png](images/01-blocks-scripts-and-sprites/image440.png)
+{img alt="image440.png" width="4.37in"}`images/01-blocks-scripts-and-sprites/image440.png`
 
 Using `change pen crayon by` 5 instead gives ten more colors, for a total of 20:
 
-![image441.png](images/01-blocks-scripts-and-sprites/image441.png)
+{img alt="image441.png" width="4.36in"}`images/01-blocks-scripts-and-sprites/image441.png`
 
 (Why didn’t we use the colors of the 100-crayon Crayola™ box? A few
 reasons, one of which is that some Crayola colors aren’t representable
@@ -1768,13 +1768,13 @@ without the rest of the colors package.
 :::{index} crayon library
 :::
 
-![image442.png](images/01-blocks-scripts-and-sprites/image442.png)
+{img alt="image442.png" width="1.51in"}`images/01-blocks-scripts-and-sprites/image442.png`
 
 The catch errors library has these blocks:
 :::{index} catch errors library
 :::
 
-![image444.png](images/01-blocks-scripts-and-sprites/image444.png)
+{img alt="image444.png" width="3.04in"}`images/01-blocks-scripts-and-sprites/image444.png`
 
 The `safely try` block
  allows you to handle errors that happen when
@@ -1885,7 +1885,7 @@ The bignums, rationals, complex \#s library has these blocks:
 :::{index} library; infinite precision integers
 :::
 
-![image454.png](images/01-blocks-scripts-and-sprites/image454.png)
+{img alt="image454.png" width="1.88in"}`images/01-blocks-scripts-and-sprites/image454.png`
 
 The `USE BIGNUMS` block takes a Boolean input, to turn
 the infinite precision feature on or off. When on, all of the arithmetic
@@ -2023,7 +2023,7 @@ The web services library has these blocks:
 :::{index} web services library
 :::
 
-![image471.png](images/01-blocks-scripts-and-sprites/image471.png)
+{img alt="image471.png" width="3.41in"}`images/01-blocks-scripts-and-sprites/image471.png`
 
 The first block is a generalization of the primitive
 {index}`\`url\` block<`url` block>` , allowing more control over the various
@@ -2040,7 +2040,7 @@ single: `key\:value\:` block
 
 The {index}`database library` contains these blocks:
 
-![image472.png](images/01-blocks-scripts-and-sprites/image472.png)
+{img alt="image472.png" width="2.26in"}`images/01-blocks-scripts-and-sprites/image472.png`
 
 It is used to keep data that persist from one Snap<em>!</em> session
 to the next, if you use the same browser and the same login.
@@ -2070,9 +2070,9 @@ allows things like satellite pictures.
 
 The {index}`APL primitives library` contains these blocks:
 
-![image474.png](images/01-blocks-scripts-and-sprites/image474.png)
+{img alt="image474.png" width="5.73in"}`images/01-blocks-scripts-and-sprites/image474.png`
 
-![image475.png](images/01-blocks-scripts-and-sprites/image475.png)
+{img alt="image475.png" width="6.45in"}`images/01-blocks-scripts-and-sprites/image475.png`
 
 For more information about APL, see @sec-apl-features).
 
@@ -2080,7 +2080,7 @@ The **list comprehension library** has one block, `zip`:
 :::{index} list comprehension library
 :::
 
-![image476.png](images/01-blocks-scripts-and-sprites/image476.png)
+{img alt="image476.png" width="1.20in"}`images/01-blocks-scripts-and-sprites/image476.png`
 
 Its first input is a function of two inputs. The two Any-type inputs are
 deep lists (lists of lists of…) interpreted as trees, and the function
@@ -2105,7 +2105,7 @@ don’t already know what these mean, find a tutorial online.
 :::{index} bitwise library
 :::
 
-![image477.png](images/01-blocks-scripts-and-sprites/image477.png)
+{img alt="image477.png" width="0.89in"}`images/01-blocks-scripts-and-sprites/image477.png`
 
 The **MQTT library** supports the Message Queuing
 Telemetry Transport protocol, for connecting with IOT devices. See
@@ -2113,7 +2113,7 @@ Telemetry Transport protocol, for connecting with IOT devices. See
 :::{index} MQTT library, library; MQTTqq
 :::
 
-![image487.png](images/01-blocks-scripts-and-sprites/image487.png)
+{img alt="image487.png" width="3.55in"}`images/01-blocks-scripts-and-sprites/image487.png`
 
 The **Signada library** allows you to control a
 microBit or similar device that works with the Signada MicroBlocks
@@ -2121,7 +2121,7 @@ project.
 :::{index} Signada library
 :::
 
-![image488.png](images/01-blocks-scripts-and-sprites/image488.png)
+{img alt="image488.png" width="1.23in"}`images/01-blocks-scripts-and-sprites/image488.png`
 
 The **menus library** provides the ability to
 display hierarchical menus on the stage, using the ask block’s ability
@@ -2137,7 +2137,7 @@ TuneScope library
 :::
 
 ### Extensions Libraries
-![image486.png](images/01-blocks-scripts-and-sprites/image486.png)
+{img alt="image486.png" width="3.39in"}`images/01-blocks-scripts-and-sprites/image486.png`
 
 The **SciSnap<em>!</em> library** and the
 **TuneScope library** are too big to discuss here and are
