@@ -14,7 +14,7 @@ provides several tools for manipulating color. Although its main purpose
 is controlling a sprite’s pen color, it also establishes colors as a
 first class data type:
 
-![image401.png](images/a-snap-color-library/image401.png)
+{img alt="image401.png" width="7.28in"}`images/a-snap-color-library/image401.png`
 
 For people who just want colors in their projects without having to be color experts, we
 provide two simple mechanisms: a *color number*
@@ -22,12 +22,12 @@ scale with a broad range of continuous color variation and a set of 100
 *crayons* organized by color family (ten reds, ten oranges, etc.) The
 crayons include the block colors:
 
-![image1135.png](images/a-snap-color-library/image1135.png)
+{img alt="image1135.png" width="3.13in"}`images/a-snap-color-library/image1135.png`
 
 
 For experts, we provide color selection by RGB, HSL, HSV, X11/W3C names, and variants on those scales.
 
-![image1136.png](images/a-snap-color-library/image1136.png) <!--  style="width:7.16667in;height:1.1in" -->
+{img alt="image1136.png" width="7.17in"}`images/a-snap-color-library/image1136.png`
 
 :::{index} RGB
 CMY
@@ -127,12 +127,12 @@ know the crayon name, just {inline alt="image1147.png"}`images/a-snap-color-libr
 
 The crayon numbers are chosen so that skipping by 10 gives a sensible box of ten crayons:
 
-![image1154.png](images/a-snap-color-library/image1154.png) <!--  style="width:5.79306in;height:0.3in" / -->
+{img alt="image1154.png" width="5.79in"}`images/a-snap-color-library/image1154.png`
 
 Alternatively, skipping by 5 gives a still-sensible set of twenty
 crayons:
 
-![image1155.png](images/a-snap-color-library/image1155.png) <!--  style="width:5.8in;height:0.3in" / -->
+{img alt="image1155.png" width="5.80in"}`images/a-snap-color-library/image1155.png`
 
 The set of *color numbers* is arranged so that each color number is
 visually near each of its neighbors. Bright and dark colors alternate
@@ -140,7 +140,7 @@ for each family. {index}`Color numbers` range from 0 to 99,
 like crayon numbers, but you can use fractional numbers to get as tiny a
 step as you like:
 
-![image1141.png](images/a-snap-color-library/image1141.png) <!--  style="width:5.79306in;height:0.3in" / -->
+{img alt="image1141.png" width="6.00in"}`images/a-snap-color-library/image1141.png`
 
 (“As tiny as you like” isn’t *quite* true because in the end, your color
 has to be rounded to integer RGB values for display.)
@@ -163,7 +163,7 @@ data type.
 There are three library blocks specifically about controlling the pen.
 They have the same names as three of the primitive Pen blocks:
 
-![image1156.png](images/a-snap-color-library/image1156.png) <!--  style="width:5.79306in;height:0.3in" / -->
+{img alt="image1156.png" width="6.25in"}`images/a-snap-color-library/image1156.png`
 
 The first (Pen block-colored) input slot is used to select which color
 scale you want to use. (These blocks also allow reading or setting two
@@ -187,7 +187,7 @@ The set pen block changes the pen color to the
 value(s) you specify. The meaning of the white input slots depends on
 which attribute of the pen you’re setting:
 
-![image1158.png](images/a-snap-color-library/image1158.png) <!--  style="width:5.79306in;height:0.3in" / -->
+{img alt="image1158.png" width="6.07in"}`images/a-snap-color-library/image1158.png`
 
 In the last example, the number 37 sets the *transparency,* on the scale
 0=opaque, 100=invisible. (All color attributes are on a 0–100 scale
@@ -198,7 +198,7 @@ scales.
 The library also includes two constructors and a selector for colors as
 a data type:
 
-![image1159.png](images/a-snap-color-library/image1159.png) <!--  style="width:5.79306in;height:0.3in" / -->
+{img alt="image1159.png" width="6.07in"}`images/a-snap-color-library/image1159.png`
 
 The latter two
 are inverses of each other, translating between colors and their
@@ -214,7 +214,7 @@ small subset of the millions of colors your computer can generate.) If
 you have a color and want another color that’s the same except for one
 number, as in the Red example, you can use this block:
 
-![image402.png](images/a-snap-color-library/image402.png) <!--  style="width:1.80556in;height:0.19444in" -->
+{img alt="image402.png" width="7.28in"}`images/a-snap-color-library/image402.png`
 
 Finally, the library includes the {index}`mix block` and a
 helper:
@@ -235,7 +235,7 @@ of “hue,” which more or less means where a color would
 appear in a rainbow (magenta, near the
 right, is [a long story](https://en.wikipedia.org/wiki/Magenta)):
 
-![image1189.png](images/a-snap-color-library/image1189.png) <!--  style="width:5.80667in;height:0.30667in" / -->
+{img alt="image1189.png" width="5.81in"}`images/a-snap-color-library/image1189.png`
 
 These are called “spectral ” colors, after the
 *spectrum* of rainbow colors. But these colors aren’t equally
@@ -262,9 +262,9 @@ layout. But for amateurs using a simplified, one-dimensional color
 model, there’s no reason not to use a more programmer-friendly hue
 scale:
 
-![image1190.png](images/a-snap-color-library/image1190.png) <!--  style="width:5.99444in;height:0.29931in" / -->
+{img alt="image1190.png" width="5.99in"}`images/a-snap-color-library/image1190.png`
 
-![image1191.png](images/a-snap-color-library/image1191.png) <!--  style="width:1.45972in;height:1.35833in" / -->
+{img alt="image1191.png" width="1.46in"}`images/a-snap-color-library/image1191.png`
 
 In this scale, each of the
 seven rainbow colors and brown get an equal share. (Red’s looks too
@@ -319,13 +319,17 @@ every-tenth-crayon selections don’t include it, so that all of the
 crayons in those smaller boxes are visible against a white
 stage background.
 
-::: {.evenly-spaced-images layout-ncol="2"}
-![(attribution: Wikipedia user Andys. CC BY-SA.)](images/a-snap-color-library/image1198.png "(attribution: Wikipedia user Andys. CC BY-SA.)"){#fig-rainbow}
-
+::::{grid} 2
+:::{grid-item}
+(fig-rainbow)=
+{img alt="(attribution: Wikipedia user Andys. CC BY-SA.)" width="1.85in" title="(attribution: Wikipedia user Andys. CC BY-SA.)"}`images/a-snap-color-library/image1198.png`
+:::
+:::{grid-item}
 Among purples, the official spectral violet
 (crayon 90) is the end of the spectrum. Magenta, brighter than violet, isn’t a spectral color at all.
 (In the picture at the left, the top part is the spectrum of white light spread out through a prism; the middle part is a photograph of a rainbow, and the bottom part is a digital simulation of a rainbow.) Magenta is a mixture of red and blue.
 :::
+::::
 
 The light gray at color number 10 is slightly different from crayon 10
 just because of roundoff in computing crayon values. Color number 90 is
@@ -374,7 +378,7 @@ L\*a\*b\*
 
 ### Perceptual Spaces: HSV and HSL
 
-![image1199.png](images/a-snap-color-library/image1199.png) <!--  style="width:0.73611in;height:0.72222in" -->
+{img alt="image1199.png" width="0.74in"}`images/a-snap-color-library/image1199.png`
 
 RGB is the right way to
 think about colors if you’re building or programming a display monitor;
@@ -389,7 +393,7 @@ blue in the top right corner. Although no other point in the square is
 pure blue, you can tell at a glance that no other spectral color is
 mixed with the blue.
 
-![image1200.png](images/a-snap-color-library/image1200.png) <!--  style="width:2.69167in;height:1.19028in" / -->
+{img alt="image1200.png" width="2.69in"}`images/a-snap-color-library/image1200.png`
 attribution: Wikipedia user SharkD, CC BY-SA 3.0
 
 Aside from hue, the other two dimensions of a color space have to represent how much white and/or
@@ -417,7 +421,7 @@ But if you’re looking at colors on a computer display, HSV isn’t really a go
 perception. Intuitively, black and white should be treated
 symmetrically. This is the HSL (hue-saturation-lightness) color space.
 
-![image1203.png](images/a-snap-color-library/image1203.png) <!--  style="width:0.76389in;height:0.76389in" -->
+{img alt="image1203.png" width="0.76in"}`images/a-snap-color-library/image1203.png`
 
 *Saturation,* in HSL, is a measure of the *grayness* or *dullness* of a color (how close it comes to being on a black-and-white scale) and *lightness* measures *spectralness* with
 pure white at one end, pure black at the other end, and spectral color
@@ -453,7 +457,7 @@ standardization committee. I learned all this from [this
 tutorial](http://www.huevaluechroma.com/011.php), which you might find
 more coherent than jumping around Wikipedia if you’re interested.
 
-![image1204.png](images/a-snap-color-library/image1204.png) <!--  style="width:1.64375in;height:0.84167in" / -->
+{img alt="image1204.png" width="1.64in"}`images/a-snap-color-library/image1204.png`
 
 Although traditional Scratch
 and Snap<em>!</em> use HSV in programs, they use HSL in the color picker.
@@ -515,7 +519,7 @@ then *all three* values must be reduced by half, so the result is (255,
 128, 0), which is orange. (Half of 255 is 127.5, but each RGB value must
 be an integer.)
 
-![image1207.png](images/a-snap-color-library/image1207.png) <!--  style="width:0.20278in;height:0.20278in" / -->
+{img alt="image1207.png" width="4.35in"}`images/a-snap-color-library/image1207.png`
 
 A different kind of color mixing based on light is done when different
 colored transparent plastic sheets are held in front of a white light,
@@ -528,7 +532,7 @@ But there isn’t any green light for the yellow filter to pass; it was
 filtered out by the red filter. Each filter can only remove light, not
 add light, so this is called *subtractive* mixing:
 
-![image1208.png](images/a-snap-color-library/image1208.png) <!--  style="width:0.20278in;height:0.20278in" / -->
+{img alt="image1208.png" width="4.35in"}`images/a-snap-color-library/image1208.png`
 
 Perhaps confusingly, the numerical computation of subtractive mixing
 is done by *multiplying* the RGB values,
@@ -580,13 +584,13 @@ accept any number of colors, and will mix them in equal proportion. If
 the color at weight block to make a
 “weighted color”:
 
-![image1232.png](images/a-snap-color-library/image1232.png) <!--  style="width:5.16667in;height:0.43056in" -->
+{img alt="image1232.png" width="5.17in"}`images/a-snap-color-library/image1232.png`
 
 This mixes four
 parts red paint to one part green paint. All colors in a mixture can be
 weighted:
 
-![image1231.png](images/a-snap-color-library/image1231.png) <!--  style="width:4.34028in;height:0.65278in" -->
+{img alt="image1231.png" width="4.34in"}`images/a-snap-color-library/image1231.png`
 
 (Thanks to [{index}`Scott Burns<single: Burns, Scott>`
 ](http://scottburns.us/subtractive-color-mixture/) for his help in
@@ -609,7 +613,7 @@ the latter two. We recommend “{index}`fair HSL` ” for zeroing in on a desire
 <!-- ![image1241.png](images/a-snap-color-library/image1241.png) -->
 
 (sec-spirals)=
-![image1242.png](images/a-snap-color-library/image1242.png)
+{img alt="image1242.png" width="2.21in"}`images/a-snap-color-library/image1242.png`
 
 :::{index} fair hue
 fair value
@@ -618,7 +622,7 @@ fair hue table
 
 ### Subappendix: Geeky details on fair hue
 
-![image1243.png](images/a-snap-color-library/image1243.png)
+{img alt="image1243.png" width="2.21in"}`images/a-snap-color-library/image1243.png`
 
 The left graph shows that, unsurprisingly, all of the brown fair hue
 s make essentially no progress in real hue, with the
@@ -666,15 +670,15 @@ so on.
 
 For the extra-geeky, here are the exact table lookup points (fair hue, \[0,100\]):
 
-![image1258.png](images/a-snap-color-library/image1258.png) <!--  style="width:5.9875in;height:0.37847in" / -->
+{img alt="image1258.png" width="5.99in"}`images/a-snap-color-library/image1258.png`
 
 and here are the RGB settings at those points:
 
-![image1259.png](images/a-snap-color-library/image1259.png) <!--  style="width:5.98403in;height:1.37361in" / -->
+{img alt="image1259.png" width="5.98in"}`images/a-snap-color-library/image1259.png`
 
 ### Subappendix: Geeky details on color numbers
 
-![image1260.png](images/a-snap-color-library/image1260.png) <!--  style="width:2.08333in;height:2.29167in" -->
+{img alt="image1260.png" width="2.08in"}`images/a-snap-color-library/image1260.png`
 
 Here is a picture of integer color numbers, but remember that color numbers are continuous.
 (As usual, “continuous” values are ultimately converted to integer RGB
@@ -715,7 +719,7 @@ In the color {index}`number chart`, all the dark color
 numbers look a lot like black, but they’re quite different. Here are the
 darkest colors in each color number family.
 
-![image1261.png](images/a-snap-color-library/image1261.png) <!--  style="width:1.38889in;height:1.38889in" -->
+{img alt="image1261.png" width="1.39in"}`images/a-snap-color-library/image1261.png`
 
 Darkest yellow doesn’t
 look entirely yellow. You might see it as greenish or brownish. As it
@@ -753,7 +757,7 @@ color number 87.5 is the darkest one that’s still unambiguously purple.
 Here are the reference points for color numbers that are multiples of
 five, except for item 4, which is used for color 14, not color 15:
 
-![image1262.png](images/a-snap-color-library/image1262.png) <!--  style="width:4.58333in;height:1.27778in" / -->
+{img alt="image1262.png" width="4.58in"}`images/a-snap-color-library/image1262.png`
 
 The very pale three-input list blocks are for color numbers that are odd
 multiples of five, generally the “darkest” members of each color family.

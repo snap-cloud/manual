@@ -95,7 +95,7 @@ block that accepts any input type, such as set’s (<code>set ( ) to ( )</code>)
 <code>say ( )</code> an object, the resulting speech balloon will contain a smaller image
 of the object’s costume or (for the stage) background.
 
-![image742.png](images/07-object-oriented-programming-with-sprites/image742.png) <!--  style="width:3.54514in;height:0.82639in" / -->
+{img alt="image742.png" width="2.62in"}`images/07-object-oriented-programming-with-sprites/image742.png`
 
 :::{index} temporary clone
 clone temporary
@@ -170,9 +170,9 @@ Editor.)
 The way to send a message to a sprite (or the stage) is with the <code>tell ( ) to ( )</code>
 block (for command messages) or the <code>say ( )</code> block (for reporter messages).
 
-![image749.png](images/07-object-oriented-programming-with-sprites/image749.png) <!--  style="width:3.54514in;height:0.82639in" / -->
+{img alt="image749.png" width="1.51in"}`images/07-object-oriented-programming-with-sprites/image749.png`
 
-![image750.png](images/07-object-oriented-programming-with-sprites/image750.png) <!--  style="width:3.54514in;height:0.82639in" / -->
+{img alt="image750.png" width="5.70in"}`images/07-object-oriented-programming-with-sprites/image750.png`
 
 A small point to note in the examples above: all dropdown menus include
 an empty entry at the top, which can be selected for use in higher order
@@ -181,7 +181,7 @@ procedures like the <code>for each</code> and <code>map</code> examples. Each of
 By the way, if you want a list of *all* the sprites, including this
 sprite, you can use either of these:
 
-![image751.png](images/07-object-oriented-programming-with-sprites/image751.png) <!--  style="width:3.54514in;height:0.82639in" / -->
+{img alt="image751.png" width="5.70in"}`images/07-object-oriented-programming-with-sprites/image751.png`
 
 <code>Tell ( )</code> and <code>ask ( ) and wait</code> wait until the
 other sprite has carried out its method before this sprite’s script
@@ -191,7 +191,7 @@ and wait</code>. Sometimes the other sprite’s method may take a long time, or
 may even be a forever loop, so you want the originating script to
 continue without waiting. For this purpose we have the <code>launch ( )</code> block:
 
-![image762.png](images/07-object-oriented-programming-with-sprites/image762.png) <!--  style="width:3.54514in;height:0.82639in" / -->
+{img alt="image762.png" width="3.55in"}`images/07-object-oriented-programming-with-sprites/image762.png`
 
 <code>Launch ( )</code> is analogous to <code>broadcast</code> without the “wait.”
 
@@ -214,7 +214,7 @@ Suppose you have a {span .mono}[Dog] sprite
 with two clones CockerSpaniel and PitBull. In the {span .mono}[Dog] sprite you define
 this method ("`For this sprite only`" block):
 
-![image763.png](images/07-object-oriented-programming-with-sprites/image763.png) <!--  style="width:1.67361in;height:1.40208in" / -->
+{img alt="image763.png" width="1.67in"}`images/07-object-oriented-programming-with-sprites/image763.png`
 
 Note the *loca*tion ({span .mono}[map-pin]) symbol before the
 block’s name. The symbol is not part of the block title; it’s a visual
@@ -223,11 +223,11 @@ similarly marked.
 
 But you don’t define <code>greet ( ) as friend</code> or <code>greet ( ) as enemy</code> in Dog. Each kind of dog has a different behavior. Here’s what a CockerSpaniel does:
 
-![image764.png](images/07-object-oriented-programming-with-sprites/image764.png) <!--  style="width:1.67361in;height:1.40208in" / -->
+{img alt="image764.png" width="4.07in"}`images/07-object-oriented-programming-with-sprites/image764.png`
 
 And here’s what a PitBull does:
 
-![image765.png](images/07-object-oriented-programming-with-sprites/image765.png) <!--  style="width:1.67361in;height:1.40208in" / -->
+{img alt="image765.png" width="4.05in"}`images/07-object-oriented-programming-with-sprites/image765.png`
 
 <code>Greet ( )</code> is defined in the {span .mono}[Dog] sprite.
 If Fido is a particular cocker
@@ -281,7 +281,7 @@ attributes: The {index}`my block`’s menu (in {span .mono}`Sensing`); see
 a sprite. It serves as a general getter for those attributes, e.g., <code>my
 (anchor)</code> to find the sprite, if any, to which this sprite is attached
 in a nesting arrangement (see
-@sec-nesting-sprites-anchors-and-parts). Similarly, the same <code>set ( ) to ( )</code> block
+@nesting-sprites-anchors-and-parts). Similarly, the same <code>set ( ) to ( )</code> block
 used to set variable values allows setting some sprite attributes.
 
 ![image766.png](images/07-object-oriented-programming-with-sprites/image766.png) <!--  style="width:1.67361in;height:1.40208in" / -->
@@ -381,7 +381,7 @@ in the parent (and therefore in itself and all its siblings)? Remember
 that in this system any object can <code>tell</code> any other object to do
 something:
 
-![image779.png](images/07-object-oriented-programming-with-sprites/image779.png) <!--  style="width:5.07292in;height:0.58333in" / -->
+{img alt="image779.png" width="5.07in"}`images/07-object-oriented-programming-with-sprites/image779.png`
 
 When a sprite gets a message
 for which it doesn’t have a corresponding block, the message is
@@ -391,7 +391,7 @@ that implements a delegated message refers to <code>my (self)</code>, it means t
 child to which the message was originally sent, not the parent to which
 the message was delegated.
 
-![image780.png](images/07-object-oriented-programming-with-sprites/image780.png) <!--  style="width:0.78958in;height:3.46806in" -->
+{img alt="image780.png" width="0.79in"}`images/07-object-oriented-programming-with-sprites/image780.png`
 
 :::{index} attributes, list of
 self (in my block)
@@ -420,7 +420,7 @@ center y (in my block)
 
 At the right is a picture of the dropdown menu of attributes in the <code>my ( )</code> block.
 
-![image770.png](images/07-object-oriented-programming-with-sprites/image770.png) <!--  style="width:5.07292in;height:0.58333in" / -->
+{img alt="image770.png" width="2.24in"}`images/07-object-oriented-programming-with-sprites/image770.png`
 
 Several of these are not real attributes, but things related to
 attributes:
@@ -551,7 +551,7 @@ reflects the way bitmaps are stored in the computer’s hardware and
 operating system, but also makes it easy to produce transformations of a
 costume with <code>map</code>:
 
-![image784.png](images/07-object-oriented-programming-with-sprites/image784.png) <!--  style="width:1.63194in;height:0.1875in" -->
+{img alt="image784.png" width="6.10in"}`images/07-object-oriented-programming-with-sprites/image784.png`
 
 In this simplest possible transformation, the red value of all the
 pixels have been changed to a constant 150. Colors that were red in the
@@ -576,22 +576,22 @@ there’s no <var>name</var> input; costumes computed in this way are all named
 <var>costume</var>. Note also that the use of switch to costume does *not* add the
 computed costume to the sprite’s wardrobe; to do that, say
 
-![image790.png](images/07-object-oriented-programming-with-sprites/image790.png) <!--  style="width:2.25694in;height:0.28472in" -->
+{img alt="image790.png" width="2.26in"}`images/07-object-oriented-programming-with-sprites/image790.png`
 
 Here’s a more interesting example of color manipulation:
 
-![image791.png](images/07-object-oriented-programming-with-sprites/image791.png) <!--  style="width:2.25694in;height:0.28472in" -->
+{img alt="image791.png" width="7.51in"}`images/07-object-oriented-programming-with-sprites/image791.png`
 
 Each
 color value is constrained to be 0, 80, 160, or 240. This gives the
 picture a more cartoonish look. Alternatively, you can do the
 computation taking advantage of hyperblocks:
 
-![image797.png](images/07-object-oriented-programming-with-sprites/image797.png) <!--  style="width:2.25694in;height:0.28472in" -->
+{img alt="image797.png" width="4.56in"}`images/07-object-oriented-programming-with-sprites/image797.png`
 
 Here’s one way to exchange red and green values:
 
-![image798.png](images/07-object-oriented-programming-with-sprites/image798.png) <!--  style="width:2.25694in;height:0.28472in" -->
+{img alt="image798.png" width="7.50in"}`images/07-object-oriented-programming-with-sprites/image798.png`
 
 It’s the {inline alt="image804.png"}`images/07-object-oriented-programming-with-sprites/image804.png` <!--  style="width:0.95833in;height:0.18056in" --> list that
 determines the rearrangement of colors: green➔red, red➔green, and the
@@ -608,7 +608,7 @@ expression such as {inline alt="image809.png"}`images/07-object-oriented-program
 original width and height, as advertised, so you can make fun house
 mirror versions of costumes:
 
-![image805.png](images/07-object-oriented-programming-with-sprites/image805.png) <!--  style="width:0.95833in;height:0.18056in" -->
+{img alt="image805.png" width="5.57in"}`images/07-object-oriented-programming-with-sprites/image805.png`
 
 The resulting costumes can be used with <code>switch to costume ( )</code> and so on.
 
@@ -633,15 +633,15 @@ trims it to fit on the selected sprite. (<code>Video snap on</code> stage means 
 use the entire stage-sized rectangle.) For example, here’s a camera
 snapshot trimmed to fit Alonzo:
 
-![image815.png](images/07-object-oriented-programming-with-sprites/image815.png) <!--  style="width:1.20417in;height:1.6125in" / -->
+{img alt="image815.png" width="1.20in"}`images/07-object-oriented-programming-with-sprites/image815.png`
 
 The “Video Capture” project in the Examples collection repeatedly takes such
 trimmed snapshots and has the Alonzo sprite use the current snapshot as
 its costume, so it looks like this:
 
-![image816.png](images/07-object-oriented-programming-with-sprites/image816.png) <!--  style="width:2.67014in;height:1.29861in" -->
+{img alt="image816.png" width="2.67in"}`images/07-object-oriented-programming-with-sprites/image816.png`
 
-![image818.png](images/07-object-oriented-programming-with-sprites/image818.png) <!--  style="width:3.33333in;height:2.5in" -->
+{img alt="image818.png" width="3.33in"}`images/07-object-oriented-programming-with-sprites/image818.png`
 
 (The picture above was
 actually taken with transparency set to 50, to make the background more
@@ -650,7 +650,7 @@ where the snapshot was taken, its costume exactly fits in with the rest
 of the full-stage video. If you were to add a <code>move (100) steps</code> block after
 the <code>switch to costume ( )</code>, you’d see something like this:
 
-![image817.png](images/07-object-oriented-programming-with-sprites/image817.png) <!--  style="width:2.66667in;height:2in" -->
+{img alt="image817.png" width="2.67in"}`images/07-object-oriented-programming-with-sprites/image817.png`
 
 This time, the sprite’s costume was captured at one position, and then
 the sprite is shown at a different position. (You probably wouldn’t want
@@ -658,7 +658,7 @@ to do this, but perhaps it’s helpful for explanatory purposes.)
 
 What you *would* want to do is push the sprite around the stage:
 
-![image819.png](images/07-object-oriented-programming-with-sprites/image819.png) <!--  style="width:2.66667in;height:2in" -->
+{img alt="image819.png" width="7.38in"}`images/07-object-oriented-programming-with-sprites/image819.png`
 
 <!-- Remove this? -->
 (Really these should be Jens’s picture; it’s his project. But he’s vacationing. ☺)
@@ -690,7 +690,7 @@ brief burst of sound from your microphone. (How
 brief? On my computer, 0.010667 seconds, but you’ll see shortly how to
 ﬁnd out or control the sample size on your computer.)
 
-![image825.png](images/07-object-oriented-programming-with-sprites/image825.png) <!--  style="width:3.09028in;height:1.92361in" -->
+{img alt="image825.png" width="3.09in"}`images/07-object-oriented-programming-with-sprites/image825.png`
 
 Just as the *pixel* is
 the smallest piece of a picture, the *sample* is the smallest piece of a
@@ -701,7 +701,7 @@ on the microphone—how hard the air is pushing—at that instant. (You can
 skip the next page or so if you know about Fourier analysis.) Here’s a
 picture of 400 samples:
 
-![image827.png](images/07-object-oriented-programming-with-sprites/image827.png) <!--  style="width:5.99931in;height:2.62014in" -->
+{img alt="image827.png" width="6.00in"}`images/07-object-oriented-programming-with-sprites/image827.png`
 
 In this graph, the *x* axis represents the time at which each sample was
 measured; the *y* axis measures the value of the sample at that time.
@@ -712,7 +712,7 @@ Every periodic function (more or less, any sample that sounds like music
 rather than sounding like static) is composed of a sum of sine wave
 s of different frequencies.
 
-![image829.png](images/07-object-oriented-programming-with-sprites/image829.png) <!--  style="width:2.78472in;height:1.04861in" -->
+{img alt="image829.png" width="2.78in"}`images/07-object-oriented-programming-with-sprites/image829.png`
 
 Look back at the graph of our sampled sound. There is a green dot every
 seven samples. There’s nothing magic about the number seven; I tried
@@ -747,7 +747,7 @@ shrill-sounding note. But remember that a complex waveform is the sum of
 multiple sine waves at different frequency. Here’s a different
 up-and-down regularity:
 
-![image828.png](images/07-object-oriented-programming-with-sprites/image828.png) <!--  style="width:2.79514in;height:1.22222in" -->
+{img alt="image828.png" width="2.80in"}`images/07-object-oriented-programming-with-sprites/image828.png`
 
 It’s not obvious, but in
 the left part of the graph, the signal is more above the *x* axis than
@@ -766,7 +766,7 @@ but is best known for working out the nature of periodic functions as a
 sum of sine waves.) Luckily we don’t have to do the math; the <code>microphone ( )</code>
 block will do it for us, if we ask for <code>microphone (spectrum)</code>:
 
-![image830.png](images/07-object-oriented-programming-with-sprites/image830.png) <!--  style="width:2.79514in;height:1.22222in" -->
+{img alt="image830.png" width="7.49in"}`images/07-object-oriented-programming-with-sprites/image830.png`
 
 These are frequency spectra from (samples of) three different songs. The
 most obvious thing about these graphs is that their overall slope is

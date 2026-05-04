@@ -214,7 +214,7 @@ roll block
 
 ### Scalar functions
 
-![image1265.png](images/b-apl-features/image1265.png) <!--  style="width:5.73333in;height:1.10667in" / -->
+{img alt="image1265.png" width="5.73in"}`images/b-apl-features/image1265.png`
 
 These are the
 {index}`scalar functions` in the APL library. Most of
@@ -265,7 +265,7 @@ columns of the input. And so on for higher dimensions. If the input
 isn’t a list at all, then it has zero dimensions, and shape of reports
 an empty vector. Equivalent to the dimensions of primitive, as of 6.6.
 
-![image1267.png](images/b-apl-features/image1267.png) <!--  style="width:4.275in;height:1.1in" -->
+{img alt="image1267.png" width="4.28in"}`images/b-apl-features/image1267.png`
 
 ![image1269.png](images/b-apl-features/image1269.png) <!--  style="width:1.04167in;height:0.18333in" --> Rank of
 isn’t an actual APL primitive, but the composition ⍴⍴
@@ -275,7 +275,7 @@ omit. (It’s very easy to type the same character twice on the APL
 keyboard, but less easy to drag blocks together.) Equivalent to the rank
 of primitive, as of 6.6.
 
-![image1270.png](images/b-apl-features/image1270.png) <!--  style="width:2.03333in;height:0.18333in" -->
+{img alt="image1270.png" width="2.03in"}`images/b-apl-features/image1270.png`
 
 Reshape
 takes a shape vector (such as shape might report)
@@ -286,7 +286,7 @@ second row, etc.). (The primitive reshape takes the inputs in the other
 order.) It then reports an array with the shape specified by the first
 input containing the items of the second:
 
-![image1271.png](images/b-apl-features/image1271.png) <!--  style="width:7.325in;height:0.83333in" -->
+{img alt="image1271.png" width="7.33in"}`images/b-apl-features/image1271.png`
 
 If the right
 input has more atomic elements than are required by the left-input shape
@@ -297,9 +297,9 @@ specific case of an atomic right input, which produces an array of any
 desired shape all of whose atomic elements are equal. But other cases
 are sometimes useful too:
 
-![image1272.png](images/b-apl-features/image1272.png) <!--  style="width:6.575in;height:1.04167in" -->
+{img alt="image1272.png" width="6.58in"}`images/b-apl-features/image1272.png`
 
-![image1273.png](images/b-apl-features/image1273.png) <!--  style="width:6.575in;height:1.04167in" -->
+{img alt="image1273.png" width="5.51in"}`images/b-apl-features/image1273.png`
 
 ![image1275.png](images/b-apl-features/image1275.png) <!--  style="width:1.43333in;height:0.18333in" --> Flatten takes an arbitrary structure as input and reports a vector of its
 atomic elements in row-major order. Lispians call this flattening the
@@ -311,7 +311,7 @@ to apply this to a scalar in order to turn it into a one-element vector,
 but we can’t use it that way because you can’t type a scalar value into
 the List-type input slot. Equivalent to the primitive flatten of block.
 
-![image1276.png](images/b-apl-features/image1276.png) <!--  style="width:1.43333in;height:0.18333in" -->
+{img alt="image1276.png" width="3.36in"}`images/b-apl-features/image1276.png`
 
 Catenate
 is like our primitive append, with two
@@ -319,13 +319,13 @@ differences: First, if either input is a scalar, it is treated like a
 one-item vector. Second, if the two inputs are of different rank, the
 catenate function is recursively mapped over the higher-rank input:
 
-![image1280.png](images/b-apl-features/image1280.png) <!--  style="width:7.20417in;height:0.58333in" -->
+{img alt="image1280.png" width="7.20in"}`images/b-apl-features/image1280.png`
 
 Catenate vertically
 is similar, but it adds new rows
 instead of adding new columns.
 
-![image1281.png](images/b-apl-features/image1281.png) <!--  style="width:0.53333in;height:0.25in" -->
+{img alt="image1281.png" width="0.53in"}`images/b-apl-features/image1281.png`
 
 Integers
 (I think that’s what it stands for, although
@@ -336,7 +336,7 @@ range. The difference between this block and the primitive numbers from
 block is in its treatment of lists as inputs. Numbers from is a
 hyperblock, applying itself to each item of its input list:
 
-![image1282.png](images/b-apl-features/image1282.png) <!--  style="width:6.34167in;height:1.04167in" -->
+{img alt="image1282.png" width="6.34in"}`images/b-apl-features/image1282.png`
 
  Iota has a special meaning for list inputs: The input must be a shape
 vector; the result is an array with that shape in which each item is a
@@ -345,7 +345,7 @@ list of the indices of the cell along each dimension. A picture is worth
 with more than two dimensions, so here we reduce each cell’s index list
 to a string:
 
-![image1283.png](images/b-apl-features/image1283.png) <!--  style="width:6.025in;height:0.83333in" -->
+{img alt="image1283.png" width="6.03in"}`images/b-apl-features/image1283.png`
 
 ![image1284.png](images/b-apl-features/image1284.png) <!--  style="width:1.475in;height:0.25in" -->  Dyadic iota is like
 the index of primitive except for its
@@ -357,7 +357,7 @@ locations of each item. If the first input is a multi-dimensional array,
 then the location of an item is a vector with the indices along each
 row.
 
-![image1285.png](images/b-apl-features/image1285.png) <!--  style="width:5.95in;height:1.1in" -->
+{img alt="image1285.png" width="5.95in"}`images/b-apl-features/image1285.png`
 
 In this example, the 4 is in the second row, second column. (This is
 actually an extension of APL iota, which is more like a hyperized index
@@ -368,7 +368,7 @@ equal to the difference between the two ranks. If the rank of the second
 input is one less than the rank of the first, the reported value is a
 scalar, the index of the entire second input in the first.
 
-![image1286.png](images/b-apl-features/image1286.png) <!--  style="width:5.84167in;height:0.35in" -->
+{img alt="image1286.png" width="5.84in"}`images/b-apl-features/image1286.png`
 
 However, if the two ranks are equal, then the block is hyperized; each
 item of the second input is located in the first input. As the next
@@ -377,13 +377,13 @@ example shows, only the first instance of each item is found (e.g., the
 the left input, what is reported is one more than the length of the left
 input (here, 8).
 
-![image1287.png](images/b-apl-features/image1287.png) <!--  style="width:5.38333in;height:1.1in" -->
+{img alt="image1287.png" width="5.38in"}`images/b-apl-features/image1287.png`
 
 Why the strange design decision to report length+1 when something isn’t
 found, instead of a more obvious flag value such as 0 or false? Here’s
 why:
 
-![image1288.png](images/b-apl-features/image1288.png) <!--  style="width:5.38333in;height:1.1in" -->
+{img alt="image1288.png" width="5.38in"}`images/b-apl-features/image1288.png`
 
 Note that code has
 27 items, not 26. The asterisk at the end is the ciphertext is the
@@ -395,7 +395,7 @@ spaces in the message so obvious. But despite being silly, the example
 shows the benefit of reporting length+1 as the position of items not
 found.
 
-![image1292.png](images/b-apl-features/image1292.png) <!--  style="width:2.175in;height:0.225in" -->
+{img alt="image1292.png" width="2.17in"}`images/b-apl-features/image1292.png`
 
 The contained in
 block is like a hyperized contains with the
@@ -403,14 +403,14 @@ input order reversed. It reports an array of Booleans the same shape as
 the left input. The shape of the right input doesn’t matter; the block
 looks only for atomic elements.
 
-![image1293.png](images/b-apl-features/image1293.png) <!--  style="width:7.48542in;height:0.65972in" -->
+{img alt="image1293.png" width="7.49in"}`images/b-apl-features/image1293.png`
 
 ![image1294.png](images/b-apl-features/image1294.png) <!--  style="width:7.48542in;height:0.65972in" -->The blocks grade up and grade down are used for sorting data. Given an array as input, it
 reports a vector of the indices in which the items (the rows, if a
 matrix) should be rearranged in order to be sorted. This will be clearer
 with an example:
 
-![image1295.png](images/b-apl-features/image1295.png) <!--  style="width:7.48542in;height:0.65972in" -->
+{img alt="image1295.png" width="2.66in"}`images/b-apl-features/image1295.png`
 
 The result from grade up tells us that item 3 of **foo** comes first in
 sorted order, then item 4, then 2, then 1. When we actually select items
@@ -424,7 +424,7 @@ Why this two-step process? Why not just have a sort primitive in APL?
 One answer is that in a database application you might want to sort one
 array based on the order of another array:
 
-![image1304.png](images/b-apl-features/image1304.png) <!--  style="width:5.48333in;height:2.2in" -->
+{img alt="image1304.png" width="5.48in"}`images/b-apl-features/image1304.png`
 
 This is the list of employees of a small company. (Taken from *Structure
 and Interpretation of Computer Programs* by Abelson and Sussman.
@@ -434,21 +434,21 @@ We would like to sort
 the employees’ names in big-to-small order of salary. First we extract
 column 3 of the database, the salaries:
 
-![image1305.png](images/b-apl-features/image1305.png) <!--  style="width:3.55903in;height:1.97639in" / -->
+{img alt="image1305.png" width="3.56in"}`images/b-apl-features/image1305.png`
 
 Then we use grade down to get the reordering indices:
 
-![image1307.png](images/b-apl-features/image1307.png) <!--  style="width:4.97847in;height:2.23333in" / -->
+{img alt="image1307.png" width="4.98in"}`images/b-apl-features/image1307.png`
 
 At this point we *could* use
 the index vector to sort the salaries:
 
-![image1306.png](images/b-apl-features/image1306.png) <!--  style="width:5.33333in;height:2.37333in" / -->
+{img alt="image1306.png" width="5.33in"}`images/b-apl-features/image1306.png`
 
 But
 what we actually want is a list of *names,* sorted by salary:
 
-![image1308.png](images/b-apl-features/image1308.png) <!--  style="width:5.59333in;height:2.3in" / -->
+{img alt="image1308.png" width="5.59in"}`images/b-apl-features/image1308.png`
 
 By taking the
 index vector from grade down of column 3 and telling item to apply it to
@@ -459,7 +459,7 @@ In case you’ve forgotten, ![image1309.png](images/b-apl-features/image1309.png
 database; we need the list 3 in the second input slot of the outer list
 to select by columns rather than by rows.
 
- ![image1311.png](images/b-apl-features/image1311.png) <!--  style="width:2.91667in;height:0.325in" -->
+ {img alt="image1311.png" width="2.95in"}`images/b-apl-features/image1311.png`
 
 Select ({index}`if take` ) or select all but (if drop
 ) the first (if *n*\>0) or last (if *n*\<0) |*n*|
@@ -467,7 +467,7 @@ items from a vector, or rows from a matrix. Alternatively, if the left
 input is a two-item vector, select rows with the first item and columns
 with the second.
 
- ![image1312.png](images/b-apl-features/image1312.png) <!--  style="width:2.91667in;height:0.325in" -->
+ {img alt="image1312.png" width="2.95in"}`images/b-apl-features/image1312.png`
 
 The {index}`compress block` selects a subset of its right
 input based on the Boolean values in its left input, which must be a
@@ -491,8 +491,8 @@ columns), while **⌿** is described as operating on rows. We were more
 than a month into this project before I understood all this. You get
 long block names so it won’t take you a month!
 
-![image1320.png](images/b-apl-features/image1320.png) <!--  style="width:2.99444in;height:0.23333in" / -->
-![image1319.png](images/b-apl-features/image1319.png) <!--  style="width:3.175in;height:0.18333in" / -->
+{img alt="image1320.png" width="2.99in"}`images/b-apl-features/image1320.png`
+{img alt="image1319.png" width="3.17in"}`images/b-apl-features/image1319.png`
 ![image1321.png](images/b-apl-features/image1321.png) <!--  style="width:1.11181in;height:0.23333in" --> Don’t confuse this
 block with the {index}`reduce block`, whose APL symbol is
 also a slash. In that block, what comes to the left of the slash is a
@@ -516,7 +516,7 @@ which row is where; the reverse column order block reverses which column
 is where; and the transpose block turns rows into columns and vice
 versa:
 
-![image1322.png](images/b-apl-features/image1322.png) <!--  style="width:1.11181in;height:0.23333in" -->
+{img alt="image1322.png" width="5.88in"}`images/b-apl-features/image1322.png`
 
 Except for reverse row order, these work only on full arrays, not
 ragged-right lists of lists, because the result of the other two would
@@ -548,7 +548,7 @@ applying the function to the array you want to compress.
 
 But APL does have a higher order version of combine:
 
-![image1323.png](images/b-apl-features/image1323.png) <!--  style="width:1.11181in;height:0.23333in" -->
+{img alt="image1323.png" width="5.88in"}`images/b-apl-features/image1323.png`
 
 The reduce block
 works just like combine, taking a dyadic function
@@ -561,21 +561,21 @@ matrix as made up of vectors, either row vectors or column vectors. And
 if you think of what these blocks do as adding vectors, rather than
 adding individual numbers, it’s clear that in
 
-![image1332.png](images/b-apl-features/image1332.png) <!--  style="width:6.68333in;height:1.04167in" -->
+{img alt="image1332.png" width="6.68in"}`images/b-apl-features/image1332.png`
 
-![image1333.png](images/b-apl-features/image1333.png) <!--  style="width:5.83333in;height:1.1in" -->
+{img alt="image1333.png" width="5.83in"}`images/b-apl-features/image1333.png`
 
  the *vector*
 (10, 26, 42) is the sum of *column vectors* (1, 5, 9)+(2, 6, 10)+(3, 7,
 11)+(4, 8, 12). In pre-6.0 Snap<em>!</em>, we’d get the same result this way:
 
-![image1334.png](images/b-apl-features/image1334.png) <!--  style="width:4.80833in;height:1.1in" -->
+{img alt="image1334.png" width="4.81in"}`images/b-apl-features/image1334.png`
 
 mapping over the *rows* of the matrix, applying combine to each row.
 Combining rows, reducing column vectors.
 
 
-![image1336.png](images/b-apl-features/image1336.png)
+{img alt="image1336.png" width="2.17in"}`images/b-apl-features/image1336.png`
 The outer product block takes two arrays
 (vectors, typically) and a dyadic scalar function as inputs. It reports
 an array whose rank is the sum of the ranks of the inputs (so, typically
@@ -586,7 +586,7 @@ of the left input and the third element of the right input. (The APL
 symbol ◦. is pronounced “jot dot.”) The way to think about this block is
 “multiplication table ” from elementary school:
 
-![image1335.png](images/b-apl-features/image1335.png) <!--  style="width:7.24in;height:1.52in" -->
+{img alt="image1335.png" width="7.24in"}`images/b-apl-features/image1335.png`
 
 ![image1337.png](images/b-apl-features/image1337.png) <!--  style="width:2.61667in;height:0.24167in" --> The inner product
 block takes two matrices and two operations
@@ -595,7 +595,7 @@ of rows in the right matrix. When the two operations are + and ×, this
 is the {index}`matrix multiplication<single: multiplication, matrix>` familiar to
 mathematicians:
 
-![image1338.png](images/b-apl-features/image1338.png) <!--  style="width:7.33861in;height:1.00694in" -->
+{img alt="image1338.png" width="7.34in"}`images/b-apl-features/image1338.png`
 
 But other operations can be used. One common inner product is ∨.∧ (“or
 dot and”) applied to Boolean matrices, to find rows and columns that
@@ -606,6 +606,6 @@ isn’t an APL function; it’s an aid to exploring
 APL-in-Snap<em>!</em>. It transforms arrays to a compact representation that
 still makes the structure clear:
 
-![image1340.png](images/b-apl-features/image1340.png) <!--  style="width:5.99792in;height:0.33333in" -->
+{img alt="image1340.png" width="6.00in"}`images/b-apl-features/image1340.png`
 
 Experts will recognize this as the Lisp representation of list structure.
