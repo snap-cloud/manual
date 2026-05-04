@@ -1,6 +1,7 @@
 ---
 ---
 
+# Snap! Reference Manual
 <!--
   Title intentionally omitted. The PDF cover page already carries
   "Snap! Reference Manual"; emitting a frontmatter title here (or

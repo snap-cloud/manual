@@ -127,7 +127,7 @@ users will be familiar with the *imperative* programming
 style , which is based on a set of
 command blocks that modify a list:
 
-{inline alt="The four imperative list-mutation blocks: `add thing to`, `delete 1 of`, `insert thing at 1 of`, and `replace item 1 of with thing`." class="image-4x width=3.5in"}`images/04-first-class-lists/6-blocks-imperative-list-mutators.png`
+{img alt="The four imperative list-mutation blocks: `add thing to`, `delete 1 of`, `insert thing at 1 of`, and `replace item 1 of with thing`." class="image-2x" width="3.5in"}`images/04-first-class-lists/6-blocks-imperative-list-mutators.png`
 
 As an example, here are two blocks that take a list of numbers as input,
 and report a new list containing only the even numbers from the original
