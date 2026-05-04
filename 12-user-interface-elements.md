@@ -168,9 +168,9 @@ private and nobody can see it except you, its owner. If it is shared
 (**boldface** in the project list), then when you open it you’ll see a URL
 like this one:
 
-{span .mono}[https://snap.berkeley.edu/snapsource/snap.html#present:Username=bh&ProjectName=count%20change](https://snap.berkeley.edu/snapsource/snap.html#present:Username=bh&ProjectName=count%20change)
+{span .mono}`https://snap.berkeley.edu/snapsource/snap.html#present:Username=bh&ProjectName=count%20change`(https://snap.berkeley.edu/snapsource/snap.html#present:Username=bh&ProjectName=count%20change)
 
-but with your username and project name. (“{span .mono}[`%20`]” in the project name
+but with your username and project name. (“{span .mono}``%20``” in the project name
 represents a space, which can’t be part of a URL.) Anyone who knows this
 URL can see your project. Finally, if your project is published (**_bold
 italic_** in the list), then your project is shown on the Snap<em>!</em> web

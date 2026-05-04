@@ -91,7 +91,7 @@ and `map` above. This notation indicates that *the block itself,* not the
 number or other value that the block would report when called, is the
 input. If you want to use a block itself in a non-Reporter-type (e.g.,
 Any-type) input slot, you can enclose it explicitly in a ring, found at
-the top of the {span .mono}[Operators] palette.
+the top of the {span .mono}`Operators` palette.
 
 {img alt="image744.png" width="1.08in"}`images/06-procedures-as-data/image744.png`
 
@@ -152,10 +152,10 @@ otherwise, “reporter” includes predicates. When the word is capitalized
 inside a sentence, it means specifically oval-shaped blocks. So, “nested
 reporters” includes predicates, but “a Reporter-type input” doesn’t.)
 
-Although an {span .mono}[Any-type] input slot (what you get if you use the small
+Although an {span .mono}`Any-type` input slot (what you get if you use the small
 input-name dialog box) will accept a procedure input, it doesn’t
 automatically ring the input as described above. So the declaration of
-{span .mono}[Procedure-type] inputs makes the use of your custom higher order block
+{span .mono}`Procedure-type` inputs makes the use of your custom higher order block
 much more convenient.
 
 Why would you want a block to take a procedure as input? This is actually
@@ -173,7 +173,7 @@ the C when the block is used is the input named <var>action</var> in the body of
 the script. The only way to make sense of the variable <var>action</var> is to
 understand that its value is a script.
 
-To declare an input to be {span .mono}[Procedure-type], open the input name dialog as usual, and click on the arrowhead:
+To declare an input to be {span .mono}`Procedure-type`, open the input name dialog as usual, and click on the arrowhead:
 
 {img alt="image509.png" width="2.58in"}`images/06-procedures-as-data/image509.png`
 
@@ -355,7 +355,7 @@ stop Snap<em>!</em> from filling a slot that should really remain empty.
 
 Here’s
 an example of a situation in which a procedure must be explicitly marked
-as data by pulling a `ring` from the {span .mono}[Operators] palette and putting the
+as data by pulling a `ring` from the {span .mono}`Operators` palette and putting the
 procedure (block or script) inside it:
 
 {img alt="image734.png" width="5.19in"}`images/06-procedures-as-data/image734.png`
@@ -420,7 +420,7 @@ an infinite loop. We need `my if then else` block to be able to select
 only one of the two alternatives to be evaluated.
 
 We have a mechanism to allow that: declare the then variable <var>yes</var> and else variable <var>no</var> inputs to
-be of type {span .mono}[Reporter] rather than type {span .mono}[Any]. Then, when calling the block,
+be of type {span .mono}`Reporter` rather than type {span .mono}`Any`. Then, when calling the block,
 those inputs will be enclosed in a `ring` so that the expressions
 themselves, rather than their values, become the inputs:
 
@@ -458,16 +458,16 @@ transformation of constant data into constant functions) is called a
 *special form*. To turn our `if` block into a
 special form, we edit the block’s prototype, declaring the inputs <var>yes</var>
 and <var>no</var> to be of type "`Any (unevaluated)`"
-instead of type {span .mono}[Reporter]. The script for the block is still that of the
+instead of type {span .mono}`Reporter`. The script for the block is still that of the
 second version, including the use of `call` to evaluate either <var>yes</var> or <var>no</var>
-but not both. But the slots appear as white {span .mono}[Any-type] rectangles, not
-{span .mono}[Reporter-type] rings, and the factorial block will look like our ﬁrst
+but not both. But the slots appear as white {span .mono}`Any-type` rectangles, not
+{span .mono}`Reporter-type` rings, and the factorial block will look like our ﬁrst
 attempt.
 
 In a special form’s prototype, {index}`the unevaluated`
 input slot(s) are indicated by a lambda ("`λ`") next to the input name, just
-as if they were declared as {span .mono}[Procedure] type. They
-*are* {span .mono}[Procedure] type, really; they’re just disguised to the user of the
+as if they were declared as {span .mono}`Procedure` type. They
+*are* {span .mono}`Procedure` type, really; they’re just disguised to the user of the
 block.
 
 Special forms trade off implementor sophistication
@@ -494,14 +494,14 @@ Scratch doesn’t have custom C‑shaped blocks, it can afford to handwave
 away the distinction between evaluated and unevaluated Booleans, but
 Snap<em>!</em> can’t. The pedagogic value of special forms is proven by the
 fact that no Scratcher ever notices that there’s anything strange about
-the way in which the hexagonal inputs in the {span .mono}[Control] blocks are
+the way in which the hexagonal inputs in the {span .mono}`Control` blocks are
 evaluated.
 
 Also, the C-shaped slot familiar to Scratch users
 is an unevaluated procedure type; you don’t have to use a `ring` to keep
 the commands in the C-slot from being run before the C-shaped block is
 run. Those commands themselves, not the result of running them, are the
-input to the C-shaped {span .mono}[Control] block. (This is taken for granted by
+input to the C-shaped {span .mono}`Control` block. (This is taken for granted by
 Scratch users, especially because Scratchers don’t think of the contents
 of a C-slot as an input at all.) This is why it makes sense that
 “C‑shaped” is on the fourth row of types in the long form input dialog,

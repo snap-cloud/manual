@@ -40,10 +40,10 @@ all sprites, or only to the current sprite and its children.
 
 In this dialog box, you can choose the block's palette, shape, and name.
 With one exception, there is one color per
-palette, e.g., all {span .mono}[Motion] blocks are blue. But the {span .mono}[Variables] palette
+palette, e.g., all {span .mono}`Motion` blocks are blue. But the {span .mono}`Variables` palette
 includes the orange variable-related blocks and the red list-related
 blocks. Both colors are available, along with an "`Other`" option that
-makes grey blocks in the {span .mono}[Variables] palette for blocks that don’t fit any
+makes grey blocks in the {span .mono}`Variables` palette for blocks that don’t fit any
 category.
 
 There are three block shapes , following a
@@ -55,7 +55,7 @@ Predicates, which is the technical term for reporters that report
 Boolean (true or false) values.
 
 Suppose you want to make a block named “square” that draws a square. You
-would choose {span .mono}[Motion], Command, and type “square” into the name field.
+would choose {span .mono}`Motion`, Command, and type “square” into the name field.
 When you click "`OK`", you enter the {index}`Block Editor`.
 This works just like making a script in the sprite’s scripting area,
 except that the “hat” block at the top, instead of saying something like
@@ -68,7 +68,7 @@ custom block, then click OK:
 
 {img alt="image503.png" width="4.62in"}`images/03-building-a-block/image503.png`
 
-Your block appears at the bottom of the {span .mono}[Motion] palette. Here’s the block
+Your block appears at the bottom of the {span .mono}`Motion` palette. Here’s the block
 and the result of using it:
 
 {img alt="image524.png" width="4.20in"}`images/03-building-a-block/image524.png`
@@ -109,7 +109,7 @@ You can now drag the orange variable down into the script, then click okay:
 
 {img alt="image511.png" width="1.47in"}`images/03-building-a-block/image511.png`
 
-Your block now appears in the {span .mono}[Motion] palette with an input box: ![image512.png](images/03-building-a-block/image512.png) <!--  style="width:0.69792in;height:0.25in" / --> You can draw
+Your block now appears in the {span .mono}`Motion` palette with an input box: ![image512.png](images/03-building-a-block/image512.png) <!--  style="width:0.69792in;height:0.25in" / --> You can draw
 any size square by entering the length of its side in the box and
 running the block as usual, by clicking it or by putting it in a script.
 
@@ -236,11 +236,11 @@ The window shows all of your
 global custom blocks. You can uncheck some of the checkboxes to select
 exactly which blocks you want to include in your library. (You can
 "`right-click`" or "`control-click`" on the export window for a menu that lets
-you check or uncheck all the boxes at once.) Then press "`OK`" An {span .mono}[XML] file
+you check or uncheck all the boxes at once.) Then press "`OK`" An {span .mono}`XML` file
 containing the blocks will appear in your Downloads location.
 
 To import a block library, use the "`Import…`" command in the "`File`" menu,
-or just drag the {span .mono}[XML] file into the Snap<em>!</em> window.
+or just drag the {span .mono}`XML` file into the Snap<em>!</em> window.
 
 Several block libraries are included with Snap<em>!</em>; for details about
 them, see @sec-libraries.

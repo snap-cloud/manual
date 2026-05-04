@@ -4,7 +4,7 @@
   unlike the rest of the manual. -->
 
 * Write UI elements inside quoted code blocks. e.g. ```"`Open`"```
-* Monospaced text should use the CSS class `.mono` e.g. `{span .mono}[text here]`
+* Monospaced text should use the CSS class `.mono` e.g. `{span .mono}`text here``
 * Do not put spaces around index entries. See [Indexes](#indexes) below.
 * To write Snap! as stylized text write: `Snap<em>!</em>`
 * Chapters are included at the top level of the repo, named 'NN-chapter.md'
