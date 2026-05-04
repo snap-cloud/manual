@@ -7,6 +7,9 @@
   the previous \chapter*{...} raw LaTeX call) caused a near-blank
   duplicate-title page after the acknowledgements.
 -->
+:::{raw:latex}
+\chapter*{The Snap\textit{!} Reference Manual}
+:::
 
 ::: {.callout-note}
 ## This a work in progress!

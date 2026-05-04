@@ -14,6 +14,7 @@ Stanford Artificial Intelligence Lab
 Scheme
 single: Sussman, Gerald J.
 single: Steele, Guy
+SICP
 single: Structure and Interpretation of Computer Programs
 single: Abelson, Hal
 single: Sussman, Julie
@@ -27,16 +28,23 @@ single: Dave, Achal
 single: Hotchkiss, Kyle
 single: Motyashov, Ivan
 single: Servilla, Deborah
+Xerox PARC
+:::
+
+:::{raw:latex}
+\chapter*{Acknowledgements}
 :::
 
 (sec-acknowledgements)=
++++{no-pdf: true}
 # Acknowledgements
++++
 
 We have been extremely lucky in our mentors.
 Jens cut his teeth in the company of the Smalltalk pioneers:
 {index}`Alan Kay<single: Kay, Alan>`, {index}`Dan Ingalls<single: Ingalls, Dan>`,
 and the rest of the gang who invented personal computing and object oriented
-programming in the great days of {index}`Xerox PARC`. He
+programming in the great days of Xerox PARC. He
 worked with {index}`John Maloney<single: Maloney, John>`, of the MIT Scratch Team, who developed the Morphic graphics framework that's still at the heart of Snap<em>!</em>.
 
 <strong><em>The brilliant design of Scratch, from the Lifelong Kindergarten
@@ -70,11 +78,10 @@ which also supports our computing needs.
 We have been fortunate to get to know an amazing group of brilliant
 middle school(!) and high school students through the Scratch Advanced
 Topics forum, several of whom (since grown up) have contributed code to
-Snap<em>!</em>: {index}`Kartik Chandra<single: Chandra, Kartik>`, Nathan Dinsmore
-, {index}`Connor Hudson<single: Hudson, Connor>`, Ian
-Reynolds, and Deborah Servilla . Many more have contributed ideas and alpha-testing bug
-reports. UC Berkeley students who've contributed code include Achal Dave, Kyle Hotchkiss, Ivan
-Motyashov, and {index}`Yuan Yuan<single: Yuan, Yuan>`.
+Snap<em>!</em>: {index}`Kartik Chandra<single: Chandra, Kartik>`, Nathan Dinsmore, {index}`Connor Hudson<single: Hudson, Connor>`, Ian
+Reynolds, and Deborah Servilla. Many more have contributed ideas and alpha-testing bug
+reports. UC Berkeley students who've contributed code include Achal Dave, Kyle Hotchkiss,
+Ivan Motyashov, and {index}`Yuan Yuan<single: Yuan, Yuan>`.
 Contributors of translations are too numerous to list here, but they're
 in the "About…" box in Snap<em>!</em> itself.
 
