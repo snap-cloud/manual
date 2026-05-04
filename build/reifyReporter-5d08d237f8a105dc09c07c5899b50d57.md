@@ -1,7 +1,0 @@
----
----
-
-# `Reporter Ring`
-
-```{block-help}
-```

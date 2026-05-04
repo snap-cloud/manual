@@ -1,7 +1,0 @@
----
----
-
-# `show variable`
-
-```{block-help}
-```

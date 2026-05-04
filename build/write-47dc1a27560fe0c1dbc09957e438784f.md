@@ -1,7 +1,0 @@
----
----
-
-# `write  size`
-
-```{block-help}
-```

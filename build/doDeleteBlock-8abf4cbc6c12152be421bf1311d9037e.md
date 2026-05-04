@@ -1,7 +1,0 @@
----
----
-
-# `delete block`
-
-```{block-help}
-```

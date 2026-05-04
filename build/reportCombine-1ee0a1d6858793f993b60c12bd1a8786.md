@@ -1,7 +1,0 @@
----
----
-
-# `combine  using`
-
-```{block-help}
-```
