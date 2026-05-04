@@ -534,18 +534,30 @@ The major new feature in Snap<em>!</em> 6.0 is that the domain and range of
 most scalar function blocks is extended to multi-dimensional
 lists, with the underlying scalar function applied termwise:
 
-{img alt="Hyperblock addition: `(list 7 8 1) + (list 40 20 30)` returns the list 47, 28, 31 (termwise sum)." width="3.34in}  ![Hyperblock exponent: `2^ of (list 7 8 1)` returns the list 128, 256, 2.](images/04-first-class-lists/35-script-hyperblock-2-to-the-n.png){width=2.56in}  ![Hyperblock multiplication on two-row tables: `(list (list 7 8 1) (list 40 20 30)) × (list (list 3 5 4) (list 6 10 20))` returns a 2×3 table of termwise products (21, 40, 4 / 240, 200, 600).](images/04-first-class-lists/36-script-hyperblock-multiply-table.png){width=4.94in"}`images/04-first-class-lists/34-script-hyperblock-list-plus-list.png`
+::::{grid} 3
+:::{grid-item}
+{img alt="Hyperblock addition: `(list 7 8 1) + (list 40 20 30)` returns the list 47, 28, 31 (termwise sum)." width="3.34in"}`images/04-first-class-lists/34-script-hyperblock-list-plus-list.png`
+:::
+:::{grid-item}
+{img alt="Hyperblock exponent: `2^ of (list 7 8 1)` returns the list 128, 256, 2." width="2.56in"}`images/04-first-class-lists/35-script-hyperblock-2-to-the-n.png`
+:::
+:::{grid-item}
+{img alt="Hyperblock multiplication on two-row tables: `(list (list 7 8 1) (list 40 20 30)) × (list (list 3 5 4) (list 6 10 20))` returns a 2×3 table of termwise products (21, 40, 4 / 240, 200, 600)." width="4.94in"}`images/04-first-class-lists/36-script-hyperblock-multiply-table.png`
+:::
+::::
+
 Mathematicians, note in the last example above that the result is just a termwise
 application of the underlying function (7×3, 8×5, etc.), *not* matrix
-multiplication. See @sec-apl-features for that. For a dyadic (two-input) function, if the lengths don’t agree, the length of the result (in each
-dimension) is the length of the shorter input:
+multiplication. See @sec-apl-features for that. For a dyadic (two-input) function, if the lengths don’t agree, the length of the result (in each dimension) is the length of the shorter input:
 
 {img alt="Hyperblock multiplication where the two operands have rows of unequal length: the result is the size of the shorter input in each dimension, leaving the third column of column C empty in row 1." width="5.74in"}`images/04-first-class-lists/37-script-hyperblock-mismatched-lengths.png`
+
 However, if the *number of dimensions* differs in the two inputs, then the number of
 dimensions in the result agrees with the *higher-*dimensional input; the
 lower-dimensional one is used repeatedly in the missing dimension(s):
 
 {img alt="Hyperblock multiplication where one operand is a 2-D table and the other is a 1-D list: the 1-D list is broadcast across each row of the higher-dimensional input." width="6.79in"}`images/04-first-class-lists/38-script-hyperblock-mismatched-dimensions.png`
+
 (7×6, 8×10, 1×20, *40*×*6*, *20*×*10*, etc.). In particular, a *scalar*
 input is paired with every scalar in the other input:
 
@@ -558,7 +570,8 @@ Each pixel of the result has ¾ of its original red and green, and three times
 its original blue (with its transparency unchanged). By putting some
 sliders on the stage, you can play with colors dynamically:
 
-{img alt="A `forever` loop with `switch to costume ((pixels of costume alonzo) × (list red green blue 100) / 100)`, multiplying each pixel by current values of the red/green/blue stage variables." width="5.19in}![Three on-stage sliders labelled red (23), green (69), blue (277), next to a recoloured blue Alonzo sprite.](images/04-first-class-lists/42-watcher-rgb-sliders-alonzo.png){width=1.69in"}`images/04-first-class-lists/41-script-color-slider-loop.png`
+{inline alt="A `forever` loop with `switch to costume ((pixels of costume alonzo) × (list red green blue 100) / 100)`, multiplying each pixel by current values of the red/green/blue stage variables." width="5.19in"}`images/04-first-class-lists/41-script-color-slider-loop.png` {inline alt="Three on-stage sliders labelled red (23), green (69), blue (277), next to a recoloured blue Alonzo sprite." width="1.69in"}`images/04-first-class-lists/42-watcher-rgb-sliders-alonzo.png`
+
 There are a few naturally scalar functions that have already had specific
 meanings when applied to lists and therefore are not hyperblocks: `=` and
 `identical to` (because they compare entire structures, not just scalars,

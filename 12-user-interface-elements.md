@@ -625,8 +625,8 @@ the project “Codification” in the Examples project list. Edit the blocks
 map to Smalltalk, map to JavaScript, etc., to see examples of how to
 provide translations for blocks.
 
-![image1028.png](images/12-user-interface-elements/image1028.png){ .image-4x } <!--  style="width:1.38in;height:4.79in" alt="Graphical user interface, application, Teams Description automatically generated" / -->
-{inline alt="image1027.png" class="image-4x "}`images/12-user-interface-elements/image1027.png` <!--  style="width:2.20972in;height:4.96944in" -->
+![image1028.png](images/12-user-interface-elements/image1028.png) <!--  style="width:1.38in;height:4.79in" alt="Graphical user interface, application, Teams Description automatically generated" / -->
+{img alt="image1027.png" class="image-4x"}`images/12-user-interface-elements/image1027.png` <!--  style="width:2.20972in;height:4.96944in" -->
 
 The Single palette option puts all blocks,
 regardless of category, into a single palette. It’s intended mainly for
