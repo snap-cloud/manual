@@ -19,7 +19,7 @@ In either case, if you choose "`Save as…`" from the File menu. You’ll see so
 
 (fig-saveas)=
 {img alt="image487.png" width="3.55in"}`images/02-saving-and-loading-projects-and/image487.png`
-<!--  style="width:3.54861in;height:2.57639in" / -->
+<!--  width="3.54861in" / -->
 
 (If you are not logged in to your Snap<em>!</em> cloud account, Computer will
 be the only usable option.) The text box at the bottom right of the Save
@@ -150,7 +150,7 @@ the Computer and Cloud options.
 
 If you are still in **Snap<em>!</em>** and realize that you’ve loaded another
 project without saving the one you were working on: _**Don’t edit the new project.**_
-From the File menu {inline alt="image384.png"}`images/02-saving-and-loading-projects-and/image384.png` <!--  style="width:0.31944in;height:0.18056in" --> choose the "`Restore unsaved project`"
+From the File menu {inline alt="image384.png"}`images/02-saving-and-loading-projects-and/image384.png` <!--  width="0.31944in" --> choose the "`Restore unsaved project`"
 option .
 
 Restore unsaved project will also work if you log out of Snap<em>!</em> and
@@ -173,7 +173,7 @@ project and haven’t yet saved it, Snap<em>!</em> displays a pencil icon to the
 left of the project name on the toolbar at the top of the window:
 
 <!-- TODO: MISSING FILE -->
-<!-- ![image391.png](images/02-saving-and-loading-projects-and/image391.png)  style="width:0.31944in;height:0.18056in"/  -->
+<!-- ![image391.png](images/02-saving-and-loading-projects-and/image391.png)  width="0.31944in"/  -->
 
 ## Private and Public Projects
 

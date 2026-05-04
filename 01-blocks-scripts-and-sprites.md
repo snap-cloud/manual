@@ -251,7 +251,7 @@ the program, click the red {index}`stop sign` at the right end
 of the tool bar.)
 
 :::{index} jukebox
-play sound block
+`play sound` block
 costume
 Costumes tab
 playing sounds
@@ -425,7 +425,7 @@ the arm synchronous (left) and dangling (right).*
 expression
 halo
 block; reporter
-reporter block
+`reporter` block
 :::
 ## Reporter Blocks and Expressions
 
@@ -473,12 +473,12 @@ block is nested inside another block from the same palette:
 
 This aid to readability is called *zebra coloring.*
 A reporter block with its inputs, maybe including other reporter
-blocks, such as {inline alt="image81.png"}`images/01-blocks-scripts-and-sprites/image81.png` <!-- {width=1.91667in height=0.23958in} -->, is called an *expression.*
+blocks, such as {inline alt="image81.png"}`images/01-blocks-scripts-and-sprites/image81.png` <!--  width="1.91667in" -->, is called an *expression.*
 
 :::{index} block; predicate
-Predicate block
+`Predicate` block
 hexagonal shape
-repeat until block
+`repeat until` block
 animation
 `if` block
 reporter `if` block\
@@ -543,7 +543,7 @@ and click on the control that appears:
 :::{index} Boolean constant
 :::
 
-{inline alt="image91.png"}`images/01-blocks-scripts-and-sprites/image91` <!--  style="width:1.375in;height:0.24306in" --> {inline alt="image92.png"}`images/01-blocks-scripts-and-sprites/image92` <!--  style="width:1.375in;height:0.24306in" -->
+{inline alt="image91.png"}`images/01-blocks-scripts-and-sprites/image91` <!--  width="1.375in" --> {inline alt="image92.png"}`images/01-blocks-scripts-and-sprites/image92` <!--  width="1.375in" -->
 
 
 :::{index} `for` block
@@ -596,6 +596,10 @@ single-letter variable names.)
 :::{index} variable; global
 global variable
 Make a variable
+`set` block
+sprite-local variable
+Delete a variable
+watcher
 :::
 ### Global Variables
 
@@ -619,8 +623,6 @@ it from the current sprite’s scripting area to the picture of another
 sprite in the sprite corral), and the different sprites will do slightly
 different things when running that script because each has a different
 value for that variable name.
-:::{index} sprite-local variable
-:::
 
 If you give your variable the name “name” then the Variables palette will
 look like this:
@@ -631,16 +633,14 @@ There’s now a “Delete a variable” button, and there’s
 an orange oval with the variable name in it, just like the orange oval
 in the for block. You can drag the variable into any script in the
 scripting area. Next to the oval is a checkbox, initially checked. When
-it’s checked, you’ll also see a *variable watcher* on the stage: {img alt="image99.png" width="1.04167in"}`images/01-blocks-scripts-and-sprites/image99.png`
-:::{index} Delete a variable
-:::
+it’s checked, you’ll also see a *variable watcher* on the stage: {inline alt="image99.png" width="1.04167in"}`images/01-blocks-scripts-and-sprites/image99.png`
+
 
 When you give the variable a value, the orange box in its watcher
 will display the value.
-:::{index} watcher
-:::
 
-How *do* you give it a value? You use the {index}`\`set\` block<`set` block>` :
+How *do* you give it a value? You use the `set` block:
+
 {img alt="image100.png" width="1.92708in"}`images/01-blocks-scripts-and-sprites/image100.png`
 
 Note that you *don’t* drag the variable’s oval into the `set` block! You
@@ -648,7 +648,7 @@ click on the downarrow in the first input slot, and you get a menu of
 all the available variable names.
 
 If you do choose “For this sprite only”
-when creating a variable, its block in the palette looks like this:{img alt="image101.png" width="0.65833in"}`images/01-blocks-scripts-and-sprites/image101.png`
+when creating a variable, its block in the palette looks like this: {inline alt="image101.png" width="0.65833in"}`images/01-blocks-scripts-and-sprites/image101.png`
 :::{index} For this sprite only
 :::
 
@@ -672,7 +672,7 @@ variable:
 :::{index} interaction
 global variable
 variable; script-local
-script variables block
+`script variables` block
 :::
 
 {img alt="image105.png" width="2.08333in"}`images/01-blocks-scripts-and-sprites/image105.png`
@@ -768,11 +768,11 @@ around the idea of *pausing* the running of a script partway through, so
 that you can examine the values of variables.
 
 :::{index} button; pause
-hide variable block
+`hide variable` block
 :::
 ### The pause button
 
-The simplest way to pause a program is manually, by clicking the pause button {inline alt="image116.png"}`images/01-blocks-scripts-and-sprites/image116.png` <!-- {width=0.29167in height=0.16667in} -->
+The simplest way to pause a program is manually, by clicking the pause button {inline alt="image116.png"}`images/01-blocks-scripts-and-sprites/image116.png` <!-- width="0.29167in" -->
 in the top right corner of the window. While the program is paused, you
 can run other scripts by clicking on them, show variables on stage with
 the checkbox next to the variable in the Variables palette or with the
@@ -782,7 +782,7 @@ adding or removing blocks. The {inline alt="image115.png"}`images/01-blocks-scri
 button changes shape too and clicking it again resumes the paused scripts.
 
 :::{index} breakpoint
-pause all block
+`pause all` block
 conditional breakpoint
 :::
 (sec-pause-all)=
@@ -811,7 +811,7 @@ libraries) is a breakpoint block that lets you set a *conditional*
 breakpoint, and automatically display the relevant variables before pausing. Here’s a sample use of it:
 
 :::{index} hide variable block
-show variable block
+`show variable` block
 hide and show primitives
 :::
 ### Hide and show variables
@@ -843,9 +843,9 @@ Sometimes you’re not exactly sure where the error is, or you don’t
 understand how the program got there. To understand better, you’d
 like to watch the program as it runs, at human speed rather than
 at computer speed. You can do this by
-clicking the *visible stepping* button ({inline alt="image121.png"}`images/01-blocks-scripts-and-sprites/image121.png`), <!-- {width=0.29167in height=0.16667in} --> before running a script or
-while the script is paused. The button will light up ({inline alt="image123.png"}`images/01-blocks-scripts-and-sprites/image123.png`) <!-- {width=0.29167in height=0.16667in} --> and a speed
-control slider {inline alt="image122.png"}`images/01-blocks-scripts-and-sprites/image122.png` <!-- {width=0.54563in height=0.15278in} --> will appear in the toolbar. When you start or continue
+clicking the *visible stepping* button ({inline alt="image121.png"}`images/01-blocks-scripts-and-sprites/image121.png`), <!-- width="0.3in" --> before running a script or
+while the script is paused. The button will light up ({inline alt="image123.png"}`images/01-blocks-scripts-and-sprites/image123.png`) <!-- width="0.3in" --> and a speed
+control slider {inline alt="image122.png"}`images/01-blocks-scripts-and-sprites/image122.png` <!-- width="0.54563in" --> will appear in the toolbar. When you start or continue
 the script, its blocks and input slots will light up cyan one at a time:
 
 {img alt="image124.png" width="0.54563in"}`images/01-blocks-scripts-and-sprites/image124.png`
@@ -878,7 +878,7 @@ about visible stepping as it affects those blocks.
 :::{index} `pen trails` block
 `if else` reporter block
 index variable
-script variables block
+`script variables` block
 newline character
 :::
 ## Etcetera
@@ -893,7 +893,7 @@ at least part of its name, type {keyboard}`control-F` and enter the name in the 
 
 
 :::{index} pen vectors block
-write block
+`write` block
 `for` block
 local variables
 false
@@ -909,16 +909,13 @@ RGBA option
 `is \_ a \_ ?` block
 stage blocks
 type
-set flag block
+`set flag` block
 `split` block
 :::
 (sec-primitives-not-in-scratch)=
 Here are some of the primitive blocks that don’t exist in Scratch:
 
 {inline alt="image135.png"}`images/01-blocks-scripts-and-sprites/image135.png` reports, a new costume consisting of everything that’s drawn on the stage by any sprite. Right-clicking the block in the scripting area gives the option to change it to {inline alt="image136.png"}`images/01-blocks-scripts-and-sprites/image136.png` if vector logging is enabled. See [Log pen vectors](#sec-para-log-pen-vectors).
-
-<!-- {inline alt="image136.png"}`images/01-blocks-scripts-and-sprites/image136.png` reports, a new costume consisting of everything that’s drawn on the stage by any sprite. Right-clicking the block in the
-scripting area gives the option to change it to {inline alt="image135.png"}`images/01-blocks-scripts-and-sprites/image135.png` if vector logging is enabled. See @sec-para-log-pen-vectors. -->
 
 {inline alt="image137.png"}`images/01-blocks-scripts-and-sprites/image137.png` Print
 characters in the given point size on the stage, at
@@ -938,13 +935,13 @@ Takes a sprite as input. Erases from that sprite’s costume the area that overl
 
 {inline alt="image141.png"}`images/01-blocks-scripts-and-sprites/image141` See @sec-pause-all.
 
-{inline alt="image140.png"}`images/01-blocks-scripts-and-sprites/image140` Runs only this script until finished. In the Control palette even though it’s gray.
+{inline alt="image140.png" class="tall"}`images/01-blocks-scripts-and-sprites/image140` Runs only this script until finished. In the Control palette even though it’s gray.
 
-{inline alt="image143.png"}`images/01-blocks-scripts-and-sprites/image143` <!--  style="width:1.71in;height:0.23in" --> Reporter version of the `if/else` primitive command block. Only one of the two branches is evaluated, depending on the value of the first input.
+{inline alt="image143.png"}`images/01-blocks-scripts-and-sprites/image143` <!--  width="1.71in" --> Reporter version of the `if/else` primitive command block. Only one of the two branches is evaluated, depending on the value of the first input.
 
-{inline alt="image144.png"}`images/01-blocks-scripts-and-sprites/image144` <!--  style="width:1.83in;height:0.61in" --> Looping block like `repeat` but with an index variable.
+{inline alt="image144.png"}`images/01-blocks-scripts-and-sprites/image144` <!--  width="1.83in" --> Looping block like `repeat` but with an index variable.
 
-{inline alt="image145.png"}`images/01-blocks-scripts-and-sprites/image145` <!--  style="width:1.37986in;height:0.28958in" alt="Graphical user interface, application, logo Description automatically generated" / --> Declare local variables in a script.
+{inline alt="image145.png"}`images/01-blocks-scripts-and-sprites/image145` <!--  width="1.37986in" alt="Graphical user interface, application, logo Description automatically generated" / --> Declare local variables in a script.
 
 {inline alt="image148.png"}`images/01-blocks-scripts-and-sprites/image148` See @sec-ch09.
 
@@ -1038,7 +1035,7 @@ are Δ*x* and Δ*y* in that order, because we measure angles clockwise
 from north. `max` /index{max block} and `min` /index{min block} are *variadic;* by clicking the arrowhead, you
 can provide additional inputs.
 :::{index} relabel option
-atan2 block
+`atan2` block
 :::
 
 {inline alt="image177.png"}`images/01-blocks-scripts-and-sprites/image177` {inline alt="image178.png"}`images/01-blocks-scripts-and-sprites/image178` {inline alt="image179.png"}`images/01-blocks-scripts-and-sprites/image179`
@@ -1120,7 +1117,7 @@ These accept two-item (x,y) lists
 including other sprites):
 :::{index} points as inputs
 two-item (x,y) lists
-to block
+`to` block
 :::
 
 {img alt="image283.png" width="3.13in"}`images/01-blocks-scripts-and-sprites/image283.png`
@@ -1150,7 +1147,7 @@ visible sprites.
 :::{index} touching block
 :::
 
-{inline alt="image305.png"}`images/01-blocks-scripts-and-sprites/image305` <!--  style="width:2.43333in;height:0.3in" --> The `video on` block has a {index}`snap option` that takes a
+{inline alt="image305.png"}`images/01-blocks-scripts-and-sprites/image305` <!--  width="2.43333in" --> The `video on` block has a {index}`snap option` that takes a
 snapshot and reports it as a costume. It is hyperized with respect to its second input.
 :::{index} video block
 :::
@@ -1170,9 +1167,9 @@ for positive input, 0 for zero input, or -1 for negative input.
 :::
 ::::
 :::{index} neg option
-length of text block
+`length of text` block
 negation operator
-set background block
+`set background` block
 :::
 
 <!-- ::: {.callout-tip} -->
@@ -1248,7 +1245,7 @@ will be that word or phrase, *except for* the space character, which
 is represented as itself in key.)
 
 {inline alt="image356.png" class="image-4x"}`images/01-blocks-scripts-and-sprites/image356.png`
-<!--  style="width:2.25in;height:0.41944in"   alt="Website Description automatically generated with medium confidence" -->
+<!--  width="2.25in"   alt="Website Description automatically generated with medium confidence" -->
 
 The RGB(A) option accepts a single number, which
 is a grayscale value 0-255; a two-number list, grayscale plus opacity
@@ -1297,12 +1294,12 @@ script variables if the right input is a script.)
 :::{index} `for` block
 `item 1 of stream` block
 `all but first of stream` block
-letter (1) of (world) block
+`letter (1) of (world)` block
 visual representation of a sentence
-bar chart block
+`bar chart` block
 conditional library
 conditional library; multiple-branch
-setting block
+`setting` block
 infinite precision integer library
 Libraries… option
 :::
@@ -1348,7 +1345,7 @@ needs.
 The libraries and their contents may change, but as of this writing the
 {index}`list library` has these blocks:
 
-{inline alt="image387.png" class="image-1-5x"}`images/01-blocks-scripts-and-sprites/image387.png`
+{img alt="image387.png" class="image-1-5x"}`images/01-blocks-scripts-and-sprites/image387.png`
 
 (The lightning bolt (⚡️) before the name in several of these
 blocks means that they use compiled HOFs or JavaScript primitives to achieve
@@ -1362,9 +1359,9 @@ the second is a *value.* The inputs are a key and an association list;
 the block reports the first key-value pair whose key is equal to the
 input key.
 :::{index} ⚡️ (lightning bolt)
-remove duplicates from block
-sort block
-assoc block
+`remove duplicates from` block
+`sort` block
+`assoc` block
 dictionary
 association list
 :::
@@ -1378,9 +1375,9 @@ there are lists; it will be called with all the first items, all the
 second items, and so on. `Zip` takes any number of lists as inputs; it
 reports a list of lists: all the first items, all the second items, and
 so on. The `no-name` identity function reports its input.
-:::{index} for each item block
+:::{index} `for each item` block
 `#` variable
-multimap block
+`multimap` block
 :::
 
 `Sentence` and `sentence ➔ list`
@@ -1433,7 +1430,7 @@ after the first repetition, and whether the condition must be true or
 false to continue repeating. The last repeat block is like the `repeat`
 primitive, but makes the number of repetitions so far available to the
 repeated script. The next two blocks are variations on `for`: the first allows an explicit step instead of using ±1, and the
-second allows any values, not just numbers; inside the script you say {inline alt="image390.png"}`images/01-blocks-scripts-and-sprites/image390` <!-- {width=3.15278in height=0.29861in} -->
+second allows any values, not just numbers; inside the script you say {inline alt="image390.png"}`images/01-blocks-scripts-and-sprites/image390` <!-- width="3.15278in" -->
 replacing the grey block in the picture with an expression to give the next
 desired value for the loop index.
 :::{index} repeat blocks
@@ -1448,12 +1445,12 @@ desired value for the loop index.
 
 :::{index}
 stream list
-in front of stream block
-map over stream block
-show stream block
-Stream block
-sieve block
-Stream with numbers from block
+`in front of stream` block
+`map over stream` block
+`show stream` block
+`Stream` block
+`sieve` block
+`Stream with numbers from` block
 :::
 (sec-stream-library)=
 The {index}`stream library` has these blocks:
@@ -1541,7 +1538,7 @@ text string in which parentheses are used to show the structure, as in
 Lisp/Scheme.
 
 :::{index} list ➔ sentence block
-printable block
+`printable` block
 pixels library
 :::
 
@@ -1551,7 +1548,7 @@ pixels library
 (sec-pixels-library)=
 The **pixels library** has one block:
 
-![image395.png](images/01-blocks-scripts-and-sprites/image395.png{.image-4x} <!-- {width=0.77917in height=0.62986in} -->
+{img alt="image395.png" width="0.8in" class="image-2x"}`images/01-blocks-scripts-and-sprites/image395.png`
 
 Costumes are first class data in Snap<em>!</em>. Most of the processing of
 costume data is done by primitive blocks in the Looks category. (See page
@@ -1609,13 +1606,13 @@ tested.
 :::{index} cases block
 cond in Lisp
 switch in C
-else if block
+`else if` block
 :::
 
 :::{index} variadic library
-sum block
-all of block
-any of block
+`sum` block
+`all of` block
+`any of` block
 :::
 ### The Variadic Library
 
@@ -1635,8 +1632,8 @@ maximum are no longer included, because the primitive operators `+` `x`,
 :::{index} `set pen` block
 HSL color
 X11/W3C color names
-color from block
-from color block
+`color from` block
+`from color` block
 :::
 ### The Color and Crayons Library
 The colors and {index}`crayons library` has these blocks:
@@ -1654,12 +1651,12 @@ next page.
 
 {img alt="image412.png" width="1.13333in"}`images/01-blocks-scripts-and-sprites/image412.png`
 
-Colors are created by the {inline alt="image414.png"}`images/01-blocks-scripts-and-sprites/image414` <!--  style="width:0.95in;height:0.225in" --> block (for direct user selection), the `color from`
-to specify a color numerically, or by {inline alt="image413.png"}`images/01-blocks-scripts-and-sprites/image413` <!-- style="width:1.13333in;height:0.23333in" --> , which
+Colors are created by the {inline alt="image414.png"}`images/01-blocks-scripts-and-sprites/image414` <!--  width="0.95in" --> block (for direct user selection), the `color from`
+to specify a color numerically, or by {inline alt="image413.png"}`images/01-blocks-scripts-and-sprites/image413` <!-- width="1.13333in" --> , which
 reports the color currently in use by the pen. The `from color` block
 reports names or numbers associated with a color:
 
-{inline alt="image411.png" class="image-4x"}`images/01-blocks-scripts-and-sprites/image411.png` <!--  style="width:0.95in;height:0.225in" -->
+{inline alt="image411.png" class="image-4x"}`images/01-blocks-scripts-and-sprites/image411.png` <!--  width="0.95in" -->
 
 Colors can be created from other colors:
 {img alt="image415.png" width="4.83333in"}`images/01-blocks-scripts-and-sprites/image415.png`
@@ -1782,7 +1779,7 @@ your program is run within the program, instead of stopping the script
 with a red halo and an obscure error message. The block runs the script
 in its first C-slot. If it finishes without an error, nothing else
 happens. But if an error happens, the code in the second C-slot is run.
-While that second script is running, the variable {inline alt="image443.png"}`images/01-blocks-scripts-and-sprites/image443.png` <!-- {width=0.43056in height=0.15278in} -->  contains the text of
+While that second script is running, the variable {inline alt="image443.png"}`images/01-blocks-scripts-and-sprites/image443.png` <!-- width="0.43056in" --> contains the text of
 the error message that would have been displayed if you weren’t catching
 the error. The {index}`\`error\` block<`error` block>` is sort of the opposite:
 it lets your program *generate* an error message, which will be
@@ -1796,7 +1793,7 @@ blocks:
 :::
 
  {img alt="image446.png" width="1.92in"}`images/01-blocks-scripts-and-sprites/image446.png`
- {inline alt="image447.png" class="image-4x"}`images/01-blocks-scripts-and-sprites/image447.png` <!-- {width=3.25972in height=0.18958in} -->
+ {inline alt="image447.png" class="image-4x"}`images/01-blocks-scripts-and-sprites/image447.png` <!-- width="3.25972in" -->
 
 `Costume from text`
 reports a costume that can be used with
@@ -1847,7 +1844,7 @@ scripts have finished before continuing the script below the block.
 The create variables library
  has these blocks:
 :::{index} variables library
-does var exist block
+`does var exist` block
 :::
 
 {img alt="image451.png" width="1.37778in"}`images/01-blocks-scripts-and-sprites/image451.png`
@@ -1871,7 +1868,7 @@ yes-or-no options that have checkboxes in the user interface, while the
 `set value` block controls settings with numeric
 or text values, such as project name.
 :::{index} set flag block
-set value block
+`set value` block
 :::
 
 Certain settings are ordinarily remembered on a per-user basis, such as
@@ -1897,7 +1894,7 @@ of functions applicable to Scheme numbers, including subtype predicates
 such as rational? and infinite?, and selectors such as numerator and
 real-part.
 :::{index} BIGNUMS block
-Scheme number block
+`Scheme number` block
 :::
 
 <!-- I cannot figure out an index format that compiles this... -->
@@ -2015,8 +2012,8 @@ reproduced. Many of the blocks are helpers for the `plot sound` block,
 used to plot the waveform of a sound. The `play sound` (primitive) block plays a sound. \_\_ `Hz for`
  reports a sine wave as a list of samples.
 :::{index} plot sound block
-play block
-Hz for block
+`play` block
+`Hz for` block
 :::
 
 The web services library has these blocks:

@@ -20,7 +20,7 @@ const imgRole = {
         type: 'image',
         url: data.body.trim(),
         alt,
-        class: className || 'image-inline',
+        class: `image-inline ${className ? className : ''}`,
         width,
         height,
         title,

@@ -40,9 +40,9 @@ color theory
 ## Introduction to Color
 
 Your computer monitor can display millions of colors, but you probably can’t
-distinguish that many. For example, here’s red 57, green 180, blue 200: {inline alt="a teal color swatch" class="image-inline"}`images/a-snap-color-library/image1137.png`
-And here’s red 57, green *182,* blue 200:  ![image1138.png](images/a-snap-color-library/image1138.png) <!--  style="width:0.23611in;height:0.23611in" --> You might be able to tell them
-apart if you see them side by side: ![image1137.png](images/a-snap-color-library/image1137.png) <!--  style="width:0.23611in;height:0.23611in" --> ![image1138.png](images/a-snap-color-library/image1138.png) <!--  style="width:0.23611in;height:0.23611in" --> but maybe not even then.
+distinguish that many. For example, here’s red 57, green 180, blue 200: {inline alt="a teal color swatch"}`images/a-snap-color-library/image1137.png`
+And here’s red 57, green *182,* blue 200: {inline alt="image1138.png" width="0.23in"}`images/a-snap-color-library/image1138.png` You might be able to tell them
+apart if you see them side by side: {inline alt="image1137.png" width="0.23in"}`images/a-snap-color-library/image1137.png` {inline alt="image1138.png" width="0.23in"}`images/a-snap-color-library/image1138.png` but maybe not even then.
 
 {index}`Color space`—the collection of all possible
 colors—is three-dimensional, but there are many ways to choose the
@@ -70,14 +70,14 @@ in Wikipedia.
 denim
 crayons
 sepia
-set pen block
+`set pen` block
 box of ten crayons
 box of twenty crayons
 gray
 Black Hole problem
-change pen block
+`change pen` block
 transparency
-color from block
+`color from` block
 hue
 rainbow
 magenta
@@ -95,7 +95,7 @@ purple
 violet
 teal
 cyan
-from color block
+`from color` block
 nearest color number
 :::
 
@@ -109,7 +109,7 @@ one-dimensional subset of the available colors. Two subsets, actually:
 ![image1139.png](images/a-snap-color-library/image1139.png)
 
 The first row shows 100 distinct colors. They have names; this is pumpkin
-![image1145.png](images/a-snap-color-library/image1145.png),
+{inline alt="image1145.png"}`images/a-snap-color-library/image1145.png`,
 and this is denim {inline alt="image1146.png"}`images/a-snap-color-library/image1146.png`.
 You’re supposed to think of them as a big box of 100 crayons. They’re
 arranged in families: grays, pinks, reds, browns, oranges, etc. But
@@ -120,10 +120,10 @@ really old-fashioned photo” and so you’d find sepia {inline alt="image1144.p
 crayon number 33. You don’t have to memorize the numbers! You can find
 them in a menu with a submenu for each family.
 
-![image1140.png](images/a-snap-color-library/image1140.png) <!--  style="width:5.79306in;height:0.3in" / -->
+![image1140.png](images/a-snap-color-library/image1140.png) <!--  width="5.79306in" / -->
 
 Or, if you
-know the crayon name, just {inline alt="image1147.png"}`images/a-snap-color-library/image1147.png` <!--  style="width:2.15972in;height:0.25694in" -->.
+know the crayon name, just {inline alt="image1147.png"}`images/a-snap-color-library/image1147.png` <!--  width="2.15972in" -->.
 
 The crayon numbers are chosen so that skipping by 10 gives a sensible box of ten crayons:
 
@@ -172,7 +172,7 @@ transparency.) The {index}`pen reporter` requires no other
 inputs; it reports the state of the pen in whatever dimension you
 choose.
 
-![image1157.png](images/a-snap-color-library/image1157.png) <!--  style="width:5.79306in;height:0.3in" / -->
+![image1157.png](images/a-snap-color-library/image1157.png) <!--  width="5.79306in" / -->
 
 As the last example shows, you can’t ask for the pen color in a scale
 incompatible with how you set it, unless the block can deduce what you
@@ -219,7 +219,7 @@ number, as in the Red example, you can use this block:
 Finally, the library includes the {index}`mix block` and a
 helper:
 
-![image1160.png](images/a-snap-color-library/image1160.png) <!--  style="width:5.79306in;height:0.3in" / -->
+![image1160.png](images/a-snap-color-library/image1160.png) <!--  width="5.79306in" / -->
 
 We’ll have more to say about these after a detour through color theory.
 
@@ -280,8 +280,8 @@ Our *color number* scale is based on fair hues, adding a range of grays from bla
 colors. (In color terminology, a *shade* is a darker version of a color;
 a lighter version is called a *tint.*) Why do we add shades
 but not tints ? Partly because I find shades
-more exciting. A shade of red {inline alt="image1195.png"}`images/a-snap-color-library/image1195.png` <!--  style="width:0.23611in;height:0.23611in" --> can be dark candy apple red {inline alt="image1194.png"}`images/a-snap-color-library/image1194.png` <!--  style="width:0.23611in;height:0.23611in" --> or maroon {inline alt="image1193.png"}`images/a-snap-color-library/image1193.png` <!--  style="width:0.23611in;height:0.23611in" -->, but a tint is just some kind
-of pink {inline alt="image1192.png"}`images/a-snap-color-library/image1192.png` <!--  style="width:0.23611in;height:0.23611in" -->. This admitted prejudice is supported by an
+more exciting. A shade of red {inline alt="image1195.png"}`images/a-snap-color-library/image1195.png` <!--  width="0.23611in" --> can be dark candy apple red {inline alt="image1194.png"}`images/a-snap-color-library/image1194.png` <!--  width="0.23611in" --> or maroon {inline alt="image1193.png"}`images/a-snap-color-library/image1193.png` <!--  width="0.23611in" -->, but a tint is just some kind
+of pink {inline alt="image1192.png"}`images/a-snap-color-library/image1192.png` <!--  width="0.23611in" -->. This admitted prejudice is supported by an
 objective fact: Most projects are made on a white background, so dark colors stand out better than light
 ones.
 
@@ -303,7 +303,7 @@ color numbers by 5
 
 color numbers by 10
 
-![image1197.png](images/a-snap-color-library/image1197.png) <!--  style="width:0.23611in;height:0.23611in" -->
+![image1197.png](images/a-snap-color-library/image1197.png) <!--  width="0.23611in" -->
 
 This chart shows how the {index}`color scales` discussed so
 far are related. Note that all scales range from 0 to 100; the fair hues
@@ -434,7 +434,7 @@ given the amount of white or black needed to achieve that lightness.
 Saturation less than 100 means that *both white and black* are mixed
 with the spectral color. (Such mixtures are called *tones* of the
 spectral color.) Perceptually, colors with saturation 100% don’t look
-gray: ![image1202.png](images/a-snap-color-library/image1202.png) <!--  style="width:1.55556in;height:0.26597in" / -->  but colors with saturation 75% do: ![image1201.png](images/a-snap-color-library/image1201.png) <!--  style="width:1.56389in;height:0.29306in" / -->
+gray: ![image1202.png](images/a-snap-color-library/image1202.png) <!--  width="1.55556in" / -->  but colors with saturation 75% do: ![image1201.png](images/a-snap-color-library/image1201.png) <!--  width="1.56389in" / -->
 
 Note that HSV and HSL both have a dimension called “saturation,” but
 *they’re not the same thing!* In HSV, “saturation” means non-whiteness,
@@ -478,8 +478,8 @@ because that’s what’s built into the JavaScript
 programming language provided by browsers. But if the goal is to model
 human color perception, neither of these color spaces is satisfactory,
 because they assume that all full-intensity spectral colors are equally
-bright. But if you’re like most people, you see spectral yellow {inline alt="image1206.png"}`images/a-snap-color-library/image1206.png` <!--  style="width:0.18889in;height:0.18889in" --> as much
-brighter than spectral blue {inline alt="image1205.png"}`images/a-snap-color-library/image1205.png` <!--  style="width:0.20278in;height:0.20278in" / --> . There are better perceptual color spaces
+bright. But if you’re like most people, you see spectral yellow {inline alt="image1206.png"}`images/a-snap-color-library/image1206.png` <!--  width="0.18889in" --> as much
+brighter than spectral blue {inline alt="image1205.png"}`images/a-snap-color-library/image1205.png` <!--  width="0.20278in" / --> . There are better perceptual color spaces
 with names like L\*u\*v\* and L\*a\*b\*
 that are based on research with human subjects to
 determine true perceived brightness. Wikipedia explains all this and
@@ -491,7 +491,7 @@ subtractive mixing
 mixing paints
 paints
 reflectance graph
-color at weight block
+`color at weight` block
 :::
 
 ### Mixing Colors
@@ -555,7 +555,7 @@ component also.
 The proper mathematical abstraction to describe a paint is a
 *reflectance* graph, like this:
 
-![image1209.png](images/a-snap-color-library/image1209.png) <!--  style="width:0.20278in;height:0.20278in" / -->
+![image1209.png](images/a-snap-color-library/image1209.png) <!--  width="0.20278in" / -->
 
 (These aren’t paints, but minerals, and one software-generated spectrum,
 from the US Geological Survey’s [Spectral
@@ -570,7 +570,7 @@ inputs and converts them into what we hope are *typical* paint
 reflectance spectra that would look like those colors, and then mixes
 those spectra and converts back to RGB.
 
-![image1230.png](images/a-snap-color-library/image1230.png) <!--  style="width:4.34028in;height:0.65278in" -->
+![image1230.png](images/a-snap-color-library/image1230.png) <!--  width="4.34028in" -->
 
 But unlike the other two kinds of mixing, in this case we can’t say that
 these colors are “the right answer”; what would happen with real paints

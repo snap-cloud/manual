@@ -139,7 +139,7 @@ in an arbitrary input instead of using the pulldown menu.
 
 Custom blocks can
 also have such inputs. To make a pulldown input, open the long form
-input dialog, choose a text type ({span .mono}`Any`, {span .mono}`Text`, or {span .mono}`Number`) and click the {inline alt="image658.png"}`images/05-typed-inputs/image658.png` <!--  style="width:0.13194in;height:0.13194in" -->
+input dialog, choose a text type ({span .mono}`Any`, {span .mono}`Text`, or {span .mono}`Number`) and click the {inline alt="image658.png"}`images/05-typed-inputs/image658.png` <!--  width="0.13194in" -->
 icon in the bottom right corner, or {span .mono}`control/right-click` in the dialog.
 You will see this menu:
 
@@ -187,13 +187,13 @@ Finally, you can make the input box accept more than one line of text
 either "`multi-line`" for regular
 text or "`code`" for monospace-font computer code.
 
-If the input type is something other than text, then clicking the {inline alt="image670.png" class="image-inline"}`images/05-typed-inputs/image670.png` <!--  style="width:0.13056in;height:0.1375in" --> button will instead show this menu:
+If the input type is something other than text, then clicking the {inline alt="image670.png" class="image-inline"}`images/05-typed-inputs/image670.png` <!--  width="0.13056in" --> button will instead show this menu:
 
 {img alt="image669.png" width="0.60in"}`images/05-typed-inputs/image669.png`
 
-As an example, we want to make this block: {inline alt="image671.png" class="image-inline"}`images/05-typed-inputs/image671.png` <!--  style="width:0.60417in;height:0.31944in" -->  The second input must be a read-only object menu:
+As an example, we want to make this block: {inline alt="image671.png" class="image-inline"}`images/05-typed-inputs/image671.png` <!--  width="0.60417in" -->  The second input must be a read-only object menu:
 
-{inline alt="image694.png" class="image-4x"}`images/05-typed-inputs/image694.png` <!--  style="width:0.60417in;height:0.31944in" -->
+{inline alt="image694.png" class="image-4x"}`images/05-typed-inputs/image694.png` <!--  width="0.60417in" -->
 
 :::{index} arrowheads
 ellipsis
@@ -275,7 +275,7 @@ complete list of such notations:
 - ⫶ list
 - ? Boolean
 - ¶ multi-line text
-- ![image686.png](images/05-typed-inputs/image686.png) <!--  style="width:0.16319in;height:0.13542in" / --> object
+- ![image686.png](images/05-typed-inputs/image686.png) <!--  width="0.16319in" / --> object
 
 :::{index} icons in title text
 new line character
@@ -283,7 +283,7 @@ new line character
 
 ### Title Text and Symbols
 
-Some primitive blocks have symbols as part of the block name: {inline alt="image687.png" class="image-inline"}`images/05-typed-inputs/image687.png` <!--  style="width:1.21875in;height:0.23472in" / -->
+Some primitive blocks have symbols as part of the block name: {inline alt="image687.png" class="image-inline"}`images/05-typed-inputs/image687.png` <!--  width="1.21875in" / -->
 Custom blocks can use symbols too. In the Block Editor, click the plus sign in
 the prototype at the point where you want to insert the symbol. Then
 click the "`title text`" picture below the text box that’s expecting an

@@ -99,7 +99,7 @@ CPS
 Like all programming languages,
 Snap<em>!</em> evaluates compositions of nested reporters from the inside out.
 For example, in the expression
-![image884.png](images/10-continuations/image884.png) <!--  style="width:1.3125in;height:0.22917in" / --> Snap<em>!</em>
+![image884.png](images/10-continuations/image884.png) <!--  width="1.3125in" / --> Snap<em>!</em>
 first adds 4 and 5, then multiplies 3 by that sum. This often means that
 the order in which the operations are done is backwards from the order
 in which they appear in the expression: When reading the above
@@ -218,9 +218,9 @@ while unwinding the recursive calls.
 
 We can improve upon this by capturing the continuation of the top-level call to product:
 
-![image913.png](images/10-continuations/image913.png) <!--  style="width:4.03819in;height:1.92569in" / --> ![image914.png](images/10-continuations/image914.png) <!--  style="width:3.94514in;height:1.09792in" / -->
+![image913.png](images/10-continuations/image913.png) <!--  width="4.03819in" / --> ![image914.png](images/10-continuations/image914.png) <!--  width="3.94514in" / -->
 
-The {inline alt="image916.png"}`images/10-continuations/image916.png` <!--  style="width:1.59125in;height:0.18611in" / --> block takes as its input a
+The {inline alt="image916.png"}`images/10-continuations/image916.png` <!--  width="1.59125in" / --> block takes as its input a
 one-input script, as shown in the product example. It calls that script
 with *the continuation of the* call-with-continuation *block itself* as
 its input. In this case, that continuation is
@@ -256,7 +256,7 @@ w/continuation is an input.
 :::{index} nonlocal exit
 break command
 run w/continuation
-catch block
+`catch` block
 thread
 :::
 

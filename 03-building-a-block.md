@@ -109,7 +109,7 @@ You can now drag the orange variable down into the script, then click okay:
 
 {img alt="image511.png" width="1.47in"}`images/03-building-a-block/image511.png`
 
-Your block now appears in the {span .mono}`Motion` palette with an input box: ![image512.png](images/03-building-a-block/image512.png) <!--  style="width:0.69792in;height:0.25in" / --> You can draw
+Your block now appears in the {span .mono}`Motion` palette with an input box: ![image512.png](images/03-building-a-block/image512.png) <!--  width="0.69792in" / --> You can draw
 any size square by entering the length of its side in the box and
 running the block as usual, by clicking it or by putting it in a script.
 
@@ -157,9 +157,9 @@ same thing as regular clicking, as described earlier.
 drag from prototype
 base case
 factorial
-report block
-stop block
-stop script block
+`report` block
+`stop` block
+`stop script` block
 Thinking Recursively
 :::
 
@@ -169,7 +169,7 @@ Since the new custom block appears in its palette as soon as you *start*
 editing it, you can write recursive blocks (blocks that call themselves)
 by dragging the block into its own definition:
 
-![image514.png](images/03-building-a-block/image514.png) <!--  style="width:2.96528in;height:2.36319in" / --> ![image515.png](images/03-building-a-block/image515.png) <!--  style="width:1.95833in;height:2.35417in" / --> ![image516.png](images/03-building-a-block/image516.png) <!--  style="width:1.42361in;height:0.91181in" / -->
+![image514.png](images/03-building-a-block/image514.png) <!--  width="2.96528in" / --> ![image515.png](images/03-building-a-block/image515.png) <!--  width="1.95833in" / --> ![image516.png](images/03-building-a-block/image516.png) <!--  width="1.42361in" / -->
 
 (If you added inputs to the block since opening the editor, click "`Apply`"
 before finding the block in the palette, or drag the block from the top of the block editor rather than from the
@@ -194,7 +194,7 @@ values.
 You can also write {index}`recursive reporters<reporters, recursive>`,
 like this block to compute the factorial function:
 
-![image520.png](images/03-building-a-block/image520.png) <!--  style="width:4.29167in;height:0.86458in" / -->
+![image520.png](images/03-building-a-block/image520.png) <!--  width="4.29167in" / -->
 
 Note the use of the <code>report</code> block . When a reporter
 block uses this block, the reporter finishes its work and reports the
