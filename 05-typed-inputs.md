@@ -10,13 +10,13 @@ data type
 
 ## Scratch’s Type Notation
 
-Prior to version 3, Scratch block inputs came in two types: {span .mono}[Text-or-number] type and {span .mono}[Number] type. The former is
+Prior to version 3, Scratch block inputs came in two types: {span .mono}`Text-or-number` type and {span .mono}`Number` type. The former is
 indicated by a rectangular box, the latter by a rounded box: {inline alt="image654.png" class="image-inline"}`images/05-typed-inputs/image654.png`. A third
-Scratch type, {span .mono}[Boolean] (true/false), can be used in certain {span .mono}[Control]
+Scratch type, {span .mono}`Boolean` (true/false), can be used in certain {span .mono}`Control`
 blocks with hexagonal slots.
 
-The Snap<em>!</em> types are an expanded collection including {span .mono}[Procedure], {span .mono}[List],
-and {span .mono}[Object] types. Note that, with the exception of {span .mono}[Procedure] types, all
+The Snap<em>!</em> types are an expanded collection including {span .mono}`Procedure`, {span .mono}`List`,
+and {span .mono}`Object` types. Note that, with the exception of {span .mono}`Procedure` types, all
 of the input type shapes are just reminders to the user of what the
 block expects; they are not enforced by the language.
 
@@ -33,11 +33,11 @@ Number type
 
 In the {index}`Block Editor` input name dialog, there is a right-facing arrowhead after the "`Input name`" option:
 
-![image692.png](images/05-typed-inputs/image692.png)
+{img alt="image692.png" width="3.67in"}`images/05-typed-inputs/image692.png`
 
 Clicking that arrowhead opens the “long” input name dialog:
 
-![image657.png](images/05-typed-inputs/image657.png)
+{img alt="image657.png" width="5.17in"}`images/05-typed-inputs/image657.png`
 
 There are twelve input type shapes, plus three mutually exclusive modifiers,
 listed in addition to the basic choice between title text and
@@ -53,34 +53,34 @@ each row of types is a category, and parts of each column form a
 category. Understanding the arrangement will make it a little easier to
 find the type you want.
 
-![image659.png](images/05-typed-inputs/image659.png) <!--  style="width:6.82222in;height:2.75694in" / -->
+{img alt="image659.png" width="6.82in"}`images/05-typed-inputs/image659.png`
 
 The second row of input types
-contains the ones found in Scratch: {span .mono}[Number], {span .mono}[Any], and {span .mono}[Boolean]. (The
+contains the ones found in Scratch: {span .mono}`Number`, {span .mono}`Any`, and {span .mono}`Boolean`. (The
 reason these are in the second row rather than the ﬁrst will become
 clear when we look at the column arrangement.) The ﬁrst row contains the
-new Snap<em>!</em> types other than procedures: {span .mono}[Object], {span .mono}[Text], and {span .mono}[List]. The last two rows are the types related to procedures, discussed more fully below.
+new Snap<em>!</em> types other than procedures: {span .mono}`Object`, {span .mono}`Text`, and {span .mono}`List`. The last two rows are the types related to procedures, discussed more fully below.
 
-The {span .mono}[List] type is used for ﬁrst class lists, discussed
+The {span .mono}`List` type is used for ﬁrst class lists, discussed
 in Chapter IV. The red rectangles inside the input slot are meant
 to resemble the appearance of lists as Snap<em>!</em> displays them on the
 stage: each element in a red rectangle.
 
-The {span .mono}[Object] type is for sprites, costumes, sounds,
+The {span .mono}`Object` type is for sprites, costumes, sounds,
 and similar data types.
 
-The {span .mono}[Text] type is really just a variant form of the Any
+The {span .mono}`Text` type is really just a variant form of the Any
 type, using a shape that suggests a text input.[^5]
 
-[^5]: In Scratch, every block that takes a {span .mono}[Text-type] input has a default
+[^5]: In Scratch, every block that takes a {span .mono}`Text-type` input has a default
 value that makes the rectangles for text wider than tall. The blocks
-that aren’t specifically about text either are of {span .mono}[Number] type
+that aren’t specifically about text either are of {span .mono}`Number` type
 or have no default value, so those rectangles are
-taller than wide. At ﬁrst some of us (bh) thought that {span .mono}[Text] was a
+taller than wide. At ﬁrst some of us (bh) thought that {span .mono}`Text` was a
 separate type that always had a wide input slot; it turns out that this
 isn’t true in Scratch (delete the default text and the rectangle
 narrows), but we thought it a good idea anyway, so we allow Text-shaped
-boxes even for empty input slots. (This is why {span .mono}[Text] comes just above {span .mono}[Any]
+boxes even for empty input slots. (This is why {span .mono}`Text` comes just above {span .mono}`Any`
 in the input type selection box.)
 
 :::{index} jigsaw-piece blocks
@@ -111,7 +111,7 @@ this isn’t quite right for the C-shaped command input type, since
 commands don’t report values. But you’ll see
 later that it’s true in spirit.)
 
-![image660.png](images/05-typed-inputs/image660.png) <!--  style="width:3.64583in;height:3.11389in" / -->
+{img alt="image660.png" width="3.65in"}`images/05-typed-inputs/image660.png`
 
 :::{index} pulldown input
 read-only pulldown input
@@ -126,28 +126,28 @@ Certain primitive blocks have *pulldown* inputs,
 either *read-only*, like the input
 to the <code>is ( ) touching</code> block:
 
-![image661.png](images/05-typed-inputs/image661.png) <!--  style="width:1.68056in;height:0.94097in" / -->
+{img alt="image661.png" width="1.68in"}`images/05-typed-inputs/image661.png`
 
 (indicated by the input slot being the same (cyan, in this case) color as the body of the block), or *writeable*, like the input to the <code>point in direction ( )</code> block:
 
-![image662.png](images/05-typed-inputs/image662.png) <!--  style="width:1.90208in;height:1.32292in" / -->
+{img alt="image662.png" width="1.90in"}`images/05-typed-inputs/image662.png`
 
 (indicated by the white input slot), which means that the user can type
 in an arbitrary input instead of using the pulldown menu.
 
-![image663.png](images/05-typed-inputs/image663.png) <!--  style="width:0.83264in;height:0.65278in" / -->
+{img alt="image663.png" width="0.83in"}`images/05-typed-inputs/image663.png`
 
 Custom blocks can
 also have such inputs. To make a pulldown input, open the long form
-input dialog, choose a text type ({span .mono}[Any], {span .mono}[Text], or {span .mono}[Number]) and click the {inline alt="image658.png"}`images/05-typed-inputs/image658.png` <!--  style="width:0.13194in;height:0.13194in" -->
-icon in the bottom right corner, or {span .mono}[control/right-click] in the dialog.
+input dialog, choose a text type ({span .mono}`Any`, {span .mono}`Text`, or {span .mono}`Number`) and click the {inline alt="image658.png"}`images/05-typed-inputs/image658.png` <!--  width="0.13194in" -->
+icon in the bottom right corner, or {span .mono}`control/right-click` in the dialog.
 You will see this menu:
 
 Click
 the "`read-only`" checkbox if you want a read-only pulldown input. Then from
 the same menu, choose "`options…`" to get this dialog box:
 
-![image664.png](images/05-typed-inputs/image664.png) <!--  style="width:3.07639in;height:1.875in" / -->
+{img alt="image664.png" width="3.08in"}`images/05-typed-inputs/image664.png`
 
 Each line in the text box represents one menu item. If the line does not
 contain any of the characters "`=`", "`~`", or "`{}`" then the text is both what’s shown in
@@ -172,7 +172,7 @@ hovering the mouse over it displays the submenu next to the original
 menu. A line containing a close brace "`}`" ends the submenu; nothing else
 should be on that line. Submenus may be nested to arbitrary depth.
 
-![image693.png](images/05-typed-inputs/image693.png) <!--  style="width:3.07639in;height:1.875in" / -->
+{img alt="image693.png" width="0.50in"}`images/05-typed-inputs/image693.png`
 
 Alternatively, instead of giving a menu listing as described above, you
 can put a JavaScript function that returns the desired menu in the
@@ -187,13 +187,13 @@ Finally, you can make the input box accept more than one line of text
 either "`multi-line`" for regular
 text or "`code`" for monospace-font computer code.
 
-If the input type is something other than text, then clicking the {inline alt="image670.png" class="image-inline"}`images/05-typed-inputs/image670.png` <!--  style="width:0.13056in;height:0.1375in" --> button will instead show this menu:
+If the input type is something other than text, then clicking the {inline alt="image670.png" class="image-inline"}`images/05-typed-inputs/image670.png` <!--  width="0.13056in" --> button will instead show this menu:
 
-![image669.png](images/05-typed-inputs/image669.png) <!--  style="width:0.60417in;height:0.31944in" -->
+{img alt="image669.png" width="0.60in"}`images/05-typed-inputs/image669.png`
 
-As an example, we want to make this block: {inline alt="image671.png" class="image-inline"}`images/05-typed-inputs/image671.png` <!--  style="width:0.60417in;height:0.31944in" -->  The second input must be a read-only object menu:
+As an example, we want to make this block: {inline alt="image671.png" class="image-inline"}`images/05-typed-inputs/image671.png` <!--  width="0.60417in" -->  The second input must be a read-only object menu:
 
-{inline alt="image694.png" class="image-4x"}`images/05-typed-inputs/image694.png` <!--  style="width:0.60417in;height:0.31944in" -->
+{inline alt="image694.png" class="image-4x"}`images/05-typed-inputs/image694.png` <!--  width="0.60417in" -->
 
 :::{index} arrowheads
 ellipsis
@@ -211,21 +211,21 @@ type array.
 
 The "`single input`" option: In Scratch, all inputs are in this category.
 There is one input slot in the block as it appears in its palette. If a
-single input is of type {span .mono}[Any], {span .mono}[Number], {span .mono}[Text], or {span .mono}[Boolean], then you can
+single input is of type {span .mono}`Any`, {span .mono}`Number`, {span .mono}`Text`, or {span .mono}`Boolean`, then you can
 specify a {index}`default value` that will be shown in that
 slot in the palette, like the “10” in the <code>move (10) steps block</code>. In the
 prototype block at the top of the script in the Block editor, an an input with
 name “size” and default value 10 looks like this:
 
-![image678.png](images/05-typed-inputs/image678.png) <!--  style="width:1.63889in;height:0.52083in" -->
+{img alt="image678.png" width="1.64in"}`images/05-typed-inputs/image678.png`
 
-![image679.png](images/05-typed-inputs/image679.png) <!--  style="width:1.76389in;height:0.93056in" / -->
+{img alt="image679.png" width="1.76in"}`images/05-typed-inputs/image679.png`
 
 The "`Multiple inputs`" option:
 The <code>list</code> block introduced earlier accepts any number of inputs to
 specify the items of the new list. To allow this, Snap<em>!</em> introduces the
 arrowhead notation (⏴⏵) that expands and contracts the block, adding and
-removing input slots. ({span .mono}[Shift-clicking] on an arrowhead adds or removes
+removing input slots. ({span .mono}`Shift-clicking` on an arrowhead adds or removes
 three input slots at once.) Custom blocks made by the Snap<em>!</em> user have
 that capability, too. If you choose the "`Multiple inputs`" button, then
 arrowheads will appear after the input slot in the
@@ -244,7 +244,7 @@ than as an input slot. Here’s an example; the uparrow (**↑**)
 in the prototype indicates this kind of internal variable name:
 
 <!-- Referred to at the top of chapter 6. -->
-![Definition of `my for` block and the block created.](images/05-typed-inputs/image695.png)
+{img alt="Definition of `my for` block and the block created." width="7.07in"}`images/05-typed-inputs/image695.png`
 
 The variable <var>i</var> (in the block on the right above) can be dragged from the
 {index}`for block` into the blocks used in its C-shaped command
@@ -265,7 +265,7 @@ We have mentioned three notations that can appear in an input slot in
 the prototype to remind you of what kind of input this is. Here is the
 complete list of such notations:
 
-![image685.png](images/05-typed-inputs/image685.png) <!--  style="width:0.73472in;height:6.11806in" / -->
+{img alt="image685.png" width="0.73in"}`images/05-typed-inputs/image685.png`
 
 - = default value
 - … multiple input
@@ -275,7 +275,7 @@ complete list of such notations:
 - ⫶ list
 - ? Boolean
 - ¶ multi-line text
-- ![image686.png](images/05-typed-inputs/image686.png) <!--  style="width:0.16319in;height:0.13542in" / --> object
+- ![image686.png](images/05-typed-inputs/image686.png) <!--  width="0.16319in" / --> object
 
 :::{index} icons in title text
 new line character
@@ -283,13 +283,13 @@ new line character
 
 ### Title Text and Symbols
 
-Some primitive blocks have symbols as part of the block name: {inline alt="image687.png" class="image-inline"}`images/05-typed-inputs/image687.png` <!--  style="width:1.21875in;height:0.23472in" / -->
+Some primitive blocks have symbols as part of the block name: {inline alt="image687.png" class="image-inline"}`images/05-typed-inputs/image687.png` <!--  width="1.21875in" / -->
 Custom blocks can use symbols too. In the Block Editor, click the plus sign in
 the prototype at the point where you want to insert the symbol. Then
 click the "`title text`" picture below the text box that’s expecting an
 input slot name. The dialog will then change to look like this:
 
-![image689.png](images/05-typed-inputs/image689.png) <!--  style="width:2.03472in;height:1.26389in" / -->
+{img alt="image689.png" width="2.03in"}`images/05-typed-inputs/image689.png`
 
 The important part to notice is the arrowhead that has appeared at the right
 end of the text box. Click it to see the menu shown here at the left.
@@ -300,13 +300,13 @@ icons.
 
 But I’d like the arrow symbol bigger, and yellow, so I edit its name:
 
-![image690.png](images/05-typed-inputs/image690.png) <!--  style="width:2.03472in;height:1.26389in" / -->
+{img alt="image690.png" width="2.03in"}`images/05-typed-inputs/image690.png`
 
 This makes the symbol 1.5 times as big as the letters in the block text, using a color with
 red-green-blue values of 255-255-150 (each between 0 and 255). Here’s
 the result:
 
-![image691.png](images/05-typed-inputs/image691.png) <!--  style="width:1.19792in;height:0.27083in" / -->
+{img alt="image691.png" width="1.20in"}`images/05-typed-inputs/image691.png`
 
 The size and color controls can also be used with text: <code>$foo-8-255-120-0</code>
 will make a huge orange <code>foo</code>.

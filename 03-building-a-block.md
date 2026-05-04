@@ -29,21 +29,21 @@ In every palette, at or near the bottom, is a button labeled "`Make a block`" . 
 is a plus sign (+). Also, the menu you get by right-clicking on the
 background of the scripting area has a "`make a block`" option.
 
-![image523.png](images/03-building-a-block/image523.png)
+{img alt="image523.png" width="2.84in"}`images/03-building-a-block/image523.png`
 
 Clicking any of these will
 display a dialog window in which you choose the block’s name, shape, and
 palette/color. You also decide whether the block will be available to
 all sprites, or only to the current sprite and its children.
 
-![image501.png](images/03-building-a-block/image501.png) <!--  style="width:2.27083in;height:2.34722in" / -->
+{img alt="image501.png" width="2.27in"}`images/03-building-a-block/image501.png`
 
 In this dialog box, you can choose the block's palette, shape, and name.
 With one exception, there is one color per
-palette, e.g., all {span .mono}[Motion] blocks are blue. But the {span .mono}[Variables] palette
+palette, e.g., all {span .mono}`Motion` blocks are blue. But the {span .mono}`Variables` palette
 includes the orange variable-related blocks and the red list-related
 blocks. Both colors are available, along with an "`Other`" option that
-makes grey blocks in the {span .mono}[Variables] palette for blocks that don’t fit any
+makes grey blocks in the {span .mono}`Variables` palette for blocks that don’t fit any
 category.
 
 There are three block shapes , following a
@@ -55,7 +55,7 @@ Predicates, which is the technical term for reporters that report
 Boolean (true or false) values.
 
 Suppose you want to make a block named “square” that draws a square. You
-would choose {span .mono}[Motion], Command, and type “square” into the name field.
+would choose {span .mono}`Motion`, Command, and type “square” into the name field.
 When you click "`OK`", you enter the {index}`Block Editor`.
 This works just like making a script in the sprite’s scripting area,
 except that the “hat” block at the top, instead of saying something like
@@ -64,14 +64,14 @@ except that the “hat” block at the top, instead of saying something like
 of your custom block.[^3] You drag blocks under the hat to program your
 custom block, then click OK:
 
-![image502.png](images/03-building-a-block/image502.png) <!--  style="width:4.21094in;height:1.3364in" / -->
+{img alt="image502.png" width="4.21in"}`images/03-building-a-block/image502.png`
 
-![image503.png](images/03-building-a-block/image503.png) <!--  style="width:4.61556in;height:3.64778in" / -->
+{img alt="image503.png" width="4.62in"}`images/03-building-a-block/image503.png`
 
-Your block appears at the bottom of the {span .mono}[Motion] palette. Here’s the block
+Your block appears at the bottom of the {span .mono}`Motion` palette. Here’s the block
 and the result of using it:
 
-![image524.png](images/03-building-a-block/image524.png) <!--  style="width:2.27083in;height:2.34722in" / -->
+{img alt="image524.png" width="4.20in"}`images/03-building-a-block/image524.png`
 
 [^3]: This use of the word “prototype” is unrelated to the *prototyping
 object oriented programming* discussed later.
@@ -89,11 +89,11 @@ Editor will open. Notice the plus signs before and
 after the word square in the prototype block. If you hover the mouse
 over one, it lights up:
 
-![image508.png](images/03-building-a-block/image508.png) <!--  style="width:3.44444in;height:2.72222in" / -->
+{img alt="image508.png" width="3.44in"}`images/03-building-a-block/image508.png`
 
 Click on the plus on the right. You will then see the “input name” dialog :
 
-![image509.png](images/03-building-a-block/image509.png) <!--  style="width:2.58333in;height:1.60417in" / -->
+{img alt="image509.png" width="2.58in"}`images/03-building-a-block/image509.png`
 
 Type in the name “size” and click "`OK`" There are other options in this
 dialog; you can choose "`title text`" if you want to
@@ -103,13 +103,13 @@ dialog with a lot of options about your input name. But we’ll leave that
 for later. When you click OK, the new input appears in the block
 prototype:
 
-![image510.png](images/03-building-a-block/image510.png) <!--  style="width:1.47917in;height:1.48958in" / -->
+{img alt="image510.png" width="1.48in"}`images/03-building-a-block/image510.png`
 
 You can now drag the orange variable down into the script, then click okay:
 
-![image511.png](images/03-building-a-block/image511.png) <!--  style="width:1.47472in;height:1.4955in" / -->
+{img alt="image511.png" width="1.47in"}`images/03-building-a-block/image511.png`
 
-Your block now appears in the {span .mono}[Motion] palette with an input box: ![image512.png](images/03-building-a-block/image512.png) <!--  style="width:0.69792in;height:0.25in" / --> You can draw
+Your block now appears in the {span .mono}`Motion` palette with an input box: ![image512.png](images/03-building-a-block/image512.png) <!--  width="0.69792in" / --> You can draw
 any size square by entering the length of its side in the box and
 running the block as usual, by clicking it or by putting it in a script.
 
@@ -132,7 +132,7 @@ the palette) and then change the category.)
 
 If you "`right-click/control-click`" the hat block, you get this menu:
 
-![image513.png](images/03-building-a-block/image513.png) <!--  style="width:0.99931in;height:0.76042in" / -->
+{img alt="image513.png" width="1.00in"}`images/03-building-a-block/image513.png`
 
 "`Script pic`" exports a picture of the script. (Many of
 the illustrations in this manual were made that way.) "`Translations`" opens a window in which you can specify how
@@ -157,9 +157,9 @@ same thing as regular clicking, as described earlier.
 drag from prototype
 base case
 factorial
-report block
-stop block
-stop script block
+`report` block
+`stop` block
+`stop script` block
 Thinking Recursively
 :::
 
@@ -169,7 +169,7 @@ Since the new custom block appears in its palette as soon as you *start*
 editing it, you can write recursive blocks (blocks that call themselves)
 by dragging the block into its own definition:
 
-![image514.png](images/03-building-a-block/image514.png) <!--  style="width:2.96528in;height:2.36319in" / --> ![image515.png](images/03-building-a-block/image515.png) <!--  style="width:1.95833in;height:2.35417in" / --> ![image516.png](images/03-building-a-block/image516.png) <!--  style="width:1.42361in;height:0.91181in" / -->
+![image514.png](images/03-building-a-block/image514.png) <!--  width="2.96528in" / --> ![image515.png](images/03-building-a-block/image515.png) <!--  width="1.95833in" / --> ![image516.png](images/03-building-a-block/image516.png) <!--  width="1.42361in" / -->
 
 (If you added inputs to the block since opening the editor, click "`Apply`"
 before finding the block in the palette, or drag the block from the top of the block editor rather than from the
@@ -194,7 +194,7 @@ values.
 You can also write {index}`recursive reporters<reporters, recursive>`,
 like this block to compute the factorial function:
 
-![image520.png](images/03-building-a-block/image520.png) <!--  style="width:4.29167in;height:0.86458in" / -->
+![image520.png](images/03-building-a-block/image520.png) <!--  width="4.29167in" / -->
 
 Note the use of the <code>report</code> block . When a reporter
 block uses this block, the reporter finishes its work and reports the
@@ -210,7 +210,7 @@ entire toplevel script that called it.)
 
 Here’s a slightly more compact way to write the <code>factorial</code> function:
 
-![image521.png](images/03-building-a-block/image521.png) <!--  style="width:4.29167in;height:0.86458in" / -->
+{img alt="image521.png" width="4.29in"}`images/03-building-a-block/image521.png`
 
 For more on recursion, see *Thinking Recursively* by {index}`Eric Roberts<single: Roberts, Eric>`. (The originaledition is ISBN 978‑0471816522; a more recent *Thinking Recursively in
 Java* is ISBN 978-0471701460.) <!-- Do we want to link to something like https://books.google.com/books/about/Thinking_Recursively.html?id=oH9QAAAAMAAJ&source=kp_book_description --MF -->
@@ -230,17 +230,17 @@ game. Such a collection of blocks is called a *block library.*
 To create a block library, choose "`Export blocks…`" from the
 "`File`" menu. You then see a window like this:
 
-![image522.png](images/03-building-a-block/image522.png) <!--  style="width:2.02153in;height:2.72222in" / -->
+{img alt="image522.png" width="2.02in"}`images/03-building-a-block/image522.png`
 
 The window shows all of your
 global custom blocks. You can uncheck some of the checkboxes to select
 exactly which blocks you want to include in your library. (You can
 "`right-click`" or "`control-click`" on the export window for a menu that lets
-you check or uncheck all the boxes at once.) Then press "`OK`" An {span .mono}[XML] file
+you check or uncheck all the boxes at once.) Then press "`OK`" An {span .mono}`XML` file
 containing the blocks will appear in your Downloads location.
 
 To import a block library, use the "`Import…`" command in the "`File`" menu,
-or just drag the {span .mono}[XML] file into the Snap<em>!</em> window.
+or just drag the {span .mono}`XML` file into the Snap<em>!</em> window.
 
 Several block libraries are included with Snap<em>!</em>; for details about
 them, see @sec-libraries.

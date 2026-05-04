@@ -148,6 +148,37 @@ function quoteForMakeindex(s) {
 // which is defined in the preamble (the body font has no glyph for
 // ⚡, so passing it through verbatim renders as a missing-glyph box).
 
+// Symbol-to-ASCII map used when building the makeindex sort key for an
+// entry that contains non-ASCII characters. makeindex is byte-oriented
+// and treats every UTF-8 lead byte (0x80-0xFF) as the same alphabet
+// "letter" group, so an entry like "≤ block" creates a singleton group
+// whose heading is the partial UTF-8 sequence of ≤. LuaTeX then chokes
+// reading the .ind file ("String contains an invalid utf-8 sequence"),
+// which leaves \textbf{ unclosed and ends the index `multicols` early.
+// Translating known symbols to a stable ASCII name in the sort key
+// keeps the printed display untouched while putting the entry in a
+// real letter group.
+const INDEX_SORT_REPLACEMENTS = [
+  [/⚡️?/g, 'lightning bolt'],
+  [/≤/g, 'less or equal'],
+  [/≥/g, 'greater or equal'],
+  [/➔/g, 'arrow'],
+  [/…/g, '...'],
+  [/[“”]/g, '"'],
+  [/[‘’]/g, "'"],
+  [/—/g, '-'],
+  [/–/g, '-'],
+];
+
+function asciiSortKey(value) {
+  let out = value;
+  for (const [re, rep] of INDEX_SORT_REPLACEMENTS) out = out.replace(re, rep);
+  // Strip anything still outside ASCII so makeindex sorts on a clean
+  // single-byte string. Collapse whitespace introduced by the replacement.
+  out = out.replace(/[^\x20-\x7e]/g, '').replace(/\s+/g, ' ').trim();
+  return out;
+}
+
 function rewriteIndexEntry(value) {
   if (typeof value !== 'string') return value;
   // Trailing backslashes on index entries (sometimes left over from
@@ -157,55 +188,82 @@ function rewriteIndexEntry(value) {
   // an index term.
   value = value.replace(/\\+\s*$/, '').trim();
   const hasCode = value.includes('`');
-  const hasBolt = /[⚡]/.test(value);
-  if (!hasCode && !hasBolt) return value;
+  const hasNonAscii = /[^\x00-\x7f]/.test(value);
+  if (!hasCode && !hasNonAscii) return value;
   // Display: `set` -> \texttt{set}; ⚡ (with optional VS-16) -> \snaplightning{}.
   // # / % / & are parameter / comment / tab-alignment characters in LaTeX
   // and would break the .ind file makeindex emits if left bare inside the
   // \texttt{...} group. _ is already typically escaped by myst upstream
   // but we double-escape defensively.
+  // Display-side rewrites: render `code` as \texttt{...}; map symbols
+  // that have no glyph in the body font (Source Serif Pro) to a TeX
+  // command that does — \snaplightning{} for ⚡, \textrightarrow{} for
+  // the ➔ found in block names like `sentence ➔ list`. Without these
+  // the .ind file would render a missing-glyph box for those symbols.
   const display = quoteForMakeindex(
     value
       .replace(/`([^`]+)`/g, (_m, code) =>
         `\\texttt{${code.replace(/(?<!\\)([#%&_])/g, '\\$1')}}`,
       )
-      .replace(/⚡️?/g, '\\snaplightning{}'),
+      .replace(/⚡️?/g, '\\snaplightning{}')
+      .replace(/➔/g, '\\textrightarrow{}'),
   );
-  // Sort key: drop the formatting markers entirely, collapse the
-  // resulting whitespace, and substitute "lightning bolt" for ⚡ so
-  // the entry alphabetizes near "L" rather than the symbol section.
+  // Sort key: drop formatting markers, translate known symbols to ASCII
+  // names so they alphabetize sensibly, and strip anything else outside
+  // ASCII so makeindex doesn't make a bogus single-byte letter group.
   const sort = quoteForMakeindex(
-    value
-      .replace(/`/g, '')
-      .replace(/⚡️?\s*/g, 'lightning bolt ')
-      .replace(/\s+/g, ' ')
-      .trim(),
+    asciiSortKey(value.replace(/`/g, '')),
   );
   return `${sort}@${display}`;
 }
 
-// Replace ⚡ (with optional VS-16) inside a text node with raw TeX
-// pointing at \snaplightning. Returns either the original node, a
-// single replacement, or an array of nodes when the bolt appears
-// in the middle of a longer string.
-function expandLightningInTextNode(node) {
+// Symbols that have no glyph in the body fonts (Source Serif Pro,
+// Latin Modern Mono) and therefore render as a missing-character box
+// in the PDF. Each entry maps the source character (with an optional
+// trailing variation selector U+FE0F) to a TeX command that renders
+// something visually equivalent in any body font.
+const BODY_SYMBOL_MAP = [
+  { re: /⚡️?/g, tex: '\\snaplightning{}' },
+  { re: /➔/g,    tex: '\\textrightarrow{}' },
+];
+
+const BODY_SYMBOL_RE = new RegExp(
+  BODY_SYMBOL_MAP.map((s) => s.re.source).join('|'),
+  'g',
+);
+
+// Replace symbols that have no body-font glyph inside a text node with
+// raw TeX commands. Returns either null (no change), or an array of
+// replacement nodes when a symbol appears in the middle of a string.
+function expandSymbolsInTextNode(node) {
   if (node.type !== 'text' || typeof node.value !== 'string') return null;
-  if (!/[⚡]/.test(node.value)) return null;
-  const parts = node.value.split(/⚡️?/);
+  if (!BODY_SYMBOL_RE.test(node.value)) return null;
+  // BODY_SYMBOL_RE is global; reset state before splitting per-symbol.
+  BODY_SYMBOL_RE.lastIndex = 0;
   const out = [];
-  parts.forEach((part, idx) => {
-    if (part) out.push({ type: 'text', value: part });
-    if (idx < parts.length - 1) {
-      out.push({ type: 'raw', lang: 'tex', tex: '\\snaplightning{}' });
+  let cursor = 0;
+  for (const m of node.value.matchAll(BODY_SYMBOL_RE)) {
+    if (m.index > cursor) {
+      out.push({ type: 'text', value: node.value.slice(cursor, m.index) });
     }
-  });
+    const matched = m[0];
+    const entry = BODY_SYMBOL_MAP.find((s) => {
+      s.re.lastIndex = 0;
+      return s.re.test(matched);
+    });
+    out.push({ type: 'raw', lang: 'tex', tex: entry?.tex ?? matched });
+    cursor = m.index + matched.length;
+  }
+  if (cursor < node.value.length) {
+    out.push({ type: 'text', value: node.value.slice(cursor) });
+  }
   return out;
 }
 
-function rewriteLightningInChildren(parent) {
+function rewriteSymbolsInChildren(parent) {
   if (!Array.isArray(parent.children)) return;
   for (let i = 0; i < parent.children.length; i++) {
-    const replacement = expandLightningInTextNode(parent.children[i]);
+    const replacement = expandSymbolsInTextNode(parent.children[i]);
     if (replacement) {
       parent.children.splice(i, 1, ...replacement);
       i += replacement.length - 1;
@@ -297,11 +355,11 @@ const latexShimsTransform = {
       });
     });
 
-    // 4. Lightning bolt in body text. Source Serif Pro has no glyph
-    //    for ⚡, so we splice in a \snaplightning{} raw-TeX node
-    //    wherever the emoji appears. Index-entry strings were already
-    //    handled above.
-    walkAll(tree, (node) => rewriteLightningInChildren(node));
+    // 4. Body-font symbol substitutions. Source Serif Pro and Latin
+    //    Modern Mono have no glyph for the ⚡ and ➔ symbols Snap! uses
+    //    in block names, so we splice in raw-TeX nodes wherever they
+    //    appear. Index-entry strings were already handled above.
+    walkAll(tree, (node) => rewriteSymbolsInChildren(node));
 
     // 5. Image sizing.
     //    Inline images get a sentinel width that the custom \includegraphics

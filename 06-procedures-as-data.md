@@ -4,7 +4,7 @@
 (sec-ch06)=
 # 6. Procedures as Data
 
-![Definition of `my for` block and the block created.](images/05-typed-inputs/image695.png)
+{img alt="Definition of `my for` block and the block created." width="7.07in"}`images/05-typed-inputs/image695.png`
 
 :::{index} call block
 first class procedures
@@ -19,7 +19,7 @@ In the {index}`for block` example above, the input named <var>action</var> has b
 does the block actually tell Snap<em>!</em> to carry out the commands inside
 the C-slot? Here is a simple version of the block script:
 
-![image692.png](images/06-procedures-as-data/image692.png)
+{img alt="image692.png" width="3.67in"}`images/06-procedures-as-data/image692.png`
 
 This is simplified because it assumes, without checking, that the ending
 value is greater than the starting value; if not, the block should
@@ -29,7 +29,7 @@ the variable by −1 for each repetition instead of by 1.
 The important part of this script is the `run` block near
 the end. This is a Snap<em>!</em> built-in command block that takes a
 Command-type value (a script) as its input, and carries out its
-instructions. (In this example, the value of the input {inline alt="image693.png"}`images/06-procedures-as-data/image693.png` <!--  style="width:0.5in;height:0.15625in" / --> is the script
+instructions. (In this example, the value of the input {inline alt="image693.png"}`images/06-procedures-as-data/image693.png` <!--  width="0.5in" / --> is the script
 that the user puts in the C-slot of the `my for` block.) There is a
 similar `call` reporter block for invoking a Reporter or Predicate block.
 The `call` and `run` blocks are at the heart of
@@ -41,7 +41,7 @@ program.
 Here’s another example, this time using a Reporter-type input in a `map`
 block (see @sec-map):
 
-![image743.png](images/06-procedures-as-data/image743.png)
+{img alt="image743.png" width="0.97in"}`images/06-procedures-as-data/image743.png`
 
 Here we are calling the Reporter `multiply by (10)` three times, once with
 each item of the given list as its input, and collecting the results as
@@ -66,7 +66,7 @@ The `call` block (like the `run` block) has a right arrowhead at the end;
 clicking on it adds the phrase "`with inputs`" and then a slot into which
 an input can be inserted:
 
-![image698.png](images/06-procedures-as-data/image698.png) <!--  style="width:1.8125in;height:0.20833in" / -->
+{img alt="image698.png" width="1.81in"}`images/06-procedures-as-data/image698.png`
 
 If the left arrowhead is used to remove the last input slot, the "`with inputs`" disappears also. The right arrowhead can be
 clicked as many times as needed for the number of inputs required by the
@@ -78,7 +78,7 @@ same as the number of empty input slots, then the empty slots are filled from le
 given input values. If `call` is given exactly one input, then *every*
 empty input slot of the called block is filled with the same value:
 
-{inline alt="image699.png" class="image-4x"}`images/06-procedures-as-data/image699.png` <!--  style="width:2.72917in;height:0.31806in" / -->
+{inline alt="image699.png" class="image-4x"}`images/06-procedures-as-data/image699.png` <!--  width="2.72917in" / -->
 
 If the number of inputs provided is neither one nor the number of empty
 slots, then there is no automatic filling of empty slots. (Instead you
@@ -91,9 +91,9 @@ and `map` above. This notation indicates that *the block itself,* not the
 number or other value that the block would report when called, is the
 input. If you want to use a block itself in a non-Reporter-type (e.g.,
 Any-type) input slot, you can enclose it explicitly in a ring, found at
-the top of the {span .mono}[Operators] palette.
+the top of the {span .mono}`Operators` palette.
 
-![image744.png](images/06-procedures-as-data/image744.png) <!--  style="width:0.5in;height:0.15625in" / -->
+{img alt="image744.png" width="1.08in"}`images/06-procedures-as-data/image744.png`
 
 As a shortcut, if you right-click or control-click on a block (such as
 the `( ) + ( ) ` block in this example), one of the choices in the menu that
@@ -135,8 +135,8 @@ procedure
 C-shaped block
 C programming language
 Java programming language
-run block
-call block
+`run` block
+`call` block
 empty input slots, filling
 ring, gray
 `repeat` block
@@ -152,10 +152,10 @@ otherwise, “reporter” includes predicates. When the word is capitalized
 inside a sentence, it means specifically oval-shaped blocks. So, “nested
 reporters” includes predicates, but “a Reporter-type input” doesn’t.)
 
-Although an {span .mono}[Any-type] input slot (what you get if you use the small
+Although an {span .mono}`Any-type` input slot (what you get if you use the small
 input-name dialog box) will accept a procedure input, it doesn’t
 automatically ring the input as described above. So the declaration of
-{span .mono}[Procedure-type] inputs makes the use of your custom higher order block
+{span .mono}`Procedure-type` inputs makes the use of your custom higher order block
 much more convenient.
 
 Why would you want a block to take a procedure as input? This is actually
@@ -165,7 +165,7 @@ just don’t usually think about it in those terms! We could write the
 repeat block as a custom block this way, if Snap<em>!</em>
 didn’t already have one:
 
-![image708.png](images/06-procedures-as-data/image708.png) <!--  style="width:2.375in;height:1.35417in" / -->
+{img alt="image708.png" width="2.38in"}`images/06-procedures-as-data/image708.png`
 
 The lambda ("`λ`") next to <var>action</var> in the prototype indicates that this is a
 C-shaped block, and that the script enclosed by
@@ -173,9 +173,9 @@ the C when the block is used is the input named <var>action</var> in the body of
 the script. The only way to make sense of the variable <var>action</var> is to
 understand that its value is a script.
 
-To declare an input to be {span .mono}[Procedure-type], open the input name dialog as usual, and click on the arrowhead:
+To declare an input to be {span .mono}`Procedure-type`, open the input name dialog as usual, and click on the arrowhead:
 
-![image509.png](images/06-procedures-as-data/image509.png) <!--  style="width:2.58333in;height:1.60417in" / -->
+{img alt="image509.png" width="2.58in"}`images/06-procedures-as-data/image509.png`
 
 Then, in the long dialog, choose the appropriate Procedure type. The
 third row of input types has a ring in the shape of each block type
@@ -191,7 +191,7 @@ block, it turns into an inline slot, as in the `repeater` block’s
 recursive call above. (Other built-in Reporters can’t report scripts, so
 they aren’t accepted in a C-shaped slot.)
 
- ![image709.png](images/06-procedures-as-data/image709.png) <!--  style="width:3.65278in;height:2.75455in" / -->
+ {img alt="image709.png" width="3.65in"}`images/06-procedures-as-data/image709.png`
 
 
 Why would you ever choose an inline Command slot rather than a C shape?
@@ -200,7 +200,7 @@ case I can think of is something like the C /C++/Java `for` loop, which
 actually has *three* command script inputs (and one predicate input),
 only one of which is the “featured” loop body:
 
-![image710.png](images/06-procedures-as-data/image710.png) <!--  style="width:2.11458in;height:0.46875in" / -->
+{img alt="image710.png" width="2.11in"}`images/06-procedures-as-data/image710.png`
 
 Okay, now that we have procedures as inputs to our blocks, how do we use
 them? We use the blocks `run` (for commands) and `call`
@@ -219,12 +219,12 @@ possible meanings:
 of inputs provided, then Snap<em>!</em> fills the empty slots from left to
 right:
 
-![image711.png](images/06-procedures-as-data/image711.png) <!--  style="width:3.44792in;height:0.34406in" / -->
+{img alt="image711.png" width="3.45in"}`images/06-procedures-as-data/image711.png`
 
 2. If exactly one input is provided, Snap<em>!</em> will fill any number of
 empty slots with it:
 
-![image712.png](images/06-procedures-as-data/image712.png) <!--  style="width:2.80208in;height:0.30694in" / -->
+{img alt="image712.png" width="2.80in"}`images/06-procedures-as-data/image712.png`
 
 3. Otherwise, Snap<em>!</em> won’t fill any slots, because the user’s
 intention is unclear.
@@ -258,7 +258,7 @@ drop that input list *onto the arrowheads* that indicate a
 variable-input slot, rather than onto the
 input slot:
 
-![image715.png](images/06-procedures-as-data/image715.png) <!--  style="width:2.27569in;height:1.59722in" / -->
+{img alt="image715.png" width="2.28in"}`images/06-procedures-as-data/image715.png`
 
 
 Note that the halo you see while dragging onto the
@@ -272,7 +272,7 @@ numbers, each individual item is a number, just what `sizes` wants. This
 block will take any number of numbers as inputs, and will make the
 sprite grow and shrink accordingly:
 
-![image716.png](images/06-procedures-as-data/image716.png)
+{img alt="image716.png" width="6.81in"}`images/06-procedures-as-data/image716.png`
 
 The user of this block calls it with any number of *individual numbers* as
 inputs. But inside the definition of the block, all of those numbers
@@ -282,7 +282,7 @@ it processes the ﬁrst input (`item (1) of ( )`the list), then it wants to make
 a recursive call with all but the ﬁrst number (`all but first of ( )`). But `sizes` doesn’t take a
 list as input; it takes numbers as inputs! So this would be wrong:
 
-![image722.png](images/06-procedures-as-data/image722.png)
+{img alt="image722.png" width="2.96in"}`images/06-procedures-as-data/image722.png`
 
 :::{index} name, input
 `#1`
@@ -303,7 +303,7 @@ arrowhead at the right. Clicking the arrowhead allows you to give the
 inputs to a block or script explicit names, instead
 of using empty input slots as we’ve done until now.
 
-![image730.png](images/06-procedures-as-data/image730.png) <!--  style="width:4.32292in;height:0.45417in" / -->
+![image730.png](images/06-procedures-as-data/image730.png) <!--  width="4.32292in" / -->
 
 The names <var>\#1</var>, <var>\#2</var>, etc. are provided by default, but you
 can change a name by clicking on its orange oval in the "`input names`"
@@ -317,7 +317,7 @@ example using explicit names to control which input goes where inside
 the `ring`:
 
 
-![image731.png](images/06-procedures-as-data/image731.png) <!--  style="width:4.32292in;height:0.45417in" / -->
+{img alt="image731.png" width="4.32in"}`images/06-procedures-as-data/image731.png`
 
 Here we just want to put one of the inputs into two different slots. If
 we left all three slots empty, Snap<em>!</em> would not fill any of them,
@@ -325,9 +325,9 @@ because the number of inputs provided (2) would not match the number of
 empty slots (3).
 
 Here is a more realistic,
-much more advanced example: ![image733.png](images/06-procedures-as-data/image733.png) <!--  style="width:4.34722in;height:1.40278in" / -->
+much more advanced example: ![image733.png](images/06-procedures-as-data/image733.png) <!--  width="4.34722in" / -->
 
-![image732.png](images/06-procedures-as-data/image732.png) <!--  style="width:4.67986in;height:3.01806in" / -->
+{img alt="image732.png" width="4.68in"}`images/06-procedures-as-data/image732.png`
 
 This is the definition of a block that takes any number of lists, and
 reports the list of all possible combinations of one item from each
@@ -355,10 +355,10 @@ stop Snap<em>!</em> from filling a slot that should really remain empty.
 
 Here’s
 an example of a situation in which a procedure must be explicitly marked
-as data by pulling a `ring` from the {span .mono}[Operators] palette and putting the
+as data by pulling a `ring` from the {span .mono}`Operators` palette and putting the
 procedure (block or script) inside it:
 
-![image734.png](images/06-procedures-as-data/image734.png) <!--  style="width:5.1875in;height:1.65625in" / -->
+{img alt="image734.png" width="5.19in"}`images/06-procedures-as-data/image734.png`
 
 Here, we are making a list of procedures.
 But the `list` block accepts inputs of any type, so its input slots are
@@ -372,7 +372,7 @@ are `set ( ) to ( )` (to set the value of a variable to a procedure), `say ( )`a
 (to display a procedure to the user), and `report ( )`(for a reporter that
 reports a procedure):
 
-![image735.png](images/06-procedures-as-data/image735.png) <!--  style="width:3.83333in;height:0.84375in" / -->
+{img alt="image735.png" width="3.83in"}`images/06-procedures-as-data/image735.png`
 
 :::{index} `if else` block
 factorial
@@ -394,18 +394,21 @@ emphasize functional programming, it lacks a corresponding reporter
 block to choose between two expressions. Snap<em>!</em> has one, but we could
 write our own:
 
-<!-- TODO: The 2 + 1 layout is kind of a special case. -->
-:::{.evenly-spaced-images layout-ncol=2}
-![image736.png](images/06-procedures-as-data/image736.png) <br/>
-![image739.png](images/06-procedures-as-data/image739.png)
+::::{grid} 2
+:::{grid-item}
+{img alt="image736.png" width="2.50in"}`images/06-procedures-as-data/image736.png`
 
-![image737.png](images/06-procedures-as-data/image737.png)
+{img alt="image739.png" width="3.82in"}`images/06-procedures-as-data/image739.png`
 :::
+:::{grid-item}
+{img alt="image737.png" width="2.40in"}`images/06-procedures-as-data/image737.png`
+:::
+::::
 
 Our block works for these simple examples, but if we try to use it in writing a
 {index}`recursive operator`, it’ll fail:
 
-![image738.png](images/06-procedures-as-data/image738.png) <!--  style="width:4.29167in;height:0.84861in" / -->
+{img alt="image738.png" width="4.29in"}`images/06-procedures-as-data/image738.png`
 
 The problem is that when any block is called, all of its inputs are
 computed (evaluated) before the block itself runs. The block itself
@@ -417,17 +420,21 @@ an infinite loop. We need `my if then else` block to be able to select
 only one of the two alternatives to be evaluated.
 
 We have a mechanism to allow that: declare the then variable <var>yes</var> and else variable <var>no</var> inputs to
-be of type {span .mono}[Reporter] rather than type {span .mono}[Any]. Then, when calling the block,
+be of type {span .mono}`Reporter` rather than type {span .mono}`Any`. Then, when calling the block,
 those inputs will be enclosed in a `ring` so that the expressions
 themselves, rather than their values, become the inputs:
 
-:::{.evenly-spaced-images layout-ncol=3}
-![image740.png](images/06-procedures-as-data/image740.png)
-
-![image742.png](images/06-procedures-as-data/image742.png)
-
-![image741.png](images/06-procedures-as-data/image741.png)
+::::{grid} 3
+:::{grid-item}
+{img alt="image740.png" width="1.11in"}`images/06-procedures-as-data/image740.png`
 :::
+:::{grid-item}
+{img alt="image742.png" width="2.62in"}`images/06-procedures-as-data/image742.png`
+:::
+:::{grid-item}
+{img alt="image741.png" width="4.52in"}`images/06-procedures-as-data/image741.png`
+:::
+::::
 
 In this version, the program works, with no infinite loop. But we’ve
 paid a heavy price: this `reporter-if` is no longer as intuitively obvious
@@ -451,16 +458,16 @@ transformation of constant data into constant functions) is called a
 *special form*. To turn our `if` block into a
 special form, we edit the block’s prototype, declaring the inputs <var>yes</var>
 and <var>no</var> to be of type "`Any (unevaluated)`"
-instead of type {span .mono}[Reporter]. The script for the block is still that of the
+instead of type {span .mono}`Reporter`. The script for the block is still that of the
 second version, including the use of `call` to evaluate either <var>yes</var> or <var>no</var>
-but not both. But the slots appear as white {span .mono}[Any-type] rectangles, not
-{span .mono}[Reporter-type] rings, and the factorial block will look like our ﬁrst
+but not both. But the slots appear as white {span .mono}`Any-type` rectangles, not
+{span .mono}`Reporter-type` rings, and the factorial block will look like our ﬁrst
 attempt.
 
 In a special form’s prototype, {index}`the unevaluated`
 input slot(s) are indicated by a lambda ("`λ`") next to the input name, just
-as if they were declared as {span .mono}[Procedure] type. They
-*are* {span .mono}[Procedure] type, really; they’re just disguised to the user of the
+as if they were declared as {span .mono}`Procedure` type. They
+*are* {span .mono}`Procedure` type, really; they’re just disguised to the user of the
 block.
 
 Special forms trade off implementor sophistication
@@ -487,14 +494,14 @@ Scratch doesn’t have custom C‑shaped blocks, it can afford to handwave
 away the distinction between evaluated and unevaluated Booleans, but
 Snap<em>!</em> can’t. The pedagogic value of special forms is proven by the
 fact that no Scratcher ever notices that there’s anything strange about
-the way in which the hexagonal inputs in the {span .mono}[Control] blocks are
+the way in which the hexagonal inputs in the {span .mono}`Control` blocks are
 evaluated.
 
 Also, the C-shaped slot familiar to Scratch users
 is an unevaluated procedure type; you don’t have to use a `ring` to keep
 the commands in the C-slot from being run before the C-shaped block is
 run. Those commands themselves, not the result of running them, are the
-input to the C-shaped {span .mono}[Control] block. (This is taken for granted by
+input to the C-shaped {span .mono}`Control` block. (This is taken for granted by
 Scratch users, especially because Scratchers don’t think of the contents
 of a C-slot as an input at all.) This is why it makes sense that
 “C‑shaped” is on the fourth row of types in the long form input dialog,

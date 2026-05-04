@@ -18,8 +18,8 @@ like if you save locally. This is why we have multiple ways to save.
 In either case, if you choose "`Save as…`" from the File menu. You’ll see something like this:
 
 (fig-saveas)=
-![image487.png](images/02-saving-and-loading-projects-and/image487.png)
-<!--  style="width:3.54861in;height:2.57639in" / -->
+{img alt="image487.png" width="3.55in"}`images/02-saving-and-loading-projects-and/image487.png`
+<!--  width="3.54861in" / -->
 
 (If you are not logged in to your Snap<em>!</em> cloud account, Computer will
 be the only usable option.) The text box at the bottom right of the Save
@@ -50,7 +50,7 @@ us. Click on the {index}`Cloud button` ({inline alt="image489.png"}`images/02-sa
 Choose the “`Signup…`” option. This will show you a window that looks like
 the picture below:
 
-![image488.png](images/02-saving-and-loading-projects-and/image488.png) <!--  style="width:1.23403in;height:2.32986in" / -->
+{img alt="image488.png" width="1.23in"}`images/02-saving-and-loading-projects-and/image488.png`
 
 You must choose a {index}`user name` that will identify you on
 the web site, such as `Jens`. If you’re a Scratch user, you can use
@@ -92,7 +92,7 @@ us say this.)
 Once you’ve created your account, you can log into it using the "`Login…`"
 option from the Cloud menu:
 
-![image490.png](images/02-saving-and-loading-projects-and/image490.png) <!--  style="width:1.6875in;height:2.02778in" / -->
+{img alt="image490.png" width="1.69in"}`images/02-saving-and-loading-projects-and/image490.png`
 
 Use the user name and password that you set up earlier. If you check the
 "`Stay signed in`" box, then you will be logged in automatically the next
@@ -150,7 +150,7 @@ the Computer and Cloud options.
 
 If you are still in **Snap<em>!</em>** and realize that you’ve loaded another
 project without saving the one you were working on: _**Don’t edit the new project.**_
-From the File menu {inline alt="image384.png"}`images/02-saving-and-loading-projects-and/image384.png` <!--  style="width:0.31944in;height:0.18056in" --> choose the "`Restore unsaved project`"
+From the File menu {inline alt="image384.png"}`images/02-saving-and-loading-projects-and/image384.png` <!--  width="0.31944in" --> choose the "`Restore unsaved project`"
 option .
 
 Restore unsaved project will also work if you log out of Snap<em>!</em> and
@@ -173,7 +173,7 @@ project and haven’t yet saved it, Snap<em>!</em> displays a pencil icon to the
 left of the project name on the toolbar at the top of the window:
 
 <!-- TODO: MISSING FILE -->
-<!-- ![image391.png](images/02-saving-and-loading-projects-and/image391.png)  style="width:0.31944in;height:0.18056in"/  -->
+<!-- ![image391.png](images/02-saving-and-loading-projects-and/image391.png)  width="0.31944in"/  -->
 
 ## Private and Public Projects
 

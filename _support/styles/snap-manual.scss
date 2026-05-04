@@ -97,29 +97,25 @@ html.dark .menu-text code {
 // TODO: make latex env
 .image-1-5x {
   &, img {
-    height: 70%;
-    width: auto;
+    width: 70%;
   }
 }
 
 .image-2x {
   &, img {
-    height: 50%;
-    width: auto;
+    width: 50%;
   }
 }
 
 .image-3x {
     &, img {
-    height: 33.33%;
-    width: auto;
+    width: 33.33%;
   }
 }
 
 .image-4x {
   &, img {
-    height: 25%;
-    width: auto;
+    width: 25%;
   }
 }
 
@@ -167,6 +163,7 @@ figure.image-inline-tall {
   }
 }
 
+.image-inline.tall,
 .image-inline-tall {
   display: inline;
   padding: 0;
