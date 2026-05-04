@@ -47,7 +47,7 @@ attribute in the same braces:
 
 ```md
 ![alt text](filename.png){width=2.84in}
-{inline alt="alt text" class="image-4x width=3in"}`filename.png`
+{inline alt="alt text" class="image-4x" width="3in"}`filename.png`
 ```
 
 MyST forwards `width=Xin` to `\includegraphics[width=Xin]{...}`, so the
