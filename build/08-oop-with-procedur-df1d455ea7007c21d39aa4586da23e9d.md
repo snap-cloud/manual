@@ -25,7 +25,7 @@ build up to full implementations of class/instance and prototyping OOP.
 instance
 class
 objects, building explicitly
-script variables block
+`script variables` block
 :::
 
 ## Local State with Script Variables
@@ -41,7 +41,7 @@ inside its body. That procedure implements a specific counter object, an
 invoked, a counter instance increases and reports its count variable.
 Each counter has its own local count:
 
-{inline alt="image851.png" class="image-4x"}`images/08-oop-with-procedures/image851.png` <!--  style="width:2.23958in;height:1.51042in" / -->
+{inline alt="image851.png" class="image-4x"}`images/08-oop-with-procedures/image851.png` <!--  width="2.23958in" / -->
 
 This example will repay careful study, because it isn’t obvious why each
 instance has a separate count. From the point of view of the <code>make a
@@ -62,7 +62,7 @@ to a particular counter.
 
 :::{index} dispatch procedure
 method
-ask block
+`ask` block
 unringify
 :::
 
@@ -86,7 +86,7 @@ version, calling the instance gives access to a method,
 which must then be called to finish the job. We can provide a block to
 do both procedure calls in one:
 
-{inline alt="image854.png" class="image-4x"}`images/08-oop-with-procedures/image854.png` <!--  style="width:4.01042in;height:0.70772in" / -->
+{inline alt="image854.png" class="image-4x"}`images/08-oop-with-procedures/image854.png` <!--  width="4.01042in" / -->
 
 The <code>ask</code> block has two required inputs: an object and a
 message. It also accepts optional additional inputs, which Snap<em>!</em> puts
@@ -136,7 +136,7 @@ a value divisible by 7, it will end up reporting that number, not
 key-value pair
 dispatch procedure
 methods table
-clone of block
+`clone of` block
 :::
 
 ## An Implementation of Prototyping OOP

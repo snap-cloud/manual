@@ -13,13 +13,13 @@ function, higher order
 hyperblocks
 rank
 termwise extension
-item block
+`item` block
 APL library
 APL character set
 Unicode
 APL2
 equality of complete structures
-ravel block
+`ravel` block
 media computation
 spreadsheet
 Paleolithic
@@ -128,13 +128,13 @@ left, a=b reports an array of Booleans (represented in APL as 0 for
 False, 1 for True); the comma operator turns the shape of the array into
 a simple vector; and **∧**/ means “reduce with and”; “reduce” is our
 combine function. That six-character program is much less effort than
-the equivalent {inline alt="image1263.png"}`images/b-apl-features/image1263.png` <!--  style="width:4.45139in;height:0.52083in" / --> in Snap<em>!</em>. Note in passing
+the equivalent {inline alt="image1263.png"}`images/b-apl-features/image1263.png` <!--  width="4.45139in" / --> in Snap<em>!</em>. Note in passing
 that if you wanted to know *how many* corresponding elements of the two
 arrays are equal, you’d just use +/ instead of **∧**/. Note also that
 our APLish blocks are a little verbose, because they include up to three
 notations for the function: the usual Snap<em>!</em> name (e.g., flatten), the
 name APL programmers use when talking about it (ravel), and, in yellow type, the symbol used in actual APL code (,).
-We’re not consistent about it; ![image1264.png](images/b-apl-features/image1264.png) <!--  style="width:0.99306in;height:0.20833in" / -->  seems self-documenting. And LCM (and) is
+We’re not consistent about it; ![image1264.png](images/b-apl-features/image1264.png) <!--  width="0.99306in" / -->  seems self-documenting. And LCM (and) is
 different even though it has two names; it turns out that if you
 represent Boolean values as 0 and 1, then the algorithm to compute the
 least common multiple of two integers computes the and function if the
@@ -206,10 +206,10 @@ as 1, so our APL library tries to report Snap<em>!</em> Boolean values from
 predicate functions.
 
 :::{index} scalar = block
-scalar join block
-deal block
-signum block
-roll block
+`scalar join` block
+`deal` block
+`signum` block
+`roll` block
 :::
 
 ### Scalar functions
@@ -223,27 +223,27 @@ hyperblock that extends termwise to arrays. Join, the only non-predicate
 non-hyper scalar primitive, has its own scalar join block. 7 deal 52 reports a random vector of
 seven numbers from 1 to 52 with no repetitions, as in dealing a hand of
 cards. Signum of a number reports 1 if the number
-is positive, 0 if it’s zero, or -1 if it’s negative. Roll 6 reports a random roll of a six-sided die. To roll 8 dice, use {inline alt="image1266.png"}`images/b-apl-features/image1266.png` <!--  style="width:2.56667in;height:0.21667in" --> ,
+is positive, 0 if it’s zero, or -1 if it’s negative. Roll 6 reports a random roll of a six-sided die. To roll 8 dice, use {inline alt="image1266.png"}`images/b-apl-features/image1266.png` <!--  width="2.56667in" --> ,
 which would look much more pleasant as ?8⍴6. But perhaps our version is
 more instantly readable by someone who didn’t grow up with APL. All the
 library functions have help messages available.
 
 :::{index} function, mixed
-shape of block
-rank of block
-reshape block
-flatten block
-catenate block
-catenate vertically block
-integers block
-iota block
+`shape of` block
+`rank of` block
+`reshape` block
+`flatten` block
+`catenate` block
+`catenate vertically` block
+`integers` block
+`iota` block
 index of block (APL)
-contained in block
-grade up block
-grade down block
-drop block
-reverse columns block
-transpose block
+`contained in` block
+`grade up` block
+`grade down` block
+`drop` block
+`reverse columns` block
+`transpose` block
 :::
 
 ### Mixed functions
@@ -256,7 +256,7 @@ list in that input slot as an implicit map, as for scalar functions.
 This means you have to learn the rule for each mixed function
 individually.
 
-![image1268.png](images/b-apl-features/image1268.png) <!--  style="width:1.06667in;height:0.18333in" --> The shape of function
+![image1268.png](images/b-apl-features/image1268.png) <!--  width="1.06667in" --> The shape of function
 takes any input and reports a vector of the
 maximum size of the structure along each dimension. For a vector, it
 returns a list of length 1 containing the length of the input. For a
@@ -267,7 +267,7 @@ an empty vector. Equivalent to the dimensions of primitive, as of 6.6.
 
 {img alt="image1267.png" width="4.28in"}`images/b-apl-features/image1267.png`
 
-![image1269.png](images/b-apl-features/image1269.png) <!--  style="width:1.04167in;height:0.18333in" --> Rank of
+![image1269.png](images/b-apl-features/image1269.png) <!--  width="1.04167in" --> Rank of
 isn’t an actual APL primitive, but the composition ⍴⍴
 (shape of shape of a structure), which reports the number of dimensions
 of the structure (the length of its shape vector), is too useful to
@@ -301,7 +301,7 @@ are sometimes useful too:
 
 {img alt="image1273.png" width="5.51in"}`images/b-apl-features/image1273.png`
 
-![image1275.png](images/b-apl-features/image1275.png) <!--  style="width:1.43333in;height:0.18333in" --> Flatten takes an arbitrary structure as input and reports a vector of its
+![image1275.png](images/b-apl-features/image1275.png) <!--  width="1.43333in" --> Flatten takes an arbitrary structure as input and reports a vector of its
 atomic elements in row-major order. Lispians call this flattening the
 structure, but APLers call it “ravel” because of the metaphor of pulling
 on a ball of yarn, so what they really mean is “unravel.” (But the
@@ -347,7 +347,7 @@ to a string:
 
 {img alt="image1283.png" width="6.03in"}`images/b-apl-features/image1283.png`
 
-![image1284.png](images/b-apl-features/image1284.png) <!--  style="width:1.475in;height:0.25in" -->  Dyadic iota is like
+![image1284.png](images/b-apl-features/image1284.png) <!--  width="1.475in" -->  Dyadic iota is like
 the index of primitive except for its
 handling of multi-dimensional arrays. It looks only for atomic elements,
 so a vector in the second input doesn’t mean to search for that vector
@@ -405,7 +405,7 @@ looks only for atomic elements.
 
 {img alt="image1293.png" width="7.49in"}`images/b-apl-features/image1293.png`
 
-![image1294.png](images/b-apl-features/image1294.png) <!--  style="width:7.48542in;height:0.65972in" -->The blocks grade up and grade down are used for sorting data. Given an array as input, it
+![image1294.png](images/b-apl-features/image1294.png) <!--  width="7.48542in" -->The blocks grade up and grade down are used for sorting data. Given an array as input, it
 reports a vector of the indices in which the items (the rows, if a
 matrix) should be rearranged in order to be sorted. This will be clearer
 with an example:
@@ -455,19 +455,17 @@ index vector from grade down of column 3 and telling item to apply it to
 column 1, we get what we set out to find. As usual the code is more
 elegant in APL: database\[⍒database\[;3\];1\].
 
-In case you’ve forgotten, ![image1309.png](images/b-apl-features/image1309.png) <!--  style="width:2.30833in;height:0.275in" --> or  ![image1310.png](images/b-apl-features/image1310.png) <!--  style="width:2.91667in;height:0.325in" -->  would select the third *row* of the
-database; we need the list 3 in the second input slot of the outer list
-to select by columns rather than by rows.
+In case you’ve forgotten, {inline alt="image1309.png" width="2.30833in"}`images/b-apl-features/image1309.png` or {inline alt="image1310.png" width="2.91667in"}`images/b-apl-features/image1310.png` would select the third *row* of the database; we need the list 3 in the second input slot of the outer list to select by columns rather than by rows.
 
- {img alt="image1311.png" width="2.95in"}`images/b-apl-features/image1311.png`
+{img alt="image1311.png" width="2.95in"}`images/b-apl-features/image1311.png`
 
-Select ({index}`if take` ) or select all but (if drop
+Select ({index}`if take`) or select all but (if drop
 ) the first (if *n*\>0) or last (if *n*\<0) |*n*|
 items from a vector, or rows from a matrix. Alternatively, if the left
 input is a two-item vector, select rows with the first item and columns
 with the second.
 
- {img alt="image1312.png" width="2.95in"}`images/b-apl-features/image1312.png`
+{img alt="image1312.png" width="2.95in"}`images/b-apl-features/image1312.png`
 
 The {index}`compress block` selects a subset of its right
 input based on the Boolean values in its left input, which must be a
@@ -493,7 +491,7 @@ long block names so it won’t take you a month!
 
 {img alt="image1320.png" width="2.99in"}`images/b-apl-features/image1320.png`
 {img alt="image1319.png" width="3.17in"}`images/b-apl-features/image1319.png`
-![image1321.png](images/b-apl-features/image1321.png) <!--  style="width:1.11181in;height:0.23333in" --> Don’t confuse this
+![image1321.png](images/b-apl-features/image1321.png) <!--  width="1.11181in" --> Don’t confuse this
 block with the {index}`reduce block`, whose APL symbol is
 also a slash. In that block, what comes to the left of the slash is a
 dyadic combining function; it’s the APL equivalent of combine. This
@@ -526,11 +524,11 @@ full, so it’s even more restrictive.)
 
 :::{index} operator (APL)
 higher order function
-reduce block
-outer product block
+`reduce` block
+`outer product` block
 table
-inner product block
-printable block
+`inner product` block
+`printable` block
 :::
 
 ### Higher order functions
@@ -550,8 +548,7 @@ But APL does have a higher order version of combine:
 
 {img alt="image1323.png" width="5.88in"}`images/b-apl-features/image1323.png`
 
-The reduce block
-works just like combine, taking a dyadic function
+The `reduce` block works just like combine, taking a dyadic function
 and a list. The / version translates each row to a single value; the
 **⌿** version translates each column to a single value. That’s the only
 way to think about it from the perspective of combining individual
@@ -588,7 +585,7 @@ symbol ◦. is pronounced “jot dot.”) The way to think about this block is
 
 {img alt="image1335.png" width="7.24in"}`images/b-apl-features/image1335.png`
 
-![image1337.png](images/b-apl-features/image1337.png) <!--  style="width:2.61667in;height:0.24167in" --> The inner product
+![image1337.png](images/b-apl-features/image1337.png) <!--  width="2.61667in" --> The inner product
 block takes two matrices and two operations
 as input. The number of columns in the left matrix must equal the number
 of rows in the right matrix. When the two operations are + and ×, this
@@ -601,7 +598,7 @@ But other operations can be used. One common inner product is ∨.∧ (“or
 dot and”) applied to Boolean matrices, to find rows and columns that
 have corresponding items in common.
 
-![image1339.png](images/b-apl-features/image1339.png) <!--  style="width:0.95833in;height:0.18333in" --> The printable block
+![image1339.png](images/b-apl-features/image1339.png) <!--  width="0.95833in" --> The printable block
 isn’t an APL function; it’s an aid to exploring
 APL-in-Snap<em>!</em>. It transforms arrays to a compact representation that
 still makes the structure clear:
