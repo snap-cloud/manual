@@ -262,7 +262,8 @@ them into one word, combine them into a sentence (with spaces between
 items), see if all items of a list of Booleans are true, see if any of
 the items is true, find the smallest, or find the largest.
 
-![A `combine (list 7 8 1) using (() + ())` reporter that returns 16.](images/04-first-class-lists/20-script-combine-sum.png){width=3.87in}
+{img alt="A `combine (list 7 8 1) using (() + ())` reporter that returns 16." width="3.87in"}`images/04-first-class-lists/20-script-combine-sum.png`
+
 {img alt="A `combine (list Yakko Wakko Dot) using (join () , ())` reporter that returns the string "Yakko,Wakko,Dot"." width="6.28in"}`images/04-first-class-lists/21-script-combine-join.png`
 Why `+` but not `−`? It only
 makes sense to combine list items using an *associative*
@@ -430,8 +431,19 @@ Ringo,Starr,drums
 
 Here’s what the corresponding table looks like:
 
-![The four-row Beatles CSV imported as a list named "band" and shown in table view: rows 1–4 hold first name, last name, and instrument across three columns.](images/04-first-class-lists/30-watcher-table-view-beatles.png){width=2.4in}
-{img alt="The same "band" list shown in list view: each row is a separate sublist of three items (first name, last name, instrument), stacked vertically." width="1.6in"}`images/04-first-class-lists/31-watcher-list-view-beatles.png`
+::::{grid} 2
+
+:::{grid-item}
+{img alt="The four-row Beatles CSV imported as a list named 'band' and shown in table view: rows 1–4 hold first name, last name, and instrument across three columns." width="2.4in"}`images/04-first-class-lists/30-watcher-table-view-beatles.png`
+
+:::
+
+:::{grid-item}
+{img alt="The same 'band' list shown in list view: each row is a separate sublist of three items (first name, last name, instrument), stacked vertically." width="1.6in"}`images/04-first-class-lists/31-watcher-list-view-beatles.png`
+:::
+
+::::
+
 Here’s how to read a spreadsheet into Snap<em>!</em>:
 
 1. Make a variable with a watcher on stage: {inline alt="A `my database` variable watcher initialised with the value 0." width="1.21in"}`images/04-first-class-lists/32-watcher-my-database.png`
