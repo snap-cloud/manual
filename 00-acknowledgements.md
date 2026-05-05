@@ -39,8 +39,10 @@ and the rest of the gang who invented personal computing and object oriented
 programming in the great days of {index}`Xerox PARC`. He
 worked with {index}`John Maloney<single: Maloney, John>`, of the MIT Scratch Team, who developed the Morphic graphics framework that's still at the heart of Snap<em>!</em>.
 
+<!-- The LaTeX styling on Snap! is broken w/ bold and italics.  -->
+
 <strong><em>The brilliant design of Scratch, from the Lifelong Kindergarten
-Group at the MIT Media Lab, is crucial to Snap<em>!</em>. Our earlier version, BYOB, was a direct modification of the Scratch source code. Snap<em>!</em> is a complete rewrite, but its code structure and its user interface remain deeply indebted to Scratch. And the Scratch Team, who could have seen us as rivals, have been entirely supportive and welcoming to us.</em></strong>
+Group at the MIT Media Lab, is crucial to Snap!. Our earlier version, BYOB, was a direct modification of the Scratch source code. Snap! is a complete rewrite, but its code structure and its user interface remain deeply indebted to Scratch. And the Scratch Team, who could have seen us as rivals, have been entirely supportive and welcoming to us.</em></strong>
 
 Brian grew up at the MIT and Stanford Artificial Intelligence Labs,
 learning from Lisp inventor {index}`John McCarthy<single: McCarthy, John>`,

@@ -1,10 +1,14 @@
 ---
 ---
 
+:::{index}
+Scratch
+:::
+
 (sec-ch01)=
 # 1. Blocks, Scripts, and Sprites
 
-This chapter describes the Snap<em>!</em> features inherited from {index}`Scratch`; experienced Scratch users can skip to @sec-sprites-parallelism.
+This chapter describes the Snap<em>!</em> features inherited from Scratch; experienced Scratch users can skip to @sec-sprites-parallelism.
 
 Snap<em>!</em> is a programming language—a notation in which you can tell a
 computer what you want it to do. Unlike most programming languages,
@@ -80,7 +84,7 @@ that.[^1]
 
 <!-- TODO: Different CSS for an inline hat block? -->
 
-[^1]: One of the hat blocks, the generic blocks, the {index}`generic hat block <hat block; generic>` “when anything” block {inline alt="generic when hat block"}`images/01-blocks-scripts-and-sprites/image10`, is subtly different from the others. When the stop sign is clicked, or when a project or sprite is loaded, this block doesn’t test whether the condition in its hexagonal input slot is true, so the script beneath it will not run, until some *other* script in the project runs (because, for example, you click the green flag). When {index}`generic when` blocks are disabled, the stop sign {index}`stop sign, square` will be squarewill be {index}`square <square stop sign>` instead of octagonal.
+[^1]: One of the hat blocks, the {index}`generic hat block <hat block; generic>` “when anything” block {inline alt="generic when hat block"}`images/01-blocks-scripts-and-sprites/image10`, is subtly different from the others. When the stop sign is clicked, or when a project or sprite is loaded, this block doesn’t test whether the condition in its hexagonal input slot is true, so the script beneath it will not run, until some *other* script in the project runs (because, for example, you click the green flag). When {index}`generic when` blocks are disabled, the stop sign {index}`stop sign, square` will be squarewill be {index}`square <square stop sign>` instead of octagonal.
 
 
 The other blocks in our example script are *command* blocks. Each {index}`command block`

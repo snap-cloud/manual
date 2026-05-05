@@ -54,7 +54,8 @@
 % Serif is designed for screen + body legibility and reads well at
 % small sizes. Latin Modern stays loaded as the typewriter fallback
 % since Source Serif doesn't ship a monospaced family.
-\usepackage[default]{sourceserifpro}
+% \usepackage[default]{sourceserifpro}
+\usepackage[default]{baskerville}
 \usepackage{lmodern}
 % \snaplightning renders the lightning-bolt symbol used as a marker
 % for "compiled" / experimental Snap! blocks. Source Serif (and most
@@ -200,7 +201,7 @@
 % \vspace pulls the image and following paragraph up by ~0.1 baselines
 % each so the layout stays a touch tighter without crowding.
 \def\snap@fallback@includegraphics#1#2{%
-  \par\vspace{-0.1\baselineskip}%
+  % \par\vspace{-0.1\baselineskip}%
   \centerline{\snaporigincludegraphics[-"[#1]"-]{#2}}%
   \par\vspace{-0.1\baselineskip}%
 }
