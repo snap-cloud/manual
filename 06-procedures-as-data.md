@@ -303,7 +303,7 @@ arrowhead at the right. Clicking the arrowhead allows you to give the
 inputs to a block or script explicit names, instead
 of using empty input slots as we’ve done until now.
 
-![image730.png](images/06-procedures-as-data/image730.png) <!--  width="4.32292in" / -->
+{img alt="image730.png"}`images/06-procedures-as-data/image730.png` <!--  width="4.32292in" / -->
 
 The names <var>\#1</var>, <var>\#2</var>, etc. are provided by default, but you
 can change a name by clicking on its orange oval in the "`input names`"

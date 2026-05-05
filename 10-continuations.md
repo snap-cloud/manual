@@ -99,7 +99,7 @@ CPS
 Like all programming languages,
 Snap<em>!</em> evaluates compositions of nested reporters from the inside out.
 For example, in the expression
-![image884.png](images/10-continuations/image884.png) <!--  width="1.3125in" / --> Snap<em>!</em>
+{img alt="image884.png"}`images/10-continuations/image884.png` <!--  width="1.3125in" / --> Snap<em>!</em>
 first adds 4 and 5, then multiplies 3 by that sum. This often means that
 the order in which the operations are done is backwards from the order
 in which they appear in the expression: When reading the above
@@ -218,7 +218,7 @@ while unwinding the recursive calls.
 
 We can improve upon this by capturing the continuation of the top-level call to product:
 
-![image913.png](images/10-continuations/image913.png) <!--  width="4.03819in" / --> {inline alt="image914.png"}`images/10-continuations/image914.png` <!--  width="3.94514in" / -->
+{img alt="image913.png"}`images/10-continuations/image913.png` <!--  width="4.03819in" / --> {inline alt="image914.png"}`images/10-continuations/image914.png` <!--  width="3.94514in" / -->
 
 The {inline alt="image916.png"}`images/10-continuations/image916.png` <!--  width="1.59125in" / --> block takes as its input a
 one-input script, as shown in the product example. It calls that script

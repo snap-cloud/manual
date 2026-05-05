@@ -106,7 +106,7 @@ But if you just want some colors in your project, we provide a simple,
 one-dimensional subset of the available colors. Two subsets, actually:
 *crayons* and *color numbers.* Here’s the difference:
 
-![image1139.png](images/a-snap-color-library/image1139.png)
+{img alt="image1139.png"}`images/a-snap-color-library/image1139.png`
 
 The first row shows 100 distinct colors. They have names; this is pumpkin
 {inline alt="image1145.png"}`images/a-snap-color-library/image1145.png`,
@@ -120,7 +120,7 @@ really old-fashioned photo” and so you’d find sepia {inline alt="image1144.p
 crayon number 33. You don’t have to memorize the numbers! You can find
 them in a menu with a submenu for each family.
 
-![image1140.png](images/a-snap-color-library/image1140.png) <!--  width="5.79306in" / -->
+{img alt="image1140.png"}`images/a-snap-color-library/image1140.png` <!--  width="5.79306in" / -->
 
 Or, if you
 know the crayon name, just {inline alt="image1147.png"}`images/a-snap-color-library/image1147.png` <!--  width="2.15972in" -->.
@@ -172,7 +172,7 @@ transparency.) The {index}`pen reporter` requires no other
 inputs; it reports the state of the pen in whatever dimension you
 choose.
 
-![image1157.png](images/a-snap-color-library/image1157.png) <!--  width="5.79306in" / -->
+{img alt="image1157.png"}`images/a-snap-color-library/image1157.png` <!--  width="5.79306in" / -->
 
 As the last example shows, you can’t ask for the pen color in a scale
 incompatible with how you set it, unless the block can deduce what you
@@ -219,7 +219,7 @@ number, as in the Red example, you can use this block:
 Finally, the library includes the {index}`mix block` and a
 helper:
 
-![image1160.png](images/a-snap-color-library/image1160.png) <!--  width="5.79306in" / -->
+{img alt="image1160.png"}`images/a-snap-color-library/image1160.png` <!--  width="5.79306in" / -->
 
 We’ll have more to say about these after a detour through color theory.
 
@@ -303,7 +303,7 @@ color numbers by 5
 
 color numbers by 10
 
-![image1197.png](images/a-snap-color-library/image1197.png) <!--  width="0.23611in" -->
+{img alt="image1197.png"}`images/a-snap-color-library/image1197.png` <!--  width="0.23611in" -->
 
 This chart shows how the {index}`color scales` discussed so
 far are related. Note that all scales range from 0 to 100; the fair hues
@@ -555,7 +555,7 @@ component also.
 The proper mathematical abstraction to describe a paint is a
 *reflectance* graph, like this:
 
-![image1209.png](images/a-snap-color-library/image1209.png) <!--  width="0.20278in" / -->
+{img alt="image1209.png"}`images/a-snap-color-library/image1209.png` <!--  width="0.20278in" / -->
 
 (These aren’t paints, but minerals, and one software-generated spectrum,
 from the US Geological Survey’s [Spectral
@@ -570,7 +570,7 @@ inputs and converts them into what we hope are *typical* paint
 reflectance spectra that would look like those colors, and then mixes
 those spectra and converts back to RGB.
 
-![image1230.png](images/a-snap-color-library/image1230.png) <!--  width="4.34028in" -->
+{img alt="image1230.png"}`images/a-snap-color-library/image1230.png` <!--  width="4.34028in" -->
 
 But unlike the other two kinds of mixing, in this case we can’t say that
 these colors are “the right answer”; what would happen with real paints

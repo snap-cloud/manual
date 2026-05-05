@@ -16,7 +16,7 @@ custom? of block block
 
 ## Reading a block
 
-![image375.png](images/11-metaprogramming/image375.png) <!--  width="1.15in" / -->
+{img alt="image375.png"}`images/11-metaprogramming/image375.png` <!--  width="1.15in" / -->
 
 The definition of block takes a custom block
 (in a ring, since it’s the block itself that’s the input, not the result
@@ -36,7 +36,7 @@ may themselves be syntax trees.
 Using split by blocks to select custom blocks whose definitions contain
 another block gives us this debugging aid:
 
-![image378.png](images/11-metaprogramming/image378.png) <!--  width="1.15in" alt="A picture containing text, hitting Description automatically generated" / -->
+{img alt="image378.png"}`images/11-metaprogramming/image378.png` <!--  width="1.15in" alt="A picture containing text, hitting Description automatically generated" / -->
 
 Note in passing the my blocks block, which
 reports a list of all visible blocks, primitive and custom. (There’s
@@ -58,7 +58,7 @@ The inverse function to split by blocks is provided by the join block,
 which when given a syntax tree as input reports the
 corresponding expression or script.
 
-![image379.png](images/11-metaprogramming/image379.png) <!--  width="1.15in" alt="A picture containing text, hitting Description automatically generated" / -->
+{img alt="image379.png"}`images/11-metaprogramming/image379.png` <!--  width="1.15in" alt="A picture containing text, hitting Description automatically generated" / -->
 
 Here we are taking the definition of square, modifying the repetition
 count (to 6), modifying the turning angle (to 60), using join to turn
@@ -86,7 +86,7 @@ Note that the underscores are separated from the block text by spaces.
 Note in the case of the for block’s label that the upvar (the i) and the
 C-slot both count as inputs. Note also that the label is not meant to be
 a unique symbol that represents only this block. For example,
-![image628.png](images/11-metaprogramming/image628.png) <!--  width="0.86111in" / -->  and
+{img alt="image628.png"}`images/11-metaprogramming/image628.png` <!--  width="0.86111in" / -->  and
 {img alt="image376.png" width="1.22in"}`images/11-metaprogramming/image376.png`
 both have the label
 
@@ -145,7 +145,7 @@ these numbers as an alternative to the names.
 
 There are a few more attributes of a block, less commonly used.
 
-![image954.png](images/11-metaprogramming/image954.png) <!--  width="3.37986in" / --> {inline alt="image955.png"}`images/11-metaprogramming/image955.png` <!--  width="1.02in" alt="A picture containing text, clipart Description automatically generated" / -->
+{img alt="image954.png"}`images/11-metaprogramming/image954.png` <!--  width="3.37986in" / --> {inline alt="image955.png"}`images/11-metaprogramming/image955.png` <!--  width="1.02in" alt="A picture containing text, clipart Description automatically generated" / -->
 
 
 The list input is just like the one for set slots except for default values
@@ -194,7 +194,7 @@ in the resulting definition.
 
 {img alt="image974.png" width="1.77in"}`images/11-metaprogramming/image974.png`
 
-![image975.png](images/11-metaprogramming/image975.png) <!--  width="3.11in" alt="Graphical user interface Description automatically generated" / -->
+{img alt="image975.png"}`images/11-metaprogramming/image975.png` <!--  width="3.11in" alt="Graphical user interface Description automatically generated" / -->
 
 You could use this script directly in a
 simple case like this, but in a complicated case with a recursive call
@@ -221,7 +221,7 @@ of block (sensing)
 
 ## Macros
 
-![image976.png](images/11-metaprogramming/image976.png) <!--  width="3.11in" alt="Graphical user interface Description automatically generated" / -->
+{img alt="image976.png"}`images/11-metaprogramming/image976.png` <!--  width="3.11in" alt="Graphical user interface Description automatically generated" / -->
 
 Users of languages in the C family have learned to think of macros as
 entirely about text strings, with no relation to the syntax of the

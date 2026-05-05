@@ -181,11 +181,11 @@ the script:
 ::::{grid} 2
 
 :::{grid-item}
-![image18.png](images/01-blocks-scripts-and-sprites/image18.png)
+{img alt="image18.png"}`images/01-blocks-scripts-and-sprites/image18.png`
 :::
 
 :::{grid-item}
-![image19.png](images/01-blocks-scripts-and-sprites/image19.png)
+{img alt="image19.png"}`images/01-blocks-scripts-and-sprites/image19.png`
 :::
 ::::
 
@@ -299,10 +299,9 @@ costume.) The Turtle costume is the only one that
 changes color to match a change in the sprite’s pen color.
 
 ::: {.callout-tip}
-{inline alt="Switch to costumer (() - 1)"}`images/01-blocks-scripts-and-sprites/image33.png` switches to the *previous* costume, wrapping like `next costume`.
+{inline alt="Switch to costume (() - 1)"}`images/01-blocks-scripts-and-sprites/image33.png` switches to the *previous* costume, wrapping like `next costume`.
 :::
-<!-- Protip: {inline alt="Switch to costumer (() - 1)"}`images/01-blocks-scripts-and-sprites/image33` switches to the *previous* costume, wrapping like `next costume`.
--->
+
 
 In addition to its costumes, a sprite can have *sounds;* the equivalent for sounds of the sprite’s wardrobe is called its *jukebox.* Sound files can be imported in any format (WAV, OGG, MP3, etc.) supported by your browser. Two blocks accomplish the task of playing sounds. If you would like a script to continue running while the sound is playing, use the block {inline alt="image39.png"}`images/01-blocks-scripts-and-sprites/image39.png`. In contrast, you can use the block {inline alt="image38.png"}`images/01-blocks-scripts-and-sprites/image38.png` to wait for the sound's completion before continuing the rest of the script.
 
@@ -1190,7 +1189,7 @@ changes to `sum` or `product`.
 ::::{grid} 2
 
 :::{grid-item}
-![image309.png](images/01-blocks-scripts-and-sprites/image309.png)
+{img alt="image309.png"}`images/01-blocks-scripts-and-sprites/image309.png`
 :::
 
 :::{grid-item}
@@ -1209,7 +1208,7 @@ when I am stopped script
 ::::{grid} 2
 
 :::{grid-item}
-![image310.png](images/01-blocks-scripts-and-sprites/image310.png)
+{img alt="image310.png"}`images/01-blocks-scripts-and-sprites/image310.png`
 :::
 
 :::{grid-item}
@@ -1270,9 +1269,9 @@ These ask features and more in the Menus
 library.
 {img alt="image359.png" width="0.60in"}`images/01-blocks-scripts-and-sprites/image359.png`
 
-![image360.png](images/01-blocks-scripts-and-sprites/image360.png)
+{img alt="image360.png"}`images/01-blocks-scripts-and-sprites/image360.png`
 
-![image361.png](images/01-blocks-scripts-and-sprites/image361.png)
+{img alt="image361.png"}`images/01-blocks-scripts-and-sprites/image361.png`
 
 {img alt="image362.png" width="4.55in"}`images/01-blocks-scripts-and-sprites/image362.png`
 
@@ -1736,7 +1735,7 @@ But note that a transparency number in a four-number RGBA vector is on
 the scale 255=opaque, 0=transparent, so the following are *not*
 equivalent:
 
-![image430.png](images/01-blocks-scripts-and-sprites/image430.png)
+{img alt="image430.png"}`images/01-blocks-scripts-and-sprites/image430.png`
 
 `Set pen crayon to` provides the equivalent of a box of 100 crayons. They
 are divided into color groups, so the menu in the set pen crayon to

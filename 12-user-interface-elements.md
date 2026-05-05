@@ -11,7 +11,7 @@ In this chapter we describe in detail the various buttons, menus, and
 other clickable elements of the Snap<em>!</em> user interface. Here again is
 the map of the Snap<em>!</em> window:
 
-![An annotated screenshot of blank Snap! editor](images/12-user-interface-elements/snap-ide-annotated.png)
+{img alt="An annotated screenshot of blank Snap! editor"}`images/12-user-interface-elements/snap-ide-annotated.png`
 
 :::{index} tool bar features
 shift-clicking
@@ -625,7 +625,7 @@ the project “Codification” in the Examples project list. Edit the blocks
 map to Smalltalk, map to JavaScript, etc., to see examples of how to
 provide translations for blocks.
 
-![image1028.png](images/12-user-interface-elements/image1028.png) <!--  width="1.38in" alt="Graphical user interface, application, Teams Description automatically generated" / -->
+{img alt="image1028.png"}`images/12-user-interface-elements/image1028.png` <!--  width="1.38in" alt="Graphical user interface, application, Teams Description automatically generated" / -->
 {img alt="image1027.png" class="image-4x"}`images/12-user-interface-elements/image1027.png` <!--  width="2.20972in" -->
 
 The Single palette option puts all blocks,
@@ -721,7 +721,7 @@ Shift-clicking the button enters Turbo mode, and the button then looks like a li
 bolt: {inline alt="image1039.png"}`images/12-user-interface-elements/image1039.png` <!--  width="0.35in" / -->  . Shift-clicking again turns Turbo mode off.
 
 Scripts can simulate clicking the green flag by broadcasting the special message
-![image1045.png](images/12-user-interface-elements/image1045.png) <!--  width="0.30556in" / --> .
+{img alt="image1045.png"}`images/12-user-interface-elements/image1045.png` <!--  width="0.30556in" / --> .
 
 The pause button {inline alt="image1044.png"}`images/12-user-interface-elements/image1044.png` <!--  width="0.37917in" / --> suspends running all scripts. If clicked while scripts are
 running, the button changes shape to become a play button: {inline alt="image1046.png"}`images/12-user-interface-elements/image1046.png` <!--  width="0.37917in" / --> Clicking it
@@ -1043,7 +1043,7 @@ feature to access them.
 Not every reporter has a compile option; it
 exists only for the higher order functions. When selected, a lightning
 bolt appears before the block name:
-![image1072.png](images/12-user-interface-elements/image1072.png) <!--  width="1.40278in" -->  and Snap<em>!</em> tries
+{img alt="image1072.png"}`images/12-user-interface-elements/image1072.png` <!--  width="1.40278in" -->  and Snap<em>!</em> tries
 to compile the function inside the ring to JavaScript, so it runs at
 primitive speed. This works only for simple functions (but the higher
 order function still works even if the compilation doesn’t). The
@@ -1173,7 +1173,7 @@ the comment as desired.
 You can drag the bottom right
 corner of the comment box to resize it. Clicking the arrowhead at the
 top left changes the box to a single-line compact form,
-![image1079.png](images/12-user-interface-elements/image1079.png) <!--  width="1.38889in" / --> , so that you
+{img alt="image1079.png"}`images/12-user-interface-elements/image1079.png` <!--  width="1.38889in" / --> , so that you
 can have a number of collapsed comments in the scripting area and just
 expand one of them when you want to read it in full.
 

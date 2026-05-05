@@ -89,7 +89,7 @@ having collided with this one, for example. The <code>my ( )</code> block has ma
 a particular sprite, the object reporter will report the sprite itself.
 
 <!-- TODO: Figure out spacing / grid? -->
-![image746.png](images/07-object-oriented-programming-with-sprites/image746.png) width="3.55208in" / {inline alt="image747.png"}`images/07-object-oriented-programming-with-sprites/image747.png`   width="2.69143in"
+{img alt="image746.png"}`images/07-object-oriented-programming-with-sprites/image746.png` width="3.55208in" / {inline alt="image747.png"}`images/07-object-oriented-programming-with-sprites/image747.png`   width="2.69143in"
 
 An object or list of objects reported by <code>my ( )</code> or <code>object ( )</code> can be used as input to any
 block that accepts any input type, such as set’s (<code>set ( ) to ( )</code>) second input. If you
@@ -285,7 +285,7 @@ in a nesting arrangement (see
 @nesting-sprites-anchors-and-parts). Similarly, the same <code>set ( ) to ( )</code> block
 used to set variable values allows setting some sprite attributes.
 
-![image766.png](images/07-object-oriented-programming-with-sprites/image766.png) <!--  width="1.67361in" / -->
+{img alt="image766.png"}`images/07-object-oriented-programming-with-sprites/image766.png` <!--  width="1.67361in" / -->
 
 :::{index} prototyping
 class/instance
@@ -344,7 +344,7 @@ sprites have a “parent” attribute that can be
 set, like any attribute, thereby *changing* the parent of an existing
 sprite.
 
-![image766.png](images/07-object-oriented-programming-with-sprites/image766.png) <!--  width="1.67361in" / -->
+{img alt="image766.png"}`images/07-object-oriented-programming-with-sprites/image766.png` <!--  width="1.67361in" / -->
 
 :::{index} inherit block
 :::

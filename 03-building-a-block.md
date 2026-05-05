@@ -169,7 +169,7 @@ Since the new custom block appears in its palette as soon as you *start*
 editing it, you can write recursive blocks (blocks that call themselves)
 by dragging the block into its own definition:
 
-![image514.png](images/03-building-a-block/image514.png) <!--  width="2.96528in" / --> {inline alt="image515.png"}`images/03-building-a-block/image515.png` <!--  width="1.95833in" / --> {inline alt="image516.png"}`images/03-building-a-block/image516.png` <!--  width="1.42361in" / -->
+{img alt="image514.png"}`images/03-building-a-block/image514.png` <!--  width="2.96528in" / --> {inline alt="image515.png"}`images/03-building-a-block/image515.png` <!--  width="1.95833in" / --> {inline alt="image516.png"}`images/03-building-a-block/image516.png` <!--  width="1.42361in" / -->
 
 (If you added inputs to the block since opening the editor, click "`Apply`"
 before finding the block in the palette, or drag the block from the top of the block editor rather than from the
@@ -194,7 +194,7 @@ values.
 You can also write {index}`recursive reporters<reporters, recursive>`,
 like this block to compute the factorial function:
 
-![image520.png](images/03-building-a-block/image520.png) <!--  width="4.29167in" / -->
+{img alt="image520.png"}`images/03-building-a-block/image520.png` <!--  width="4.29167in" / -->
 
 Note the use of the <code>report</code> block . When a reporter
 block uses this block, the reporter finishes its work and reports the
