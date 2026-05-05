@@ -134,7 +134,7 @@ arrays are equal, you’d just use +/ instead of **∧**/. Note also that
 our APLish blocks are a little verbose, because they include up to three
 notations for the function: the usual Snap<em>!</em> name (e.g., flatten), the
 name APL programmers use when talking about it (ravel), and, in yellow type, the symbol used in actual APL code (,).
-We’re not consistent about it; ![image1264.png](images/b-apl-features/image1264.png) <!--  width="0.99306in" / -->  seems self-documenting. And LCM (and) is
+We’re not consistent about it; {inline alt="image1264.png"}`images/b-apl-features/image1264.png` <!--  width="0.99306in" / -->  seems self-documenting. And LCM (and) is
 different even though it has two names; it turns out that if you
 represent Boolean values as 0 and 1, then the algorithm to compute the
 least common multiple of two integers computes the and function if the

@@ -676,20 +676,20 @@ presentation mode button
 
 Still in the tool bar, but above the left edge of the stage, are two
 buttons that change the size of the stage. The first is the shrink/grow
-button. Normally it looks like this: ![image1033.png](images/12-user-interface-elements/image1033.png) <!--  width="0.37917in" / -->
+button. Normally it looks like this: {inline alt="image1033.png"}`images/12-user-interface-elements/image1033.png` <!--  width="0.37917in" / -->
 Clicking the button displays the stage at half-normal size horizontally
 and vertically (so it takes up ¼ of its usual area). When the stage is
-half size the button looks like this: ![image1036.png](images/12-user-interface-elements/image1036.png) <!--  width="0.37917in" / -->  and clicking it returns the stage
+half size the button looks like this: {inline alt="image1036.png"}`images/12-user-interface-elements/image1036.png` <!--  width="0.37917in" / -->  and clicking it returns the stage
 to normal size. The main reason you’d want a half size stage is during
 the development process, when you’re assembling scripts with wide input
 expressions and the normal scripting area isn’t wide enough to show the
 complete script. You’d typically then switch back to normal size to try
-out the project. The next presentation mode button normally looks like this: ![image1035.png](images/12-user-interface-elements/image1035.png) <!--  width="0.37917in" / -->  Clicking the button makes the
+out the project. The next presentation mode button normally looks like this: {inline alt="image1035.png"}`images/12-user-interface-elements/image1035.png` <!--  width="0.37917in" / -->  Clicking the button makes the
 stage double size in both dimensions and eliminates most of the other
 user interface elements (the palette, the scripting area, the sprite
 corral, and most of the tool bar). When you open a shared project using
 a link someone has sent you, the project starts in presentation mode.
-While in presentation mode, the button looks like this: ![image1034.png](images/12-user-interface-elements/image1034.png) <!--  width="0.37917in" / -->  Clicking it returns to normal (project development) mode.
+While in presentation mode, the button looks like this: {inline alt="image1034.png"}`images/12-user-interface-elements/image1034.png` <!--  width="0.37917in" / -->  Clicking it returns to normal (project development) mode.
 
 :::{index} project control buttons
 green flag button
@@ -715,16 +715,16 @@ respond to keyboard controls instead. Clicking the green flag also
 deletes temporary clones.
 
 Whenever any script is running (not necessarily in the current sprite), the green
-flag is lit: ![image1038.png](images/12-user-interface-elements/image1038.png) <!--  width="0.35in" / --> .
+flag is lit: {inline alt="image1038.png"}`images/12-user-interface-elements/image1038.png` <!--  width="0.35in" / --> .
 
 Shift-clicking the button enters Turbo mode, and the button then looks like a lightning
-bolt: ![image1039.png](images/12-user-interface-elements/image1039.png) <!--  width="0.35in" / -->  . Shift-clicking again turns Turbo mode off.
+bolt: {inline alt="image1039.png"}`images/12-user-interface-elements/image1039.png` <!--  width="0.35in" / -->  . Shift-clicking again turns Turbo mode off.
 
 Scripts can simulate clicking the green flag by broadcasting the special message
 ![image1045.png](images/12-user-interface-elements/image1045.png) <!--  width="0.30556in" / --> .
 
 The pause button {inline alt="image1044.png"}`images/12-user-interface-elements/image1044.png` <!--  width="0.37917in" / --> suspends running all scripts. If clicked while scripts are
-running, the button changes shape to become a play button: ![image1046.png](images/12-user-interface-elements/image1046.png) <!--  width="0.37917in" / --> Clicking it
+running, the button changes shape to become a play button: {inline alt="image1046.png"}`images/12-user-interface-elements/image1046.png` <!--  width="0.37917in" / --> Clicking it
 while in this form resumes the suspended scripts. There is also a pause
 all block in the Control palette that can be
 inserted in a script to suspend all scripts; this provides the essence
@@ -1004,7 +1004,7 @@ versa. Clicking the script will turn off the halo.
 
 
 If any blocks have been dragged into the scripting area, then in its top right corner you’ll see
-an *undo* ![image1066.png](images/12-user-interface-elements/image1066.png) <!--  width="0.33333in" / -->  and/or *redo* ![image1068.png](images/12-user-interface-elements/image1068.png) <!--  width="0.33333in" / -->  button that can be used to
+an *undo* {inline alt="image1066.png"}`images/12-user-interface-elements/image1066.png` <!--  width="0.33333in" / -->  and/or *redo* {inline alt="image1068.png"}`images/12-user-interface-elements/image1068.png` <!--  width="0.33333in" / -->  button that can be used to
 undo or redo block and script drops. When you undo a drop into an input
 slot, whatever used to be in the slot is restored. The redo button
 appears once you’ve used undo.

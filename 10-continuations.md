@@ -218,7 +218,7 @@ while unwinding the recursive calls.
 
 We can improve upon this by capturing the continuation of the top-level call to product:
 
-![image913.png](images/10-continuations/image913.png) <!--  width="4.03819in" / --> ![image914.png](images/10-continuations/image914.png) <!--  width="3.94514in" / -->
+![image913.png](images/10-continuations/image913.png) <!--  width="4.03819in" / --> {inline alt="image914.png"}`images/10-continuations/image914.png` <!--  width="3.94514in" / -->
 
 The {inline alt="image916.png"}`images/10-continuations/image916.png` <!--  width="1.59125in" / --> block takes as its input a
 one-input script, as shown in the product example. It calls that script

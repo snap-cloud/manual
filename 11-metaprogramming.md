@@ -145,7 +145,7 @@ these numbers as an alternative to the names.
 
 There are a few more attributes of a block, less commonly used.
 
-![image954.png](images/11-metaprogramming/image954.png) <!--  width="3.37986in" / --> ![image955.png](images/11-metaprogramming/image955.png) <!--  width="1.02in" alt="A picture containing text, clipart Description automatically generated" / -->
+![image954.png](images/11-metaprogramming/image954.png) <!--  width="3.37986in" / --> {inline alt="image955.png"}`images/11-metaprogramming/image955.png` <!--  width="1.02in" alt="A picture containing text, clipart Description automatically generated" / -->
 
 
 The list input is just like the one for set slots except for default values

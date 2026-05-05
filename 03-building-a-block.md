@@ -109,7 +109,7 @@ You can now drag the orange variable down into the script, then click okay:
 
 {img alt="image511.png" width="1.47in"}`images/03-building-a-block/image511.png`
 
-Your block now appears in the {span .mono}`Motion` palette with an input box: ![image512.png](images/03-building-a-block/image512.png) <!--  width="0.69792in" / --> You can draw
+Your block now appears in the {span .mono}`Motion` palette with an input box: {inline alt="image512.png"}`images/03-building-a-block/image512.png` <!--  width="0.69792in" / --> You can draw
 any size square by entering the length of its side in the box and
 running the block as usual, by clicking it or by putting it in a script.
 
@@ -169,7 +169,7 @@ Since the new custom block appears in its palette as soon as you *start*
 editing it, you can write recursive blocks (blocks that call themselves)
 by dragging the block into its own definition:
 
-![image514.png](images/03-building-a-block/image514.png) <!--  width="2.96528in" / --> ![image515.png](images/03-building-a-block/image515.png) <!--  width="1.95833in" / --> ![image516.png](images/03-building-a-block/image516.png) <!--  width="1.42361in" / -->
+![image514.png](images/03-building-a-block/image514.png) <!--  width="2.96528in" / --> {inline alt="image515.png"}`images/03-building-a-block/image515.png` <!--  width="1.95833in" / --> {inline alt="image516.png"}`images/03-building-a-block/image516.png` <!--  width="1.42361in" / -->
 
 (If you added inputs to the block since opening the editor, click "`Apply`"
 before finding the block in the palette, or drag the block from the top of the block editor rather than from the
@@ -254,7 +254,7 @@ custom block as a single step. If you want to see stepping inside a
 custom block you must take these steps *in order:*
 
 1.  Turn on
-    "`Visible Stepping`" by pressing the footprints button: ![image123.png](images/03-building-a-block/image123.png)
+    "`Visible Stepping`" by pressing the footprints button: {inline alt="image123.png"}`images/03-building-a-block/image123.png`
 
 2.  Select "`Edit`" in the context menu(s) of the block(s) you want to
     examine.

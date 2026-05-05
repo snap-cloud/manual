@@ -173,7 +173,7 @@ project and haven’t yet saved it, Snap<em>!</em> displays a pencil icon to the
 left of the project name on the toolbar at the top of the window:
 
 <!-- TODO: MISSING FILE -->
-<!-- ![image391.png](images/02-saving-and-loading-projects-and/image391.png)  width="0.31944in"/  -->
+<!-- {inline alt="image391.png"}`images/02-saving-and-loading-projects-and/image391.png`  width="0.31944in"/  -->
 
 ## Private and Public Projects
 

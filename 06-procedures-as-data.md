@@ -325,7 +325,7 @@ because the number of inputs provided (2) would not match the number of
 empty slots (3).
 
 Here is a more realistic,
-much more advanced example: ![image733.png](images/06-procedures-as-data/image733.png) <!--  width="4.34722in" / -->
+much more advanced example: {inline alt="image733.png"}`images/06-procedures-as-data/image733.png` <!--  width="4.34722in" / -->
 
 {img alt="image732.png" width="4.68in"}`images/06-procedures-as-data/image732.png`
 

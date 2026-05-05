@@ -434,7 +434,7 @@ given the amount of white or black needed to achieve that lightness.
 Saturation less than 100 means that *both white and black* are mixed
 with the spectral color. (Such mixtures are called *tones* of the
 spectral color.) Perceptually, colors with saturation 100% don’t look
-gray: ![image1202.png](images/a-snap-color-library/image1202.png) <!--  width="1.55556in" / -->  but colors with saturation 75% do: ![image1201.png](images/a-snap-color-library/image1201.png) <!--  width="1.56389in" / -->
+gray: {inline alt="image1202.png"}`images/a-snap-color-library/image1202.png` <!--  width="1.55556in" / -->  but colors with saturation 75% do: {inline alt="image1201.png"}`images/a-snap-color-library/image1201.png` <!--  width="1.56389in" / -->
 
 Note that HSV and HSL both have a dimension called “saturation,” but
 *they’re not the same thing!* In HSV, “saturation” means non-whiteness,
@@ -610,7 +610,7 @@ the latter two. We recommend “{index}`fair HSL` ” for zeroing in on a desire
 
 <!-- Image hidden because it is included as part of the next image. -->
 <!-- TODO: Verify section and link location -->
-<!-- ![image1241.png](images/a-snap-color-library/image1241.png) -->
+<!-- {inline alt="image1241.png"}`images/a-snap-color-library/image1241.png` -->
 
 (sec-spirals)=
 {img alt="image1242.png" width="2.21in"}`images/a-snap-color-library/image1242.png`

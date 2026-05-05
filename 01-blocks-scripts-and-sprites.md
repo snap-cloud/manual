@@ -84,12 +84,11 @@ that.[^1]
 
 <!-- TODO: Different CSS for an inline hat block? -->
 
-[^1]: One of the hat blocks, the {index}`generic hat block <hat block; generic>` “when anything” block {inline alt="generic when hat block"}`images/01-blocks-scripts-and-sprites/image10`, is subtly different from the others. When the stop sign is clicked, or when a project or sprite is loaded, this block doesn’t test whether the condition in its hexagonal input slot is true, so the script beneath it will not run, until some *other* script in the project runs (because, for example, you click the green flag). When {index}`generic when` blocks are disabled, the stop sign {index}`stop sign, square` will be squarewill be {index}`square <square stop sign>` instead of octagonal.
-
+[^1]: One of the hat blocks, the {index}`generic hat block <hat block; generic>` “when anything” block {inline alt="generic when hat block"}`images/01-blocks-scripts-and-sprites/image10`, is subtly different from the others. When the stop sign is clicked, or when a project or sprite is loaded, this block doesn’t test whether the condition in its hexagonal input slot is true, so the script beneath it will not run, until some *other* script in the project runs (because, for example, you click the green flag). When {index}`generic when` blocks are disabled, the stop sign {index}`stop sign, square` will be {index}`square <square stop sign>` instead of octagonal.
 
 The other blocks in our example script are *command* blocks. Each {index}`command block`
 corresponds to an action that Snap<em>!</em> already knows how to carry out.
-For example, the block {inline alt="image9.png"}`./blocks/images/block_forward` tells the sprite (the arrowhead shape on the _stage_ at the right end of the window) to
+For example, the block {inline alt="image9.png"}`./blocks/images/block_forward.png` tells the sprite (the arrowhead shape on the _stage_ at the right end of the window) to
 move ten steps (a step is a very small unit of distance) in the
 direction in which the arrowhead is pointing. We’ll see shortly that
 there can be more than one sprite, and that each sprite has its own
@@ -830,7 +829,7 @@ just put a `pause all` inside an `if`.[^2]
 [^2]: The hide variable and show variable block s can also be used to hide and show primitives in the palette.
 The pulldown menu doesn’t include primitive blocks, but there’s a generally useful
 technique to give a block input values it wasn’t expecting using run or
-call: ![image120.png](images/01-blocks-scripts-and-sprites/image120.png)
+call: {inline alt="image120.png"}`images/01-blocks-scripts-and-sprites/image120.png`
 
 In order to use a block as an input this way, you must explicitly put a
 ring around it, by right-clicking on it and choosing ringify. More about
