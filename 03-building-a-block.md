@@ -109,7 +109,7 @@ You can now drag the orange variable down into the script, then click okay:
 
 {img alt="image511.png" width="1.47in"}`images/03-building-a-block/image511.png`
 
-Your block now appears in the {span .mono}`Motion` palette with an input box: {inline alt="image512.png"}`images/03-building-a-block/image512.png` <!--  width="0.69792in" / --> You can draw
+Your block now appears in the {span .mono}`Motion` palette with an input box: {inline alt="image512.png" width="0.69792in"}`images/03-building-a-block/image512.png` You can draw
 any size square by entering the length of its side in the box and
 running the block as usual, by clicking it or by putting it in a script.
 
@@ -169,7 +169,17 @@ Since the new custom block appears in its palette as soon as you *start*
 editing it, you can write recursive blocks (blocks that call themselves)
 by dragging the block into its own definition:
 
-{img alt="image514.png"}`images/03-building-a-block/image514.png` <!--  width="2.96528in" / --> {inline alt="image515.png"}`images/03-building-a-block/image515.png` <!--  width="1.95833in" / --> {inline alt="image516.png"}`images/03-building-a-block/image516.png` <!--  width="1.42361in" / -->
+::::{grid} 3
+:::{grid-item}
+{img alt="image514.png" width="2.96528in"}`images/03-building-a-block/image514.png`
+:::
+:::{grid-item}
+{img alt="image515.png" width="1.95833in"}`images/03-building-a-block/image515.png`
+:::
+:::{grid-item}
+{img alt="image516.png" width="1.42361in"}`images/03-building-a-block/image516.png`
+:::
+::::
 
 (If you added inputs to the block since opening the editor, click "`Apply`"
 before finding the block in the palette, or drag the block from the top of the block editor rather than from the
@@ -194,7 +204,7 @@ values.
 You can also write {index}`recursive reporters<reporters, recursive>`,
 like this block to compute the factorial function:
 
-{img alt="image520.png"}`images/03-building-a-block/image520.png` <!--  width="4.29167in" / -->
+{img alt="image520.png" width="4.29167in"}`images/03-building-a-block/image520.png`
 
 Note the use of the <code>report</code> block . When a reporter
 block uses this block, the reporter finishes its work and reports the
@@ -212,7 +222,7 @@ Here’s a slightly more compact way to write the <code>factorial</code> functio
 
 {img alt="image521.png" width="4.29in"}`images/03-building-a-block/image521.png`
 
-For more on recursion, see *Thinking Recursively* by {index}`Eric Roberts<single: Roberts, Eric>`. (The originaledition is ISBN 978‑0471816522; a more recent *Thinking Recursively in
+For more on recursion, see *Thinking Recursively* by {index}`Eric Roberts<single: Roberts, Eric>`. (The original edition is ISBN 978‑0471816522; a more recent *Thinking Recursively in
 Java* is ISBN 978-0471701460.) <!-- Do we want to link to something like https://books.google.com/books/about/Thinking_Recursively.html?id=oH9QAAAAMAAJ&source=kp_book_description --MF -->
 
 :::{index} library; block
@@ -232,8 +242,7 @@ To create a block library, choose "`Export blocks…`" from the
 
 {img alt="image522.png" width="2.02in"}`images/03-building-a-block/image522.png`
 
-The window shows all of your
-global custom blocks. You can uncheck some of the checkboxes to select
+The window shows all of your global custom blocks. You can uncheck some of the checkboxes to select
 exactly which blocks you want to include in your library. (You can
 "`right-click`" or "`control-click`" on the export window for a menu that lets
 you check or uncheck all the boxes at once.) Then press "`OK`" An {span .mono}`XML` file

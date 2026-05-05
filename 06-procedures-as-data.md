@@ -29,7 +29,7 @@ the variable by −1 for each repetition instead of by 1.
 The important part of this script is the `run` block near
 the end. This is a Snap<em>!</em> built-in command block that takes a
 Command-type value (a script) as its input, and carries out its
-instructions. (In this example, the value of the input {inline alt="image693.png"}`images/06-procedures-as-data/image693.png` <!--  width="0.5in" / --> is the script
+instructions. (In this example, the value of the input {inline alt="image693.png" width="0.5in"}`images/06-procedures-as-data/image693.png` is the script
 that the user puts in the C-slot of the `my for` block.) There is a
 similar `call` reporter block for invoking a Reporter or Predicate block.
 The `call` and `run` blocks are at the heart of
@@ -78,7 +78,7 @@ same as the number of empty input slots, then the empty slots are filled from le
 given input values. If `call` is given exactly one input, then *every*
 empty input slot of the called block is filled with the same value:
 
-{inline alt="image699.png" class="image-4x"}`images/06-procedures-as-data/image699.png` <!--  width="2.72917in" / -->
+{inline alt="image699.png" class="image-4x" width="2.72917in"}`images/06-procedures-as-data/image699.png`
 
 If the number of inputs provided is neither one nor the number of empty
 slots, then there is no automatic filling of empty slots. (Instead you
@@ -303,7 +303,7 @@ arrowhead at the right. Clicking the arrowhead allows you to give the
 inputs to a block or script explicit names, instead
 of using empty input slots as we’ve done until now.
 
-{img alt="image730.png"}`images/06-procedures-as-data/image730.png` <!--  width="4.32292in" / -->
+{img alt="image730.png" width="4.32292in"}`images/06-procedures-as-data/image730.png`
 
 The names <var>\#1</var>, <var>\#2</var>, etc. are provided by default, but you
 can change a name by clicking on its orange oval in the "`input names`"
@@ -325,7 +325,7 @@ because the number of inputs provided (2) would not match the number of
 empty slots (3).
 
 Here is a more realistic,
-much more advanced example: {inline alt="image733.png"}`images/06-procedures-as-data/image733.png` <!--  width="4.34722in" / -->
+much more advanced example: {inline alt="image733.png" width="4.34722in"}`images/06-procedures-as-data/image733.png`
 
 {img alt="image732.png" width="4.68in"}`images/06-procedures-as-data/image732.png`
 

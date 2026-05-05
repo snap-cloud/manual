@@ -128,13 +128,13 @@ left, a=b reports an array of Booleans (represented in APL as 0 for
 False, 1 for True); the comma operator turns the shape of the array into
 a simple vector; and **∧**/ means “reduce with and”; “reduce” is our
 combine function. That six-character program is much less effort than
-the equivalent {inline alt="image1263.png"}`images/b-apl-features/image1263.png` <!--  width="4.45139in" / --> in Snap<em>!</em>. Note in passing
+the equivalent {inline alt="image1263.png" width="4.45139in"}`images/b-apl-features/image1263.png` in Snap<em>!</em>. Note in passing
 that if you wanted to know *how many* corresponding elements of the two
 arrays are equal, you’d just use +/ instead of **∧**/. Note also that
 our APLish blocks are a little verbose, because they include up to three
 notations for the function: the usual Snap<em>!</em> name (e.g., flatten), the
 name APL programmers use when talking about it (ravel), and, in yellow type, the symbol used in actual APL code (,).
-We’re not consistent about it; {inline alt="image1264.png"}`images/b-apl-features/image1264.png` <!--  width="0.99306in" / -->  seems self-documenting. And LCM (and) is
+We’re not consistent about it; {inline alt="image1264.png" width="0.99306in"}`images/b-apl-features/image1264.png`  seems self-documenting. And LCM (and) is
 different even though it has two names; it turns out that if you
 represent Boolean values as 0 and 1, then the algorithm to compute the
 least common multiple of two integers computes the and function if the
@@ -223,7 +223,7 @@ hyperblock that extends termwise to arrays. Join, the only non-predicate
 non-hyper scalar primitive, has its own scalar join block. 7 deal 52 reports a random vector of
 seven numbers from 1 to 52 with no repetitions, as in dealing a hand of
 cards. Signum of a number reports 1 if the number
-is positive, 0 if it’s zero, or -1 if it’s negative. Roll 6 reports a random roll of a six-sided die. To roll 8 dice, use {inline alt="image1266.png"}`images/b-apl-features/image1266.png` <!--  width="2.56667in" --> ,
+is positive, 0 if it’s zero, or -1 if it’s negative. Roll 6 reports a random roll of a six-sided die. To roll 8 dice, use {inline alt="image1266.png" width="2.56667in"}`images/b-apl-features/image1266.png` ,
 which would look much more pleasant as ?8⍴6. But perhaps our version is
 more instantly readable by someone who didn’t grow up with APL. All the
 library functions have help messages available.
@@ -256,7 +256,7 @@ list in that input slot as an implicit map, as for scalar functions.
 This means you have to learn the rule for each mixed function
 individually.
 
-{img alt="image1268.png"}`images/b-apl-features/image1268.png` <!--  width="1.06667in" --> The shape of function
+{img alt="image1268.png" width="1.06667in"}`images/b-apl-features/image1268.png` The shape of function
 takes any input and reports a vector of the
 maximum size of the structure along each dimension. For a vector, it
 returns a list of length 1 containing the length of the input. For a
@@ -267,7 +267,7 @@ an empty vector. Equivalent to the dimensions of primitive, as of 6.6.
 
 {img alt="image1267.png" width="4.28in"}`images/b-apl-features/image1267.png`
 
-{img alt="image1269.png"}`images/b-apl-features/image1269.png` <!--  width="1.04167in" --> Rank of
+{img alt="image1269.png" width="1.04167in"}`images/b-apl-features/image1269.png` Rank of
 isn’t an actual APL primitive, but the composition ⍴⍴
 (shape of shape of a structure), which reports the number of dimensions
 of the structure (the length of its shape vector), is too useful to
@@ -301,7 +301,7 @@ are sometimes useful too:
 
 {img alt="image1273.png" width="5.51in"}`images/b-apl-features/image1273.png`
 
-{img alt="image1275.png"}`images/b-apl-features/image1275.png` <!--  width="1.43333in" --> Flatten takes an arbitrary structure as input and reports a vector of its
+{img alt="image1275.png" width="1.43333in"}`images/b-apl-features/image1275.png` Flatten takes an arbitrary structure as input and reports a vector of its
 atomic elements in row-major order. Lispians call this flattening the
 structure, but APLers call it “ravel” because of the metaphor of pulling
 on a ball of yarn, so what they really mean is “unravel.” (But the
@@ -347,7 +347,7 @@ to a string:
 
 {img alt="image1283.png" width="6.03in"}`images/b-apl-features/image1283.png`
 
-{img alt="image1284.png"}`images/b-apl-features/image1284.png` <!--  width="1.475in" -->  Dyadic iota is like
+{img alt="image1284.png" width="1.475in"}`images/b-apl-features/image1284.png`  Dyadic iota is like
 the index of primitive except for its
 handling of multi-dimensional arrays. It looks only for atomic elements,
 so a vector in the second input doesn’t mean to search for that vector
@@ -405,7 +405,7 @@ looks only for atomic elements.
 
 {img alt="image1293.png" width="7.49in"}`images/b-apl-features/image1293.png`
 
-{img alt="image1294.png"}`images/b-apl-features/image1294.png` <!--  width="7.48542in" -->The blocks grade up and grade down are used for sorting data. Given an array as input, it
+{img alt="image1294.png" width="7.48542in"}`images/b-apl-features/image1294.png`The blocks grade up and grade down are used for sorting data. Given an array as input, it
 reports a vector of the indices in which the items (the rows, if a
 matrix) should be rearranged in order to be sorted. This will be clearer
 with an example:
@@ -491,7 +491,7 @@ long block names so it won’t take you a month!
 
 {img alt="image1320.png" width="2.99in"}`images/b-apl-features/image1320.png`
 {img alt="image1319.png" width="3.17in"}`images/b-apl-features/image1319.png`
-{img alt="image1321.png"}`images/b-apl-features/image1321.png` <!--  width="1.11181in" --> Don’t confuse this
+{img alt="image1321.png" width="1.11181in"}`images/b-apl-features/image1321.png` Don’t confuse this
 block with the {index}`reduce block`, whose APL symbol is
 also a slash. In that block, what comes to the left of the slash is a
 dyadic combining function; it’s the APL equivalent of combine. This
@@ -585,7 +585,7 @@ symbol ◦. is pronounced “jot dot.”) The way to think about this block is
 
 {img alt="image1335.png" width="7.24in"}`images/b-apl-features/image1335.png`
 
-{img alt="image1337.png"}`images/b-apl-features/image1337.png` <!--  width="2.61667in" --> The inner product
+{img alt="image1337.png" width="2.61667in"}`images/b-apl-features/image1337.png` The inner product
 block takes two matrices and two operations
 as input. The number of columns in the left matrix must equal the number
 of rows in the right matrix. When the two operations are + and ×, this
@@ -598,7 +598,7 @@ But other operations can be used. One common inner product is ∨.∧ (“or
 dot and”) applied to Boolean matrices, to find rows and columns that
 have corresponding items in common.
 
-{img alt="image1339.png"}`images/b-apl-features/image1339.png` <!--  width="0.95833in" --> The printable block
+{img alt="image1339.png" width="0.95833in"}`images/b-apl-features/image1339.png` The printable block
 isn’t an APL function; it’s an aid to exploring
 APL-in-Snap<em>!</em>. It transforms arrays to a compact representation that
 still makes the structure clear:

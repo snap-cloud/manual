@@ -9,17 +9,12 @@ Scratch
 (sec-ch04)=
 # 4. First Class Lists
 
-A data type is *ﬁrst class* in a
-programming language if data of that type can be
+A data type is *ﬁrst class* in a programming language if data of that type can be
 
 - the value of a variable
-
 - an input to a procedure
-
 - the value returned by a procedure
-
 - a member of a data aggregate
-
 - anonymous (not named)
 
 In Scratch , numbers and text strings are ﬁrst class.
@@ -27,7 +22,7 @@ You can put a number in a variable, use one as the input to a block,
 call a reporter that reports a number, or put a number into a list.
 
 But Scratch’s lists are not ﬁrst class. You create one using the “`Make a
-list` ” button, which requires that you give the list
+list`” button, which requires that you give the list
 a name. You can’t put the list into a variable, into an input slot of a
 block, or into a list item—you can’t have lists of lists. None of the
 Scratch reporters reports a list value. (You can use a reduction of the
@@ -46,6 +41,7 @@ that some lists are ﬁrst class, while others aren’t. In Snap<em>!</em>, list
 are ﬁrst class, period.
 
 {img alt="Snap! banner reading "Everything first class," with Alonzo waving beside the logo." width="2.84in"}`images/04-first-class-lists/1-banner-everything-first-class.png`
+
 :::{index} anonymous list
 `list` block
 arrowheads
@@ -68,9 +64,10 @@ Shift-clicking changes by three at a time.
 You can use this block as input to many other blocks:
 
 {img alt="Examples of the `list` block being used as input to other blocks: a `say` block speaking the list, a `length of` reporter returning 3, and a `vowel?` predicate that uses `list a e i o u` as input to `contains`." width="5.79in"}`images/04-first-class-lists/3-script-list-as-input.png`
+
 Snap<em>!</em> does not have a “`Make a list`” button like the one in Scratch.
-If you want a global “named list,” make a global variable and use the `set` block to put
-a list into the variable.
+If you want a global “named list,” make a global variable and use the `set`
+block to put a list into the variable.
 
 :::{index} data structure
 lists of lists
@@ -82,10 +79,10 @@ binary tree
 
 ## Lists of Lists
 
-Lists can be inserted as elements in larger lists. We can easily create ad hoc structures as
-needed:
+Lists can be inserted as elements in larger lists. We can easily create ad hoc structures as needed:
 
 {img alt="A list of four sublists pairing the Beatles' first and last names, with its watcher rendered as a 4-row, 2-column table view." width="5.89in"}`images/04-first-class-lists/4-script-lists-of-lists-beatles.png`
+
 Notice that this list is presented in a different format from the “She
 Loves You” list above. A two-dimensional list is called a *table* and is
 by default shown in *table view.* We’ll have more to say about this
@@ -102,6 +99,7 @@ correct data type; only one selector is shown but the ones for left and
 right children are analogous.
 
 {img alt="Two custom block definitions: a `binary tree` constructor that reports `list "binary-tree" datum left right`, and a `bt-datum` selector that checks the input is a tagged binary-tree list before returning item 2, otherwise saying that the input isn't a binary tree." width="5.89in"}`images/04-first-class-lists/5-script-binary-tree-block-defs.png`
+
 :::{index} Scratch
 imperative programming style
 parallelism
@@ -129,12 +127,13 @@ As an example, here are two blocks that take a list of numbers as input,
 and report a new list containing only the even numbers from the original
 list:[^primitives]
 
-[^primitives]: Note to users of earlier versions: From the beginning, there has been a tension in our work between the desire to provide tools such as `for` (used in this example) and the higher order functions introduced on the next page as primitives, to be used as easily as other primitives, and the desire to show how readily such tools can be implemented in Snap! itself. This is one instance of our general pedagogic understanding that learners should both use abstractions and be permitted to see beneath the abstraction barrier. Until version 5.0, we used the uneasy compromise of a library of tools written in Snap! and easily, but not easily enough, loaded into a project. By not loading the tools, users or teachers could explore how to program them. In 5.0 we made them true primitives, partly because that’s what some of us wanted all along and partly because of the increasing importance of fast performance as we explore “big data” and media computation. In version 10.0 we introduced “hybrid” primitives, implemented in high speed Javascript but with an “Edit” option that will open, not the primitive implementation, but the version written in Snap<em>!</em>. This gives us editable primitives without dramatically slowing users’ projects.
+[^primitives]: Note to users of earlier versions: From the beginning, there has been a tension in our work between the desire to provide tools such as `for` (used in this example) and the higher order functions introduced on the next page as primitives, to be used as easily as other primitives, and the desire to show how readily such tools can be implemented in Snap<em>!</em> itself. This is one instance of our general pedagogic understanding that learners should both use abstractions and be permitted to see beneath the abstraction barrier. Until version 5.0, we used the uneasy compromise of a library of tools written in Snap! and easily, but not easily enough, loaded into a project. By not loading the tools, users or teachers could explore how to program them. In 5.0 we made them true primitives, partly because that’s what some of us wanted all along and partly because of the increasing importance of fast performance as we explore “big data” and media computation. In version 10.0 we introduced “hybrid” primitives, implemented in high speed Javascript but with an “Edit” option that will open, not the primitive implementation, but the version written in Snap<em>!</em>. This gives us editable primitives without dramatically slowing users’ projects.
 
 {img alt="Two imperative `evens` block definitions side by side. Each builds a `result` list and walks the input with `for index` or `for each item`, using `if (item mod 2) = 0` and `add ... to result` to collect even numbers, then reports `result`." width="5.89in"}`images/04-first-class-lists/7-script-evens-imperative.png`
+
 In these scripts, we first create a temporary variable, then put an empty
-list in it, then go through the items of the input list using the `add
-... to (result)` block to modify the result list, adding one item at a
+list in it, then go through the items of the input list using the "`add
+... to (result)`" block to modify the result list, adding one item at a
 time, and finally report the result.
 
 *Functional* programming is a different approach that is becoming
@@ -195,6 +194,7 @@ this case, because the interior of the ring is a hexagon), rather than
 the value reported by that block. Here’s the difference:
 
 {img alt="On the left, the predicate `2 = 3` reporting `false`. On the right, the same predicate wrapped in a grey ring, which reports the block itself rather than its value." width="4.5in"}`images/04-first-class-lists/12-diagram-equals-with-ring.png`
+
 Evaluating the `=` block without a ring reports `true` or `false`; evaluating
 the block *with* a ring reports the block itself. This allows `keep` to
 evaluate the `=` predicate repeatedly, once for each list item. A block
@@ -249,7 +249,7 @@ lists, the result is a new toplevel list whose items are the same
 (uncopied) lists that are items of the toplevel input list). To make a deep copy of a list
 (that is, one in which all the sublists,
 sublists of sublists, etc. are copied), use the list as input to the
-{inline alt="the `id of` reporter" class="image-4x image-inline" width="0.74in"}`images/04-first-class-lists/18-block-id-of.png` block (one of the variants of the `sqrt of` block). This works because `id of` is a @sec-hyperblock.
+{inline alt="the `id of` reporter" class="image-4x" width="0.74in"}`images/04-first-class-lists/18-block-id-of.png` block (one of the variants of the `sqrt of` block). This works because `id of` is a @sec-hyperblock.
 
 The third higher order block, `combine` , computes a
 single result from *all* the items of a list, using a *two-input*
@@ -257,6 +257,7 @@ reporter as its second input. In practice, there are only a few blocks
 you’ll ever use with `combine`:
 
 {img alt="Eight reporter blocks commonly used as the function input to `combine`: `+`, `×`, `join`, `join words`, `and`, `or`, `min`, and `max`." width="6.5in"}`images/04-first-class-lists/19-blocks-combine-functions.png`
+
 These blocks take the sum of the list items, take their product, string
 them into one word, combine them into a sentence (with spaces between
 items), see if all items of a list of Booleans are true, see if any of
@@ -265,10 +266,10 @@ the items is true, find the smallest, or find the largest.
 {img alt="A `combine (list 7 8 1) using (() + ())` reporter that returns 16." width="3.87in"}`images/04-first-class-lists/20-script-combine-sum.png`
 
 {img alt="A `combine (list Yakko Wakko Dot) using (join () , ())` reporter that returns the string "Yakko,Wakko,Dot"." width="6.28in"}`images/04-first-class-lists/21-script-combine-join.png`
-Why `+` but not `−`? It only
-makes sense to combine list items using an *associative*
-function: one that doesn’t care in what order the items are combined (left to
-right or right to left). (2+3)+4 = 2+(3+4), but (2−3)−4 ≠ 2−(3−4).
+
+Why `+` but not `−`? It only makes sense to combine list items using an
+*associative* function: one that doesn’t care in what order the items are
+combined (left to right or right to left). (2+3)+4 = 2+(3+4), but (2−3)−4 ≠ 2−(3−4).
 
 <!-- TODO: See if we can remove the (see ...) -->
 
@@ -282,6 +283,7 @@ index), and the entire input list. No more than three input names can be
 used in this context.
 
 {img alt="Advanced-mode `map` whose function input has three named parameters (value, index, list); applied to `list now here after math`, it joins each item to its position+1 to produce nowhere, hereafter, aftermath, math." width="5.81in"}`images/04-first-class-lists/22-script-map-three-input-names.png`
+
 :::{index} table view
 list view
 :::
@@ -414,6 +416,7 @@ CSV (comma-separated values)
 (sec-csv)=
 ### Comma-Separated Values
 
+<!-- TODO: Acronyms and Glossary entries -->
 Spreadsheet and database programs generally offer the option to export
 their data as CSV (comma-separated values) lists. You can import these files into
 Snap<em>!</em> and turn them into tables (lists of lists), and you can export tables in CSV format.
@@ -435,13 +438,11 @@ Here’s what the corresponding table looks like:
 
 :::{grid-item}
 {img alt="The four-row Beatles CSV imported as a list named 'band' and shown in table view: rows 1–4 hold first name, last name, and instrument across three columns." width="2.4in"}`images/04-first-class-lists/30-watcher-table-view-beatles.png`
-
 :::
 
 :::{grid-item}
 {img alt="The same 'band' list shown in list view: each row is a separate sublist of three items (first name, last name, instrument), stacked vertically." width="1.6in"}`images/04-first-class-lists/31-watcher-list-view-beatles.png`
 :::
-
 ::::
 
 Here’s how to read a spreadsheet into Snap<em>!</em>:
@@ -516,14 +517,12 @@ APL
 Smalltalk
 Lisp
 Prolog
+hyperblocks
 :::
 
 (sec-hyperblock)=
 (sec-hyperblocks)=
 ## Hyperblocks
-
-:::{index} hyperblocks
-:::
 
 A *scalar* is anything other than a list. The name comes from
 mathematics, where it means a magnitude without direction, as opposed to
@@ -562,10 +561,12 @@ lower-dimensional one is used repeatedly in the missing dimension(s):
 input is paired with every scalar in the other input:
 
 {img alt="Two examples of `letter` applied with hyperblock indices over the word "world": a flat list of indices returns the list d,r,o,l,l, and a list-of-lists of indices returns a 2×3 table of letters (l,o,w / r,o,d)." width="7.48in"}`images/04-first-class-lists/39-script-hyperblock-letter-of-indices.png`
+
 One important motivation for this feature is how it simplifies and speeds up media
 computation, as in this shifting of the Alonzo costume to be bluer:
 
 {img alt="A `new costume ((pixels of costume alonzo) × (list .75 .75 3 1)) width (current) height (current)` script and the resulting bluer Alonzo costume thumbnail." width="7.48in"}`images/04-first-class-lists/40-script-costume-color-shift.png`
+
 Each pixel of the result has ¾ of its original red and green, and three times
 its original blue (with its transparency unchanged). By putting some
 sliders on the stage, you can play with colors dynamically:
@@ -593,7 +594,7 @@ block starts again at the head of the list, using values more than once.
 If more values are provided than needed, the extras are ignored; this
 isn’t an error.
 
-{inline alt="the `combinations` reporter taking two list inputs" width="1.76in"}`images/04-first-class-lists/46-block-combinations.png`  The
+{inline alt="the `combinations` reporter taking two list inputs" width="1.76in"}`images/04-first-class-lists/46-block-combinations.png` The
 `combinations` block takes any number of lists as input; it reports a list
 in which each item is a list whose length is the number of inputs; item
 *i* of a sublist is an item of input *i.* Every possible combination of
@@ -601,6 +602,7 @@ items of the inputs is included, so the length of the reported list is
 the product of the lengths of the inputs.
 
 {img alt="A `combinations (list a b) (list x y z)` reporter and the resulting 6-row, 2-column table: a/x, a/y, a/z, b/x, b/y, b/z." width="5.24in"}`images/04-first-class-lists/47-script-combinations-example.png`
+
 {inline alt="the `item 1 of` reporter" width="1.34in"}`images/04-first-class-lists/48-block-item-of.png`  The `item of` block has a special set of rules, designed to preserve
 its pre-hyperblock meaning and also provide a useful behavior when given
 a list as its first (index) input:
@@ -614,6 +616,7 @@ a list as its first (index) input:
 2.  If the index is a list of numbers (no sublists), then `item of`
     reports a list of the indicated top-level items (rows, in a matrix;
     a straightforward hyperization):
+
     {img alt="`item (list 2 1 2) of` the Beatles list returns three rows: Paul/McCartney, John/Lennon, Paul/McCartney." width="6.01in"}`images/04-first-class-lists/50-script-item-list-of-band.png`
 3.  If the index is a list of lists of numbers, then `item of` reports an
     array of only those scalars whose position in the list input matches
@@ -622,14 +625,15 @@ a list as its first (index) input:
 
     {img alt="`item (list (list 4) (list 2 1)) of` the Beatles list selects row 4, columns 2 and 1, returning the single-row table `Starr Ringo`." width="6.01in"}`images/04-first-class-lists/51-script-item-nested-of-band.png`
 4.  If a list of list of numbers includes an empty sublist, then all
-    items are chosen along that
-    dimension:
+    items are chosen along that dimension:
 
     {img alt="`item (list (list 4) (list)) of` the Beatles list — using an empty inner list as wildcard — returns all columns of row 4: Ringo Starr." width="6.01in"}`images/04-first-class-lists/52-script-item-empty-sublist-of-band.png`
+
 To get a column or columns of a spreadsheet, use an empty list in the row
 selector (as of Snap<em>!</em> 6.6):
 
 {img alt="`item (list (list) (list 2 1 2)) of` the Beatles list selects every row across columns 2, 1, 2, producing a 4×3 table of last-names/first-names/last-names." width="6.60in"}`images/04-first-class-lists/53-script-item-column-of-spreadsheet.png`
+
 The `length of` block is extended to provide
 various ways of looking at the shape and contents of a list. The options
 other than `length` are mainly useful for *lists of lists,* to any depth.

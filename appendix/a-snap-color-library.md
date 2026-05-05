@@ -120,10 +120,10 @@ really old-fashioned photo” and so you’d find sepia {inline alt="image1144.p
 crayon number 33. You don’t have to memorize the numbers! You can find
 them in a menu with a submenu for each family.
 
-{img alt="image1140.png"}`images/a-snap-color-library/image1140.png` <!--  width="5.79306in" / -->
+{img alt="image1140.png" width="5.79306in"}`images/a-snap-color-library/image1140.png`
 
 Or, if you
-know the crayon name, just {inline alt="image1147.png"}`images/a-snap-color-library/image1147.png` <!--  width="2.15972in" -->.
+know the crayon name, just {inline alt="image1147.png" width="2.15972in"}`images/a-snap-color-library/image1147.png`.
 
 The crayon numbers are chosen so that skipping by 10 gives a sensible box of ten crayons:
 
@@ -172,7 +172,7 @@ transparency.) The {index}`pen reporter` requires no other
 inputs; it reports the state of the pen in whatever dimension you
 choose.
 
-{img alt="image1157.png"}`images/a-snap-color-library/image1157.png` <!--  width="5.79306in" / -->
+{img alt="image1157.png" width="5.79306in"}`images/a-snap-color-library/image1157.png`
 
 As the last example shows, you can’t ask for the pen color in a scale
 incompatible with how you set it, unless the block can deduce what you
@@ -219,7 +219,7 @@ number, as in the Red example, you can use this block:
 Finally, the library includes the {index}`mix block` and a
 helper:
 
-{img alt="image1160.png"}`images/a-snap-color-library/image1160.png` <!--  width="5.79306in" / -->
+{img alt="image1160.png" width="5.79306in"}`images/a-snap-color-library/image1160.png`
 
 We’ll have more to say about these after a detour through color theory.
 
@@ -280,8 +280,8 @@ Our *color number* scale is based on fair hues, adding a range of grays from bla
 colors. (In color terminology, a *shade* is a darker version of a color;
 a lighter version is called a *tint.*) Why do we add shades
 but not tints ? Partly because I find shades
-more exciting. A shade of red {inline alt="image1195.png"}`images/a-snap-color-library/image1195.png` <!--  width="0.23611in" --> can be dark candy apple red {inline alt="image1194.png"}`images/a-snap-color-library/image1194.png` <!--  width="0.23611in" --> or maroon {inline alt="image1193.png"}`images/a-snap-color-library/image1193.png` <!--  width="0.23611in" -->, but a tint is just some kind
-of pink {inline alt="image1192.png"}`images/a-snap-color-library/image1192.png` <!--  width="0.23611in" -->. This admitted prejudice is supported by an
+more exciting. A shade of red {inline alt="image1195.png" width="0.23611in"}`images/a-snap-color-library/image1195.png` can be dark candy apple red {inline alt="image1194.png" width="0.23611in"}`images/a-snap-color-library/image1194.png` or maroon {inline alt="image1193.png" width="0.23611in"}`images/a-snap-color-library/image1193.png`, but a tint is just some kind
+of pink {inline alt="image1192.png" width="0.23611in"}`images/a-snap-color-library/image1192.png`. This admitted prejudice is supported by an
 objective fact: Most projects are made on a white background, so dark colors stand out better than light
 ones.
 
@@ -303,7 +303,7 @@ color numbers by 5
 
 color numbers by 10
 
-{img alt="image1197.png"}`images/a-snap-color-library/image1197.png` <!--  width="0.23611in" -->
+{img alt="image1197.png" width="0.23611in"}`images/a-snap-color-library/image1197.png`
 
 This chart shows how the {index}`color scales` discussed so
 far are related. Note that all scales range from 0 to 100; the fair hues
@@ -434,7 +434,7 @@ given the amount of white or black needed to achieve that lightness.
 Saturation less than 100 means that *both white and black* are mixed
 with the spectral color. (Such mixtures are called *tones* of the
 spectral color.) Perceptually, colors with saturation 100% don’t look
-gray: {inline alt="image1202.png"}`images/a-snap-color-library/image1202.png` <!--  width="1.55556in" / -->  but colors with saturation 75% do: {inline alt="image1201.png"}`images/a-snap-color-library/image1201.png` <!--  width="1.56389in" / -->
+gray: {inline alt="image1202.png" width="1.55556in"}`images/a-snap-color-library/image1202.png`  but colors with saturation 75% do: {inline alt="image1201.png" width="1.56389in"}`images/a-snap-color-library/image1201.png`
 
 Note that HSV and HSL both have a dimension called “saturation,” but
 *they’re not the same thing!* In HSV, “saturation” means non-whiteness,
@@ -478,8 +478,8 @@ because that’s what’s built into the JavaScript
 programming language provided by browsers. But if the goal is to model
 human color perception, neither of these color spaces is satisfactory,
 because they assume that all full-intensity spectral colors are equally
-bright. But if you’re like most people, you see spectral yellow {inline alt="image1206.png"}`images/a-snap-color-library/image1206.png` <!--  width="0.18889in" --> as much
-brighter than spectral blue {inline alt="image1205.png"}`images/a-snap-color-library/image1205.png` <!--  width="0.20278in" / --> . There are better perceptual color spaces
+bright. But if you’re like most people, you see spectral yellow {inline alt="image1206.png" width="0.18889in"}`images/a-snap-color-library/image1206.png` as much
+brighter than spectral blue {inline alt="image1205.png" width="0.20278in"}`images/a-snap-color-library/image1205.png` . There are better perceptual color spaces
 with names like L\*u\*v\* and L\*a\*b\*
 that are based on research with human subjects to
 determine true perceived brightness. Wikipedia explains all this and
@@ -555,7 +555,7 @@ component also.
 The proper mathematical abstraction to describe a paint is a
 *reflectance* graph, like this:
 
-{img alt="image1209.png"}`images/a-snap-color-library/image1209.png` <!--  width="0.20278in" / -->
+{img alt="image1209.png" width="0.20278in"}`images/a-snap-color-library/image1209.png`
 
 (These aren’t paints, but minerals, and one software-generated spectrum,
 from the US Geological Survey’s [Spectral
@@ -570,7 +570,7 @@ inputs and converts them into what we hope are *typical* paint
 reflectance spectra that would look like those colors, and then mixes
 those spectra and converts back to RGB.
 
-{img alt="image1230.png"}`images/a-snap-color-library/image1230.png` <!--  width="4.34028in" -->
+{img alt="image1230.png" width="4.34028in"}`images/a-snap-color-library/image1230.png`
 
 But unlike the other two kinds of mixing, in this case we can’t say that
 these colors are “the right answer”; what would happen with real paints

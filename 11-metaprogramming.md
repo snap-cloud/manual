@@ -16,7 +16,7 @@ custom? of block block
 
 ## Reading a block
 
-{img alt="image375.png"}`images/11-metaprogramming/image375.png` <!--  width="1.15in" / -->
+{img alt="image375.png" width="1.15in"}`images/11-metaprogramming/image375.png`
 
 The definition of block takes a custom block
 (in a ring, since it’s the block itself that’s the input, not the result
@@ -86,7 +86,7 @@ Note that the underscores are separated from the block text by spaces.
 Note in the case of the for block’s label that the upvar (the i) and the
 C-slot both count as inputs. Note also that the label is not meant to be
 a unique symbol that represents only this block. For example,
-{img alt="image628.png"}`images/11-metaprogramming/image628.png` <!--  width="0.86111in" / -->  and
+{img alt="image628.png" width="0.86111in"}`images/11-metaprogramming/image628.png`  and
 {img alt="image376.png" width="1.22in"}`images/11-metaprogramming/image376.png`
 both have the label
 
@@ -145,7 +145,7 @@ these numbers as an alternative to the names.
 
 There are a few more attributes of a block, less commonly used.
 
-{img alt="image954.png"}`images/11-metaprogramming/image954.png` <!--  width="3.37986in" / --> {inline alt="image955.png"}`images/11-metaprogramming/image955.png` <!--  width="1.02in" alt="A picture containing text, clipart Description automatically generated" / -->
+{img alt="image954.png" width="3.37986in"}`images/11-metaprogramming/image954.png` {inline alt="image955.png"}`images/11-metaprogramming/image955.png` <!--  width="1.02in" alt="A picture containing text, clipart Description automatically generated" / -->
 
 
 The list input is just like the one for set slots except for default values
