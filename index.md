@@ -22,7 +22,7 @@ You may wish to [read a very nicely typeset version][pdf] of the manual.
 [pdf]: https://snap.berkeley.edu/snap/help/SnapManual.pdf
 :::
 
-**Version 11.0**
+**Version 12.0**
 
 Snap<em>!</em> (formerly BYOB) is an extended reimplementation of Scratch
 (<u>https://scratch.mit.edu</u>) that allows you to Build Your Own
