@@ -1,7 +1,0 @@
----
----
-
-# `Play Sound`
-
-```{block-help}
-```

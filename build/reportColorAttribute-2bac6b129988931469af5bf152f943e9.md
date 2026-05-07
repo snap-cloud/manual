@@ -1,7 +1,0 @@
----
----
-
-# `Color Attribute`
-
-```{block-help}
-```

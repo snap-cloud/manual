@@ -1,7 +1,0 @@
----
----
-
-# `pen trails`
-
-```{block-help}
-```

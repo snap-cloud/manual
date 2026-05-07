@@ -1,7 +1,0 @@
----
----
-
-# `Set Instrument`
-
-```{block-help}
-```

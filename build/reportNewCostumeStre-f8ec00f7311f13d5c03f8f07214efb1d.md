@@ -1,7 +1,0 @@
----
----
-
-# `Stretch Costume`
-
-```{block-help}
-```

@@ -1,7 +1,0 @@
----
----
-
-# `costume number`
-
-```{block-help}
-```

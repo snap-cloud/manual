@@ -1,8 +1,0 @@
----
-{}
----
-
-# `move steps`
-
-```{block-help}
-```

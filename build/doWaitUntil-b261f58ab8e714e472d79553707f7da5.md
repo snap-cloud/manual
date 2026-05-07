@@ -1,7 +1,0 @@
----
----
-
-# `wait until`
-
-```{block-help}
-```

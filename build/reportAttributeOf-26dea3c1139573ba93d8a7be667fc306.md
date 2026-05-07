@@ -1,7 +1,0 @@
----
----
-
-# `Attribute Of`
-
-```{block-help}
-```

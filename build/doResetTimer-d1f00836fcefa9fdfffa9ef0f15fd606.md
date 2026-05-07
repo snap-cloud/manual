@@ -1,7 +1,0 @@
----
----
-
-# `reset timer`
-
-```{block-help}
-```
