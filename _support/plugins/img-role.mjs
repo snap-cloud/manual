@@ -7,7 +7,7 @@ const imgRole = {
     required: true,
   },
   options: {
-    alt: { type: String, doc: 'Alt text for accessibility.', required: true },
+    alt: { type: String, doc: 'Alt text for accessibility.', required: false },
     class: { type: String, doc: 'CSS class(es).' },
     width: { type: String, doc: 'CSS width, e.g. 200px or 50%.' },
     height: { type: String, doc: 'CSS height.' },
@@ -49,7 +49,7 @@ const blockImgRole = {
     required: true,
   },
   options: {
-    alt: { type: String, doc: 'Alt text for accessibility.', required: true },
+    alt: { type: String, doc: 'Alt text for accessibility.', required: false },
     class: { type: String, doc: 'CSS class(es).' },
     width: { type: String, doc: 'CSS width, e.g. 200px, 50%, or 1.5in.' },
     height: { type: String, doc: 'CSS height.' },

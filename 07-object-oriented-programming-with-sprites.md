@@ -82,14 +82,20 @@ The fundamental means by which programs get access to sprites is the <code>my ( 
 block. It has a dropdown-menu input slot that, when clicked,
 gives access to all the sprites, plus the stage.
 {inline alt="my self" class="image-inline"}`images/07-object-oriented-programming-with-sprites/image745.png` reports a
-single sprite, the one asking the question. ![image744.png](images/07-object-oriented-programming-with-sprites/image744.png) <!--  width="1.08333in" / -->   reports a list of all
-sprites other than the one asking the question. ![image743.png](images/07-object-oriented-programming-with-sprites/image743.png) <!--  width="0.96528in" / -->  reports a list of all
+single sprite, the one asking the question. {inline alt="image744.png" width="1.08333in"}`images/07-object-oriented-programming-with-sprites/image744.png` reports a list of all
+sprites other than the one asking the question. {inline alt="image743.png" width="0.96528in"}`images/07-object-oriented-programming-with-sprites/image743.png` reports a list of all
 sprites that are *near* the one asking—the ones that are candidates for
 having collided with this one, for example. The <code>my ( )</code> block has many other options, discussed below. If you know the name of
 a particular sprite, the object reporter will report the sprite itself.
 
-<!-- TODO: Figure out spacing / grid? -->
-![image746.png](images/07-object-oriented-programming-with-sprites/image746.png) width="3.55208in" / ![image747.png](images/07-object-oriented-programming-with-sprites/image747.png)   width="2.69143in"
+::::{grid} 2
+::::{grid-item}
+{img alt="image746.png" width="3.55208in"}`images/07-object-oriented-programming-with-sprites/image746.png`
+:::
+::::{grid-item}
+{img alt="image747.png" width="2.69143in"}`images/07-object-oriented-programming-with-sprites/image747.png`
+:::
+::::
 
 An object or list of objects reported by <code>my ( )</code> or <code>object ( )</code> can be used as input to any
 block that accepts any input type, such as set’s (<code>set ( ) to ( )</code>) second input. If you
@@ -99,7 +105,7 @@ of the object’s costume or (for the stage) background.
 {img alt="image742.png" width="2.62in"}`images/07-object-oriented-programming-with-sprites/image742.png`
 
 :::{index} temporary clone
-clone temporary
+clone; temporary
 permanent clone
 clone; permanent
 :::
@@ -285,7 +291,7 @@ in a nesting arrangement (see
 @nesting-sprites-anchors-and-parts). Similarly, the same <code>set ( ) to ( )</code> block
 used to set variable values allows setting some sprite attributes.
 
-![image766.png](images/07-object-oriented-programming-with-sprites/image766.png) <!--  width="1.67361in" / -->
+{img alt="image766.png" width="1.67361in"}`images/07-object-oriented-programming-with-sprites/image766.png`
 
 :::{index} prototyping
 class/instance
@@ -344,7 +350,7 @@ sprites have a “parent” attribute that can be
 set, like any attribute, thereby *changing* the parent of an existing
 sprite.
 
-![image766.png](images/07-object-oriented-programming-with-sprites/image766.png) <!--  width="1.67361in" / -->
+{img alt="image766.png" width="1.67361in"}`images/07-object-oriented-programming-with-sprites/image766.png`
 
 :::{index} inherit block
 :::
@@ -417,7 +423,14 @@ center y (in my block)
 
 ##  List of attributes
 
-<!-- ![image781.png](images/07-object-oriented-programming-with-sprites/image781.png) ![image782.png](images/07-object-oriented-programming-with-sprites/image782.png)  -->
+::::{grid} 2
+::::{grid-item}
+{img alt="image781.png"}`images/07-object-oriented-programming-with-sprites/image781.png`
+:::
+::::{grid-item}
+{img alt="image782.png"}`images/07-object-oriented-programming-with-sprites/image782.png`
+:::
+::::
 
 At the right is a picture of the dropdown menu of attributes in the <code>my ( )</code> block.
 
@@ -426,67 +439,44 @@ At the right is a picture of the dropdown menu of attributes in the <code>my ( )
 Several of these are not real attributes, but things related to
 attributes:
 
-- <code>self</code>: this sprite
-
-- <code>neighbors</code>: a list of *nearby*
-  sprites[^8]
-
-- <code>other sprites</code>: a list of all
-  sprites except myself
-
-- <code>stage</code>: the stage, which is first-class,
-  like a sprite
-
-- <code>clones</code>: a list of my *temporary* clones
-
-- <code>other clones</code>: a list of my
+- `self`: this sprite
+- `neighbors`: a list of _nearby_ sprites [^8]
+- `other sprites`: a list of all sprites except myself
+- `stage`: the stage, which is first-class, like a sprite
+- `clones`: a list of my *temporary* clones
+- `other clones`: a list of my
   *temporary* siblings
-
-- <code>parts</code>: a list of sprites whose anchor
+- `parts`: a list of sprites whose anchor
   attribute is this sprite
-
-- <code>children</code>: a list of all my clones,
+- `children`: a list of all my clones,
   temporary and permanent
 
 The others are individual attributes:
 
-- <code>anchor</code>: the sprite of which I am a
+- `anchor`: the sprite of which I am a
   (nested) part
-
-- <code>parent</code>: the sprite of which I am a clone
-
-- <code>temporary?</code>: am I a temporary clone?
-
-- <code>name</code>: my name (same as parent’s name if
+- `parent`: the sprite of which I am a clone
+- `temporary?`: am I a temporary clone?
+- `name`: my name (same as parent’s name if
   I’m temporary)
-
-- <code>costumes</code>: a list of the sprite’s
+- `costumes`: a list of the sprite’s
   costumes
-
-- <code>sounds</code>: a list of the sprite’s sounds
-
-- <code>blocks</code>: a list of the blocks visible in this sprite
-
-- <code>categories</code>: a list of all the block category names
-
-- <code>dangling?</code>: True if I am a part and
+- `sounds`: a list of the sprite’s sounds
+- `blocks`: a list of the blocks visible in this sprite
+- `categories`: a list of all the block category names
+- `dangling?`: True if I am a part and
   not in synchronous orbit
-
-- <code>draggable?</code>: True if the user can move me with the mouse
-
-- <code>width, height, left, right, top, bottom</code>: The width or height of my
+- `draggable?`: True if the user can move me with the mouse
+- `width, height, left, right, top, bottom`: The width or height of my
   costume *as seen right now,* or the left, etc., edge of my bounding
   box, taking rotation into account.
-
-- <code>rotation x, rotation y
-: when reading with <code>my ( )</code>, the same as <code>x
-  position, y position</code>. When <code>set ( ) to ( )</code>, changes the sprite’s rotation center
+- `rotation x, rotation y`: when reading with `my ( )`, the same as `x
+  position, y position`. When `set ( ) to ( )`, changes the sprite’s rotation center
   *without moving the sprite,* like dragging the rotation center in the
   paint editor.
+- `center x, center y `: the x and y position of the center of my bounding box, rounded off–the geometric center of the costume.
 
-- <code>center x, center y </code>: the x and y position of the center of my bounding box, rounded off–the geometric center of the costume.
-
-[^8]: *<code>Neighbors</code>* are all other sprites whose bounding boxes intersect the
+[^8]: *`Neighbors`* are all other sprites whose bounding boxes intersect the
 doubled dimensions of the requesting sprite's bounds.
 
 :::{index} costumes, first class
@@ -495,9 +485,7 @@ doubled dimensions of the requesting sprite's bounds.
 ## First Class Costumes and Sounds
 
 Costumes and sounds don’t have methods, as sprites do; you can’t ask
-them to do things. But they *are* first class: you can make a list of them, put them in variables, use them as
-input to a procedure, and so on. <code>My (costumes)</code> and <code>my (sounds)</code>
-report lists of them.
+them to do things. But they *are* first class: you can make a list of them, put them in variables, use them as input to a procedure, and so on. `my (costumes)` and `my (sounds)` report lists of them.
 
 :::{index} of costume block
 bitmap
@@ -695,7 +683,7 @@ brief? On my computer, 0.010667 seconds, but you’ll see shortly how to
 
 Just as the *pixel* is
 the smallest piece of a picture, the *sample* is the smallest piece of a
-sound {inline alt="image826.png"}`images/07-object-oriented-programming-with-sprites/image826.png` <!--  width="1.96528in" --> . It says here: that on my computer, 48,000 samples are recorded
+sound {inline alt="image826.png" width="1.96528in"}`images/07-object-oriented-programming-with-sprites/image826.png`. It says here: that on my computer, 48,000 samples are recorded
 per second, so each sample is 1/48,000 of a second. The
 value of a sample is between -1 and 1, and represents the sound pressure
 on the microphone—how hard the air is pushing—at that instant. (You can

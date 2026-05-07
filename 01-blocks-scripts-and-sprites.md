@@ -182,11 +182,11 @@ the script:
 ::::{grid} 2
 
 :::{grid-item}
-![image18.png](images/01-blocks-scripts-and-sprites/image18.png)
+{img alt="image18.png"}`images/01-blocks-scripts-and-sprites/image18.png`
 :::
 
 :::{grid-item}
-![image19.png](images/01-blocks-scripts-and-sprites/image19.png)
+{img alt="image19.png"}`images/01-blocks-scripts-and-sprites/image19.png`
 :::
 ::::
 
@@ -386,7 +386,7 @@ The classic example is a person’s body made up of a torso, limbs, and a
 head. Snap<em>!</em> allows one sprite to be designated as the *anchor*
 of the combined shape, with other sprites as its *parts.*
 
-To set up sprite nesting , drag the sprite corral icon of a *part* sprite
+To set up sprite nesting, drag the sprite corral icon of a *part* sprite
 onto the stage display (not the sprite corral icon!) of the desired
 *anchor* sprite. The precise place where you let go of the mouse button
 will be the attachment point of the part on the anchor.
@@ -830,7 +830,7 @@ just put a `pause all` inside an `if`.[^2]
 [^2]: The hide variable and show variable block s can also be used to hide and show primitives in the palette.
 The pulldown menu doesn’t include primitive blocks, but there’s a generally useful
 technique to give a block input values it wasn’t expecting using run or
-call: ![image120.png](images/01-blocks-scripts-and-sprites/image120.png)
+call: {inline alt="image120.png"}`images/01-blocks-scripts-and-sprites/image120.png`.
 
 In order to use a block as an input this way, you must explicitly put a
 ring around it, by right-clicking on it and choosing ringify. More about
@@ -1176,11 +1176,11 @@ negation operator
 `set background` block
 :::
 
-<!-- ::: {.callout-tip} -->
+<!--::: {.callout-tip} -->
 <!-- ## Two Different Length Of Blocks -->
 
 The {inline alt="length of text block"}`./blocks/images/block_reportTextAttribute` name was changed to clarify it is different from {inline alt="length of text block"}`./blocks/images/block_reportListAttribute`
-<!-- ::: -->
+<!--::: -->
 
 {img alt="image308.png" width="1.42in"}`images/01-blocks-scripts-and-sprites/image308.png`
 
@@ -1191,7 +1191,7 @@ changes to `sum` or `product`.
 ::::{grid} 2
 
 :::{grid-item}
-![image309.png](images/01-blocks-scripts-and-sprites/image309.png)
+{img alt="image309.png"}`images/01-blocks-scripts-and-sprites/image309.png`
 :::
 
 :::{grid-item}
@@ -1210,7 +1210,7 @@ when I am stopped script
 ::::{grid} 2
 
 :::{grid-item}
-![image310.png](images/01-blocks-scripts-and-sprites/image310.png)
+{img alt="image310.png"}`images/01-blocks-scripts-and-sprites/image310.png`
 :::
 
 :::{grid-item}
@@ -1219,7 +1219,6 @@ when I am stopped script
 ::::
 
 ::::{grid} 2
-
 :::{grid-item}
 {inline alt="image311.png" class="image-4x"}`images/01-blocks-scripts-and-sprites/image311.png`
 :::
@@ -1238,8 +1237,12 @@ broadcast, or to a two-item list containing the message and the payload.
 
 {inline alt="image312.png" class="image-2x"}`images/01-blocks-scripts-and-sprites/image312.png`
 
+::::{grid} 2
+:::{grid-item}
 {inline alt="image355.png" class="image-2x"}`images/01-blocks-scripts-and-sprites/image355.png`
+:::
 
+:::{grid-item}
 If the input is set to “any key,” then a right arrowhead appears:
 {inline alt="image357.png" class="image-inline-tall"}`images/01-blocks-scripts-and-sprites/image357.png` and if you click it,
 a script variable key is created whose value is the key that was
@@ -1248,8 +1251,9 @@ word or phrase, e.g., “enter” or “up arrow,” then the value of key
 will be that word or phrase, *except for* the space character, which
 is represented as itself in key.)
 
-{inline alt="image356.png" class="image-4x"}`images/01-blocks-scripts-and-sprites/image356.png`
-<!--  width="2.25in"   alt="Website Description automatically generated with medium confidence" -->
+{img alt="image356.png" class="image-4x" width="2.25in"}`images/01-blocks-scripts-and-sprites/image356.png`
+:::
+::::
 
 The RGB(A) option accepts a single number, which
 is a grayscale value 0-255; a two-number list, grayscale plus opacity
@@ -1269,18 +1273,18 @@ is a grayscale value 0-255; a two-number list, grayscale plus opacity
 ### Using Lists with the Ask Block
 These ask features and more in the Menus
 library.
+
 {img alt="image359.png" width="0.60in"}`images/01-blocks-scripts-and-sprites/image359.png`
 
-![image360.png](images/01-blocks-scripts-and-sprites/image360.png)
+{img alt="image360.png" width="2.25in"}`images/01-blocks-scripts-and-sprites/image360.png`
 
-![image361.png](images/01-blocks-scripts-and-sprites/image361.png)
+{img alt="image361.png" width="2.25in"}`images/01-blocks-scripts-and-sprites/image361.png`
 
 {img alt="image362.png" width="4.55in"}`images/01-blocks-scripts-and-sprites/image362.png`
 
 ::::{grid} 2
-
 :::{grid-item}
-{inline alt="image363.png" class="image-4x"}`images/01-blocks-scripts-and-sprites/image363.png`
+{img alt="image363.png" class="image-2x"}`images/01-blocks-scripts-and-sprites/image363.png`
 :::
 
 :::{grid-item}
@@ -1656,7 +1660,7 @@ next page.
 {img alt="image412.png" width="1.13333in"}`images/01-blocks-scripts-and-sprites/image412.png`
 
 Colors are created by the {inline alt="image414.png"}`images/01-blocks-scripts-and-sprites/image414` <!--  width="0.95in" --> block (for direct user selection), the `color from`
-to specify a color numerically, or by {inline alt="image413.png"}`images/01-blocks-scripts-and-sprites/image413` <!-- width="1.13333in" --> , which
+to specify a color numerically, or by {inline alt="image413.png"}`images/01-blocks-scripts-and-sprites/image413` <!-- width="1.13333in" -->, which
 reports the color currently in use by the pen. The `from color` block
 reports names or numbers associated with a color:
 
@@ -1700,7 +1704,7 @@ Here is the color number scale:
 hue scale.)
 
  And
-here are the 100 crayons :
+here are the 100 crayons:
 :::{index} crayons
 :::
 
@@ -1737,7 +1741,7 @@ But note that a transparency number in a four-number RGBA vector is on
 the scale 255=opaque, 0=transparent, so the following are *not*
 equivalent:
 
-![image430.png](images/01-blocks-scripts-and-sprites/image430.png)
+{img alt="image430.png"}`images/01-blocks-scripts-and-sprites/image430.png`
 
 `Set pen crayon to` provides the equivalent of a box of 100 crayons. They
 are divided into color groups, so the menu in the set pen crayon to
@@ -2027,7 +2031,7 @@ The web services library has these blocks:
 {img alt="image471.png" width="3.41in"}`images/01-blocks-scripts-and-sprites/image471.png`
 
 The first block is a generalization of the primitive
-{index}`\`url\` block<`url` block>` , allowing more control over the various
+{index}`\`url\` block<`url` block>`, allowing more control over the various
 options in web requests:
 `GET`, `POST`, `PUT`, and `DELETE`, and fine control over the content of the
 message sent to the server. {index}`Current location block` reports your latitude and longitude. The {index}`Listify block` takes some text in JSON format (see @multi-dimensional-lists-and-json) and converts it to a structured
@@ -2098,7 +2102,7 @@ logic functions; each bit of
 the reported value is the result of applying the corresponding Boolean
 function to the corresponding bits of the input(s). The Boolean
 functions are `not for ¬`, ` and for ∧`, ` or for ∨`, and `xor (exclusive or) for
-⊻` . The remaining functions shift their first input left or right by the
+⊻`. The remaining functions shift their first input left or right by the
 number of bits given by the second input. `\<\<` is left shift, `\>\>` is
 arithmetic right shift (shifting in one bits from the left), and `\>\>\>`
 is logical right shift (shifting in zero bits from the left). If you

@@ -62,7 +62,7 @@ A search function is included in the upper right hand corner.
 
 ### Reference the Snap! Manual
 
-[DOI: 10.5281/zenodo.16892852](https://doi.org/10.5281/zenodo.16892852)
+![[DOI: 10.5281/zenodo.16892852](https://doi.org/10.5281/zenodo.16892852)](images/other/zenodo.17241865.svg)
 
 If you're writing a paper or book and want to reference the manual, please use the following citation:
 
@@ -80,4 +80,6 @@ If you're writing a paper or book and want to reference the manual, please use t
 }
 ```
 
-<!-- TODO: CC Image and text. -->
+### License
+
+This work is licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International</a> {inline alt=""}`images/other/cc.svg` {inline alt=""}`images/other/by.svg` {inline alt=""}`images/other/nc.svg` {inline alt=""}`images/other/sa.svg`

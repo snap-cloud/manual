@@ -33,8 +33,7 @@ project:
   substitutions:
     # Snap: Snap!
     Snap: 'Snap<em>!</em>'
-  settings:
-    parser:
+  parser:
       allowDangerousHtml: true
 
 # The PDF builds -- Each PDF file specifies it's own list of pages.

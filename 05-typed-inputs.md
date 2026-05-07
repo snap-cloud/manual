@@ -275,8 +275,7 @@ complete list of such notations:
 - ⫶ list
 - ? Boolean
 - ¶ multi-line text
-- ![image686.png](images/05-typed-inputs/image686.png) <!--  width="0.16319in" / --> object
-
+- {inline alt="image686.png" width="0.16319in"}`images/05-typed-inputs/image686.png` objectxxw
 :::{index} icons in title text
 new line character
 :::
