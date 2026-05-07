@@ -1,7 +1,8 @@
 version: 1
 project:
   exports:
-  - format: tex+pdf
+  - id: output-pdf-with-blocks
+    format: tex+pdf
     title: Snap\textit{!} Reference Manual \& Blocks Reference
     template: ./_latex-template/
     output: output/snap-manual-blocks-ref.pdf
@@ -467,7 +468,8 @@ project:
       - file: blocks/lists/reportCrossproduct.md
         level: 3
       # \printindex emits the index from the LaTeX template directly.
-  - format: tex+pdf
+  - id: output-pdf-blocks-ref
+    format: tex+pdf
     title: Snap\textit{!} Blocks Reference
     template: ./_latex-template/
     output: output/snap-blocks-ref.pdf
