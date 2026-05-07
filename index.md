@@ -55,12 +55,22 @@ Snap<em>!</em>. They are organized from introductory to advanced topics.
 +++ {"no-pdf": true}
 ## Features of the Manual
 
-You'll find the table of contents on the left side of each page. At the bottom of each page, you'll find previous and next links to navigate the manual in order.
+You'll find the table of contents on the left side of each page. At the bottom of each page, you'll find previous and next links to navigate the manual in order. The right side of each page contains a list of all the sections in the current chapter. You can click on any of those to jump directly to that section.
 
 A search function is included in the upper right hand corner.
+
+### PDF versions
+
+We have three versions of the manual available for download as PDF files. The "Manual only" version includes all of the chapters and appendices, but does not include the sectoion labelled 'Blocks Reference'. The "Blocks Reference" version includes only the section labelled 'Blocks Reference', which provides documentation for every block in Snap<em>!</em>, roughly one print page per block.
+
+The "Manual + Blocks Reference" version includes both the manual and the blocks reference in a single PDF. (It is quite large, at around 500 pages, so it may take a while to download and open.) If you intend to print the manual, you may wish to print the "Manual only" version.
+
+{button}`Manual only <snap-manual.pdf>`
+{button}`Blocks Reference <snap-blocks-ref.pdf>`
+{button}`Manual + Blocks Reference <snap-manual-blocks-ref.pdf>`
 +++
 
-### Reference the Snap! Manual
+### Reference the Snap<em>!</em> Manual
 
 ![[DOI: 10.5281/zenodo.16892852](https://doi.org/10.5281/zenodo.16892852)](images/other/zenodo.17241865.svg)
 

@@ -35,6 +35,8 @@ ${block_description}
 
 ![The "${title}" block](/blocks/images/block_${selector}.png)
 
+<br/>
+
 ![Help screen for the "${title}" block](../help/${help_screen})
 
 ## Example Images
