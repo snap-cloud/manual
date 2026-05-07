@@ -1,7 +1,0 @@
----
----
-
-# `wait  secs`
-
-```{block-help}
-```

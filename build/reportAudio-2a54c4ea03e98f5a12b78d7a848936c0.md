@@ -1,7 +1,0 @@
----
----
-
-# `microphone`
-
-```{block-help}
-```

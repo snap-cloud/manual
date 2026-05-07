@@ -1,7 +1,0 @@
----
----
-
-# `touching  ?`
-
-```{block-help}
-```

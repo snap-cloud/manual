@@ -1,7 +1,0 @@
----
----
-
-# `Set Tempo`
-
-```{block-help}
-```

@@ -1,7 +1,0 @@
----
----
-
-# `point towards`
-
-```{block-help}
-```

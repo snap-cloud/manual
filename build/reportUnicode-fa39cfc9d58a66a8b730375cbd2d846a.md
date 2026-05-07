@@ -1,7 +1,0 @@
----
----
-
-# `unicode of`
-
-```{block-help}
-```

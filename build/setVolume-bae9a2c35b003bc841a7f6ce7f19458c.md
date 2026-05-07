@@ -1,7 +1,0 @@
----
----
-
-# `Set Volume`
-
-```{block-help}
-```

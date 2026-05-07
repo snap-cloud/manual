@@ -1,7 +1,0 @@
----
----
-
-# `combinations`
-
-```{block-help}
-```

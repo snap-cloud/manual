@@ -1,0 +1,7 @@
+---
+---
+
+# `Script variables`
+
+```{block-help}
+```

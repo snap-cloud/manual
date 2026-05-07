@@ -1,7 +1,0 @@
----
----
-
-# `new color`
-
-```{block-help}
-```

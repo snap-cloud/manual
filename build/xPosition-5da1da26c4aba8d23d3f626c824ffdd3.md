@@ -1,7 +1,0 @@
----
----
-
-# `x position`
-
-```{block-help}
-```

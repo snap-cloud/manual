@@ -1,0 +1,7 @@
+---
+---
+
+# `new color`
+
+```{block-help}
+```
