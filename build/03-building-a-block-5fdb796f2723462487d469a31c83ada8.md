@@ -10,8 +10,8 @@ Scratch
 (sec-ch03)=
 # 3. Building a Block
 
-The first version of Snap<em>!</em> was called BYOB, for “Build Your Own Blocks .” This was the first and is still the
-most important capability we added to Scratch . (The
+The first version of Snap<em>!</em> was called BYOB, for “Build Your Own Blocks.” This was the first and is still the
+most important capability we added to Scratch. (The
 name was changed because a few teachers have no sense of humor. ☹ You
 pick your battles.) Scratch 2.0 and later also has a partial custom
 block capability.
@@ -25,7 +25,7 @@ prototype
 
 ## Simple Blocks
 
-In every palette, at or near the bottom, is a button labeled "`Make a block`" . Also, floating near the top of the palette
+In every palette, at or near the bottom, is a button labeled "`Make a block`". Also, floating near the top of the palette
 is a plus sign (+). Also, the menu you get by right-clicking on the
 background of the scripting area has a "`make a block`" option.
 
@@ -46,7 +46,7 @@ blocks. Both colors are available, along with an "`Other`" option that
 makes grey blocks in the {span .mono}`Variables` palette for blocks that don’t fit any
 category.
 
-There are three block shapes , following a
+There are three block shapes, following a
 convention that should be familiar to Scratch users: The
 jigsaw-puzzle-piece shaped blocks are
 Commands, and don’t report a value. The {index}`oval blocks`
@@ -91,7 +91,7 @@ over one, it lights up:
 
 {img alt="image508.png" width="3.44in"}`images/03-building-a-block/image508.png`
 
-Click on the plus on the right. You will then see the “input name” dialog :
+Click on the plus on the right. You will then see the “input name” dialog:
 
 {img alt="image509.png" width="2.58in"}`images/03-building-a-block/image509.png`
 
@@ -109,7 +109,7 @@ You can now drag the orange variable down into the script, then click okay:
 
 {img alt="image511.png" width="1.47in"}`images/03-building-a-block/image511.png`
 
-Your block now appears in the {span .mono}`Motion` palette with an input box: ![image512.png](images/03-building-a-block/image512.png) <!--  width="0.69792in" / --> You can draw
+Your block now appears in the {span .mono}`Motion` palette with an input box: {inline alt="image512.png" width="0.69792in"}`images/03-building-a-block/image512.png`. You can draw
 any size square by entering the length of its side in the box and
 running the block as usual, by clicking it or by putting it in a script.
 
@@ -169,7 +169,17 @@ Since the new custom block appears in its palette as soon as you *start*
 editing it, you can write recursive blocks (blocks that call themselves)
 by dragging the block into its own definition:
 
-![image514.png](images/03-building-a-block/image514.png) <!--  width="2.96528in" / --> ![image515.png](images/03-building-a-block/image515.png) <!--  width="1.95833in" / --> ![image516.png](images/03-building-a-block/image516.png) <!--  width="1.42361in" / -->
+::::{grid} 3
+::: {.grid-item}
+{img alt="image514.png" width="1.42in"}`images/03-building-a-block/image514.png`
+:::
+::: {.grid-item}
+{img alt="image515.png" width="1.96in"}`images/03-building-a-block/image515.png`
+:::
+::: {.grid-item}
+{img alt="image516.png" width="2.97in"}`images/03-building-a-block/image516.png`
+:::
+::::
 
 (If you added inputs to the block since opening the editor, click "`Apply`"
 before finding the block in the palette, or drag the block from the top of the block editor rather than from the
@@ -194,12 +204,12 @@ values.
 You can also write {index}`recursive reporters<reporters, recursive>`,
 like this block to compute the factorial function:
 
-![image520.png](images/03-building-a-block/image520.png) <!--  width="4.29167in" / -->
+{img alt="image520.png" width="4.29167in"}`images/03-building-a-block/image520.png`
 
-Note the use of the <code>report</code> block . When a reporter
+Note the use of the `report` block. When a reporter
 block uses this block, the reporter finishes its work and reports the
 value given; any further blocks in the script are not evaluated. Thus,
-the <code>if else</code> block in the script above could have been just an <code>if</code>, with
+the `if else` block in the script above could have been just an `if`, with
 the second report block below it instead of inside it, and the result
 would be the same, because when the first <code>report</code> is seen in the base
 case, that finishes the block invocation, and the second <code>report</code> is
@@ -254,7 +264,7 @@ custom block as a single step. If you want to see stepping inside a
 custom block you must take these steps *in order:*
 
 1.  Turn on
-    "`Visible Stepping`" by pressing the footprints button: ![image123.png](images/03-building-a-block/image123.png)
+    "`Visible Stepping`" by pressing the footprints button: {inline alt="image123.png"}`images/03-building-a-block/image123.png`
 
 2.  Select "`Edit`" in the context menu(s) of the block(s) you want to
     examine.
