@@ -249,7 +249,7 @@ lists, the result is a new toplevel list whose items are the same
 (uncopied) lists that are items of the toplevel input list). To make a deep copy of a list
 (that is, one in which all the sublists,
 sublists of sublists, etc. are copied), use the list as input to the
-{inline alt="the `id of` reporter" class="image-4x image-inline" width="0.74in"}`images/04-first-class-lists/18-block-id-of.png` block (one of the variants of the `sqrt of` block). This works because `id of` is a @sec-hyperblock.
+{inline alt="the `id of` reporter" class="image-4x image-inline" width="0.74in"}`images/04-first-class-lists/18-block-id-of.png` block (one of the variants of the `sqrt of` block). This works because `id of` is a @sec-hyperblocks.
 
 The third higher order block, `combine`, computes a
 single result from *all* the items of a list, using a *two-input*
@@ -516,14 +516,11 @@ APL
 Smalltalk
 Lisp
 Prolog
+hyperblocks
 :::
 
-(sec-hyperblock)=
 (sec-hyperblocks)=
 ## Hyperblocks
-
-:::{index} hyperblocks
-:::
 
 A *scalar* is anything other than a list. The name comes from
 mathematics, where it means a magnitude without direction, as opposed to
