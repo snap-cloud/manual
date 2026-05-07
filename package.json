@@ -1,6 +1,7 @@
 {
   "devDependencies": {
     "js-yaml": "^4.1.1",
+    "jupyter-book": "^2.1.5",
     "mystmd": "^1.8.3",
     "sass": "^1.99.0"
   },
@@ -10,5 +11,8 @@
     "dev": "npm run styles:build && jupyter-book start --max-size-webp 0.01",
     "build": "npm run styles:build && jupyter-book build --html",
     "pdf": "jupyter-book build --pdf && open output/snap-manual.pdf"
+  },
+  "dependencies": {
+    "myst-theme": "^0.0.0"
   }
 }
