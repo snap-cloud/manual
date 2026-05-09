@@ -1,6 +1,5 @@
 ---
-numbering:
-  title: false
+title: false
 ---
 
 :::{index}
@@ -41,9 +40,7 @@ Xerox PARC
 :::
 
 (sec-acknowledgements)=
-+++{"no-pdf": true}
 # Acknowledgements
-+++
 
 We have been extremely lucky in our mentors.
 Jens cut his teeth in the company of the Smalltalk pioneers: Alan Kay, Dan Ingalls,
