@@ -4,40 +4,52 @@ numbering:
 ---
 
 :::{index}
-MIT, Massachusetts Institute of Technology
+MIT; Massachusetts Institute of Technology
 Scratch Team
 Morphic
 Lifelong Kindergarten Group
-MIT, MIT Media Lab
-MIT, Artificial Intelligence Lab
+MIT; MIT Media Lab
+MIT; Artificial Intelligence Lab
 Stanford Artificial Intelligence Lab
 Scheme
-single: Sussman, Gerald J.
-single: Steele, Guy
+SICP
+APL
 single: Structure and Interpretation of Computer Programs
 single: Abelson, Hal
-single: Sussman, Julie
 single: Iverson, Kenneth E.
-APL
+single: Dave, Achal
+single: Dinsmore, Nathan
 single: Guillén i Pelegay, Joan
 single: Hügle, Jadga
-single: Dinsmore, Nathan
-single: Reynolds, Ian
-single: Dave, Achal
 single: Hotchkiss, Kyle
+single: Ingalls, Dan
+single: Kay, Alan
+single: McCarthy, John
+single: Maloney, John
 single: Motyashov, Ivan
+single: Reynolds, Ian
 single: Servilla, Deborah
+single: Steele, Guy
+single: Sussman, Julie
+single: Sussman, Gerald J.
+
+Xerox PARC
+:::
+
+:::{raw:latex}
+\chapter*{Acknowledgements}
 :::
 
 (sec-acknowledgements)=
++++{"no-pdf": true}
 # Acknowledgements
++++
 
 We have been extremely lucky in our mentors.
-Jens cut his teeth in the company of the Smalltalk pioneers:
-{index}`Alan Kay<single: Kay, Alan>`, {index}`Dan Ingalls<single: Ingalls, Dan>`,
+Jens cut his teeth in the company of the Smalltalk pioneers: Alan Kay, Dan Ingalls,
 and the rest of the gang who invented personal computing and object oriented
-programming in the great days of {index}`Xerox PARC`. He
-worked with {index}`John Maloney<single: Maloney, John>`, of the MIT Scratch Team, who developed the Morphic graphics framework that's still at the heart of Snap<em>!</em>.
+programming in the great days of Xerox PARC. He
+worked with John Maloney, of the MIT Scratch Team, who developed the Morphic graphics framework that's still at the heart of Snap<em>!</em>.
 
 <!-- The LaTeX styling on Snap! is broken w/ bold and italics.  -->
 
@@ -45,7 +57,7 @@ worked with {index}`John Maloney<single: Maloney, John>`, of the MIT Scratch Tea
 Group at the MIT Media Lab, is crucial to Snap!. Our earlier version, BYOB, was a direct modification of the Scratch source code. Snap! is a complete rewrite, but its code structure and its user interface remain deeply indebted to Scratch. And the Scratch Team, who could have seen us as rivals, have been entirely supportive and welcoming to us.</em></strong>
 
 Brian grew up at the MIT and Stanford Artificial Intelligence Labs,
-learning from Lisp inventor {index}`John McCarthy<single: McCarthy, John>`,
+learning from Lisp inventor John McCarthy,
 Scheme inventors Gerald J. Sussman and Guy Steele, and the authors of the world's best computer science book, *Structure and Interpretation of Computer Programs*, Hal
 Abelson and Gerald J. Sussman with Julie Sussman, among many other heroes of computer
 science. (Brian was also lucky enough, while in high school, to meet Kenneth Iverson,
@@ -72,11 +84,10 @@ which also supports our computing needs.
 We have been fortunate to get to know an amazing group of brilliant
 middle school(!) and high school students through the Scratch Advanced
 Topics forum, several of whom (since grown up) have contributed code to
-Snap<em>!</em>: {index}`Kartik Chandra<single: Chandra, Kartik>`, Nathan Dinsmore
-, {index}`Connor Hudson<single: Hudson, Connor>`, Ian
-Reynolds, and Deborah Servilla . Many more have contributed ideas and alpha-testing bug
-reports. UC Berkeley students who've contributed code include Achal Dave, Kyle Hotchkiss, Ivan
-Motyashov, and {index}`Yuan Yuan<single: Yuan, Yuan>`.
+Snap<em>!</em>: {index}`Kartik Chandra<single: Chandra, Kartik>`, Nathan Dinsmore, {index}`Connor Hudson<single: Hudson, Connor>`, Ian
+Reynolds, and Deborah Servilla. Many more have contributed ideas and alpha-testing bug
+reports. UC Berkeley students who've contributed code include Achal Dave, Kyle Hotchkiss,
+Ivan Motyashov, and {index}`Yuan Yuan<single: Yuan, Yuan>`.
 Contributors of translations are too numerous to list here, but they're
 in the "About…" box in Snap<em>!</em> itself.
 

@@ -324,8 +324,9 @@ we left all three slots empty, Snap<em>!</em> would not fill any of them,
 because the number of inputs provided (2) would not match the number of
 empty slots (3).
 
-Here is a more realistic,
-much more advanced example: {inline alt="image733.png" width="4.34722in"}`images/06-procedures-as-data/image733.png`
+Here is a more realistic, much more advanced example:
+
+{img alt="image733.png" width="4.34722in"}`images/06-procedures-as-data/image733.png`
 
 {img alt="image732.png" width="4.68in"}`images/06-procedures-as-data/image732.png`
 

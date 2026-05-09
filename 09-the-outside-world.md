@@ -16,7 +16,7 @@ that interact with physical devices (sensors
 or robots) or with the World Wide Web. For these purposes Snap<em>!</em> provides a
 single primitive block:
 
-{img alt="image148.png"}`blocks/images/block_reportURL.png`
+{img alt="report URL block 'snap.berkeley.edu'"}`blocks/images/block_reportURL.png`
 
 This might not seem like enough, but in fact it can be used to build the
 desired capabilities.

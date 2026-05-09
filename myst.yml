@@ -22,6 +22,11 @@ project:
     - '**/*.tex'
   downloads:
     - id: output-pdf-primary
+      title: Download PDF
+    - id: output-pdf-with-blocks
+      title: Download PDF with Blocks Reference
+    - id: output-pdf-blocks-ref
+      title: Download Blocks Reference
   plugins:
     - https://github.com/choldgraf/myst-substitutions/releases/download/v0.1/index.mjs
     - _support/plugins/inline-image.mjs
@@ -33,8 +38,7 @@ project:
   substitutions:
     # Snap: Snap!
     Snap: 'Snap<em>!</em>'
-  settings:
-    parser:
+  parser:
       allowDangerousHtml: true
 
 # The PDF builds -- Each PDF file specifies it's own list of pages.
@@ -44,7 +48,7 @@ project:
 extends:
   - toc.yml
   - toc_pdf.yml
-  # - toc_pdf_alternates.yml
+  - toc_pdf_alternates.yml
 
 site:
   template: book-theme

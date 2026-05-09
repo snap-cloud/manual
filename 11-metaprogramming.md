@@ -36,7 +36,7 @@ may themselves be syntax trees.
 Using split by blocks to select custom blocks whose definitions contain
 another block gives us this debugging aid:
 
-{img alt="image378.png"}`images/11-metaprogramming/image378.png` <!--  width="1.15in" alt="A picture containing text, hitting Description automatically generated" / -->
+{img alt="image378.png" width="1.15in"}`images/11-metaprogramming/image378.png`
 
 Note in passing the my blocks block, which
 reports a list of all visible blocks, primitive and custom. (There’s
@@ -58,7 +58,7 @@ The inverse function to split by blocks is provided by the join block,
 which when given a syntax tree as input reports the
 corresponding expression or script.
 
-{img alt="image379.png"}`images/11-metaprogramming/image379.png` <!--  width="1.15in" alt="A picture containing text, hitting Description automatically generated" / -->
+{img alt="image379.png" width="1.15in"}`images/11-metaprogramming/image379.png`
 
 Here we are taking the definition of square, modifying the repetition
 count (to 6), modifying the turning angle (to 60), using join to turn
@@ -74,26 +74,19 @@ block. In this example, the label is “hexagon _” in which the
 underscore represents an input slot. So, here are a few examples of
 {index}`block label` s:
 
-  set pen _ to _
+  `set pen _ to _`
 
-  for _ = _ to _ _
+  `for _ = _ to _ _`
 
-  ask _ and wait
+  `ask _ and wait`
 
-  _ of _
+  `_ of _`
 
 Note that the underscores are separated from the block text by spaces.
-Note in the case of the for block’s label that the upvar (the i) and the
+Note in the case of the `for` block’s label that the upvar (the `i`) and the
 C-slot both count as inputs. Note also that the label is not meant to be
 a unique symbol that represents only this block. For example,
-{img alt="image628.png" width="0.86111in"}`images/11-metaprogramming/image628.png`  and
-{img alt="image376.png" width="1.22in"}`images/11-metaprogramming/image376.png`
-both have the label
-
-\_ of \_. The label does not give the input slots names (that’s done in
-the body, coming next) or types (that’s done in the set \_ of block \_
-to \_ block, coming in two
-paragraphs).
+{inline alt="image628.png" width="0.86111in"}`images/11-metaprogramming/image628.png` and {inline alt="image376.png" width="1.22in"}`images/11-metaprogramming/image376.png` both have the label `_ of _`. The label does not give the input slots names (that’s done in the body, coming next) or types (that’s done in the `set _ of` block `_ to _` block, coming in two paragraphs).
 
 The third slot is for the *definition* of
 the new block. This is a (ringed) script whose input names (formal
@@ -104,7 +97,7 @@ So far we know the block’s label, parameters, and script. There are
 other things to specify about the block, and one purpose of the block
 upvar is to allow that. In the example on the previous page, there are
 four set
-\_ of block \_ to \_ blocks, reproduced below for your convenience:
+`_ of block _ to _` blocks, reproduced below for your convenience:
 
 {img alt="image951.png" width="2.83in"}`images/11-metaprogramming/image951.png`
 
@@ -145,8 +138,7 @@ these numbers as an alternative to the names.
 
 There are a few more attributes of a block, less commonly used.
 
-{img alt="image954.png" width="3.37986in"}`images/11-metaprogramming/image954.png` {inline alt="image955.png"}`images/11-metaprogramming/image955.png` <!--  width="1.02in" alt="A picture containing text, clipart Description automatically generated" / -->
-
+{inline alt="image954.png" width="3.37986in"}`images/11-metaprogramming/image954.png` {inline alt="image955.png" width="1.02in"}`images/11-metaprogramming/image955.png`
 
 The list input is just like the one for set slots except for default values
 instead of types. Now for a block with a menu input:
@@ -194,7 +186,7 @@ in the resulting definition.
 
 {img alt="image974.png" width="1.77in"}`images/11-metaprogramming/image974.png`
 
-{img alt="image975.png"}`images/11-metaprogramming/image975.png` <!--  width="3.11in" alt="Graphical user interface Description automatically generated" / -->
+{img alt="image975.png" width="3.11in"}`images/11-metaprogramming/image975.png`
 
 You could use this script directly in a
 simple case like this, but in a complicated case with a recursive call
@@ -221,7 +213,7 @@ of block (sensing)
 
 ## Macros
 
-{img alt="image976.png"}`images/11-metaprogramming/image976.png` <!--  width="3.11in" alt="Graphical user interface Description automatically generated" / -->
+{img alt="image976.png" width="3.11in"}`images/11-metaprogramming/image976.png`
 
 Users of languages in the C family have learned to think of macros as
 entirely about text strings, with no relation to the syntax of the

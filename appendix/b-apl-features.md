@@ -256,8 +256,9 @@ list in that input slot as an implicit map, as for scalar functions.
 This means you have to learn the rule for each mixed function
 individually.
 
-{img alt="image1268.png" width="1.06667in"}`images/b-apl-features/image1268.png` The shape of function
-takes any input and reports a vector of the
+{img alt="image1268.png" width="1.06667in"}`images/b-apl-features/image1268.png`
+
+The shape of function takes any input and reports a vector of the
 maximum size of the structure along each dimension. For a vector, it
 returns a list of length 1 containing the length of the input. For a
 matrix, it returns a two-item list of the number of rows and number of
@@ -267,18 +268,17 @@ an empty vector. Equivalent to the dimensions of primitive, as of 6.6.
 
 {img alt="image1267.png" width="4.28in"}`images/b-apl-features/image1267.png`
 
-{img alt="image1269.png" width="1.04167in"}`images/b-apl-features/image1269.png` Rank of
-isn’t an actual APL primitive, but the composition ⍴⍴
+{inline alt="image1269.png" width="1.04167in"}`images/b-apl-features/image1269.png`
+`Rank of` isn’t an actual APL primitive, but the composition `⍴⍴`
 (shape of shape of a structure), which reports the number of dimensions
 of the structure (the length of its shape vector), is too useful to
 omit. (It’s very easy to type the same character twice on the APL
-keyboard, but less easy to drag blocks together.) Equivalent to the rank
-of primitive, as of 6.6.
+keyboard, but less easy to drag blocks together.) Equivalent to the `rank
+of` primitive, as of 6.6.
 
 {img alt="image1270.png" width="2.03in"}`images/b-apl-features/image1270.png`
 
-Reshape
-takes a shape vector (such as shape might report)
+Reshape takes a shape vector (such as shape might report)
 on the left and any structure on the right. It ignores the shape of the
 right input, stringing the atomic elements into a vector in row-major
 order (that is, all of the first row left to right, then all of the
@@ -288,8 +288,7 @@ input containing the items of the second:
 
 {img alt="image1271.png" width="7.33in"}`images/b-apl-features/image1271.png`
 
-If the right
-input has more atomic elements than are required by the left-input shape
+If the right input has more atomic elements than are required by the left-input shape
 vector, the excess are ignored without reporting an error. If the right
 input has too *few* atomic elements, the process of filling the reported
 array starts again from the first element. This is most useful in the
@@ -347,8 +346,9 @@ to a string:
 
 {img alt="image1283.png" width="6.03in"}`images/b-apl-features/image1283.png`
 
-{img alt="image1284.png" width="1.475in"}`images/b-apl-features/image1284.png`  Dyadic iota is like
-the index of primitive except for its
+{img alt="image1284.png" width="1.475in"}`images/b-apl-features/image1284.png`
+
+Dyadic iota is like the index of primitive except for its
 handling of multi-dimensional arrays. It looks only for atomic elements,
 so a vector in the second input doesn’t mean to search for that vector
 as a row of a matrix, which is what it means to index of, but rather to
@@ -405,7 +405,9 @@ looks only for atomic elements.
 
 {img alt="image1293.png" width="7.49in"}`images/b-apl-features/image1293.png`
 
-{img alt="image1294.png" width="7.48542in"}`images/b-apl-features/image1294.png`The blocks grade up and grade down are used for sorting data. Given an array as input, it
+{img alt="image1294.png" width="7.48542in"}`images/b-apl-features/image1294.png`
+
+The blocks grade up and grade down are used for sorting data. Given an array as input, it
 reports a vector of the indices in which the items (the rows, if a
 matrix) should be rearranged in order to be sorted. This will be clearer
 with an example:
@@ -489,10 +491,7 @@ columns), while **⌿** is described as operating on rows. We were more
 than a month into this project before I understood all this. You get
 long block names so it won’t take you a month!
 
-{img alt="image1320.png" width="2.99in"}`images/b-apl-features/image1320.png`
-{img alt="image1319.png" width="3.17in"}`images/b-apl-features/image1319.png`
-{img alt="image1321.png" width="1.11181in"}`images/b-apl-features/image1321.png` Don’t confuse this
-block with the {index}`reduce block`, whose APL symbol is
+Don’t confuse this block with the {index}`reduce block`, whose APL symbol is
 also a slash. In that block, what comes to the left of the slash is a
 dyadic combining function; it’s the APL equivalent of combine. This
 block is more nearly equivalent to keep. But keep takes a predicate
@@ -503,11 +502,21 @@ vector of Boolean values. This is a typical APL move; since hyperblocks
 are equivalent to an implicit map, it’s easy to make the vector of
 Booleans, because any scalar function, including predicates, can be
 applied to a list instead of to a scalar. The reason both blocks use the
-/ character is that both of them reduce the size of the input array,
+`/`character is that both of them reduce the size of the input array,
 although in different ways.
 
-The {index}`reverse row order<reverse block>`, reverse column order
-, and transpose blocks form a group: the group of reflections of a matrix. The APL
+:::{index}
+`reverse` block
+`transpose` block
+:::
+(sec-apl-reverse-blocks)=
+
+{img alt="image1320.png" width="2.99in"}`images/b-apl-features/image1320.png`
+{img alt="image1319.png" width="3.17in"}`images/b-apl-features/image1319.png`
+{img alt="image1321.png" width="1.11181in"}`images/b-apl-features/image1321.png`
+
+The `reverse row order`, `reverse column order`, and `transpose` blocks form a group:
+the group of reflections of a matrix. The APL
 symbols are all a circle with a line through it; the lines are the
 different axes of reflection. So the reverse row order block reverses
 which row is where; the reverse column order block reverses which column
@@ -585,8 +594,9 @@ symbol ◦. is pronounced “jot dot.”) The way to think about this block is
 
 {img alt="image1335.png" width="7.24in"}`images/b-apl-features/image1335.png`
 
-{img alt="image1337.png" width="2.61667in"}`images/b-apl-features/image1337.png` The inner product
-block takes two matrices and two operations
+{img alt="image1337.png" width="2.61667in"}`images/b-apl-features/image1337.png`
+
+The inner product block takes two matrices and two operations
 as input. The number of columns in the left matrix must equal the number
 of rows in the right matrix. When the two operations are + and ×, this
 is the {index}`matrix multiplication<single: multiplication, matrix>` familiar to
@@ -598,8 +608,9 @@ But other operations can be used. One common inner product is ∨.∧ (“or
 dot and”) applied to Boolean matrices, to find rows and columns that
 have corresponding items in common.
 
-{img alt="image1339.png" width="0.95833in"}`images/b-apl-features/image1339.png` The printable block
-isn’t an APL function; it’s an aid to exploring
+{img alt="image1339.png" width="0.95833in"}`images/b-apl-features/image1339.png`
+
+The `printable` block isn’t an APL function; it’s an aid to exploring
 APL-in-Snap<em>!</em>. It transforms arrays to a compact representation that
 still makes the structure clear:
 

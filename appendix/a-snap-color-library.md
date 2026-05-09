@@ -106,7 +106,7 @@ But if you just want some colors in your project, we provide a simple,
 one-dimensional subset of the available colors. Two subsets, actually:
 *crayons* and *color numbers.* Here’s the difference:
 
-{img alt="image1139.png"}`images/a-snap-color-library/image1139.png`
+{img alt="image1139.png" width="7.28in"}`images/a-snap-color-library/image1139.png`
 
 The first row shows 100 distinct colors. They have names; this is pumpkin
 {inline alt="image1145.png"}`images/a-snap-color-library/image1145.png`,
@@ -122,8 +122,7 @@ them in a menu with a submenu for each family.
 
 {img alt="image1140.png" width="5.79306in"}`images/a-snap-color-library/image1140.png`
 
-Or, if you
-know the crayon name, just {inline alt="image1147.png" width="2.15972in"}`images/a-snap-color-library/image1147.png`.
+Or, if you know the crayon name, just {inline alt="image1147.png" width="2.15972in"}`images/a-snap-color-library/image1147.png`.
 
 The crayon numbers are chosen so that skipping by 10 gives a sensible box of ten crayons:
 
@@ -434,7 +433,7 @@ given the amount of white or black needed to achieve that lightness.
 Saturation less than 100 means that *both white and black* are mixed
 with the spectral color. (Such mixtures are called *tones* of the
 spectral color.) Perceptually, colors with saturation 100% don’t look
-gray: {inline alt="image1202.png" width="1.55556in"}`images/a-snap-color-library/image1202.png`  but colors with saturation 75% do: {inline alt="image1201.png" width="1.56389in"}`images/a-snap-color-library/image1201.png`
+gray: {inline alt="image1202.png" width="1.55556in"}`images/a-snap-color-library/image1202.png` but colors with saturation 75% do: {inline alt="image1201.png" width="1.56389in"}`images/a-snap-color-library/image1201.png`.
 
 Note that HSV and HSL both have a dimension called “saturation,” but
 *they’re not the same thing!* In HSV, “saturation” means non-whiteness,
@@ -610,7 +609,7 @@ the latter two. We recommend “{index}`fair HSL` ” for zeroing in on a desire
 
 <!-- Image hidden because it is included as part of the next image. -->
 <!-- TODO: Verify section and link location -->
-<!-- {inline alt="image1241.png"}`images/a-snap-color-library/image1241.png` -->
+<!-- {img alt="image1241.png"}`images/a-snap-color-library/image1241.png` -->
 
 (sec-spirals)=
 {img alt="image1242.png" width="2.21in"}`images/a-snap-color-library/image1242.png`

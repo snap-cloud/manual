@@ -271,10 +271,10 @@ easy-to-miss menu of category names just under the file icon in the menu
 bar. If you remove a category that has blocks in it, all those blocks
 are also removed.
 
-<!-- cut: , new in Snap<em>!</em> 7.0 -->
+<!-- cut:, new in Snap<em>!</em> 7.0 -->
 The next group of options concern the *scenes* feature. A scene
 is a complete project, with its own stage, sprites, and code, but
-several can be merged into one project, using the {inline alt="switch to scene block"}`images/12-user-interface-elements/image999.png`{ .image-4x .image-inline } <!--  width="1.16667in" / -->  block to bring another
+several can be merged into one project, using the {inline alt="switch to scene block" width="1.16667in"}`images/12-user-interface-elements/image999.png` block to bring another
 scene onscreen. The "`Scenes…`" option presents a
 menu of all the scenes in your project, where the File menu was before
 you clicked it. The "`New scene`" option creates a
@@ -625,8 +625,14 @@ the project “Codification” in the Examples project list. Edit the blocks
 map to Smalltalk, map to JavaScript, etc., to see examples of how to
 provide translations for blocks.
 
-{img alt="image1028.png"}`images/12-user-interface-elements/image1028.png` <!--  width="1.38in" alt="Graphical user interface, application, Teams Description automatically generated" / -->
+::::{grid} 2
+:::{grid-item}
+{img alt="image1028.png" width="1.38in"}`images/12-user-interface-elements/image1028.png`
+:::
+:::{grid-item}
 {img alt="image1027.png" class="image-4x" width="2.20972in"}`images/12-user-interface-elements/image1027.png`
+:::
+::::
 
 The Single palette option puts all blocks,
 regardless of category, into a single palette. It’s intended mainly for
@@ -705,8 +711,7 @@ stop button
 
 Above the right edge of the stage are three buttons that control the running of the project.
 
-Technically,
-the green flag {inline alt="image1037.png" width="0.38in"}`images/12-user-interface-elements/image1037.png` is no more a project control
+Technically, the green flag {inline alt="image1037.png" width="0.38in"}`images/12-user-interface-elements/image1037.png` is no more a project control
 than anything else that can trigger a hat block: typing on the keyboard
 or clicking on a sprite. But it’s a convention that clicking the flag
 should start the action of the project from the beginning. It’s only a
@@ -715,16 +720,16 @@ respond to keyboard controls instead. Clicking the green flag also
 deletes temporary clones.
 
 Whenever any script is running (not necessarily in the current sprite), the green
-flag is lit: {inline alt="image1038.png" width="0.35in"}`images/12-user-interface-elements/image1038.png` .
+flag is lit: {inline alt="image1038.png" width="0.35in"}`images/12-user-interface-elements/image1038.png`.
 
 Shift-clicking the button enters Turbo mode, and the button then looks like a lightning
-bolt: {inline alt="image1039.png" width="0.35in"}`images/12-user-interface-elements/image1039.png`  . Shift-clicking again turns Turbo mode off.
+bolt: {inline alt="image1039.png" width="0.35in"}`images/12-user-interface-elements/image1039.png`. Shift-clicking again turns Turbo mode off.
 
 Scripts can simulate clicking the green flag by broadcasting the special message
-{img alt="image1045.png" width="0.30556in"}`images/12-user-interface-elements/image1045.png` .
+{inline alt="image1045.png" width="0.30556in"}`images/12-user-interface-elements/image1045.png`.
 
 The pause button {inline alt="image1044.png" width="0.37917in"}`images/12-user-interface-elements/image1044.png` suspends running all scripts. If clicked while scripts are
-running, the button changes shape to become a play button: {inline alt="image1046.png" width="0.37917in"}`images/12-user-interface-elements/image1046.png` Clicking it
+running, the button changes shape to become a play button: {inline alt="image1046.png" width="0.37917in"}`images/12-user-interface-elements/image1046.png`. Clicking it
 while in this form resumes the suspended scripts. There is also a pause
 all block in the Control palette that can be
 inserted in a script to suspend all scripts; this provides the essence
@@ -734,7 +739,7 @@ stepping mode, described in Chapter I.
 
 The stop button {inline alt="image1047.png" width="0.37917in"}`images/12-user-interface-elements/image1047.png` stops all scripts, like the stop all block. It does *not* prevent a script from starting again in response
 to a click or keystroke; the user interface is always active. There is
-one exception: generic when blocks {inline alt="image1048.png" width="0.54861in"}`images/12-user-interface-elements/image1048.png`  will not fire after a stop until some
+one exception: generic when blocks {inline alt="image1048.png" width="0.54861in"}`images/12-user-interface-elements/image1048.png` will not fire after a stop until some
 non-generic event starts a script. The stop button also deletes all
 temporary clones.
 
@@ -996,21 +1001,16 @@ script. (If the script includes a {index}`warp block`, which
 might be inside a custom block used in the script, then Snap<em>!</em> may not
 respond immediately to clicks.)
 
-If a script is shown with a
-*red* halo, that means that an error was caught in
+If a script is shown with a *red* halo, that means that an error was caught in
 that script, such as using a list where a number was needed, or vice
 versa. Clicking the script will turn off the halo.
 
-
-
-If any blocks have been dragged into the scripting area, then in its top right corner you’ll see
-an *undo* {inline alt="image1066.png" width="0.33333in"}`images/12-user-interface-elements/image1066.png`  and/or *redo* {inline alt="image1068.png" width="0.33333in"}`images/12-user-interface-elements/image1068.png`  button that can be used to
+If any blocks have been dragged into the scripting area, then in its top right corner you’ll see an *undo* {inline alt="image1066.png" width="0.33333in"}`images/12-user-interface-elements/image1066.png` and/or *redo* {inline alt="image1068.png"}`images/12-user-interface-elements/image1068.png` button that can be used to
 undo or redo block and script drops. When you undo a drop into an input
 slot, whatever used to be in the slot is restored. The redo button
 appears once you’ve used undo.
 
-The third button {inline alt="image1067.png" class="image-inline"}`images/12-user-interface-elements/image1067.png` starts keyboard editing
-mode (See @sec-keyboard-editing).
+The third button {inline alt="image1067.png" class="image-inline"}`images/12-user-interface-elements/image1067.png` starts keyboard editing mode (See @sec-keyboard-editing).
 
 Control-click/right-clicking a primitive block within a script
 shows a menu like this one:
@@ -1043,7 +1043,8 @@ feature to access them.
 Not every reporter has a compile option; it
 exists only for the higher order functions. When selected, a lightning
 bolt appears before the block name:
-{img alt="image1072.png" width="1.40278in"}`images/12-user-interface-elements/image1072.png`  and Snap<em>!</em> tries
+{inline alt="image1072.png" width="1.40278in"}`images/12-user-interface-elements/image1072.png`
+and Snap<em>!</em> tries
 to compile the function inside the ring to JavaScript, so it runs at
 primitive speed. This works only for simple functions (but the higher
 order function still works even if the compilation doesn’t). The
@@ -1173,7 +1174,7 @@ the comment as desired.
 You can drag the bottom right
 corner of the comment box to resize it. Clicking the arrowhead at the
 top left changes the box to a single-line compact form,
-{img alt="image1079.png" width="1.38889in"}`images/12-user-interface-elements/image1079.png` , so that you
+{inline alt="image1079.png" width="1.38889in"}`images/12-user-interface-elements/image1079.png`, so that you
 can have a number of collapsed comments in the scripting area and just
 expand one of them when you want to read it in full.
 
@@ -1688,21 +1689,21 @@ value when all the way to the right.
 
 The third section of the menu allows data to be passed between your
 computer and the variable. The import… option
-will read a computer text file. Its name must end with .txt, in which
-case the text is read into the variable as is, or .csv
-or .json, in which case the text is converted into a
+will read a computer text file. Its name must end with `.txt`, in which
+case the text is read into the variable as is, or .`csv`
+or `.json`, in which case the text is converted into a
 list structure, which will always be a two-dimensional array for csv
 (comma-separated values) data, but can be any shape for json data. The
 raw data… option prevents that conversion to
 list form. The export… option does the opposite
-conversion, passing a text-valued variable value into a .txt file
+conversion, passing a text-valued variable value into a `.txt` file
 unchanged, but converting a list value into csv format
 if the list is one- or two-dimensional, or into json format if the list
 is more complicated. (The scalar values within the list must be numbers
 and/or text; lists of blocks, sprites, costumes, etc. cannot be
 exported.)
 
-An alternative to using the import… option is simply to drag the file
+An alternative to using the "`Import…`" option is simply to drag the file
 onto the Snap<em>!</em> window, in which case a variable will be created if
 necessary with the same name as the file (but without the extension).
 
@@ -1719,7 +1720,7 @@ pen trails option
 svg… option
 :::
 
-###  The stage itself
+### The stage itself
 
 Control-clicking/right-clicking on the stage background (that is,
 anywhere on the stage except on a sprite or watcher) shows the stage’s
@@ -1875,7 +1876,7 @@ of buttons above the stage (edit mode, green flag, pause, stop).
 - `&lang=fr` Set language to (in this
 example) French.
 
-- `&noCloud` : Don’t allow cloud operations from this project (for running
+- `&noCloud`: Don’t allow cloud operations from this project (for running
 projects from unknown sources that include JavaScript code)
 
 - `&noExitWarning`: When closing the
@@ -1900,7 +1901,7 @@ The verb cloud (yes, we know it’s not a verb in its ordinary use)
 behaves like open except that it loads from the Snap<em>!</em> cloud rather
 than from the Internet in general. The verb dl (short for “download”)
 does not start Snap<em>!</em> but just downloads a cloud-saved project to your
-computer as an .xml file. This is useful for debugging; sometimes a
+computer as an `.xml` file. This is useful for debugging; sometimes a
 defective project that Snap<em>!</em> won’t run can be downloaded, edited, and
 then re-saved to the cloud.
 

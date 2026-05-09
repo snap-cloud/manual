@@ -1,7 +1,7 @@
 ---
 ---
 
-# The Snap! Manual Index
+# Manual Index
 
 ```{show-index}
 ```

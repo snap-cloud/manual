@@ -17,7 +17,7 @@ A data type is *ﬁrst class* in a programming language if data of that type can
 - a member of a data aggregate
 - anonymous (not named)
 
-In Scratch , numbers and text strings are ﬁrst class.
+In Scratch, numbers and text strings are ﬁrst class.
 You can put a number in a variable, use one as the input to a block,
 call a reporter that reports a number, or put a number into a list.
 
@@ -89,7 +89,7 @@ by default shown in *table view.* We’ll have more to say about this
 later.
 
 We can also build any classic computer science data structure
-out of lists of lists , by
+out of lists of lists, by
 defining *constructors* (blocks to make an instance
 of the structure), *selectors* (blocks to pull out a
 piece of the structure), and *mutators* (blocks to
@@ -118,7 +118,7 @@ linked list
 
 There are two ways to create a list inside a program. Scratch
 users will be familiar with the *imperative* programming
-style , which is based on a set of
+style, which is based on a set of
 command blocks that modify a list:
 
 {img alt="The four imperative list-mutation blocks: `add thing to`, `delete 1 of`, `insert thing at 1 of`, and `replace item 1 of with thing`." class="image-2x" width="3.5in"}`images/04-first-class-lists/6-blocks-imperative-list-mutators.png`
@@ -127,7 +127,7 @@ As an example, here are two blocks that take a list of numbers as input,
 and report a new list containing only the even numbers from the original
 list:[^primitives]
 
-[^primitives]: Note to users of earlier versions: From the beginning, there has been a tension in our work between the desire to provide tools such as `for` (used in this example) and the higher order functions introduced on the next page as primitives, to be used as easily as other primitives, and the desire to show how readily such tools can be implemented in Snap<em>!</em> itself. This is one instance of our general pedagogic understanding that learners should both use abstractions and be permitted to see beneath the abstraction barrier. Until version 5.0, we used the uneasy compromise of a library of tools written in Snap! and easily, but not easily enough, loaded into a project. By not loading the tools, users or teachers could explore how to program them. In 5.0 we made them true primitives, partly because that’s what some of us wanted all along and partly because of the increasing importance of fast performance as we explore “big data” and media computation. In version 10.0 we introduced “hybrid” primitives, implemented in high speed Javascript but with an “Edit” option that will open, not the primitive implementation, but the version written in Snap<em>!</em>. This gives us editable primitives without dramatically slowing users’ projects.
+[^primitives]: Note to users of earlier versions: From the beginning, there has been a tension in our work between the desire to provide tools such as `for` (used in this example) and the higher order functions introduced on the next page as primitives, to be used as easily as other primitives, and the desire to show how readily such tools can be implemented in Snap<em>!</em> itself. This is one instance of our general pedagogic understanding that learners should both use abstractions and be permitted to see beneath the abstraction barrier. Until version 5.0, we used the uneasy compromise of a library of tools written in Snap<em>!</em> and easily, but not easily enough, loaded into a project. By not loading the tools, users or teachers could explore how to program them. In 5.0 we made them true primitives, partly because that’s what some of us wanted all along and partly because of the increasing importance of fast performance as we explore “big data” and media computation. In version 10.0 we introduced “hybrid” primitives, implemented in high speed Javascript but with an “Edit” option that will open, not the primitive implementation, but the version written in Snap<em>!</em>. This gives us editable primitives without dramatically slowing users’ projects.
 
 {img alt="Two imperative `evens` block definitions side by side. Each builds a `result` list and walks the input with `for index` or `for each item`, using `if (item mod 2) = 0` and `add ... to result` to collect even numbers, then reports `result`." width="5.89in"}`images/04-first-class-lists/7-script-evens-imperative.png`
 
@@ -249,9 +249,9 @@ lists, the result is a new toplevel list whose items are the same
 (uncopied) lists that are items of the toplevel input list). To make a deep copy of a list
 (that is, one in which all the sublists,
 sublists of sublists, etc. are copied), use the list as input to the
-{inline alt="the `id of` reporter" class="image-4x" width="0.74in"}`images/04-first-class-lists/18-block-id-of.png` block (one of the variants of the `sqrt of` block). This works because `id of` is a @sec-hyperblock.
+{inline alt="the `id of` reporter" class="image-4x" width="0.74in"}`images/04-first-class-lists/18-block-id-of.png` block (one of the variants of the `sqrt of` block). This works because `id of` is a [hypberblock](@sec-hyperblocks).
 
-The third higher order block, `combine` , computes a
+The third higher order block, `combine`, computes a
 single result from *all* the items of a list, using a *two-input*
 reporter as its second input. In practice, there are only a few blocks
 you’ll ever use with `combine`:
@@ -420,7 +420,7 @@ CSV (comma-separated values)
 Spreadsheet and database programs generally offer the option to export
 their data as CSV (comma-separated values) lists. You can import these files into
 Snap<em>!</em> and turn them into tables (lists of lists), and you can export tables in CSV format.
-Snap<em>!</em> recognizes a CSV file by the extension .csv in its filename.
+Snap<em>!</em> recognizes a CSV file by the extension `.csv` in its filename.
 
 A CSV file has one line per table row, with the fields separated by
 commas within a row:
@@ -520,7 +520,6 @@ Prolog
 hyperblocks
 :::
 
-(sec-hyperblock)=
 (sec-hyperblocks)=
 ## Hyperblocks
 
@@ -580,8 +579,8 @@ always reporting a single Boolean result), `and` and `or` (because they
 don’t evaluate their second input at all if the first input determines
 the result), `join` (because it converts non-scalar (and other non-text)
 inputs to text string form), and `is a (type)` (because it applies to its
-input as a whole). Blocks whose inputs are “natively” lists, such as {inline alt="the `length of` reporter" class="image-4x .image-inline width=0.89in"}`images/04-first-class-lists/43-block-length-of.png` and
-{inline alt="the `in front of` reporter" width="1.03in"}`images/04-first-class-lists/44-block-in-front-of.png` , are never hyperblocks.
+input as a whole). Blocks whose inputs are “natively” lists, such as {inline alt="the `length of` reporter" class="image-4x" width="0.89in"}`images/04-first-class-lists/43-block-length-of.png` and
+{inline alt="the `in front of` reporter" width="1.03in"}`images/04-first-class-lists/44-block-in-front-of.png`, are never hyperblocks.
 
 {inline alt="the `reshape () to 4 3` reporter" width="2.10in"}`images/04-first-class-lists/45-block-reshape.png` The
 `reshape` block\index{`reshape` block} takes a list (of any depth) as its
@@ -643,18 +642,18 @@ These new options work well with hyperblocks and the APL library.
 {img alt="The `length of` block with its dropdown menu open, showing the options: length, rank, dimensions, flatten, columns, reverse, lines, csv, json." width="2.5in"}`images/04-first-class-lists/54-block-length-of-dropdown.png`
 - `length`: reports the number of (toplevel) items in the list, as always.
 
-- `rank` : reports the number of *dimensions* of the
+- `rank`: reports the number of *dimensions* of the
 list, i.e., the maximum depth of lists of lists of lists of lists. (That
 example would be rank 4.)
 
-- `dimensions` : reports a list of numbers, each
+- `dimensions`: reports a list of numbers, each
 of which is the maximum length in one dimension, so a spreadsheet of
 1000 records, each with 4 fields, would report the list \[1000 4\].
 
-- `flatten` : reports a flat, one-dimensional list
+- `flatten`: reports a flat, one-dimensional list
 containing the *atomic* (non-list) items anywhere in the input list.
 
-- `columns` : reports a list in which the rows and
+- `columns`: reports a list in which the rows and
 columns of the input list are interchanged, so the shape of the
 transpose of a shape \[1000 4\] list would be \[4 1000\]. This option
 works only for lists whose rank is at most 2. The name reflects the fact
@@ -682,7 +681,7 @@ explicitly represented using square brackets. These are the opposites of
 The idea of extending the domain and range of scalar functions to
 include arrays comes from the language APL. (All the great
 programming languages are based on mathematical ideas. Our primary
-ancestors are Smalltalk, based on models, and Lisp, based on lambda calculus. Prolog , a great
+ancestors are Smalltalk, based on models, and Lisp, based on lambda calculus. Prolog, a great
 language not (so far) influencing Snap<em>!</em>, is based on logic. And APL,
 now joining our family, is based on linear algebra, which studies
 vectors and matrices. Those *other* programming languages are based on

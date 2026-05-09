@@ -79,7 +79,7 @@ marketing emails of any kind through this site, neither from us nor from
 third parties. If, nevertheless, you are worried about providing this
 information, do a web search for “temporary email.”
 
-Finally, you must read and agree to the Terms of Service . A quick summary: Don’t interfere with anyone else’s use of
+Finally, you must read and agree to the Terms of Service. A quick summary: Don’t interfere with anyone else’s use of
 the web site, and don’t put copyrighted media or personally identifiable
 information in projects that you share with other users. And we’re not
 responsible if something goes wrong. (Not that we *expect* anything to
@@ -102,7 +102,7 @@ siblings. *Don’t* check the box if you’re using a public computer at the
 library, at school, etc.
 
 Once logged in, you can choose the "`Cloud`" option in the "`Save Project`"
-dialog shown on @fig-saveas . You enter a project name, and
+dialog shown on @fig-saveas. You enter a project name, and
 optionally project notes; your project will be saved online and can be
 loaded from anywhere with net access. The project notes will be visible
 to other users if you publish your project.
@@ -150,8 +150,7 @@ the Computer and Cloud options.
 
 If you are still in **Snap<em>!</em>** and realize that you’ve loaded another
 project without saving the one you were working on: _**Don’t edit the new project.**_
-From the File menu {inline alt="image384.png" width="0.31944in"}`images/02-saving-and-loading-projects-and/image384.png` choose the "`Restore unsaved project`"
-option .
+From the File menu {inline alt="image384.png" width="0.31944in"}`images/02-saving-and-loading-projects-and/image384.png` choose the "`Restore unsaved project`" option.
 
 Restore unsaved project will also work if you log out of Snap<em>!</em> and
 later log back in, as long as you don’t edit another project meanwhile.
@@ -172,8 +171,7 @@ To help you remember to save your projects, when you’ve edited the
 project and haven’t yet saved it, Snap<em>!</em> displays a pencil icon to the
 left of the project name on the toolbar at the top of the window:
 
-<!-- TODO: MISSING FILE -->
-<!-- {inline alt="image391.png"}`images/02-saving-and-loading-projects-and/image391.png`  width="0.31944in"/  -->
+{img alt="Pencil next to project name" width="0.31944in"}`images/02-saving-and-loading-projects-and/edited-project-icon.png`
 
 ## Private and Public Projects
 
