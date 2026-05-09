@@ -150,8 +150,7 @@ the Computer and Cloud options.
 
 If you are still in **Snap<em>!</em>** and realize that you’ve loaded another
 project without saving the one you were working on: _**Don’t edit the new project.**_
-From the File menu {inline alt="image384.png"}`images/02-saving-and-loading-projects-and/image384.png` <!--  width="0.31944in" --> choose the "`Restore unsaved project`"
-option
+From the File menu {inline alt="image384.png" width="0.31944in"}`images/02-saving-and-loading-projects-and/image384.png` choose the "`Restore unsaved project`" option.
 
 Restore unsaved project will also work if you log out of Snap<em>!</em> and
 later log back in, as long as you don’t edit another project meanwhile.

@@ -170,14 +170,14 @@ editing it, you can write recursive blocks (blocks that call themselves)
 by dragging the block into its own definition:
 
 ::::{grid} 3
-::: {.grid-item}
-{img alt="image514.png" width="1.42in"}`images/03-building-a-block/image514.png`
+:::{grid-item}
+{img alt="image514.png" width="2.96528in"}`images/03-building-a-block/image514.png`
 :::
-::: {.grid-item}
-{img alt="image515.png" width="1.96in"}`images/03-building-a-block/image515.png`
+:::{grid-item}
+{img alt="image515.png" width="1.95833in"}`images/03-building-a-block/image515.png`
 :::
-::: {.grid-item}
-{img alt="image516.png" width="2.97in"}`images/03-building-a-block/image516.png`
+:::{grid-item}
+{img alt="image516.png" width="1.42361in"}`images/03-building-a-block/image516.png`
 :::
 ::::
 
@@ -222,7 +222,7 @@ Here’s a slightly more compact way to write the <code>factorial</code> functio
 
 {img alt="image521.png" width="4.29in"}`images/03-building-a-block/image521.png`
 
-For more on recursion, see *Thinking Recursively* by {index}`Eric Roberts<single: Roberts, Eric>`. (The originaledition is ISBN 978‑0471816522; a more recent *Thinking Recursively in
+For more on recursion, see *Thinking Recursively* by {index}`Eric Roberts<single: Roberts, Eric>`. (The original edition is ISBN 978‑0471816522; a more recent *Thinking Recursively in
 Java* is ISBN 978-0471701460.) <!-- Do we want to link to something like https://books.google.com/books/about/Thinking_Recursively.html?id=oH9QAAAAMAAJ&source=kp_book_description --MF -->
 
 :::{index} library; block
@@ -242,8 +242,7 @@ To create a block library, choose "`Export blocks…`" from the
 
 {img alt="image522.png" width="2.02in"}`images/03-building-a-block/image522.png`
 
-The window shows all of your
-global custom blocks. You can uncheck some of the checkboxes to select
+The window shows all of your global custom blocks. You can uncheck some of the checkboxes to select
 exactly which blocks you want to include in your library. (You can
 "`right-click`" or "`control-click`" on the export window for a menu that lets
 you check or uncheck all the boxes at once.) Then press "`OK`" An {span .mono}`XML` file

@@ -84,12 +84,11 @@ that.[^1]
 
 <!-- TODO: Different CSS for an inline hat block? -->
 
-[^1]: One of the hat blocks, the {index}`generic hat block <hat block; generic>` “when anything” block {inline alt="generic when hat block"}`images/01-blocks-scripts-and-sprites/image10`, is subtly different from the others. When the stop sign is clicked, or when a project or sprite is loaded, this block doesn’t test whether the condition in its hexagonal input slot is true, so the script beneath it will not run, until some *other* script in the project runs (because, for example, you click the green flag). When {index}`generic when` blocks are disabled, the stop sign {index}`stop sign, square` will be squarewill be {index}`square <square stop sign>` instead of octagonal.
-
+[^1]: One of the hat blocks, the {index}`generic hat block <hat block; generic>` “when anything” block {inline alt="generic when hat block"}`images/01-blocks-scripts-and-sprites/image10`, is subtly different from the others. When the stop sign is clicked, or when a project or sprite is loaded, this block doesn’t test whether the condition in its hexagonal input slot is true, so the script beneath it will not run, until some *other* script in the project runs (because, for example, you click the green flag). When {index}`generic when` blocks are disabled, the stop sign {index}`stop sign, square` will be {index}`square <square stop sign>` instead of octagonal.
 
 The other blocks in our example script are *command* blocks. Each {index}`command block`
 corresponds to an action that Snap<em>!</em> already knows how to carry out.
-For example, the block {inline alt="image9.png"}`./blocks/images/block_forward` tells the sprite (the arrowhead shape on the _stage_ at the right end of the window) to
+For example, the block {inline alt="image9.png"}`./blocks/images/block_forward.png` tells the sprite (the arrowhead shape on the _stage_ at the right end of the window) to
 move ten steps (a step is a very small unit of distance) in the
 direction in which the arrowhead is pointing. We’ll see shortly that
 there can be more than one sprite, and that each sprite has its own
@@ -300,10 +299,9 @@ costume.) The Turtle costume is the only one that
 changes color to match a change in the sprite’s pen color.
 
 ::: {.callout-tip}
-{inline alt="Switch to costumer (() - 1)"}`images/01-blocks-scripts-and-sprites/image33.png` switches to the *previous* costume, wrapping like `next costume`.
+{inline alt="Switch to costume (() - 1)"}`images/01-blocks-scripts-and-sprites/image33.png` switches to the *previous* costume, wrapping like `next costume`.
 :::
-<!-- Protip: {inline alt="Switch to costumer (() - 1)"}`images/01-blocks-scripts-and-sprites/image33` switches to the *previous* costume, wrapping like `next costume`.
--->
+
 
 In addition to its costumes, a sprite can have *sounds;* the equivalent for sounds of the sprite’s wardrobe is called its *jukebox.* Sound files can be imported in any format (WAV, OGG, MP3, etc.) supported by your browser. Two blocks accomplish the task of playing sounds. If you would like a script to continue running while the sound is playing, use the block {inline alt="image39.png"}`images/01-blocks-scripts-and-sprites/image39.png`. In contrast, you can use the block {inline alt="image38.png"}`images/01-blocks-scripts-and-sprites/image38.png` to wait for the sound's completion before continuing the rest of the script.
 
@@ -446,6 +444,7 @@ white line that appears when snapping command blocks together:
 {img alt="image67.png" width="1.47in"}`images/01-blocks-scripts-and-sprites/image67.png`
 
 Don’t drop the input over a *red* halo:
+
 {img alt="image71.png" width="2.11111in"}`images/01-blocks-scripts-and-sprites/image71.png`
 
 That’s used for a purpose explained in @sec-recursive-calls-to-multiple-input-blocks.
@@ -477,7 +476,7 @@ block is nested inside another block from the same palette:
 
 This aid to readability is called *zebra coloring.*
 A reporter block with its inputs, maybe including other reporter
-blocks, such as {inline alt="image81.png"}`images/01-blocks-scripts-and-sprites/image81.png` <!--  width="1.91667in" -->, is called an *expression.*
+blocks, such as {inline alt="image81.png" width="1.91667in"}`images/01-blocks-scripts-and-sprites/image81.png`, is called an *expression.*
 
 :::{index} block; predicate
 `Predicate` block
@@ -503,7 +502,7 @@ in an input slot of blocks that are expecting a number or text. You
 wouldn’t say {inline alt="image84.png"}`images/01-blocks-scripts-and-sprites/image84.png`, although (as you can see from the picture) Snap<em>!</em> lets you do it if you really want. Instead, you normally use predicates in
 special hexagonal input slots like this one:
 
-{img alt="image86.png" class="image-2x"}`./blocks/images/block_doIf.png`
+{img alt="if blocksatisfied:" class="image-3x"}`./blocks/images/block_doIf.png`
 
 The C-shaped `if` block runs its input script if (and only
 if) the expression in its hexagonal input reports true.
@@ -512,6 +511,7 @@ if) the expression in its hexagonal input reports true.
 
 A really useful block in animations runs its input script *repeatedly* until a predicate
 is satisfied:
+
 {img alt="image89.png" width="2.29in"}`images/01-blocks-scripts-and-sprites/image89.png`
 
 If, while working on a project, you want to omit temporarily some commands
@@ -547,7 +547,7 @@ and click on the control that appears:
 :::{index} Boolean constant
 :::
 
-{inline alt="image91.png"}`images/01-blocks-scripts-and-sprites/image91` <!--  width="1.375in" --> {inline alt="image92.png"}`images/01-blocks-scripts-and-sprites/image92` <!--  width="1.375in" -->
+{inline alt="image91.png" width="1.375in"}`images/01-blocks-scripts-and-sprites/image91` {inline alt="image92.png" width="1.375in"}`images/01-blocks-scripts-and-sprites/image92`
 
 
 :::{index} `for` block
@@ -776,7 +776,7 @@ that you can examine the values of variables.
 :::
 ### The pause button
 
-The simplest way to pause a program is manually, by clicking the pause button {inline alt="image116.png"}`images/01-blocks-scripts-and-sprites/image116.png` <!-- width="0.29167in" -->
+The simplest way to pause a program is manually, by clicking the pause button {inline alt="image116.png" width="0.29167in"}`images/01-blocks-scripts-and-sprites/image116.png`
 in the top right corner of the window. While the program is paused, you
 can run other scripts by clicking on them, show variables on stage with
 the checkbox next to the variable in the Variables palette or with the
@@ -849,7 +849,7 @@ like to watch the program as it runs, at human speed rather than
 at computer speed. You can do this by
 clicking the *visible stepping* button ({inline alt="image121.png"}`images/01-blocks-scripts-and-sprites/image121.png`), <!-- width="0.3in" --> before running a script or
 while the script is paused. The button will light up ({inline alt="image123.png"}`images/01-blocks-scripts-and-sprites/image123.png`) <!-- width="0.3in" --> and a speed
-control slider {inline alt="image122.png"}`images/01-blocks-scripts-and-sprites/image122.png` <!-- width="0.54563in" --> will appear in the toolbar. When you start or continue
+control slider {inline alt="image122.png" width="0.54563in"}`images/01-blocks-scripts-and-sprites/image122.png` will appear in the toolbar. When you start or continue
 the script, its blocks and input slots will light up cyan one at a time:
 
 {img alt="image124.png" width="0.54563in"}`images/01-blocks-scripts-and-sprites/image124.png`
@@ -941,9 +941,9 @@ Takes a sprite as input. Erases from that sprite’s costume the area that overl
 
 {inline alt="image140.png" class="tall"}`images/01-blocks-scripts-and-sprites/image140` Runs only this script until finished. In the Control palette even though it’s gray.
 
-{inline alt="image143.png"}`images/01-blocks-scripts-and-sprites/image143` <!--  width="1.71in" --> Reporter version of the `if/else` primitive command block. Only one of the two branches is evaluated, depending on the value of the first input.
+{inline alt="image143.png" width="1.71in"}`images/01-blocks-scripts-and-sprites/image143` Reporter version of the `if/else` primitive command block. Only one of the two branches is evaluated, depending on the value of the first input.
 
-{inline alt="image144.png"}`images/01-blocks-scripts-and-sprites/image144` <!--  width="1.83in" --> Looping block like `repeat` but with an index variable.
+{inline alt="image144.png" width="1.83in"}`images/01-blocks-scripts-and-sprites/image144` Looping block like `repeat` but with an index variable.
 
 {inline alt="image145.png" width="1.37986in" }`images/01-blocks-scripts-and-sprites/image145` Declare local variables in a script.
 
@@ -1459,7 +1459,7 @@ after the first repetition, and whether the condition must be true or
 false to continue repeating. The last repeat block is like the `repeat`
 primitive, but makes the number of repetitions so far available to the
 repeated script. The next two blocks are variations on `for`: the first allows an explicit step instead of using ±1, and the
-second allows any values, not just numbers; inside the script you say {inline alt="image390.png"}`images/01-blocks-scripts-and-sprites/image390` <!-- width="3.15278in" -->
+second allows any values, not just numbers; inside the script you say {inline alt="image390.png" width="3.15278in"}`images/01-blocks-scripts-and-sprites/image390`
 replacing the grey block in the picture with an expression to give the next
 desired value for the loop index.
 :::{index} repeat blocks
@@ -1680,12 +1680,11 @@ next page.
 
 {img alt="image412.png" width="1.13333in"}`images/01-blocks-scripts-and-sprites/image412.png`
 
-Colors are created by the {inline alt="image414.png"}`images/01-blocks-scripts-and-sprites/image414` <!--  width="0.95in" --> block (for direct user selection), the `color from`
-to specify a color numerically, or by {inline alt="image413.png"}`images/01-blocks-scripts-and-sprites/image413` <!-- width="1.13333in" -->, which
-reports the color currently in use by the pen. The `from color` block
+Colors are created by the {inline alt="image414.png" width="0.95in"}`images/01-blocks-scripts-and-sprites/image414` block (for
+direct user selection), the `color from` to specify a color numerically, or by {inline alt="image413.png" width="1.13333in"}`images/01-blocks-scripts-and-sprites/image413` , which reports the color currently in use by the pen. The `from color` block
 reports names or numbers associated with a color:
 
-{inline alt="image411.png" class="image-4x"}`images/01-blocks-scripts-and-sprites/image411.png` <!--  width="0.95in" -->
+{inline alt="image411.png" class="image-4x" width="0.95in"}`images/01-blocks-scripts-and-sprites/image411.png`
 
 Colors can be created from other colors:
 {img alt="image415.png" width="4.83333in"}`images/01-blocks-scripts-and-sprites/image415.png`
@@ -1808,7 +1807,7 @@ your program is run within the program, instead of stopping the script
 with a red halo and an obscure error message. The block runs the script
 in its first C-slot. If it finishes without an error, nothing else
 happens. But if an error happens, the code in the second C-slot is run.
-While that second script is running, the variable {inline alt="image443.png"}`images/01-blocks-scripts-and-sprites/image443.png` <!-- width="0.43056in" --> contains the text of
+While that second script is running, the variable {inline alt="image443.png" width="0.43056in"}`images/01-blocks-scripts-and-sprites/image443.png` contains the text of
 the error message that would have been displayed if you weren’t catching
 the error. The {index}`\`error\` block<`error` block>` is sort of the opposite:
 it lets your program *generate* an error message, which will be
@@ -1822,7 +1821,7 @@ blocks:
 :::
 
  {img alt="image446.png" width="1.92in"}`images/01-blocks-scripts-and-sprites/image446.png`
- {inline alt="image447.png" class="image-4x"}`images/01-blocks-scripts-and-sprites/image447.png` <!-- width="3.25972in" -->
+ {inline alt="image447.png" class="image-4x" width="3.25972in"}`images/01-blocks-scripts-and-sprites/image447.png`
 
 `Costume from text`
 reports a costume that can be used with

@@ -46,7 +46,7 @@ paper-output size to LaTeX (and to MyST's HTML renderer), add a `width`
 attribute in the same braces:
 
 ```md
-![alt text](filename.png){width=2.84in}
+{img alt="alt text"}`filename.png` <!-- width="2.84in" -->
 {inline alt="alt text" class="image-4x" width="3in"}`filename.png`
 ```
 

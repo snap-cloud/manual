@@ -122,7 +122,7 @@ them in a menu with a submenu for each family.
 
 {img alt="image1140.png" width="5.79306in"}`images/a-snap-color-library/image1140.png`
 
-Or, if you know the crayon name, just {inline alt="image1147.png"}`images/a-snap-color-library/image1147.png` <!--  width="2.15972in" -->.
+Or, if you know the crayon name, just {inline alt="image1147.png" width="2.15972in"}`images/a-snap-color-library/image1147.png`.
 
 The crayon numbers are chosen so that skipping by 10 gives a sensible box of ten crayons:
 
@@ -279,8 +279,8 @@ Our *color number* scale is based on fair hues, adding a range of grays from bla
 colors. (In color terminology, a *shade* is a darker version of a color;
 a lighter version is called a *tint.*) Why do we add shades
 but not tints ? Partly because I find shades
-more exciting. A shade of red {inline alt="image1195.png"}`images/a-snap-color-library/image1195.png` <!--  width="0.23611in" --> can be dark candy apple red {inline alt="image1194.png"}`images/a-snap-color-library/image1194.png` <!--  width="0.23611in" --> or maroon {inline alt="image1193.png"}`images/a-snap-color-library/image1193.png` <!--  width="0.23611in" -->, but a tint is just some kind
-of pink {inline alt="image1192.png"}`images/a-snap-color-library/image1192.png` <!--  width="0.23611in" -->. This admitted prejudice is supported by an
+more exciting. A shade of red {inline alt="image1195.png" width="0.23611in"}`images/a-snap-color-library/image1195.png` can be dark candy apple red {inline alt="image1194.png" width="0.23611in"}`images/a-snap-color-library/image1194.png` or maroon {inline alt="image1193.png" width="0.23611in"}`images/a-snap-color-library/image1193.png`, but a tint is just some kind
+of pink {inline alt="image1192.png" width="0.23611in"}`images/a-snap-color-library/image1192.png`. This admitted prejudice is supported by an
 objective fact: Most projects are made on a white background, so dark colors stand out better than light
 ones.
 
@@ -477,8 +477,8 @@ because that’s what’s built into the JavaScript
 programming language provided by browsers. But if the goal is to model
 human color perception, neither of these color spaces is satisfactory,
 because they assume that all full-intensity spectral colors are equally
-bright. But if you’re like most people, you see spectral yellow {inline alt="image1206.png"}`images/a-snap-color-library/image1206.png` <!--  width="0.18889in" --> as much
-brighter than spectral blue {inline alt="image1205.png"}`images/a-snap-color-library/image1205.png` <!--  width="0.20278in" / --> . There are better perceptual color spaces
+bright. But if you’re like most people, you see spectral yellow {inline alt="image1206.png" width="0.18889in"}`images/a-snap-color-library/image1206.png` as much
+brighter than spectral blue {inline alt="image1205.png" width="0.20278in"}`images/a-snap-color-library/image1205.png` . There are better perceptual color spaces
 with names like L\*u\*v\* and L\*a\*b\*
 that are based on research with human subjects to
 determine true perceived brightness. Wikipedia explains all this and
