@@ -226,7 +226,7 @@ We can improve upon this by capturing the continuation of the top-level call to 
 :::
 ::::
 
-The {inline alt="image916.png"}`images/10-continuations/image916.png` <!--  width="1.59125in" / --> block takes as its input a
+The {inline alt="image916.png" width="1.59125in"}`images/10-continuations/image916.png` block takes as its input a
 one-input script, as shown in the product example. It calls that script
 with *the continuation of the* call-with-continuation *block itself* as
 its input. In this case, that continuation is

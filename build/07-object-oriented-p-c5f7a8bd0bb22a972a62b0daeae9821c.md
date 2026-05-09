@@ -113,7 +113,7 @@ clone; permanent
 (sec-permanent-and-temporary-clones)=
 ## Permanent and Temporary Clones
 
-The {inline alt="image748.png"}`images/07-object-oriented-programming-with-sprites/image748.png` <!--  width="1.51389in" --> block is
+The {inline alt="image748.png" width="1.51389in"}`images/07-object-oriented-programming-with-sprites/image748.png` block is
 used to create and report an instance (a clone) of any sprite. (There is
 also a command version, for historical reasons.) There are two different
 kinds of situations in which clones are used. One is that you’ve made an
@@ -151,7 +151,7 @@ have a lot of them. (If you’re curious, one reason is that permanent
 clones appear in the sprite corral, where their pictures have to be
 updated to reflect the clone’s current costume, direction, and so on.)
 We have tried to anticipate your needs, as follows: When you make a
-clone in a script, using the {inline alt="image748.png"}`images/07-object-oriented-programming-with-sprites/image748.png` <!--  width="1.51389in" --> block, it is “born” temporary. But when you
+clone in a script, using the {inline alt="image748.png" width="1.51389in"}`images/07-object-oriented-programming-with-sprites/image748.png` block, it is “born” temporary. But when you
 make a clone from the user interface, for example by right-clicking on a
 sprite and choosing "`clone`", it is born permanent. The reason this makes
 sense is that you don’t create 100 *kinds* of dogs automatically. Each
@@ -164,7 +164,7 @@ You can change a temporary sprite to permanent by right-clicking it and choosing
 the scripting area to reflect that sprite, as if you’d pressed its
 button in the sprite corral.) You can change a permanent sprite to
 temporary by right-clicking it and choosing "`release.`" You can also
-change the status of a clone in your program with {inline alt="image749.png"}`images/07-object-oriented-programming-with-sprites/image749.png` <!--  width="1.51389in" --> with true or false as
+change the status of a clone in your program with {inline alt="image749.png" width="1.51389in"}`images/07-object-oriented-programming-with-sprites/image749.png` with true or false as
 the second input.
 
 ## Sending Messages to Sprites
@@ -423,6 +423,9 @@ center y (in my block)
 
 ##  List of attributes
 
+<<<<<<< HEAD
+<!-- {inline alt="image781.png"}`images/07-object-oriented-programming-with-sprites/image781.png` {inline alt="image782.png"}`images/07-object-oriented-programming-with-sprites/image782.png`  -->
+=======
 ::::{grid} 2
 ::::{grid-item}
 {img alt="image781.png"}`images/07-object-oriented-programming-with-sprites/image781.png`
@@ -431,6 +434,7 @@ center y (in my block)
 {img alt="image782.png"}`images/07-object-oriented-programming-with-sprites/image782.png`
 :::
 ::::
+>>>>>>> c5401455f0693ccdcd7b93ada228b9fefc9b3bcd
 
 At the right is a picture of the dropdown menu of attributes in the <code>my ( )</code> block.
 
@@ -501,7 +505,7 @@ jaggies
 ### Media Computation with Costumes
 
 The components of a costume are its name, width, height, and pixels.
-The {inline alt="image783.png"}`images/07-object-oriented-programming-with-sprites/image783.png` <!--  width="1.63194in" --> block gives access
+The {inline alt="image783.png" width="1.63194in"}`images/07-object-oriented-programming-with-sprites/image783.png` block gives access
 to these components using its left menu. From
 its right menu you can choose the current costume, the Turtle costume,
 or any costume in the sprite’s wardrobe. Since costumes are first class,
@@ -582,7 +586,7 @@ Here’s one way to exchange red and green values:
 
 {img alt="image798.png" width="7.50in"}`images/07-object-oriented-programming-with-sprites/image798.png`
 
-It’s the {inline alt="image804.png"}`images/07-object-oriented-programming-with-sprites/image804.png` <!--  width="0.95833in" --> list that
+It’s the {inline alt="image804.png" width="0.95833in"}`images/07-object-oriented-programming-with-sprites/image804.png` list that
 determines the rearrangement of colors: green➔red, red➔green, and the
 other two unchanged. That <code>list</code> is inside another <code>list</code> because otherwise
 it would be selecting *rows* of the pixel array, and we want to select
@@ -593,7 +597,7 @@ get stuck turning it green, instead of alternating colors.
 The <code>stretch</code> block
 takes a costume as its first input, either by
 selecting a costume from the menu or by dropping a costume-valued
-expression such as {inline alt="image809.png"}`images/07-object-oriented-programming-with-sprites/image809.png` <!--  width="1.72222in" -->  onto it. The other two inputs are percents of the
+expression such as {inline alt="image809.png" width="1.72222in"}`images/07-object-oriented-programming-with-sprites/image809.png`  onto it. The other two inputs are percents of the
 original width and height, as advertised, so you can make fun house
 mirror versions of costumes:
 
@@ -683,7 +687,11 @@ brief? On my computer, 0.010667 seconds, but you’ll see shortly how to
 
 Just as the *pixel* is
 the smallest piece of a picture, the *sample* is the smallest piece of a
+<<<<<<< HEAD
+sound {inline alt="image826.png" width="1.96528in"}`images/07-object-oriented-programming-with-sprites/image826.png` . It says here: that on my computer, 48,000 samples are recorded
+=======
 sound {inline alt="image826.png" width="1.96528in"}`images/07-object-oriented-programming-with-sprites/image826.png`. It says here: that on my computer, 48,000 samples are recorded
+>>>>>>> c5401455f0693ccdcd7b93ada228b9fefc9b3bcd
 per second, so each sample is 1/48,000 of a second. The
 value of a sample is between -1 and 1, and represents the sound pressure
 on the microphone—how hard the air is pushing—at that instant. (You can

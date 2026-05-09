@@ -41,7 +41,7 @@ inside its body. That procedure implements a specific counter object, an
 invoked, a counter instance increases and reports its count variable.
 Each counter has its own local count:
 
-{inline alt="image851.png" class="image-4x"}`images/08-oop-with-procedures/image851.png` <!--  width="2.23958in" / -->
+{inline alt="image851.png" class="image-4x" width="2.23958in"}`images/08-oop-with-procedures/image851.png`
 
 This example will repay careful study, because it isn’t obvious why each
 instance has a separate count. From the point of view of the <code>make a
@@ -86,7 +86,7 @@ version, calling the instance gives access to a method,
 which must then be called to finish the job. We can provide a block to
 do both procedure calls in one:
 
-{inline alt="image854.png" class="image-4x"}`images/08-oop-with-procedures/image854.png` <!--  width="4.01042in" / -->
+{inline alt="image854.png" class="image-4x" width="4.01042in"}`images/08-oop-with-procedures/image854.png`
 
 The <code>ask</code> block has two required inputs: an object and a
 message. It also accepts optional additional inputs, which Snap<em>!</em> puts
