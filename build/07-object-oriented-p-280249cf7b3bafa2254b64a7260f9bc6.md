@@ -423,9 +423,6 @@ center y (in my block)
 
 ##  List of attributes
 
-<<<<<<< HEAD
-<!-- {inline alt="image781.png"}`images/07-object-oriented-programming-with-sprites/image781.png` {inline alt="image782.png"}`images/07-object-oriented-programming-with-sprites/image782.png`  -->
-=======
 ::::{grid} 2
 ::::{grid-item}
 {img alt="image781.png"}`images/07-object-oriented-programming-with-sprites/image781.png`
@@ -434,7 +431,6 @@ center y (in my block)
 {img alt="image782.png"}`images/07-object-oriented-programming-with-sprites/image782.png`
 :::
 ::::
->>>>>>> c5401455f0693ccdcd7b93ada228b9fefc9b3bcd
 
 At the right is a picture of the dropdown menu of attributes in the <code>my ( )</code> block.
 
@@ -687,11 +683,7 @@ brief? On my computer, 0.010667 seconds, but you’ll see shortly how to
 
 Just as the *pixel* is
 the smallest piece of a picture, the *sample* is the smallest piece of a
-<<<<<<< HEAD
-sound {inline alt="image826.png" width="1.96528in"}`images/07-object-oriented-programming-with-sprites/image826.png` . It says here: that on my computer, 48,000 samples are recorded
-=======
 sound {inline alt="image826.png" width="1.96528in"}`images/07-object-oriented-programming-with-sprites/image826.png`. It says here: that on my computer, 48,000 samples are recorded
->>>>>>> c5401455f0693ccdcd7b93ada228b9fefc9b3bcd
 per second, so each sample is 1/48,000 of a second. The
 value of a sample is between -1 and 1, and represents the sound pressure
 on the microphone—how hard the air is pushing—at that instant. (You can

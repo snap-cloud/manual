@@ -945,7 +945,7 @@ Takes a sprite as input. Erases from that sprite’s costume the area that overl
 
 {inline alt="image144.png" width="1.83in"}`images/01-blocks-scripts-and-sprites/image144` Looping block like `repeat` but with an index variable.
 
-{inline alt="image145.png"}`images/01-blocks-scripts-and-sprites/image145` <!--  width="1.37986in" alt="Graphical user interface, application, logo Description automatically generated" / --> Declare local variables in a script.
+{inline alt="image145.png" width="1.37986in" }`images/01-blocks-scripts-and-sprites/image145` Declare local variables in a script.
 
 {inline alt="image148.png"}`images/01-blocks-scripts-and-sprites/image148` See @sec-ch09.
 
@@ -960,7 +960,7 @@ Takes a sprite as input. Erases from that sprite’s costume the area that overl
 ::::{grid} 2
 
 :::{grid-item}
-{inline alt="image150.png" class="image-1-5x"}`images/01-blocks-scripts-and-sprites/image150.png`
+{img alt="image150.png" class="image-1-5x"}`images/01-blocks-scripts-and-sprites/image150.png`
 :::
 
 :::{grid-item}
@@ -979,7 +979,7 @@ second input.
 ::::{grid} 2
 
 :::{grid-item}
-{inline alt="image154.png" class="image-1-5x"}`images/01-blocks-scripts-and-sprites/image154.png`
+{img alt="image154.png" class="image-1-5x"}`images/01-blocks-scripts-and-sprites/image154.png`
 :::
 :::{grid-item}
 Checks the data type of a value.
@@ -990,10 +990,10 @@ Checks the data type of a value.
 ::::{grid} 2
 
 :::{grid-item}
-{inline alt="image151.png" class="image-1-5x"}`images/01-blocks-scripts-and-sprites/image151.png`
+{img alt="image151.png" class="image-1-5x"}`images/01-blocks-scripts-and-sprites/image151.png`
 :::
 :::{grid-item}
-{inline alt="image152.png" class="image-1-5x"}`images/01-blocks-scripts-and-sprites/image152.png`
+{img alt="image152.png" class="image-1-5x"}`images/01-blocks-scripts-and-sprites/image152.png`
 :::
 ::::
 
@@ -1006,7 +1006,7 @@ JSON format
 (sec-split-block)=
 ::::{grid} 2
 :::{grid-item}
-{inline alt="image155.png" class="image-2x"}`images/01-blocks-scripts-and-sprites/image155.png`
+{img alt="image155.png" class="image-2x"}`images/01-blocks-scripts-and-sprites/image155.png`
 :::
 
 :::{grid-item}
@@ -1031,13 +1031,12 @@ uses case-sensitive comparison, unlike `=`, which is case-independent.
 :::{index} identical to
 :::
 
-{inline alt="image171.png"}`images/01-blocks-scripts-and-sprites/image171` These *hidden* blocks can be found with the relabel option
- of any dyadic arithmetic block. They’re hidden
+{inline alt="image171.png"}`images/01-blocks-scripts-and-sprites/image171` These *hidden* blocks can be found with the relabel option of any dyadic arithmetic block. They’re hidden
 partly because writing them in Snap<em>!</em> is a good, pretty easy
 programming exercise. Note: the two inputs to `atan2`
 are Δ*x* and Δ*y* in that order, because we measure angles clockwise
-from north. `max` /index{max block} and `min` /index{min block} are *variadic;* by clicking the arrowhead, you
-can provide additional inputs.
+from north. `max` /index{max block} and `min` /index{min block} are *variadic;* by
+clicking the arrowhead, you can provide additional inputs.
 :::{index} relabel option
 `atan2` block
 :::
@@ -1090,18 +1089,23 @@ vector (x,y).
 
  {img alt="image229.png" width="5.99in"}`images/01-blocks-scripts-and-sprites/image229.png`
 
-Object is a hyperblock.
+`Object` is a [hyperblock](@sec-hyperblocks).
 
+:::{index} scenes
+:::
+(sec-scenes)=
 **Scenes:**
 
-{inline alt="image280.png" class="image-2x"}`images/01-blocks-scripts-and-sprites/image280.png`
+::::{grid} 2
+:::{grid-item}
+{img alt="image280.png" class="image-2x"}`images/01-blocks-scripts-and-sprites/image280.png`
+:::
 
+:::{grid-item}
 The major new feature of version 7.0 is *scenes:* A project can include
 within it sub-projects, called scenes, each with its own stage, sprites,
 scripts, and so on. This block makes another scene active, replacing the
 current one.
-:::{index} scenes
-:::
 
 Nothing is automatically shared between scenes: no sprites, no blocks,
 no variables. But the old scene can send a message to the new one, to
@@ -1111,13 +1115,15 @@ start it running, with optional payload as in broadcast (See @sec-broadcast).
 
 In particular, you can say
 
-{inline alt="image281.png" class="image-4x"}`images/01-blocks-scripts-and-sprites/image281.png`
+{img alt="image281.png" class="image-4x"}`images/01-blocks-scripts-and-sprites/image281.png`
 
 if the new scene expects to be started with a green flag signal.
+:::
+::::
 
-***These aren’t new blocks but they have a new feature:***
-These accept two-item (x,y) lists
- as input, and have extended menus (also
+**These aren’t new blocks but they have a new feature:**
+
+These accept two-item (x,y) lists as input, and have extended menus (also
 including other sprites):
 :::{index} points as inputs
 two-item (x,y) lists
@@ -1132,40 +1138,54 @@ direction that would leave this sprite pointing toward another sprite,
 the mouse, or the center. “Ray length” is the distance from the center
 of this sprite to the nearest point on the other sprite, in the current
 direction.
+
 :::{index} center of the stage
+`stop` block
 :::
 
 {inline alt="image284.png" class="image-4x"}`images/01-blocks-scripts-and-sprites/image284.png`
-The {index}`\`stop\` block<`stop` block>` has two extra menu choices. `Stop this block` is used inside the definition of a custom block to stop just this
+The `stop` block has two extra menu choices. `Stop this block` is used inside the definition of a custom block to stop just this
 invocation of this custom block and continue the script that called it.
 `Stop all` but this script is good at the end of a game to stop all the
 game pieces from moving around, but keep running this script to provide
 the user’s final score. The last two menu choices add a tab at the
 bottom of the block because the current script can continue after it.
 
-{inline alt="image285.png" class="image-2x"}`images/01-blocks-scripts-and-sprites/image285.png`
+::::{grid} 2
+:::{grid-item}
+{img alt="image285.png" class="image-2x"}`images/01-blocks-scripts-and-sprites/image285.png`
+:::
+:::{grid-item}
 The new “pen trails” option is true if the sprite is touching any drawn
 or stamped ink on the stage. Also, `touching` will
 not detect hidden sprites, but a hidden sprite can use it to detect
 visible sprites.
-:::{index} touching block
 :::
+::::
 
-{inline alt="image305.png" width="2.43333in"}`images/01-blocks-scripts-and-sprites/image305` The `video on` block has a {index}`snap option` that takes a
-snapshot and reports it as a costume. It is hyperized with respect to its second input.
+:::{index} `touching` block
+:::
 :::{index} video block
 :::
 
 ::::{grid} 2
-
 :::{grid-item}
-{inline alt="image306.png"}`images/01-blocks-scripts-and-sprites/image306`
+{img alt="image305.png"}`images/01-blocks-scripts-and-sprites/image305` <!--  width="2.43333in" -->
+:::
+:::{grid-item}
+The `video on` block has a {index}`snap option` that takes a
+snapshot and reports it as a costume. It is hyperized with respect to its second input.
+:::
+::::
+
+::::{grid} 2
+:::{grid-item}
+{img alt="image306.png"}`images/01-blocks-scripts-and-sprites/image306.png`
 :::
 
 :::{grid-item}
-{inline alt="image304.png"}`images/01-blocks-scripts-and-sprites/image304` The "neg" option is a monadic negation operator
-, equivalent to "lg" is log<sub>2</sub>.
-"id" is the identity function, which reports its input. "sign" reports 1
+{inline alt="image304.png"}`images/01-blocks-scripts-and-sprites/image304.png` The "neg" option is a monadic negation operator, equivalent to "lg" is log<sub>2</sub>.
+"`id`" is the identity function, which reports its input. "sign" reports 1
 for positive input, 0 for zero input, or -1 for negative input.
 
 :::
@@ -1174,6 +1194,7 @@ for positive input, 0 for zero input, or -1 for negative input.
 `length of text` block
 negation operator
 `set background` block
+`id` block
 :::
 
 <!--::: {.callout-tip} -->
