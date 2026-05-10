@@ -38,12 +38,7 @@ Xerox PARC
 # Acknowledgements
 +++
 
-:::{raw:latex}
-\chapter*{Acknowledgements}
-:::
-
 (sec-acknowledgements)=
-<!-- # Acknowledgements -->
 We have been extremely lucky in our mentors.
 Jens cut his teeth in the company of the Smalltalk pioneers: Alan Kay, Dan Ingalls,
 and the rest of the gang who invented personal computing and object oriented

@@ -3,10 +3,6 @@
 
 # Snap! Reference Manual
 
-:::{raw:latex}
-\chapter*{The Snap\textit{!} Reference Manual}
-:::
-
 +++{"no-pdf": true}
 {img alt="Snap! Manul Cover Image"}`images/cover-image.png`
 +++
