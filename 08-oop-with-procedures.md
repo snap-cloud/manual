@@ -226,7 +226,7 @@ The script below demonstrates how this prototyping system can be used to
 make counters. We start with one prototype <var>counter</var>, called <var>counter1</var>. We
 count this counter up a few times, then create a child <var>counter2</var> and give
 it its own <var>count</var> variable, but *not* its own <var>total</var> variable. The <code>next</code>
-method always sets counter1’s <var>total</var> variable, which therefore keeps
+method always sets `counter1`’s <var>total</var> variable, which therefore keeps
 <var>count</var> of the total number of times that *any* <var>counter</var> is incremented.
 Running this script should <code>say</code> and <code>think</code> the following lists:
 

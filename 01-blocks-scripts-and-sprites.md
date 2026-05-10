@@ -1424,8 +1424,8 @@ blocks:
 {img alt="image389.png" width="1.04444in"}`images/01-blocks-scripts-and-sprites/image389.png`
 
 `Catch` and `throw` provide a nonlocal exit facility. You can drag the tag from a `catch` block to a `throw` inside
-its C-slot, and the throw will then jump directly out to the matching
-catch without doing anything in between.
+its C-slot, and the `throw` will then jump directly out to the matching
+`catch` without doing anything in between.
 :::{index} `catch` block
 `throw` block
 :::
@@ -1445,7 +1445,7 @@ a script to time how long the reporter takes.)
 
 The `cascade` blocks take an initial value and call
 a function repeatedly on that value, *f*(*f*(*f*(*f*…(*x*)))).
-:::{index} cascade blocks
+:::{index} `cascade` blocks
 :::
 
 The `compose` block takes two functions and reports
@@ -1548,7 +1548,7 @@ words) and one to make a list (sentence).
 
 The selector names come from Logo, and should be self-explanatory.
 However, because in a block language you don’t have to type the block
-name, instead of the terse butfirst or the cryptic bf we spell out “all
+name, instead of the terse `butfirst` or the cryptic `bf` we spell out “all
 but first of” and include “word” or “sentence” to indicate the intended
 domain. There’s no first letter of block because `letter 1 of` serves that
 need. `Join words` (the sentence-as-string constructor) is like the
@@ -1837,7 +1837,7 @@ costume made from another costume by coloring its background, taking a
 color input like the `set pen color to RGB(A)` block and a number of
 turtle steps of padding around the original costume. These two blocks
 work together to make even better buttons:
-:::{index} costume with background block
+:::{index} `costume with background` block
 :::
 
 {img alt="image448.png" width="5.51in"}`images/01-blocks-scripts-and-sprites/image448.png`
@@ -1853,7 +1853,7 @@ This library
 interfaces with a capability in up-to-date browsers, so it might not
 work for you. It works best if the accent matches
 the text!
-:::{index} speak block
+:::{index} `speak` block
 :::
 
 The {index}`parallelization library` contains
@@ -1866,7 +1866,7 @@ The two `do in parallel`blocks
 Those scripts will be run in parallel, like ordinary independent scripts
 in the scripting area. `The do in parallel and wait` version waits until all of those
 scripts have finished before continuing the script below the block.
-:::{index} do in parallel block
+:::{index} `do in parallel` block
 :::
 
 The create variables library
@@ -1895,7 +1895,7 @@ elements, such as the settings menu {inline alt="image453.png"}`images/01-blocks
 yes-or-no options that have checkboxes in the user interface, while the
 `set value` block controls settings with numeric
 or text values, such as project name.
-:::{index} set flag block
+:::{index} `set flag` block
 `set value` block
 :::
 
@@ -1919,8 +1919,8 @@ digits (limited only by the memory of your computer) and, in fact, the
 entire Scheme numeric tower, with exact rationals and with complex
 numbers. The `Scheme number` block has a list
 of functions applicable to Scheme numbers, including subtype predicates
-such as rational? and infinite?, and selectors such as numerator and
-real-part.
+such as `rational?` and `infinite?`, and selectors such as `numerator` and
+`real-part`.
 :::{index} BIGNUMS block
 `Scheme number` block
 :::
@@ -1943,7 +1943,7 @@ resulting picture in a browser window and scroll through it. (These
 values end with a bunch of zero digits. That’s not roundoff error; the
 prime factors of 100! and 200! include many copies of 2 and 5.) The
 block with no name is a way to enter things
-like 3/4 and 4+7i into numeric input slots by converting the slot to Any
+like `3/4` and `4+7i` into numeric input slots by converting the slot to Any
 type.
 :::{index} block with no name
 :::
@@ -1951,7 +1951,7 @@ type.
 The strings, multi-line input library
 provides these blocks:
 :::{index} string processing library
-case-independent comparisons block
+`case-independent comparisons` block
 :::
 
 {img alt="image463.png" width="3.9375in"}`images/01-blocks-scripts-and-sprites/image463.png`
@@ -1959,7 +1959,7 @@ case-independent comparisons block
 All of these could be written in Snap<em>!</em> itself, but these are implemented
 using the corresponding JavaScript library functions directly, so they
 run fast. They can be used, for example, in scraping data from a web
-site. The command use case-independent comparisons applies only to this
+site. The command `use case-independent comparisons` applies only to this
 library. The {index}`\`multiline\` block<`multiline` block>` accepts and reports
 a text input that can include newline characters.
 
@@ -2039,7 +2039,7 @@ in the sound and by changing the sampling rate at which the sound is
 reproduced. Many of the blocks are helpers for the `plot sound` block,
 used to plot the waveform of a sound. The `play sound` (primitive) block plays a sound. \_\_ `Hz for`
  reports a sine wave as a list of samples.
-:::{index} plot sound block
+:::{index} `plot sound` block
 `play` block
 `Hz for` block
 :::
@@ -2059,7 +2059,7 @@ list. `Value at key` looks up a key-value pair
 in a (listified) JSON dictionary. The `key:value:` block
  is just a constructor for an abstract data
 type used with the other blocks
-:::{index} value at key block
+:::{index} `value at key` block
 single: `key\:value\:` block
 :::
 
@@ -2085,8 +2085,8 @@ States; a zoom of 5 ﬁts Germany. The zoom can be changed in half steps,
 i.e., 5.5 is different from 5, but 5.25 isn’t.
 
 The next five blocks convert between stage coordinates (pixels) and
-Earth coordinates (latitude and longitude). The change by x: y: block
-shifts the map relative to the stage. The distance to block measures the
+Earth coordinates (latitude and longitude). The `change by x: y:` block
+shifts the map relative to the stage. The `distance to` block measures the
 map distance (in meters) between two sprites. The three reporters with
 current in their names find *your* actual location, again supposing that
 geolocation is enabled on your device. Update redraws the map; as

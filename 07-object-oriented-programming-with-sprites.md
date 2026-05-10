@@ -401,24 +401,24 @@ the message was delegated.
 {img alt="image780.png" width="0.79in"}`images/07-object-oriented-programming-with-sprites/image780.png`
 
 :::{index} attributes, list of
-self (in my block)
-neighbors (in my block)
-other sprites (in my block)
-stage (in my block)
-clones (in my block)
-other clones (in my block)
-parts (in my block)
-children (in my block)
-anchor (in my block)
-parent (in my block)
-name (in my block)
-costumes (in my block)
-sounds (in my block)
-dangling? (in my block)
-rotation x (in my block)
-rotation y</code> (in my block)
-center x (in my block)
-center y (in my block)
+`self` (in `my` block)
+`neighbors` (in `my` block)
+`other sprites` (in `my` block)
+`stage` (in `my` block)
+`clones` (in `my` block)
+`other clones` (in `my` block)
+`parts` (in `my` block)
+`children` (in `my` block)
+`anchor` (in `my` block)
+`parent` (in `my` block)
+`name` (in `my` block)
+`costumes` (in `my` block)
+`sounds` (in `my` block)
+`dangling?` (in `my` block)
+`rotation x` (in `my` block)
+`rotation y` (in `my` block)
+`center x` (in `my` block)
+`center y` (in `my` block)
 :::
 
 ##  List of attributes
@@ -562,7 +562,7 @@ costume by combining a bitmap, a width, and a height. But, as in the
 example above, <code>switch to costume ( )</code> will accept a bitmap as input and will
 automatically use the width and height of the current costume. Note that
 there’s no <var>name</var> input; costumes computed in this way are all named
-<var>costume</var>. Note also that the use of switch to costume does *not* add the
+<var>costume</var>. Note also that the use of `switch to costume` does *not* add the
 computed costume to the sprite’s wardrobe; to do that, say
 
 {img alt="image790.png" width="2.26in"}`images/07-object-oriented-programming-with-sprites/image790.png`
@@ -586,7 +586,7 @@ It’s the {inline alt="image804.png" width="0.95833in"}`images/07-object-orient
 determines the rearrangement of colors: green➔red, red➔green, and the
 other two unchanged. That <code>list</code> is inside another <code>list</code> because otherwise
 it would be selecting *rows* of the pixel array, and we want to select
-columns. We use <code>(pixels) of costume (current)</code> rather than costume apple
+columns. We use <code>(pixels) of costume (current)</code> rather than `costume apple`
 because the latter is always a red apple, so this little program would
 get stuck turning it green, instead of alternating colors.
 
@@ -777,7 +777,7 @@ sound. But the <code>microphone ( )</code> block has other, simpler options also
 
 - <code>volume</code>: the instantaneous volume when the block is called
 
-- <code>note</code>: the MIDI note number (as in play note) of the main note heard
+- <code>note</code>: the MIDI note number (as in `play note`) of the main note heard
 
 - <code>frequency</code>: the frequency in Hz of the main note heard
 

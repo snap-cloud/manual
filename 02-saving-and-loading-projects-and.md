@@ -143,7 +143,7 @@ If you saved projects in an earlier version of Snap<em>!</em> using the
 to allow you to retrieve those projects. But you can save them only with
 the Computer and Cloud options.
 
-:::{index} Restore unsaved project option
+:::{index} `Restore unsaved project` option
 :::
 
 ## If you lose your project, do this first!
@@ -152,19 +152,19 @@ If you are still in **Snap<em>!</em>** and realize that you’ve loaded another
 project without saving the one you were working on: _**Don’t edit the new project.**_
 From the File menu {inline alt="image384.png" width="0.31944in"}`images/02-saving-and-loading-projects-and/image384.png` choose the "`Restore unsaved project`" option.
 
-Restore unsaved project will also work if you log out of Snap<em>!</em> and
+`Restore unsaved project` will also work if you log out of Snap<em>!</em> and
 later log back in, as long as you don’t edit another project meanwhile.
 Snap<em>!</em> remembers only the most recent project that you’ve edited (not
 just opened, but actually changed in the project editor).
 
 If your project on the cloud is missing, empty, or otherwise broken and
-isn’t the one you edited most recently, or if Restore unsaved project
+isn’t the one you edited most recently, or if `Restore unsaved project`
 fails: ***Don’t edit the broken project.*** In the "`Open…`" box, enter your
 project name, then push the {index}`Recover button`. *Do
 this right away,* because we save only the version before the most
 recent, and the latest before today. So don’t keep saving bad versions;
 Recover right away. The Recover feature works only on a project version
-that you actually saved, so Restore unsaved project is your first choice
+that you actually saved, so `Restore unsaved project` is your first choice
 if you switch away from a project without saving it.
 
 To help you remember to save your projects, when you’ve edited the

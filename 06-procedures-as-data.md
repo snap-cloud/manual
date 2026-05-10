@@ -287,7 +287,7 @@ list as input; it takes numbers as inputs! So this would be wrong:
 :::{index} name, input
 `#1`
 formal parameters
-crossproduct
+`crossproduct`
 nested calls
 higher order function
 empty input slots, filling
@@ -448,7 +448,7 @@ numbers.) What we’d like is a `reporter-if` that *behaves* like this one,
 delaying the evaluation of its inputs, but *looks* like our ﬁrst
 version, which was easy to use except that it didn’t work.
 
-[^6]: There is a primitive id function in the menu of the sqrt of block,
+[^6]: There is a primitive `id` function in the menu of the `sqrt of` block,
 but we think seeing its (very simple) implementation will make this
 example easier to understand.
 
