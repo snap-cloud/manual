@@ -1,0 +1,85 @@
+name: Accessibility Audit
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  check-a11y:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      # - name: Run Accessibility Checks
+      #   uses: berkeley-cdss/myst-a11y@v1
+      # using: "composite"
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22.x
+
+      # - name: Set up Python
+      #   uses: actions/setup-python@v4
+      #   with:
+      #     python-version: '3.11'
+      #     cache: 'pip'
+
+      - name: Install Dependencies
+        shell: bash
+        run: |
+          # Global tools needed for the action logic
+          npm install -g mystmd @axe-core/cli http-server wait-on
+          npx browser-driver-manager install chrome
+
+          # Handle dependencies being aware of environment
+          echo "Detected root package.json. Installing from root to support workspaces..."
+          # Install from root to ensure monorepo binaries are available
+          npm install
+
+          cd .
+
+          if [ -f "package.json" ]; then
+            echo "Detected package.json in . . Installing..."
+            npm install --prefer-offline
+          fi
+
+      - name: Build and Run Axe
+        shell: bash
+        run: |
+          cd .
+
+          # Ensure the build uses local node_modules if they exist
+          export PATH="$PATH:$(pwd)/node_modules/.bin:$(cd .. && pwd)/node_modules/.bin"
+
+          # Compile SCSS
+          npm run styles:build
+
+          # Run the build
+          myst build --html
+
+          mkdir -p staging
+          cp -r _build/html/* staging/
+
+          npx http-server staging -p 8080 -s &
+          npx wait-on http://localhost:8080/
+
+          cd _build/html
+          URLS=$(find . -name "*.html" -not -path "*/build/*" | sed 's|^\./||' | sed "s|^|http://localhost:8080/|" | tr '\n' ' ')
+
+          # Define the base command as an array
+          AXE_ARGS=("--tags" "wcag2a,wcag2aa,wcag21a,wcag21aa" "--save" "axe-report.json" "--exit")
+
+          # Add the exclude if it exists
+          if [ -n "" ]; then
+            AXE_ARGS+=("--exclude" "")
+          fi
+
+          # Execute without eval
+          npx axe $URLS "${AXE_ARGS[@]}"
+
+      - name: Upload Accessibility Report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: axe-report
+          path: |
+            **/axe-report.json

@@ -1,5 +1,4 @@
 ---
-title: false
 ---
 
 :::{index}
@@ -35,13 +34,11 @@ single: Sussman, Gerald J.
 Xerox PARC
 :::
 
-:::{raw:latex}
-\chapter*{Acknowledgements}
-:::
++++{"no-pdf": true}
+# Acknowledgements
++++
 
 (sec-acknowledgements)=
-# Acknowledgements
-
 We have been extremely lucky in our mentors.
 Jens cut his teeth in the company of the Smalltalk pioneers: Alan Kay, Dan Ingalls,
 and the rest of the gang who invented personal computing and object oriented
@@ -49,7 +46,6 @@ programming in the great days of Xerox PARC. He
 worked with John Maloney, of the MIT Scratch Team, who developed the Morphic graphics framework that's still at the heart of Snap<em>!</em>.
 
 <!-- The LaTeX styling on Snap! is broken w/ bold and italics.  -->
-
 <strong><em>The brilliant design of Scratch, from the Lifelong Kindergarten
 Group at the MIT Media Lab, is crucial to Snap!. Our earlier version, BYOB, was a direct modification of the Scratch source code. Snap! is a complete rewrite, but its code structure and its user interface remain deeply indebted to Scratch. And the Scratch Team, who could have seen us as rivals, have been entirely supportive and welcoming to us.</em></strong>
 
