@@ -7,25 +7,25 @@
 The scripts and custom blocks that make up a program can be examined or
 created by the program itself.
 
-:::{index} definition of block
+:::{index} `definition of` block
 `split by blocks` block
 `my blocks` block
 `my categories` block
-custom? of block block
+`custom? of block` block
 :::
 
 ## Reading a block
 
 {img alt="image375.png" width="1.15in"}`images/11-metaprogramming/image375.png`
 
-The definition of block takes a custom block
+The `definition of` block takes a custom block
 (in a ring, since it’s the block itself that’s the input, not the result
 of calling the block) as input and reports the block’s definition, i.e.,
 its inputs and body, in the form of a ring with named inputs
 corresponding to the block’s input names, so that those input names are
 bound in the body.
 
-The split by blocks block takes any
+The `split by blocks` block takes any
 expression or script as input (ringed) and reports a list representing a
 *syntax tree* for the script or expression, in which the first item is a
 block with no inputs and the remaining items are the input values, which
@@ -33,15 +33,15 @@ may themselves be syntax trees.
 
 {img alt="image377.png" width="0.88in"}`images/11-metaprogramming/image377.png`
 
-Using split by blocks to select custom blocks whose definitions contain
+Using `split by blocks` to select custom blocks whose definitions contain
 another block gives us this debugging aid:
 
 {img alt="image378.png" width="1.15in"}`images/11-metaprogramming/image378.png`
 
-Note in passing the my blocks block, which
+Note in passing the `my blocks` block, which
 reports a list of all visible blocks, primitive and custom. (There’s
-also a my categories block, which reports a
-list of the names of the palette categories.) Also note custom? of block
+also a `my categories` block, which reports a
+list of the names of the palette categories.) Also note `custom? of block`
 , which reports True if its input is a
 custom block.
 
@@ -54,7 +54,7 @@ recursive procedure using define
 
 ## Writing a block
 
-The inverse function to split by blocks is provided by the join block,
+The inverse function to `split by blocks` is provided by the `join` block,
 which when given a syntax tree as input reports the
 corresponding expression or script.
 
@@ -70,7 +70,7 @@ because the first slot is an upvar, i.e., a way for define to provide
 information to its caller, rather than the other way around. In this
 case, the value of block is the new block itself (the hexagon block, in
 this example). The second slot is where you give the *label* for the new
-block. In this example, the label is “hexagon _” in which the
+block. In this example, the label is “`hexagon _`” in which the
 underscore represents an input slot. So, here are a few examples of
 {index}`block label` s:
 
@@ -108,7 +108,7 @@ want to show all the choices in the set block. The scope is either
 global or sprite, with global as the default. The last input to set
 slots is a list of length less than or equal to the number of
 underscores in the label. Each item of the list is a type name, like the
-ones in the is (5) a (number)? block. If there is only one input, you
+ones in the `is (5) a (number)?` block. If there is only one input, you
 can use just the name instead of putting it in a list. An empty or
 missing list item means type Any.
 
@@ -140,7 +140,7 @@ There are a few more attributes of a block, less commonly used.
 
 {inline alt="image954.png" width="3.37986in"}`images/11-metaprogramming/image954.png` {inline alt="image955.png" width="1.02in"}`images/11-metaprogramming/image955.png`
 
-The list input is just like the one for set slots except for default values
+The list input is just like the one for `set slots` except for default values
 instead of types. Now for a block with a menu input:
 
 {img alt="image961.png" width="3.29in"}`images/11-metaprogramming/image961.png`
@@ -160,7 +160,7 @@ hexagon block:
 
 {img alt="image964.png" width="4.17in"}`images/11-metaprogramming/image964.png`
 
-Those replace item blocks aren’t very elegant. I had to look at foo by
+Those `replace item` blocks aren’t very elegant. I had to look at foo by
 hand to figure out where the numbers I wanted to change are. This
 situation can be improved with a little programming:
 
@@ -192,7 +192,7 @@ You could use this script directly in a
 simple case like this, but in a complicated case with a recursive call
 inside a ring inside the one giving the block definition, this script
 always means the innermost ring. But the upvar means the outer ring;
-note how the definition of blockify automatically creates a script
+note how the definition of `blockify` automatically creates a script
 variable to hold the outer environment.
 
 It’s analogous to using explicit formal parameters when you nest calls
@@ -239,7 +239,7 @@ unevaluated. In version 8.0 we add the ability to run code in the
 context of another procedure, just as we can run code in the context of
 another sprite, using the same mechanism: the of block. In the example on the previous page, the if \_ report \_
 caller \_ block runs a report block, but not in its own context; it
-causes *the fizzbuzz block* to report “fizz” or “buzz” as appropriate.
+causes *the `fizzbuzz` block* to report “fizz” or “buzz” as appropriate.
 (Yes, we know that the rules implemented here are simplified compared to
 the real game.) It doesn’t just report out of the entire toplevel
 script; you can see that map is able to prepend “The answer is” to each

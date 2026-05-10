@@ -34,7 +34,7 @@ About option
 license
 AGPL
 Reference manual option
-Snap! website option
+`Snap! website` option
 snap.berkeley.edu
 `Download source` option
 source files for Snap!
@@ -331,7 +331,7 @@ that some costumes are tagged with “svg” in this picture; those are
 vector-format costumes that are not (yet) editable within Snap<em>!</em>.
 
 If you have the stage selected in the sprite corral, rather than a
-sprite, the Costumes… option changes to a Backgrounds… option
+sprite, the `Costumes…` option changes to a `Backgrounds…` option
 , with different choices in the browser:
 
 {img alt="image1001.png" width="4.28in"}`images/12-user-interface-elements/image1001.png`
@@ -342,14 +342,14 @@ vector (enlarge smoothly) images. Thanks to Scratch
 2.0/3.0 for most of these images! Some older browsers refuse to import a
 vector image, but instead convert it to bitmap.
 
-The Sounds… option opens the third kind of media
+The `Sounds…` option opens the third kind of media
 browser:
 
 {img alt="image1002.png" width="4.28in"}`images/12-user-interface-elements/image1002.png`
 
 The Play buttons can be used to preview the sounds.
 
-Finally, the Undelete sprites… option
+Finally, the `Undelete sprites…` option
 appears only if you have deleted a sprite; it allows you to recover a
 sprite that was deleted by accident (perhaps intending to delete only a
 costume).
@@ -357,10 +357,10 @@ costume).
 :::{index} cloud icon
 Login… option
 Signup… option
-Reset Password… option
-Open in Community Site option
-Logout option
-Change password… option
+`Reset Password…` option
+`Open in Community Site` option
+`Logout` option
+`Change password…` option
 :::
 
 ### The Cloud Menu
@@ -380,49 +380,49 @@ Verification Email… if you have just created a Snap<em>!</em> account but can�
 find the email we sent you with the link to verify that it’s really your
 email. (If you still can’t find it, check your spam folder. If you are
 using a school email address, your school may block incoming email from
-outside the school.) The Open in Community Site option appears only if you have a project open; it takes you to the community site page about that project.
+outside the school.) The `Open in Community Site` option appears only if you have a project open; it takes you to the community site page about that project.
 
 If you are already logged in,
 you’ll see the solid icon {inline alt="image1008.png" width="0.29167in"}`images/12-user-interface-elements/image1008.png`  and get this menu:
 
 {img alt="image1007.png" width="1.61in"}`images/12-user-interface-elements/image1007.png`
 
-Logout is obvious, but has the additional benefit
-of showing you who’s logged in. Change password… will ask for your old password (the temporary one if you’re
+`Logout` is obvious, but has the additional benefit
+of showing you who’s logged in. `Change password…` will ask for your old password (the temporary one if you’re
 resetting your password) and the new password you want, entered twice
-because it doesn’t echo. Open in Community Site is the same as above.
+because it doesn’t echo. `Open in Community Site` is the same as above.
 
 :::{index} settings icon
-Language… option
+`Language…` option
 translation
-Zoom blocks... option
-Fade blocks… option
-Stage size… option
+`Zoom blocks...` option
+`Fade blocks…` option
+`Stage size…` option
 JavaScript extensions option
 `JavaScript function` block
-Extension blocks option
-Input sliders option
-Execute on slider change option
+`Extension blocks` option
+`Input sliders` option
+`Execute on slider change` option
 Turbo mode option
 `glide` block
-visible stepping option
+`visible stepping` option
 Long form input dialog option
-Plain prototype labels option
-Clicking sound option
-Flat design option
-Thread safe scripts option
-flat line ends option
-codification support option
+`Plain prototype labels` option
+`Clicking sound` option
+`Flat design` option
+`Thread safe scripts` option
+`flat line ends` option
+`codification support` option
 text-based language
 `map to code` block
 Single palette option
 Parsons problems
-Show categories option
-Show buttons option
-HSL pen color model option
+`Show categories` option
+`Show buttons` option
+`HSL pen color model` option
 lightness option
 `pen` block
-Disable click-to-run option
+`Disable click-to-run` option
 :::
 
 ### The Settings Menu
@@ -433,12 +433,12 @@ current project or for you permanently, depending on the option:
 
 {img alt="image1009.png" width="1.25in"}`images/12-user-interface-elements/image1009.png`
 
-The Language… option lets you see the Snap<em>!</em>
+The `Language…` option lets you see the Snap<em>!</em>
 user interface (blocks and messages) in a language other than English.
 (Note: Translations have been provided by Snap<em>!</em>
 users. If your native language is missing, send us an email!)
 
-The Zoom blocks... option lets you change
+The `Zoom blocks...` option lets you change
 the size of blocks, both in the palettes and in scripts. The standard
 size is 1.0 units. The main purpose of this option is to let you take
 very high-resolution pictures of scripts for use on posters. It can also
@@ -447,7 +447,7 @@ lecturing, but bear in mind that it doesn’t make the palette or script
 areas any wider, so your computer’s command-option-+ feature may be more
 practical. Note that a zoom of 2 is gigantic! Don’t even try 10.
 
-The Fade blocks… option opens a dialog in
+The `Fade blocks…` option opens a dialog in
 which you can change the appearance of blocks:
 
 {img alt="image1011.png" width="7.48in"}`images/12-user-interface-elements/image1011.png`
@@ -459,12 +459,12 @@ pulldown menu for preselected fadings, use the slider to see the result
 as you change the fading amount, or type a number into the text box once
 you’ve determined your favorite value.
 
-The Stage size… option lets you set the size
+The `Stage size…` option lets you set the size
 of the *full-size* stage in pixels. If the stage is in half-size or
 double-size (presentation mode), the stage size values don’t change;
 they always reflect the full-size stage.
 
-The Microphone resolution… option sets the buffer size used by the
+The `Microphone resolution…` option sets the buffer size used by the
 microphone block in Settings. “Resolution” is an accurate name if you
 are getting frequency domain samples; the more samples, the narrower the
 range of frequencies in each sample. In the time domain, the buffer size
@@ -475,22 +475,22 @@ are three groups of checkboxes. The first is for temporary settings not
 saved in your project nor in your user preferences.
 
 The JavaScript extensions option
-enables the use of the JavaScript function block. Because malicious projects could use JavaScript to
+enables the use of the `JavaScript function` block. Because malicious projects could use JavaScript to
 collect private information about you, or to delete or modify your saved
 projects, you must enable JavaScript *each time* you load a project that
 uses it.
 
-The Extension blocks option adds two blocks to the palette:
+The `Extension blocks` option adds two blocks to the palette:
 
 {img alt="image1021.png" width="1.19in"}`images/12-user-interface-elements/image1021.png`
 {img alt="image1022.png" width="1.23in"}`images/12-user-interface-elements/image1022.png`
 
 These blocks provide assorted capabilities to official libraries that
-were formerly implemented with the JavaScript function block. This
+were formerly implemented with the `JavaScript function` block. This
 allows these libraries to run without requiring the JavaScript
 extensions option. Details are subject to change.
 
-Input sliders provides an alternate way to put values in numeric input
+`Input sliders` provides an alternate way to put values in numeric input
 slots; if you click in such a slot, a slider appears that you can
 control with the mouse:
 
@@ -506,11 +506,11 @@ input ranges. This feature was implemented because software keyboard
 input on phones and tablets didn’t work at all in the beginning, and
 still doesn’t work perfectly on Android devices, so sliders provide a
 workaround. It has since found another use in providing “lively”
-response to input changes; if Input sliders is checked, reopening the
+response to input changes; if `Input sliders` is checked, reopening the
 settings menu will show an additional option called Execute on slider
 change. If this option is also
 checked, then changing a slider in the scripting area automatically runs
-the script in which that input appears. The project live-tree in the
+the script in which that input appears. The project `live-tree` in the
 Examples collection shows how this can be used; it features a fractal
 tree custom block with several inputs, and you can see how each input
 affects the picture by moving a slider.
@@ -521,7 +521,7 @@ Turbo mode makes many projects run much
 faster, at the cost of not keeping the stage display up to date.
 (Snap<em>!</em> ordinarily spends most of its time drawing sprites and updating
 variable watchers, rather than actually carrying out the instructions in
-your scripts.) So turbo mode isn’t a good idea for a project with glide
+your scripts.) So turbo mode isn’t a good idea for a project with `glide`
 block s or one in which the user interacts with
 animated characters, but it’s great for drawing a complicated fractal,
 or computing the first million digits of 𝜋, so that you don’t need to
@@ -556,7 +556,7 @@ input name and title text. The default (unchecked) setting is definitely
 best for beginners, but more experienced Snap<em>!</em> programmers may find it
 more convenient always to see the long form.
 
-Plain prototype labels eliminates the plus signs between words in the
+`Plain prototype labels` eliminates the plus signs between words in the
 Block Editor prototype block. This
 makes it harder to add an input to a custom block; you have to hover the
 mouse where the plus sign would have been, until a single plus sign
@@ -564,14 +564,14 @@ appears temporarily for you to click on. It’s intended for people making
 pictures of scripts in the block editor for use in documentation, such
 as this manual. You probably won’t need it otherwise.
 
-Clicking sound causes a really annoying
+`Clicking sound` causes a really annoying
 sound effect whenever one block snaps next to another in a script.
 Certain very young children, and our colleague Dan Garcia, like this,
 but if you are such a child you should bear in mind that driving your
 parents or teachers crazy will result in you not being allowed to use
 Snap<em>!</em>. It might, however, be useful for visually impaired users.
 
-Flat design changes the “skin” of the Snap<em>!</em>
+`Flat design` changes the “skin” of the Snap<em>!</em>
 window to a really hideous design with white and pale-grey background,
 rectangular rather than rounded buttons, and monochrome blocks (rather
 than the shaded, somewhat 3D-looking normal blocks). The monochrome
@@ -584,7 +584,7 @@ ago, though.)
 
 The final group of settings change the way Snap<em>!</em> interprets your
 program; they are saved with the project, so anyone who runs your
-project will experience the same behavior. Thread safe scripts
+project will experience the same behavior. `Thread safe scripts`
 changes the way Snap<em>!</em> responds when
 an event (clicking the green flag, say) starts a script, and then, while
 the script is still running, the same event happens again. Ordinarily,
@@ -597,19 +597,19 @@ clicks or keystrokes. If a note is still playing but you ask for another
 one, you want the new one to start right then, not later after the old
 process finishes. But if your script makes several changes to a database
 and is interrupted in the middle, the result may be that the database is
-inconsistent. When you select Thread safe scripts, the same event
+inconsistent. When you select `Thread safe scripts`, the same event
 happening again in the middle of running a script is simply ignored.
 (This is arguably still not the right thing; the event should be
 remembered and the script run again as soon as it finishes. We’ll
 probably get around to adding that choice eventually.) Keyboard events
 (when \_\_ key pressed) are always thread-safe.
 
-Flat line ends affects the drawing of
+`Flat line ends` affects the drawing of
 thick lines (large pen width). Usually the ends are rounded, which looks
 best when turning corners. With this option selected, the ends are flat.
 It’s useful for drawing a brick wall or a filled rectangle.
 
-Codification support enables a
+`Codification support` enables a
 feature that can translate a Snap<em>!</em> project to a text-based
 (rather than block-based) programming
 language. The feature doesn’t know about any particular other language;
@@ -622,7 +622,7 @@ Using these primitive blocks, you can build a block library to translate
 into any programming language. Watch for such libraries to be added to
 our library collection (or contribute one). To see some examples, open
 the project “Codification” in the Examples project list. Edit the blocks
-map to Smalltalk, map to JavaScript, etc., to see examples of how to
+`map to Smalltalk`, `map to JavaScript`, etc., to see examples of how to
 provide translations for blocks.
 
 ::::{grid} 2
@@ -641,21 +641,21 @@ and the task is to arrange those blocks to achieve a set goal. In that
 application, this option is combined with the hiding of almost all
 primitive blocks. (See @sec-context-menus-for-palette-blocks.) When
 Single palette is turned on, two additional options (initially on)
-appear in the settings menu; the Show categories option controls the appearance of the palette category names
+appear in the settings menu; the `Show categories` option controls the appearance of the palette category names
 such as {inline alt="image1029.png" class="image-inline"}`images/12-user-interface-elements/image1029.png` and
 {inline alt="image1030.png" class="image-inline"}`images/12-user-interface-elements/image1030.png`,
-while the Show buttons option controls the
+while the `Show buttons` option controls the
 appearance of the {inline alt="image1031.png" class="image-inline"}`images/12-user-interface-elements/image1031.png` and
 {inline alt="image1032.png" class="image-inline"}`images/12-user-interface-elements/image1032.png` buttons in the palette.
 
-The HSL pen color model option
-changes the set pen, change pen, and pen blocks to provide menu options
+The `HSL pen color model` option
+changes the `set pen`, `change pen`, and `pen` blocks to provide menu options
 hue, saturation, and lightness instead of hue,
 saturation, and brightness (a/k/a value). Note: the name “saturation”
 means something different in HSL from in HSV! See Appendix A for all the
 information you need about colors.
 
-The Disable click-to-run option tells Snap<em>!</em> to ignore user mouse
+The `Disable click-to-run` option tells Snap<em>!</em> to ignore user mouse
 clicks on blocks and scripts if it would ordinarily run the block or
 script. (Right-clicking and dragging still work, and so does clicking in
 an input slot to edit it.) This is another Parsons problem feature; the
@@ -674,14 +674,14 @@ button {inline alt="image121.png" width="0.37917in"}`images/12-user-interface-el
 and, when it’s on, the slider to control the speed of stepping.
 
 :::{index} Stage resizing buttons
-shrink/grow button
+`shrink/grow` button
 presentation mode button
 :::
 
 ### Stage Resizing Buttons
 
 Still in the tool bar, but above the left edge of the stage, are two
-buttons that change the size of the stage. The first is the shrink/grow
+buttons that change the size of the stage. The first is the `shrink/grow`
 button. Normally it looks like this: {inline alt="image1033.png" width="0.37917in"}`images/12-user-interface-elements/image1033.png`
 Clicking the button displays the stage at half-normal size horizontally
 and vertically (so it takes up ¼ of its usual area). When the stage is
@@ -771,11 +771,11 @@ palette (color) preselected.
 context menu
 help… option
 help… option for custom block
-delete block definition… option
-duplicate block definition… option
-export block definition… option
-Undefined; blocks
-edit… option
+`delete block definition…` option
+`duplicate block definition…` option
+`export block definition…` option
+`Undefined`; blocks
+`edit…` option
 :::
 
 (sec-context-menus-for-palette-blocks)=
@@ -787,7 +787,7 @@ this menu:
 
 {img alt="image1051.png" width="0.86in"}`images/12-user-interface-elements/image1051.png`
 
-The help… option displays a box with documentation about the block. Here’s an example:
+The `help…` option displays a box with documentation about the block. Here’s an example:
 
 {img alt="image1053.png" width="3.32in"}`images/12-user-interface-elements/image1053.png`
 
@@ -796,7 +796,7 @@ palette, you see this menu:
 
 {img alt="image1052.png" width="1.62in"}`images/12-user-interface-elements/image1052.png`
 
-The help… option for a custom block displays the comment, if any, attached to the custom block’s hat
+The `help…` option for a custom block displays the comment, if any, attached to the custom block’s hat
 block in the Block Editor. Here is an example of a block with a comment
 and its help display:
 
@@ -805,22 +805,22 @@ and its help display:
 If the help text includes a URL, it is clickable and will open the page
 in a new tab.
 
-The delete block definition… option asks for confirmation, then deletes the custom block and removes
+The `delete block definition…` option asks for confirmation, then deletes the custom block and removes
 it from any scripts in which it appears. (The result of this removal may
 not leave a sensible script; it’s best to find and correct such scripts
 *before* deleting a block.) Note that there is no option to *hide* a
 custom block; this can be done in the Block Editor by right-clicking on
 the hat block.
 
-The duplicate block definition… option makes a *copy* of the block and opens that copy in
+The `duplicate block definition…` option makes a *copy* of the block and opens that copy in
 the Block Editor. Since you can’t have two custom blocks with the same
 title text and input types, the copy is created with “(2)” (or a higher
 number if necessary) at the end of the block prototype.
 
-The export block definition… option writes a file in your browser’s downloads directory containing
+The `export block definition…` option writes a file in your browser’s downloads directory containing
 the definition of this block and any other custom blocks that this block
 invokes, directly or indirectly. So the resulting file can be loaded
-later without the risk of red Undefined! blocks because of missing
+later without the risk of red `Undefined!` blocks because of missing
 dependencies.
 
 The `edit…` option opens a Block Editor with the
@@ -848,7 +848,7 @@ boxes at once.)
 
 {img alt="image1059.png" width="1.60in"}`images/12-user-interface-elements/image1059.png`
 
-The make a category… option, which is
+The `make a category…` option, which is
 intended mainly for authors of snap extensions, lets you add custom
 *categories* to the palette. It opens a small dialog window in which you
 specify a name *and a color* for the new category:
@@ -954,31 +954,31 @@ red halo
 undo button
 keyboard editing button
 primitive block within a script
-help… option
-relabel… option
+`help…` option
+`relabel…` option
 compile menu option
 lightning bolt symbol
 block picture option
 shift-click on block
-add comment option
-script pic… option
+`add comment` option
+`script pic…` option
 picture of script
 Snap; manual
-result pic… option
+`result pic…` option
 picture with speech balloon
 smart picture
 ringify option
 unringify option
 custom block in a script
 `broadcast and wait` block
-receivers… option
-senders… option
+`receivers…` option
+`senders…` option
 scripting area background context menu
-redrop option
-clean up option
+`redrop` option
+`clean up` option
 comment box
-scripts pic… option
-make a block… option
+`scripts pic…` option
+`make a block…` option
 shortcut
 :::
 
@@ -1022,15 +1022,15 @@ command block:
 reporter block:
 {img alt="image1069.png" width="0.62in"}`images/12-user-interface-elements/image1069.png`
 
-The help… option shows the help screen for the
+The `help…` option shows the help screen for the
 block, just as in the palette. The other options appear only when a
 block is right-clicked/control-clicked in the scripting area.
 
 Not
-every primitive block has a relabel… option.
+every primitive block has a `relabel…` option.
 When present, it allows the block to be replaced by another, similar
 block, keeping the input expressions in place. For example, here’s what
-happens when you choose relabel… for an arithmetic operator:
+happens when you choose `relabel…` for an arithmetic operator:
 
 {img alt="image1071.png" width="1.53in"}`images/12-user-interface-elements/image1071.png`
 
@@ -1052,7 +1052,7 @@ function to be compiled must be quick, because it will be
 uninterruptable; in particular, if it’s an infinite loop, you may have
 to quit your browser to recover. Therefore, **save your project before**
 you experiment with the compilation feature. The right-click menu for a
-compiled higher order function will have an uncompile option. This is an
+compiled higher order function will have an `uncompile` option. This is an
 experimental feature.
 
 The {index}`duplicate option` for a command block makes
@@ -1080,11 +1080,11 @@ and drag out the block.
 The {index}`delete option` deletes the selected block from
 the script.
 
-The add comment option creates a comment,
+The `add comment` option creates a comment,
 like the same option in the background of the scripting area, but
 attaches it to the block you clicked.
 
-The script pic… option saves a picture of the
+The `script pic…` option saves a picture of the
 entire script, not just from the selected
 block to the end, into your download folder; or, in some browsers, opens
 a new browser tab containing the picture. In the latter case, you can
@@ -1092,8 +1092,8 @@ use the browser’s Save feature to put the picture in a file. This is a
 super useful feature if you happen to be writing a Snap<em>!</em> manual
 ! (If you have a Retina display, consider turning
 off Retina support before making script pictures; if not, they end up
-huge.) For reporters not inside a script, there is an additional result
-pic… option that calls the reporter and
+huge.) For reporters not inside a script, there is an additional `result
+pic…` option that calls the reporter and
 includes a speech balloon with the
 result in the picture. Note: The downloaded file is a “smart picture
 ”: It also contains the code of the script, as if
@@ -1117,7 +1117,7 @@ menu:
 
 {img alt="image1073.png" width="0.97in"}`images/12-user-interface-elements/image1073.png`
 
-The relabel… option for custom blocks shows a
+The `relabel…` option for custom blocks shows a
 menu of other same-shape custom blocks with the same inputs. At present
 you can’t relabel a custom block to a primitive block or vice versa. The
 two options at the bottom, for custom blocks only, are the same as in
@@ -1129,14 +1129,14 @@ input to another block, then the menu is a little different again:
 
 {img alt="image1074.png" width="0.88in"}`images/12-user-interface-elements/image1074.png`
 
-What’s new here is the result pic… option.
-It’s like script pic… but it includes in the picture a speech balloon
+What’s new here is the `result pic…` option.
+It’s like `script pic…` but it includes in the picture a speech balloon
 with the result of calling the block.
 
-`Broadcast` and `broadcast and wait` blocks in the scripting area have an additional option: receivers…. When clicked, it causes a momentary (be
+`Broadcast` and `broadcast and wait` blocks in the scripting area have an additional option: `receivers…`. When clicked, it causes a momentary (be
 looking for it when you click!) halo around the picture in the sprite
 corral of those sprites that have a when I receive hat block for the
-same message. Similarly, when I receive blocks have a senders… option
+same message. Similarly, `when I receive` blocks have a `senders…` option
 that light up the sprite corral icons of sprites
 that broadcast the same message.
 
@@ -1152,17 +1152,17 @@ it to go. It remembers all the dragging and dropping you’ve done in this
 sprite’s scripting area (that is, other sprites have their own separate
 drop memory), and undoes the most recent, returning the block to its
 former position, and restoring the previous value in the relevant input
-slot, if any. Once you’ve undropped something, the redrop option
+slot, if any. Once you’ve undropped something, the `redrop` option
 appears, and allows you to repeat the operation
 you just undid. These menu options are equivalent to the and buttons
 described earlier.
 
-The clean up option rearranges the position of
+The `clean up` option rearranges the position of
 scripts so that they are in a single column, with the same left margin,
 and with uniform spacing between scripts. This is a good idea if you
 can’t read your own project!
 
-The add comment option puts a comment box, like
+The `add comment` option puts a comment box, like
 the picture below, in the scripting area. It’s attached to the
 mouse, as with duplicating scripts, so you position the mouse where you
 want the comment and click to release it. You can then edit the text in
@@ -1190,7 +1190,7 @@ Comments have their own context menu, with obvious meanings:
 Back to the options in the menu for the background of the scripting area
 (picture on the previous page):
 
-The scripts pic… option saves, or opens a
+The `scripts pic…` option saves, or opens a
 new browser tab with, a picture of *all* scripts in the scripting area,
 just as they appear, but without the grey striped background. Note that
 “all scripts in the scripting area” means just the top-level scripts of
@@ -1199,7 +1199,7 @@ definitions. This is also a “smart picture”; if you drag it into the
 scripting area, it will *create a new sprite* with those scripts in its
 scripting area.
 
-Finally, the make a block… option does the
+Finally, the `make a block…` option does the
 same thing as the “Make a block” button in the palettes. It’s a shortcut
 so that you don’t have to keep scrolling down the
 palette if you make a lot of blocks.
@@ -1276,7 +1276,7 @@ The {index}`edit option` opens the Paint Editor on this
 costume. The {index}`rename option` opens a dialog box in
 which you can rename the costume. (A costume’s initial name comes from
 the file from which it was imported, if any, or is something like
-costume5.) Duplicate makes a copy of the
+`costume5`.) Duplicate makes a copy of the
 costume, in the same sprite. (Presumably you’d do that because you
 intend to edit one of the copies.) Delete is
 obvious. The get blocks option appears only
@@ -1561,7 +1561,7 @@ collection of arithmetic operator blocks will be constructed to match:
 As the example shows, you can also use parentheses for grouping, and
 non-numeric operands are treated as variables or primitive functions. (A
 variable name entered in this way may or may not already exist in the
-script. Only round and the ones in the pulldown menu of the sqrt block
+script. Only `round` and the ones in the pulldown menu of the `sqrt` block
 can be used as function names.)
 
 :::{index} control-shift-enter (keyboard editor)
@@ -1647,7 +1647,7 @@ highlighting it in the sprite corral and showing its scripting area. If
 the sprite was a {index}`temporary clone`, it becomes
 permanent.
 
-The export… option saves, or opens a new browser
+The `export…` option saves, or opens a new browser
 tab containing, the XML text representation of the sprite. (Not just its
 costume, but all of its costumes, scripts, local variables and blocks,
 and other properties.) You can save this tab into a file on your
@@ -1657,13 +1657,13 @@ browsers, the sprite is directly saved into a file.)
 :::{index} normal option
 large option
 slider option
-slider min… option
-slider max… option
-import… option
+`slider min…` option
+`slider max…` option
+`import…` option
 `.csv` file
 `.json` file
-raw data… option
-export… option
+`raw data…` option
+`export…` option
 `.txt` file
 :::
 
@@ -1694,8 +1694,8 @@ case the text is read into the variable as is, or .`csv`
 or `.json`, in which case the text is converted into a
 list structure, which will always be a two-dimensional array for csv
 (comma-separated values) data, but can be any shape for json data. The
-raw data… option prevents that conversion to
-list form. The export… option does the opposite
+`raw data…` option prevents that conversion to
+list form. The `export…` option does the opposite
 conversion, passing a text-valued variable value into a `.txt` file
 unchanged, but converting a list value into csv format
 if the list is one- or two-dimensional, or into json format if the list
@@ -1715,9 +1715,9 @@ to write code that will construct the same list later.
 
 :::{index} edit option
 show all option
-pic… option
+`pic…` option
 pen trails option
-svg… option
+`svg…` option
 :::
 
 ### The stage itself
@@ -1737,7 +1737,7 @@ The show all option makes all sprites visible,
 both in the sense of the show block and by bringing the sprite onstage
 if it has moved past the edge of the stage.
 
-The pic… option saves, or opens a browser tab with,
+The `pic…` option saves, or opens a browser tab with,
 a picture of everything on the stage: its background, lines drawn with
 the pen, and any visible sprites. What you see is what you get. (If you
 want a picture of just the background, select the stage, open its
@@ -1749,18 +1749,18 @@ stage by the pen of any sprite. The costume’s rotation center will be
 the current position of the sprite.
 
 If you previously turned on the log pen vectors option, and there are
-logged vectors, the menu includes an extra option, svg…, that exports a picture of the stage in vector format. Only lines are logged, not color regions made with the fill block.
+logged vectors, the menu includes an extra option, `svg…`, that exports a picture of the stage in vector format. Only lines are logged, not color regions made with the fill block.
 
 :::{index}
 sprite corral
 sprite creation buttons
 shortcut
 show option
-parent… option
+`parent…` option
 release option
 permanent clone
-export… option
-pic… option
+`export…` option
+`pic…` option
 scenes
 :::
 
@@ -1800,19 +1800,19 @@ onto the stage, if it had moved past the stage boundary. The next three
 options are the same as in the context menu of the actual sprite on the
 stage, discussed above.
 
-The parent… option displays a menu of all other
+The `parent…` option displays a menu of all other
 sprites, showing which if any is this sprite’s parent, and allowing you
 to choose another sprite (replacing any existing parent). The release
 option is shown only if this sprite is a
 (permanent, or it wouldn’t be in the sprite
 corral) clone; it changes the sprite to a temporary clone. (The name is
 supposed to mean that the sprite is released from the corral.) The
-export… option exports the sprite, like the same
+`export…` option exports the sprite, like the same
 option on the stage.
 
-The context menu for the stage thumbnail has only one option, pic…, which takes a picture of everything on the stage,
+The context menu for the stage thumbnail has only one option, `pic…`, which takes a picture of everything on the stage,
 just like the same option in the context menu of the stage background.
-If pen trails are being logged, there will also be an svg… option.
+If pen trails are being logged, there will also be an `svg…` option.
 
 If your project includes scenes, then under the stage
 icon in the sprite corral will be the *scene corral:*
