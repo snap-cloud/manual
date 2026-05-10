@@ -42,17 +42,46 @@
 // (bg-white/80, backdrop-blur, shadow) on a `.myst-top-nav` div; we override
 // them here rather than forking the theme. !important is needed to defeat
 // the Tailwind utility classes also targeting these elements.
-.myst-top-nav {
-  background-color: var(--berkeley-blue) !important;
-  backdrop-filter: none !important;
-  box-shadow: none !important;
+.myst-top-nav.bg-white\/80,
+.myst-top-nav.dark\:bg-stone-900\/80:is(.dark *) {
+  background-color: var(--berkeley-blue);
+  backdrop-filter: none;
+  box-shadow: none;
+}
 
-  // Force light foreground on top of berkeley-blue, regardless of the
-  // theme-supplied text-stone-* / dark:text-white utilities on children.
-  &, a, button, svg {
-    color: #FFF !important;
+// Light mode search bar and light mode toggle.
+.myst-top-nav.bg-white\/80 {
+  &, a, button, svg path {
+    color: #FFF;
+    border-color: #FFF;
+
+    // // Reset the color of the placeholder text in the search input
+    // & span, & path {
+    //   color: rgb(75 85 99/var(--tw-text-opacity,1));;
+    // }
+  }
+
+  & button.myst-search-bar {
+    // Reset the color of the placeholder text in the search input
+    & span, & path {
+      color: rgb(75 85 99/var(--tw-text-opacity,1));
+    }
   }
 }
+
+// Dark mode search bar and dark mode toggle.
+.myst-top-nav.dark\:bg-stone-900\/80:is(.dark *) {
+  &, a, button.myst-search-bar, svg {
+    color: #FFF;
+  }
+  & button.myst-search-bar {
+  // Reset the color of the placeholder text in the search input
+  & span, & path {
+    color: #FFF;
+  }
+  }
+}
+
 
 /* Designed to be the last element in a section / nav
 / Makes a little "puzzle piece" connector. */
