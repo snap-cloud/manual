@@ -21,14 +21,6 @@ output/
 # Commited for now, just to speed up publishing time.
 # _freeze
 
-# Quarto
-/env/
-_book
-.quarto/
-.quarto
-.jupyter_cache
-*.quarto_ipynb
-*_files/
 
 # The final Snap! manual compiled.
 snap-manual.tex
@@ -107,4 +99,5 @@ conversion/chapters/*
 _index_entries.txt
 index-list.quarto_ipynb
 
-/.quarto/
+# Claude and AI toools
+.claude/worktrees/
