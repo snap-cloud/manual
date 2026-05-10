@@ -97,6 +97,10 @@ html.dark .menu-text code {
   background-color: unset;
 }
 
+a.button {
+  background-color: var(--berkeley-medium);
+}
+
 // TODO: make latex env
 .image-1-5x {
   &, img {

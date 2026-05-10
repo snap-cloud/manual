@@ -12,6 +12,7 @@ const imgRole = {
     width: { type: String, doc: 'CSS width, e.g. 200px or 50%.' },
     height: { type: String, doc: 'CSS height.' },
     title: { type: String, doc: 'Tooltip / title attribute.' },
+    role: { type: String, doc: 'Role for accessibility.', required: false },
   },
   run(data) {
     const { alt, class: className, width, height, title } = data.options ?? {};
@@ -19,11 +20,12 @@ const imgRole = {
       {
         type: 'image',
         url: data.body.trim(),
-        alt,
+        alt: alt,
         class: `image-inline ${className ? className : ''}`,
         width,
         height,
         title,
+        role: role || undefined,
       },
     ];
   },
