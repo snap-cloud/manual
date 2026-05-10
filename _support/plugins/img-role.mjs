@@ -15,7 +15,7 @@ const imgRole = {
     role: { type: String, doc: 'Role for accessibility.', required: false },
   },
   run(data) {
-    const { alt, class: className, width, height, title } = data.options ?? {};
+    const { alt, class: className, width, height, title, role } = data.options ?? {};
     return [
       {
         type: 'image',
