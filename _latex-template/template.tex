@@ -232,6 +232,10 @@
 }
 \newcommand{\snapgridsep}{\hfill\ignorespaces}
 
+% TODO: Should this be shared somewhere with the web version?
+\newcommand{\snapversion}{12.0}
+
+% JupyterBook imports and packages
 [- IMPORTS -]
 
 \hypersetup{
@@ -310,7 +314,7 @@
     % Version on the blue panel.
     \node[anchor=north east, text=white, font=\fontsize{60}{60}\selectfont]
       at ([xshift=-1.5cm, yshift=-3cm]current page.north east)
-      {8.0};
+      {\snapversion};
 
     % Orange banner with the manual title (about 35% from top of
     % page). The title is bold small-caps (with the ! kept italic

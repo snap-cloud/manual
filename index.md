@@ -2,22 +2,21 @@
 ---
 
 # Snap! Reference Manual
-<!--
-  Title intentionally omitted. The PDF cover page already carries
-  "Snap! Reference Manual"; emitting a frontmatter title here (or
-  the previous \chapter*{...} raw LaTeX call) caused a near-blank
-  duplicate-title page after the acknowledgements.
--->
+
 :::{raw:latex}
 \chapter*{The Snap\textit{!} Reference Manual}
 :::
 
++++{"no-pdf": true}
+{img alt="Snap! Manul Cover Image"}`images/cover-image.png`
++++
+
 ::: {.callout-note}
 ## This a work in progress!
 
-Welcome to the "new" Snap<em>!</em> manual. However, there are still many images and pages that need proper formatting and updates for version 11.
+Welcome to the "new" Snap<em>!</em> manual. However, there are still many images and pages that need proper formatting and updates for version 12.
 
-You may wish to [read a very nicely typeset version][pdf] of the manual.
+**You may wish to [read a very nicely typeset version][pdf] of the manual.**
 
 [pdf]: https://snap.berkeley.edu/snap/help/SnapManual.pdf
 :::
@@ -72,9 +71,8 @@ The "Manual + Blocks Reference" version includes both the manual and the blocks 
 
 ### Reference the Snap<em>!</em> Manual
 
-![[DOI: 10.5281/zenodo.16892852](https://doi.org/10.5281/zenodo.16892852)](images/other/zenodo.17241865.svg)
-
-If you're writing a paper or book and want to reference the manual, please use the following citation:
+<!-- TODO: Convert to PNG for PDF -->
+[{inline alt="DOI: 10.5281/zenodo.16892852"}`images/other/zenodo.17241865.svg`](https://doi.org/10.5281/zenodo.16892852) If you're writing a paper or book and want to reference the manual, please use the following citation:
 
 ```
 @book{harvey_2025_17241865,
@@ -89,6 +87,8 @@ If you're writing a paper or book and want to reference the manual, please use t
   url          = {https://doi.org/10.5281/zenodo.16892852},
 }
 ```
+
+<!-- TODO: Berkeley and SAP Logos -->
 
 ### License
 
