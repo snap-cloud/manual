@@ -1,0 +1,13 @@
+name: Accessibility Audit
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  check-a11y:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Run Accessibility Checks
+        uses: berkeley-cdss/myst-a11y@v1
