@@ -1,8 +1,5 @@
 ---
 ---
-```{raw:latex}
-\thispagestyle{empty}
-```
 
 # Snap! Reference Manual
 <!-- Editors Note: This page serves as the title and cover page when
