@@ -175,7 +175,7 @@ should be on that line. Submenus may be nested to arbitrary depth.
 {img alt="image693.png" width="0.50in"}`images/05-typed-inputs/image693.png`
 
 Alternatively, instead of giving a menu listing as described above, you
-can put a JavaScript function that returns the desired menu in the
+can put a `JavaScript function` that returns the desired menu in the
 textbox. This is an experimental feature and requires that JavaScript be
 enabled in the Settings menu.
 
@@ -302,8 +302,8 @@ But I’d like the arrow symbol bigger, and yellow, so I edit its name:
 
 {img alt="image690.png" width="2.03in"}`images/05-typed-inputs/image690.png`
 
-This makes the symbol 1.5 times as big as the letters in the block text, using a color with
-red-green-blue values of 255-255-150 (each between 0 and 255). Here’s
+This makes the symbol `1.5` times as big as the letters in the block text, using a color with
+red-green-blue values of `255-255-150` (each between 0 and 255). Here’s
 the result:
 
 {img alt="image691.png" width="1.20in"}`images/05-typed-inputs/image691.png`

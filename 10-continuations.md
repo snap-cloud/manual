@@ -24,12 +24,12 @@ the block. For example, in the script
 
 {img alt="image874.png" width="1.41in"}`images/10-continuations/image874.png`
 
-the continuation of the move 100 steps block is
+the continuation of the `move 100 steps` block is
 
 {img alt="image875.png" width="1.59in"}`images/10-continuations/image875.png`
 
  But some situations are more
-complicated. For example, what is the continuation of move 100 steps in
+complicated. For example, what is the continuation of `move 100 steps` in
 the following script?
 
 {img alt="image876.png" width="1.48in"}`images/10-continuations/image876.png`
@@ -40,7 +40,7 @@ time. The first time, its continuation is
 
 {img alt="image877.png" width="1.67in"}`images/10-continuations/image877.png`
 
-Note that there is no repeat 3 block in the actual script, but the
+Note that there is no `repeat 3` block in the actual script, but the
 continuation has to represent the fact that there are three more times
 through the loop to go. The fourth time, the continuation is just
 
@@ -51,7 +51,7 @@ physically below the block in the script, but what computational work
 remains to be done.
 
 (This is a situation in which visible code may be a little misleading.
-We have to put a repeat 3 block in the *picture* of the continuation,
+We have to put a `repeat 3` block in the *picture* of the continuation,
 but the actual continuation is made from the evaluator’s internal
 bookkeeping of where it’s up to in a script. So it’s really the original
 script plus some extra information. But the pictures here do correctly
@@ -66,7 +66,7 @@ and then use that block in a script:
 
 {img alt="image880.png" width="0.73in"}`images/10-continuations/image880.png`
 
-then the continuation of the first use of move 100 steps is
+then the continuation of the first use of `move 100 steps` is
 
 {img alt="image881.png" width="1.67in"}`images/10-continuations/image881.png`
 
@@ -81,7 +81,7 @@ as input. For example, in the script
 
 {img alt="image882.png" width="2.19in"}`images/10-continuations/image882.png`
 
-the continuation of the 3+4 block is
+the continuation of the `3+4` block is
 
 {img alt="image883.png" width="3.57in"}`images/10-continuations/image883.png`
 
@@ -174,15 +174,15 @@ smaller number’s factorial by my original input. Finally, call my
 continuation with the product.” You can use CPS to unwind even the most
 complicated branched recursions.
 
-By the way, I cheated a bit above. The if/else block should also use
+By the way, I cheated a bit above. The `if/else` block should also use
 CPS; it should take one true/false input and *two continuations.* It
 will go to one or the other continuation depending on the value of its
-input. But in fact the C-shaped blocks (or E-shaped, like if/else) are
+input. But in fact the C-shaped blocks (or E-shaped, like `if/else`) are
 really using CPS in the first place, because they implicitly wrap rings
 around the sub-scripts within their branches. See if you can make an
-explicitly CPS if/else block.
+explicitly CPS `if/else` block.
 
-:::{index} call w/continuation block
+:::{index} `call w/continuation` block
 :::
 
 ## Call/Run w/Continuation
@@ -228,7 +228,7 @@ We can improve upon this by capturing the continuation of the top-level call to 
 
 The {inline alt="image916.png" width="1.59125in"}`images/10-continuations/image916.png` block takes as its input a
 one-input script, as shown in the product example. It calls that script
-with *the continuation of the* call-with-continuation *block itself* as
+with *the continuation of the* `call-with-continuation` *block itself* as
 its input. In this case, that continuation is
 
 {img alt="image915.png" width="2.71in"}`images/10-continuations/image915.png`
@@ -236,7 +236,7 @@ its input. In this case, that continuation is
 reporting to whichever script called product. If the input list doesn’t include a zero, then nothing
 is ever done with that continuation, and this version works just like
 the original product. But if the input list is 1,2,3,0,4,5, then three
-recursive calls are made, the zero is seen, and product-helper *runs the
+recursive calls are made, the zero is seen, and `product-helper` *runs the
 continuation,* with an input of 0. The continuation immediately reports
 that 0 to the caller of product, *without* unwinding all the recursive
 calls and without the unnecessary multiplications.
@@ -289,19 +289,19 @@ and think “Hmm.” If in the run block the variable break is used instead
 of outer, then the script will say 1, 2, 3, and “Hello!” before thinking
 “Hmm.”
 
-There are corresponding catch and throw blocks for reporters. The catch
+There are corresponding `catch` and `throw` blocks for reporters. The `catch`
 block is a reporter that takes an expression as input instead of a
-C-shaped slot. But the throw block is a command; it doesn’t report a
+C-shaped slot. But the `throw` block is a command; it doesn’t report a
 value to its own continuation, but instead reports a value (which it
 takes as an additional input, in addition to the catch tag) to *the
-corresponding catch block*’s continuation:
+corresponding `catch` block*’s continuation:
 
 {img alt="image924.png" width="4.35in"}`images/10-continuations/image924.png`
 
-Without the throw, the inner call reports 5, the + block reports 8, so
-the catch block reports 8, and the × block reports 80. With the throw,
+Without the `throw`, the inner call reports 5, the + block reports 8, so
+the `catch` block reports 8, and the × block reports 80. With the `throw`,
 the inner call doesn’t report at all, and neither does the + block. The
-throw block’s input of 20 becomes the value reported by the catch block,
+`throw` block’s input of 20 becomes the value reported by the `catch` block,
 and the × block multiplies 10 and 20.
 
 
@@ -322,7 +322,7 @@ remembering the old one.
 Since this all happens automatically, there is generally no need for the user to think about
 threads. But, just to show that this, too, is not magic, here is an
 implementation of a simple thread system. It uses a global variable
-named tasks that initially contains an empty list. Each use of the
+named `tasks` that initially contains an empty list. Each use of the
 C-shaped {index}`thread block` adds a continuation (the
 ringed script) to the list. The {index}`yield block` uses run
 w/continuation to create a continuation for a partly done thread, adds
