@@ -2,22 +2,20 @@
 ---
 
 # Snap! Reference Manual
-<!--
-  Title intentionally omitted. The PDF cover page already carries
-  "Snap! Reference Manual"; emitting a frontmatter title here (or
-  the previous \chapter*{...} raw LaTeX call) caused a near-blank
-  duplicate-title page after the acknowledgements.
--->
-:::{raw:latex}
-\chapter*{The Snap\textit{!} Reference Manual}
-:::
+<!-- Editors Note: This page serves as the title and cover page when
+viewed on the web. It comes *after* the acknowledgements when in the PDF file,
+akin to a book. -->
+
++++{"no-pdf": true}
+{img alt="Snap! Manul Cover Image"}`images/cover-image.png`
++++
 
 ::: {.callout-note}
 ## This a work in progress!
 
-Welcome to the "new" Snap<em>!</em> manual. However, there are still many images and pages that need proper formatting and updates for version 11.
+Welcome to the "new" Snap<em>!</em> manual. However, there are still many images and pages that need proper formatting and updates for version 12.
 
-You may wish to [read a very nicely typeset version][pdf] of the manual.
+**You may wish to <u>[read a very nicely typeset version][pdf]</u> of the manual.**
 
 [pdf]: https://snap.berkeley.edu/snap/help/SnapManual.pdf
 :::
@@ -72,9 +70,8 @@ The "Manual + Blocks Reference" version includes both the manual and the blocks 
 
 ### Reference the Snap<em>!</em> Manual
 
-![[DOI: 10.5281/zenodo.16892852](https://doi.org/10.5281/zenodo.16892852)](images/other/zenodo.17241865.svg)
-
-If you're writing a paper or book and want to reference the manual, please use the following citation:
+<!-- TODO: Convert to PNG for PDF -->
+[{inline alt="DOI: 10.5281/zenodo.16892852"}`images/other/zenodo.17241865.svg`](https://doi.org/10.5281/zenodo.16892852) If you're writing a paper or book and want to reference the manual, please use the following citation:
 
 ```
 @book{harvey_2025_17241865,
@@ -90,6 +87,8 @@ If you're writing a paper or book and want to reference the manual, please use t
 }
 ```
 
+<!-- TODO: Berkeley and SAP Logos -->
+
 ### License
 
-This work is licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International</a> {inline alt=""}`images/other/cc.svg` {inline alt=""}`images/other/by.svg` {inline alt=""}`images/other/nc.svg` {inline alt=""}`images/other/sa.svg`
+This work is licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International</a> {inline alt="cc"}`images/other/cc.svg` {inline alt="by"}`images/other/by.svg` {inline alt="nc"}`images/other/nc.svg` {inline alt="sa"}`images/other/sa.svg`
