@@ -1,7 +1,0 @@
----
----
-
-# `key  pressed?`
-
-```{block-help}
-```

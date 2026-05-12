@@ -1,7 +1,0 @@
----
----
-
-# Subtract `−`
-
-```{block-help}
-```

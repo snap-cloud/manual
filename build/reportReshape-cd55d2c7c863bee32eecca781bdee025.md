@@ -1,7 +1,0 @@
----
----
-
-# `reshape  to`
-
-```{block-help}
-```

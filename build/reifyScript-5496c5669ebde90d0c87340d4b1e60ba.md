@@ -1,7 +1,0 @@
----
----
-
-# `Command Ring`
-
-```{block-help}
-```

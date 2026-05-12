@@ -1,7 +1,0 @@
----
----
-
-# `pause all ⏸`
-
-```{block-help}
-```

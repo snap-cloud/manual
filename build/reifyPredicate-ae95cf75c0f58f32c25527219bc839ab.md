@@ -1,7 +1,0 @@
----
----
-
-# `Predicate Ring`
-
-```{block-help}
-```

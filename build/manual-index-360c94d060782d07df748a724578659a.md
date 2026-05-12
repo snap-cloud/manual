@@ -1,7 +1,0 @@
----
----
-
-# Manual Index
-
-```{show-index}
-```
