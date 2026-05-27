@@ -380,8 +380,44 @@ const latexShimsTransform = {
         imageNode.width = normalizeWidth(imageNode.width);
       }
     });
+
+    // 6. Inline-image paragraph-break suppression.
+    //    myst-to-tex's image handler unconditionally emits "\n\n" after each
+    //    \includegraphics, which LaTeX reads as \par and ends the surrounding
+    //    paragraph. For inline images that have following content in the same
+    //    parent (text, more inline images, etc.) that produces an unwanted
+    //    line break right after the image. We can't override the handler from
+    //    a plugin, so instead we insert a raw \snapinlineparhook node before
+    //    each such image; the macro (defined in template.tex) installs a
+    //    one-shot \par redefinition that swallows the next \par (and the
+    //    space the end-of-line generates immediately before it). Inline
+    //    images that are the last child of their parent are left alone so
+    //    legitimate paragraph breaks still happen.
+    walkWithParent(tree, null, (node, parent) => {
+      if (node.type !== 'image') return;
+      if (inlineSentinel(node) == null) return;
+      if (!parent || !Array.isArray(parent.children)) return;
+      const idx = parent.children.indexOf(node);
+      if (idx < 0 || idx === parent.children.length - 1) return;
+      parent.children.splice(idx, 0, {
+        type: 'raw',
+        lang: 'tex',
+        tex: '\\snapinlineparhook ',
+      });
+    });
   },
 };
+
+// Walk the tree calling fn(node, parent) on each node. The walk records
+// children before recursing so mutations to parent.children inside fn (e.g.,
+// splicing a sibling before `node`) don't double-visit or skip nodes.
+function walkWithParent(node, parent, fn) {
+  if (!node) return;
+  fn(node, parent);
+  const children = Array.isArray(node.children) ? node.children.slice() : null;
+  if (!children) return;
+  for (const child of children) walkWithParent(child, node, fn);
+}
 
 export default {
   name: 'LaTeX shims (kbd, grid, image, index, lightning)',

@@ -211,6 +211,25 @@
 }
 \makeatother
 
+% Inline-image \par swallow. myst-to-tex's image handler always emits
+% "\n\n" after \includegraphics (its closeBlock), which LaTeX reads as
+% \par and breaks the surrounding paragraph after an inline image. The
+% latex-shims plugin inserts \snapinlineparhook just before every inline
+% image that has more content following it in the same parent. The hook
+% installs a one-shot redefinition of \par that fires for the very next
+% \par, undoes the trailing space the end-of-line inserted, restores the
+% real \par, and lets the paragraph continue.
+\makeatletter
+\newcommand{\snapinlineparhook}{%
+  \let\snap@par@orig\par%
+  \let\par\snap@par@swallow%
+}
+\def\snap@par@swallow{%
+  \let\par\snap@par@orig%
+  \unskip%
+}
+\makeatother
+
 % --- <kbd> rendering ----------------------------------------------------
 % Used by the latex-shims plugin to render the MyST `keyboard` node.
 \newcommand{\kbd}[1]{%
