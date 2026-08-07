@@ -380,6 +380,38 @@ const latexShimsTransform = {
         imageNode.width = normalizeWidth(imageNode.width);
       }
     });
+
+    // 6. Keep inline images inline. myst-to-tex closes EVERY image node
+    //    with a blank line (a forced \par in TeX), so an inline image
+    //    mid-sentence would split its paragraph and put a line break
+    //    after the image. We can't stop the serializer from emitting the
+    //    blank line without forking myst-to-tex, but we can defuse it:
+    //    bracket each inline image with raw-TeX siblings
+    //    (\snapinlineopen / \snapinlineclose, defined in template.tex)
+    //    that scope a no-op \par around the image. A genuine paragraph
+    //    end still breaks normally because it is serialized after the
+    //    closing marker. Nodes are tagged so re-runs of this transform
+    //    (one per export pipeline) don't wrap twice.
+    walkAll(tree, (node) => {
+      if (!Array.isArray(node.children)) return;
+      for (let i = 0; i < node.children.length; i++) {
+        const child = node.children[i];
+        if (child?.type !== 'image' || child._snapInlineWrapped) continue;
+        if (inlineSentinel(child) == null) continue;
+        child._snapInlineWrapped = true;
+        node.children.splice(i, 0, {
+          type: 'raw',
+          lang: 'tex',
+          tex: '\\snapinlineopen{}',
+        });
+        node.children.splice(i + 2, 0, {
+          type: 'raw',
+          lang: 'tex',
+          tex: '\\snapinlineclose{}',
+        });
+        i += 2;
+      }
+    });
   },
 };
 

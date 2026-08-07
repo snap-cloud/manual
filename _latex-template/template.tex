@@ -181,6 +181,16 @@
     \snaporigincludegraphics[height=#1\baselineskip]{#2}%
   }%
 }
+% myst-to-tex closes every image node with a blank line — a forced \par —
+% which would break the paragraph after each inline image. The latex-shims
+% plugin brackets inline images with \snapinlineopen/\snapinlineclose:
+% inside the pair \par is a no-op, so the serializer's blank line is inert,
+% and \unskip drops the stray inter-word glue from the newline the
+% serializer emits right after \includegraphics (the following text node
+% carries its own leading space when one belongs there). A real paragraph
+% end is serialized after \snapinlineclose, so it still breaks normally.
+\newcommand{\snapinlineopen}{\begingroup\let\par\relax}
+\newcommand{\snapinlineclose}{\unskip\endgroup}
 \makeatletter
 \def\snap@inline@a{width=0.001\linewidth}% image-inline      -> 1.5x
 \def\snap@inline@b{width=0.002\linewidth}% image-inline-tall -> 2.4x
