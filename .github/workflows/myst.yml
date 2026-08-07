@@ -32,8 +32,16 @@ jobs:
 
       # The PDF builds compile under LuaLaTeX and rely on
       # \DocumentMetadata, which the LaTeX kernel only ships with
-      # TeX Live 2022+. Ubuntu's apt packages still ship 2023, so
-      # install TeX Live 2025 from upstream via zauguin's action.
+      # TeX Live 2022+. Ubuntu's apt packages lag well behind, so
+      # install current TeX Live from upstream via zauguin's action.
+      #
+      # NOTE: `repository` pins the live tlnet mirror, which always
+      # serves the *current* TeX Live release — so texlive_version must
+      # match it. When TeX Live rolls over each spring, tlnet switches
+      # to the new year, the old version pin stops matching, and
+      # renamed/removed packages fail `tlmgr install` (this exact
+      # combination broke the 2025→2026 rollover). At rollover: bump
+      # texlive_version and re-check the package list for renames.
       #
       # Package list rationale: the *recommended* collections cover
       # nearly everything we need (geometry, hyperref, koma-script,
@@ -43,10 +51,14 @@ jobs:
       # those collections. We deliberately avoid collection-latexextra
       # / collection-fontsextra (~2,700 extra packages, ~12 min, and
       # one of them tripped up format-file generation in TL 2025).
-      - name: Install TeX Live 2025
+      #
+      # TL 2026 renames: pdfmanagement-testphase -> pdfmanagement,
+      # sourceserifpro -> sourceserif (ships a sourceserifpro.sty
+      # compatibility alias, so template.tex is unchanged).
+      - name: Install TeX Live 2026
         uses: zauguin/install-texlive@v4
         with:
-          texlive_version: 2025
+          texlive_version: 2026
           # Pin a known-reliable US CTAN mirror. zauguin's default
           # mirror probe has been failing intermittently with
           # "No mirror available"; hardcoding RIT bypasses it.
@@ -64,8 +76,8 @@ jobs:
             framed
             iftex
             imakeidx
-            pdfmanagement-testphase
-            sourceserifpro
+            pdfmanagement
+            sourceserif
             tagpdf
             textpos
             titlesec
