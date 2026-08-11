@@ -189,7 +189,12 @@ function rewriteIndexEntry(value) {
   value = value.replace(/\\+\s*$/, '').trim();
   const hasCode = value.includes('`');
   const hasNonAscii = /[^\x00-\x7f]/.test(value);
-  if (!hasCode && !hasNonAscii) return value;
+  // Entries with no code spans and no symbols need no sort@display
+  // rewrite, but they still have to be quoted: a literal `!` in a term
+  // like `Snap! program` or `SciSnap!` is a sub-entry separator to
+  // makeindex, which silently splits the term ("Snap" with a "program"
+  // sub-entry) or leaves an empty sub-entry hanging off it.
+  if (!hasCode && !hasNonAscii) return quoteForMakeindex(value);
   // Display: `set` -> \texttt{set}; ⚡ (with optional VS-16) -> \snaplightning{}.
   // # / % / & are parameter / comment / tab-alignment characters in LaTeX
   // and would break the .ind file makeindex emits if left bare inside the
@@ -419,3 +424,7 @@ export default {
   name: 'LaTeX shims (kbd, grid, image, index, lightning)',
   transforms: [latexShimsTransform],
 };
+
+// Exported for the unit tests in latex-shims.test.mjs. MyST only ever
+// reads the default export above.
+export { quoteForMakeindex, rewriteIndexEntry };
